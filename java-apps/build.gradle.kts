@@ -4,6 +4,11 @@ import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
 
 plugins {
     `application` // to build JVM applications
+    `checkstyle`  // to analyze Java sourcecode for style violations
+}
+
+checkstyle {
+    toolVersion = libs.versions.checkstyle.get()
 }
 
 java {
