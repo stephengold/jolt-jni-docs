@@ -1,0 +1,9 @@
+---
+# descriptor of the "jolt-jni-en" Antora component
+
+name: jolt-jni-en
+title: The Jolt-JNI project
+version: English
+start_page: ROOT:overview.adoc
+nav:
+  - modules/ROOT/nav.adoc

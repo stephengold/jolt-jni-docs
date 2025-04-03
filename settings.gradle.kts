@@ -13,4 +13,5 @@ dependencyResolutionManagement {
 }
 
 // subprojects:
+include("docs")
 include("java-apps")

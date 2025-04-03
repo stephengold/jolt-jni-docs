@@ -1,0 +1,19 @@
+---
+# configure Antora for a local test using the published UI bundle
+
+site:
+  title: The Jolt-JNI project (local test using the published bundle)
+  start_page: jolt-jni-en:ROOT:overview.adoc
+  url: /home/sgold/NetBeansProjects/jolt-jni-doc/docs/build/site
+content:
+  sources:
+    - url: /home/sgold/NetBeansProjects/jolt-jni-doc
+      branches: master
+      start_path: docs/en
+ui:
+  bundle:
+    url: https://github.com/stephengold/antora-ui-bundle/releases/download/v-sgold250101a/ui-bundle.zip
+    snapshot: true
+output:
+  clean: true
+  dir: docs/build/site
