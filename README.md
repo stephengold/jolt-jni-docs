@@ -1,13 +1,13 @@
 [The jolt-jni-docs project][project] provides
-documentation and example applications
-for [the Jolt-JNI 3-D physics library][joltjni].
+documentation and sample applications
+for [the Jolt-JNI physics library][joltjni].
 
 It contains 2 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
-2. java-apps: sample applications referred to in the tutorial, in [Java]
+2. java-apps: sample applications referred to in the tutorial, written in [Java]
 
-The applications utilize [the Sport graphics engine for Jolt][sportjolt],
+The sample applications utilize [the Sport graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
 
 Complete source code is provided under
