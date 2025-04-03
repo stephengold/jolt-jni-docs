@@ -1,0 +1,69 @@
+= Jolt-JNI project overview
+:Project: Jolt JNI
+:ProjectAdj: Jolt-JNI
+:url-enwiki: https://en.wikipedia.org/wiki
+
+_{Project}_ is a 3-D {url-enwiki}/Physics_engine[physics simulation] library
+for {url-enwiki}/Java_(programming_language)[Java].
+
+Use it to:
+
+* add solidity to walls, characters, projectiles, landscapes, and vehicles,
+* detect collisions between complex shapes,
+* perform contact, ray, and sweep tests,
+* simulate characters and buildings collapsing in real time, and
+* simulate cloth, rope, and deformable volumes,
+  including their interactions with rigid bodies.
+
+Tutorials and sample apps are provided to help you get started.
+
+All software in the {ProjectAdj} project is free and open-source,
+including the JVM library, the native libraries, the demo and tutorial apps,
+and the software used to build, test, and run them.
+
+The underlying simulation software comes from
+https://jrouwe.github.io/JoltPhysics[_Jolt Physics_], a modern, thread-aware physics simulator.
+But although Jolt Physics is written in {url-enwiki}/C%2B%2B[C&#43;&#43;],
+you won't need any knowledge of C&#43;&#43; to use {Project}.
+
+{Project} also incorporates source code from
+https://github.com/kmammou/v-hacd[the V-HACD project].
+
+== Caveats
+
+{Project}'s focus is on simulating
+{url-enwiki}/Classical_mechanics[classical mechanics]
+in just enough detail to add verisimilitude to 3-D games.
+It's not intended for 2-D {url-enwiki}/Platform_game[platformers],
+nor for scientific research.
+For 2-D physics, consider using http://www.dyn4j.org/[dyn4j] instead.
+
+{Project} and its documentation
+assume a certain level of proficiency with
+{url-enwiki}/Java_(programming_language)[the Java programming language].
+The project isn't aimed at non-programmers,
+nor developers without prior Java experience.
+Similarly, it assumes familiarity with vector math and 3-D computer graphics.
+
+While an understanding of classical mechanics is assumed,
+many of its technical terms are linked (at first use)
+to the relevant article in the English Wikipedia.
+
+https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE[The project's open-source license]
+disclaims liability for defects.
+Please don't use this software in safety-critical applications.
+
+I welcome suggestions concerning the future development of {Project}.
+
+
+== Getting help
+
+A web tutorial with sample code is under development.
+
+For self-help, utilize
+the javadoc and
+https://github.com/stephengold/jolt-jni[the source code].
+
+For issues that are best handled privately, contact me by e-mail.
+My personal e-mail address appears
+on https://stephengold.github.io/[my homepage] and in the source code.
