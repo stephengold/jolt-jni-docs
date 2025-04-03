@@ -12,24 +12,26 @@ You can also build a local copy of the documentation website (including HTML).
 This is useful if you are editing the documentation,
 or if your Internet access is limited or unreliable.
 
-== Library artifacts
+== Libraries
 
-Here's the recommended procedure:
+=== For desktop platforms
+
+Here's the recommended procedure for building desktop libraries:
 
 . Install build software:
 .. a https://adoptium.net/releases.html[Java Development Kit (JDK)],
-  if you don't already have one, and
+  version 11 or higher, and
 .. one of the supported C++ compilers:
 ... for Linux:  https://gcc.gnu.org/[the GNU Compiler Collection] or https://www.llvm.org[Clang]
 ... for macOS:  https://developer.apple.com/xcode[Xcode]
 ... for Windows:  https://visualstudio.microsoft.com[Microsoft Visual Studio]
-.. If you use GCC, you might need to install the "g++-multilib" package:
+.. If you use GCC, you might also need to install the "g++-multilib" package:
 ... `sudo apt install g++-multilib`
 . Point the `JAVA_HOME` environment variable to your JDK installation:
-   That path might look something like
+   (That path might look something like
    "C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
    or "/usr/lib/jvm/java-17-openjdk-amd64/" or
-   "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home" .
+   "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home".)
 .. using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
 .. using https://fishshell.com/[Fish]: `set -g JAVA_HOME "` *path to installation* `"`
 .. using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
@@ -46,28 +48,24 @@ Here's the recommended procedure:
 ... extract the contents of the saved ZIP file
 ... `cd` to the extracted directory
 . (optional) Edit the "gradle.properties" file to configure the build.
-. Run the https://gradle.org[Gradle] wrapper to build desktop artifacts:
+. Run the https://gradle.org[Gradle] wrapper:
 .. using Bash or Fish or PowerShell or Zsh: `./gradlew build`
 .. using Windows Command Prompt: `.\gradlew build`
-. To build Android artifacts, you'll need to
-  install https://developer.android.com/studio[Android Studio]
-  and point the `ANDROID_HOME` environment variable to that installation.
-. Run the Gradle wrapper to build Android artifacts:
-.. using Bash or Fish or PowerShell or Zsh: `./gradlew -b android.gradle build`
-.. using Windows Command Prompt: `.\gradlew -b android.gradle build`
 
 After a successful build,
-library artifacts will be found in "build/libs" (desktop)
-and "build/outputs/aar" (Android).
+desktop library artifacts will be found in "build/libs".
 
-=== Run example apps
+==== Translated examples
 
-You can run the "hello world" example app:
+Once you've built a desktop library for your current platform,
+you can test it by running example apps that have been translated from C++.
+
+The "hello world" example app:
 
 . using Bash or Fish or PowerShell or Zsh: `./gradlew runHelloWorld`
 . using Windows Command Prompt: `.\gradlew runHelloWorld`
 
-You can run various scenes in the "performance test" example app:
+Various scenes in the "performance test" example app:
 
 . the ConvexVsMesh scene:
 .. using Bash or Fish or PowerShell or Zsh: `./gradlew runConvexVsMesh`
@@ -79,25 +77,31 @@ You can run various scenes in the "performance test" example app:
 .. using Bash or Fish or PowerShell or Zsh: `./gradlew runRagdoll`
 .. using Windows Command Prompt: `.\gradlew runRagdoll`
 
+=== For Androids
+
+Once you've successfully built one or more desktop libraries,
+you can build Android libraries.
+
+. You'll need to install https://developer.android.com/studio[Android Studio]
+  and point the `ANDROID_HOME` environment variable to that installation.
+. Run the Gradle wrapper:
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew -b android.gradle build`
+.. using Windows Command Prompt: `.\gradlew -b android.gradle build`
+
+After a successful build,
+Android library artifacts will be found "build/outputs/aar".
+
 === Local installation
 
-You can install the artifacts to your local Maven repository:
+Once you've successfully built one or more libraries,
+You can install them to your local Maven repository.
 
 . using Bash or Fish or PowerShell or Zsh: `./gradlew install;./gradlew -b android.gradle install`
 . using Windows Command Prompt:
 .. `.\gradlew install`
 .. `.\gradlew -b android.gradle install`
 
-=== Cleanup
-
-After a build, you can restore the project to a pristine state:
-
-* using Bash or Fish or PowerShell or Zsh: `./gradlew clean;./gradlew -b android.gradle clean`
-* using Windows Command Prompt:
-** `.\gradlew clean`
-** `.\gradlew -b android.gradle clean`
-
-== Documentation website
+== Website
 
 . https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs[Install Node.js]
 . Download and extract the jolt-jni-docs source code from GitHub:
@@ -114,4 +118,13 @@ After a build, you can restore the project to a pristine state:
 .. `npx antora docs/playbook.yml`
 
 After a successful build,
-your local copy of the site will be found in the "docs/build/site" directory.
+your local site copy will be found in the "docs/build/site" directory.
+
+== Cleanup
+
+At any time, you can restore the project to a pristine state:
+
+* using Bash or Fish or PowerShell or Zsh: `./gradlew clean;./gradlew -b android.gradle clean`
+* using Windows Command Prompt:
+** `.\gradlew clean`
+** `.\gradlew -b android.gradle clean`
