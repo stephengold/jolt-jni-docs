@@ -1,6 +1,6 @@
-// global build settings shared by all jolt-jni-doc subprojects
+// global build settings shared by all jolt-jni-docs subprojects
 
-rootProject.name = "jolt-jni-doc"
+rootProject.name = "jolt-jni-docs"
 
 dependencyResolutionManagement {
     repositories {

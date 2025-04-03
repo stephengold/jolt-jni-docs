@@ -4,10 +4,10 @@
 site:
   title: The Jolt-JNI project (local test using the published bundle)
   start_page: jolt-jni-en:ROOT:overview.adoc
-  url: /home/sgold/NetBeansProjects/jolt-jni-doc/docs/build/site
+  url: /home/sgold/NetBeansProjects/jolt-jni-docs/docs/build/site
 content:
   sources:
-    - url: /home/sgold/NetBeansProjects/jolt-jni-doc
+    - url: /home/sgold/NetBeansProjects/jolt-jni-docs
       branches: master
       start_path: docs/en
 ui:

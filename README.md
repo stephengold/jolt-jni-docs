@@ -1,4 +1,4 @@
-[The jolt-jni-doc project][project] provides
+[The jolt-jni-docs project][project] provides
 documentation and example applications
 for [the Jolt-JNI 3-D physics library][joltjni].
 
@@ -14,7 +14,7 @@ Complete source code is provided under
 [a 3-clause BSD license][license].
 
 
-## How to build and run jolt-jni-doc from source
+## How to build and run jolt-jni-docs from source
 
 ### Sample applications
 
@@ -31,17 +31,17 @@ Complete source code is provided under
   + using [Fish]: `set -g JAVA_HOME "` *path to installation* `"`
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
-3. Download and extract the jolt-jni-doc source code from GitHub:
+3. Download and extract the jolt-jni-docs source code from GitHub:
   + using [Git]:
-    + `git clone https://github.com/stephengold/jolt-jni-doc.git`
-    + `cd jolt-jni-doc`
+    + `git clone https://github.com/stephengold/jolt-jni-docs.git`
+    + `cd jolt-jni-docs`
 4. Run the [Gradle] wrapper:
   + using Bash or Fish or PowerShell or Zsh: `./gradlew build`
   + using Windows Command Prompt: `.\gradlew build`
 
 ### Antora documentation
 
-1. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-doc"
+1. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-docs"
   with an absolute path to your checkout directory (2 places).
 2. [Install Node.js](https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs)
 3. Run the [Antora] site generator:
@@ -62,6 +62,6 @@ You can restore the project to a pristine state:
 [gradle]: https://gradle.org "Gradle build tool"
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language) "Java programming language"
 [joltjni]: https://github.com/stephengold/jolt-jni "Jolt-JNI project"
-[license]: https://github.com/stephengold/jolt-jni-doc/blob/master/LICENSE "jolt-jni-doc license"
-[project]: https://github.com/stephengold/jolt-jni-doc "jolt-jni-doc project"
+[license]: https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE "jolt-jni-docs license"
+[project]: https://github.com/stephengold/jolt-jni-docs "jolt-jni-docs project"
 [sportjolt]: https://github.com/stephengold/sport-jolt "Sport graphics engine for Jolt"

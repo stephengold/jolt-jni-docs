@@ -1,4 +1,4 @@
-// Gradle script to build and run the "java-apps" subproject of jolt-jni-doc
+// Gradle script to build and run the "java-apps" subproject of jolt-jni-docs
 
 import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
 
