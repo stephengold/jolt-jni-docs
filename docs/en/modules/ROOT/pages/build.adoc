@@ -114,6 +114,8 @@ You can install them to your local Maven repository.
 ... `cd` to the extracted directory
 . Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/LbjExamples"
   with an absolute path to your extracted directory (2 places).
+. Install Antora:
+.. `npm i -D -E @antora/cli@3.1`
 . Run Antora:
 .. `npx antora docs/playbook.yml`
 
