@@ -3,8 +3,8 @@
 :ProjectAdj: Jolt-JNI
 :url-enwiki: https://en.wikipedia.org/wiki
 
-_{Project}_ is a 3-D {url-enwiki}/Physics_engine[physics simulation] library
-for {url-enwiki}/Java_(programming_language)[Java].
+_{Project}_ is a {url-enwiki}/Physics_engine[physics-simulation] library
+for {url-enwiki}/Java_virtual_machine[Java].
 
 Use it to:
 
