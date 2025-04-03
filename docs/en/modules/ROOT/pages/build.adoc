@@ -1,0 +1,93 @@
+= How to build Jolt JNI from source
+:Project: Jolt JNI
+:ProjectAdj: Jolt-JNI
+
+{Project} is free, open-source software.
+
+While pre-built artifacts (including AARs and JARs)
+can be downloaded from the Maven Central Repository,
+some people prefer to build them from source.
+
+You can also build a local copy of the documentation (website content).
+This is useful if you are editing the content,
+or if your Internet access is limited or unreliable.
+
+== Build artifacts
+
+Here's the recommended procedure:
+
+. Install build software:
+.. a https://adoptium.net/releases.html[Java Development Kit (JDK)],
+  if you don't already have one, and
+.. one of the supported C++ compilers:
+... for Linux:  the https://gcc.gnu.org/[GNU Compiler Collection] or https://www.llvm.org[Clang]
+... for Windows:  https://visualstudio.microsoft.com[Microsoft Visual Studio]
+... for macOS:  https://developer.apple.com/xcode[Xcode]
+.. If you use GCC, you might need to install the "g++-multilib" package:
+... `sudo apt install g++-multilib`
+. Point the `JAVA_HOME` environment variable to your JDK installation:
+  (The path might be something like "C:\Program Files\Java\jre1.8.0_301"
+  or "/usr/lib/jvm/java-8-openjdk-amd64/" or
+  "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home" .)
+.. using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
+.. using Fish: `set -g JAVA_HOME "` *path to installation* `"`
+.. using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
+.. using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
+. Download and extract the {ProjectAdj} source code from GitHub:
+.. using Git:
+... `git clone https://github.com/stephengold/jolt-jni.git`
+... `cd jolt-jni`
+... `git checkout -b latest 0.9.8`
+.. using a web browser:
+... browse to https://github.com/stephengold/jolt-jni/releases/latest
+... follow the "Source code (zip)" link
+... save the ZIP file
+... extract the contents of the saved ZIP file
+... `cd` to the extracted directory
+. Cross-compilation using GCC requires the g++-multilib package:
+.. `sudo apt-get install g++-multilib`
+. (optional) Edit the "gradle.properties" file to configure the build.
+. Run the Gradle wrapper on the desktop build script:
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew build`
+.. using Windows Command Prompt: `.\gradlew build`
+. To build Android artifacts, you'll need to
+  install https://developer.android.com/studio[Android Studio]
+  and point the `ANDROID_HOME` environment variable to that installation.
+. Run the Gradle wrapper on the Android build script:
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew -b android.gradle build`
+.. using Windows Command Prompt: `.\gradlew -b android.gradle build`
+
+After a successful build,
+artifacts will be found in "build/libs" (desktop) and "build/outputs/aar" (Android).
+
+=== Local installation
+
+You can install the artifacts to your local Maven repository:
+
+. using Bash or Fish or PowerShell or Zsh: `./gradlew install;./gradlew -b android.gradle install`
+. using Windows Command Prompt:
+.. `.\gradlew install`
+.. `.\gradlew -b android.gradle install`
+
+=== Cleanup
+
+After a build, you can restore the project to a pristine state:
+
+* using Bash or Fish or PowerShell or Zsh: `./gradlew clean;./gradlew -b android.gradle clean`
+* using Windows Command Prompt:
+** `.\gradlew clean`
+** `.\gradlew -b android.gradle clean`
+
+== Website content
+
+. Download and extract the source code from GitHub:
+.. `git clone https://github.com/stephengold/LbjExamples.git`
+.. `cd LbjExamples`
+. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/LbjExamples"
+  with an absolute path to your checkout directory (2 places).
+. https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs[Install Node.js]
+. Run Antora:
+.. `npx antora docs/playbook.yml`
+
+After a successful build,
+the copy of the site will be found in the "docs/build/site" directory.
