@@ -60,6 +60,25 @@ After a successful build,
 library artifacts will be found in "build/libs" (desktop)
 and "build/outputs/aar" (Android).
 
+=== Run example apps
+
+You can run the "hello world" example app:
+
+. using Bash or Fish or PowerShell or Zsh: `./gradlew runHelloWorld`
+. using Windows Command Prompt: `.\gradlew runHelloWorld`
+
+You can run various scenes in the "performance test" example app:
+
+. the ConvexVsMesh scene:
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew runConvexVsMesh`
+.. using Windows Command Prompt: `.\gradlew runConvexVsMesh`
+. the Pyramid scene:
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew runPyramid`
+.. using Windows Command Prompt: `.\gradlew runPyramid`
+. the Ragdoll scene:
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew runRagdoll`
+.. using Windows Command Prompt: `.\gradlew runRagdoll`
+
 === Local installation
 
 You can install the artifacts to your local Maven repository:
