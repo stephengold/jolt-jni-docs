@@ -1,0 +1,23 @@
+* https://github.com/stephengold/jolt-jni[GitHub repository]
+** https://github.com/stephengold/jolt-jni/releases/latest[Latest release]
+** https://github.com/stephengold/jolt-jni/releases[Recent releases]
+** https://github.com/stephengold/jolt-jni/blob/master/README.md[ReadMe file]
+** https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE[License]
+** https://github.com/stephengold/jolt-jni/blob/master/release-log.md[Release log]
+** https://github.com/stephengold/jolt-jni/commits/master[Recent commits]
+** https://github.com/stephengold/jolt-jni/issues[Issue tracker]
+** https://github.com/stephengold/jolt-jni/issues/new[Report an issue]
+* Jolt JNI at other sites
+** https://repo1.maven.org/maven2/com/github/stephengold[Maven Central download]
+** https://central.sonatype.com/search?q=jolt-jni&namespace=com.github.stephengold[Maven Central search]
+** https://jitpack.io/#stephengold/jolt-jni[JitPack (unofficial)]
+* Projects using Jolt JNI
+** https://github.com/stephengold/jolt-jni-doc[jolt-jni-doc]
+** https://github.com/stephengold/sport-jolt[Sport Jolt]
+** https://github.com/stephengold/kk-physics[KK Physics]
+* Other related projects
+** https://jrouwe.github.io/JoltPhysics[Jolt Physics]
+** https://github.com/kmammou/v-hacd[V-HACD]
+** https://github.com/stephengold/antora-ui-bundle[Website UI bundle]
+* People
+** https://stephengold.github.io[Stephen Gold]
