@@ -358,6 +358,19 @@ It illustrates:
 . creating 2 bodies and adding them to the system
 . simulating 50 steps
 
+[NOTE]
+====
+To lay the groundwork for future tutorials,
+`HelloJoltJni` defines 2 object layers:
+one for moving bodies and one for non-moving bodies.
+====
+
+[NOTE]
+====
+In HelloJoltJni, we know there will only be 2 bodies;
+the `PhysicsSystem` limits are set accordingly.
+====
+
 [IMPORTANT]
 ====
 `HelloJoltJni` is the first in a series of
