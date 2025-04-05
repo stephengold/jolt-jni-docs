@@ -67,7 +67,7 @@ import electrostatic4j.snaploader.platform.util.PlatformPredicate;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloJoltJni {
+final public class HelloJoltJni {
     // *************************************************************************
     // constants
 
@@ -100,7 +100,7 @@ public class HelloJoltJni {
     /**
      * A private constructor to inhibit instantiation of this class.
      */
-    public HelloJoltJni() {
+    private HelloJoltJni() {
         // do nothing
     }
     // *************************************************************************
