@@ -31,9 +31,12 @@ package com.github.stephengold.sportjolt.javaapp.sample;
 import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
+import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
 import com.github.stephengold.joltjni.MapObj2Bp;
 import com.github.stephengold.joltjni.ObjVsBpFilter;
 import com.github.stephengold.joltjni.ObjVsObjFilter;
+import com.github.stephengold.joltjni.ObjectLayerPairFilter;
+import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -92,15 +95,17 @@ public class HelloRigidBody extends BasePhysicsApp {
     public PhysicsSystem createSystem() {
         // a single broadphase layer for simplicity:
         int numBpLayers = 1;
-        MapObj2Bp mapObj2Bp = new MapObj2Bp(numObjLayers, numBpLayers)
-                .add(objLayerNonMoving, 0)
-                .add(objLayerMoving, 0);
-        ObjVsBpFilter objVsBpFilter
+        BroadPhaseLayerInterface mapObj2Bp
+                = new MapObj2Bp(numObjLayers, numBpLayers)
+                        .add(objLayerNonMoving, 0)
+                        .add(objLayerMoving, 0);
+        ObjectVsBroadPhaseLayerFilter objVsBpFilter
                 = new ObjVsBpFilter(numObjLayers, numBpLayers);
-        ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
+        ObjectLayerPairFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers)
+                .disablePair(objLayerNonMoving, objLayerNonMoving);
 
         int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default value"
+        int numBodyMutexes = 0; // 0 means "use the default number"
         int maxBodyPairs = 3;
         int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();
@@ -115,7 +120,9 @@ public class HelloRigidBody extends BasePhysicsApp {
      */
     @Override
     public void populateSystem() {
-        // Create a collision shape for balls.
+        BodyInterface bi = physicsSystem.getBodyInterface();
+
+        // Create a collision shape for balls:
         float ballRadius = 1f;
         ConstShape ballShape = new SphereShape(ballRadius);
 
@@ -124,9 +131,7 @@ public class HelloRigidBody extends BasePhysicsApp {
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
         bcs.setShape(ballShape);
 
-        BodyInterface bi = physicsSystem.getBodyInterface();
-
-        // Create 2 balls (dynamic rigid bodies) and add them to the system.
+        // Create 2 balls (dynamic rigid bodies) and add them to the system:
         bcs.setPosition(1., 1., 0.);
         Body ball1 = bi.createBody(bcs);
         bi.addBody(ball1, EActivation.Activate);
@@ -138,7 +143,7 @@ public class HelloRigidBody extends BasePhysicsApp {
         // Put ball2 on a collision course with ball1.
         ball2.addImpulse(-25f, 0f, 0f);
 
-        // Visualize the shapes of both bodies.
+        // Visualize the shapes of both rigid bodies:
         visualizeShape(ball1);
         visualizeShape(ball2);
     }
