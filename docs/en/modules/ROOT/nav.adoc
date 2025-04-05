@@ -1,3 +1,5 @@
+* Library tutorials
+** xref:add.adoc[Add to existing project]
 * xref:build.adoc[Build procedures]
 * https://github.com/stephengold/jolt-jni[GitHub repository]
 ** https://github.com/stephengold/jolt-jni/releases/latest[Latest release]
