@@ -71,6 +71,8 @@ tasks.register<JavaExec>("HelloVehicle") {
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloVehicle"
 }
 
+val assertions = providers.gradleProperty("assertions").get().equals("true")
+
 val os = DefaultNativePlatform.getCurrentOperatingSystem()
 val includeLinux = os.isLinux()
 val includeMacOsX = os.isMacOsX()
@@ -81,7 +83,7 @@ tasks.withType<JavaExec>().all { // JVM runtime options:
         jvmArgs("-XstartOnFirstThread") // required for GLFW on macOS
     }
     classpath = sourceSets.main.get().getRuntimeClasspath()
-    enableAssertions = true
+    enableAssertions = assertions
     jvmArgs("-XX:+UseG1GC", "-XX:MaxGCPauseMillis=10")
 }
 
