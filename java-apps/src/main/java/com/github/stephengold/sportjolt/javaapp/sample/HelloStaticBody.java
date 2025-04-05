@@ -125,19 +125,19 @@ public class HelloStaticBody extends BasePhysicsApp {
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
         bcs.setShape(ballShape);
 
-        // Create a dynamic body and add it to the system.
+        // Create a dynamic body and add it to the system:
         bcs.setPosition(0., 4., 0.);
         Body dynaBall = bi.createBody(bcs);
         bi.addBody(dynaBall, EActivation.Activate);
 
-        // Create a static body and add it to the space.
+        // Create a static body and add it to the system:
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
         bcs.setPosition(0.1, 0., 0.);
         Body statBall = bi.createBody(bcs);
         bi.addBody(statBall, EActivation.DontActivate);
 
-        // Visualize the shapes of both bodies.
+        // Visualize the shapes of both bodies:
         visualizeShape(dynaBall);
         visualizeShape(statBall);
     }

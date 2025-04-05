@@ -64,7 +64,7 @@ public class HelloContactResponse extends BasePhysicsApp {
     // fields
 
     /**
-     * collision object for the dynamic ball
+     * falling ball
      */
     private static Body ball;
     // *************************************************************************
@@ -139,7 +139,7 @@ public class HelloContactResponse extends BasePhysicsApp {
     public void populateSystem() {
         BodyInterface bi = physicsSystem.getBodyInterface();
 
-        // Add a static box to the system, to serve as a horizontal platform.
+        // Add a static box to the system, to serve as a horizontal platform:
         float boxHalfExtent = 3f;
         ConstShape boxShape = new BoxShape(boxHalfExtent);
         BodyCreationSettings bcs1 = new BodyCreationSettings();
@@ -150,12 +150,12 @@ public class HelloContactResponse extends BasePhysicsApp {
         Body box = bi.createBody(bcs1);
         bi.addBody(box, EActivation.DontActivate);
 
-        // Add a dynamic ball to the system.
+        // Add a dynamic ball to the system:
         float ballRadius = 1f;
         ConstShape ballShape = new SphereShape(ballRadius);
         BodyCreationSettings bcs2 = new BodyCreationSettings();
         bcs2.getMassPropertiesOverride().setMass(2f);
-        bcs2.setAllowSleeping(false);
+        bcs2.setAllowSleeping(false); // Disable sleep for clarity.
         bcs2.setOverrideMassProperties(
                 EOverrideMassProperties.CalculateInertia);
         bcs2.setPosition(0., 4., 0.);
@@ -163,7 +163,7 @@ public class HelloContactResponse extends BasePhysicsApp {
         ball = bi.createBody(bcs2);
         bi.addBody(ball, EActivation.Activate);
 
-        // Visualize the shapes of both bodies.
+        // Visualize the shapes of both bodies:
         visualizeShape(ball);
         visualizeShape(box);
     }
@@ -171,7 +171,7 @@ public class HelloContactResponse extends BasePhysicsApp {
     // private methods
 
     /**
-     * Configure keyboard input during startup.
+     * Configure keyboard input during initialization.
      */
     private void configureInput() {
         getInputManager().add(new InputProcessor() {
@@ -179,7 +179,7 @@ public class HelloContactResponse extends BasePhysicsApp {
             public void onKeyboard(int glfwKeyId, boolean isPressed) {
                 if (glfwKeyId == GLFW.GLFW_KEY_E) {
                     if (isPressed) {
-                        // Disable the ball's contact response.
+                        // Disable the ball's contact response:
                         ball.setIsSensor(true);
                     }
                     return;
