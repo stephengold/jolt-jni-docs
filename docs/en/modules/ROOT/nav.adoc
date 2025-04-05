@@ -1,5 +1,6 @@
 * Library tutorials
 ** xref:add.adoc[Add to existing project]
+** xref:sport.adoc[Sport-Jolt visualization]
 * xref:build.adoc[Build procedures]
 * https://github.com/stephengold/jolt-jni[GitHub repository]
 ** https://github.com/stephengold/jolt-jni/releases/latest[Latest release]
