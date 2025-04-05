@@ -111,7 +111,7 @@ You can install them to your local Maven repository.
 ... browse to https://github.com/stephengold/jolt-jni-docs/archive/refs/heads/master.zip
 ... extract the contents of the downloaded ZIP file
 ... `cd` to the extracted directory
-. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/LbjExamples"
+. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-docs"
   with an absolute path to your extracted directory (2 places).
 . https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs[Install Node.js]
 . Install Antora:

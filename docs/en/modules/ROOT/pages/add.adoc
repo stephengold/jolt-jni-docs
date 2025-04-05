@@ -106,7 +106,7 @@ Add to your physics initialization:
 
 [source,java]
 ----
-System.loadLibrary("bulletjme");
+System.loadLibrary("joltjni");
 ----
 
 === Desktop projects
