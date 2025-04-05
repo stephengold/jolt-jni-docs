@@ -97,6 +97,7 @@ dependencies {
 
     if (includeLinux) {
         runtimeOnly(variantOf(libs.jolt.jni.linux64){classifier(btf)})
+        runtimeOnly(variantOf(libs.jolt.jni.linux64fma){classifier(btf)})
 
         runtimeOnly(variantOf(libs.lwjgl){classifier("natives-linux")})
         runtimeOnly(variantOf(libs.lwjgl.assimp){classifier("natives-linux")})
