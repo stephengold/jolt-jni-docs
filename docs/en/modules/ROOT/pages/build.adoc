@@ -62,8 +62,8 @@ you can test it by running example apps that have been translated from C++.
 
 The "hello world" example app:
 
-. using Bash or Fish or PowerShell or Zsh: `./gradlew runHelloWorld`
-. using Windows Command Prompt: `.\gradlew runHelloWorld`
+* using Bash or Fish or PowerShell or Zsh: `./gradlew runHelloWorld`
+* using Windows Command Prompt: `.\gradlew runHelloWorld`
 
 Various scenes in the "performance test" example app:
 
@@ -114,10 +114,8 @@ You can install them to your local Maven repository.
 . Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-docs"
   with an absolute path to your extracted directory (2 places).
 . https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs[Install Node.js]
-. Install Antora:
-.. `npm i -D -E @antora/cli@3.1`
-. Run Antora:
-.. `npx antora docs/playbook.yml`
+. Install Antora: `npm i -D -E @antora/cli@3.1`
+. Run Antora: `npx antora docs/playbook.yml`
 
 After a successful build,
 your local site copy will be found in the "docs/build/site" directory.

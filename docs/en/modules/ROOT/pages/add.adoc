@@ -367,7 +367,7 @@ one for moving bodies and one for non-moving bodies.
 
 [NOTE]
 ====
-In HelloJoltJni, we know there will only be 2 bodies;
+In `HelloJoltJni`, we know there will only be 2 bodies;
 the `PhysicsSystem` limits are set accordingly.
 ====
 
