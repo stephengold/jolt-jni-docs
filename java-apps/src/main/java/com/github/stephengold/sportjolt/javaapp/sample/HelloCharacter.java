@@ -195,7 +195,6 @@ public class HelloCharacter
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-
         Body result = bi.createBody(bcs);
         bi.addBody(result, EActivation.DontActivate);
 
