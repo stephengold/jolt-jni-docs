@@ -116,6 +116,8 @@ public class HelloCcd extends BasePhysicsApp {
      */
     @Override
     public void populateSystem() {
+        BodyInterface bi = physicsSystem.getBodyInterface();
+
         // Create a collision shape for balls:
         float ballRadius = 0.1f;
         ConstShape ballShape = new SphereShape(ballRadius);
@@ -124,8 +126,6 @@ public class HelloCcd extends BasePhysicsApp {
         bcs.getMassPropertiesOverride().setMass(2f);
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
         bcs.setShape(ballShape);
-
-        BodyInterface bi = physicsSystem.getBodyInterface();
         /*
          * Create 2 dynamic balls, one with LinearCast CCD and one without,
          * and add them to the system:
