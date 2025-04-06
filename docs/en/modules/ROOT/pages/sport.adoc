@@ -1,4 +1,4 @@
-= Visualization using the Sport graphics engine
+= Visualization using the Sport-Jolt graphics engine
 :experimental:
 :page-pagination:
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
