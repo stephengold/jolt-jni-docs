@@ -148,6 +148,7 @@ final public class HelloJoltJni {
 
         physicsSystem = createSystem();
         populateSystem();
+        physicsSystem.optimizeBroadPhase();
 
         TempAllocator tempAllocator = new TempAllocatorMalloc();
         int numWorkerThreads = Runtime.getRuntime().availableProcessors();
