@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How to build Jolt JNI from source :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/build.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<meta property="og:image" content="../../_/img/iconx128.png">
+<meta property="og:description" content="How to build Jolt JNI from source">
+<meta property="og:title" content="The Jolt-JNI project">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://stephengold.github.io/jolt-jni">
+        <img alt="" src="../../_/img/iconx128.png" width="32" type="image/x-icon" style="margin-right:16px">
+        The Jolt-JNI project
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Color themes</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" onclick="setTheme('canyon')">Canyon</a>
+            <a class="navbar-item" onclick="setTheme('dark')">Dark</a>
+            <a class="navbar-item" onclick="setTheme('jungle')">Jungle</a>
+            <a class="navbar-item" onclick="setTheme('light')">Light</a>
+            <a class="navbar-item" onclick="setTheme('pastel')">Pastel</a>
+            <a class="navbar-item" onclick="setTheme('phosphor')">Phosphor<a>
+            <a class="navbar-item" style="padding-top: 5px;padding-left: 1px;padding-right: 1px;"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jolt-jni-en" data-version="English">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="overview.html">Project links</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Library tutorials</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="add.html">Add to existing project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sport.html">Sport-Jolt visualization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rigidbody.html">Rigid bodies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="build.html">Build procedures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni">GitHub repository</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases/latest">Latest release</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases">Recent releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/README.md">ReadMe file</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">License</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/release-log.md">Release log</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/commits/master">Recent commits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues">Issue tracker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues/new">Report an issue</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jolt JNI at other sites</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://repo1.maven.org/maven2/com/github/stephengold">Maven Central download</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://central.sonatype.com/search?q=jolt-jni&amp;namespace=com.github.stephengold">Maven Central search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jitpack.io/#stephengold/jolt-jni">JitPack (unofficial)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Projects using Jolt JNI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni-docs">jolt-jni-docs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/sport-jolt">Sport-Jolt</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/kk-physics">KK Physics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other related projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jrouwe.github.io/JoltPhysics">Jolt Physics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/kmammou/v-hacd">V-HACD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/antora-ui-bundle">Website UI bundle</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">People</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://stephengold.github.io">Stephen Gold</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">The Jolt-JNI project</span>
+    <span class="version">English</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">The Jolt-JNI project</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="overview.html">English</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle-label">Project links</span>
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="overview.html">The Jolt-JNI project</a></li>
+    <li><a href="build.html">Build procedures</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/build.adoc">Edit this page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">How to build Jolt JNI from source</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jolt JNI is free, open-source software.</p>
+</div>
+<div class="paragraph">
+<p>While pre-built library artifacts (including AARs and JARs)
+can be downloaded from the Maven Central Repository,
+some people prefer to build them from source.</p>
+</div>
+<div class="paragraph">
+<p>You can also build a local copy of the documentation website (including HTML).
+This is useful if you are editing the documentation,
+or if your Internet access is limited or unreliable.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_libraries"><a class="anchor" href="#_libraries"></a>Libraries</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_for_desktop_platforms"><a class="anchor" href="#_for_desktop_platforms"></a>For desktop platforms</h3>
+<div class="paragraph">
+<p>Here&#8217;s the recommended procedure for building desktop libraries:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install build software:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>a <a href="https://adoptium.net/releases.html">Java Development Kit (JDK)</a>,
+version 11 or higher, and</p>
+</li>
+<li>
+<p>one of the supported C++ compilers:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>for Linux:  <a href="https://gcc.gnu.org/">the GNU Compiler Collection</a> or <a href="https://www.llvm.org">Clang</a></p>
+</li>
+<li>
+<p>for macOS:  <a href="https://developer.apple.com/xcode">Xcode</a></p>
+</li>
+<li>
+<p>for Windows:  <a href="https://visualstudio.microsoft.com">Microsoft Visual Studio</a></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>If you use GCC, you might also need to install the "g++-multilib" package:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><code>sudo apt install g++-multilib</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Point the <code>JAVA_HOME</code> environment variable to your JDK installation:
+(That path might look something like
+"C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
+or "/usr/lib/jvm/java-17-openjdk-amd64/" or
+"/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home".)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Zsh: <code>export JAVA_HOME="</code> <strong>path to installation</strong> <code>"</code></p>
+</li>
+<li>
+<p>using <a href="https://fishshell.com/">Fish</a>: <code>set -g JAVA_HOME "</code> <strong>path to installation</strong> <code>"</code></p>
+</li>
+<li>
+<p>using PowerShell: <code>$env:JAVA_HOME = '</code> <strong>path to installation</strong> <code>'</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>set JAVA_HOME="</code> <strong>path to installation</strong> <code>"</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Download and extract the Jolt-JNI source code from GitHub:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using <a href="https://git-scm.com">Git</a>:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><code>git clone <a href="https://github.com/stephengold/jolt-jni.git" class="bare">https://github.com/stephengold/jolt-jni.git</a></code></p>
+</li>
+<li>
+<p><code>cd jolt-jni</code></p>
+</li>
+<li>
+<p><code>git checkout -b latest 0.9.8</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>using a web browser:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>browse to <a href="https://github.com/stephengold/jolt-jni/releases/latest" class="bare">https://github.com/stephengold/jolt-jni/releases/latest</a></p>
+</li>
+<li>
+<p>follow the "Source code (zip)" link at the bottom of the page</p>
+</li>
+<li>
+<p>save the ZIP file</p>
+</li>
+<li>
+<p>extract the contents of the saved ZIP file</p>
+</li>
+<li>
+<p><code>cd</code> to the extracted directory</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit the "gradle.properties" file to configure the build.</p>
+</li>
+<li>
+<p>Run the <a href="https://gradle.org">Gradle</a> wrapper:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew build</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew build</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After a successful build,
+desktop library artifacts will be found in "build/libs".</p>
+</div>
+<div class="sect3">
+<h4 id="_translated_examples"><a class="anchor" href="#_translated_examples"></a>Translated examples</h4>
+<div class="paragraph">
+<p>Once you&#8217;ve built a desktop library for your current platform,
+you can test it by running example apps that have been translated from C++.</p>
+</div>
+<div class="paragraph">
+<p>The "hello world" example app:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew runHelloWorld</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew runHelloWorld</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Various scenes in the "performance test" example app:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the ConvexVsMesh scene:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew runConvexVsMesh</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew runConvexVsMesh</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>the Pyramid scene:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew runPyramid</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew runPyramid</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>the Ragdoll scene:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew runRagdoll</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew runRagdoll</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_androids"><a class="anchor" href="#_for_androids"></a>For Androids</h3>
+<div class="paragraph">
+<p>Once you&#8217;ve successfully built one or more desktop libraries,
+you can build Android libraries.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You&#8217;ll need to install <a href="https://developer.android.com/studio">Android Studio</a>
+and point the <code>ANDROID_HOME</code> environment variable to that installation.</p>
+</li>
+<li>
+<p>Run the Gradle wrapper:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew -b android.gradle build</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew -b android.gradle build</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After a successful build,
+Android library artifacts will be found "build/outputs/aar".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_local_installation"><a class="anchor" href="#_local_installation"></a>Local installation</h3>
+<div class="paragraph">
+<p>Once you&#8217;ve successfully built one or more libraries,
+You can install them to your local Maven repository.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew install;./gradlew -b android.gradle install</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>.\gradlew install</code></p>
+</li>
+<li>
+<p><code>.\gradlew -b android.gradle install</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_website"><a class="anchor" href="#_website"></a>Website</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download and extract the jolt-jni-docs source code from GitHub:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Git:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><code>git clone <a href="https://github.com/stephengold/jolt-jni-docs.git" class="bare">https://github.com/stephengold/jolt-jni-docs.git</a></code></p>
+</li>
+<li>
+<p><code>cd jolt-jni</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>using a web browser:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>browse to <a href="https://github.com/stephengold/jolt-jni-docs/archive/refs/heads/master.zip" class="bare">https://github.com/stephengold/jolt-jni-docs/archive/refs/heads/master.zip</a></p>
+</li>
+<li>
+<p>extract the contents of the downloaded ZIP file</p>
+</li>
+<li>
+<p><code>cd</code> to the extracted directory</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-docs"
+with an absolute path to your extracted directory (2 places).</p>
+</li>
+<li>
+<p><a href="https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs">Install Node.js</a></p>
+</li>
+<li>
+<p>Install Antora: <code>npm i -D -E @antora/cli@3.1</code></p>
+</li>
+<li>
+<p>Run Antora: <code>npx antora docs/playbook.yml</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After a successful build,
+your local site copy will be found in the "docs/build/site" directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cleanup"><a class="anchor" href="#_cleanup"></a>Cleanup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At any time, you can restore the project to a pristine state:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew clean;./gradlew -b android.gradle clean</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>.\gradlew clean</code></p>
+</li>
+<li>
+<p><code>.\gradlew -b android.gradle clean</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Page contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; 2020&ndash;2025 by Stephen Gold</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jolt-JNI project overview :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/overview.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<meta property="og:image" content="../../_/img/iconx128.png">
+<meta property="og:description" content="Jolt-JNI project overview">
+<meta property="og:title" content="The Jolt-JNI project">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://stephengold.github.io/jolt-jni">
+        <img alt="" src="../../_/img/iconx128.png" width="32" type="image/x-icon" style="margin-right:16px">
+        The Jolt-JNI project
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Color themes</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" onclick="setTheme('canyon')">Canyon</a>
+            <a class="navbar-item" onclick="setTheme('dark')">Dark</a>
+            <a class="navbar-item" onclick="setTheme('jungle')">Jungle</a>
+            <a class="navbar-item" onclick="setTheme('light')">Light</a>
+            <a class="navbar-item" onclick="setTheme('pastel')">Pastel</a>
+            <a class="navbar-item" onclick="setTheme('phosphor')">Phosphor<a>
+            <a class="navbar-item" style="padding-top: 5px;padding-left: 1px;padding-right: 1px;"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jolt-jni-en" data-version="English">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="overview.html">Project links</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Library tutorials</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="add.html">Add to existing project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sport.html">Sport-Jolt visualization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rigidbody.html">Rigid bodies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="build.html">Build procedures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni">GitHub repository</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases/latest">Latest release</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases">Recent releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/README.md">ReadMe file</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">License</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/release-log.md">Release log</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/commits/master">Recent commits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues">Issue tracker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues/new">Report an issue</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jolt JNI at other sites</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://repo1.maven.org/maven2/com/github/stephengold">Maven Central download</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://central.sonatype.com/search?q=jolt-jni&amp;namespace=com.github.stephengold">Maven Central search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jitpack.io/#stephengold/jolt-jni">JitPack (unofficial)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Projects using Jolt JNI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni-docs">jolt-jni-docs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/sport-jolt">Sport-Jolt</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/kk-physics">KK Physics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other related projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jrouwe.github.io/JoltPhysics">Jolt Physics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/kmammou/v-hacd">V-HACD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/antora-ui-bundle">Website UI bundle</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">People</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://stephengold.github.io">Stephen Gold</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">The Jolt-JNI project</span>
+    <span class="version">English</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">The Jolt-JNI project</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="overview.html">English</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle-label">Project links</span>
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="overview.html">The Jolt-JNI project</a></li>
+    <li><a href="overview.html">Jolt-JNI project overview</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/overview.adoc">Edit this page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Jolt-JNI project overview</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Jolt JNI</em> is a <a href="https://en.wikipedia.org/wiki/Physics_engine">physics-simulation</a> library
+for <a href="https://en.wikipedia.org/wiki/Java_virtual_machine">Java</a>.</p>
+</div>
+<div class="paragraph">
+<p>Use it to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>add solidity to walls, characters, projectiles, landscapes, and vehicles,</p>
+</li>
+<li>
+<p>detect collisions between complex shapes,</p>
+</li>
+<li>
+<p>perform contact, ray, and sweep tests,</p>
+</li>
+<li>
+<p>simulate characters and buildings collapsing in real time, and</p>
+</li>
+<li>
+<p>simulate cloth, rope, and deformable volumes,
+including their interactions with rigid bodies.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tutorials and sample apps are provided to help you get started.</p>
+</div>
+<div class="paragraph">
+<p>All software in the Jolt-JNI project is free and open-source,
+including the JVM library, the native libraries, the demo and tutorial apps,
+and the software used to build, test, and run them.</p>
+</div>
+<div class="paragraph">
+<p>The underlying simulation software comes from
+<a href="https://jrouwe.github.io/JoltPhysics"><em>Jolt Physics</em></a>, a modern, thread-aware physics simulator.
+But although Jolt Physics is written in <a href="https://en.wikipedia.org/wiki/C%2B%2B">C&#43;&#43;</a>,
+you won&#8217;t need any knowledge of C&#43;&#43; to use Jolt JNI.</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI also incorporates source code from
+<a href="https://github.com/kmammou/v-hacd">the V-HACD project</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_caveats"><a class="anchor" href="#_caveats"></a>Caveats</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jolt JNI&#8217;s focus is on simulating
+<a href="https://en.wikipedia.org/wiki/Classical_mechanics">classical mechanics</a>
+in just enough detail to add verisimilitude to 3-D games.
+It&#8217;s not intended for 2-D <a href="https://en.wikipedia.org/wiki/Platform_game">platformers</a>,
+nor for scientific research.
+For 2-D physics, consider using <a href="http://www.dyn4j.org/">dyn4j</a> instead.</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI and its documentation
+assume a certain level of proficiency with
+<a href="https://en.wikipedia.org/wiki/Java_(programming_language)">the Java programming language</a>.
+The project isn&#8217;t aimed at non-programmers,
+nor developers without prior Java experience.
+Similarly, it assumes familiarity with vector math and 3-D computer graphics.</p>
+</div>
+<div class="paragraph">
+<p>While an understanding of classical mechanics is assumed,
+many of its technical terms are linked (at first use)
+to the relevant article in the English Wikipedia.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">The project&#8217;s open-source license</a>
+disclaims liability for defects.
+Please don&#8217;t use this software in safety-critical applications.</p>
+</div>
+<div class="paragraph">
+<p>I welcome suggestions concerning the future development of Jolt JNI.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_help"><a class="anchor" href="#_getting_help"></a>Getting help</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A web tutorial with sample code is under development.</p>
+</div>
+<div class="paragraph">
+<p>For self-help, utilize
+the javadoc and
+<a href="https://github.com/stephengold/jolt-jni">the source code</a>.</p>
+</div>
+<div class="paragraph">
+<p>For issues that are best handled privately, contact me by e-mail.
+My personal e-mail address appears
+on <a href="https://stephengold.github.io/">my homepage</a> and in the source code.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Page contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; 2020&ndash;2025 by Stephen Gold</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
