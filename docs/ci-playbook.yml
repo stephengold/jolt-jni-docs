@@ -1,0 +1,19 @@
+---
+# configure Antora for deployment by continuous integration
+
+site:
+  title: The Jolt-JNI project
+  start_page: jolt-jni-en:ROOT:overview.adoc
+  url: https://stephengold.github.io/jolt-jni
+content:
+  sources:
+    - url: https://github.com/stephengold/jolt-jni-docs.git
+      branches: master
+      start_path: docs/en
+ui:
+  bundle:
+    url: https://github.com/stephengold/antora-ui-bundle/releases/download/v-sgold250101a/ui-bundle.zip
+    snapshot: true
+output:
+  clean: true
+  dir: docs/build/site
