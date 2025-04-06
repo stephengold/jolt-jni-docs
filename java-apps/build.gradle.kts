@@ -38,6 +38,10 @@ tasks.register<JavaExec>("HelloConstraint") {
     description = "Runs the HelloConstraint tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloConstraint"
 }
+tasks.register<JavaExec>("HelloContactResponse") {
+    description = "Runs the HelloContactResponse tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloContactResponse"
+}
 tasks.register<JavaExec>("HelloDamping") {
     description = "Runs the HelloDamping tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloDamping"
