@@ -1,0 +1,557 @@
+= An introduction to rigid-body physics
+:Project: Jolt JNI
+:experimental:
+:page-pagination:
+:page-toclevels: 3
+:url-enwiki: https://en.wikipedia.org/wiki
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
+
+== The 5 familiar features
+
+A _rigid body_ is a type of physics object
+that exhibits some familiar features of real-world objects, including:
+
+* _rigidity_: a fixed shape, and
+* {url-enwiki}/Inertia[_inertia_]: resistance to changes of motion
+  (quantified by its mass
+  and {url-enwiki}/Moment_of_inertia[_moment of inertia_]).
+
+You've already seen how to specify a body's shape
+using `BodyCreationSettings.setShape()`.
+
+`BodyCreationSettings` offers 3 ways to specify a body's inertia:
+
+* `MassAndInertiaProvided`: specify mass and moment of inertia directly
+  using a mass-properties override
+* `CalculateMassAndInertia`: calculate mass and moment of inertia
+  based on the shape and density
+* `CalculateInertia`: specify mass directly using the mass-properties override
+  and calculate the moment of inertia based on the shape and mass
+
+For now, we'll use `CalculateInertia`, like so:
+
+[source,java]
+----
+BodyCreationSettings bcs /* ... */;
+bcs.getMassPropertiesOverride().setMass(2f);
+bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
+----
+
+By default, rigid bodies also exhibit 3 other features of real-world objects:
+
+* They are _dynamic_:
+  mobile, with their motion determined by
+  {url-enwiki}/Force[_forces_],
+  {url-enwiki}/Torque[_torques_], and
+  {url-enwiki}/Impulse_(physics)[_impulses_].
+* They are subject to _gravity_:
+  a continual downward force proportional to their mass.
+* They exhibit _contact response_:
+  powerful forces prevent them from intersecting other bodies.
+
+However, these last 3 features are optional in {Project} and can easily be disabled.
+
+=== HelloRigidBody
+
+{url-tutorial}/HelloRigidBody.java[HelloRigidBody] is a Sport-Jolt app
+that demonstrates the 5 familiar features of rigid bodies.
+
+Things to notice while running the app:
+
+. Two balls, both falling slowly under the influence of gravity.
+. The simulation runs at 1/10th normal speed.
+. The ball on the right receives an impulse that pushes it leftward.
+. After the impulse ends, the ball's inertia keeps it moving leftward.
+. The balls collide, generating contact forces
+  that alter the balls' motions but not their shapes.
+.. The ball on the right loses half its horizontal velocity.
+.. The ball on the left begins moving leftward as it falls.
+
+== Configuring rigid bodies
+
+=== Static rigid bodies
+
+Not all rigid bodies move.
+To create a _static_ (non-moving) rigid body,
+set the motion type to `Static` and the object layer to `objLayerNonMoving`.
+When adding a static body to the system, there's no reason to activate it:
+
+[source,java]
+----
+BodyCreationSettings bcs /* ... */;
+bcs.setMotionType(EMotionType.Static); // default=Dynamic
+bcs.setObjectLayer(objLayerNonMoving); // default=0
+// ...
+BodyInterface bi = physicsSystem.getBodyInterface();
+Body body = /* ... */
+bi.addBody(body, EActivation.DontActivate);
+----
+
+Unlike a dynamic body,
+a static one is unaffected by forces, torques, and impulses,
+as if its mass were infinite.
+
+NOTE: Java's `static` keyword is completely unrelated to physics.
+
+{url-tutorial}/HelloStaticBody.java[HelloStaticBody] is a Sport-Jolt app
+that combines static and dynamic rigid bodies.
+Things to notice while running the app:
+
+. Two balls: the top one dynamic, the bottom one static.
+. The balls collide, generating contact forces
+  that affect the motion of the dynamic ball.
+. The static ball stays fixed in place,
+  unaffected by gravity and contact forces.
+. In Sport-Jolt, dynamic rigid bodies are conventionally colored magenta,
+  while non-dynamic ones are shown in gray.
+
+[NOTE]
+====
+You can always convert a dynamic body to a static one:
+
+[source,java]
+----
+Body body = /* ... */
+body.setMotionType(EMotionType.Static);
+body.setObjectLayer(objLayerNonMoving);
+----
+
+However, the reverse is not tru:
+you can only convert a static body to a dynamic one
+if you configured it to allow the conversion
+with `BodyCreationSettings.setAllowDynamicOrKinematic(true)`.
+====
+
+=== Position
+
+Every body occupies a _position_ described by 2 properties:
+
+* the _location_ of the body's origin and
+* the body's _orientation_:
+  the rotation of its (local) axes relative to those of the physics system.
+
+Unfortunately, the Jolt Physics API and documentation refer to a body's
+location as its "position" and its orientation as its "rotation". Thus:
+
+[source,java]
+----
+Body body = /* ... */
+RVec3Arg location = body.getPosition();
+QuatArg orientation = body.getRotation();
+----
+
+Furthermore, a body's origin might differ from its center of mass (COM):
+
+[source,java]
+----
+Body body = /* ... */
+RVec3Arg comLocation = body.getCenterOfMassPosition();
+----
+
+[NOTE]
+====
+Positions are represented by `RVec3Arg` objects such as `RVec3`.
+The precision of such objects
+depends on the flavor of the native library:
+
+* When an Sp-flavored library is loaded,
+  locations have single-precision components.
+* When a Dp-flavored library is loaded,
+  locations have double-precision components.
+====
+
+You can specify a body's initial location and orientation
+in its creation settings:
+
+[source,java]
+----
+BodyCreationSettings bcs = /* ... */
+bcs.setPosition(new RVec3(5., 1., 0.));
+bcs.setRotation(new Quaternion(0.5f, 0.5f, 0.5f, 0.5f));
+----
+
+Once a static body is created, you should avoid moving it.
+Once a dynamic body is created,
+you should use forces, torques, and impulses to move it.
+
+=== Kinematic motion
+
+In addition to static and dynamic rigid bodies, there's a third type.
+
+_Kinematic_ bodies share some properties with both static and dynamic ones.
+Like dynamic bodies, kinematic ones can move.
+However, they are unaffected by forces, torques, and impulses.
+Their movement is dictated by application logic that may, if desired,
+reposition them gradually during each simulation step.
+
+In the presence of dynamic bodies, a kinematic body acts like
+an irresistible battering ram.
+
+To create one:
+
+[source,java]
+----
+BodyCreationSettings bcs = /* ... */
+bcs.setMotionType(EMotionType.Kinematic);
+bcs.setObjectLayer(objLayerMoving);
+// ...
+BodyInterface bi = physicsSystem.getBodyInterface();
+bi.addBody(body, EActivation.Activate);
+----
+
+To move a kinematic body, invoke
+`Body.moveKinematic(newLocation, newOrientation, timeStep)`.
+
+{url-tutorial}/HelloKinematics.java[HelloKinematics] is a Sport-Jolt app
+that combines kinematic and dynamic rigid bodies.
+Things to notice while running the app:
+
+. Two balls: the top one dynamic, the bottom one kinematic.
+. The kinematic ball orbits a fixed point in the world.
+. The balls collide, generating contact forces
+  that affect the motion of the dynamic ball.
+. The kinematic ball continues orbiting,
+  unaffected by gravity and contact forces.
+
+=== Contact response
+
+When physics simulation detects a collision between
+2 bodies that both have contact response, it applies contact forces.
+
+To disable contact response for a specific rigid body,
+configure it as a _sensor_ using `setIsSensor(true)`.
+
+{url-tutorial}/HelloContactResponse.java[HelloContactResponse]
+is a Sport-Jolt app
+that demonstrates contact response.
+Things to notice while running the app:
+
+. The ball falls until it collides with the gray (static) box,
+  which provides a contact force to halt its motion and counteract gravity.
+. Press kbd:[E] to disable the ball's contact response.
+. Afterwards, the box no longer exerts any force on the ball.
+  Gravity takes over, and the ball falls through the box.
+. In Sport-Jolt, non-responsive rigid bodies are shown in yellow.
+
+NOTE: This documentation assumes a keyboard with the "US" (QWERTY) layout.
+On keyboards with other layouts, keys may be labeled differently.
+
+=== Velocity
+
+Every dynamic body has a _velocity_ that quantifies its motion as of the
+end of the latest simulation step (and the start of the next).
+
+More precisely, it has 2 velocities: _linear velocity_ and _angular velocity_,
+both represented as 3-D vectors.
+The magnitude and direction of the linear-velocity vector quantify the speed
+and direction at which the body's origin is moving (if at all).
+The magnitude and direction of the angular-velocity vector quantify the
+rate and axis direction of the body's spinning motion (if any).
+
+NOTE: The velocities of a static body are both zero.
+
+To directly alter the velocities of a dynamic rigid body,
+use its `setLinearVelocity()` and `setAngularVelocity()` methods.
+
+=== Built-in forces
+
+Many real-world phenomena can be modeled as forces acting on rigid bodies.
+
+You can apply custom forces, impulses, and torques
+using the following 6 methods:
+
+* `Body.addAngularImpulse(Vec3Arg)`
+* `Body.addForce(Vec3Arg)`
+* `Body.addForce(Vec3Arg force, RVec3Arg location)`
+* `Body.addImpulse(Vec3Arg)`
+* `Body.addImpulse(Vec3Arg force, RVec3Arg location)`
+* `Body.addTorque(Vec3Arg)`
+
+However, some forces are so commonplace that they are
+"built into" rigid-body simulation:
+
+* drag forces:
+** damping
+* gravity
+* contact forces:
+** restitution
+** friction
+
+==== Damping
+
+In the absence of external forces,
+inertia would keep the velocities of a body constant.
+In the real world, however,
+we're accustomed to seeing unpowered moving objects eventually come to rest.
+This behavior is often caused by _drag forces_ (such as air resistance)
+that increase with speed.
+
+To simulate drag forces, each rigid body has _damping_,
+which quantifies how quickly its motion decays to zero,
+assuming the body is dynamic.
+
+More precisely, each body has 2 damping parameters:
+_linear damping_ and _angular damping_,
+each of which ranges from zero (no drag) to one (motion ceases immediately).
+Linear damping damps the linear velocity, and
+angular damping damps the angular velocity.
+
+Both parameters can be set during body configuration:
+
+[source,java]
+----
+BodyCreationSettings bcs = /* ... */
+bcs.setAngularDamping(0.3f); // default=0.05 per second
+bcs.setLinearDamping(0.2f); // default=0.05 per second
+----
+
+{url-tutorial}/HelloDamping.java[HelloDamping] is a Sport-Jolt app
+that demonstrates damping.
+Things to notice while running the app:
+
+. 4 cubes initially share the same linear and angular velocities.
+. The top 2 have constant linear velocities, evidence of no linear damping.
+. The left 2 have constant angular velocities, evidence of no angular damping.
+. The linear velocities of the bottom 2 cubes decay quickly to zero
+  due to strong linear damping.
+. The angular velocities of the right 2 cubes decay quickly to zero
+  due to strong angular damping.
+
+==== Gravity
+
+In the real world,
+we're accustomed to seeing unsupported objects fall.
+This behavior is caused by _gravity_,
+a downward force that's proportional to mass (so it causes a constant
+{url-enwiki}/Acceleration[acceleration]).
+
+To simulate this phenomenon, each physics system has a gravity vector
+that quantifies the acceleration of dynamic bodies.
+To configure a system's gravity,
+use `PhysicsSystem.setGravity(accelerationVector)`.
+
+NOTE: If following the Y-up axes convention, the X and Z components of the
+vector should be zero and its Y component should be *negative*.
+
+To disable gravity for a specific rigid body,
+use `BodyCreationSettings.setGravityFactor(0f)` (during configuration)
+or `BodyInterface.setGravityFactor(body.getId(), 0f)` (during simulation).
+
+==== Restitution
+
+When responsive rigid bodies collide,
+contact forces come into play, altering their velocities.
+These forces are split into 2 components:  restitution and friction.
+
+_Restitution_ is a force parallel to the contact normal.
+Its strength hints at what the bodies might be made out of.
+
+If both bodies were made of hard, springy steel,
+they might separate without loss of
+{url-enwiki}/Kinetic_energy[kinetic energy],
+after undergoing what's called a _perfectly elastic_ collision.
+If, on the other hand, both bodies were made of soft, sticky clay,
+they might cling together, dissipating kinetic energy and
+undergoing what's called a _perfectly inelastic_ collision.
+
+In reality, no collision is perfectly elastic.
+Elasticity is quantified by a _coefficient of restitution_,
+which ranges from zero (perfectly inelastic) to one (perfectly elastic).
+
+In Jolt Physics, collisions are inelastic by default.
+(We saw this in {url-tutorial}/HelloRigidBody.java[HelloRigidBody.java].)
+Each rigid body has a _restitution ratio_, which defaults to zero.
+For each collision, the coefficient of restitution
+is calculated as the maximum of the ratios of the colliding bodies.
+
+To simulate a perfectly elastic collision, set the restitution parameter of
+either body to one:
+
+[source,java]
+----
+Body body = /* ... */
+body.setRestitution(1f); // default=0
+----
+
+==== Friction
+
+While restitution models contact forces parallel to the contact normal,
+_friction_ models contact forces orthogonal to the contact normal.
+
+Each rigid body has a _friction ratio_ (which defaults to 0.2).
+This parameter hints at the body's surface characteristics.
+To configure the ratio, use the `setFriction()` method.
+Reducing a body's friction ratio makes it more slippery (think wet ice).
+Increasing it yields better traction (think sandpaper or dry rubber).
+
+For each collision, a _coefficient of friction_
+is calculated as the geometric mean of the ratios of the colliding bodies.
+
+=== Allowed DOFs
+
+A body's motion is constrained by its _allowed degrees of freedom (DOFs)_,
+which can be configured during creation.
+
+For instance, to prevent a body from rotating:
+
+[source,java]
+----
+BodyCreationSettings bcs = /* ... */
+bcs.setAllowedDofs(
+          EAllowedDofs.TranslationX
+        | EAllowedDofs.TranslationY
+        | EAllowedDofs.TranslationZ);
+----
+
+Allowed DOFs can also be used to simulate physics in 2 dimensions.
+For instance, one might constrain a body
+to rotate only around axes parallel to the Z axis
+and translate only in directions parallel to the X-Y plane:
+
+[source,java]
+----
+BodyCreationSettings bcs = /* ... */
+bcs.setAllowedDofs(
+          EAllowedDofs.TranslationX
+        | EAllowedDofs.TranslationY
+        | EAllowedDofs.RotationZ);
+----
+
+NOTE: Allowed DOFs are defined by the system's axes,
+not the body's local axes.
+
+=== Deactivation
+
+It's common for physics simulations to reach a
+{url-enwiki}/Steady_state[_steady state_] in which
+the some or all bodies have stopped moving.
+If a dynamic rigid body doesn't move for 2 seconds,
+the simulator may automatically _deactivate_ it to reduce CPU utilization.
+
+To prevent a body from being deactivated,
+a certain amount of motion
+needs to occur every 0.5 seconds.
+Accessors are provided for these thresholds:
+
+[source,java]
+----
+PhysicsSettings settings = physicsSystem.getPhysicsSettings();
+physicsSettings.setPointVelocitySleepThreshold(0.01f); // default=0.03 m/s
+physicsSettings.setTimeBeforeSleep(2f); // default=0.5 seconds
+----
+
+NOTE: _Sleeping_ is synonym for deactivation.
+
+To disable deactivation globally (for all rigid bodies),
+use `PhysicsSettings.setAllowSleeping(false)`.
+
+To disable deactivation for a specific body,
+use `Body.setAllowSleeping(false)`.
+
+To test whether a body is deactivated, use `Body.isActive()`.
+
+Deactivated bodies won't be simulated (and won't move)
+unless/until they get reactivated.
+
+Puzzling behavior may occur if a deactivated body is
+supported by another body that then gets removed.
+The deactivated body will seem to be "stuck"
+because removals do not, by themselves, reactivate it.
+
+{url-tutorial}/HelloDeactivation.java[HelloDeactivation] is a Sport-Jolt app
+that demonstrates deactivation.
+Things to notice while running the app:
+
+. The upper (dynamic) box falls until it collides with the lower (static) box,
+  which provides a contact force to halt its motion and counteract gravity.
+. About half a second after the upper box stops moving, it gets deactivated.
+. In Sport-Jolt, deactivated rigid bodies are conventionally colored gray.
+. After the application removes the lower box,
+  the dynamic box doesn't resume its descent.
+  Due to deactivation, it appears to be "stuck".
+. Press kbd:[E] to reactivate the dynamic box.
+
+To reactivate all bodies in a specific physics system,
+use code like this:
+
+[source,java]
+----
+BodyInterface bi = physicsSystem.getBodyInterface();
+ConstAaBox allLocations = AaBox.sBiggest();
+BroadPhaseLayerFilter allBpLayers = new BroadPhaseLayerFilter();
+ObjectLayerFilter allObjLayers = new ObjectLayerFilter();
+bi.activateBodiesInAaBox(allLocations, allBpLayers, allObjLayers);
+----
+
+=== Continuous collision detection
+
+A common issue with discrete-time physics simulation
+involves a fast-moving dynamic body passing through a thin obstacle
+without any collision being detected.
+The issue arises because the dynamic body can pass
+from one side of the obstacle to the other in a single simulation step.
+The dynamic body doesn't intersect the obstacle after any step,
+so no collision is detected and no contact forces are simulated.
+
+To some extent, this issue could be mitigated by reducing the time step.
+But since CPU utilization is inversely proportional to the time step,
+this approach quickly becomes inefficient.
+
+To solve this issue,
+{Project} implements _continuous collision detection_ (CCD) using LinearCast,
+an algorithm for detecting collisions that in the middle of a simulation step.
+
+Because LinearCast involves extra computation, it's disabled by default.
+To enable LinearCast, use
+`BodyCreationSettings.setMotionQuality(EMotionQuality.LinearCast)`.
+
+{url-tutorial}/HelloCcd.java[HelloCcd] is a Sport-Jolt app
+that demonstrates CCD.
+Things to notice while running the app:
+
+. The 2 balls have the same size, mass, initial height, and initial velocity.
+. The ball with CCD enabled (on the left) sticks the landing on the platform.
+. The control ball (on the right) falls through the platform,
+  passing from one side to the other in a single simulation step.
+
+== Summary
+
+* Rigid bodies simulate familiar features of real-world objects.
+* There are 3 kinds: static, kinematic, and dynamic ...
+
+[cols="4", options="header"]
+|===
+| |Static |Kinematic |Dynamic
+
+a|Movement
+a|Avoid movement.
+a|`moveKinematic()`
+a|`addAngularImpulse()` `addForce()` `addImpulse()` `addTorque()`
+  `setAngularVelocity()` `setLinearVelocity()`
+
+a|Affected by forces, impulses, and torques?
+a|No.
+a|No.
+a|Yes.
+
+a|Typical use cases
+a|Non-moving objects such as floors, posts, terrain, and walls
+a|Application-controlled objects such as airships and elevators
+a|Physics-controlled objects such as balls, bricks, and ragdolls
+
+a|How to configure
+a|`setMotionType(EMotionType.Static)` `setObjectLayer(objLayerNonMoving)`
+a|`setMotionType(EMotionType.Kinematic)` `setObjectLayer(objLayerMoving)`
+a|`setMotionType(EMotionType.Dynamic)` `setObjectLayer(objLayerMoving)`
+|===
+
+* The properties of rigid bodies include: shape, mass, moment of inertia,
+  location, orientation, velocities (linear and angular),
+  damping (linear and angular), gravity, restitution, friction,
+  sleeping thresholds, and motion quality.
+* Mobility, contact response, gravity, and friction are all optional features.
+* If a dynamic rigid body moves too slowly,
+  it might get automatically deactivated after half a second.
+* Continuous collision detection (CCD) solves the problem
+  of fast-moving bodies passing through thin obstacles.
+* Continuous collision detection is disabled by default.

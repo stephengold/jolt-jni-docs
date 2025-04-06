@@ -1,6 +1,7 @@
 * Library tutorials
 ** xref:add.adoc[Add to existing project]
 ** xref:sport.adoc[Sport-Jolt visualization]
+** xref:rigidbody.adoc[Rigid bodies]
 * xref:build.adoc[Build procedures]
 * https://github.com/stephengold/jolt-jni[GitHub repository]
 ** https://github.com/stephengold/jolt-jni/releases/latest[Latest release]
@@ -17,7 +18,7 @@
 ** https://jitpack.io/#stephengold/jolt-jni[JitPack (unofficial)]
 * Projects using Jolt JNI
 ** https://github.com/stephengold/jolt-jni-docs[jolt-jni-docs]
-** https://github.com/stephengold/sport-jolt[Sport Jolt]
+** https://github.com/stephengold/sport-jolt[Sport-Jolt]
 ** https://github.com/stephengold/kk-physics[KK Physics]
 * Other related projects
 ** https://jrouwe.github.io/JoltPhysics[Jolt Physics]
