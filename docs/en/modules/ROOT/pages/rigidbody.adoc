@@ -264,7 +264,7 @@ using the following 6 methods:
 * `Body.addForce(Vec3Arg)`
 * `Body.addForce(Vec3Arg force, RVec3Arg location)`
 * `Body.addImpulse(Vec3Arg)`
-* `Body.addImpulse(Vec3Arg force, RVec3Arg location)`
+* `Body.addImpulse(Vec3Arg impulse, RVec3Arg location)`
 * `Body.addTorque(Vec3Arg)`
 
 However, some forces are so commonplace that they are
