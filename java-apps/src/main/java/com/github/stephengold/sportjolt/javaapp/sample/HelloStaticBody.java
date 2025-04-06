@@ -87,7 +87,7 @@ public class HelloStaticBody extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
                 = new MapObj2Bp(numObjLayers, numBpLayers)

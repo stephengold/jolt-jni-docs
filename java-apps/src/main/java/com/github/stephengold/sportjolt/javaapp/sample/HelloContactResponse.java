@@ -101,7 +101,7 @@ public class HelloContactResponse extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
                 = new MapObj2Bp(numObjLayers, numBpLayers)
@@ -155,7 +155,7 @@ public class HelloContactResponse extends BasePhysicsApp {
         ConstShape ballShape = new SphereShape(ballRadius);
         BodyCreationSettings bcs2 = new BodyCreationSettings();
         bcs2.getMassPropertiesOverride().setMass(2f);
-        bcs2.setAllowSleeping(false); // Disable sleep for clarity.
+        bcs2.setAllowSleeping(false); // Disable sleeping for clarity.
         bcs2.setOverrideMassProperties(
                 EOverrideMassProperties.CalculateInertia);
         bcs2.setPosition(0., 4., 0.);

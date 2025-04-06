@@ -103,7 +103,7 @@ public class HelloKinematics
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
                 = new MapObj2Bp(numObjLayers, numBpLayers)
@@ -157,7 +157,7 @@ public class HelloKinematics
 
         assert kineBall.isKinematic();
 
-        // Visualize the shapes of both bodies.
+        // Visualize the shapes of both bodies:
         visualizeShape(dynaBall);
         visualizeShape(kineBall);
     }

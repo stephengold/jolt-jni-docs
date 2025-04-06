@@ -96,7 +96,7 @@ public class HelloSport extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
                 = new MapObj2Bp(numObjLayers, numBpLayers)
@@ -146,7 +146,7 @@ public class HelloSport extends BasePhysicsApp {
         Body ball = bi.createBody(bcs);
         bi.addBody(ball, EActivation.Activate);
 
-        // Visualize the shapes of both rigid bodies:
+        // Visualize the shapes of both bodies:
         visualizeShape(floor);
         visualizeShape(ball);
     }

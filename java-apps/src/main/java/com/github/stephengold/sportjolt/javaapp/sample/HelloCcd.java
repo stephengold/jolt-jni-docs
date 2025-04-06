@@ -88,7 +88,7 @@ public class HelloCcd extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        // Use a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         MapObj2Bp mapObj2Bp = new MapObj2Bp(numObjLayers, numBpLayers)
                 .add(objLayerNonMoving, 0)
@@ -98,14 +98,14 @@ public class HelloCcd extends BasePhysicsApp {
         ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
 
         int maxBodies = 3;
-        int numBodyMutexes = 0; // 0 means "use the default value"
+        int numBodyMutexes = 0; // 0 means "use the default number"
         int maxBodyPairs = 3;
         int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();
         result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
                 mapObj2Bp, objVsBpFilter, objVsObjFilter);
 
-        // Increase gravity to make the balls fall faster.
+        // Increase gravity to make the balls fall faster:
         result.setGravity(0f, -100f, 0f);
 
         return result;
@@ -116,7 +116,7 @@ public class HelloCcd extends BasePhysicsApp {
      */
     @Override
     public void populateSystem() {
-        // Create a collision shape for balls.
+        // Create a collision shape for balls:
         float ballRadius = 0.1f;
         ConstShape ballShape = new SphereShape(ballRadius);
 
@@ -128,7 +128,7 @@ public class HelloCcd extends BasePhysicsApp {
         BodyInterface bi = physicsSystem.getBodyInterface();
         /*
          * Create 2 dynamic balls, one with LinearCast CCD and one without,
-         * and add them to the system.
+         * and add them to the system:
          */
         bcs.setMotionQuality(EMotionQuality.LinearCast);
         bcs.setPosition(-1., 4., 0.);
@@ -145,7 +145,7 @@ public class HelloCcd extends BasePhysicsApp {
         MotionProperties controlProperties = controlBall.getMotionProperties();
         assert controlProperties.getMotionQuality() == EMotionQuality.Discrete;
 
-        // Create a thin, static disc and add it to the space.
+        // Create a thin, static disc and add it to the system:
         float discRadius = 2f;
         float discThickness = 0.05f;
         float discConvexRadius = 0.02f;
@@ -159,7 +159,7 @@ public class HelloCcd extends BasePhysicsApp {
         ConstBody disc = bi.createBody(bcs);
         bi.addBody(disc, EActivation.DontActivate);
 
-        // Visualize the shapes of all 3 bodies.
+        // Visualize the shapes of all 3 bodies:
         visualizeShape(ccdBall);
         visualizeShape(controlBall);
         visualizeShape(disc).setProgram("Unshaded/Monochrome");
@@ -174,7 +174,7 @@ public class HelloCcd extends BasePhysicsApp {
      */
     @Override
     public void updatePhysics(float wallClockSeconds) {
-        // For clarity, simulate at 1/10th normal speed.
+        // For clarity, simulate at 1/10th normal speed:
         float simulateSeconds = 0.1f * wallClockSeconds;
         super.updatePhysics(simulateSeconds);
     }

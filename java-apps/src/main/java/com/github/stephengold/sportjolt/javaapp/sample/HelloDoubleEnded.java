@@ -130,7 +130,7 @@ public class HelloDoubleEnded
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         MapObj2Bp mapObj2Bp = new MapObj2Bp(numObjLayers, numBpLayers)
                 .add(objLayerNonMoving, 0)
@@ -140,17 +140,17 @@ public class HelloDoubleEnded
         ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
 
         int maxBodies = 3;
-        int numBodyMutexes = 0; // 0 means "use the default value"
+        int numBodyMutexes = 0; // 0 means "use the default number"
         int maxBodyPairs = 3;
         int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();
         result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
                 mapObj2Bp, objVsBpFilter, objVsObjFilter);
 
-        // To enable the callbacks, register this app as a step listener.
+        // To enable the callbacks, register this app as a tick listener:
         addTickListener(this);
 
-        // Reduce the time step for better accuracy.
+        // Reduce the time step for better accuracy:
         this.timePerStep = 0.005f;
 
         return result;
@@ -166,7 +166,7 @@ public class HelloDoubleEnded
         configureCamera();
         setLightDirection(7f, 3f, 5f);
 
-        // Disable VSync for more frequent mouse-position updates.
+        // Disable VSync for more frequent mouse-position updates:
         setVsync(false);
     }
 
@@ -175,16 +175,16 @@ public class HelloDoubleEnded
      */
     @Override
     public void populateSystem() {
-        // Add a static plane to represent the ground.
+        // Add a static plane to represent the ground:
         addPlane(groundY);
 
-        // Add a mouse-controlled kinematic paddle.
+        // Add a mouse-controlled kinematic paddle:
         addPaddle();
 
-        // Add a dynamic ball.
+        // Add a dynamic ball:
         Body ballBody = addBall();
 
-        // Add a double-ended constraint to connect the ball to the paddle.
+        // Add a double-ended constraint to connect the ball to the paddle:
         RVec3Arg pivotInBall = new RVec3(0f, 3f, 0f);
         RVec3Arg pivotInPaddle = new RVec3(0f, 3f, 0f);
 

@@ -101,7 +101,7 @@ public class HelloSoftBody extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         MapObj2Bp mapObj2Bp = new MapObj2Bp(numObjLayers, numBpLayers)
                 .add(objLayerNonMoving, 0)
@@ -111,7 +111,7 @@ public class HelloSoftBody extends BasePhysicsApp {
         ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
 
         int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default value"
+        int numBodyMutexes = 0; // 0 means "use the default number"
         int maxBodyPairs = 3;
         int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();
@@ -144,7 +144,7 @@ public class HelloSoftBody extends BasePhysicsApp {
         boolean indexed = true;
         Mesh mesh = new IcosphereMesh(numRefinementIterations, indexed);
 
-        // Create a soft ball and add it to the physics space.
+        // Create a soft ball and add it to the physics system:
         SoftBodySharedSettings sbss = new SoftBodySharedSettings();
 
         VertexBuffer locations = mesh.getPositions();

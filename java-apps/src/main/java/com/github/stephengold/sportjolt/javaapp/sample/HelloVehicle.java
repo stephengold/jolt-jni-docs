@@ -130,7 +130,7 @@ public class HelloVehicle extends BasePhysicsApp {
      */
     @Override
     public void populateSystem() {
-        // Add a static horizontal plane at y=-0.65 to represent the ground.
+        // Add a static horizontal plane at y=-0.65 to represent the ground:
         float groundY = -0.65f;
         addPlane(groundY);
         /*
@@ -161,7 +161,7 @@ public class HelloVehicle extends BasePhysicsApp {
         Body body = bi.createBody(bcs);
         bi.addBody(body.getId(), EActivation.Activate);
 
-        // Configure 4 wheels, 2 in the front (for steering) and 2 in the rear.
+        // Configure 4 wheels, 2 in the front (for steering) and 2 in the rear:
         float frontAxleZ = 0.7f * noseZ; // offset from chassis center
         float rearAxleZ = 0.8f * tailZ; // offset from chassis center
         float xOffset = 0.9f * halfWidth;
@@ -179,7 +179,7 @@ public class HelloVehicle extends BasePhysicsApp {
         wheels[3].setMaxSteerAngle(0f);
         /*
          * Configure a controller with a single differential,
-         * for rear-wheel drive.
+         * for rear-wheel drive:
          */
         WheeledVehicleControllerSettings wvcs
                 = new WheeledVehicleControllerSettings();
@@ -204,10 +204,10 @@ public class HelloVehicle extends BasePhysicsApp {
         visualizeShape(vehicle);
         visualizeWheels(vehicle);
 
-        // Apply a steering angle of 4 degrees left (to the front wheels).
+        // Apply a steering angle of 4 degrees left (to both front wheels):
         float right = -Jolt.degreesToRadians(4f);
 
-        // Apply a constant acceleration.
+        // Apply a constant forward acceleration:
         float forward = 1f;
         float brake = 0f;
         float handBrake = 0f;
@@ -250,7 +250,7 @@ public class HelloVehicle extends BasePhysicsApp {
      * @return a new instance (not null)
      */
     private PhysicsSystem configurePhysics() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         MapObj2Bp mapObj2Bp = new MapObj2Bp(numObjLayers, numBpLayers)
                 .add(objLayerNonMoving, 0)
@@ -260,7 +260,7 @@ public class HelloVehicle extends BasePhysicsApp {
         ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
 
         int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default value"
+        int numBodyMutexes = 0; // 0 means "use the default number"
         int maxBodyPairs = 3;
         int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();

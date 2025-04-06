@@ -121,7 +121,7 @@ public class HelloCharacter
      */
     @Override
     public void populateSystem() {
-        // Create a character with a capsule shape and add it to the space.
+        // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 0.5f;
         float capsuleHeight = 1f;
         ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
@@ -135,12 +135,12 @@ public class HelloCharacter
                 .toRef();
         character.addToPhysicsSystem();
 
-        // Add a square to represent the ground.
+        // Add a square to represent the ground:
         float halfExtent = 4f;
         float y = -2f;
         Body ground = addSquare(halfExtent, y);
 
-        // Visualize the shapes of both physics objects.
+        // Visualize the shapes of both physics objects:
         visualizeShape(character);
         visualizeShape(ground);
     }
@@ -168,7 +168,7 @@ public class HelloCharacter
      */
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // If the character is touching the ground, cause it to jump.
+        // If the character is supported, cause it to jump:
         if (character.isSupported()) {
             character.setLinearVelocity(new Vec3(0f, 8f, 0f));
         }
@@ -185,7 +185,7 @@ public class HelloCharacter
      * @return the new body (not null)
      */
     private Body addSquare(float halfExtent, float y) {
-        // Construct a static rigid body with a square shape.
+        // Create a static rigid body with a square shape:
         float halfThickness = 0.1f;
         ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
         BodyCreationSettings bcs = new BodyCreationSettings();
@@ -209,7 +209,7 @@ public class HelloCharacter
      * @return a new instance (not null)
      */
     private PhysicsSystem configurePhysics() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         MapObj2Bp mapObj2Bp = new MapObj2Bp(numObjLayers, numBpLayers)
                 .add(objLayerNonMoving, 0)
@@ -219,7 +219,7 @@ public class HelloCharacter
         ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
 
         int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default value"
+        int numBodyMutexes = 0; // 0 means "use the default number"
         int maxBodyPairs = 3;
         int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();

@@ -91,7 +91,7 @@ public class HelloDamping extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
                 = new MapObj2Bp(numObjLayers, numBpLayers)
@@ -128,7 +128,7 @@ public class HelloDamping extends BasePhysicsApp {
         ConstShape cubeShape = new BoxShape(cubeHalfExtent);
 
         BodyCreationSettings bcs = new BodyCreationSettings()
-                .setAllowSleeping(false); // Disable sleep for clarity.
+                .setAllowSleeping(false); // Disable sleeping for clarity.
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
                 .getMassPropertiesOverride().setMass(2f);
         bcs.setObjectLayer(objLayerMoving)
@@ -171,7 +171,7 @@ public class HelloDamping extends BasePhysicsApp {
         assert linDamping == 0.9f : "linDamping = " + linDamping;
         /*
          * Apply an off-center impulse to each cube,
-         * causing it to drift and spin.
+         * causing it to drift and spin:
          */
         Vec3Arg impulse = new Vec3(-1f, 0f, 0f);
         RVec3Arg offset = new RVec3(0., 1., 1.);

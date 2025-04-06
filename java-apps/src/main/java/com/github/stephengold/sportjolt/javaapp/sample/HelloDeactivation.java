@@ -105,7 +105,7 @@ public class HelloDeactivation
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
                 = new MapObj2Bp(numObjLayers, numBpLayers)
@@ -156,9 +156,10 @@ public class HelloDeactivation
         bcs.setShape(smallCubeShape);
         dynamicCube = bi.createBody(bcs);
         bi.addBody(dynamicCube, EActivation.Activate);
-
-        // Create 2 static bodies and add them to the system.
-        // The top body serves as a temporary support.
+        /*
+         * Create 2 static bodies and add them to the system.
+         * The top body serves as a temporary support.
+         */
         float cubeHalfExtent = 1f;
         ConstShape largeCubeShape = new BoxShape(cubeHalfExtent);
         bcs.setMotionType(EMotionType.Static);
@@ -195,7 +196,7 @@ public class HelloDeactivation
     public void physicsTick(PhysicsSystem system, float timeStep) {
         /*
          * Once the dynamic cube gets deactivated,
-         * remove the support cube from the PhysicsSystem.
+         * remove the support cube from the system:
          */
         BodyInterface bi = system.getBodyInterface();
         ConstBodyId supportId = supportCube.getId();

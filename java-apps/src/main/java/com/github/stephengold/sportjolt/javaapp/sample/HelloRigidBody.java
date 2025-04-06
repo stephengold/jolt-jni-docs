@@ -93,7 +93,7 @@ public class HelloRigidBody extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        // a single broadphase layer for simplicity:
+        // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
                 = new MapObj2Bp(numObjLayers, numBpLayers)
@@ -144,10 +144,10 @@ public class HelloRigidBody extends BasePhysicsApp {
         float actualMass = 1f / ball2.getMotionProperties().getInverseMass();
         assert Math.abs(actualMass - 2f) < 1e-6f : "actualMass = " + actualMass;
 
-        // Put ball2 on a collision course with ball1.
+        // Apply an impulse to ball2 to put it on a collision course with ball1:
         ball2.addImpulse(-25f, 0f, 0f);
 
-        // Visualize the shapes of both rigid bodies:
+        // Visualize the shapes of both bodies:
         visualizeShape(ball1);
         visualizeShape(ball2);
     }
@@ -161,7 +161,7 @@ public class HelloRigidBody extends BasePhysicsApp {
      */
     @Override
     public void updatePhysics(float wallClockSeconds) {
-        // For clarity, simulate at 1/10th normal speed.
+        // For clarity, simulate at 1/10th normal speed:
         float simulateSeconds = 0.1f * wallClockSeconds;
         super.updatePhysics(simulateSeconds);
     }
