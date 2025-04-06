@@ -10,6 +10,8 @@ jobs:
   Website:
     if: contains(toJson(github.event.commits), '[ci skip] ') == false
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/setup-java@v4
         with:
