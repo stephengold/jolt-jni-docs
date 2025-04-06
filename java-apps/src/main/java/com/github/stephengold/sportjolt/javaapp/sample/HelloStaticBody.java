@@ -137,6 +137,8 @@ public class HelloStaticBody extends BasePhysicsApp {
         Body statBall = bi.createBody(bcs);
         bi.addBody(statBall, EActivation.DontActivate);
 
+        assert statBall.isStatic();
+
         // Visualize the shapes of both bodies:
         visualizeShape(dynaBall);
         visualizeShape(statBall);

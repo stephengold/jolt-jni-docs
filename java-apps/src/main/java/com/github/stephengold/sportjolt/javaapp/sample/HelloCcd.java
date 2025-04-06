@@ -33,6 +33,7 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.CylinderShape;
 import com.github.stephengold.joltjni.MapObj2Bp;
+import com.github.stephengold.joltjni.MotionProperties;
 import com.github.stephengold.joltjni.ObjVsBpFilter;
 import com.github.stephengold.joltjni.ObjVsObjFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
@@ -138,6 +139,11 @@ public class HelloCcd extends BasePhysicsApp {
         bcs.setPosition(1., 4., 0.);
         Body controlBall = bi.createBody(bcs);
         bi.addBody(controlBall, EActivation.Activate);
+
+        MotionProperties ccdProperties = ccdBall.getMotionProperties();
+        assert ccdProperties.getMotionQuality() == EMotionQuality.LinearCast;
+        MotionProperties controlProperties = controlBall.getMotionProperties();
+        assert controlProperties.getMotionQuality() == EMotionQuality.Discrete;
 
         // Create a thin, static disc and add it to the space.
         float discRadius = 2f;

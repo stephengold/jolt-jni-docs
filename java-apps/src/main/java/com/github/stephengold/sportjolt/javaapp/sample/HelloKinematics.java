@@ -155,6 +155,8 @@ public class HelloKinematics
         kineBall = bi.createBody(bcs);
         bi.addBody(kineBall, EActivation.Activate);
 
+        assert kineBall.isKinematic();
+
         // Visualize the shapes of both bodies.
         visualizeShape(dynaBall);
         visualizeShape(kineBall);

@@ -164,6 +164,11 @@ public class HelloDamping extends BasePhysicsApp {
         bcs.setPosition(4f, -2f, 0f);
         cube[3] = bi.createBody(bcs);
         bi.addBody(cube[3], EActivation.Activate);
+
+        float angDamping = cube[2].getMotionProperties().getAngularDamping();
+        assert angDamping == 0f : "angDamping = " + angDamping;
+        float linDamping = cube[2].getMotionProperties().getLinearDamping();
+        assert linDamping == 0.9f : "linDamping = " + linDamping;
         /*
          * Apply an off-center impulse to each cube,
          * causing it to drift and spin.

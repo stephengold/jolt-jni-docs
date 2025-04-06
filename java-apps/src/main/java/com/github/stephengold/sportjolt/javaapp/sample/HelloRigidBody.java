@@ -140,6 +140,10 @@ public class HelloRigidBody extends BasePhysicsApp {
         Body ball2 = bi.createBody(bcs);
         bi.addBody(ball2, EActivation.Activate);
 
+        assert ball2.isDynamic();
+        float actualMass = 1f / ball2.getMotionProperties().getInverseMass();
+        assert Math.abs(actualMass - 2f) < 1e-6f : "actualMass = " + actualMass;
+
         // Put ball2 on a collision course with ball1.
         ball2.addImpulse(-25f, 0f, 0f);
 
