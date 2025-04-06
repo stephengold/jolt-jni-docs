@@ -219,7 +219,7 @@ public class HelloVehicle extends BasePhysicsApp {
     // private methods
 
     /**
-     * Add a horizontal plane body to the PhysicsSystem.
+     * Add a horizontal plane body to the system.
      *
      * @param y the desired elevation (in system coordinates)
      */
@@ -245,7 +245,7 @@ public class HelloVehicle extends BasePhysicsApp {
     }
 
     /**
-     * Configure physics during startup.
+     * Configure physics during initialization.
      *
      * @return a new instance (not null)
      */

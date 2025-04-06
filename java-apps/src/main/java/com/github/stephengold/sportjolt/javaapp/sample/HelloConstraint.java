@@ -78,7 +78,7 @@ public class HelloConstraint
     // constants
 
     /**
-     * physics-space Y coordinate of the ground plane
+     * system Y coordinate of the ground plane
      */
     final private static float groundY = -4f;
     /**
@@ -229,7 +229,7 @@ public class HelloConstraint
     // PhysicsTickListener methods
 
     /**
-     * Callback invoked (by Sport Jolt, not by Jolt Physics) after the system
+     * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
      * @param system the system that was just stepped (not null)
@@ -245,7 +245,7 @@ public class HelloConstraint
     }
 
     /**
-     * Callback invoked (by Sport Jolt, not by Jolt Physics) before the system
+     * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
      * @param system the system that's about to to be stepped (not null)
@@ -259,7 +259,7 @@ public class HelloConstraint
     // private methods
 
     /**
-     * Create a dynamic rigid body with a sphere shape and add it to the space.
+     * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
      * @return the new body
      */
@@ -282,7 +282,7 @@ public class HelloConstraint
     }
 
     /**
-     * Create a kinematic body with a box shape and add it to the space.
+     * Create a kinematic body with a box shape and add it to the system.
      */
     private void addPaddle() {
         ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);
@@ -300,7 +300,7 @@ public class HelloConstraint
     }
 
     /**
-     * Add a horizontal plane body to the PhysicsSystem.
+     * Add a horizontal plane body to the system.
      *
      * @param y the desired elevation (in system coordinates)
      */
@@ -326,7 +326,7 @@ public class HelloConstraint
     }
 
     /**
-     * Configure the Camera and CIP during startup.
+     * Configure the Camera and CIP during initialization.
      */
     private static void configureCamera() {
         getCameraInputProcessor().setRotationMode(RotateMode.None);

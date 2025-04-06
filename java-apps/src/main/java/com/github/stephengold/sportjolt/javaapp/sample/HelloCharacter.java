@@ -148,7 +148,7 @@ public class HelloCharacter
     // PhysicsTickListener methods
 
     /**
-     * Callback invoked (by Sport Jolt, not by Jolt Physics) after the system
+     * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
      * @param system the system that was just stepped (not null)
@@ -160,7 +160,7 @@ public class HelloCharacter
     }
 
     /**
-     * Callback invoked (by Sport Jolt, not by Jolt Physics) before the system
+     * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
      * @param system the system that's about to to be stepped (not null)
@@ -204,7 +204,7 @@ public class HelloCharacter
     }
 
     /**
-     * Configure physics during startup.
+     * Configure physics during initialization.
      *
      * @return a new instance (not null)
      */
