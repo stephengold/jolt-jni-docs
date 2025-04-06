@@ -1,7 +1,7 @@
 = Visualization using the Sport graphics engine
 :experimental:
 :page-pagination:
-:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
 
 The `HelloJoltJni` app
 (introduced on xref:add.adoc[the previous page])
