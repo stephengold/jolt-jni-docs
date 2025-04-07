@@ -277,6 +277,9 @@ ObjectLayerPairFilter objVsObjFilter
         = new ObjVsObjFilter(numObjLayers);
 ----
 
+For more advice regarding layers, see
+https://jrouwe.github.io/JoltPhysics/index.html#collision-detection[the collision-detection section of the Jolt-Physics documentation].
+
 == Create a physics system
 
 As soon as you create a `PhysicsSystem`, you should configure it
