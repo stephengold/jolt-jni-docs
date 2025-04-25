@@ -142,6 +142,9 @@
     <a class="nav-link" href="https://jrouwe.github.io/JoltPhysics">Jolt Physics</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://stephengold.github.io/Libbulletjme">Libbulletjme</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="https://github.com/kmammou/v-hacd">V-HACD</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -277,7 +280,7 @@ dependencies {
     implementation(
             group: "com.github.stephengold",
             name: "jolt-jni-Android",
-            version: "0.9.8",
+            version: "0.9.9",
             classifier: "SpDebug",
             ext: "aar"
     )
@@ -314,10 +317,10 @@ add to the relevant "build.gradle" or "build.gradle.kts" file:</p>
 }
 dependencies {
     // JVM library:
-    implementation("com.github.stephengold:jolt-jni-Windows64:0.9.8")
+    implementation("com.github.stephengold:jolt-jni-Windows64:0.9.9")
 
     // native libraries:
-    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:0.9.8:DebugSp")
+    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:0.9.9:DebugSp")
         // Native libraries for other platforms also could be added.
 }</code></pre>
 </div>
