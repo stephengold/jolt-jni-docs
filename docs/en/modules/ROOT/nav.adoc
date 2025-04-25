@@ -22,6 +22,7 @@
 ** https://github.com/stephengold/kk-physics[KK Physics]
 * Other related projects
 ** https://jrouwe.github.io/JoltPhysics[Jolt Physics]
+** https://stephengold.github.io/Libbulletjme[Libbulletjme]
 ** https://github.com/kmammou/v-hacd[V-HACD]
 ** https://github.com/stephengold/antora-ui-bundle[Website UI bundle]
 * People
