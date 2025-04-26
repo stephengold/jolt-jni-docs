@@ -98,7 +98,7 @@ tasks.withType<JavaExec>().all { // JVM runtime options:
     classpath = sourceSets.main.get().getRuntimeClasspath()
     enableAssertions = assertions
     if (enableNativeAccess) {
-        jvmArgs '--enable-native-access=ALL-UNNAMED' // suppress System::load() warning
+        jvmArgs("--enable-native-access=ALL-UNNAMED") // suppress System::load() warning
     }
     jvmArgs("-XX:+UseG1GC", "-XX:MaxGCPauseMillis=10")
 }
