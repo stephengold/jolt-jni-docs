@@ -33,7 +33,7 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
-import com.github.stephengold.joltjni.MapObj2Bp;
+import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable;
 import com.github.stephengold.joltjni.ObjVsBpFilter;
 import com.github.stephengold.joltjni.ObjVsObjFilter;
 import com.github.stephengold.joltjni.ObjectLayerPairFilter;
@@ -43,7 +43,6 @@ import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
-import com.github.stephengold.joltjni.readonly.ConstBodyId;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -108,9 +107,9 @@ public class HelloDeactivation
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         BroadPhaseLayerInterface mapObj2Bp
-                = new MapObj2Bp(numObjLayers, numBpLayers)
-                        .add(objLayerNonMoving, 0)
-                        .add(objLayerMoving, 0);
+                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
+                        .mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
+                        .mapObjectToBroadPhaseLayer(objLayerMoving, 0);
         ObjectVsBroadPhaseLayerFilter objVsBpFilter
                 = new ObjVsBpFilter(numObjLayers, numBpLayers);
         ObjectLayerPairFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers)
@@ -199,7 +198,7 @@ public class HelloDeactivation
          * remove the support cube from the system:
          */
         BodyInterface bi = system.getBodyInterface();
-        ConstBodyId supportId = supportCube.getId();
+        int supportId = supportCube.getId();
         if (bi.isAdded(supportId) && !dynamicCube.isActive()) {
             bi.removeBody(supportId);
         }
