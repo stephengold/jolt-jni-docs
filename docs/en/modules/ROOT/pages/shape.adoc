@@ -1,0 +1,224 @@
+= Choosing collision shapes
+:Project: Jolt JNI
+:item: &rarr;
+:page-pagination:
+:url-enwiki: https://en.wikipedia.org/wiki
+
+A _collision shape_
+describes the shape and size of a collision object such as a rigid body.
+
+== The 18 shape classes
+
+The examples so far have all used spheres, cubes, and/or cylinders.
+However, those are but 3 of the 18 concrete subclasses of
+`Shape`.
+
+The subclasses are summarized here, in lexicographic order,
+with illustrations and lists of key properties (explained below):
+
+[cols="2*",grid="none"]
+|===
+
+|1. `BoxShape`
+
+{item} convex with convex radius +
+{item} movable
+|image:box.png[height=160]
+
+|2. `CapsuleShape`
+
+{item} convex without convex radius +
+{item} movable
+|image:capsule.png[height=160]
+
+|3. `ConvexHullShape`
+
+{item} convex with convex radius +
+{item} movable
+|image:convexHull.png[height=160]
+
+|4. `CylinderShape`
+
+{item} convex with convex radius +
+{item} movable
+|image:cylinder.png[height=160]
+
+|5. `EmptyShape`
+
+{item} non-convex +
+{item} movable +
+{item} used as a placeholder
+|(no image)
+
+|6. `HeightfieldShape`
+
+{item} used to simulate terrain efficiently +
+{item} may contain holes +
+{item} non-convex +
+{item} must be static
+|image:heightField.png[height=160]
+
+|7. `MeshShape`
+
+{item} non-convex +
+{item} must be static +
+{item} costly to simulate
+|image:mesh.png[height=160]
+
+|8. `MutableCompoundShape`
+
+{item} compound (non-convex) +
+{item} movable
+|image:compound.png[height=160]
+
+|9. `OffsetCenterOfMassShape`
+
+{item} decorated (non-convex) +
+{item} movable
+|image:ocoms.png[height=160]
+
+|10. `PlaneShape`
+
+{item} non-convex +
+{item} must be static
+|image:plane.png[height=160]
+
+|11. `RotatatedTranslatedShape`
+
+{item} decorated (non-convex) +
+{item} movable
+|image:rotatedTranslated.png[height=160]
+
+|12. `ScaledShape`
+
+{item} decorated (non-convex) +
+{item} movable
+|(no image)
+
+|13. `SoftBodyShape`
+
+{item} non-convex +
+{item} applies only to soft bodies, not rigid ones
+|(no image)
+
+|14. `SphereShape`
+
+{item} convex without convex radius +
+{item} movable
+|image:sphere.png[height=160]
+
+|15. `StaticCompoundShape`
+
+{item} compound (non-convex) +
+{item} movable
+|image:compound.png[height=160]
+
+|16. `TaperedCapsuleShape`
+
+{item} convex without convex radius +
+{item} movable
+|image:taperedCapsule.png[height=160]
+
+|17. `TaperedCylinderShape`
+
+{item} convex with convex radius +
+{item} movable
+|image:taperedCylinder.png[height=160]
+
+|18. `TriangleShape`
+
+{item} convex with convex radius +
+{item} movable
+|image:triangle.png[height=160]
+
+|===
+
+== Creating shapes
+
+While simple shapes like boxes and spheres can be instantiated directly,
+complex ones can only be created using a settings object.
+For instance, to instantiate a `ConvexHullShape`,
+you must use a `ConvexHullShapeSettings` object:
+
+[source,java]
+----
+ConvexHullShapeSettings settings = new ConvexHullShapeSettings(points);
+ShapeResult result = settings.create();
+assert result.isValid();
+ShapeRefC ref = result.get();
+ConvexHullShape shape = (ConvexHullShape) ref.getPtr();
+----
+
+== Decorated and compound
+
+A _decorated shape_ modifies a pre-existing shape.
+
+A _compound shape_ combines any number of _child shapes_
+into a single shape:
+
+* A `MutableCompoundShape` allows child shapes to be added or removed
+from after the compound is created.
+* A `StaticCompoundShape` does prohibits such modifications.
+
+== Convex versus non-convex
+
+The _convex_ collision-shape classes are those
+that guarantee the _convex property_:
+for any 2 locations inside a shape,
+the line segment connecting those locations lies entirely inside the shape.
+
+To test whether a shape belongs to a convex class:
+
+[source,java]
+----
+boolean convexClass = (shape instanceof ConvexShape);
+// or
+boolean convexClass = (shape.getType() == EShapeType.Convex);
+----
+
+NOTE: In {Project}, "convex" is a property of classes, not objects.
+While specific *instances* of non-convex classes possess the convex property,
+those classes don't guarantee it for *all* instances.
+
+== Convex radius
+
+_Convex radius_ is a property found only in convex shapes
+with sharp edges and/or corners.
+
+To speed up collision detection,
+Jolt Physics rounds off edges and corners.
+The geometrical shape is first shrunk by the convex radius,
+then inflated again by the same amount.
+
+For boxes, cylinders, tapered cylinders, and triangles,
+convex radius limits the minimum size of shapes.
+For such shapes, the radius defaults to 5 centimeters.
+To create very small shapes of this sort,
+it may be necessary override the default value.
+
+For convex hulls, the default convex radius
+depends on the vertices used to construct the shape.
+
+== Choosing a shape
+
+For efficient simulation, the general rule is:
+"Use the simplest shape that yields the desired *behavior*."
+Focusing on behavior (rather than appearance)
+helps you avoid simulating details that don't matter.
+For instance:
+
+* A character's hair should probably be omitted from their collision shape.
+* Any small object that only encounters large, flat surfaces
+  can probably be approximated by a convex hull.
+* As long as a container remains sealed,
+  its collision shape need not be hollow.
+
+== Summary
+
+* {Project} provides 18 types of collision shapes,
+  ranging from the trivial `EmptyShape`
+  to the costly `MeshShape`.
+* Collision-shape instances classified as "non-convex"
+  may still exhibit the convex property.
+* Most convex shapes incorporate a convex radius to round off the corners.
+* Use the simplest shape that yields the desired behavior.
