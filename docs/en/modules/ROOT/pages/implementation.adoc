@@ -1,0 +1,113 @@
+= How Jolt JNI works
+:Cplusplus: C&#43;&#43;
+:Project: Jolt JNI
+:url-enwiki: https://en.wikipedia.org/wiki
+
+For physics simulation and collision detection,
+{Project} uses https://jrouwe.github.io/JoltPhysics[Jolt Physics],
+a modern, open-source, 3-D physics simulator,
+released under https://github.com/jrouwe/JoltPhysics?tab=MIT-1-ov-file[an MIT license].
+
+To enable efficient simulation of complex moving shapes,
+{Project} also incorporates Khaled Mamou's
+https://github.com/kmammou/v-hacd[Volumetric-Hierarchical Approximate Convex Decomposition (V-HACD) algorithm],
+released under
+https://github.com/kmammou/v-hacd/blob/master/LICENSE[a 3-Clause BSD License].
+
+== Native libraries
+
+Jolt Physics and V-HACD are written in {Cplusplus}, so {Project} uses
+https://docs.oracle.com/en/java/javase/11/docs/specs/jni/index.html[the Java Native Interface (JNI)]
+to access their objects and methods.
+
+Before instantiating physics objects,
+a {Project} application must {url-enwiki}/Dynamic_loading[dynamically load]
+a _native library_ of this code,
+compiled for the {url-enwiki}/Computing_platform[platform]
+on which the app is executing.
+
+The {Project} project publishes native libraries
+for 12 different platforms:
+
+* Windows (x86-64 with and without AVX2),
+* Linux (x86-64 with and without FMA, armhf, and aarch64),
+* macOS (x86-64 and ARM64), and
+* Android (armeabi-v7a, arm64-v8a, x86, and x86_64).
+
+NOTE: 32-bit and 64-bit versions of the same operating system
+count as distinct platforms!
+
+For each platform, {Project} builds 2 types of libraries:
+
+* "Debug" (for development, debugging, and functional testing) and
+* "Release" (for performance testing and production use).
+
+Furthermore, native libraries come in 2 _flavors_:
+
+* "Sp" (using
+  {url-enwiki}/Single-precision_floating-point_format[single-precision arithmetic]) and
+* "Dp" (using
+  {url-enwiki}/Double-precision_floating-point_format[double-precision arithmetic]).
+
+All these native libraries share a common API,
+so a single JVM library suffices.
+
+== Bodies, physics systems, and shapes
+
+Collision detection is organized around _bodies_
+that interact in the context of a _physics system_.
+
+Bodies can be _soft_ (varying shape) or _rigid_ (non-varying shape).
+Rigid bodies can be _moving_ or _static_ (non-moving).
+And moving bodies can be _dynamic_ (driven by {url-enwiki}/Force[forces],
+{url-enwiki}/Torque[torques], and {url-enwiki}/Impulse_(physics)[impulses])
+or _kinematic_ (driven directly by external calculations).
+
+Each rigid body references a _collision shape_
+that describes its surface.
+
+== Coordinate systems and units
+
+A body's absolute location and orientation are quantified
+in _system coordinates_,
+based on a right-handed Cartesian coordinate system.
+
+{Project} doesn't require a particular "up" direction.
+However, the "up" direction for characters defaults to +Y,
+and the direction of gravity in a physics system defaults to -Y.
+
+Locations relative to a shape's origin and subject to its rotation
+are quantified using _local coordinates_.
+
+Dimensions and distances are specified in meters.
+
+== Discrete time and collision detection
+
+Physics simulation occurs in discrete steps of short duration.
+
+For fast-moving bodies,
+{Project} offers optional continuous collision detection (CCD)
+using linear casting.
+
+== Direct buffers, garbage collection, and threading
+
+Direct buffers used in {Project} should have native byte order.
+
+All other native objects created by {Project} are carefully tracked using
+weak references.
+Invocation of the `JoltPhysicsObject.startCleaner()` method
+starts a daemon thread.
+The thread's purpose is to free any native objects
+owned by Java objects that have been garbage collected.
+
+Multi-threaded simulation is built into {Project}.
+The number of worker threads is configured into a `JobSystem`
+that's typically created during initialization.
+
+== Next steps
+
+For more detail about how Jolt Physics works, refer to
+https://jrouwe.github.io/JoltPhysics[the Jolt Physics website].
+
+To gain hands-on experience,
+proceed to xref:add.adoc[the first tutorial page].
