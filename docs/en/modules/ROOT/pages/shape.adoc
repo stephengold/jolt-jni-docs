@@ -68,13 +68,13 @@ with illustrations and lists of key properties (explained below):
 |8. `MutableCompoundShape`
 
 {item} compound (non-convex) +
-{item} movable
+{item} movable if all children are movable
 |image:compound.png[height=160]
 
 |9. `OffsetCenterOfMassShape`
 
 {item} decorated (non-convex) +
-{item} movable
+{item} movable if inner shape is movable
 |image:ocoms.png[height=160]
 
 |10. `PlaneShape`
@@ -86,13 +86,13 @@ with illustrations and lists of key properties (explained below):
 |11. `RotatatedTranslatedShape`
 
 {item} decorated (non-convex) +
-{item} movable
+{item} movable if inner shape is movable
 |image:rotatedTranslated.png[height=160]
 
 |12. `ScaledShape`
 
 {item} decorated (non-convex) +
-{item} movable
+{item} movable if inner shape is movable
 |(no image)
 
 |13. `SoftBodyShape`
@@ -110,7 +110,7 @@ with illustrations and lists of key properties (explained below):
 |15. `StaticCompoundShape`
 
 {item} compound (non-convex) +
-{item} movable
+{item} movable if all children are movable
 |image:compound.png[height=160]
 
 |16. `TaperedCapsuleShape`
