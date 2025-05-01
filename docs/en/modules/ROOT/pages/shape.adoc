@@ -158,7 +158,7 @@ into a single shape:
 
 * A `MutableCompoundShape` allows child shapes to be added or removed
 from after the compound is created.
-* A `StaticCompoundShape` does prohibits such modifications.
+* A `StaticCompoundShape` prohibits such modifications.
 
 == Convex versus non-convex
 
