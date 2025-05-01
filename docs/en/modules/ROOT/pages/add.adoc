@@ -267,17 +267,20 @@ and mapping object layer 0 to broadphase layer 0.
 int numBpLayers = 1;
 int numObjLayers = 1;
 
-// Define the mapping from object layers to broadphase layers:
-BroadPhaseLayerInterface mapObj2Bp
-        = new MapObj2Bp(numObjLayers, numBpLayers).add(0, 0);
+// Enable collisions between bodies in object layer 0:
+ObjectLayerPairFilterTable ovoFilter
+        = new ObjectLayerPairFilterTable(numObjLayers);
+ovoFilter.enableCollision(0, 0);
 
-// Disable collision filtering between object layers and broadphase layers:
-ObjectVsBroadPhaseLayerFilter objVsBpFilter
-        = new ObjVsBpFilter(numObjLayers, numBpLayers);
+// Map object layer 0 to broadphase layer 0:
+BroadPhaseLayerInterfaceTable layerMap
+        = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
+layerMap.mapObjectToBroadPhaseLayer(0, 0);
 
-// Disable collision filtering between object layers:
-ObjectLayerPairFilter objVsObjFilter
-        = new ObjVsObjFilter(numObjLayers);
+// Pre-compute the rules for colliding object layers with broadphase layers:
+ObjectVsBroadPhaseLayerFilter ovbFilter
+        = new ObjectVsBroadPhaseLayerFilterTable(
+                layerMap, numBpLayers, ovoFilter, numObjLayers);
 ----
 
 For more advice regarding layers, see
@@ -299,7 +302,7 @@ int numBodyMutexes = 0; // 0 means "use the default number"
 int maxBodyPairs = 65_536;
 int maxContacts = 20_480;
 system.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-       mapObj2Bp, objVsBpFilter, objVsObjFilter);
+        layerMap, ovbFilter, ovoFilter);
 ----
 
 == Add physics objects

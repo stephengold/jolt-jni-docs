@@ -31,16 +31,14 @@ package com.github.stephengold.sportjolt.javaapp.sample.console;
 import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
 import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable;
 import com.github.stephengold.joltjni.JobSystem;
 import com.github.stephengold.joltjni.JobSystemThreadPool;
 import com.github.stephengold.joltjni.Jolt;
 import com.github.stephengold.joltjni.JoltPhysicsObject;
-import com.github.stephengold.joltjni.ObjVsBpFilter;
-import com.github.stephengold.joltjni.ObjVsObjFilter;
-import com.github.stephengold.joltjni.ObjectLayerPairFilter;
+import com.github.stephengold.joltjni.ObjectLayerPairFilterTable;
 import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilter;
+import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilterTable;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
@@ -176,14 +174,26 @@ final public class HelloJoltJni {
     private static PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
-        BroadPhaseLayerInterface mapObj2Bp
-                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
-                        .mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
-                        .mapObjectToBroadPhaseLayer(objLayerMoving, 0);
-        ObjectVsBroadPhaseLayerFilter objVsBpFilter
-                = new ObjVsBpFilter(numObjLayers, numBpLayers);
-        ObjectLayerPairFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers)
-                .disablePair(objLayerNonMoving, objLayerNonMoving);
+
+        ObjectLayerPairFilterTable ovoFilter
+                = new ObjectLayerPairFilterTable(numObjLayers);
+        // Enable collisions between 2 moving bodies:
+        ovoFilter.enableCollision(objLayerMoving, objLayerMoving);
+        // Enable collisions between a moving body and a non-moving one:
+        ovoFilter.enableCollision(objLayerMoving, objLayerNonMoving);
+        // Disable collisions between 2 non-moving bodies:
+        ovoFilter.enableCollision(objLayerNonMoving, objLayerNonMoving);
+
+        // Map both object layers to broadphase layer 0:
+        BroadPhaseLayerInterfaceTable layerMap
+                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
+        layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
+        layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
+
+        // Rules for colliding object layers with broadphase layers:
+        ObjectVsBroadPhaseLayerFilter ovbFilter
+                = new ObjectVsBroadPhaseLayerFilterTable(
+                        layerMap, numBpLayers, ovoFilter, numObjLayers);
 
         int maxBodies = 2;
         int numBodyMutexes = 0; // 0 means "use the default number"
@@ -191,7 +201,7 @@ final public class HelloJoltJni {
         int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();
         result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-                mapObj2Bp, objVsBpFilter, objVsObjFilter);
+                layerMap, ovbFilter, ovoFilter);
 
         return result;
     }
