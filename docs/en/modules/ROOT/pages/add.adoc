@@ -243,11 +243,15 @@ JobSystem jobSystem = new JobSystemThreadPool(
 
 Jolt Physics allows you to organize bodies into _collision layers_
 and specify that some layers never collide.
-For instance, it's typical to put all non-moving bodies into a separate layer
-and specify that they collide only with moving objects.
+For instance, it's typical to put moving and non-moving bodies
+into separate layers
+and specify that non-moving bodies collide only with moving bodies,
+not with other non-moving bodies.
 
-Collision layers can be defined differently
-for each phase of collision detection:
+Each body belongs to an _object layer_, defaulting to layer 0.
+You can define up to 65_536 object layers.
+
+Collision layers can be defined both for objects and broadphase:
 
 * _broadphase layers_ are used during broad-phase detection, and
 * _object layers_ are used during narrow-phase detection.
@@ -255,8 +259,8 @@ for each phase of collision detection:
 The sole limitation is that there must be a consistent mapping
 from object layers to broadphase layers.
 
-For now, I suggest putting all bodies in layer 0
-during both broadphase and narrowphase.
+For now, I suggest putting all bodies in object layer 0
+and mapping object layer 0 to broadphase layer 0.
 
 [source,java]
 ----
