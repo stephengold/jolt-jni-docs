@@ -68,3 +68,12 @@ https://github.com/stephengold/jolt-jni[the source code].
 For issues that are best handled privately, contact me by e-mail.
 My personal e-mail address appears at the bottom
 of https://stephengold.github.io/[my homepage] and in the source code.
+
+
+== Next steps
+
+If you're curious how {Project} works,
+proceed to xref:implementation.adoc[the Implementation page].
+
+To gain hands-on experience,
+proceed to xref:add.adoc[the first tutorial page].
