@@ -28,7 +28,7 @@ Here's the recommended procedure for building desktop libraries:
 .. If you use GCC, you might also need to install the "g++-multilib" package:
 ... `sudo apt install g++-multilib`
 . Point the `JAVA_HOME` environment variable to your JDK installation:
-   (That path might look something like
+   (The path might look something like
    "C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
    or "/usr/lib/jvm/java-17-openjdk-amd64/" or
    "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home".)
@@ -43,12 +43,12 @@ Here's the recommended procedure for building desktop libraries:
 ... `git checkout -b latest 0.9.10`
 .. using a web browser:
 ... browse to https://github.com/stephengold/jolt-jni/releases/latest
-... follow the "Source code (zip)" link at the bottom of the page
+... follow the "Source code (zip)" link
 ... save the ZIP file
 ... extract the contents of the saved ZIP file
 ... `cd` to the extracted directory
 . Edit the "gradle.properties" file to configure the build.
-. Run the https://gradle.org[Gradle] wrapper:
+. Run the https://gradle.org[Gradle] wrapper on the desktop build script:
 .. using Bash or Fish or PowerShell or Zsh: `./gradlew build`
 .. using Windows Command Prompt: `.\gradlew build`
 

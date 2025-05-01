@@ -1,6 +1,7 @@
 = How Jolt JNI works
 :Cplusplus: C&#43;&#43;
 :Project: Jolt JNI
+:ProjectAdj: Jolt-JNI
 :url-enwiki: https://en.wikipedia.org/wiki
 
 For physics simulation and collision detection,
@@ -21,12 +22,12 @@ https://docs.oracle.com/en/java/javase/11/docs/specs/jni/index.html[the Java Nat
 to access their objects and methods.
 
 Before instantiating physics objects,
-a {Project} application must {url-enwiki}/Dynamic_loading[dynamically load]
+a {ProjectAdj} application must {url-enwiki}/Dynamic_loading[dynamically load]
 a _native library_ of this code,
 compiled for the {url-enwiki}/Computing_platform[platform]
 on which the app is executing.
 
-The {Project} project publishes native libraries
+The {ProjectAdj} project publishes native libraries
 for 12 different platforms:
 
 * Windows (x86-64 with and without AVX2),
@@ -45,9 +46,9 @@ For each platform, {Project} builds 2 types of libraries:
 Furthermore, native libraries come in 2 _flavors_:
 
 * "Sp" (using
-  {url-enwiki}/Single-precision_floating-point_format[single-precision arithmetic]) and
+  {url-enwiki}/Single-precision_floating-point_format[single-precision] locations) and
 * "Dp" (using
-  {url-enwiki}/Double-precision_floating-point_format[double-precision arithmetic]).
+  {url-enwiki}/Double-precision_floating-point_format[double-precision] locations).
 
 All these native libraries share a common API,
 so a single JVM library suffices.
@@ -64,7 +65,7 @@ And moving bodies can be _dynamic_ (driven by {url-enwiki}/Force[forces],
 or _kinematic_ (driven directly by external calculations).
 
 Each rigid body references a _collision shape_
-that describes its surface.
+that describes the shape of its surface.
 
 == Coordinate systems and units
 

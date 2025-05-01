@@ -65,5 +65,5 @@ the javadoc and
 https://github.com/stephengold/jolt-jni[the source code].
 
 For issues that are best handled privately, contact me by e-mail.
-My personal e-mail address appears
-on https://stephengold.github.io/[my homepage] and in the source code.
+My personal e-mail address appears at the bottom
+of https://stephengold.github.io/[my homepage] and in the source code.

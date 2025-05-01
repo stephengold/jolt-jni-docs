@@ -5,7 +5,7 @@
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
-Adding {Project} to an existing Java project is an 10-step process:
+Adding {Project} to an existing project is an 10-step process:
 
 . Add libraries to the classpath.
 . Load the native library.
@@ -23,19 +23,18 @@ Adding {Project} to an existing Java project is an 10-step process:
 == Add libraries to classpath
 
 {Project} requires both a JVM library and a native library.
-
-Pre-built {Project} libraries are available from from Maven Central.
+Both kinds of libraries are available pre-built from Maven Central.
 
 Build types:  use "Debug" native libraries for development and troubleshooting,
-then switch to "Release" for performance testing and production.
+then switch to "Release" libraries for performance testing and production.
 
-Build flavors:  use "Dp" native libraries to simulate large worlds
+Flavors:  use "Dp" native libraries to simulate large worlds
 (>1000 meters in diameter) otherwise use "Sp".
 
 === Gradle-built Android projects
 
 {Project} comes pre-built for Android as a pair of AARs (one for each build type).
-Each AAR includes both the JVM library and all necessary native libraries.
+Each AAR includes both a JVM library and all necessary native libraries.
 
 I suggest starting out with the Debug-type AAR.
 Add to the relevant "build.gradle" or "build.gradle.kts" file:

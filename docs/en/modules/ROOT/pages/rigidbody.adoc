@@ -553,5 +553,5 @@ a|`setMotionType(EMotionType.Dynamic)` `setObjectLayer(objLayerMoving)`
 * If a dynamic rigid body moves too slowly,
   it might get automatically deactivated after half a second.
 * Continuous collision detection (CCD) solves the problem
-  of fast-moving bodies passing through thin obstacles.
+  of fast-moving dynamic bodies passing through thin obstacles.
 * Continuous collision detection is disabled by default.
