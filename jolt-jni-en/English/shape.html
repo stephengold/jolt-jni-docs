@@ -282,13 +282,13 @@ with illustrations and lists of key properties (explained below):</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8. <code>MutableCompoundShape</code></p>
 <p class="tableblock">&rarr; compound (non-convex)<br>
-&rarr; movable</p></td>
+&rarr; movable if all children are movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/compound.png" alt="compound" height="160"></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9. <code>OffsetCenterOfMassShape</code></p>
 <p class="tableblock">&rarr; decorated (non-convex)<br>
-&rarr; movable</p></td>
+&rarr; movable if inner shape is movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ocoms.png" alt="ocoms" height="160"></span></p></td>
 </tr>
 <tr>
@@ -300,13 +300,13 @@ with illustrations and lists of key properties (explained below):</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11. <code>RotatatedTranslatedShape</code></p>
 <p class="tableblock">&rarr; decorated (non-convex)<br>
-&rarr; movable</p></td>
+&rarr; movable if inner shape is movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/rotatedTranslated.png" alt="rotatedTranslated" height="160"></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">12. <code>ScaledShape</code></p>
 <p class="tableblock">&rarr; decorated (non-convex)<br>
-&rarr; movable</p></td>
+&rarr; movable if inner shape is movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(no image)</p></td>
 </tr>
 <tr>
@@ -324,7 +324,7 @@ with illustrations and lists of key properties (explained below):</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15. <code>StaticCompoundShape</code></p>
 <p class="tableblock">&rarr; compound (non-convex)<br>
-&rarr; movable</p></td>
+&rarr; movable if all children are movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/compound.png" alt="compound" height="160"></span></p></td>
 </tr>
 <tr>
@@ -373,7 +373,7 @@ ConvexHullShape shape = (ConvexHullShape) ref.getPtr();</code></pre>
 <h2 id="_decorated_and_compound"><a class="anchor" href="#_decorated_and_compound"></a>Decorated and compound</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A <em>decorated shape</em> modifies a pre-existing shape.</p>
+<p>A <em>decorated shape</em> is derifved from a pre-existing <em>inner shape</em>.</p>
 </div>
 <div class="paragraph">
 <p>A <em>compound shape</em> combines any number of <em>child shapes</em>

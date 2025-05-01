@@ -231,13 +231,13 @@ to access their objects and methods.</p>
 </div>
 <div class="paragraph">
 <p>Before instantiating physics objects,
-a Jolt JNI application must <a href="https://en.wikipedia.org/wiki/Dynamic_loading">dynamically load</a>
+a Jolt-JNI application must <a href="https://en.wikipedia.org/wiki/Dynamic_loading">dynamically load</a>
 a <em>native library</em> of this code,
 compiled for the <a href="https://en.wikipedia.org/wiki/Computing_platform">platform</a>
 on which the app is executing.</p>
 </div>
 <div class="paragraph">
-<p>The Jolt JNI project publishes native libraries
+<p>The Jolt-JNI project publishes native libraries
 for 12 different platforms:</p>
 </div>
 <div class="ulist">
@@ -289,11 +289,11 @@ count as distinct platforms!
 <ul>
 <li>
 <p>"Sp" (using
-<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">single-precision arithmetic</a>) and</p>
+<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">single-precision</a> locations) and</p>
 </li>
 <li>
 <p>"Dp" (using
-<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision arithmetic</a>).</p>
+<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision</a> locations).</p>
 </li>
 </ul>
 </div>
@@ -319,7 +319,7 @@ or <em>kinematic</em> (driven directly by external calculations).</p>
 </div>
 <div class="paragraph">
 <p>Each rigid body references a <em>collision shape</em>
-that describes its surface.</p>
+that describes the shape of its surface.</p>
 </div>
 </div>
 </div>

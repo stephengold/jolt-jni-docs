@@ -210,7 +210,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Adding Jolt JNI to an existing Java project is an 10-step process:</p>
+<p>Adding Jolt JNI to an existing project is an 10-step process:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -254,24 +254,22 @@ and the collision filters for layers.</p>
 <h2 id="_add_libraries_to_classpath"><a class="anchor" href="#_add_libraries_to_classpath"></a>Add libraries to classpath</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jolt JNI requires both a JVM library and a native library.</p>
-</div>
-<div class="paragraph">
-<p>Pre-built Jolt JNI libraries are available from from Maven Central.</p>
+<p>Jolt JNI requires both a JVM library and a native library.
+Both kinds of libraries are available pre-built from Maven Central.</p>
 </div>
 <div class="paragraph">
 <p>Build types:  use "Debug" native libraries for development and troubleshooting,
-then switch to "Release" for performance testing and production.</p>
+then switch to "Release" libraries for performance testing and production.</p>
 </div>
 <div class="paragraph">
-<p>Build flavors:  use "Dp" native libraries to simulate large worlds
+<p>Flavors:  use "Dp" native libraries to simulate large worlds
 (&gt;1000 meters in diameter) otherwise use "Sp".</p>
 </div>
 <div class="sect2">
 <h3 id="_gradle_built_android_projects"><a class="anchor" href="#_gradle_built_android_projects"></a>Gradle-built Android projects</h3>
 <div class="paragraph">
 <p>Jolt JNI comes pre-built for Android as a pair of AARs (one for each build type).
-Each AAR includes both the JVM library and all necessary native libraries.</p>
+Each AAR includes both a JVM library and all necessary native libraries.</p>
 </div>
 <div class="paragraph">
 <p>I suggest starting out with the Debug-type AAR.
@@ -286,7 +284,7 @@ dependencies {
     implementation(
             group: "com.github.stephengold",
             name: "jolt-jni-Android",
-            version: "0.9.9",
+            version: "0.9.10",
             classifier: "SpDebug",
             ext: "aar"
     )
@@ -323,10 +321,10 @@ add to the relevant "build.gradle" or "build.gradle.kts" file:</p>
 }
 dependencies {
     // JVM library:
-    implementation("com.github.stephengold:jolt-jni-Windows64:0.9.9")
+    implementation("com.github.stephengold:jolt-jni-Windows64:0.9.10")
 
     // native libraries:
-    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:0.9.9:DebugSp")
+    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:0.9.10:DebugSp")
         // Native libraries for other platforms also could be added.
 }</code></pre>
 </div>
@@ -377,7 +375,7 @@ Add to the relevant "build.gradle" or "build.gradle.kts" file:</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
     implementation("io.github.electrostat-lab:snaploader:1.1.1-stable")
-    runtimeOnly("com.github.oshi:oshi-core:6.8.0")
+    runtimeOnly("com.github.oshi:oshi-core:6.8.1")
 }</code></pre>
 </div>
 </div>
@@ -533,12 +531,17 @@ JobSystem jobSystem = new JobSystemThreadPool(
 <div class="paragraph">
 <p>Jolt Physics allows you to organize bodies into <em>collision layers</em>
 and specify that some layers never collide.
-For instance, it&#8217;s typical to put all non-moving bodies into a separate layer
-and specify that they collide only with moving objects.</p>
+For instance, it&#8217;s typical to put moving and non-moving bodies
+into separate layers
+and specify that non-moving bodies collide only with moving bodies,
+not with other non-moving bodies.</p>
 </div>
 <div class="paragraph">
-<p>Collision layers can be defined differently
-for each phase of collision detection:</p>
+<p>Each body belongs to an <em>object layer</em>, defaulting to layer 0.
+You can define up to 65_536 object layers.</p>
+</div>
+<div class="paragraph">
+<p>Collision layers can be defined both for objects and broadphase:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -555,25 +558,28 @@ for each phase of collision detection:</p>
 from object layers to broadphase layers.</p>
 </div>
 <div class="paragraph">
-<p>For now, I suggest putting all bodies in layer 0
-during both broadphase and narrowphase.</p>
+<p>For now, I suggest putting all bodies in object layer 0
+and mapping object layer 0 to broadphase layer 0.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numBpLayers = 1;
 int numObjLayers = 1;
 
-// Define the mapping from object layers to broadphase layers:
-BroadPhaseLayerInterface mapObj2Bp
-        = new MapObj2Bp(numObjLayers, numBpLayers).add(0, 0);
+// Enable collisions between bodies in object layer 0:
+ObjectLayerPairFilterTable ovoFilter
+        = new ObjectLayerPairFilterTable(numObjLayers);
+ovoFilter.enableCollision(0, 0);
 
-// Disable collision filtering between object layers and broadphase layers:
-ObjectVsBroadPhaseLayerFilter objVsBpFilter
-        = new ObjVsBpFilter(numObjLayers, numBpLayers);
+// Map object layer 0 to broadphase layer 0:
+BroadPhaseLayerInterfaceTable layerMap
+        = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
+layerMap.mapObjectToBroadPhaseLayer(0, 0);
 
-// Disable collision filtering between object layers:
-ObjectLayerPairFilter objVsObjFilter
-        = new ObjVsObjFilter(numObjLayers);</code></pre>
+// Pre-compute the rules for colliding object layers with broadphase layers:
+ObjectVsBroadPhaseLayerFilter ovbFilter
+        = new ObjectVsBroadPhaseLayerFilterTable(
+                layerMap, numBpLayers, ovoFilter, numObjLayers);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -600,7 +606,7 @@ int numBodyMutexes = 0; // 0 means "use the default number"
 int maxBodyPairs = 65_536;
 int maxContacts = 20_480;
 system.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-       mapObj2Bp, objVsBpFilter, objVsObjFilter);</code></pre>
+        layerMap, ovbFilter, ovoFilter);</code></pre>
 </div>
 </div>
 </div>
