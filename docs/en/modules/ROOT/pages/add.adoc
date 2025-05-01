@@ -55,9 +55,6 @@ dependencies {
 }
 ----
 
-For some older versions of Gradle,
-it's necessary to replace `implementation` with `compile`.
-
 === Gradle-built desktop projects
 
 {Project} comes pre-built for desktops as a platform-independent JVM library
@@ -90,9 +87,6 @@ dependencies {
 
 * For a 64-bit MS-Windows environment, replace "Linux64" with "Windows64".
 * For an "Apple silicon" MacOS environment, replace "Linux64" with "MacOSX_ARM64".
-
-For some older versions of Gradle,
-it's necessary to replace `implementation` with `compile`.
 
 == Load the native library
 
