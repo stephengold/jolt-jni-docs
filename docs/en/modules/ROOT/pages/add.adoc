@@ -49,7 +49,7 @@ dependencies {
     implementation(
             group: "com.github.stephengold",
             name: "jolt-jni-Android",
-            version: "0.9.9",
+            version: "0.9.10",
             classifier: "SpDebug",
             ext: "aar"
     )
@@ -81,10 +81,10 @@ repositories {
 }
 dependencies {
     // JVM library:
-    implementation("com.github.stephengold:jolt-jni-Windows64:0.9.9")
+    implementation("com.github.stephengold:jolt-jni-Windows64:0.9.10")
 
     // native libraries:
-    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:0.9.9:DebugSp")
+    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:0.9.10:DebugSp")
         // Native libraries for other platforms also could be added.
 }
 ----
@@ -119,7 +119,7 @@ Add to the relevant "build.gradle" or "build.gradle.kts" file:
 ----
 dependencies {
     implementation("io.github.electrostat-lab:snaploader:1.1.1-stable")
-    runtimeOnly("com.github.oshi:oshi-core:6.8.0")
+    runtimeOnly("com.github.oshi:oshi-core:6.8.1")
 }
 ----
 

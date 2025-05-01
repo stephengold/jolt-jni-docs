@@ -40,7 +40,7 @@ Here's the recommended procedure for building desktop libraries:
 .. using https://git-scm.com[Git]:
 ... `git clone https://github.com/stephengold/jolt-jni.git`
 ... `cd jolt-jni`
-... `git checkout -b latest 0.9.9`
+... `git checkout -b latest 0.9.10`
 .. using a web browser:
 ... browse to https://github.com/stephengold/jolt-jni/releases/latest
 ... follow the "Source code (zip)" link at the bottom of the page
