@@ -388,4 +388,6 @@ you should be able to launch tutorial apps from a command shell, like so:
 == Summary
 
 * Two libraries are required: a JVM library and a native library.
+* You can organize bodies into object layers
+  and specify that some layers never collide.
 * Physics objects aren't simulated unless they're added to a system.

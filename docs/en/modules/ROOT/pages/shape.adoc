@@ -152,6 +152,8 @@ ConvexHullShape shape = (ConvexHullShape) ref.getPtr();
 == Decorated and compound
 
 A _decorated shape_ is derived from a pre-existing _inner shape_.
+For instance, you can create spheres with off-center mass
+by applying `OffsetCenterOfMassShape` to ordinary spheres.
 
 A _compound shape_ combines any number of _child shapes_
 into a single shape:
