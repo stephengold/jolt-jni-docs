@@ -182,7 +182,7 @@ final public class HelloJoltJni {
         // Enable collisions between a moving body and a non-moving one:
         ovoFilter.enableCollision(objLayerMoving, objLayerNonMoving);
         // Disable collisions between 2 non-moving bodies:
-        ovoFilter.enableCollision(objLayerNonMoving, objLayerNonMoving);
+        ovoFilter.disableCollision(objLayerNonMoving, objLayerNonMoving);
 
         // Map both object layers to broadphase layer 0:
         BroadPhaseLayerInterfaceTable layerMap
