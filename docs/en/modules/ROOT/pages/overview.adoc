@@ -1,4 +1,5 @@
 = Jolt-JNI project overview
+:Cplusplus: C&#43;&#43;
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
 :url-enwiki: https://en.wikipedia.org/wiki
@@ -23,8 +24,8 @@ and the software used to build, test, and run them.
 
 The underlying simulation software comes from
 https://jrouwe.github.io/JoltPhysics[_Jolt Physics_], a modern, thread-aware physics simulator.
-But although Jolt Physics is written in {url-enwiki}/C%2B%2B[C&#43;&#43;],
-you won't need any knowledge of C&#43;&#43; to use {Project}.
+But although Jolt Physics is written in {url-enwiki}/C%2B%2B[{Cplusplus}],
+you won't need any knowledge of {Cplusplus} to use {Project}.
 
 {Project} also incorporates source code from
 https://github.com/kmammou/v-hacd[the V-HACD project].

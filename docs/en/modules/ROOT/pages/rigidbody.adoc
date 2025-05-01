@@ -358,7 +358,7 @@ In reality, no collision is perfectly elastic.
 Elasticity is quantified by a _coefficient of restitution_,
 which ranges from zero (perfectly inelastic) to one (perfectly elastic).
 
-In Jolt Physics, collisions are inelastic by default.
+In {Project}, collisions are inelastic by default.
 (We saw this in {url-tutorial}/HelloRigidBody.java[HelloRigidBody.java].)
 Each rigid body has a _restitution ratio_, which defaults to zero.
 For each collision, the coefficient of restitution
