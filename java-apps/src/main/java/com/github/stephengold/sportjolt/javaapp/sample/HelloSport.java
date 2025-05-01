@@ -31,12 +31,10 @@ package com.github.stephengold.sportjolt.javaapp.sample;
 import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
 import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable;
-import com.github.stephengold.joltjni.ObjVsBpFilter;
-import com.github.stephengold.joltjni.ObjVsObjFilter;
-import com.github.stephengold.joltjni.ObjectLayerPairFilter;
+import com.github.stephengold.joltjni.ObjectLayerPairFilterTable;
 import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilter;
+import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilterTable;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
@@ -57,7 +55,14 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloSport extends BasePhysicsApp {
+final public class HelloSport extends BasePhysicsApp {
+    // *************************************************************************
+    // fields
+
+    /**
+     * falling rigid body
+     */
+    private static Body ball;
     // *************************************************************************
     // constructors
 
@@ -98,22 +103,36 @@ public class HelloSport extends BasePhysicsApp {
     public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
-        BroadPhaseLayerInterface mapObj2Bp
-                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
-                        .mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
-                        .mapObjectToBroadPhaseLayer(objLayerMoving, 0);
-        ObjectVsBroadPhaseLayerFilter objVsBpFilter
-                = new ObjVsBpFilter(numObjLayers, numBpLayers);
-        ObjectLayerPairFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers)
-                .disablePair(objLayerNonMoving, objLayerNonMoving);
 
-        int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default number"
-        int maxBodyPairs = 3;
-        int maxContacts = 3;
+        ObjectLayerPairFilterTable ovoFilter
+                = new ObjectLayerPairFilterTable(numObjLayers);
+        // Enable collisions between 2 moving bodies:
+        ovoFilter.enableCollision(objLayerMoving, objLayerMoving);
+        // Enable collisions between a moving body and a non-moving one:
+        ovoFilter.enableCollision(objLayerMoving, objLayerNonMoving);
+        // Disable collisions between 2 non-moving bodies:
+        ovoFilter.enableCollision(objLayerNonMoving, objLayerNonMoving);
+
+        // Map both object layers to broadphase layer 0:
+        BroadPhaseLayerInterfaceTable layerMap
+                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
+        layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
+        layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
+
+        // Rules for colliding object layers with broadphase layers:
+        ObjectVsBroadPhaseLayerFilter ovbFilter
+                = new ObjectVsBroadPhaseLayerFilterTable(
+                        layerMap, numBpLayers, ovoFilter, numObjLayers);
+
         PhysicsSystem result = new PhysicsSystem();
+
+        // Set high limits, even though this sample app uses only 2 bodies:
+        int maxBodies = 5_000;
+        int numBodyMutexes = 0; // 0 means "use the default number"
+        int maxBodyPairs = 65_536;
+        int maxContacts = 20_480;
         result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-                mapObj2Bp, objVsBpFilter, objVsObjFilter);
+                layerMap, ovbFilter, ovoFilter);
 
         return result;
     }
@@ -143,7 +162,7 @@ public class HelloSport extends BasePhysicsApp {
         bcs.setMotionType(EMotionType.Dynamic);
         bcs.setObjectLayer(objLayerMoving);
         bcs.setShape(ballShape);
-        Body ball = bi.createBody(bcs);
+        ball = bi.createBody(bcs);
         bi.addBody(ball, EActivation.Activate);
 
         // Visualize the shapes of both bodies:
