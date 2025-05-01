@@ -718,37 +718,6 @@ that serves as a starting point for using Jolt JNI.</p>
 </li>
 </ol>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To lay the groundwork for future tutorials,
-<code>HelloJoltJni</code> defines 2 object layers:
-one for moving bodies and one for non-moving bodies.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>In <code>HelloJoltJni</code>, we know there will only be 2 bodies;
-the <code>PhysicsSystem</code> limits are set accordingly.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -795,6 +764,10 @@ you should be able to launch tutorial apps from a command shell, like so:</p>
 <ul>
 <li>
 <p>Two libraries are required: a JVM library and a native library.</p>
+</li>
+<li>
+<p>You can organize bodies into object layers
+and specify that some layers never collide.</p>
 </li>
 <li>
 <p>Physics objects aren&#8217;t simulated unless they&#8217;re added to a system.</p>
