@@ -259,23 +259,29 @@ Collision layers can be defined both for objects and broadphase:
 The sole limitation is that there must be a consistent mapping
 from object layers to broadphase layers.
 
-For now, I suggest putting all bodies in object layer 0
-and mapping object layer 0 to broadphase layer 0.
+For now, I suggest putting moving and non-moving bodies
+into separate object layers
+and mapping both object layers to broadphase layer 0.
 
 [source,java]
 ----
+int numObjLayers = 2;
 int numBpLayers = 1;
-int numObjLayers = 1;
 
-// Enable collisions between bodies in object layer 0:
 ObjectLayerPairFilterTable ovoFilter
         = new ObjectLayerPairFilterTable(numObjLayers);
-ovoFilter.enableCollision(0, 0);
+// Enable collisions between 2 moving bodies:
+ovoFilter.enableCollision(objLayerMoving, objLayerMoving);
+// Enable collisions between a moving body and a non-moving one:
+ovoFilter.enableCollision(objLayerMoving, objLayerNonMoving);
+// Disable collisions between 2 non-moving bodies:
+ovoFilter.enableCollision(objLayerNonMoving, objLayerNonMoving);
 
-// Map object layer 0 to broadphase layer 0:
+// Map both object layers to broadphase layer 0:
 BroadPhaseLayerInterfaceTable layerMap
         = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
-layerMap.mapObjectToBroadPhaseLayer(0, 0);
+layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
+layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
 
 // Pre-compute the rules for colliding object layers with broadphase layers:
 ObjectVsBroadPhaseLayerFilter ovbFilter

@@ -195,11 +195,13 @@ final public class HelloJoltJni {
                 = new ObjectVsBroadPhaseLayerFilterTable(
                         layerMap, numBpLayers, ovoFilter, numObjLayers);
 
-        int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default number"
-        int maxBodyPairs = 3;
-        int maxContacts = 3;
         PhysicsSystem result = new PhysicsSystem();
+
+        // Set high limits, even though this sample app uses only 2 bodies:
+        int maxBodies = 5_000;
+        int numBodyMutexes = 0; // 0 means "use the default number"
+        int maxBodyPairs = 65_536;
+        int maxContacts = 20_480;
         result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
                 layerMap, ovbFilter, ovoFilter);
 
