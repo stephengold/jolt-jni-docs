@@ -151,7 +151,7 @@ ConvexHullShape shape = (ConvexHullShape) ref.getPtr();
 
 == Decorated and compound
 
-A _decorated shape_ is derifved from a pre-existing _inner shape_.
+A _decorated shape_ is derived from a pre-existing _inner shape_.
 
 A _compound shape_ combines any number of _child shapes_
 into a single shape:
