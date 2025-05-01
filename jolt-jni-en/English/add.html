@@ -291,10 +291,6 @@ dependencies {
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>For some older versions of Gradle,
-it&#8217;s necessary to replace <code>implementation</code> with <code>compile</code>.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_gradle_built_desktop_projects"><a class="anchor" href="#_gradle_built_desktop_projects"></a>Gradle-built desktop projects</h3>
@@ -338,10 +334,6 @@ dependencies {
 <p>For an "Apple silicon" MacOS environment, replace "Linux64" with "MacOSX_ARM64".</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>For some older versions of Gradle,
-it&#8217;s necessary to replace <code>implementation</code> with <code>compile</code>.</p>
 </div>
 </div>
 </div>
@@ -558,23 +550,29 @@ You can define up to 65_536 object layers.</p>
 from object layers to broadphase layers.</p>
 </div>
 <div class="paragraph">
-<p>For now, I suggest putting all bodies in object layer 0
-and mapping object layer 0 to broadphase layer 0.</p>
+<p>For now, I suggest putting moving and non-moving bodies
+into separate object layers
+and mapping both object layers to broadphase layer 0.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numBpLayers = 1;
-int numObjLayers = 1;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numObjLayers = 2;
+int numBpLayers = 1;
 
-// Enable collisions between bodies in object layer 0:
 ObjectLayerPairFilterTable ovoFilter
         = new ObjectLayerPairFilterTable(numObjLayers);
-ovoFilter.enableCollision(0, 0);
+// Enable collisions between 2 moving bodies:
+ovoFilter.enableCollision(objLayerMoving, objLayerMoving);
+// Enable collisions between a moving body and a non-moving one:
+ovoFilter.enableCollision(objLayerMoving, objLayerNonMoving);
+// Disable collisions between 2 non-moving bodies:
+ovoFilter.enableCollision(objLayerNonMoving, objLayerNonMoving);
 
-// Map object layer 0 to broadphase layer 0:
+// Map both object layers to broadphase layer 0:
 BroadPhaseLayerInterfaceTable layerMap
         = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
-layerMap.mapObjectToBroadPhaseLayer(0, 0);
+layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
+layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
 
 // Pre-compute the rules for colliding object layers with broadphase layers:
 ObjectVsBroadPhaseLayerFilter ovbFilter
