@@ -1,0 +1,184 @@
+= Freeing native memory
+:Cplusplus: C&#43;&#43;
+:page-pagination:
+:Project: Jolt JNI
+:ProjectAdj: Jolt-JNI
+:Sport: Sport-Jolt
+
+In long-running applications,
+it's important to reclaim objects that are no longer in use,
+lest the app run out of memory.
+But it's even more important to ensure
+objects doesn't get reclaimed while they *are* still in use!
+
+
+== Native objects assigned to JVM objects
+
+It's important to clearly distinguish JVM objects from native objects,
+even though they tend to exist in one-to-one relationship.
+
+A handful of {ProjectAdj} classes are implemented entirely in Java, notably:
+`Color`, `Float3`, `Plane`, `Quat`, `RVec3`, `Vec3`, and `Vec4`.
+These classes don't allocate any native memory;
+instances exist entirely on the JVM's heap.
+After such an object become unreachable, the JVM's garbage collector
+automatically reclaims the object, freeing its memory.
+
+{Project} also uses _direct buffers_, which *do* allocate native memory.
+Such objects belong to subtypes of Java's `java.nio.Buffer` class.
+Their native memory gets freed automatically
+when the garbage collector
+reclaims the JVM object to which the memory is assigned.
+
+Aside from those special classes, however,
+every JVM object in {Project} is an instance of `JoltPhysicsObject`,
+implying it has a native object assigned to it.
+For instance, when a {ProjectAdj} app instantiates a matrix using `new Mat44()`,
+both a JVM object and a native object are created.
+How does the native object's memory get freed?
+
+
+== Reclaiming native objects
+
+{Project} provides several mechanisms
+to reclaim native objects and free their memory.
+
+{Cplusplus} convention dictates that when a class allocates memory,
+it assumes responsibility for freeing that memory.
+For native objects, this convention carries over into {Project}:
+an application is solely responsible for all objects it creates explicitly.
+(On the other hand, it cannot free the memory
+of objects created internally by {Project} or Jolt Physics.)
+
+=== Owned by a JVM object
+
+In the simple case of an app explicitly instantiating a matrix
+(using `matrix = new Mat44()`)
+we say the JVM object _owns_ the native object assigned to it.
+On other words, the JVM object is the native object's _owner_.
+
+While it's possible to assign the same native object to multiple JVM objects,
+only one JVM object (at most) can own a particular native object.
+
+When a native object is owned by a JVM object,
+its memory can be freed in 3 ways:
+
+. explicitly using `matrix.close()`,
+. implicitly by `AutoCloseable`
+  (at the end of the `try` block in which `matrix` was instantiated), or
+. automatically when the garbage collector reclaims the JVM object
+  (provided a _cleaner task_ has been started
+  by invoking `JoltPhysicsObject.startCleaner()`).
+
+[IMPORTANT]
+====
+Explicitly closing a `JoltPhysicsObject` is dangerous
+because it invalidates the native object,
+which nevertheless remains reachable.
+This could lead to undefined behavior.
+====
+
+[TIP]
+====
+{Sport} automatically starts a cleaner task
+for any app that extends `BasePhysicsApp`.
+As a consequence,
+all the {ProjectAdj} tutorial apps rely on automatic reclamation.
+====
+
+=== Contained objects
+
+Ownership of a native object implies assignment.
+However, assignment doesn't imply ownership.
+Consider:
+
+[source,java]
+----
+PhysicsSystem system = new PhysicsSystem();
+system.init(/* ... */);
+// ...
+BodyLockInterface bli = system.getBodyLockInterface();
+----
+
+When the app invokes `getBodyLockInterface()`,
+a new JVM object `bli` is returned.
+However, `bli` refers to a pre-existing native object
+(the one Jolt Physics allocated while initializing `system`).
+The app cannot reclaim the native object assigned to `bli`
+separately from the native object assigned to `system`.
+
+On _contained objects_ like `bli`, `close()` is a no-op,
+because the JVM object doesn't own its assigned native object.
+However, closing the container would invalidate the contained object.
+In the example above, invoking `physicsSystem.close()`,
+would invalidate `bli`!
+
+{Project}'s cleaner task is smart enough to delay reclaiming a container
+while any reachable JVM object refers to that container's contents.
+In the example above, as long as `bli` remains reachable,
+it prevents `system` from being reclaimed by a cleaner thread.
+
+=== Refcounted objects
+
+Another situation where a `JoltPhysicsObject`
+doesn't own its assigned native object
+arises when a class implements _reference counting_.
+Responsibility for reclaiming the native object (called the _target_)
+is shared among other objects (called _references_) that refer to it.
+
+The {ProjectAdj} classes that implement reference counting
+are precisely those that implement the `RefTarget` interface.
+They include `BaseCharacter`, `Constraint`, `ConstraintSettings`,
+`GroupFilter`, `PhysicsMaterial`, `PhysicsScene`, `Ragdoll`, `Shape`,
+`ShapeSettings`, and all their subclasses.
+
+References are themselves instances of `JoltPhysicsObject`, of course.
+(And please note that {ProjectAdj} reference counting is completely orthogonal
+to Java references, strong, weak, or otherwise.)
+
+On `RefTarget` objects, `close()` is (again) a no-op,
+because the JVM object doesn't own its assigned native object.
+
+The only way to reclaim a `RefTarget` native object
+is to decrement its reference count from one to zero.
+This implies creating one or more references
+and then reclaiming them all, either explicitly, implicitly, or automatically.
+
+As long as one reference is active, its target cannot be reclaimed.
+Nor can a target be reclaimed before a reference to it has been created
+(because in that case the reference count is already zero).
+
+[IMPORTANT]
+====
+Creating a `RefTarget` object without any references is dangerous
+because other code might create a reference that later gets reclaimed,
+invalidating the target.
+====
+
+You can disable reference counting on a particular target by
+invoking `target.setEmbedded()`.
+However, this is an irreversible action,
+so if you plan to ever free the target's native memory,
+you mustn't invoke `setEmbedded()`.
+
+In light of these considerations,
+I suggest treating targets as a temporary objects.
+If you plan to access a `RefTarget` object for a significant period of time,
+create a reference to it.
+
+* The simplest way to create a reference is to invoke `target.toRef()`.
+* As long as you retain a counted reference,
+  you can always access its target by invoking `ref.getPtr()`.
+
+
+== Summary
+
+* Native objects are distinct from JVM objects.
+* {Project} implements an optional cleaner task for reclaiming native objects
+  and freeing their memory.
+* Explicitly closing a `JoltPhysicsObject` is dangerous.
+* An object responsible for reclaiming a native object
+  it is said to _own_ that native object.
+* You can assign a native object (and/or parts of it) to multiple JVM objects,
+  but only one JVM object (at most) can own it.
+* Refcounted objects add a layer of indirection to managing native memory.
