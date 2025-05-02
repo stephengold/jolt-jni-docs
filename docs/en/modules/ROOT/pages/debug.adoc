@@ -1,0 +1,79 @@
+= Troubleshooting physics issues
+:page-pagination:
+:Project: Jolt JNI
+:Sport: Sport-Jolt
+
+{Project} uses `assert` statements to verify assumptions made while coding.
+During development, Java assertions should be enabled using:
+
+* the "-ea" JVM argument or
+* the `enableAssertions` setting of Gradle `JavaExec` tasks.
+
+Similarly, native-code assertions should be enabled during development.
+You do this by loading a native library with the "Debug" buildtype,
+such as "com.github.stephengold:jolt-jni-Windows64:0.9.10:DebugSp".
+
+[NOTE]
+====
+If a native-code assertion fails, it will crash the JVM.
+To troubleshoot such crashes, attach a native-code debugger
+(such as GDB) to the JVM itself.
+====
+
+To troubleshoot issues involving memory allocation,
+you can enable allocation tracing by invoking `Jolt.setTraceAllocations(true)`.
+This feature requires a "Debug" native library.
+
+
+== Visualization
+
+Many physics issues can be diagnosed visually.
+For instance, if you neglect to add a collision object to the physics space,
+{Sport} will automatically omit it from the visualization.
+
+{Sport} can visualize:
+
+* collision shapes,
+* the centers of mass of bodies,
+* vehicle wheels,
+* constraints,
+* the edges, faces, and pinned vertices of soft bodies,
+* the origins and local axes of collision objects, and
+* the axis-aligned bounding boxes of collision objects.
+
+=== Color conventions
+
+When visualizing a collision shape,
+{Sport} uses colors to distinguish different types of collision objects:
+
+* yellow for an object without contact response,
+  such as a sensor,
+* magenta for a rigid body
+  (with contact response) that's dynamic, responsive, and active,
+* gray for a rigid body
+  (with contact response) that's static, kinematic, or deactivated,
+* brown for a character that's grounded, and
+* pink for a character that isn't grounded.
+
+When visualizing a constraint, {Sport} uses:
+
+* green for a "A" end and
+* red for a "B" end.
+
+When visualizing a soft body, {Sport} uses:
+
+* red for the faces and
+* orange for the edges.
+
+When visualizing coordinate axes, {Sport} uses:
+
+* red for the +X axis,
+* green for the +Y axis, and
+* blue for the +Z axis.
+
+
+== Summary
+
+* During development, enable Java assertions
+  and use a "Debug" native library.
+* {Sport} visualization can be used to diagnose physics issues.
