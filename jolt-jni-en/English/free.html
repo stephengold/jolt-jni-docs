@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Freeing native memory :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/free.html">
+    <link rel="prev" href="shape.html">
+    <link rel="next" href="debug.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<meta property="og:image" content="../../_/img/iconx128.png">
+<meta property="og:description" content="Freeing native memory">
+<meta property="og:title" content="The Jolt-JNI project">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://stephengold.github.io/jolt-jni">
+        <img alt="" src="../../_/img/iconx128.png" width="32" type="image/x-icon" style="margin-right:16px">
+        The Jolt-JNI project
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Color themes</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" onclick="setTheme('canyon')">Canyon</a>
+            <a class="navbar-item" onclick="setTheme('dark')">Dark</a>
+            <a class="navbar-item" onclick="setTheme('jungle')">Jungle</a>
+            <a class="navbar-item" onclick="setTheme('light')">Light</a>
+            <a class="navbar-item" onclick="setTheme('pastel')">Pastel</a>
+            <a class="navbar-item" onclick="setTheme('phosphor')">Phosphor<a>
+            <a class="navbar-item" style="padding-top: 5px;padding-left: 1px;padding-right: 1px;"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jolt-jni-en" data-version="English">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="overview.html">Project links</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="implementation.html">Implementation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Library tutorials</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="add.html">Add to existing project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sport.html">Sport-Jolt visualization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rigidbody.html">Rigid bodies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shape.html">Collision shapes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="free.html">Freeing memory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debug.html">Troubleshooting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="build.html">Build procedures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni">GitHub repository</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases/latest">Latest release</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases">Recent releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/README.md">ReadMe file</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">License</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/release-log.md">Release log</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/commits/master">Recent commits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues">Issue tracker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues/new">Report an issue</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jolt JNI at other sites</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://repo1.maven.org/maven2/com/github/stephengold">Maven Central download</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://central.sonatype.com/search?q=jolt-jni&amp;namespace=com.github.stephengold">Maven Central search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jitpack.io/#stephengold/jolt-jni">JitPack (unofficial)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Projects using Jolt JNI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni-docs">jolt-jni-docs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/sport-jolt">Sport-Jolt</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/kk-physics">KK Physics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other related projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jrouwe.github.io/JoltPhysics">Jolt Physics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://stephengold.github.io/Libbulletjme">Libbulletjme</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/kmammou/v-hacd">V-HACD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/antora-ui-bundle">Website UI bundle</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">People</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://stephengold.github.io">Stephen Gold</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">The Jolt-JNI project</span>
+    <span class="version">English</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">The Jolt-JNI project</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="overview.html">English</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle-label">Project links</span>
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="overview.html">The Jolt-JNI project</a></li>
+    <li>Library tutorials</li>
+    <li><a href="free.html">Freeing memory</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/free.adoc">Edit this page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Freeing native memory</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In long-running applications,
+it&#8217;s important to reclaim objects that are no longer in use,
+lest the app run out of memory.
+But it&#8217;s even more important to ensure
+objects doesn&#8217;t get reclaimed while they <strong>are</strong> still in use!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_native_objects_assigned_to_jvm_objects"><a class="anchor" href="#_native_objects_assigned_to_jvm_objects"></a>Native objects assigned to JVM objects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s important to clearly distinguish JVM objects from native objects,
+even though they tend to exist in one-to-one relationship.</p>
+</div>
+<div class="paragraph">
+<p>A handful of Jolt-JNI classes are implemented entirely in Java, notably:
+<code>Color</code>, <code>Float3</code>, <code>Plane</code>, <code>Quat</code>, <code>RVec3</code>, <code>Vec3</code>, and <code>Vec4</code>.
+These classes don&#8217;t allocate any native memory;
+instances exist entirely on the JVM&#8217;s heap.
+After such an object become unreachable, the JVM&#8217;s garbage collector
+automatically reclaims the object, freeing its memory.</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI also uses <em>direct buffers</em>, which <strong>do</strong> allocate native memory.
+Such objects belong to subtypes of Java&#8217;s <code>java.nio.Buffer</code> class.
+Their native memory gets freed automatically
+when the garbage collector
+reclaims the JVM object to which the memory is assigned.</p>
+</div>
+<div class="paragraph">
+<p>Aside from those special classes, however,
+every JVM object in Jolt JNI is an instance of <code>JoltPhysicsObject</code>,
+implying it has a native object assigned to it.
+For instance, when a Jolt-JNI app instantiates a matrix using <code>new Mat44()</code>,
+both a JVM object and a native object are created.
+How does the native object&#8217;s memory get freed?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reclaiming_native_objects"><a class="anchor" href="#_reclaiming_native_objects"></a>Reclaiming native objects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jolt JNI provides several mechanisms
+to reclaim native objects and free their memory.</p>
+</div>
+<div class="paragraph">
+<p>C&#43;&#43; convention dictates that when a class allocates memory,
+it assumes responsibility for freeing that memory.
+For native objects, this convention carries over into Jolt JNI:
+an application is solely responsible for all objects it creates explicitly.
+(On the other hand, it cannot free the memory
+of objects created internally by Jolt JNI or Jolt Physics.)</p>
+</div>
+<div class="sect2">
+<h3 id="_owned_by_a_jvm_object"><a class="anchor" href="#_owned_by_a_jvm_object"></a>Owned by a JVM object</h3>
+<div class="paragraph">
+<p>In the simple case of an app explicitly instantiating a matrix
+(using <code>matrix = new Mat44()</code>)
+we say the JVM object <em>owns</em> the native object assigned to it.
+On other words, the JVM object is the native object&#8217;s <em>owner</em>.</p>
+</div>
+<div class="paragraph">
+<p>While it&#8217;s possible to assign the same native object to multiple JVM objects,
+only one JVM object (at most) can own a particular native object.</p>
+</div>
+<div class="paragraph">
+<p>When a native object is owned by a JVM object,
+its memory can be freed in 3 ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>explicitly using <code>matrix.close()</code>,</p>
+</li>
+<li>
+<p>implicitly by <code>AutoCloseable</code>
+(at the end of the <code>try</code> block in which <code>matrix</code> was instantiated), or</p>
+</li>
+<li>
+<p>automatically when the garbage collector reclaims the JVM object
+(provided a <em>cleaner task</em> has been started
+by invoking <code>JoltPhysicsObject.startCleaner()</code>).</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Explicitly closing a <code>JoltPhysicsObject</code> is dangerous
+because it invalidates the native object,
+which nevertheless remains reachable.
+This could lead to undefined behavior.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Sport-Jolt automatically starts a cleaner task
+for any app that extends <code>BasePhysicsApp</code>.
+As a consequence,
+all the Jolt-JNI tutorial apps rely on automatic reclamation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contained_objects"><a class="anchor" href="#_contained_objects"></a>Contained objects</h3>
+<div class="paragraph">
+<p>Ownership of a native object implies assignment.
+However, assignment doesn&#8217;t imply ownership.
+Consider:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PhysicsSystem system = new PhysicsSystem();
+system.init(/* ... */);
+// ...
+BodyLockInterface bli = system.getBodyLockInterface();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the app invokes <code>getBodyLockInterface()</code>,
+a new JVM object <code>bli</code> is returned.
+However, <code>bli</code> refers to a pre-existing native object
+(the one Jolt Physics allocated while initializing <code>system</code>).
+The app cannot reclaim the native object assigned to <code>bli</code>
+separately from the native object assigned to <code>system</code>.</p>
+</div>
+<div class="paragraph">
+<p>On <em>contained objects</em> like <code>bli</code>, <code>close()</code> is a no-op,
+because the JVM object doesn&#8217;t own its assigned native object.
+However, closing the container would invalidate the contained object.
+In the example above, invoking <code>physicsSystem.close()</code>,
+would invalidate <code>bli</code>!</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI&#8217;s cleaner task is smart enough to delay reclaiming a container
+while any reachable JVM object refers to that container&#8217;s contents.
+In the example above, as long as <code>bli</code> remains reachable,
+it prevents <code>system</code> from being reclaimed by a cleaner thread.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_refcounted_objects"><a class="anchor" href="#_refcounted_objects"></a>Refcounted objects</h3>
+<div class="paragraph">
+<p>Another situation where a <code>JoltPhysicsObject</code>
+doesn&#8217;t own its assigned native object
+arises when a class implements <em>reference counting</em>.
+Responsibility for reclaiming the native object (called the <em>target</em>)
+is shared among other objects (called <em>references</em>) that refer to it.</p>
+</div>
+<div class="paragraph">
+<p>The Jolt-JNI classes that implement reference counting
+are precisely those that implement the <code>RefTarget</code> interface.
+They include <code>BaseCharacter</code>, <code>Constraint</code>, <code>ConstraintSettings</code>,
+<code>GroupFilter</code>, <code>PhysicsMaterial</code>, <code>PhysicsScene</code>, <code>Ragdoll</code>, <code>Shape</code>,
+<code>ShapeSettings</code>, and all their subclasses.</p>
+</div>
+<div class="paragraph">
+<p>References are themselves instances of <code>JoltPhysicsObject</code>, of course.
+(And please note that Jolt-JNI reference counting is completely orthogonal
+to Java references, strong, weak, or otherwise.)</p>
+</div>
+<div class="paragraph">
+<p>On <code>RefTarget</code> objects, <code>close()</code> is (again) a no-op,
+because the JVM object doesn&#8217;t own its assigned native object.</p>
+</div>
+<div class="paragraph">
+<p>The only way to reclaim a <code>RefTarget</code> native object
+is to decrement its reference count from one to zero.
+This implies creating one or more references
+and then reclaiming them all, either explicitly, implicitly, or automatically.</p>
+</div>
+<div class="paragraph">
+<p>As long as one reference is active, its target cannot be reclaimed.
+Nor can a target be reclaimed before a reference to it has been created
+(because in that case the reference count is already zero).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Creating a <code>RefTarget</code> object without any references is dangerous
+because other code might create a reference that later gets reclaimed,
+invalidating the target.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can disable reference counting on a particular target by
+invoking <code>target.setEmbedded()</code>.
+However, this is an irreversible action,
+so if you plan to ever free the target&#8217;s native memory,
+you mustn&#8217;t invoke <code>setEmbedded()</code>.</p>
+</div>
+<div class="paragraph">
+<p>In light of these considerations,
+I suggest treating targets as a temporary objects.
+If you plan to access a <code>RefTarget</code> object for a significant period of time,
+create a reference to it.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The simplest way to create a reference is to invoke <code>target.toRef()</code>.</p>
+</li>
+<li>
+<p>As long as you retain a counted reference,
+you can always access its target by invoking <code>ref.getPtr()</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Native objects are distinct from JVM objects.</p>
+</li>
+<li>
+<p>Jolt JNI implements an optional cleaner task for reclaiming native objects
+and freeing their memory.</p>
+</li>
+<li>
+<p>Explicitly closing a <code>JoltPhysicsObject</code> is dangerous.</p>
+</li>
+<li>
+<p>An object responsible for reclaiming a native object
+it is said to <em>own</em> that native object.</p>
+</li>
+<li>
+<p>You can assign a native object (and/or parts of it) to multiple JVM objects,
+but only one JVM object (at most) can own it.</p>
+</li>
+<li>
+<p>Refcounted objects add a layer of indirection to managing native memory.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="shape.html">Collision shapes</a></span>
+  <span class="next"><a href="debug.html">Troubleshooting</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Page contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; 2020&ndash;2025 by Stephen Gold</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
