@@ -20,6 +20,7 @@ It is open-source, written in Java, and available from
 https://github.com/stephengold/sport-jolt[GitHub] and
 https://central.sonatype.com/artifact/com.github.stephengold/sport-jolt[Maven Central].
 
+
 == HelloSport
 
 {url-tutorial}/HelloSport.java[HelloSport]
@@ -45,6 +46,7 @@ Pressing kbd:[Esc] should close the window and terminate the app.
 
 Hereafter, all the tutorial apps will use Sport-Jolt.
 Additional features of Sport-Jolt will be introduced as needed.
+
 
 == Summary
 

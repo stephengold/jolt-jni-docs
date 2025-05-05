@@ -12,6 +12,7 @@ You can also build a local copy of the documentation website (including HTML).
 This is useful if you are editing the documentation,
 or if your Internet access is limited or unreliable.
 
+
 == Libraries
 
 === For desktop platforms
@@ -101,6 +102,7 @@ You can install them to your local Maven repository.
 .. `.\gradlew install`
 .. `.\gradlew -b android.gradle install`
 
+
 == Website
 
 . Download and extract the jolt-jni-docs source code from GitHub:
@@ -119,6 +121,7 @@ You can install them to your local Maven repository.
 
 After a successful build,
 your local site copy will be found in the "docs/build/site" directory.
+
 
 == Cleanup
 

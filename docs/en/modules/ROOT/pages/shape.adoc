@@ -7,6 +7,7 @@
 A _collision shape_
 describes the shape and size of a collision object such as a rigid body.
 
+
 == The 18 shape classes
 
 The examples so far have all used spheres, cubes, and/or cylinders.
@@ -133,6 +134,7 @@ with illustrations and lists of key properties (explained below):
 
 |===
 
+
 == Creating shapes
 
 While simple shapes like boxes and spheres can be instantiated directly,
@@ -149,6 +151,7 @@ ShapeRefC ref = result.get();
 ConvexHullShape shape = (ConvexHullShape) ref.getPtr();
 ----
 
+
 == Decorated and compound
 
 A _decorated shape_ is derived from a pre-existing _inner shape_.
@@ -161,6 +164,7 @@ into a single shape:
 * A `MutableCompoundShape` allows child shapes to be added or removed
 from after the compound is created.
 * A `StaticCompoundShape` prohibits such modifications.
+
 
 == Convex versus non-convex
 
@@ -182,6 +186,7 @@ NOTE: In {Project}, "convex" is a property of classes, not objects.
 While specific *instances* of non-convex classes possess the convex property,
 those classes don't guarantee it for *all* instances.
 
+
 == Convex radius
 
 _Convex radius_ is a property found only in convex shapes
@@ -201,6 +206,7 @@ it may be necessary override the default value.
 For convex hulls, the default convex radius
 depends on the vertices used to construct the shape.
 
+
 == Choosing a shape
 
 For efficient simulation, the general rule is:
@@ -214,6 +220,7 @@ For instance:
   can probably be approximated by a convex hull.
 * As long as a container remains sealed,
   its collision shape need not be hollow.
+
 
 == Summary
 

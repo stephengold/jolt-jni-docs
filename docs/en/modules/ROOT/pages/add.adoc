@@ -20,6 +20,7 @@ Adding {Project} to an existing project is an 10-step process:
 . Simulate the system.
 . Test and tune as necessary.
 
+
 == Add libraries to classpath
 
 {Project} requires both a JVM library and a native library.
@@ -88,6 +89,7 @@ dependencies {
 * For a 64-bit MS-Windows environment, replace "Linux64" with "Windows64".
 * For an "Apple silicon" MacOS environment, replace "Linux64" with "MacOSX_ARM64".
 
+
 == Load the native library
 
 You must load {Project}'s native library
@@ -144,6 +146,7 @@ loader.registerNativeLibraries(libraries).initPlatformLibrary();
 loader.loadLibrary(LoadingCriterion.CLEAN_EXTRACTION);
 ----
 
+
 == Memory allocators and callbacks
 
 To avoid the need to explicitly free Jolt-Physics objects,
@@ -181,6 +184,7 @@ In Release-type native libraries, assertions are disabled,
 so `installDefaultAssertCallback()` is a no-op.
 ====
 
+
 == Create factory and register types
 
 Jolt Physics uses a factory object to create instances of classes
@@ -197,6 +201,7 @@ boolean success = Jolt.newFactory();
 assert success;
 Jolt.registerTypes();
 ----
+
 
 == Temporary allocator and job system
 
@@ -232,6 +237,7 @@ int numWorkerThreads = Runtime.getRuntime().availableProcessors();
 JobSystem jobSystem = new JobSystemThreadPool(
         Jolt.cMaxPhysicsJobs, Jolt.cMaxPhysicsBarriers, numWorkerThreads);
 ----
+
 
 == Collision layers
 
@@ -286,6 +292,7 @@ ObjectVsBroadPhaseLayerFilter ovbFilter
 For more advice regarding layers, see
 https://jrouwe.github.io/JoltPhysics/index.html#collision-detection[the collision-detection section of the Jolt-Physics documentation].
 
+
 == Create a physics system
 
 As soon as you create a `PhysicsSystem`, you should configure it
@@ -304,6 +311,7 @@ int maxContacts = 20_480;
 system.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
         layerMap, ovbFilter, ovoFilter);
 ----
+
 
 == Add physics objects
 
@@ -342,6 +350,7 @@ The best way is to use `BodyInterface.addBody()`:
 bi.addBody(ball, EActivation.Activate);
 ----
 
+
 == Simulate the system
 
 To simulate a single 20-millisecond step:
@@ -353,6 +362,7 @@ int numCollisionSteps = 1;
 physicsSystem.update(
         timePerStep, numCollisionSteps, tempAllocator, jobSystem);
 ----
+
 
 == HelloJoltJni
 
@@ -384,6 +394,7 @@ you should be able to launch tutorial apps from a command shell, like so:
 . `cd jolt-jni-docs`
 . `./gradlew :java-apps:HelloJoltJni`
 ====
+
 
 == Summary
 

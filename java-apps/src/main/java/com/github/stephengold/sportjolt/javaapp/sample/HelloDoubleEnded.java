@@ -209,6 +209,7 @@ public class HelloDoubleEnded
                 Utils.lerp(t, nearLocation, farLocation, mouseLocation);
             }
         }
+
         super.render();
     }
     // *************************************************************************
@@ -252,6 +253,7 @@ public class HelloDoubleEnded
     private Body addBall() {
         float radius = 0.4f;
         ConstShape shape = new SphereShape(radius);
+
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
         bcs.getMassPropertiesOverride().setMass(0.2f);

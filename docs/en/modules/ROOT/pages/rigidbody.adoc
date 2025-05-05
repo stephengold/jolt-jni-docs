@@ -6,6 +6,7 @@
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
 
+
 == The 5 familiar features
 
 A _rigid body_ is a type of physics object
@@ -66,6 +67,7 @@ Things to notice while running the app:
   that alter the balls' motions but not their shapes.
 .. The ball on the right loses half its horizontal velocity.
 .. The ball on the left begins moving leftward as it falls.
+
 
 == Configuring rigid bodies
 
@@ -513,6 +515,7 @@ Things to notice while running the app:
 . The ball with CCD enabled (on the left) sticks the landing on the platform.
 . The control ball (on the right) falls through the platform,
   passing from one side to the other in a single simulation step.
+
 
 == Summary
 
