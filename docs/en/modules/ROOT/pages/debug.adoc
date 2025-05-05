@@ -20,15 +20,17 @@ To troubleshoot such crashes, attach a native-code debugger
 (such as GDB) to the JVM itself.
 ====
 
-To troubleshoot issues involving memory allocation,
-you can enable allocation tracing by invoking `Jolt.setTraceAllocations(true)`.
-This feature requires a "Debug" native library.
+To troubleshoot issues involving native-memory allocation,
+enable _allocation tracing_ with `Jolt.setTraceAllocations(true)`.
+Allocation tracing prints a line to the standard output
+every time {Project} allocates or frees a native object.
+Allocation tracing requires a "Debug" native library.
 
 
 == Visualization
 
 Many physics issues can be diagnosed visually.
-For instance, if you neglect to add a collision object to the physics space,
+For instance, if you neglect to add a body to the physics system,
 {Sport} will automatically omit it from the visualization.
 
 {Sport} can visualize:
@@ -46,19 +48,20 @@ For instance, if you neglect to add a collision object to the physics space,
 When visualizing a collision shape,
 {Sport} uses colors to distinguish different types of collision objects:
 
-* yellow for an object without contact response,
-  such as a sensor,
+* yellow for rigid body
+  (without contact response) such as a sensor,
 * magenta for a rigid body
   (with contact response) that's dynamic, responsive, and active,
 * gray for a rigid body
   (with contact response) that's static, kinematic, or deactivated,
-* brown for a character that's grounded, and
-* pink for a character that isn't grounded.
+* brown for a character that's supported, and
+* pink for a character that isn't supported.
 
 When visualizing a constraint, {Sport} uses:
 
-* green for a "A" end and
-* red for a "B" end.
+* green for visualizing the "body1" end,
+* red for visualizing the "body2" end, and
+* blue for visualizing the pivots.
 
 When visualizing a soft body, {Sport} uses:
 
