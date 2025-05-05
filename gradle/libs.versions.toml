@@ -27,7 +27,7 @@ lwjgl-assimp = { module = "org.lwjgl:lwjgl-assimp", version.ref = "lwjgl" }
 lwjgl-glfw = { module = "org.lwjgl:lwjgl-glfw", version.ref = "lwjgl" }
 lwjgl-opengl = { module = "org.lwjgl:lwjgl-opengl", version.ref = "lwjgl" }
 
-sport-jolt = "com.github.stephengold:sport-jolt:0.9.1"
+sport-jolt = "com.github.stephengold:sport-jolt:0.9.2"
 
 [bundles]
 
