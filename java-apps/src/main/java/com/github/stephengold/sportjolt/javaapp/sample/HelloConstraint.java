@@ -136,7 +136,7 @@ public class HelloConstraint
         addTickListener(this);
 
         // Reduce the time step for better accuracy:
-        this.timePerStep = 0.005f;
+        this.timePerStep = 0.005f; // seconds
 
         return result;
     }
@@ -156,7 +156,8 @@ public class HelloConstraint
     }
 
     /**
-     * Populate the PhysicsSystem. Invoked once during initialization.
+     * Populate the PhysicsSystem with bodies and constraints. Invoked once
+     * during initialization.
      */
     @Override
     public void populateSystem() {
@@ -189,7 +190,7 @@ public class HelloConstraint
     }
 
     /**
-     * Callback invoked during each iteration of the main update loop.
+     * Callback invoked during each iteration of the render loop.
      */
     @Override
     public void render() {

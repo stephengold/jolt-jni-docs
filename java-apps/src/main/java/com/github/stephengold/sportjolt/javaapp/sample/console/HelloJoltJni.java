@@ -153,7 +153,7 @@ final public class HelloJoltJni {
         JobSystem jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
                 Jolt.cMaxPhysicsBarriers, numWorkerThreads);
 
-        float timePerStep = 0.02f;
+        float timePerStep = 0.02f; // seconds
         for (int iteration = 0; iteration < 50; ++iteration) {
             int collisionSteps = 1;
             physicsSystem.update(
@@ -209,7 +209,8 @@ final public class HelloJoltJni {
     }
 
     /**
-     * Populate the PhysicsSystem. Invoked once during initialization.
+     * Populate the PhysicsSystem with bodies. Invoked once during
+     * initialization.
      */
     private static void populateSystem() {
         BodyInterface bi = physicsSystem.getBodyInterface();

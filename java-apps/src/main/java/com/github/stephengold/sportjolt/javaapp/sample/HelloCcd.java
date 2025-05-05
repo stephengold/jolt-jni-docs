@@ -97,7 +97,8 @@ public class HelloCcd extends BasePhysicsApp {
     }
 
     /**
-     * Populate the PhysicsSystem. Invoked once during initialization.
+     * Populate the PhysicsSystem with bodies. Invoked once during
+     * initialization.
      */
     @Override
     public void populateSystem() {

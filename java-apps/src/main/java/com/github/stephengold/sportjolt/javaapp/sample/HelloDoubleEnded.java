@@ -90,7 +90,7 @@ public class HelloDoubleEnded
      */
     private static Body paddleBody;
     /**
-     * latest ground location indicated by the mouse cursor
+     * latest ground-plane location indicated by the mouse cursor
      */
     final private static Vector3f mouseLocation = new Vector3f();
     // *************************************************************************
@@ -136,7 +136,7 @@ public class HelloDoubleEnded
         addTickListener(this);
 
         // Reduce the time step for better accuracy:
-        this.timePerStep = 0.005f;
+        this.timePerStep = 0.005f; // seconds
 
         return result;
     }
@@ -156,7 +156,8 @@ public class HelloDoubleEnded
     }
 
     /**
-     * Populate the PhysicsSystem. Invoked once during initialization.
+     * Populate the PhysicsSystem with bodies and constraints. Invoked once
+     * during initialization.
      */
     @Override
     public void populateSystem() {
@@ -183,13 +184,13 @@ public class HelloDoubleEnded
         TwoBodyConstraint constraint = settings.create(paddleBody, ballBody);
         physicsSystem.addConstraint(constraint);
 
-        // Visualize the constraint.
-        new ConstraintGeometry(constraint, 1);
-        new ConstraintGeometry(constraint, 2);
+        // Visualize the constraint:
+        new ConstraintGeometry(constraint, 1); // paddleBody is at the 1st end
+        new ConstraintGeometry(constraint, 2); // ballBody is at the 2nd end
     }
 
     /**
-     * Callback invoked during each iteration of the main update loop.
+     * Callback invoked during each iteration of the render loop.
      */
     @Override
     public void render() {
@@ -244,7 +245,7 @@ public class HelloDoubleEnded
     // private methods
 
     /**
-     * Create a dynamic rigid body with a sphere shape and add it to the system:
+     * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
      * @return the new body
      */
@@ -267,7 +268,7 @@ public class HelloDoubleEnded
     }
 
     /**
-     * Create a kinematic body with a box shape and add it to the system:
+     * Create a kinematic body with a box shape and add it to the system.
      */
     private void addPaddle() {
         ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);
