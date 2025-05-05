@@ -32,12 +32,6 @@ import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable;
-import com.github.stephengold.joltjni.ObjVsBpFilter;
-import com.github.stephengold.joltjni.ObjVsObjFilter;
-import com.github.stephengold.joltjni.ObjectLayerPairFilter;
-import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.Vec3;
@@ -93,22 +87,8 @@ public class HelloDamping extends BasePhysicsApp {
     public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
-        BroadPhaseLayerInterface mapObj2Bp
-                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
-                        .mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
-                        .mapObjectToBroadPhaseLayer(objLayerMoving, 0);
-        ObjectVsBroadPhaseLayerFilter objVsBpFilter
-                = new ObjVsBpFilter(numObjLayers, numBpLayers);
-        ObjectLayerPairFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers)
-                .disablePair(objLayerNonMoving, objLayerNonMoving);
-
         int maxBodies = 4;
-        int numBodyMutexes = 0; // 0 means "use the default number"
-        int maxBodyPairs = 3;
-        int maxContacts = 3;
-        PhysicsSystem result = new PhysicsSystem();
-        result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-                mapObj2Bp, objVsBpFilter, objVsObjFilter);
+        PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         // For clarity, disable gravity:
         result.setGravity(0f, 0f, 0f);

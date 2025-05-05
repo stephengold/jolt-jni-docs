@@ -32,11 +32,7 @@ import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable;
 import com.github.stephengold.joltjni.Face;
-import com.github.stephengold.joltjni.ObjVsBpFilter;
-import com.github.stephengold.joltjni.ObjVsObjFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
@@ -104,21 +100,8 @@ public class HelloSoftBody extends BasePhysicsApp {
     public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
-        BroadPhaseLayerInterface mapObj2Bp
-                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
-                        .mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
-                        .mapObjectToBroadPhaseLayer(objLayerMoving, 0);
-        ObjVsBpFilter objVsBpFilter
-                = new ObjVsBpFilter(numObjLayers, numBpLayers);
-        ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
-
-        int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default number"
-        int maxBodyPairs = 3;
-        int maxContacts = 3;
-        PhysicsSystem result = new PhysicsSystem();
-        result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-                mapObj2Bp, objVsBpFilter, objVsObjFilter);
+        int maxBodies = 3; // TODO 2
+        PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         return result;
     }

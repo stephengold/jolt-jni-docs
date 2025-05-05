@@ -31,12 +31,8 @@ package com.github.stephengold.sportjolt.javaapp.sample;
 import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable;
 import com.github.stephengold.joltjni.CylinderShape;
 import com.github.stephengold.joltjni.MotionProperties;
-import com.github.stephengold.joltjni.ObjVsBpFilter;
-import com.github.stephengold.joltjni.ObjVsObjFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -91,21 +87,8 @@ public class HelloCcd extends BasePhysicsApp {
     public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
-        BroadPhaseLayerInterface mapObj2Bp
-                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
-                        .mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
-                        .mapObjectToBroadPhaseLayer(objLayerMoving, 0);
-        ObjVsBpFilter objVsBpFilter
-                = new ObjVsBpFilter(numObjLayers, numBpLayers);
-        ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
-
         int maxBodies = 3;
-        int numBodyMutexes = 0; // 0 means "use the default number"
-        int maxBodyPairs = 3;
-        int maxContacts = 3;
-        PhysicsSystem result = new PhysicsSystem();
-        result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-                mapObj2Bp, objVsBpFilter, objVsObjFilter);
+        PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         // Increase gravity to make the balls fall faster:
         result.setGravity(0f, -100f, 0f);

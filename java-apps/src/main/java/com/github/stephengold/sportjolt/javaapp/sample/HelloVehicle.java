@@ -31,12 +31,8 @@ package com.github.stephengold.sportjolt.javaapp.sample;
 import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterface;
-import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable;
 import com.github.stephengold.joltjni.ConvexHullShapeSettings;
 import com.github.stephengold.joltjni.Jolt;
-import com.github.stephengold.joltjni.ObjVsBpFilter;
-import com.github.stephengold.joltjni.ObjVsObjFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
@@ -108,7 +104,11 @@ public class HelloVehicle extends BasePhysicsApp {
      */
     @Override
     public PhysicsSystem createSystem() {
-        PhysicsSystem result = configurePhysics();
+        // For simplicity, use a single broadphase layer:
+        int numBpLayers = 1;
+        int maxBodies = 3; // TODO 2
+        PhysicsSystem result = createSystem(maxBodies, numBpLayers);
+
         return result;
     }
 
@@ -243,32 +243,5 @@ public class HelloVehicle extends BasePhysicsApp {
         visualizeShape(body, 0.1f)
                 .setSpecularColor(Constants.DARK_GRAY)
                 .setTexture(textureKey);
-    }
-
-    /**
-     * Configure physics during initialization.
-     *
-     * @return a new instance (not null)
-     */
-    private PhysicsSystem configurePhysics() {
-        // For simplicity, use a single broadphase layer:
-        int numBpLayers = 1;
-        BroadPhaseLayerInterface mapObj2Bp
-                = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
-                        .mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
-                        .mapObjectToBroadPhaseLayer(objLayerMoving, 0);
-        ObjVsBpFilter objVsBpFilter
-                = new ObjVsBpFilter(numObjLayers, numBpLayers);
-        ObjVsObjFilter objVsObjFilter = new ObjVsObjFilter(numObjLayers);
-
-        int maxBodies = 2;
-        int numBodyMutexes = 0; // 0 means "use the default number"
-        int maxBodyPairs = 3;
-        int maxContacts = 3;
-        PhysicsSystem result = new PhysicsSystem();
-        result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-                mapObj2Bp, objVsBpFilter, objVsObjFilter);
-
-        return result;
     }
 }
