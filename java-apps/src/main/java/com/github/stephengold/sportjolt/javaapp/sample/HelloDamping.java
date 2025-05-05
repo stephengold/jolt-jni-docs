@@ -124,25 +124,25 @@ public class HelloDamping extends BasePhysicsApp {
 
         bcs.setAngularDamping(0f);
         bcs.setLinearDamping(0f);
-        bcs.setPosition(0f, +2f, 0f);
+        bcs.setPosition(0., +2., 0.);
         cube[0] = bi.createBody(bcs);
         bi.addBody(cube[0], EActivation.Activate);
 
         bcs.setAngularDamping(0.9f);
         bcs.setLinearDamping(0f);
-        bcs.setPosition(4f, +2f, 0f);
+        bcs.setPosition(4., +2., 0.);
         cube[1] = bi.createBody(bcs);
         bi.addBody(cube[1], EActivation.Activate);
 
         bcs.setAngularDamping(0f);
         bcs.setLinearDamping(0.9f);
-        bcs.setPosition(0f, -2f, 0f);
+        bcs.setPosition(0., -2., 0.);
         cube[2] = bi.createBody(bcs);
         bi.addBody(cube[2], EActivation.Activate);
 
         bcs.setAngularDamping(0.9f);
         bcs.setLinearDamping(0.9f);
-        bcs.setPosition(4f, -2f, 0f);
+        bcs.setPosition(4., -2., 0.);
         cube[3] = bi.createBody(bcs);
         bi.addBody(cube[3], EActivation.Activate);
 
