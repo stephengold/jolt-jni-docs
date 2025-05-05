@@ -6,7 +6,7 @@
     <title>Troubleshooting physics issues :: The Jolt-JNI project</title>
     <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/debug.html">
     <link rel="prev" href="free.html">
-    <link rel="next" href="build.html">
+    <link rel="next" href="shape.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
@@ -73,13 +73,13 @@
     <a class="nav-link" href="rigidbody.html">Rigid bodies</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="shape.html">Collision shapes</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="free.html">Freeing memory</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="debug.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shape.html">Collision shapes</a>
   </li>
 </ul>
   </li>
@@ -251,9 +251,11 @@ To troubleshoot such crashes, attach a native-code debugger
 </table>
 </div>
 <div class="paragraph">
-<p>To troubleshoot issues involving memory allocation,
-you can enable allocation tracing by invoking <code>Jolt.setTraceAllocations(true)</code>.
-This feature requires a "Debug" native library.</p>
+<p>To troubleshoot issues involving native-memory allocation,
+enable <em>allocation tracing</em> with <code>Jolt.setTraceAllocations(true)</code>.
+Allocation tracing prints a line to the standard output
+every time Jolt JNI allocates or frees a native object.
+Allocation tracing requires a "Debug" native library.</p>
 </div>
 </div>
 </div>
@@ -262,7 +264,7 @@ This feature requires a "Debug" native library.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Many physics issues can be diagnosed visually.
-For instance, if you neglect to add a collision object to the physics space,
+For instance, if you neglect to add a body to the physics system,
 Sport-Jolt will automatically omit it from the visualization.</p>
 </div>
 <div class="paragraph">
@@ -302,8 +304,8 @@ Sport-Jolt uses colors to distinguish different types of collision objects:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>yellow for an object without contact response,
-such as a sensor,</p>
+<p>yellow for rigid body
+(without contact response) such as a sensor,</p>
 </li>
 <li>
 <p>magenta for a rigid body
@@ -314,10 +316,10 @@ such as a sensor,</p>
 (with contact response) that&#8217;s static, kinematic, or deactivated,</p>
 </li>
 <li>
-<p>brown for a character that&#8217;s grounded, and</p>
+<p>brown for a character that&#8217;s supported, and</p>
 </li>
 <li>
-<p>pink for a character that isn&#8217;t grounded.</p>
+<p>pink for a character that isn&#8217;t supported.</p>
 </li>
 </ul>
 </div>
@@ -327,10 +329,13 @@ such as a sensor,</p>
 <div class="ulist">
 <ul>
 <li>
-<p>green for a "A" end and</p>
+<p>green for visualizing the "body1" end,</p>
 </li>
 <li>
-<p>red for a "B" end.</p>
+<p>red for visualizing the "body2" end, and</p>
+</li>
+<li>
+<p>blue for visualizing the pivots.</p>
 </li>
 </ul>
 </div>
@@ -384,7 +389,7 @@ and use a "Debug" native library.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="free.html">Freeing memory</a></span>
-  <span class="next"><a href="build.html">Build procedures</a></span>
+  <span class="next"><a href="shape.html">Collision shapes</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">
