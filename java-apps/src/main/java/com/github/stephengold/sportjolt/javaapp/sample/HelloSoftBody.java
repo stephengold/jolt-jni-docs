@@ -51,7 +51,6 @@ import com.github.stephengold.sportjolt.IndexBuffer;
 import com.github.stephengold.sportjolt.Mesh;
 import com.github.stephengold.sportjolt.VertexBuffer;
 import com.github.stephengold.sportjolt.mesh.IcosphereMesh;
-import com.github.stephengold.sportjolt.physics.AabbGeometry;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.FacesGeometry;
 import com.github.stephengold.sportjolt.physics.LinksGeometry;
@@ -171,9 +170,6 @@ public class HelloSoftBody extends BasePhysicsApp {
         bi.addBody(body, EActivation.Activate);
 
         // Visualize the soft body.
-        float axisLength = 1f;
-        visualizeAxes(body, axisLength);
-        new AabbGeometry(body);
         new FacesGeometry(body);
         new LinksGeometry(body);
     }

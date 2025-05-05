@@ -56,7 +56,6 @@ import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.TextureKey;
 import com.github.stephengold.sportjolt.input.RotateMode;
-import com.github.stephengold.sportjolt.physics.AabbGeometry;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import java.util.ArrayList;
 import java.util.List;
@@ -199,9 +198,6 @@ public class HelloVehicle extends BasePhysicsApp {
         physicsSystem.addStepListener(vehicle.getStepListener());
 
         // Visualize the vehicle.
-        float axisLength = 1f;
-        visualizeAxes(body, axisLength);
-        new AabbGeometry(body);
         visualizeShape(vehicle);
         visualizeWheels(vehicle);
 
