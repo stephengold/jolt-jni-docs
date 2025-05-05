@@ -97,7 +97,7 @@ public class HelloSoftBody extends BasePhysicsApp {
      * @return a new object
      */
     @Override
-    public PhysicsSystem createSystem() {
+    protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         int maxBodies = 3; // TODO 2
@@ -110,7 +110,7 @@ public class HelloSoftBody extends BasePhysicsApp {
      * Initialize the application. Invoked once.
      */
     @Override
-    public void initialize() {
+    protected void initialize() {
         super.initialize();
 
         // Relocate the camera.
@@ -122,7 +122,7 @@ public class HelloSoftBody extends BasePhysicsApp {
      * initialization.
      */
     @Override
-    public void populateSystem() {
+    protected void populateSystem() {
         addBox();
 
         // A mesh is used to generate the shape and topology of the soft body.

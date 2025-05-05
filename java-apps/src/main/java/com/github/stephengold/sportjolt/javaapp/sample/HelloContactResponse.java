@@ -94,7 +94,7 @@ public class HelloContactResponse extends BasePhysicsApp {
      * @return a new object
      */
     @Override
-    public PhysicsSystem createSystem() {
+    protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         int maxBodies = 3; // TODO 2
@@ -107,7 +107,7 @@ public class HelloContactResponse extends BasePhysicsApp {
      * Initialize the application. Invoked once.
      */
     @Override
-    public void initialize() {
+    protected void initialize() {
         super.initialize();
         configureInput();
     }
@@ -117,7 +117,7 @@ public class HelloContactResponse extends BasePhysicsApp {
      * initialization.
      */
     @Override
-    public void populateSystem() {
+    protected void populateSystem() {
         BodyInterface bi = physicsSystem.getBodyInterface();
 
         // Add a static box to the system, to serve as a horizontal platform:

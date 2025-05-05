@@ -97,7 +97,7 @@ public class HelloCharacter
      * @return a new object
      */
     @Override
-    public PhysicsSystem createSystem() {
+    protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         int maxBodies = 3; // TODO 2
@@ -113,7 +113,7 @@ public class HelloCharacter
      * Initialize the application. Invoked once.
      */
     @Override
-    public void initialize() {
+    protected void initialize() {
         super.initialize();
 
         getCameraInputProcessor().setRotationMode(RotateMode.DragLMB);
@@ -124,7 +124,7 @@ public class HelloCharacter
      * Populate the PhysicsSystem. Invoked once during initialization.
      */
     @Override
-    public void populateSystem() {
+    protected void populateSystem() {
         // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 0.5f;
         float capsuleHeight = 1f;

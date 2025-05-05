@@ -100,7 +100,7 @@ final public class HelloSport extends BasePhysicsApp {
      * @return a new object
      */
     @Override
-    public PhysicsSystem createSystem() {
+    protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
 
@@ -142,7 +142,7 @@ final public class HelloSport extends BasePhysicsApp {
      * initialization.
      */
     @Override
-    public void populateSystem() {
+    protected void populateSystem() {
         BodyInterface bi = physicsSystem.getBodyInterface();
 
         // Add a static horizontal plane at y=-1:

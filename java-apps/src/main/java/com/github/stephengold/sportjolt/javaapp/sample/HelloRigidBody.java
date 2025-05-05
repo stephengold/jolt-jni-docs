@@ -86,7 +86,7 @@ public class HelloRigidBody extends BasePhysicsApp {
      * @return a new object
      */
     @Override
-    public PhysicsSystem createSystem() {
+    protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         int maxBodies = 3; // TODO 2
@@ -100,7 +100,7 @@ public class HelloRigidBody extends BasePhysicsApp {
      * initialization.
      */
     @Override
-    public void populateSystem() {
+    protected void populateSystem() {
         BodyInterface bi = physicsSystem.getBodyInterface();
 
         // Create a collision shape for balls:

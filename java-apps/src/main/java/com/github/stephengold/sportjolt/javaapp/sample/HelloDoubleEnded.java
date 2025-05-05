@@ -126,7 +126,7 @@ public class HelloDoubleEnded
      * @return a new object
      */
     @Override
-    public PhysicsSystem createSystem() {
+    protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         int maxBodies = 3;
@@ -145,7 +145,7 @@ public class HelloDoubleEnded
      * Initialize the application. Invoked once.
      */
     @Override
-    public void initialize() {
+    protected void initialize() {
         super.initialize();
 
         configureCamera();
@@ -160,7 +160,7 @@ public class HelloDoubleEnded
      * during initialization.
      */
     @Override
-    public void populateSystem() {
+    protected void populateSystem() {
         // Add a static plane to represent the ground:
         addPlane(groundY);
 
@@ -193,7 +193,7 @@ public class HelloDoubleEnded
      * Callback invoked during each iteration of the render loop.
      */
     @Override
-    public void render() {
+    protected void render() {
         // Calculate the ground location (if any) indicated by the mouse cursor.
         Vector2fc screenXy = getInputManager().locateCursor();
         if (screenXy != null) {

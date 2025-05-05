@@ -103,7 +103,7 @@ public class HelloVehicle extends BasePhysicsApp {
      * @return a new instance
      */
     @Override
-    public PhysicsSystem createSystem() {
+    protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
         int maxBodies = 3; // TODO 2
@@ -116,7 +116,7 @@ public class HelloVehicle extends BasePhysicsApp {
      * Initialize the application. Invoked once.
      */
     @Override
-    public void initialize() {
+    protected void initialize() {
         super.initialize();
 
         getCameraInputProcessor().setRotationMode(RotateMode.DragLMB);
@@ -130,7 +130,7 @@ public class HelloVehicle extends BasePhysicsApp {
      * Populate the PhysicsSystem. Invoked once during initialization.
      */
     @Override
-    public void populateSystem() {
+    protected void populateSystem() {
         // Add a static horizontal plane at y=-0.65 to represent the ground:
         float groundY = -0.65f;
         addPlane(groundY);
