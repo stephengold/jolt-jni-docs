@@ -288,7 +288,7 @@ public class HelloDoubleEnded
     }
 
     /**
-     * Add a horizontal plane body to the system.
+     * Add a static horizontal plane body to the system.
      *
      * @param y the desired elevation (in system coordinates)
      */
@@ -303,7 +303,7 @@ public class HelloDoubleEnded
         Body body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
-        // visualization
+        // Visualize the body:
         String resourceName = "/Textures/greenTile.png";
         float maxAniso = 16f;
         TextureKey textureKey

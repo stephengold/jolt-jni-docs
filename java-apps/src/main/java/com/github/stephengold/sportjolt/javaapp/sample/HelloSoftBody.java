@@ -113,7 +113,7 @@ public class HelloSoftBody extends BasePhysicsApp {
         super.initialize();
         setVsync(true);
 
-        // Relocate the camera.
+        // Relocate the camera:
         cam.setLocation(0f, 1f, 8f);
     }
 
@@ -170,7 +170,7 @@ public class HelloSoftBody extends BasePhysicsApp {
         ConstBody body = bi.createSoftBody(sbcs);
         bi.addBody(body, EActivation.Activate);
 
-        // Visualize the soft body.
+        // Visualize the soft body:
         new FacesGeometry(body);
         new LinksGeometry(body);
     }

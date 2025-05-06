@@ -198,7 +198,7 @@ public class HelloVehicle extends BasePhysicsApp {
         physicsSystem.addConstraint(vehicle);
         physicsSystem.addStepListener(vehicle.getStepListener());
 
-        // Visualize the vehicle.
+        // Visualize the vehicle:
         visualizeShape(vehicle);
         visualizeWheels(vehicle);
 
@@ -217,7 +217,7 @@ public class HelloVehicle extends BasePhysicsApp {
     // private methods
 
     /**
-     * Add a horizontal plane body to the system.
+     * Add a static horizontal plane body to the system.
      *
      * @param y the desired elevation (in system coordinates)
      */
@@ -232,7 +232,7 @@ public class HelloVehicle extends BasePhysicsApp {
         Body body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
-        // visualization
+        // Visualize the body:
         String resourceName = "/Textures/greenTile.png";
         float maxAniso = 16f;
         TextureKey textureKey
