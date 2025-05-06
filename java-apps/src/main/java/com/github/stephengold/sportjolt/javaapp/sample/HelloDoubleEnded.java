@@ -226,12 +226,8 @@ public class HelloDoubleEnded
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
-    public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // Reposition the paddle based on the mouse location:
-        Vec3Arg mouse = Utils.toJoltVector(mouseLocation);
-        RVec3Arg bodyLocation
-                = Op.plus(mouse, new RVec3(0., paddleHalfHeight, 0.));
-        paddleBody.moveKinematic(bodyLocation, new Quat(), timeStep);
+    public void physicsTick(PhysicsSystem system, float timeStep) {
+        // do nothing
     }
 
     /**
@@ -242,8 +238,12 @@ public class HelloDoubleEnded
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
-    public void physicsTick(PhysicsSystem system, float timeStep) {
-        // do nothing
+    public void prePhysicsTick(PhysicsSystem system, float timeStep) {
+        // Reposition the paddle based on the mouse location:
+        Vec3Arg mouse = Utils.toJoltVector(mouseLocation);
+        RVec3Arg bodyLocation
+                = Op.plus(mouse, new RVec3(0., paddleHalfHeight, 0.));
+        paddleBody.moveKinematic(bodyLocation, new Quat(), timeStep);
     }
     // *************************************************************************
     // private methods
