@@ -39,6 +39,7 @@ import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstShape;
+import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener;
 
@@ -182,7 +183,7 @@ public class HelloKinematics
         double orbitRadius = 0.4; // meters
         double x = orbitRadius * Math.sin(phaseAngle);
         double y = orbitRadius * Math.cos(phaseAngle);
-        RVec3 location = new RVec3(x, y, 0.);
+        RVec3Arg location = new RVec3(x, y, 0.);
         kineBall.moveKinematic(location, new Quat(), timeStep);
 
         elapsedTime += timeStep;

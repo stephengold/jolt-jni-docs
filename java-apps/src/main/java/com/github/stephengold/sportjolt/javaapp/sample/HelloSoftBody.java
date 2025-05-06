@@ -28,7 +28,6 @@
  */
 package com.github.stephengold.sportjolt.javaapp.sample;
 
-import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
@@ -38,7 +37,6 @@ import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.SoftBodyCreationSettings;
 import com.github.stephengold.joltjni.SoftBodySharedSettings;
-import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.Vertex;
 import com.github.stephengold.joltjni.VertexAttributes;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -47,6 +45,7 @@ import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
+import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.IndexBuffer;
 import com.github.stephengold.sportjolt.Mesh;
 import com.github.stephengold.sportjolt.VertexBuffer;
@@ -137,7 +136,7 @@ public class HelloSoftBody extends BasePhysicsApp {
         int numVertices = locations.capacity() / 3;
         Vertex tmpVertex = new Vertex();
         for (int i = 0; i < numVertices; ++i) {
-            Vec3 location = locations.get(3 * i, null);
+            Vec3Arg location = locations.get(3 * i, null);
             tmpVertex.setPosition(location);
             sbss.addVertex(tmpVertex);
         }
@@ -190,7 +189,7 @@ public class HelloSoftBody extends BasePhysicsApp {
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-        Body body = bi.createBody(bcs);
+        ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
         visualizeShape(body);

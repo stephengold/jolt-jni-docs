@@ -35,6 +35,7 @@ import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 
@@ -123,7 +124,7 @@ public class HelloRigidBody extends BasePhysicsApp {
 
         // Create 2 balls (dynamic rigid bodies) and add them to the system:
         bcs.setPosition(1., 1., 0.);
-        Body ball1 = bi.createBody(bcs);
+        ConstBody ball1 = bi.createBody(bcs);
         bi.addBody(ball1, EActivation.Activate);
 
         bcs.setPosition(5., 1., 0.);

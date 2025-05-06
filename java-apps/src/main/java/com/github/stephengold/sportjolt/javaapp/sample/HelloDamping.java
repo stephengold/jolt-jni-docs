@@ -166,7 +166,7 @@ public class HelloDamping extends BasePhysicsApp {
         Vec3Arg impulse = new Vec3(-1f, 0f, 0f);
         RVec3Arg offset = new RVec3(0., 1., 1.);
         for (int cubeIndex = 0; cubeIndex < numCubes; ++cubeIndex) {
-            RVec3 center = cube[cubeIndex].getCenterOfMassPosition();
+            RVec3Arg center = cube[cubeIndex].getCenterOfMassPosition();
             cube[cubeIndex].addImpulse(impulse, Op.plus(center, offset));
         }
 

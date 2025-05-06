@@ -28,7 +28,6 @@
  */
 package com.github.stephengold.sportjolt.javaapp.sample;
 
-import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
@@ -41,7 +40,9 @@ import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
+import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -134,16 +135,17 @@ public class HelloCharacter
         CharacterSettings settings = new CharacterSettings();
         settings.setShape(shape);
 
+        RVec3Arg startLocation = new RVec3(0., 2., 0.);
         long userData = 0L;
-        character = new com.github.stephengold.joltjni.Character(settings,
-                new RVec3(0., 2., 0.), new Quat(), userData, physicsSystem)
+        character = new com.github.stephengold.joltjni.Character(
+                settings, startLocation, new Quat(), userData, physicsSystem)
                 .toRef();
         character.addToPhysicsSystem();
 
         // Add a square to represent the ground:
         float halfExtent = 4f;
         float y = -2f;
-        Body ground = addSquare(halfExtent, y);
+        ConstBody ground = addSquare(halfExtent, y);
 
         // Visualize the shapes of both physics objects:
         visualizeShape(character);
@@ -189,7 +191,7 @@ public class HelloCharacter
      * coordinates)
      * @return the new body (not null)
      */
-    private Body addSquare(float halfExtent, float y) {
+    private ConstBody addSquare(float halfExtent, float y) {
         // Create a static rigid body with a square shape:
         float halfThickness = 0.1f;
         ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
@@ -200,7 +202,7 @@ public class HelloCharacter
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-        Body result = bi.createBody(bcs);
+        ConstBody result = bi.createBody(bcs);
         bi.addBody(result, EActivation.DontActivate);
 
         assert result != null;

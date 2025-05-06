@@ -43,6 +43,7 @@ import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstShape;
+import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Projection;
 import com.github.stephengold.sportjolt.Utils;
 import com.github.stephengold.sportjolt.input.RotateMode;
@@ -219,7 +220,7 @@ public class HelloConstraint
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
         // Relocate the kinematic ball based on the mouse location:
-        RVec3 bodyLocation
+        RVec3Arg bodyLocation
                 = new RVec3(mouseLocation.x, mouseLocation.y, mouseLocation.z);
         kineBall.moveKinematic(bodyLocation, new Quat(), timeStep);
     }

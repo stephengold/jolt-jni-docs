@@ -28,11 +28,9 @@
  */
 package com.github.stephengold.sportjolt.javaapp.sample;
 
-import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.CylinderShape;
-import com.github.stephengold.joltjni.MotionProperties;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -40,6 +38,7 @@ import com.github.stephengold.joltjni.enumerate.EMotionQuality;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstBody;
+import com.github.stephengold.joltjni.readonly.ConstMotionProperties;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 
@@ -127,17 +126,18 @@ public class HelloCcd extends BasePhysicsApp {
          */
         bcs.setMotionQuality(EMotionQuality.LinearCast);
         bcs.setPosition(-1., 4., 0.);
-        Body ccdBall = bi.createBody(bcs);
+        ConstBody ccdBall = bi.createBody(bcs);
         bi.addBody(ccdBall, EActivation.Activate);
 
         bcs.setMotionQuality(EMotionQuality.Discrete);
         bcs.setPosition(1., 4., 0.);
-        Body controlBall = bi.createBody(bcs);
+        ConstBody controlBall = bi.createBody(bcs);
         bi.addBody(controlBall, EActivation.Activate);
 
-        MotionProperties ccdProperties = ccdBall.getMotionProperties();
+        ConstMotionProperties ccdProperties = ccdBall.getMotionProperties();
         assert ccdProperties.getMotionQuality() == EMotionQuality.LinearCast;
-        MotionProperties controlProperties = controlBall.getMotionProperties();
+        ConstMotionProperties controlProperties
+                = controlBall.getMotionProperties();
         assert controlProperties.getMotionQuality() == EMotionQuality.Discrete;
 
         // Create a thin, static disc and add it to the system:

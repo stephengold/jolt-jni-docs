@@ -28,7 +28,6 @@
  */
 package com.github.stephengold.sportjolt.javaapp.sample;
 
-import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
@@ -37,6 +36,7 @@ import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -59,11 +59,11 @@ public class HelloDeactivation
     /**
      * small, dynamic rigid body
      */
-    private static Body dynamicCube;
+    private static ConstBody dynamicCube;
     /**
      * large, static rigid body
      */
-    private static Body supportCube;
+    private static ConstBody supportCube;
     // *************************************************************************
     // constructors
 
@@ -156,7 +156,7 @@ public class HelloDeactivation
         ConstShape ballShape = new SphereShape(ballRadius);
         bcs.setPosition(0., -2., 0.);
         bcs.setShape(ballShape);
-        Body bottomBody = bi.createBody(bcs);
+        ConstBody bottomBody = bi.createBody(bcs);
         bi.addBody(bottomBody, EActivation.DontActivate);
 
         // Visualize all 3 bodies:

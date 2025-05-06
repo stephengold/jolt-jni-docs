@@ -37,6 +37,7 @@ import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -130,7 +131,7 @@ public class HelloContactResponse extends BasePhysicsApp {
         bcs1.setObjectLayer(objLayerNonMoving);
         bcs1.setPosition(0., -4., 0.);
         bcs1.setShape(boxShape);
-        Body box = bi.createBody(bcs1);
+        ConstBody box = bi.createBody(bcs1);
         bi.addBody(box, EActivation.DontActivate);
 
         // Add a dynamic ball to the system:
