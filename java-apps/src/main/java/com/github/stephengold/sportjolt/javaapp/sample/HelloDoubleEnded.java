@@ -171,8 +171,8 @@ public class HelloDoubleEnded
         Body ballBody = addBall();
 
         // Add a double-ended constraint to connect the ball to the paddle:
-        RVec3Arg pivotInBall = new RVec3(0f, 3f, 0f);
-        RVec3Arg pivotInPaddle = new RVec3(0f, 3f, 0f);
+        RVec3Arg pivotInBall = new RVec3(0., 3., 0.);
+        RVec3Arg pivotInPaddle = new RVec3(0., 3., 0.);
 
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
         settings.makeFixedAxis(EAxis.TranslationX);
@@ -228,9 +228,9 @@ public class HelloDoubleEnded
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
         // Reposition the paddle based on the mouse location:
-        Vec3 mouse = Utils.toJoltVector(mouseLocation);
-        RVec3 bodyLocation
-                = Op.plus(mouse, new RVec3(0f, paddleHalfHeight, 0f));
+        Vec3Arg mouse = Utils.toJoltVector(mouseLocation);
+        RVec3Arg bodyLocation
+                = Op.plus(mouse, new RVec3(0., paddleHalfHeight, 0.));
         paddleBody.moveKinematic(bodyLocation, new Quat(), timeStep);
     }
 
