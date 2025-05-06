@@ -33,36 +33,29 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
-import com.github.stephengold.joltjni.Plane;
-import com.github.stephengold.joltjni.PlaneShape;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.TwoBodyConstraint;
-import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
-import com.github.stephengold.joltjni.operator.Op;
-import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
-import com.github.stephengold.joltjni.readonly.RVec3Arg;
-import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.Projection;
-import com.github.stephengold.sportjolt.TextureKey;
 import com.github.stephengold.sportjolt.Utils;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
-import com.github.stephengold.sportjolt.physics.ConstraintGeometry;
+import com.github.stephengold.sportjolt.physics.LocalAxisGeometry;
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener;
 import org.joml.Vector2fc;
 import org.joml.Vector3f;
 import org.joml.Vector3fc;
 
 /**
- * A simple example of a TwoBodyConstraint.
+ * A simple example of a single-ended SixDofConstraint simulating a hinge
+ * constraint.
  * <p>
  * Builds upon HelloKinematics.
  *
@@ -72,25 +65,14 @@ public class HelloConstraint
         extends BasePhysicsApp
         implements PhysicsTickListener {
     // *************************************************************************
-    // constants
-
-    /**
-     * system Y coordinate of the ground plane
-     */
-    final private static float groundY = -4f;
-    /**
-     * half the height of the paddle (in meters)
-     */
-    final private static float paddleHalfHeight = 1f;
-    // *************************************************************************
     // fields
 
     /**
-     * mouse-controlled kinematic paddle
+     * mouse-controlled kinematic ball
      */
-    private static Body paddleBody;
+    private static Body kineBall;
     /**
-     * latest ground location indicated by the mouse cursor
+     * latest X-Z plane location indicated by the mouse cursor
      */
     final private static Vector3f mouseLocation = new Vector3f();
     // *************************************************************************
@@ -161,32 +143,29 @@ public class HelloConstraint
      */
     @Override
     protected void populateSystem() {
-        // Add a static plane to represent the ground:
-        addPlane(groundY);
+        // Add a mouse-controlled kinematic ball:
+        kineBall = addKineBall();
 
-        // Add a mouse-controlled kinematic paddle:
-        addPaddle();
+        // Add a dynamic box:
+        Body rotor = addBox();
 
-        // Add a dynamic ball:
-        Body ballBody = addBall();
-
-        // Add a single-ended constraint to constrain the ball's motion:
-        RVec3Arg pivotInBall = new RVec3(0f, 3f, 0f);
-        RVec3Arg pivotInWorld = new RVec3(0f, groundY + 4f, 0f);
-
+        // Constrain the box to rotate around its Y axis:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
+        settings.makeFixedAxis(EAxis.RotationX);
+        // Y-axis rotation remains free.
+        settings.makeFixedAxis(EAxis.RotationZ);
         settings.makeFixedAxis(EAxis.TranslationX);
         settings.makeFixedAxis(EAxis.TranslationY);
         settings.makeFixedAxis(EAxis.TranslationZ);
-        settings.setPosition1(pivotInWorld);
-        settings.setPosition2(pivotInBall);
 
         Body fixedToWorld = Body.sFixedToWorld();
-        TwoBodyConstraint constraint = settings.create(fixedToWorld, ballBody);
+        TwoBodyConstraint constraint = settings.create(fixedToWorld, rotor);
         physicsSystem.addConstraint(constraint);
 
-        // Visualize the constraint:
-        new ConstraintGeometry(constraint, 2);
+        // Visualize the axis of rotation:
+        int axisIndex = 1; // +Y axis
+        float axisLength = 2f; // meters
+        new LocalAxisGeometry(rotor, axisIndex, axisLength);
     }
 
     /**
@@ -194,18 +173,21 @@ public class HelloConstraint
      */
     @Override
     protected void render() {
-        // Calculate the ground location (if any) indicated by the mouse cursor:
         Vector2fc screenXy = getInputManager().locateCursor();
         if (screenXy != null) {
+            /*
+             * Calculate the X-Z plane location (if any)
+             * indicated by the mouse cursor:
+             */
             Vector3fc nearLocation
                     = cam.clipToWorld(screenXy, Projection.nearClipZ, null);
             Vector3fc farLocation
                     = cam.clipToWorld(screenXy, Projection.farClipZ, null);
             float nearY = nearLocation.y();
             float farY = farLocation.y();
-            if (nearY > groundY && farY < groundY) {
+            if (nearY > 0f && farY < 0f) {
                 float dy = nearY - farY;
-                float t = (nearY - groundY) / dy;
+                float t = (nearY) / dy;
                 Utils.lerp(t, nearLocation, farLocation, mouseLocation);
             }
         }
@@ -223,12 +205,8 @@ public class HelloConstraint
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
-    public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // Reposition the paddle based on the mouse location:
-        Vec3 mouse = Utils.toJoltVector(mouseLocation);
-        RVec3 bodyLocation
-                = Op.plus(mouse, new RVec3(0f, paddleHalfHeight, 0f));
-        paddleBody.moveKinematic(bodyLocation, new Quat(), timeStep);
+    public void physicsTick(PhysicsSystem system, float timeStep) {
+        // do nothing
     }
 
     /**
@@ -239,20 +217,23 @@ public class HelloConstraint
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
-    public void physicsTick(PhysicsSystem system, float timeStep) {
-        // do nothing
+    public void prePhysicsTick(PhysicsSystem system, float timeStep) {
+        // Relocate the kinematic ball based on the mouse location:
+        RVec3 bodyLocation
+                = new RVec3(mouseLocation.x, mouseLocation.y, mouseLocation.z);
+        kineBall.moveKinematic(bodyLocation, new Quat(), timeStep);
     }
     // *************************************************************************
     // private methods
 
     /**
-     * Create a dynamic rigid body with a sphere shape and add it to the system.
+     * Create a dynamic rigid body with a box shape and add it to the system.
      *
      * @return the new body
      */
-    private Body addBall() {
-        float radius = 0.4f;
-        ConstShape shape = new SphereShape(radius);
+    private Body addBox() {
+        ConstShape shape = new BoxShape(0.3f, 1f, 3f);
+
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
         bcs.getMassPropertiesOverride().setMass(0.2f);
@@ -269,47 +250,26 @@ public class HelloConstraint
     }
 
     /**
-     * Create a kinematic body with a box shape and add it to the system.
-     */
-    private void addPaddle() {
-        ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);
-
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false);
-        bcs.setMotionType(EMotionType.Kinematic);
-        bcs.setShape(shape);
-
-        BodyInterface bi = physicsSystem.getBodyInterface();
-        paddleBody = bi.createBody(bcs);
-        bi.addBody(paddleBody, EActivation.Activate);
-
-        visualizeShape(paddleBody);
-    }
-
-    /**
-     * Add a horizontal plane body to the system.
+     * Create a kinematic body with a sphere shape and add it to the system.
      *
-     * @param y the desired elevation (in system coordinates)
+     * @return the new body
      */
-    private void addPlane(float y) {
-        ConstPlane plane = new Plane(0f, 1f, 0f, -y);
-        PlaneShape shape = new PlaneShape(plane);
+    private Body addKineBall() {
+        float ballRadius = 1f;
+        ConstShape shape = new SphereShape(ballRadius);
+
         BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
+        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
+        bcs.setMotionType(EMotionType.Kinematic); // default=Dynamic
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-        Body body = bi.createBody(bcs);
-        bi.addBody(body, EActivation.DontActivate);
+        Body result = bi.createBody(bcs);
+        bi.addBody(result, EActivation.Activate);
 
-        // visualization
-        String resourceName = "/Textures/greenTile.png";
-        float maxAniso = 16f;
-        TextureKey textureKey
-                = new TextureKey("classpath://" + resourceName, maxAniso);
-        visualizeShape(body, 0.1f)
-                .setSpecularColor(Constants.DARK_GRAY)
-                .setTexture(textureKey);
+        visualizeShape(result);
+
+        return result;
     }
 
     /**
