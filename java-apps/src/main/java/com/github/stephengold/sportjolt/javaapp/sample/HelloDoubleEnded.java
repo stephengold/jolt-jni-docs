@@ -62,7 +62,7 @@ import org.joml.Vector3f;
 import org.joml.Vector3fc;
 
 /**
- * A simple example of a double-ended TwoBodyConstraint.
+ * A simple example of a double-ended SixDofBodyConstraint.
  * <p>
  * Builds upon HelloPivot.
  *
@@ -194,9 +194,12 @@ public class HelloDoubleEnded
      */
     @Override
     protected void render() {
-        // Calculate the ground location (if any) indicated by the mouse cursor.
         Vector2fc screenXy = getInputManager().locateCursor();
         if (screenXy != null) {
+            /*
+             * Calculate the ground-plane location (if any)
+             * indicated by the mouse cursor:
+             */
             Vector3fc nearLocation
                     = cam.clipToWorld(screenXy, Projection.nearClipZ, null);
             Vector3fc farLocation
@@ -224,7 +227,7 @@ public class HelloDoubleEnded
      */
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // Reposition the paddle based on the mouse location.
+        // Reposition the paddle based on the mouse location:
         Vec3 mouse = Utils.toJoltVector(mouseLocation);
         RVec3 bodyLocation
                 = Op.plus(mouse, new RVec3(0f, paddleHalfHeight, 0f));
@@ -278,8 +281,8 @@ public class HelloDoubleEnded
         ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false);
-        bcs.setMotionType(EMotionType.Kinematic);
+        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
+        bcs.setMotionType(EMotionType.Kinematic); // default=Dynamic
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();

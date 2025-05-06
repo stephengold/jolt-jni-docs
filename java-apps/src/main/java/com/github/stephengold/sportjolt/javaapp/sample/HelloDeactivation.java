@@ -159,7 +159,7 @@ public class HelloDeactivation
         Body bottomBody = bi.createBody(bcs);
         bi.addBody(bottomBody, EActivation.DontActivate);
 
-        // Visualize all 3 physics objects:
+        // Visualize all 3 bodies:
         visualizeShape(dynamicCube);
         visualizeShape(supportCube);
         visualizeShape(bottomBody);
