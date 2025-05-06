@@ -221,6 +221,55 @@ For instance:
 * As long as a container remains sealed,
   its collision shape need not be hollow.
 
+Mesh shapes, which support the greatest detail,
+cannot be used in movable bodies.
+If you need to simulate a moving mesh,
+first try approximating the mesh with a convex shape.
+For meshes that cannot be approximated this way
+(due to bends, holes, indentations, or steep protrusions)
+the fallback is to decompose the mesh
+into a small number of convex shapes that,
+when compounded together, approximate the desired behavior.
+
+Depending how much you know about a mesh,
+there are various approaches to decomposing it:
+
+* If the mesh is generated procedurally, it may be convenient
+  to decompose it during the generation process.
+* If the mesh was crafted in a tool such as https://www.blender.org/[Blender],
+  it may be practical to manually decompose it there,
+  into sub-meshes that are convex or nearly so.
+* As a last resort, you can decompose any mesh into triangle shapes,
+  though the resulting compound shape may be expensive to simulate.
+
+
+=== Automated decomposition
+
+For situations where other decomposition approaches are impractical,
+{Project} incorporates Khaled Mamou's
+https://github.com/kmammou/v-hacd[Volumetric-Hierarchical Approximate Convex Decomposition (V-HACD) algorithm].
+V-HACD makes it easy to decompose a 3-D mesh into a
+compound of hull shapes:
+
+[source,java]
+----
+import com.github.stephengold.joltjni.vhacd.ConvexHull;
+import com.github.stephengold.joltjni.vhacd.Decomposer;
+import com.github.stephengold.joltjni.vhacd.Parameters;
+
+// ...
+
+float[] locationArray = /* vertex locations in the mesh ... */
+int[] indexArray = /* vertex indices in the mesh ... */
+Decomposer decomposer = new Decomposer();
+Parameters tuningParameters = new Parameters();
+Collection<ConvexHull> hulls
+        = decomposer.decompose(locationArray, indexArray, tuningParameters);
+StaticCompoundShapeSettings compoundSettings
+        = new StaticCompoundShapeSettings();
+compoundSettings.addHulls(hulls);
+----
+
 
 == Summary
 
@@ -231,3 +280,5 @@ For instance:
   may still exhibit the convex property.
 * Most convex shapes incorporate a convex radius to round off the corners.
 * Use the simplest shape that yields the desired behavior.
+* For moving bodies,
+  mesh shapes can be approximated by compounds of convex shapes, such as hulls.
