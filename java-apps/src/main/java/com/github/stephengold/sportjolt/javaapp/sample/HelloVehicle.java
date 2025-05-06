@@ -117,6 +117,7 @@ public class HelloVehicle extends BasePhysicsApp {
     @Override
     protected void initialize() {
         super.initialize();
+        setVsync(true);
 
         getCameraInputProcessor().setRotationMode(RotateMode.DragLMB);
         cam.setLocation(new Vector3f(-4.17558f, 6.82825f, 35.9108f))

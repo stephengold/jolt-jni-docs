@@ -111,6 +111,7 @@ public class HelloSoftBody extends BasePhysicsApp {
     @Override
     protected void initialize() {
         super.initialize();
+        setVsync(true);
 
         // Relocate the camera.
         cam.setLocation(0f, 1f, 8f);

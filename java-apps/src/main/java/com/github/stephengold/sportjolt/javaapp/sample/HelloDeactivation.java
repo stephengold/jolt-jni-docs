@@ -115,6 +115,8 @@ public class HelloDeactivation
     @Override
     protected void initialize() {
         super.initialize();
+
+        setVsync(true);
         configureInput();
     }
 

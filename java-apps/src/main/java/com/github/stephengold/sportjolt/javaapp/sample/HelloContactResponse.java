@@ -109,6 +109,8 @@ public class HelloContactResponse extends BasePhysicsApp {
     @Override
     protected void initialize() {
         super.initialize();
+
+        setVsync(true);
         configureInput();
     }
 

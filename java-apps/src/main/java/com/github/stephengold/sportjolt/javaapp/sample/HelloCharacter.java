@@ -116,6 +116,7 @@ public class HelloCharacter
     protected void initialize() {
         super.initialize();
 
+        setVsync(true);
         getCameraInputProcessor().setRotationMode(RotateMode.DragLMB);
         setBackgroundColor(Constants.SKY_BLUE);
     }

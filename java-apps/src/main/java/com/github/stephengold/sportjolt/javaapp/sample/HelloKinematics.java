@@ -109,6 +109,15 @@ public class HelloKinematics
     }
 
     /**
+     * Initialize the application. Invoked once.
+     */
+    @Override
+    protected void initialize() {
+        super.initialize();
+        setVsync(true);
+    }
+
+    /**
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
