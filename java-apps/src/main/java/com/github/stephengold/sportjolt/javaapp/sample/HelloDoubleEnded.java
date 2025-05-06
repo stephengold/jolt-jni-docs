@@ -297,6 +297,7 @@ public class HelloDoubleEnded
         PlaneShape shape = new PlaneShape(plane);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
+        bcs.setObjectLayer(objLayerNonMoving);
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
