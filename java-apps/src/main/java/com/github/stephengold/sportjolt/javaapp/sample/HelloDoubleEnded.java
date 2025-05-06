@@ -40,7 +40,6 @@ import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.TwoBodyConstraint;
-import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
@@ -49,6 +48,7 @@ import com.github.stephengold.joltjni.operator.Op;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
+import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.Projection;
 import com.github.stephengold.sportjolt.TextureKey;
@@ -64,7 +64,7 @@ import org.joml.Vector3fc;
 /**
  * A simple example of a double-ended TwoBodyConstraint.
  * <p>
- * Builds upon HelloConstraint.
+ * Builds upon HelloPivot.
  *
  * @author Stephen Gold sgold@sonic.net
  */
@@ -165,7 +165,7 @@ public class HelloDoubleEnded
         addPlane(groundY);
 
         // Add a mouse-controlled kinematic paddle:
-        addPaddle();
+        paddleBody = addBox();
 
         // Add a dynamic ball:
         Body ballBody = addBall();
@@ -271,8 +271,10 @@ public class HelloDoubleEnded
 
     /**
      * Create a kinematic body with a box shape and add it to the system.
+     *
+     * @return the new body
      */
-    private void addPaddle() {
+    private Body addBox() {
         ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
@@ -281,10 +283,12 @@ public class HelloDoubleEnded
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-        paddleBody = bi.createBody(bcs);
-        bi.addBody(paddleBody, EActivation.Activate);
+        Body result = bi.createBody(bcs);
+        bi.addBody(result, EActivation.Activate);
 
-        visualizeShape(paddleBody);
+        visualizeShape(result);
+
+        return result;
     }
 
     /**
