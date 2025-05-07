@@ -90,6 +90,10 @@ tasks.register<JavaExec>("HelloSport") {
     description = "Runs the HelloSport tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloSport"
 }
+tasks.register<JavaExec>("HelloSpring") {
+    description = "Runs the HelloSpring tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloSpring"
+}
 tasks.register<JavaExec>("HelloStaticBody") {
     description = "Runs the HelloStaticBody tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloStaticBody"
