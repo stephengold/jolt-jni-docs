@@ -66,6 +66,10 @@ tasks.register<JavaExec>("HelloLimit") {
     description = "Runs the HelloLimit tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloLimit"
 }
+tasks.register<JavaExec>("HelloMotor") {
+    description = "Runs the HelloMotor tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloMotor"
+}
 tasks.register<JavaExec>("HelloPivot") {
     description = "Runs the HelloPivot tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloPivotr"
