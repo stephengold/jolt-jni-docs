@@ -1,0 +1,321 @@
+= An introduction to constraints
+:experimental:
+:page-pagination:
+:Project: Jolt JNI
+:Sport: Sport-Jolt
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
+
+
+A _constraint_ is a physics object
+that restricts the motion of one or more rigid bodies.
+
+The motion of a rigid body is decomposed into 6 _degrees of freedom (DOFs)_:
+3 axes of _translation_ (purely linear motion) and 3 axes of rotation.
+(Confusingly, Jolt Physics refers to all 6 DOFs as "axes".)
+
+Constraints can limit specific DOFs of a body to specific ranges,
+or even _fix_ (freeze) those DOFs completely.
+Constraints can also simulate linkages *between* bodies,
+such that the motion of one body affects the motion of another.
+
+
+== Conceptual examples
+
+For instance, a door might swing on hinges.
+In simulation, those hinges could be represented by a _hinge constraint_
+applied to the door body.
+The constraint would fix 5 of the door's DOFs,
+preventing it from translating away from its hinges
+or rotating around any axis except that of its hinges.
+Thus constrained, the door's only possible motion
+would be rotation around the axis of its hinges.
+
+Or a door might slide along a linear track.
+In that case, the track could be represented by a _slider constraint_
+applied to the door body.
+The constraint would fix 5 of the door's DOFs,
+preventing it from rotating in any way
+or translating along any axis except that of its track.
+Thus constrained, the door's only possible motion
+would be to translate along its track.
+
+Or imagine a pen holder mounted on a ball and socket:
+it can freely turn and twist to any orientation,
+but the ball end can’t leave the socket.
+To simulate this, you'd want a constraint that fixes
+translation but not rotation, called a _point constraint_.
+
+The above examples use _single-ended_ constraints,
+which limit the motion of one rigid body.
+Constraints can also be _double-ended_,
+in which case they link the motions of 2 rigid bodies.
+
+For instance, an arm bone attached to a shoulder socket
+could be simulated with a double-ended point constraint.
+The constraint would prevent separation of the arm from the shoulder
+without limiting the absolute motion of the arm-shoulder combination.
+
+
+== Practical considerations
+
+Confusingly, {Project} uses the `TwoBodyConstraint` class
+to represent both single-ended and double-ended constraints.
+
+Creating a constraint in {Project} begins with a reusable settings object.
+You configure settings to specify constraint details
+such as its initial location and orientation.
+Then you invoke the `create()` method of the settings object,
+specifying 2 bodies the new constraint will apply to.
+
+* For a double-ended constraint,
+  both bodies should be movable and added to the same physics system:
+
+[source,java]
+----
+TwoBodyConstraintSettings settings = /* ... */;
+TwoBodyConstraint constraint = settings.create(body1, body2);
+----
+* For a single-ended constraint,
+  one of the bodies should be a dummy returned by `Body.sFixedToWorld()`.
+  The other body should be dynamic and added to a physics system:
+
+[source,java]
+----
+TwoBodyConstraintSettings settings = /* ... */;
+Body dummyBody = Body.sFixedToWorld();
+TwoBodyConstraint constraint = settings.create(realBody, dummyBody);
+----
+
+For a constraint to be effective, it must be added to the same physics system
+as its movable bodies:
+
+[source,java]
+----
+Constraint constraint = settings.create(body1, body2);
+physicsSystem.addConstraint(constraint);
+----
+
+
+== SixDofConstraint basics
+
+`SixDofConstraint` is a very flexible constraint
+that illustrates features common to many other types of constraints.
+
+As the name implies,
+a `SixDofConstraint` can constrain up to 6 degrees of freedom.
+
+The _value_ of a translation DOF is a linear offset (in meters).
+The value of a rotation DOF is an angle (in radians).
+
+By default, all 6 DOFs of a `SixDofConstraint` are _free_ to assume any value,
+but you can _fix_ a DOF to a specific value
+by invoking `settings.makeFixedAxis()`.
+
+In this manner, a 6-DOF constraint can simulate other types of constraints:
+
+* For a hinge constraint, fix 2 rotation DOFs and all 3 translation DOFs.
+* For a slider constraint, fix 2 translation DOFs and all 3 rotation DOFs.
+* For a point constraint, fix all 3 rotation DOFs.
+
+=== HelloConstraint
+
+{url-tutorial}/HelloConstraint.java[HelloConstraint] is a {Sport} app
+that simulates a single-ended hinge constraint.
+
+Things to notice while running the app:
+
+. The gray ball is kinematic, moved by the mouse.
+. A magenta rotor rotates around its Y axis, indicated by the green arrow.
+. By striking the rotor with the ball, you can influence its motion.
+. Because the ball's motion is irresistible,
+  you can briefly shift the rotor's Y axis,
+  but the constraint soon forces it back into place.
+
+=== HelloPivot
+
+Many constraints involve a fixed point, called a _pivot_.
+
+{url-tutorial}/HelloPivot.java[HelloPivot]
+is similar to HelloConstraint except:
+
+* the rotor is smaller,
+* the constraint's pivot is located outside the rotor,
+* the arrow is red,
+  and points from rotor's center to the pivot.
+
+Things to notice while running the app:
+
+* Moving a constraint's pivot changes its effect.
+
+=== HelloDoubleEnded
+
+{url-tutorial}/HelloDoubleEnded.java[HelloDoubleEnded] is a {Sport} app
+that demonstrates a double-ended 6-DOF constraint
+simulating a point constraint.
+
+Things to notice while running the app:
+
+. The gray paddle is kinematic, moved by the mouse.
+. The magenta ball is dynamic.
+. The constraint (indicated by red and green arrows)
+  links the ball to paddle,
+  such that motion of the paddle affects that of the ball,
+  even when they aren't in contact.
+
+
+== More features of constraints
+
+We've seen how each DOF in a 6-DOF constraint can be fixed or free.
+There's also a 3rd possibility;
+a DOF can be _limited_ to values in a specific range.
+By imposing _limits_, you can prevent a door from sliding or swinging too far.
+
+In addition to limits, `SixDofConstraint`
+also implements motors, servos, and springs:
+
+* Using a _motor_, you can open or close a door or cause it
+  to move smoothly to a specific position, as if under remote control.
+* Using a _spring_, you can cause a door to automatically return
+  to a neutral position when released.
+
+You can also:
+
+* disable a constraint temporarily,
+* customize the number of iterations used to solve a constraint, and
+* disable collisions between the end bodies.
+
+=== Limits
+
+{url-tutorial}/HelloLimit.java[HelloLimit] is a {Sport} app
+that demonstrates a single-ended 6-DOF constraint
+with 2 limited translation DOFs to limit the motion of a magenta ball.
+
+. Use the mouse-controlled kinematic paddle to push the ball around.
+. The ball is confined to a square region directly above the green box.
+
+=== Motors
+
+Motors are used to control motion within a constraint.
+In `SixDofConstraint`, each DOF has its own motor, which is disabled by default.
+Depending on how a motor is configured,
+it can control either values or velocities.
+
+{url-tutorial}/HelloMotor.java[HelloMotor] is a {Sport} app
+that demonstrates a double-ended 6-DOF constraint
+with its Y-rotation motor enabled.
+The motor controls the angular velocity of the door relative to the frame.
+
+. All DOFs except Y rotation are locked at zero.
+. Y rotation is limited between 0 and 1.2 radians.
+. The pivot is located just to the left of the door.
+. Press kbd:[Space bar] to start the motor or reverse its direction.
+
+In {url-tutorial}/HelloServo.java[HelloServo],
+the motor controls the orientation of the door relative to the frame.
+
+. Press kbd:[1], kbd:[2], kbd:[3], and kbd:[4]
+  to drive the door to various orientations.
+
+=== Springs
+
+Springs can be used to soften the limits of a constraint.
+In `SixDofConstraint`, each DOF has its own spring.
+By default, springs are configured for maximal stiffness and damping,
+resulting in a constraint with "hard" limits of motion.
+
+There are 2 ways to configure a spring:
+
+* In `FrequencyAndDamping` mode (the default)
+  you specify the spring's resonant frequency (in Hertz)
+  and damping ratio (1 = critical damping).
+* In `StiffnessAndDamping` mode,
+  you specify the spring's stiffness coefficient
+  and damping coefficient.
+
+To clarify the distinction between a damping ratio and damping coefficient,
+refer to
+https://en.wikipedia.org/wiki/Damping[the Wikipedia article on damping].
+
+{url-tutorial}/HelloSpring.java[HelloSpring] is a {Sport} app
+that demonstrates a single-ended 6-DOF constraint
+with all its translation DOFs fixed.
+Springs on the X-translation and Z-translation DOFs allow the magenta ball
+to oscillate around the origin while remaining in the X-Z plane.
+
+. Use the mouse-controlled paddle to push the magenta ball around.
+. The farther the ball gets from the origin,
+  the stronger the spring's restorative force becomes.
+
+=== Disable a constraint
+
+Constraints are enabled by default.
+You can disable a constraint  with `constraint.setEnabled(false)`.
+
+
+=== Solver iterations
+
+The Jolt-Physics constraint solver uses an iterative algorithm
+to solve for positions and velocities.
+
+For each constraint, you can override the number of iterations
+the solver performs:
+
+* `constraint.setNumPositionStepsOverride()`
+  overrides the number of position iterations
+* `constraint.setNumVelocityStepsOverride()`
+   overrides the number of velocity iterations
+
+
+=== Disable collisions
+
+It's often desirable to disable collisions
+between the bodies of a double-ended constraint.
+This can be accomplished by applying a collision-group filter to the bodies:
+
+[source,java]
+----
+int numSubGroups = 1;
+GroupFilterTable filter = new GroupFilterTable(numSubGroups);
+body1.setCollisionGroup(new CollisionGroup(filter, 0, 0));
+body2.setCollisionGroup(new CollisionGroup(filter, 0, 0));
+----
+
+
+== Other constraint classes
+
+`SixDofConstraint` is just one of the 12 concrete subclasses
+of `TwoBodyConstraint`:
+
+* `ConeConstraint` joins bodies at a specific point
+   while limiting the angle between specific local axes
+* `DistanceConstraint` holds (specific points on) bodies
+   at a fixed distance from one another
+* `FixedConstraint` fixes all 6 DOFs,
+   holding bodies in a specific position relative to each other
+* `GearConstraint` constrains bodies to have proportional rates of rotation
+   around specific axes
+* `HingeConstraint` joins bodies at a specific point
+   while allowing rotation around a specific axis
+* `PathConstraint` constrains bodies to a specific path
+* `PointConstraint` fixes all translation DOFs,
+  joining bodies at a specific point while allowing rotation around any axis
+* `PulleyConstraint`
+* `RackAndPinionConstraint` constrains rotation of body1 to translation of body2
+* `SliderConstraint`
+  allows translation along a single axis while preventing rotation
+* `SwingTwistConstraint` allows rotation within specific limits
+
+
+== Summary
+
+* The motion of a rigid body is decomposed into 6 degrees of freedom DOFs).
+* A _constraint_ restricts the motion of one or more rigid bodies.
+* _Single-ended_ constraints affect a single rigid body.
+* _Double-ended_ constraints link the motions of 2 rigid bodies.
+* To be effective, a constraint and its movable bodies
+  must be added to the same physics system.
+* `SixDofConstraint` is a flexible constraint
+  that can simulate many other types.
+* A _free_ DOF can assume any value.
+* A _fixed_ DOF is limited to a specific value.
+* Constraints can include limits, motors, and springs.
