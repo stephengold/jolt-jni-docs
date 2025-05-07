@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>An introduction to constraints :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/constraint.html">
+    <link rel="prev" href="shape.html">
+    <link rel="next" href="build.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<meta property="og:image" content="../../_/img/iconx128.png">
+<meta property="og:description" content="An introduction to constraints">
+<meta property="og:title" content="The Jolt-JNI project">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://stephengold.github.io/jolt-jni">
+        <img alt="" src="../../_/img/iconx128.png" width="32" type="image/x-icon" style="margin-right:16px">
+        The Jolt-JNI project
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Color themes</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" onclick="setTheme('canyon')">Canyon</a>
+            <a class="navbar-item" onclick="setTheme('dark')">Dark</a>
+            <a class="navbar-item" onclick="setTheme('jungle')">Jungle</a>
+            <a class="navbar-item" onclick="setTheme('light')">Light</a>
+            <a class="navbar-item" onclick="setTheme('pastel')">Pastel</a>
+            <a class="navbar-item" onclick="setTheme('phosphor')">Phosphor<a>
+            <a class="navbar-item" style="padding-top: 5px;padding-left: 1px;padding-right: 1px;"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jolt-jni-en" data-version="English">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="overview.html">Project links</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="implementation.html">Implementation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Library tutorials</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="add.html">Add to existing project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sport.html">Sport-Jolt visualization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rigidbody.html">Rigid bodies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="free.html">Freeing memory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debug.html">Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shape.html">Collision shapes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="constraint.html">Constraints</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="build.html">Build procedures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni">GitHub repository</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases/latest">Latest release</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/releases">Recent releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/README.md">ReadMe file</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">License</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/release-log.md">Release log</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/commits/master">Recent commits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues">Issue tracker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/issues/new">Report an issue</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jolt JNI at other sites</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://repo1.maven.org/maven2/com/github/stephengold">Maven Central download</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://central.sonatype.com/search?q=jolt-jni&amp;namespace=com.github.stephengold">Maven Central search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jitpack.io/#stephengold/jolt-jni">JitPack (unofficial)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Projects using Jolt JNI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni-docs">jolt-jni-docs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/sport-jolt">Sport-Jolt</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/kk-physics">KK Physics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other related projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://jrouwe.github.io/JoltPhysics">Jolt Physics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://stephengold.github.io/Libbulletjme">Libbulletjme</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/kmammou/v-hacd">V-HACD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/antora-ui-bundle">Website UI bundle</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">People</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://stephengold.github.io">Stephen Gold</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">The Jolt-JNI project</span>
+    <span class="version">English</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">The Jolt-JNI project</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="overview.html">English</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle-label">Project links</span>
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="overview.html">The Jolt-JNI project</a></li>
+    <li>Library tutorials</li>
+    <li><a href="constraint.html">Constraints</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/constraint.adoc">Edit this page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">An introduction to constraints</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <em>constraint</em> is a physics object
+that restricts the motion of one or more rigid bodies.</p>
+</div>
+<div class="paragraph">
+<p>The motion of a rigid body is decomposed into 6 <em>degrees of freedom (DOFs)</em>:
+3 axes of <em>translation</em> (purely linear motion) and 3 axes of rotation.
+(Confusingly, Jolt Physics refers to all 6 DOFs as "axes".)</p>
+</div>
+<div class="paragraph">
+<p>Constraints can limit specific DOFs of a body to specific ranges,
+or even <em>fix</em> (freeze) those DOFs completely.
+Constraints can also simulate linkages <strong>between</strong> bodies,
+such that the motion of one body affects the motion of another.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conceptual_examples"><a class="anchor" href="#_conceptual_examples"></a>Conceptual examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For instance, a door might swing on hinges.
+In simulation, those hinges could be represented by a <em>hinge constraint</em>
+applied to the door body.
+The constraint would fix 5 of the door&#8217;s DOFs,
+preventing it from translating away from its hinges
+or rotating around any axis except that of its hinges.
+Thus constrained, the door&#8217;s only possible motion
+would be rotation around the axis of its hinges.</p>
+</div>
+<div class="paragraph">
+<p>Or a door might slide along a linear track.
+In that case, the track could be represented by a <em>slider constraint</em>
+applied to the door body.
+The constraint would fix 5 of the door&#8217;s DOFs,
+preventing it from rotating in any way
+or translating along any axis except that of its track.
+Thus constrained, the door&#8217;s only possible motion
+would be to translate along its track.</p>
+</div>
+<div class="paragraph">
+<p>Or imagine a pen holder mounted on a ball and socket:
+it can freely turn and twist to any orientation,
+but the ball end can’t leave the socket.
+To simulate this, you&#8217;d want a constraint that fixes
+translation but not rotation, called a <em>point constraint</em>.</p>
+</div>
+<div class="paragraph">
+<p>The above examples use <em>single-ended</em> constraints,
+which limit the motion of one rigid body.
+Constraints can also be <em>double-ended</em>,
+in which case they link the motions of 2 rigid bodies.</p>
+</div>
+<div class="paragraph">
+<p>For instance, an arm bone attached to a shoulder socket
+could be simulated with a double-ended point constraint.
+The constraint would prevent separation of the arm from the shoulder
+without limiting the absolute motion of the arm-shoulder combination.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_practical_considerations"><a class="anchor" href="#_practical_considerations"></a>Practical considerations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Confusingly, Jolt JNI uses the <code>TwoBodyConstraint</code> class
+to represent both single-ended and double-ended constraints.</p>
+</div>
+<div class="paragraph">
+<p>Creating a constraint in Jolt JNI begins with a reusable settings object.
+You configure settings to specify constraint details
+such as its initial location and orientation.
+Then you invoke the <code>create()</code> method of the settings object,
+specifying 2 bodies the new constraint will apply to.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For a double-ended constraint,
+both bodies should be movable and added to the same physics system:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettings settings = /* ... */;
+TwoBodyConstraint constraint = settings.create(body1, body2);</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For a single-ended constraint,
+one of the bodies should be a dummy returned by <code>Body.sFixedToWorld()</code>.
+The other body should be dynamic and added to a physics system:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettings settings = /* ... */;
+Body dummyBody = Body.sFixedToWorld();
+TwoBodyConstraint constraint = settings.create(realBody, dummyBody);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For a constraint to be effective, it must be added to the same physics system
+as its movable bodies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Constraint constraint = settings.create(body1, body2);
+physicsSystem.addConstraint(constraint);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sixdofconstraint_basics"><a class="anchor" href="#_sixdofconstraint_basics"></a>SixDofConstraint basics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>SixDofConstraint</code> is a very flexible constraint
+that illustrates features common to many other types of constraints.</p>
+</div>
+<div class="paragraph">
+<p>As the name implies,
+a <code>SixDofConstraint</code> can constrain up to 6 degrees of freedom.</p>
+</div>
+<div class="paragraph">
+<p>The <em>value</em> of a translation DOF is a linear offset (in meters).
+The value of a rotation DOF is an angle (in radians).</p>
+</div>
+<div class="paragraph">
+<p>By default, all 6 DOFs of a <code>SixDofConstraint</code> are <em>free</em> to assume any value,
+but you can <em>fix</em> a DOF to a specific value
+by invoking <code>settings.makeFixedAxis()</code>.</p>
+</div>
+<div class="paragraph">
+<p>In this manner, a 6-DOF constraint can simulate other types of constraints:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For a hinge constraint, fix 2 rotation DOFs and all 3 translation DOFs.</p>
+</li>
+<li>
+<p>For a slider constraint, fix 2 translation DOFs and all 3 rotation DOFs.</p>
+</li>
+<li>
+<p>For a point constraint, fix all 3 rotation DOFs.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_helloconstraint"><a class="anchor" href="#_helloconstraint"></a>HelloConstraint</h3>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloConstraint.java">HelloConstraint</a> is a Sport-Jolt app
+that simulates a single-ended hinge constraint.</p>
+</div>
+<div class="paragraph">
+<p>Things to notice while running the app:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The gray ball is kinematic, moved by the mouse.</p>
+</li>
+<li>
+<p>A magenta rotor rotates around its Y axis, indicated by the green arrow.</p>
+</li>
+<li>
+<p>By striking the rotor with the ball, you can influence its motion.</p>
+</li>
+<li>
+<p>Because the ball&#8217;s motion is irresistible,
+you can briefly shift the rotor&#8217;s Y axis,
+but the constraint soon forces it back into place.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hellopivot"><a class="anchor" href="#_hellopivot"></a>HelloPivot</h3>
+<div class="paragraph">
+<p>Many constraints involve a fixed point, called a <em>pivot</em>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloPivot.java">HelloPivot</a>
+is similar to HelloConstraint except:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the rotor is smaller,</p>
+</li>
+<li>
+<p>the constraint&#8217;s pivot is located outside the rotor,</p>
+</li>
+<li>
+<p>the arrow is red,
+and points from rotor&#8217;s center to the pivot.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Things to notice while running the app:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Moving a constraint&#8217;s pivot changes its effect.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hellodoubleended"><a class="anchor" href="#_hellodoubleended"></a>HelloDoubleEnded</h3>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloDoubleEnded.java">HelloDoubleEnded</a> is a Sport-Jolt app
+that demonstrates a double-ended 6-DOF constraint
+simulating a point constraint.</p>
+</div>
+<div class="paragraph">
+<p>Things to notice while running the app:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The gray paddle is kinematic, moved by the mouse.</p>
+</li>
+<li>
+<p>The magenta ball is dynamic.</p>
+</li>
+<li>
+<p>The constraint (indicated by red and green arrows)
+links the ball to paddle,
+such that motion of the paddle affects that of the ball,
+even when they aren&#8217;t in contact.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_features_of_constraints"><a class="anchor" href="#_more_features_of_constraints"></a>More features of constraints</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We&#8217;ve seen how each DOF in a 6-DOF constraint can be fixed or free.
+There&#8217;s also a 3rd possibility;
+a DOF can be <em>limited</em> to values in a specific range.
+By imposing <em>limits</em>, you can prevent a door from sliding or swinging too far.</p>
+</div>
+<div class="paragraph">
+<p>In addition to limits, <code>SixDofConstraint</code>
+also implements motors, servos, and springs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using a <em>motor</em>, you can open or close a door or cause it
+to move smoothly to a specific position, as if under remote control.</p>
+</li>
+<li>
+<p>Using a <em>spring</em>, you can cause a door to automatically return
+to a neutral position when released.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>disable a constraint temporarily,</p>
+</li>
+<li>
+<p>customize the number of iterations used to solve a constraint, and</p>
+</li>
+<li>
+<p>disable collisions between the end bodies.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_limits"><a class="anchor" href="#_limits"></a>Limits</h3>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloLimit.java">HelloLimit</a> is a Sport-Jolt app
+that demonstrates a single-ended 6-DOF constraint
+with 2 limited translation DOFs to limit the motion of a magenta ball.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use the mouse-controlled kinematic paddle to push the ball around.</p>
+</li>
+<li>
+<p>The ball is confined to a square region directly above the green box.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_motors"><a class="anchor" href="#_motors"></a>Motors</h3>
+<div class="paragraph">
+<p>Motors are used to control motion within a constraint.
+In <code>SixDofConstraint</code>, each DOF has its own motor, which is disabled by default.
+Depending on how a motor is configured,
+it can control either values or velocities.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloMotor.java">HelloMotor</a> is a Sport-Jolt app
+that demonstrates a double-ended 6-DOF constraint
+with its Y-rotation motor enabled.
+The motor controls the angular velocity of the door relative to the frame.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All DOFs except Y rotation are locked at zero.</p>
+</li>
+<li>
+<p>Y rotation is limited between 0 and 1.2 radians.</p>
+</li>
+<li>
+<p>The pivot is located just to the left of the door.</p>
+</li>
+<li>
+<p>Press <kbd>Space bar</kbd> to start the motor or reverse its direction.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In <a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloServo.java">HelloServo</a>,
+the motor controls the orientation of the door relative to the frame.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Press <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, and <kbd>4</kbd>
+to drive the door to various orientations.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_springs"><a class="anchor" href="#_springs"></a>Springs</h3>
+<div class="paragraph">
+<p>Springs can be used to soften the limits of a constraint.
+In <code>SixDofConstraint</code>, each DOF has its own spring.
+By default, springs are configured for maximal stiffness and damping,
+resulting in a constraint with "hard" limits of motion.</p>
+</div>
+<div class="paragraph">
+<p>There are 2 ways to configure a spring:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In <code>FrequencyAndDamping</code> mode (the default)
+you specify the spring&#8217;s resonant frequency (in Hertz)
+and damping ratio (1 = critical damping).</p>
+</li>
+<li>
+<p>In <code>StiffnessAndDamping</code> mode,
+you specify the spring&#8217;s stiffness coefficient
+and damping coefficient.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To clarify the distinction between a damping ratio and damping coefficient,
+refer to
+<a href="https://en.wikipedia.org/wiki/Damping">the Wikipedia article on damping</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloSpring.java">HelloSpring</a> is a Sport-Jolt app
+that demonstrates a single-ended 6-DOF constraint
+with all its translation DOFs fixed.
+Springs on the X-translation and Z-translation DOFs allow the magenta ball
+to oscillate around the origin while remaining in the X-Z plane.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use the mouse-controlled paddle to push the magenta ball around.</p>
+</li>
+<li>
+<p>The farther the ball gets from the origin,
+the stronger the spring&#8217;s restorative force becomes.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disable_a_constraint"><a class="anchor" href="#_disable_a_constraint"></a>Disable a constraint</h3>
+<div class="paragraph">
+<p>Constraints are enabled by default.
+You can disable a constraint  with <code>constraint.setEnabled(false)</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_solver_iterations"><a class="anchor" href="#_solver_iterations"></a>Solver iterations</h3>
+<div class="paragraph">
+<p>The Jolt-Physics constraint solver uses an iterative algorithm
+to solve for positions and velocities.</p>
+</div>
+<div class="paragraph">
+<p>For each constraint, you can override the number of iterations
+the solver performs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>constraint.setNumPositionStepsOverride()</code>
+overrides the number of position iterations</p>
+</li>
+<li>
+<p><code>constraint.setNumVelocityStepsOverride()</code>
+overrides the number of velocity iterations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disable_collisions"><a class="anchor" href="#_disable_collisions"></a>Disable collisions</h3>
+<div class="paragraph">
+<p>It&#8217;s often desirable to disable collisions
+between the bodies of a double-ended constraint.
+This can be accomplished by applying a collision-group filter to the bodies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numSubGroups = 1;
+GroupFilterTable filter = new GroupFilterTable(numSubGroups);
+body1.setCollisionGroup(new CollisionGroup(filter, 0, 0));
+body2.setCollisionGroup(new CollisionGroup(filter, 0, 0));</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_constraint_classes"><a class="anchor" href="#_other_constraint_classes"></a>Other constraint classes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>SixDofConstraint</code> is just one of the 12 concrete subclasses
+of <code>TwoBodyConstraint</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ConeConstraint</code> joins bodies at a specific point
+while limiting the angle between specific local axes</p>
+</li>
+<li>
+<p><code>DistanceConstraint</code> holds (specific points on) bodies
+at a fixed distance from one another</p>
+</li>
+<li>
+<p><code>FixedConstraint</code> fixes all 6 DOFs,
+holding bodies in a specific position relative to each other</p>
+</li>
+<li>
+<p><code>GearConstraint</code> constrains bodies to have proportional rates of rotation
+around specific axes</p>
+</li>
+<li>
+<p><code>HingeConstraint</code> joins bodies at a specific point
+while allowing rotation around a specific axis</p>
+</li>
+<li>
+<p><code>PathConstraint</code> constrains bodies to a specific path</p>
+</li>
+<li>
+<p><code>PointConstraint</code> fixes all translation DOFs,
+joining bodies at a specific point while allowing rotation around any axis</p>
+</li>
+<li>
+<p><code>PulleyConstraint</code></p>
+</li>
+<li>
+<p><code>RackAndPinionConstraint</code> constrains rotation of body1 to translation of body2</p>
+</li>
+<li>
+<p><code>SliderConstraint</code>
+allows translation along a single axis while preventing rotation</p>
+</li>
+<li>
+<p><code>SwingTwistConstraint</code> allows rotation within specific limits</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The motion of a rigid body is decomposed into 6 degrees of freedom DOFs).</p>
+</li>
+<li>
+<p>A <em>constraint</em> restricts the motion of one or more rigid bodies.</p>
+</li>
+<li>
+<p><em>Single-ended</em> constraints affect a single rigid body.</p>
+</li>
+<li>
+<p><em>Double-ended</em> constraints link the motions of 2 rigid bodies.</p>
+</li>
+<li>
+<p>To be effective, a constraint and its movable bodies
+must be added to the same physics system.</p>
+</li>
+<li>
+<p><code>SixDofConstraint</code> is a flexible constraint
+that can simulate many other types.</p>
+</li>
+<li>
+<p>A <em>free</em> DOF can assume any value.</p>
+</li>
+<li>
+<p>A <em>fixed</em> DOF is limited to a specific value.</p>
+</li>
+<li>
+<p>Constraints can include limits, motors, and springs.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="shape.html">Collision shapes</a></span>
+  <span class="next"><a href="build.html">Build procedures</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Page contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; 2020&ndash;2025 by Stephen Gold</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
