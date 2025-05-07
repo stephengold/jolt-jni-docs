@@ -486,6 +486,67 @@ its collision shape need not be hollow.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Mesh shapes, which support the greatest detail,
+cannot be used in movable bodies.
+If you need to simulate a moving mesh,
+first try approximating the mesh with a convex shape.
+For meshes that cannot be approximated this way
+(due to bends, holes, indentations, or steep protrusions)
+the fallback is to decompose the mesh
+into a small number of convex shapes that,
+when compounded together, approximate the desired behavior.</p>
+</div>
+<div class="paragraph">
+<p>Depending how much you know about a mesh,
+there are various approaches to decomposing it:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the mesh is generated procedurally, it may be convenient
+to decompose it during the generation process.</p>
+</li>
+<li>
+<p>If the mesh was crafted in a tool such as <a href="https://www.blender.org/">Blender</a>,
+it may be practical to manually decompose it there,
+into sub-meshes that are convex or nearly so.</p>
+</li>
+<li>
+<p>As a last resort, you can decompose any mesh into triangle shapes,
+though the resulting compound shape may be expensive to simulate.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_automated_decomposition"><a class="anchor" href="#_automated_decomposition"></a>Automated decomposition</h3>
+<div class="paragraph">
+<p>For situations where other decomposition approaches are impractical,
+Jolt JNI incorporates Khaled Mamou&#8217;s
+<a href="https://github.com/kmammou/v-hacd">Volumetric-Hierarchical Approximate Convex Decomposition (V-HACD) algorithm</a>.
+V-HACD makes it easy to decompose a 3-D mesh into a
+compound of hull shapes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import com.github.stephengold.joltjni.vhacd.ConvexHull;
+import com.github.stephengold.joltjni.vhacd.Decomposer;
+import com.github.stephengold.joltjni.vhacd.Parameters;
+
+// ...
+
+float[] locationArray = /* vertex locations in the mesh ... */
+int[] indexArray = /* vertex indices in the mesh ... */
+Decomposer decomposer = new Decomposer();
+Parameters tuningParameters = new Parameters();
+Collection&lt;ConvexHull&gt; hulls
+        = decomposer.decompose(locationArray, indexArray, tuningParameters);
+StaticCompoundShapeSettings compoundSettings
+        = new StaticCompoundShapeSettings();
+compoundSettings.addHulls(hulls);</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -507,6 +568,10 @@ may still exhibit the convex property.</p>
 </li>
 <li>
 <p>Use the simplest shape that yields the desired behavior.</p>
+</li>
+<li>
+<p>For moving bodies,
+mesh shapes can be approximated by compounds of convex shapes, such as hulls.</p>
 </li>
 </ul>
 </div>
