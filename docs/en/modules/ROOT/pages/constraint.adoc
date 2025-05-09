@@ -308,7 +308,7 @@ of `TwoBodyConstraint`:
 
 == Summary
 
-* The motion of a rigid body is decomposed into 6 degrees of freedom DOFs).
+* The motion of a rigid body is decomposed into 6 degrees of freedom (DOFs).
 * A _constraint_ restricts the motion of one or more rigid bodies.
 * _Single-ended_ constraints affect a single rigid body.
 * _Double-ended_ constraints link the motions of 2 rigid bodies.
