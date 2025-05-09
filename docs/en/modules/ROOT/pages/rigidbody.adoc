@@ -3,6 +3,7 @@
 :experimental:
 :page-pagination:
 :page-toclevels: 3
+:Sport: Sport-Jolt
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
 
@@ -54,7 +55,7 @@ However, these last 3 features are optional in {Project} and can easily be disab
 
 === HelloRigidBody
 
-{url-tutorial}/HelloRigidBody.java[HelloRigidBody] is a Sport-Jolt app
+{url-tutorial}/HelloRigidBody.java[HelloRigidBody] is a {Sport} app
 that demonstrates the 5 familiar features of rigid bodies.
 
 Things to notice while running the app:
@@ -95,7 +96,7 @@ as if its mass were infinite.
 
 NOTE: Java's `static` keyword is completely unrelated to physics.
 
-{url-tutorial}/HelloStaticBody.java[HelloStaticBody] is a Sport-Jolt app
+{url-tutorial}/HelloStaticBody.java[HelloStaticBody] is a {Sport} app
 that combines static and dynamic rigid bodies.
 Things to notice while running the app:
 
@@ -104,7 +105,7 @@ Things to notice while running the app:
   that affect the motion of the dynamic ball.
 . The static ball stays fixed in place,
   unaffected by gravity and contact forces.
-. In Sport-Jolt, dynamic rigid bodies are conventionally colored magenta,
+. In {Sport}, dynamic rigid bodies are conventionally colored magenta,
   while non-dynamic ones are shown in gray.
 
 [NOTE]
@@ -204,7 +205,7 @@ bi.addBody(body, EActivation.Activate);
 To move a kinematic body, invoke
 `Body.moveKinematic(newLocation, newOrientation, timeStep)`.
 
-{url-tutorial}/HelloKinematics.java[HelloKinematics] is a Sport-Jolt app
+{url-tutorial}/HelloKinematics.java[HelloKinematics] is a {Sport} app
 that combines kinematic and dynamic rigid bodies.
 Things to notice while running the app:
 
@@ -224,7 +225,7 @@ To disable contact response for a specific rigid body,
 configure it as a _sensor_ using `setIsSensor(true)`.
 
 {url-tutorial}/HelloContactResponse.java[HelloContactResponse]
-is a Sport-Jolt app
+is a {Sport} app
 that demonstrates contact response.
 Things to notice while running the app:
 
@@ -233,7 +234,7 @@ Things to notice while running the app:
 . Press kbd:[E] to disable the ball's contact response.
 . Afterwards, the box no longer exerts any force on the ball.
   Gravity takes over, and the ball falls through the box.
-. In Sport-Jolt, non-responsive rigid bodies are shown in yellow.
+. In {Sport}, non-responsive rigid bodies are shown in yellow.
 
 NOTE: This documentation assumes a keyboard with the "US" (QWERTY) layout.
 On keyboards with other layouts, keys may be labeled differently.
@@ -307,7 +308,7 @@ bcs.setAngularDamping(0.3f); // default=0.05 per second
 bcs.setLinearDamping(0.2f); // default=0.05 per second
 ----
 
-{url-tutorial}/HelloDamping.java[HelloDamping] is a Sport-Jolt app
+{url-tutorial}/HelloDamping.java[HelloDamping] is a {Sport} app
 that demonstrates damping.
 Things to notice while running the app:
 
@@ -460,14 +461,14 @@ supported by another body that then gets removed.
 The deactivated body will seem to be "stuck"
 because removals do not, by themselves, reactivate it.
 
-{url-tutorial}/HelloDeactivation.java[HelloDeactivation] is a Sport-Jolt app
+{url-tutorial}/HelloDeactivation.java[HelloDeactivation] is a {Sport} app
 that demonstrates deactivation.
 Things to notice while running the app:
 
 . The upper (dynamic) box falls until it collides with the lower (static) box,
   which provides a contact force to halt its motion and counteract gravity.
 . About half a second after the upper box stops moving, it gets deactivated.
-. In Sport-Jolt, deactivated rigid bodies are conventionally colored gray.
+. In {Sport}, deactivated rigid bodies are conventionally colored gray.
 . After the application removes the lower box,
   the dynamic box doesn't resume its descent.
   Due to deactivation, it appears to be "stuck".
@@ -507,7 +508,7 @@ Because LinearCast involves extra computation, it's disabled by default.
 To enable LinearCast, use
 `BodyCreationSettings.setMotionQuality(EMotionQuality.LinearCast)`.
 
-{url-tutorial}/HelloCcd.java[HelloCcd] is a Sport-Jolt app
+{url-tutorial}/HelloCcd.java[HelloCcd] is a {Sport} app
 that demonstrates CCD.
 Things to notice while running the app:
 

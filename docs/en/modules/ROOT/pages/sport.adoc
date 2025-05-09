@@ -1,6 +1,8 @@
 = Visualization using the Sport-Jolt graphics engine
 :experimental:
 :page-pagination:
+:ProjectAdj: Jolt-JNI
+:Sport: Sport-Jolt
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
 
 The `HelloJoltJni` app
@@ -12,9 +14,9 @@ Text provides scant insight into what the physics simulation is doing.
 For most people, pictures are much easier to understand.
 
 For the purpose of this tutorial series,
-I've created a graphics engine named Sport-Jolt
+I've created a graphics engine named {Sport}
 (the Simple Physics-ORienTed engine for Jolt).
-Sport-Jolt enables us to visualize physics objects
+{Sport} enables us to visualize physics objects
 without adding much code to the tutorial apps.
 It is open-source, written in Java, and available from
 https://github.com/stephengold/sport-jolt[GitHub] and
@@ -24,7 +26,7 @@ https://central.sonatype.com/artifact/com.github.stephengold/sport-jolt[Maven Ce
 == HelloSport
 
 {url-tutorial}/HelloSport.java[HelloSport]
-is a direct conversion of `HelloJoltJni` into a Sport-Jolt app.
+is a direct conversion of `HelloJoltJni` into a {Sport} app.
 
 Details to note:
 
@@ -32,7 +34,7 @@ Details to note:
 . The app implements both abstract methods of `BasePhysicsApp`
   (`createSystem` and `populateSystem`),
   which are invoked automatically.
-. `BasePhysicsApp` automatically loads the Jolt-JNI native library.
+. `BasePhysicsApp` automatically loads the {ProjectAdj} native library.
 . `BasePhysicsApp` provides:
 ..  the `physicsSystem` field to access the system and
 ..  the `visualizeShape()` method to visualize the shape of a physics object.
@@ -44,11 +46,11 @@ and play a brief animation of a sphere falling onto a horizontal surface.
 
 Pressing kbd:[Esc] should close the window and terminate the app.
 
-Hereafter, all the tutorial apps will use Sport-Jolt.
-Additional features of Sport-Jolt will be introduced as needed.
+Hereafter, all the tutorial apps will use {Sport}.
+Features of {Sport} will be introduced as needed.
 
 
 == Summary
 
-* Sport-Jolt is a graphics engine, created specifically for Jolt-JNI tutorials.
-* Sport-Jolt provides a simple toolkit for visualizing 3-D physics.
+* {Sport} is a graphics engine, created specifically for {ProjectAdj} tutorials.
+* {Sport} provides a simple toolkit for visualizing 3-D physics.
