@@ -363,7 +363,7 @@ with illustrations and lists of key properties (explained below):</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>While simple shapes like boxes and spheres can be instantiated directly,
-complex ones can only be created using a settings object.
+some shapes can only be created using a settings object.
 For instance, to instantiate a <code>ConvexHullShape</code>,
 you must use a <code>ConvexHullShapeSettings</code> object:</p>
 </div>
@@ -387,7 +387,7 @@ For instance, you can create spheres with off-center mass
 by applying <code>OffsetCenterOfMassShape</code> to ordinary spheres.</p>
 </div>
 <div class="paragraph">
-<p>A <em>compound shape</em> combines any number of <em>child shapes</em>
+<p>A <em>compound shape</em> combines any number of pre-existing <em>child shapes</em>
 into a single shape:</p>
 </div>
 <div class="ulist">
@@ -527,8 +527,8 @@ though the resulting compound shape may be expensive to simulate.</p>
 <p>For situations where other decomposition approaches are impractical,
 Jolt JNI incorporates Khaled Mamou&#8217;s
 <a href="https://github.com/kmammou/v-hacd">Volumetric-Hierarchical Approximate Convex Decomposition (V-HACD) algorithm</a>.
-V-HACD makes it easy to decompose a 3-D mesh into a
-compound of hull shapes:</p>
+V-HACD makes it easy to decompose a 3-D mesh of triangles into a
+compound of convex-hull shapes:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -560,7 +560,7 @@ compoundSettings.addHulls(hulls);</code></pre>
 <li>
 <p>Jolt JNI provides 18 types of collision shapes,
 ranging from the trivial <code>EmptyShape</code>
-to the costly <code>MeshShape</code>.</p>
+to the detail-oriented <code>MeshShape</code>.</p>
 </li>
 <li>
 <p>Collision-shape instances classified as "non-convex"
@@ -574,7 +574,8 @@ may still exhibit the convex property.</p>
 </li>
 <li>
 <p>For moving bodies,
-mesh shapes can be approximated by compounds of convex shapes, such as hulls.</p>
+mesh shapes can be approximated by compounds of convex shapes,
+such as convex hulls.</p>
 </li>
 </ul>
 </div>
