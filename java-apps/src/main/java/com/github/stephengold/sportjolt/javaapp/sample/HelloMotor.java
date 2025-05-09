@@ -111,7 +111,7 @@ public class HelloMotor extends BasePhysicsApp {
     protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1;
-        int maxBodies = 3; // TODO 2
+        int maxBodies = 2;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         result.setGravity(0f, 0f, 0f);
