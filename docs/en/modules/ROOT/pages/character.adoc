@@ -1,0 +1,109 @@
+= An introduction to character physics
+:experimental:
+:page-pagination:
+:pi: &#960;
+:Project: Jolt JNI
+:ProjectAdj: Jolt-JNI
+:Sport: Sport-Jolt
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
+
+A _physics character_ is a collision object
+used to simulate game characters (people) walking, jumping, and falling.
+
+{Project} provides 2 implementations of physics characters:
+
+* `Character`, which incorporates a dynamic rigid body, and
+* `CharacterVirtual`, which doesn't require a body.
+
+The standard physics characters make some simplifying assumptions:
+
+* The character remains upright even when jumping or falling.
+* Limits are placed on how steep a slope the character can climb.
+
+When coding, be careful to distinguish the {ProjectAdj} `Character` class
+(in the "com.github.stephengold.joltjni" package)
+from the wrapper class with the same name in the "java.lang" package.
+
+
+== Creation
+
+To create a physics character, you first configure a settings object,
+which is then passed to a constructor.
+{Project} doesn't keep track of characters;
+the application is responsible for that.
+
+{url-tutorial}/HelloCharacter.java[HelloCharacter] is a {Sport} app
+that demonstrates the creation of a `Character`,
+followed by automated jumps.
+Things to notice about the app:
+
+. The settings object requires a shape.
+  In this sample app, a capsule is used.
+. To be effective, the character must be added its physics system
+  by invoking `Character.addToPhysicsSystem()`.
+. The character's desired motion is specified
+  by invoking `setLinearVelocity()` before each simulation step.
+. The character must be explicitly updated
+  by invoking `postSimulation()` after each simulation step.
+. The `isSupported()` method tests whether the character is supported
+  by a solid surface (as opposed to jumping or falling).
+. In {Sport}, characters that are jumping or falling are shown in pink,
+  while supported characters are shown in brown.
+
+{url-tutorial}/HelloCharacterVirtual.java[HelloCharacterVirtual] is a {Sport} app
+that demonstrates the creation of a `CharacterVirtual`,
+followed by automated jumps.
+
+Things to notice:
+
+. Unlike a `Character`,
+  a `CharacterVirtual` never gets added to any physics system.
+. The character must be explicitly updated
+  by invoking `extendedUpdate()` after each simulation step.
+
+
+== Walking
+
+{url-tutorial}/HelloWalk.java[HelloWalk] demonstrates
+keyboard-controlled motion of a physics character.
+Things to notice while running the app:
+
+. Drag with the left mouse button to rotate the camera.
+. Press kbd:[Space bar] to jump.
+. Press kbd:[W] to walk in the camera's forward direction.
+
+
+== Configuration
+
+=== Body properties
+
+`CharacterSettings` allows you configure
+important properties of the character's rigid body, including:
+
+* friction ratio,
+* gravity factor,
+* object layer, and
+* mass.
+
+=== Collisions
+
+Collisions between `Character` objects are handled by rigid-body physics.
+
+By default, `CharacterVirtual` objects won't collide with other characters.
+You can simulate collisions between `CharacterVirtual` objects using
+the `CharacterVsCharacterCollisionSimple` class.
+
+=== Maximum slope
+
+_Maximum slope_ limits how steep a slope the character can climb.
+It is expressed as an angle in radians relative to the horizontal plane.
+
+The default maximum slope is 5*{pi}/18, indicating a 50-degree angle.
+To alter it, use `character.setMaxSlopeAngle(float)`.
+
+
+== Summary
+
+* A physics character simulates a game character walking, jumping, and falling.
+* {Project} provides 2 implementations.
+* To move a character, invoke `setLinearVelocity()`.

@@ -7,6 +7,7 @@
 ** xref:debug.adoc[Troubleshooting]
 ** xref:shape.adoc[Collision shapes]
 ** xref:constraint.adoc[Constraints]
+** xref:character.adoc[Characters]
 * xref:build.adoc[Build procedures]
 * https://github.com/stephengold/jolt-jni[GitHub repository]
 ** https://github.com/stephengold/jolt-jni/releases/latest[Latest release]
