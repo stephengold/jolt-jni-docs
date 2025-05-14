@@ -99,7 +99,7 @@ public class HelloVehicle extends BasePhysicsApp {
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
      *
-     * @return a new instance
+     * @return a new object
      */
     @Override
     protected PhysicsSystem createSystem() {
@@ -127,7 +127,8 @@ public class HelloVehicle extends BasePhysicsApp {
     }
 
     /**
-     * Populate the PhysicsSystem. Invoked once during initialization.
+     * Populate the PhysicsSystem with bodies and constraints. Invoked once
+     * during initialization.
      */
     @Override
     protected void populateSystem() {
@@ -135,13 +136,13 @@ public class HelloVehicle extends BasePhysicsApp {
         float groundY = -0.65f;
         addPlane(groundY);
         /*
-         * Create a wedge-shaped vehicle with a low center of gravity.
+         * Create a wedge-shaped body with a low center of gravity.
          * The local forward direction is +Z.
          */
-        float noseZ = 1.4f;           // offset from chassis center
-        float spoilerY = 0.5f;        // offset from chassis center
-        float tailZ = -0.7f;          // offset from chassis center
-        float undercarriageY = -0.1f; // offset from chassis center
+        float noseZ = 1.4f;           // offset from body's center
+        float spoilerY = 0.5f;        // offset from body's center
+        float tailZ = -0.7f;          // offset from body's center
+        float undercarriageY = -0.1f; // offset from body's center
         float halfWidth = 0.4f;
         List<Vec3Arg> cornerLocations = new ArrayList<>(6);
         cornerLocations.add(new Vec3(+halfWidth, undercarriageY, noseZ));
@@ -163,8 +164,8 @@ public class HelloVehicle extends BasePhysicsApp {
         bi.addBody(body.getId(), EActivation.Activate);
 
         // Configure 4 wheels, 2 in the front (for steering) and 2 in the rear:
-        float frontAxleZ = 0.7f * noseZ; // offset from chassis center
-        float rearAxleZ = 0.8f * tailZ; // offset from chassis center
+        float frontAxleZ = 0.7f * noseZ; // offset from body's origin
+        float rearAxleZ = 0.8f * tailZ; // offset from body's origin
         float xOffset = 0.9f * halfWidth;
         WheelSettingsWv[] wheels = new WheelSettingsWv[4];
         for (int i = 0; i < 4; ++i) {
@@ -175,7 +176,7 @@ public class HelloVehicle extends BasePhysicsApp {
         wheels[2].setPosition(new Vec3(-xOffset, 0f, rearAxleZ));
         wheels[3].setPosition(new Vec3(xOffset, 0f, rearAxleZ)); // right rear
 
-        // The rear wheels aren't used for steering.
+        // The rear wheels aren't used for steering:
         wheels[2].setMaxSteerAngle(0f);
         wheels[3].setMaxSteerAngle(0f);
         /*
