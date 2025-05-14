@@ -128,8 +128,8 @@ public class HelloCharacter
     @Override
     protected void populateSystem() {
         // Create a character with a capsule shape and add it to the system:
-        float capsuleRadius = 0.5f;
-        float capsuleHeight = 1f;
+        float capsuleRadius = 0.5f; // meters
+        float capsuleHeight = 1f; // meters
         ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
 
         CharacterSettings settings = new CharacterSettings();
@@ -142,7 +142,7 @@ public class HelloCharacter
                 .toRef();
         character.addToPhysicsSystem();
 
-        // Add a square to represent the ground:
+        // Add a static square to represent the ground:
         float halfExtent = 4f;
         float y = -2f;
         ConstBody ground = addSquare(halfExtent, y);
@@ -186,7 +186,7 @@ public class HelloCharacter
     // private methods
 
     /**
-     * Add a horizontal square body to the system.
+     * Add a static horizontal-square rigid body to the system.
      *
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's upper top face (in system

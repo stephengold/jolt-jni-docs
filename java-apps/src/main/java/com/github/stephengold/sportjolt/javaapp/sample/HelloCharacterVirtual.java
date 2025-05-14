@@ -155,8 +155,8 @@ public class HelloCharacterVirtual
     @Override
     protected void populateSystem() {
         // Create a character with a capsule shape:
-        float capsuleRadius = 0.5f;
-        float capsuleHeight = 1f;
+        float capsuleRadius = 0.5f; // meters
+        float capsuleHeight = 1f; // meters
         ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
 
         CharacterVirtualSettings settings = new CharacterVirtualSettings();
@@ -168,7 +168,7 @@ public class HelloCharacterVirtual
                 settings, startLocation, new Quat(), userData, physicsSystem)
                 .toRef();
 
-        // Add a square to represent the ground:
+        // Add a static square to represent the ground:
         float halfExtent = 4f;
         float y = -2f;
         ConstBody ground = addSquare(halfExtent, y);
@@ -225,7 +225,7 @@ public class HelloCharacterVirtual
     // private methods
 
     /**
-     * Add a horizontal square body to the system.
+     * Add a static horizontal-square rigid body to the system.
      *
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's upper top face (in system
