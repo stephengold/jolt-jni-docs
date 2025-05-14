@@ -6,7 +6,7 @@
     <title>An introduction to constraints :: The Jolt-JNI project</title>
     <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/constraint.html">
     <link rel="prev" href="shape.html">
-    <link rel="next" href="build.html">
+    <link rel="next" href="character.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
@@ -83,6 +83,9 @@
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="constraint.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="character.html">Characters</a>
   </li>
 </ul>
   </li>
@@ -374,7 +377,7 @@ by invoking <code>settings.makeFixedAxis()</code>.</p>
 <div class="sect2">
 <h3 id="_helloconstraint"><a class="anchor" href="#_helloconstraint"></a>HelloConstraint</h3>
 <div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloConstraint.java">HelloConstraint</a> is a Sport-Jolt app
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloConstraint.java">HelloConstraint</a> is a Sport-Jolt app
 that simulates a single-ended hinge constraint.</p>
 </div>
 <div class="paragraph">
@@ -405,7 +408,7 @@ but the constraint soon forces it back into place.</p>
 <p>Many constraints involve a fixed point, called a <em>pivot</em>.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloPivot.java">HelloPivot</a>
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloPivot.java">HelloPivot</a>
 is similar to HelloConstraint except:</p>
 </div>
 <div class="ulist">
@@ -436,7 +439,7 @@ and points from rotor&#8217;s center to the pivot.</p>
 <div class="sect2">
 <h3 id="_hellodoubleended"><a class="anchor" href="#_hellodoubleended"></a>HelloDoubleEnded</h3>
 <div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloDoubleEnded.java">HelloDoubleEnded</a> is a Sport-Jolt app
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloDoubleEnded.java">HelloDoubleEnded</a> is a Sport-Jolt app
 that demonstrates a double-ended 6-DOF constraint
 simulating a point constraint.</p>
 </div>
@@ -506,7 +509,7 @@ to a neutral position when released.</p>
 <div class="sect2">
 <h3 id="_limits"><a class="anchor" href="#_limits"></a>Limits</h3>
 <div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloLimit.java">HelloLimit</a> is a Sport-Jolt app
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloLimit.java">HelloLimit</a> is a Sport-Jolt app
 that demonstrates a single-ended 6-DOF constraint
 with 2 limited translation DOFs to limit the motion of a magenta ball.</p>
 </div>
@@ -530,7 +533,7 @@ Depending on how a motor is configured,
 it can control either values or velocities.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloMotor.java">HelloMotor</a> is a Sport-Jolt app
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloMotor.java">HelloMotor</a> is a Sport-Jolt app
 that demonstrates a double-ended 6-DOF constraint
 with its Y-rotation motor enabled.
 The motor controls the angular velocity of the door relative to the frame.</p>
@@ -552,7 +555,7 @@ The motor controls the angular velocity of the door relative to the frame.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>In <a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloServo.java">HelloServo</a>,
+<p>In <a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloServo.java">HelloServo</a>,
 the motor controls the orientation of the door relative to the frame.</p>
 </div>
 <div class="olist arabic">
@@ -595,7 +598,7 @@ refer to
 <a href="https://en.wikipedia.org/wiki/Damping">the Wikipedia article on damping</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps/HelloSpring.java">HelloSpring</a> is a Sport-Jolt app
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloSpring.java">HelloSpring</a> is a Sport-Jolt app
 that demonstrates a single-ended 6-DOF constraint
 with all its translation DOFs fixed.
 Springs on the X-translation and Z-translation DOFs allow the magenta ball
@@ -754,7 +757,7 @@ that can simulate many other types.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="shape.html">Collision shapes</a></span>
-  <span class="next"><a href="build.html">Build procedures</a></span>
+  <span class="next"><a href="character.html">Characters</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">

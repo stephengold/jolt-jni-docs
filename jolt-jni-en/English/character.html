@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Visualization using the Sport-Jolt graphics engine :: The Jolt-JNI project</title>
-    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/sport.html">
-    <link rel="prev" href="add.html">
-    <link rel="next" href="rigidbody.html">
+    <title>An introduction to character physics :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/character.html">
+    <link rel="prev" href="constraint.html">
+    <link rel="next" href="build.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="Visualization using the Sport-Jolt graphics engine">
+<meta property="og:description" content="An introduction to character physics">
 <meta property="og:title" content="The Jolt-JNI project">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -66,7 +66,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="add.html">Add to existing project</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sport.html">Sport-Jolt visualization</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -84,7 +84,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="constraint.html">Constraints</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="character.html">Characters</a>
   </li>
 </ul>
@@ -211,90 +211,188 @@
   <ul>
     <li><a href="overview.html">The Jolt-JNI project</a></li>
     <li>Library tutorials</li>
-    <li><a href="sport.html">Sport-Jolt visualization</a></li>
+    <li><a href="character.html">Characters</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/sport.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/character.adoc">Edit this page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Visualization using the Sport-Jolt graphics engine</h1>
+<h1 class="page">An introduction to character physics</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>HelloJoltJni</code> app
-(introduced on <a href="add.html" class="xref page">the previous page</a>)
-is simple, readable and complete.
-However, as a console app, its output is limited to text.</p>
+<p>A <em>physics character</em> is a collision object
+used to simulate game characters (people) walking, jumping, and falling.</p>
 </div>
 <div class="paragraph">
-<p>Text provides scant insight into what the physics simulation is doing.
-For most people, pictures are much easier to understand.</p>
+<p>Jolt JNI provides 2 implementations of physics characters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Character</code>, which incorporates a dynamic rigid body, and</p>
+</li>
+<li>
+<p><code>CharacterVirtual</code>, which doesn&#8217;t require a body.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>For the purpose of this tutorial series,
-I&#8217;ve created a graphics engine named Sport-Jolt
-(the Simple Physics-ORienTed engine for Jolt).
-Sport-Jolt enables us to visualize physics objects
-without adding much code to the tutorial apps.
-It is open-source, written in Java, and available from
-<a href="https://github.com/stephengold/sport-jolt">GitHub</a> and
-<a href="https://central.sonatype.com/artifact/com.github.stephengold/sport-jolt">Maven Central</a>.</p>
+<p>The standard physics characters make some simplifying assumptions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The character remains upright even when jumping or falling.</p>
+</li>
+<li>
+<p>Limits are placed on how steep a slope the character can climb.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When coding, be careful to distinguish the Jolt-JNI <code>Character</code> class
+(in the "com.github.stephengold.joltjni" package)
+from the wrapper class with the same name in the "java.lang" package.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hellosport"><a class="anchor" href="#_hellosport"></a>HelloSport</h2>
+<h2 id="_creation"><a class="anchor" href="#_creation"></a>Creation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloSport.java">HelloSport</a>
-is a direct conversion of <code>HelloJoltJni</code> into a Sport-Jolt app.</p>
+<p>To create a physics character, you first configure a settings object,
+which is then passed to a constructor.
+Jolt JNI doesn&#8217;t keep track of characters;
+the application is responsible for that.</p>
 </div>
 <div class="paragraph">
-<p>Details to note:</p>
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloCharacter.java">HelloCharacter</a> is a Sport-Jolt app
+that demonstrates the creation of a <code>Character</code>,
+followed by automated jumps.
+Things to notice about the app:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The app is declared as a subclass of <code>BasePhysicsApp</code>.</p>
+<p>The settings object requires a shape.
+In this sample app, a capsule is used.</p>
 </li>
 <li>
-<p>The app implements both abstract methods of <code>BasePhysicsApp</code>
-(<code>createSystem</code> and <code>populateSystem</code>),
-which are invoked automatically.</p>
+<p>To be effective, the character must be added its physics system
+by invoking <code>Character.addToPhysicsSystem()</code>.</p>
 </li>
 <li>
-<p><code>BasePhysicsApp</code> automatically loads the Jolt-JNI native library.</p>
+<p>The character&#8217;s desired motion is specified
+by invoking <code>setLinearVelocity()</code> before each simulation step.</p>
 </li>
 <li>
-<p><code>BasePhysicsApp</code> provides:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>the <code>physicsSystem</code> field to access the system and</p>
+<p>The character must be explicitly updated
+by invoking <code>postSimulation()</code> after each simulation step.</p>
 </li>
 <li>
-<p>the <code>visualizeShape()</code> method to visualize the shape of a physics object.</p>
-</li>
-</ol>
-</div>
+<p>The <code>isSupported()</code> method tests whether the character is supported
+by a solid surface (as opposed to jumping or falling).</p>
 </li>
 <li>
-<p>Whereas <code>HelloJoltJni</code> simulated one step at a time,
-<code>HelloSport</code> attempts real-time simulation.</p>
+<p>In Sport-Jolt, characters that are jumping or falling are shown in pink,
+while supported characters are shown in brown.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Running <code>HelloSport</code> should open a window on your computer&#8217;s desktop
-and play a brief animation of a sphere falling onto a horizontal surface.</p>
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloCharacterVirtual.java">HelloCharacterVirtual</a> is a Sport-Jolt app
+that demonstrates the creation of a <code>CharacterVirtual</code>,
+followed by automated jumps.</p>
 </div>
 <div class="paragraph">
-<p>Pressing <kbd>Esc</kbd> should close the window and terminate the app.</p>
+<p>Things to notice:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Unlike a <code>Character</code>,
+a <code>CharacterVirtual</code> never gets added to any physics system.</p>
+</li>
+<li>
+<p>The character must be explicitly updated
+by invoking <code>extendedUpdate()</code> after each simulation step.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_walking"><a class="anchor" href="#_walking"></a>Walking</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloWalk.java">HelloWalk</a> demonstrates
+keyboard-controlled motion of a physics character.
+Things to notice while running the app:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Drag with the left mouse button to rotate the camera.</p>
+</li>
+<li>
+<p>Press <kbd>Space bar</kbd> to jump.</p>
+</li>
+<li>
+<p>Press <kbd>W</kbd> to walk in the camera&#8217;s forward direction.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_body_properties"><a class="anchor" href="#_body_properties"></a>Body properties</h3>
+<div class="paragraph">
+<p><code>CharacterSettings</code> allows you configure
+important properties of the character&#8217;s rigid body, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>friction ratio,</p>
+</li>
+<li>
+<p>gravity factor,</p>
+</li>
+<li>
+<p>object layer, and</p>
+</li>
+<li>
+<p>mass.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_collisions"><a class="anchor" href="#_collisions"></a>Collisions</h3>
+<div class="paragraph">
+<p>Collisions between <code>Character</code> objects are handled by rigid-body physics.</p>
 </div>
 <div class="paragraph">
-<p>Hereafter, all the tutorial apps will use Sport-Jolt.
-Features of Sport-Jolt will be introduced as needed.</p>
+<p>By default, <code>CharacterVirtual</code> objects won&#8217;t collide with other characters.
+You can simulate collisions between <code>CharacterVirtual</code> objects using
+the <code>CharacterVsCharacterCollisionSimple</code> class.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maximum_slope"><a class="anchor" href="#_maximum_slope"></a>Maximum slope</h3>
+<div class="paragraph">
+<p><em>Maximum slope</em> limits how steep a slope the character can climb.
+It is expressed as an angle in radians relative to the horizontal plane.</p>
+</div>
+<div class="paragraph">
+<p>The default maximum slope is 5*&#960;/18, indicating a 50-degree angle.
+To alter it, use <code>character.setMaxSlopeAngle(float)</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -304,18 +402,21 @@ Features of Sport-Jolt will be introduced as needed.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Sport-Jolt is a graphics engine, created specifically for Jolt-JNI tutorials.</p>
+<p>A physics character simulates a game character walking, jumping, and falling.</p>
 </li>
 <li>
-<p>Sport-Jolt provides a simple toolkit for visualizing 3-D physics.</p>
+<p>Jolt JNI provides 2 implementations.</p>
+</li>
+<li>
+<p>To move a character, invoke <code>setLinearVelocity()</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="add.html">Add to existing project</a></span>
-  <span class="next"><a href="rigidbody.html">Rigid bodies</a></span>
+  <span class="prev"><a href="constraint.html">Constraints</a></span>
+  <span class="next"><a href="build.html">Build procedures</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">
