@@ -104,7 +104,7 @@ public class HelloCharacter
         int maxBodies = 2;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
-        // To enable the callbacks, register the application as a tick listener.
+        // To enable the callbacks, register the application as a tick listener:
         addTickListener(this);
 
         return result;
@@ -170,7 +170,7 @@ public class HelloCharacter
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to to be stepped (not null)
+     * @param system the system that's about to be stepped (not null)
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override

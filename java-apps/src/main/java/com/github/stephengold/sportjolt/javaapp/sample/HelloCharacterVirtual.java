@@ -124,7 +124,7 @@ public class HelloCharacterVirtual
         int maxBodies = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
-        // To enable the callbacks, register the application as a tick listener.
+        // To enable the callbacks, register the application as a tick listener:
         addTickListener(this);
 
         return result;
@@ -154,7 +154,7 @@ public class HelloCharacterVirtual
      */
     @Override
     protected void populateSystem() {
-        // Create a character with a capsule shape and add it to the system:
+        // Create a character with a capsule shape:
         float capsuleRadius = 0.5f;
         float capsuleHeight = 1f;
         ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
@@ -204,7 +204,7 @@ public class HelloCharacterVirtual
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to to be stepped (not null)
+     * @param system the system that's about to be stepped (not null)
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override

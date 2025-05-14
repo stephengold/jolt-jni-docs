@@ -149,10 +149,10 @@ public class HelloMotor extends BasePhysicsApp {
         settings.makeFixedAxis(EAxis.TranslationX);
         settings.makeFixedAxis(EAxis.TranslationY);
         settings.makeFixedAxis(EAxis.TranslationZ);
-        // Fix the X and Z rotation DOFs:
+        // Fix the X- and Z-rotation DOFs:
         settings.makeFixedAxis(EAxis.RotationX);
         settings.makeFixedAxis(EAxis.RotationZ);
-        // Limit the Y rotation DOF:
+        // Limit the Y-rotation DOF:
         settings.setLimitedAxis(EAxis.RotationY, 0f, 1.2f);
         RVec3Arg pivotLocation = new RVec3(-1., 0., 0.);
         settings.setPosition1(pivotLocation);

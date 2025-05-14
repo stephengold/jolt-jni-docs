@@ -191,7 +191,7 @@ public class HelloDeactivation
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to to be stepped (not null)
+     * @param system the system that's about to be stepped (not null)
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
