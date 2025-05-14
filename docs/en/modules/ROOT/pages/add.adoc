@@ -342,7 +342,7 @@ BodyInterface bi = physicsSystem.getBodyInterface();
 Body ball = bi.createBody(bcs);
 ----
 
-Collision objects aren't simulated unless they're added to a physics system.
+Bodies aren't simulated unless they're added to a physics system.
 The best way is to use `BodyInterface.addBody()`:
 
 [source,java]
@@ -367,7 +367,7 @@ physicsSystem.update(
 == HelloJoltJni
 
 {url-tutorial}/console/HelloJoltJni.java[HelloJoltJni]
-is a complete console application (no graphics)
+is a complete console app (no graphics)
 that serves as a starting point for using {Project}.
 
 It illustrates:

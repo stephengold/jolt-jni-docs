@@ -5,7 +5,7 @@
 :url-enwiki: https://en.wikipedia.org/wiki
 
 A _collision shape_
-describes the shape and size of a collision object such as a rigid body.
+describes the shape and size of a physics object such as a rigid body.
 
 
 == The 18 shape classes

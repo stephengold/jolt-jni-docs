@@ -5,7 +5,7 @@
 :ProjectAdj: Jolt-JNI
 :Sport: Sport-Jolt
 
-In long-running applications,
+In long-running apps,
 it's important to reclaim objects that are no longer in use,
 lest the app run out of memory.
 But it's even more important to ensure
@@ -46,7 +46,7 @@ to reclaim native objects and free their memory.
 {Cplusplus} convention dictates that when a class allocates memory,
 it assumes responsibility for freeing that memory.
 For native objects, this convention carries over into {Project}:
-an application is solely responsible for all objects it creates explicitly.
+an app is solely responsible for all objects it creates explicitly.
 (On the other hand, it cannot free the memory
 of objects created internally by {Project} or Jolt Physics.)
 

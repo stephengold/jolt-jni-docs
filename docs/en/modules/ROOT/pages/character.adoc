@@ -7,7 +7,7 @@
 :Sport: Sport-Jolt
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
-A _physics character_ is a collision object
+A _physics character_ is a physics object
 used to simulate game characters (people) walking, jumping, and falling.
 
 {Project} provides 2 implementations of physics characters:
@@ -30,7 +30,7 @@ from the wrapper class with the same name in the "java.lang" package.
 To create a physics character, you first configure a settings object,
 which is then passed to a constructor.
 {Project} doesn't keep track of characters;
-the application is responsible for that.
+the app is responsible for that.
 
 {url-tutorial}/HelloCharacter.java[HelloCharacter] is a {Sport} app
 that demonstrates the creation of a `Character`,

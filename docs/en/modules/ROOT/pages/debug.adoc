@@ -40,13 +40,13 @@ For instance, if you neglect to add a body to the physics system,
 * vehicle wheels,
 * constraints,
 * the edges, faces, and pinned vertices of soft bodies,
-* the origins and local axes of collision objects, and
-* the axis-aligned bounding boxes of collision objects.
+* the origins and local axes of bodies and characters, and
+* the axis-aligned bounding boxes of characters and physics systems.
 
 === Color conventions
 
 When visualizing a collision shape,
-{Sport} uses colors to distinguish different types of collision objects:
+{Sport} uses colors to distinguish different types of physics objects:
 
 * yellow for rigid body
   (without contact response) such as a sensor,

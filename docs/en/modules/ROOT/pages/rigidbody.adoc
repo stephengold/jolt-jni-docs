@@ -469,7 +469,7 @@ Things to notice while running the app:
   which provides a contact force to halt its motion and counteract gravity.
 . About half a second after the upper box stops moving, it gets deactivated.
 . In {Sport}, deactivated rigid bodies are conventionally colored gray.
-. After the application removes the lower box,
+. After the app removes the lower box,
   the dynamic box doesn't resume its descent.
   Due to deactivation, it appears to be "stuck".
 . Press kbd:[E] to reactivate the dynamic box.
@@ -540,7 +540,7 @@ a|Yes.
 
 a|Typical use cases
 a|Non-moving objects such as floors, posts, terrain, and walls
-a|Application-controlled objects such as airships and elevators
+a|App-controlled objects such as airships and elevators
 a|Physics-controlled objects such as balls, bricks, and ragdolls
 
 a|How to configure

@@ -23,7 +23,7 @@ https://docs.oracle.com/en/java/javase/11/docs/specs/jni/index.html[the Java Nat
 to access their objects and methods.
 
 Before instantiating physics objects,
-a {ProjectAdj} application must {url-enwiki}/Dynamic_loading[dynamically load]
+a {ProjectAdj} app must {url-enwiki}/Dynamic_loading[dynamically load]
 a _native library_ of this code,
 compiled for the {url-enwiki}/Computing_platform[platform]
 on which the app is executing.
