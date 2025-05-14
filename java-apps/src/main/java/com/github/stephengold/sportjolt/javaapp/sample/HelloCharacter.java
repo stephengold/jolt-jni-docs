@@ -207,7 +207,6 @@ public class HelloCharacter
         ConstBody result = bi.createBody(bcs);
         bi.addBody(result, EActivation.DontActivate);
 
-        assert result != null;
         return result;
     }
 }
