@@ -106,6 +106,10 @@ tasks.register<JavaExec>("HelloVehicle") {
     description = "Runs the HelloVehicle tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloVehicle"
 }
+tasks.register<JavaExec>("HelloWalk") {
+    description = "Runs the HelloWalk tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloWalk"
+}
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")
 
