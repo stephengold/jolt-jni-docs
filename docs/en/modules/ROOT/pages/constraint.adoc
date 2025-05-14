@@ -3,7 +3,7 @@
 :page-pagination:
 :Project: Jolt JNI
 :Sport: Sport-Jolt
-:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
 
 A _constraint_ is a physics object

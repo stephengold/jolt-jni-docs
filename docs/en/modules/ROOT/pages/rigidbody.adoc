@@ -5,7 +5,7 @@
 :page-toclevels: 3
 :Sport: Sport-Jolt
 :url-enwiki: https://en.wikipedia.org/wiki
-:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/jolt-jni-docs/java-apps
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
 
 == The 5 familiar features
