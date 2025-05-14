@@ -1,0 +1,81 @@
+= An introduction to vehicle physics
+:experimental:
+:page-pagination:
+:Project: Jolt JNI
+:Sport: Sport-Jolt
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
+:url-enwiki: https://en.wikipedia.org/wiki
+
+A _physics vehicle_ is a physics object
+used to simulate a vehicle driving on (or gliding above) a smooth surface.
+
+{Project} implements vehicle physics
+using a `VehicleConstraint` applied to a rigid body.
+Each `VehicleConstraint` includes a step listener.
+For a vehicle be effective,
+both its body and its constraint must be added to a physics system
+and its step listener must be invoked before each simulation step.
+
+Instead of applying forces or updating the body's velocities directly,
+an app using a physics vehicle
+should specify when and how the vehicle accelerates, steers, and brakes.
+This information is communicated to the constraint
+by means of a `VehicleController` object.
+
+{Project} provides 3 implementations of `VehicleController`:
+
+* `TrackedVehicleController`, for vehicles like bulldozers and tanks,
+  whose motive power drives a pair of
+  {url-enwiki}/Continuous_track[continuous tracks],
+  one on each side,
+* `WheeledVehicleController`, for vehicles like automobiles and busses,
+  whose motive power drives pairs of wheels joined by
+  a {url-enwiki}/Differential_(mechanical_device)[differential gear train], and
+* `MotorcycleController`, for simulating motorcycles,
+  which balance on just 2 wheels.
+
+Instead a rotating rigid body for each wheel,
+a `VehicleCollisionTester` object
+is used to simulate contact with the driving surface.
+
+{Project} provides 3 implementations of `VehicleCollisionTester`:
+
+* `VehicleCollisionTesterCastCylinder`, which uses a cylinder shape,
+* `VehicleCollisionTesterCastSphere`, which uses a sphere shape, and
+* `VehicleCollisionTesterRay`, which uses a ray.
+
+
+== Creation
+
+To create a physics vehicle:
+
+. Create the rigid body and add it to the physics system.
+. Create and configure a settings object for the wheels,
+  specifying their locations and functionality.
+. Create and configure a settings object for the controller,
+  specifying how the vehicle is steered and how motive power is distributed.
+. Create and configure a settings object for the constraint,
+  referencing the wheel settings and controller settings.
+. Instantiate the constraint.
+. Create a collision tester and add it to the constraint.
+. Add the constraint and its step listener to the physics system.
+
+{Project} doesn't keep track of vehicles;
+the app is responsible for that.
+
+{url-tutorial}/HelloVehicle.java[HelloVehicle] is a {Sport} app
+that demonstrates the creation of a vehicle
+with a `WheeledVehicleController` and a `VehicleCollisionTesterRay`,
+followed by automated steering and acceleration.
+Things to notice while running the app:
+
+. The vehicle has a wedge-shaped body.
+. The vehicle has 4 wheels, arranged in a rectangle.
+. The vehicle circles to the left,
+  accelerating steadily until it "wipes out" and tips over.
+
+
+== Summary
+
+* A physics vehicle simulates a vehicle accelerating, steering, and braking
+  on a smooth surface.
