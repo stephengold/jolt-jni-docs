@@ -54,7 +54,6 @@ import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.ConstraintGeometry;
-import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
 
 /**
@@ -231,7 +230,7 @@ public class HelloServo extends BasePhysicsApp {
         cip.setRotationMode(RotateMode.DragLMB);
         cip.setMoveSpeed(5f);
 
-        cam.setLocation(new Vector3f(0f, 1.5f, 4f));
+        cam.setLocation(0f, 1.5f, 4f);
         cam.setAzimuth(-1.56f);
         cam.setUpAngle(-0.45f);
     }

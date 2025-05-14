@@ -100,8 +100,8 @@ public class HelloCharacter
     @Override
     protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
-        int numBpLayers = 1;
         int maxBodies = 2;
+        int numBpLayers = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         // To enable the callbacks, register the application as a tick listener:
@@ -163,7 +163,9 @@ public class HelloCharacter
      */
     @Override
     public void physicsTick(PhysicsSystem system, float timeStep) {
-        character.postSimulation(0.1f);
+        // Update the character:
+        float maxSeparation = 0.1f; // meters above the floor
+        character.postSimulation(maxSeparation);
     }
 
     /**

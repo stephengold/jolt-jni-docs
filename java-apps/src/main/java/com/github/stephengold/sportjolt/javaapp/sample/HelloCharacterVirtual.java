@@ -120,8 +120,8 @@ public class HelloCharacterVirtual
     @Override
     protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
-        int numBpLayers = 1;
         int maxBodies = 1;
+        int numBpLayers = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         // To enable the callbacks, register the application as a tick listener:

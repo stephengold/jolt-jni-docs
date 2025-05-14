@@ -188,7 +188,7 @@ public class HelloConstraint
             float farY = farLocation.y();
             if (nearY > 0f && farY < 0f) {
                 float dy = nearY - farY;
-                float t = (nearY) / dy;
+                float t = nearY / dy;
                 Utils.lerp(t, nearLocation, farLocation, mouseLocation);
             }
         }
