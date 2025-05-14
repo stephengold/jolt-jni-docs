@@ -119,7 +119,7 @@ body.setMotionType(EMotionType.Static);
 body.setObjectLayer(objLayerNonMoving);
 ----
 
-However, the reverse is not tru:
+However, the reverse is not true:
 you can only convert a static body to a dynamic one
 if you configured it to allow the conversion
 with `BodyCreationSettings.setAllowDynamicOrKinematic(true)`.
