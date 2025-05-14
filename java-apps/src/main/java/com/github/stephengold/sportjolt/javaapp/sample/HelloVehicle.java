@@ -51,7 +51,6 @@ import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.TextureKey;
@@ -194,7 +193,9 @@ public class HelloVehicle extends BasePhysicsApp {
         vcs.addWheels(wheels);
         vcs.setController(wvcs);
         VehicleConstraint vehicle = new VehicleConstraint(body, vcs);
-        VehicleCollisionTester tester = new VehicleCollisionTesterRay(0);
+        int objectLayer = body.getObjectLayer();
+        VehicleCollisionTester tester
+                = new VehicleCollisionTesterRay(objectLayer);
         vehicle.setVehicleCollisionTester(tester);
         physicsSystem.addConstraint(vehicle);
         physicsSystem.addStepListener(vehicle.getStepListener());
@@ -224,7 +225,7 @@ public class HelloVehicle extends BasePhysicsApp {
      */
     private void addPlane(float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
-        ConstShape shape = new PlaneShape(plane);
+        PlaneShape shape = new PlaneShape(plane);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
