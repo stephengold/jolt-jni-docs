@@ -6,7 +6,7 @@
     <title>An introduction to character physics :: The Jolt-JNI project</title>
     <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/character.html">
     <link rel="prev" href="constraint.html">
-    <link rel="next" href="build.html">
+    <link rel="next" href="vehicle.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
@@ -86,6 +86,9 @@
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="character.html">Characters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="vehicle.html">Vehicles</a>
   </li>
 </ul>
   </li>
@@ -222,7 +225,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>A <em>physics character</em> is a collision object
+<p>A <em>physics character</em> is a physics object
 used to simulate game characters (people) walking, jumping, and falling.</p>
 </div>
 <div class="paragraph">
@@ -265,7 +268,7 @@ from the wrapper class with the same name in the "java.lang" package.</p>
 <p>To create a physics character, you first configure a settings object,
 which is then passed to a constructor.
 Jolt JNI doesn&#8217;t keep track of characters;
-the application is responsible for that.</p>
+the app is responsible for that.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloCharacter.java">HelloCharacter</a> is a Sport-Jolt app
@@ -416,7 +419,7 @@ To alter it, use <code>character.setMaxSlopeAngle(float)</code>.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="constraint.html">Constraints</a></span>
-  <span class="next"><a href="build.html">Build procedures</a></span>
+  <span class="next"><a href="vehicle.html">Vehicles</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">

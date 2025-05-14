@@ -87,6 +87,9 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="character.html">Characters</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="vehicle.html">Vehicles</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
@@ -222,7 +225,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In long-running applications,
+<p>In long-running apps,
 it&#8217;s important to reclaim objects that are no longer in use,
 lest the app run out of memory.
 But it&#8217;s even more important to ensure
@@ -273,7 +276,7 @@ to reclaim native objects and free their memory.</p>
 <p>C&#43;&#43; convention dictates that when a class allocates memory,
 it assumes responsibility for freeing that memory.
 For native objects, this convention carries over into Jolt JNI:
-an application is solely responsible for all objects it creates explicitly.
+an app is solely responsible for all objects it creates explicitly.
 (On the other hand, it cannot free the memory
 of objects created internally by Jolt JNI or Jolt Physics.)</p>
 </div>

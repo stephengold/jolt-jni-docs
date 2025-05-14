@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Troubleshooting physics issues :: The Jolt-JNI project</title>
-    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/debug.html">
-    <link rel="prev" href="free.html">
-    <link rel="next" href="shape.html">
+    <title>An introduction to vehicle physics :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/vehicle.html">
+    <link rel="prev" href="character.html">
+    <link rel="next" href="build.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="Troubleshooting physics issues">
+<meta property="og:description" content="An introduction to vehicle physics">
 <meta property="og:title" content="The Jolt-JNI project">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -75,7 +75,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="free.html">Freeing memory</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="debug.html">Troubleshooting</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -87,7 +87,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="character.html">Characters</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="vehicle.html">Vehicles</a>
   </li>
 </ul>
@@ -214,169 +214,138 @@
   <ul>
     <li><a href="overview.html">The Jolt-JNI project</a></li>
     <li>Library tutorials</li>
-    <li><a href="debug.html">Troubleshooting</a></li>
+    <li><a href="vehicle.html">Vehicles</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/debug.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/vehicle.adoc">Edit this page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Troubleshooting physics issues</h1>
+<h1 class="page">An introduction to vehicle physics</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jolt JNI uses <code>assert</code> statements to verify assumptions made while coding.
-During development, Java assertions should be enabled using:</p>
+<p>A <em>physics vehicle</em> is a physics object
+used to simulate a vehicle driving on (or gliding above) a smooth surface.</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI implements vehicle physics
+using a <code>VehicleConstraint</code> applied to a rigid body.
+Each <code>VehicleConstraint</code> includes a step listener.
+For a vehicle be effective,
+both its body and its constraint must be added to a physics system
+and its step listener must be invoked before each simulation step.</p>
+</div>
+<div class="paragraph">
+<p>Instead of applying forces or updating the body&#8217;s velocities directly,
+an app using a physics vehicle
+should specify when and how the vehicle accelerates, steers, and brakes.
+This information is communicated to the constraint
+by means of a <code>VehicleController</code> object.</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI provides 3 implementations of <code>VehicleController</code>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>the "-ea" JVM argument or</p>
+<p><code>TrackedVehicleController</code>, for vehicles like bulldozers and tanks,
+whose motive power drives a pair of
+<a href="https://en.wikipedia.org/wiki/Continuous_track">continuous tracks</a>,
+one on each side,</p>
 </li>
 <li>
-<p>the <code>enableAssertions</code> setting of Gradle <code>JavaExec</code> tasks.</p>
+<p><code>WheeledVehicleController</code>, for vehicles like automobiles and busses,
+whose motive power drives pairs of wheels joined by
+a <a href="https://en.wikipedia.org/wiki/Differential_(mechanical_device)">differential gear train</a>, and</p>
+</li>
+<li>
+<p><code>MotorcycleController</code>, for simulating motorcycles,
+which balance on just 2 wheels.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Similarly, native-code assertions should be enabled during development.
-You do this by loading a native library with the "Debug" buildtype,
-such as "com.github.stephengold:jolt-jni-Windows64:0.9.10:DebugSp".</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If a native-code assertion fails, it will crash the JVM.
-To troubleshoot such crashes, attach a native-code debugger
-(such as GDB) to the JVM itself.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Instead a rotating rigid body for each wheel,
+a <code>VehicleCollisionTester</code> object
+is used to simulate contact with the driving surface.</p>
 </div>
 <div class="paragraph">
-<p>To troubleshoot issues involving native-memory allocation,
-enable <em>allocation tracing</em> with <code>Jolt.setTraceAllocations(true)</code>.
-Allocation tracing prints a line to the standard output
-every time Jolt JNI allocates or frees a native object.
-Allocation tracing requires a "Debug" native library.</p>
+<p>Jolt JNI provides 3 implementations of <code>VehicleCollisionTester</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>VehicleCollisionTesterCastCylinder</code>, which uses a cylinder shape,</p>
+</li>
+<li>
+<p><code>VehicleCollisionTesterCastSphere</code>, which uses a sphere shape, and</p>
+</li>
+<li>
+<p><code>VehicleCollisionTesterRay</code>, which uses a ray.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_visualization"><a class="anchor" href="#_visualization"></a>Visualization</h2>
+<h2 id="_creation"><a class="anchor" href="#_creation"></a>Creation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Many physics issues can be diagnosed visually.
-For instance, if you neglect to add a body to the physics system,
-Sport-Jolt will automatically omit it from the visualization.</p>
+<p>To create a physics vehicle:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create the rigid body and add it to the physics system.</p>
+</li>
+<li>
+<p>Create and configure a settings object for the wheels,
+specifying their locations and functionality.</p>
+</li>
+<li>
+<p>Create and configure a settings object for the controller,
+specifying how the vehicle is steered and how motive power is distributed.</p>
+</li>
+<li>
+<p>Create and configure a settings object for the constraint,
+referencing the wheel settings and controller settings.</p>
+</li>
+<li>
+<p>Instantiate the constraint.</p>
+</li>
+<li>
+<p>Create a collision tester and add it to the constraint.</p>
+</li>
+<li>
+<p>Add the constraint and its step listener to the physics system.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>Sport-Jolt can visualize:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>collision shapes,</p>
-</li>
-<li>
-<p>the centers of mass of bodies,</p>
-</li>
-<li>
-<p>vehicle wheels,</p>
-</li>
-<li>
-<p>constraints,</p>
-</li>
-<li>
-<p>the edges, faces, and pinned vertices of soft bodies,</p>
-</li>
-<li>
-<p>the origins and local axes of bodies and characters, and</p>
-</li>
-<li>
-<p>the axis-aligned bounding boxes of characters and physics systems.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_color_conventions"><a class="anchor" href="#_color_conventions"></a>Color conventions</h3>
-<div class="paragraph">
-<p>When visualizing a collision shape,
-Sport-Jolt uses colors to distinguish different types of physics objects:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>yellow for rigid body
-(without contact response) such as a sensor,</p>
-</li>
-<li>
-<p>magenta for a rigid body
-(with contact response) that&#8217;s dynamic, responsive, and active,</p>
-</li>
-<li>
-<p>gray for a rigid body
-(with contact response) that&#8217;s static, kinematic, or deactivated,</p>
-</li>
-<li>
-<p>brown for a character that&#8217;s supported, and</p>
-</li>
-<li>
-<p>pink for a character that isn&#8217;t supported.</p>
-</li>
-</ul>
+<p>Jolt JNI doesn&#8217;t keep track of vehicles;
+the app is responsible for that.</p>
 </div>
 <div class="paragraph">
-<p>When visualizing a constraint, Sport-Jolt uses:</p>
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloVehicle.java">HelloVehicle</a> is a Sport-Jolt app
+that demonstrates the creation of a vehicle
+with a <code>WheeledVehicleController</code> and a <code>VehicleCollisionTesterRay</code>,
+followed by automated steering and acceleration.
+Things to notice while running the app:</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>green for visualizing the "body1" end,</p>
+<p>The vehicle has a wedge-shaped body.</p>
 </li>
 <li>
-<p>red for visualizing the "body2" end, and</p>
+<p>The vehicle has 4 wheels, arranged in a rectangle.</p>
 </li>
 <li>
-<p>blue for visualizing the pivots.</p>
+<p>The vehicle circles to the left,
+accelerating steadily until it "wipes out" and tips over.</p>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When visualizing a soft body, Sport-Jolt uses:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>red for the faces and</p>
-</li>
-<li>
-<p>orange for the edges.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When visualizing coordinate axes, Sport-Jolt uses:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>red for the +X axis,</p>
-</li>
-<li>
-<p>green for the +Y axis, and</p>
-</li>
-<li>
-<p>blue for the +Z axis.</p>
-</li>
-</ul>
-</div>
+</ol>
 </div>
 </div>
 </div>
@@ -386,19 +355,16 @@ Sport-Jolt uses colors to distinguish different types of physics objects:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>During development, enable Java assertions
-and use a "Debug" native library.</p>
-</li>
-<li>
-<p>Sport-Jolt visualization can be used to diagnose physics issues.</p>
+<p>A physics vehicle simulates a vehicle accelerating, steering, and braking
+on a smooth surface.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="free.html">Freeing memory</a></span>
-  <span class="next"><a href="shape.html">Collision shapes</a></span>
+  <span class="prev"><a href="character.html">Characters</a></span>
+  <span class="next"><a href="build.html">Build procedures</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">
