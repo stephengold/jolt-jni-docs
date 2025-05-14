@@ -119,8 +119,8 @@ public class HelloVehicle extends BasePhysicsApp {
         setVsync(true);
 
         getCameraInputProcessor().setRotationMode(RotateMode.DragLMB);
-        cam.setLocation(new Vector3f(-4.17558f, 6.82825f, 35.9108f))
-                .setLookDirection(new Vector3f(0.49f, -0.36f, -0.80f));
+        cam.setLocation(-4.2f, 6.8f, 36f)
+                .setLookDirection(new Vector3f(0.49f, -0.36f, -0.8f));
 
         setBackgroundColor(Constants.SKY_BLUE);
     }
