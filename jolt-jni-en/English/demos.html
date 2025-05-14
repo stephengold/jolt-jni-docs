@@ -3,14 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>An introduction to character physics :: The Jolt-JNI project</title>
-    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/character.html">
-    <link rel="prev" href="constraint.html">
-    <link rel="next" href="vehicle.html">
+    <title>An overview of the demo applications :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/demos.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="An introduction to character physics">
+<meta property="og:description" content="An overview of the demo applications">
 <meta property="og:title" content="The Jolt-JNI project">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -84,7 +82,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="constraint.html">Constraints</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="character.html">Characters</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -95,7 +93,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="build.html">Build procedures</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="demos.html">Demo apps</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -216,214 +214,162 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="overview.html">The Jolt-JNI project</a></li>
-    <li>Library tutorials</li>
-    <li><a href="character.html">Characters</a></li>
+    <li><a href="demos.html">Demo apps</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/character.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/demos.adoc">Edit this page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">An introduction to character physics</h1>
+<h1 class="page">An overview of the demo applications</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>A <em>physics character</em> is a physics object
-used to simulate game characters (people) walking, jumping, and falling.</p>
-</div>
-<div class="paragraph">
-<p>Jolt JNI provides 2 implementations of physics characters:</p>
+<p><em>Demo apps</em> are provided to showcase certain features of Jolt JNI.
+The following apps are found in
+<a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo">the com.github.stephengold.sportjolt.javaapp.demo package of the Sport-Jolt "java-apps" sub-project</a>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>Character</code>, which incorporates a dynamic rigid body, and</p>
+<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/NewtonsCradle.java"><code>NewtonsCradle</code></a>
+demonstrates dynamic restitution and distance constraints</p>
 </li>
 <li>
-<p><code>CharacterVirtual</code>, which doesn&#8217;t require a body.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The standard physics characters make some simplifying assumptions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The character remains upright even when jumping or falling.</p>
+<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/Pachinko.java"><code>Pachinko</code></a>
+demonstrates compound shapes and 2-D physics</p>
 </li>
 <li>
-<p>Limits are placed on how steep a slope the character can climb.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When coding, be careful to distinguish the Jolt-JNI <code>Character</code> class
-(in the "com.github.stephengold.joltjni" package)
-from the wrapper class with the same name in the "java.lang" package.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_creation"><a class="anchor" href="#_creation"></a>Creation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To create a physics character, you first configure a settings object,
-which is then passed to a constructor.
-Jolt JNI doesn&#8217;t keep track of characters;
-the app is responsible for that.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloCharacter.java">HelloCharacter</a> is a Sport-Jolt app
-that demonstrates the creation of a <code>Character</code>,
-followed by automated jumps.
-Things to notice about the app:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The settings object requires a shape.
-In this sample app, a capsule is used.</p>
-</li>
-<li>
-<p>To be effective, the character must be added its physics system
-by invoking <code>Character.addToPhysicsSystem()</code>.</p>
-</li>
-<li>
-<p>The character&#8217;s desired motion is specified
-by invoking <code>setLinearVelocity()</code> before each simulation step.</p>
-</li>
-<li>
-<p>The character must be explicitly updated
-by invoking <code>postSimulation()</code> after each simulation step.</p>
-</li>
-<li>
-<p>The <code>isSupported()</code> method tests whether the character is supported
-by a solid surface (as opposed to jumping or falling).</p>
-</li>
-<li>
-<p>In Sport-Jolt, characters that are jumping or falling are shown in pink,
-while supported characters are shown in brown.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloCharacterVirtual.java">HelloCharacterVirtual</a> is a Sport-Jolt app
-that demonstrates the creation of a <code>CharacterVirtual</code>,
-followed by automated jumps.</p>
-</div>
-<div class="paragraph">
-<p>Things to notice:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Unlike a <code>Character</code>,
-a <code>CharacterVirtual</code> never gets added to any physics system.</p>
-</li>
-<li>
-<p>The character must be explicitly updated
-by invoking <code>extendedUpdate()</code> after each simulation step.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_walking"><a class="anchor" href="#_walking"></a>Walking</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloWalk.java">HelloWalk</a> demonstrates
-keyboard-controlled motion of a physics character.
-Things to notice while running the app:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Drag with the left mouse button to rotate the camera.</p>
-</li>
-<li>
-<p>Press <kbd>Space bar</kbd> to jump.</p>
-</li>
-<li>
-<p>Press <kbd>W</kbd> to walk in the camera&#8217;s forward direction.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_body_properties"><a class="anchor" href="#_body_properties"></a>Body properties</h3>
-<div class="paragraph">
-<p><code>CharacterSettings</code> allows you configure
-important properties of the character&#8217;s rigid body, including:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>friction ratio,</p>
-</li>
-<li>
-<p>gravity factor,</p>
-</li>
-<li>
-<p>object layer, and</p>
-</li>
-<li>
-<p>mass.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_collisions"><a class="anchor" href="#_collisions"></a>Collisions</h3>
-<div class="paragraph">
-<p>Collisions between <code>Character</code> objects are handled by rigid-body physics.</p>
-</div>
-<div class="paragraph">
-<p>By default, <code>CharacterVirtual</code> objects won&#8217;t collide with other characters.
-You can simulate collisions between <code>CharacterVirtual</code> objects using
-the <code>CharacterVsCharacterCollisionSimple</code> class.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_maximum_slope"><a class="anchor" href="#_maximum_slope"></a>Maximum slope</h3>
-<div class="paragraph">
-<p><em>Maximum slope</em> limits how steep a slope the character can climb.
-It is expressed as an angle in radians relative to the horizontal plane.</p>
-</div>
-<div class="paragraph">
-<p>The default maximum slope is 5*&#960;/18, indicating a 50-degree angle.
-To alter it, use <code>character.setMaxSlopeAngle(float)</code>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>A physics character simulates a game character walking, jumping, and falling.</p>
-</li>
-<li>
-<p>Jolt JNI provides 2 implementations.</p>
-</li>
-<li>
-<p>To move a character, invoke <code>setLinearVelocity()</code>.</p>
+<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/ThousandCubes.java"><code>ThousandCubes</code></a>
+demonstrates stacking cubes and launching projectiles</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-<nav class="pagination">
-  <span class="prev"><a href="constraint.html">Constraints</a></span>
-  <span class="next"><a href="vehicle.html">Vehicles</a></span>
-</nav>
+<div class="sect1">
+<h2 id="_user_interface"><a class="anchor" href="#_user_interface"></a>User interface</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The demo apps are controlled primarily by keyboard input.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The descriptions below assume a keyboard with the "US" (QWERTY) layout.
+On keyboards with other layouts, the keys may be labeled differently.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For convenience, the mapping of keys to actions is partly standardized.
+In all demo apps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><kbd>.</kbd> and <kbd>Pause</kbd> toggle the simulation between running and paused,</p>
+</li>
+<li>
+<p><kbd>C</kbd> dumps the camera&#8217;s position to the console, and</p>
+</li>
+<li>
+<p><kbd>Esc</kbd> ends the app.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For camera control, all demo apps use <code>DragLMB</code> rotation mode.
+This means you can rotate the camera by dragging with the left mouse button.
+Furthermore:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><kbd>W</kbd> and <kbd>S</kbd> dolly the camera forward and back, respectively,</p>
+</li>
+<li>
+<p><kbd>A</kbd> and <kbd>D</kbd> dolly the camera left and right, respectively,</p>
+</li>
+<li>
+<p><kbd>Q</kbd> raises the camera, and</p>
+</li>
+<li>
+<p><kbd>Z</kbd> lowers the camera.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additional mappings are specific to each app:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In <code>NewtonsCradle</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><kbd>F1</kbd>, <kbd>1</kbd>, and <kbd>Numpad1</kbd> restart with a single ball</p>
+</li>
+<li>
+<p><kbd>F2</kbd>, <kbd>2</kbd>, and <kbd>Numpad2</kbd> restart with 2 balls</p>
+</li>
+<li>
+<p><kbd>F3</kbd>, <kbd>3</kbd>, and <kbd>Numpad3</kbd> restart with 3 balls</p>
+</li>
+<li>
+<p><kbd>F4</kbd>, <kbd>4</kbd>, and <kbd>Numpad4</kbd> restart with 4 balls</p>
+</li>
+<li>
+<p><kbd>F5</kbd>, <kbd>5</kbd>, and <kbd>Numpad5</kbd> restart with 4 balls</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In <code>Pachinko</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><kbd>F4</kbd>, <kbd>4</kbd>, and <kbd>Numpad4</kbd> restart with 4 rows of pins</p>
+</li>
+<li>
+<p><kbd>F5</kbd>, <kbd>5</kbd>, and <kbd>Numpad5</kbd> restart with 5 rows of pins</p>
+</li>
+<li>
+<p><kbd>F6</kbd>, <kbd>6</kbd>, and <kbd>Numpad6</kbd> restart with 6 rows of pins</p>
+</li>
+<li>
+<p><kbd>F7</kbd>, <kbd>7</kbd>, and <kbd>Numpad7</kbd> restart with 7 rows of pins</p>
+</li>
+<li>
+<p><kbd>F8</kbd>, <kbd>8</kbd>, and <kbd>Numpad8</kbd> restart with 8 rows of pins</p>
+</li>
+<li>
+<p><kbd>F9</kbd>, <kbd>9</kbd>, and <kbd>Numpad9</kbd> restart with 9 rows of pins</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In <code>ThousandCubes</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><kbd>E</kbd> launch a red ball</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">
   <div class="toc-menu"></div>
