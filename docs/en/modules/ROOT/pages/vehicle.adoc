@@ -3,8 +3,8 @@
 :page-pagination:
 :Project: Jolt JNI
 :Sport: Sport-Jolt
-:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 :url-enwiki: https://en.wikipedia.org/wiki
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
 A _physics vehicle_ is a physics object
 used to simulate a vehicle driving on (or gliding above) a smooth surface.
