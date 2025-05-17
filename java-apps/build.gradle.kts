@@ -38,6 +38,10 @@ tasks.register<JavaExec>("HelloCharacterVirtual") {
     description = "Runs the HelloCharacterVirtual tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloCharacterVirtual"
 }
+tasks.register<JavaExec>("HelloCloth") {
+    description = "Runs the HelloCloth tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloCloth"
+}
 tasks.register<JavaExec>("HelloConstraint") {
     description = "Runs the HelloConstraint tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloConstraint"
@@ -73,6 +77,10 @@ tasks.register<JavaExec>("HelloLimit") {
 tasks.register<JavaExec>("HelloMotor") {
     description = "Runs the HelloMotor tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloMotor"
+}
+tasks.register<JavaExec>("HelloPin") {
+    description = "Runs the HelloPin tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloPin"
 }
 tasks.register<JavaExec>("HelloPivot") {
     description = "Runs the HelloPivot tutorial app."
