@@ -37,6 +37,7 @@ import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.SoftBodyCreationSettings;
 import com.github.stephengold.joltjni.SoftBodySharedSettings;
+import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.Vertex;
 import com.github.stephengold.joltjni.VertexAttributes;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -45,7 +46,6 @@ import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
-import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.IndexBuffer;
 import com.github.stephengold.sportjolt.Mesh;
 import com.github.stephengold.sportjolt.VertexBuffer;
@@ -134,19 +134,20 @@ public class HelloSoftBody extends BasePhysicsApp {
 
         VertexBuffer locations = mesh.getPositions();
         int numVertices = locations.capacity() / 3;
+        Vec3 tmpLocation = new Vec3();
         Vertex tmpVertex = new Vertex();
         for (int i = 0; i < numVertices; ++i) {
-            Vec3Arg location = locations.get(3 * i, null);
-            tmpVertex.setPosition(location);
+            locations.get(3 * i, tmpLocation);
+            tmpVertex.setPosition(tmpLocation);
             sbss.addVertex(tmpVertex);
         }
 
         IndexBuffer indices = mesh.getIndexBuffer();
-        int numFaces = indices.capacity() / 3;
+        int numFaces = indices.capacity() / Mesh.vpt;
         Face tmpFace = new Face();
         for (int i = 0; i < numFaces; ++i) {
-            for (int j = 0; j < 3; ++j) {
-                int index = indices.get(3 * i + j);
+            for (int j = 0; j < Mesh.vpt; ++j) {
+                int index = indices.get(Mesh.vpt * i + j);
                 tmpFace.setVertex(j, index);
             }
             sbss.addFace(tmpFace);
@@ -160,9 +161,8 @@ public class HelloSoftBody extends BasePhysicsApp {
         sbss.optimize();
 
         RVec3Arg startLocation = new RVec3(0., 3., 0.);
-        int objectLayer = 0;
         SoftBodyCreationSettings sbcs = new SoftBodyCreationSettings(
-                sbss, startLocation, new Quat(), objectLayer);
+                sbss, startLocation, new Quat(), objLayerMoving);
         sbcs.setPressure(30_000f);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
