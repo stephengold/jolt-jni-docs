@@ -157,7 +157,7 @@ public class HelloPin extends BasePhysicsApp {
         ConstBody cloth = bi.createSoftBody(sbcs);
         bi.addBody(cloth, EActivation.Activate);
 
-        // Visualize the soft-body links and pin:
+        // Visualize the soft-body links and the pin:
         new LinksGeometry(cloth);
         new PinsGeometry(cloth);
     }
@@ -183,8 +183,8 @@ public class HelloPin extends BasePhysicsApp {
     }
 
     /**
-     * Generate a shared-settings object using the positions and faces in a
-     * TriangleList mesh.
+     * Generate a shared-settings object using the positions and faces in the
+     * specified TriangleList mesh.
      *
      * @param mesh the mesh to use (not null, unaffected)
      */

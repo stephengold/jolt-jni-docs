@@ -124,7 +124,7 @@ public class HelloSoftBody extends BasePhysicsApp {
     protected void populateSystem() {
         addBox();
 
-        // A mesh is used to generate the shape and topology of the soft body.
+        // A mesh is used to generate the shape and topology of the soft body:
         int numRefinementIterations = 3;
         boolean indexed = true;
         Mesh mesh = new IcosphereMesh(numRefinementIterations, indexed);
@@ -163,7 +163,9 @@ public class HelloSoftBody extends BasePhysicsApp {
         RVec3Arg startLocation = new RVec3(0., 3., 0.);
         SoftBodyCreationSettings sbcs = new SoftBodyCreationSettings(
                 sbss, startLocation, new Quat(), objLayerMoving);
-        sbcs.setPressure(30_000f);
+
+        // Configure the ball to resist deformation:
+        sbcs.setPressure(30_000f); // default=0
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         ConstBody body = bi.createSoftBody(sbcs);
@@ -180,7 +182,7 @@ public class HelloSoftBody extends BasePhysicsApp {
      * Add a large static cube to serve as a platform.
      */
     private void addBox() {
-        float halfExtent = 3f; // mesh units
+        float halfExtent = 3f;
         ConstShape shape = new BoxShape(halfExtent);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
