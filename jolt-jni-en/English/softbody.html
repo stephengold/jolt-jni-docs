@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>How Jolt JNI works :: The Jolt-JNI project</title>
-    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/implementation.html">
+    <title>An introduction to soft-body physics :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/softbody.html">
+    <link rel="prev" href="vehicle.html">
+    <link rel="next" href="build.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="How Jolt JNI works">
+<meta property="og:description" content="An introduction to soft-body physics">
 <meta property="og:title" content="The Jolt-JNI project">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -54,7 +56,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="implementation.html">Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -88,7 +90,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="vehicle.html">Vehicles</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="softbody.html">Soft bodies</a>
   </li>
 </ul>
@@ -220,202 +222,239 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="overview.html">The Jolt-JNI project</a></li>
-    <li><a href="implementation.html">Implementation</a></li>
+    <li>Library tutorials</li>
+    <li><a href="softbody.html">Soft bodies</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/implementation.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/softbody.adoc">Edit this page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">How Jolt JNI works</h1>
+<h1 class="page">An introduction to soft-body physics</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>For physics simulation and collision detection,
-Jolt JNI uses <a href="https://jrouwe.github.io/JoltPhysics">Jolt Physics</a>,
-a modern, open-source, 3-D physics simulator,
-released under <a href="https://github.com/jrouwe/JoltPhysics?tab=MIT-1-ov-file">an MIT license</a>.</p>
-</div>
-<div class="paragraph">
-<p>To enable efficient simulation of complex moving shapes,
-Jolt JNI also incorporates Khaled Mamou&#8217;s
-<a href="https://github.com/kmammou/v-hacd">Volumetric-Hierarchical Approximate Convex Decomposition (V-HACD) algorithm</a>,
-released under
-<a href="https://github.com/kmammou/v-hacd/blob/master/LICENSE">a 3-Clause BSD License</a>.</p>
+<p>While rope, cloth, and foam rubber
+can be simulated using many small rigid bodies,
+it is more convenient and efficient to treat them
+as a single body that can be deformed.
+To this end, Jolt JNI supports simulation of <em>soft bodies</em>
+in a manner roughly analogous to rigid bodies.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_native_libraries"><a class="anchor" href="#_native_libraries"></a>Native libraries</h2>
+<h2 id="_a_comparison_of_soft_bodies_and_rigid_bodies"><a class="anchor" href="#_a_comparison_of_soft_bodies_and_rigid_bodies"></a>A comparison of soft bodies and rigid bodies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jolt Physics and V-HACD are written in C&#43;&#43;, so Jolt JNI uses
-<a href="https://docs.oracle.com/en/java/javase/11/docs/specs/jni/index.html">the Java Native Interface (JNI)</a>
-to access their objects and methods.</p>
-</div>
-<div class="paragraph">
-<p>Before instantiating physics objects,
-a Jolt-JNI app must <a href="https://en.wikipedia.org/wiki/Dynamic_loading">dynamically load</a>
-a <em>native library</em> of this code,
-compiled for the <a href="https://en.wikipedia.org/wiki/Computing_platform">platform</a>
-on which the app is executing.</p>
-</div>
-<div class="paragraph">
-<p>The Jolt-JNI project publishes native libraries
-for 12 different platforms:</p>
+<p>Unlike a rigid body, a soft body&#8217;s collision shape is only a placeholder.
+The body is composed of point masses (called <em>vertices</em>) whose locations
+are specified in system coordinates.
+The body&#8217;s position, shape, and mass distribution
+are all derived from its vertices.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Windows (x86-64 with and without AVX2),</p>
+<p>To simulate rope, vertices can be connected in pairs (called <em>edges</em>).</p>
 </li>
 <li>
-<p>Linux (x86-64 with and without FMA, armhf, and aarch64),</p>
+<p>To simulate cloth,
+vertices can be connected to form triangles (called <em>faces</em>).</p>
 </li>
 <li>
-<p>macOS (x86-64 and ARM64), and</p>
-</li>
-<li>
-<p>Android (armeabi-v7a, arm64-v8a, x86, and x86_64).</p>
+<p>To simulate foam rubber,
+vertices can be connected to form tetrahedra (called <em>volumes</em>).</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
+<div class="paragraph">
+<p>The location of a soft body is defined as
+the center of its axis-aligned bounding box.</p>
+</div>
+<div class="paragraph">
+<p>Soft bodies collide only with rigid bodies;
+they do not collide with other soft bodies.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creation"><a class="anchor" href="#_creation"></a>Creation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To construct a soft body:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Instantiate and configure a <code>SoftBodySharedSettings</code> object.</p>
+</li>
+<li>
+<p>Add vertices to the shared-settings object using <code>addVertex()</code>.</p>
+</li>
+<li>
+<p>(Optional) Add faces to the shared settings using <code>addFace()</code>.</p>
+</li>
+<li>
+<p>Add edges and volumes to the shared settings
+using <code>addEdgeConstraint()</code> and <code>addVolumeConstraint()</code>.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Alternatively, you may use <code>createConstraints()</code>
+to generate appropriate edges for the pre-existing faces.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Optimize the shared settings using <code>optimize()</code>.</p>
+</li>
+<li>
+<p>Instantiate and configure a <code>SoftBodyCreationSettings</code> object
+that incorporates the shared settings.</p>
+</li>
+<li>
+<p>Create the body as you would a rigid body,
+only using <code>createSoftBody()</code> instead of <code>createBody()</code>.</p>
+</li>
+<li>
+<p>Like rigid bodies, soft bodies aren&#8217;t simulated
+unless they&#8217;re added to a physics system.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Even though it&#8217;s possible to append individual vertices, edges, and faces
+to a shared-settings object,
+it&#8217;s often more convenient to generate a 3-D mesh with the desired shape
+and then append that mesh to the shared settings.</p>
+</div>
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-32-bit and 64-bit versions of the same operating system
-count as distinct platforms!
+<div class="paragraph">
+<p>Meshes intended for graphics rendering often prove
+unsuitable for soft-body simulation.
+For instance, they may define multiple vertices at the same position
+or their edges/faces may be insufficiently subdivided.</p>
+</div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>For each platform, Jolt JNI builds 2 types of libraries:</p>
+<p>For a simple example of a soft body, see
+<a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloSoftBody.java">HelloSoftBody</a>.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_solver_iterations"><a class="anchor" href="#_solver_iterations"></a>Solver iterations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During each simulation step, Jolt Physics applies
+an iterative solver to update the vertex locations in each soft body.</p>
+</div>
+<div class="paragraph">
+<p>The number of iterations is stored in the body&#8217;s motion properties.
+You can improve accuracy by increasing the number of iterations:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SoftBodyMotionProperties sbmp = (SoftBodyMotionProperties)body.getMotionProperties();
+sbmp.setNumInterations(10);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_compliance"><a class="anchor" href="#_compliance"></a>Compliance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each edge acts like a spring with specific "rest length" and <em>compliance</em>.
+Compliance is the inverse of stiffness.</p>
+</div>
+<div class="paragraph">
+<p>To simulate an object that flexes easily (such as cloth), create a soft
+body with many faces and non-zero edge compliance.
+A simple way to do this is to configure the vertex attributes
+with the desired compliance and then
+let <code>createConstraints()</code> calculate the lengths:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SoftBodySharedSettings sbss = /* ... */;
+VertexAttributes[] vertexAttributes = /* ... */;
+float stiffness = /* ... */;
+for (int i = 0; i &lt; numVertices; ++i) {
+    vertexAttributes[i] = new VertexAttributes();
+    vertexAttributes[i].setShearCompliance(1f / stiffness);
+}
+sbss.createConstraints(vertexAttributes, EBendType.Distance);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For a simple example of cloth simulation, see
+<a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloCloth.java">HelloCloth</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mass_distribution"><a class="anchor" href="#_mass_distribution"></a>Mass distribution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a vertex is appended to a shared-settings object, it has mass=1 by default.
+To alter the mass of an existing vertex, use its <code>setInvMass()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SoftBodySharedSettings sbss = /* ... */;
+float mass = /* ... */;
+Vertex vertex = sbss.getVertex(vertexIndex);
+vertex.setInvMass(1f / mass);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a soft-body vertex has invMass=0,
+it becomes <em>pinned</em> (immovable, like a static rigid body).</p>
+</div>
+<div class="paragraph">
+<p>For a simple example of a pinned vertex, see
+<a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloPin.java">HelloPin.java</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulating_a_rope"><a class="anchor" href="#_simulating_a_rope"></a>Simulating a rope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloSoftRope.java">HelloSoftRope</a> is a Sport-Jolt app
+that demonstrates one way to simulate rope using a soft body.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>"Debug" (for development, debugging, and functional testing) and</p>
-</li>
-<li>
-<p>"Release" (for performance testing and production use).</p>
+<p>Soft bodies are a convenient and efficient way to simulate
+deformable objects.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Furthermore, native libraries come in 2 <em>flavors</em>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Sp" (using
-<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">single-precision</a> locations) and</p>
-</li>
-<li>
-<p>"Dp" (using
-<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision</a> locations).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>All these native libraries share a common API,
-so a single JVM library suffices.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_bodies_physics_systems_and_shapes"><a class="anchor" href="#_bodies_physics_systems_and_shapes"></a>Bodies, physics systems, and shapes</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Collision detection is organized around <em>bodies</em>
-that interact in the context of a <em>physics system</em>.</p>
-</div>
-<div class="paragraph">
-<p>Bodies can be <em>soft</em> (varying shape) or <em>rigid</em> (non-varying shape).
-Rigid bodies can be <em>moving</em> or <em>static</em> (non-moving).
-And moving bodies can be <em>dynamic</em> (driven by <a href="https://en.wikipedia.org/wiki/Force">forces</a>,
-<a href="https://en.wikipedia.org/wiki/Torque">torques</a>, and <a href="https://en.wikipedia.org/wiki/Impulse_(physics)">impulses</a>)
-or <em>kinematic</em> (driven directly by external calculations).</p>
-</div>
-<div class="paragraph">
-<p>Each rigid body references a <em>collision shape</em>
-that describes the shape of its surface.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_coordinate_systems_and_units"><a class="anchor" href="#_coordinate_systems_and_units"></a>Coordinate systems and units</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A body&#8217;s absolute location and orientation are quantified
-in <em>system coordinates</em>,
-based on a right-handed Cartesian coordinate system.</p>
-</div>
-<div class="paragraph">
-<p>Jolt JNI doesn&#8217;t require a particular "up" direction.
-However, the "up" direction for characters defaults to +Y,
-and the direction of gravity in a physics system defaults to -Y.</p>
-</div>
-<div class="paragraph">
-<p>Locations relative to a shape&#8217;s origin and subject to its rotation
-are quantified using <em>local coordinates</em>.</p>
-</div>
-<div class="paragraph">
-<p>Dimensions and distances are specified in meters.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_discrete_time_and_collision_detection"><a class="anchor" href="#_discrete_time_and_collision_detection"></a>Discrete time and collision detection</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Physics simulation occurs in discrete steps of short duration.</p>
-</div>
-<div class="paragraph">
-<p>For fast-moving bodies,
-Jolt JNI offers optional continuous collision detection (CCD)
-using linear casting.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_direct_buffers_garbage_collection_and_threading"><a class="anchor" href="#_direct_buffers_garbage_collection_and_threading"></a>Direct buffers, garbage collection, and threading</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Direct buffers used in Jolt JNI should have native byte order.</p>
-</div>
-<div class="paragraph">
-<p>All other native objects created by Jolt JNI are carefully tracked using
-weak references.
-Invocation of the <code>JoltPhysicsObject.startCleaner()</code> method
-starts a daemon thread.
-The thread&#8217;s purpose is to free any native objects
-owned by Java objects that have been garbage collected.</p>
-</div>
-<div class="paragraph">
-<p>Multi-threaded simulation is built into Jolt JNI.
-The number of worker threads is configured into a <code>JobSystem</code>
-that&#8217;s typically created during initialization.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_next_steps"><a class="anchor" href="#_next_steps"></a>Next steps</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For more detail about how Jolt Physics works, refer to
-<a href="https://jrouwe.github.io/JoltPhysics">the Jolt Physics website</a>.</p>
-</div>
-<div class="paragraph">
-<p>To gain hands-on experience,
-proceed to <a href="add.html" class="xref page">the first tutorial page</a>.</p>
-</div>
-</div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="vehicle.html">Vehicles</a></span>
+  <span class="next"><a href="build.html">Build procedures</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">
   <div class="toc-menu"></div>
