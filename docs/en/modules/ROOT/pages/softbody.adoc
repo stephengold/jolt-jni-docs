@@ -1,0 +1,143 @@
+= An introduction to soft-body physics
+:page-pagination:
+:Project: Jolt JNI
+:Sport: Sport-Jolt
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
+
+While rope, cloth, and foam rubber
+can be simulated using many small rigid bodies,
+it is more convenient and efficient to treat them
+as a single body that can be deformed.
+To this end, {Project} supports simulation of _soft bodies_
+in a manner roughly analogous to rigid bodies.
+
+
+== A comparison of soft bodies and rigid bodies
+
+Unlike a rigid body, a soft body's collision shape is only a placeholder.
+The body is composed of point masses (called _vertices_) whose locations
+are specified in system coordinates.
+The body's position, shape, and mass distribution
+are all derived from its vertices.
+
+* To simulate rope, vertices can be connected in pairs (called _edges_).
+* To simulate cloth,
+  vertices can be connected to form triangles (called _faces_).
+* To simulate foam rubber,
+  vertices can be connected to form tetrahedra (called _volumes_).
+
+The location of a soft body is defined as
+the center of its axis-aligned bounding box.
+
+Soft bodies collide only with rigid bodies;
+they do not collide with other soft bodies.
+
+
+== Creation
+
+To construct a soft body:
+
+. Instantiate and configure a `SoftBodySharedSettings` object.
+. Add vertices to the shared-settings object using `addVertex()`.
+. (Optional) Add faces to the shared settings using `addFace()`.
+. Add edges and volumes to the shared settings
+  using `addEdgeConstraint()` and `addVolumeConstraint()`.
+.. Alternatively, you may use `createConstraints()`
+   to generate appropriate edges for the pre-existing faces.
+. Optimize the shared settings using `optimize()`.
+. Instantiate and configure a `SoftBodyCreationSettings` object
+  that incorporates the shared settings.
+. Create the body as you would a rigid body,
+  only using `createSoftBody()` instead of `createBody()`.
+. Like rigid bodies, soft bodies aren't simulated
+  unless they're added to a physics system.
+
+Even though it's possible to append individual vertices, edges, and faces
+to a shared-settings object,
+it's often more convenient to generate a 3-D mesh with the desired shape
+and then append that mesh to the shared settings.
+
+[IMPORTANT]
+====
+Meshes intended for graphics rendering often prove
+unsuitable for soft-body simulation.
+For instance, they may define multiple vertices at the same position
+or their edges/faces may be insufficiently subdivided.
+====
+
+For a simple example of a soft body, see
+{url-tutorial}/HelloSoftBody.java[HelloSoftBody].
+
+
+== Solver iterations
+
+During each simulation step, Jolt Physics applies
+an iterative solver to update the vertex locations in each soft body.
+
+The number of iterations is stored in the body's motion properties.
+You can improve accuracy by increasing the number of iterations:
+
+[source,java]
+----
+SoftBodyMotionProperties sbmp = (SoftBodyMotionProperties)body.getMotionProperties();
+sbmp.setNumInterations(10);
+----
+
+
+== Compliance
+
+Each edge acts like a spring with specific "rest length" and _compliance_.
+Compliance is the inverse of stiffness.
+
+To simulate an object that flexes easily (such as cloth), create a soft
+body with many faces and non-zero edge compliance.
+A simple way to do this is to configure the vertex attributes
+with the desired compliance and then
+let `createConstraints()` calculate the lengths:
+
+[source,java]
+----
+SoftBodySharedSettings sbss = /* ... */;
+VertexAttributes[] vertexAttributes = /* ... */;
+float stiffness = /* ... */;
+for (int i = 0; i < numVertices; ++i) {
+    vertexAttributes[i] = new VertexAttributes();
+    vertexAttributes[i].setShearCompliance(1f / stiffness);
+}
+sbss.createConstraints(vertexAttributes, EBendType.Distance);
+----
+
+For a simple example of cloth simulation, see
+{url-tutorial}/HelloCloth.java[HelloCloth].
+
+
+== Mass distribution
+
+When a vertex is appended to a shared-settings object, it has mass=1 by default.
+To alter the mass of an existing vertex, use its `setInvMass()` method:
+
+[source,java]
+----
+SoftBodySharedSettings sbss = /* ... */;
+float mass = /* ... */;
+Vertex vertex = sbss.getVertex(vertexIndex);
+vertex.setInvMass(1f / mass);
+----
+
+If a soft-body vertex has invMass=0,
+it becomes _pinned_ (immovable, like a static rigid body).
+
+For a simple example of a pinned vertex, see
+{url-tutorial}/HelloPin.java[HelloPin.java].
+
+
+== Simulating a rope
+
+{url-tutorial}/HelloSoftRope.java[HelloSoftRope] is a {Sport} app
+that demonstrates one way to simulate rope using a soft body.
+
+
+== Summary
+
+* Soft bodies are a convenient and efficient way to simulate
+  deformable objects.
