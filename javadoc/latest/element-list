@@ -1,0 +1,9 @@
+module:com.github.stephengold.joltjni
+com.github.stephengold.joltjni
+com.github.stephengold.joltjni.enumerate
+com.github.stephengold.joltjni.lambda
+com.github.stephengold.joltjni.operator
+com.github.stephengold.joltjni.readonly
+com.github.stephengold.joltjni.std
+com.github.stephengold.joltjni.template
+com.github.stephengold.joltjni.vhacd
