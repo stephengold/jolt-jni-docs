@@ -6,6 +6,7 @@
 /docs/build/
 /java-apps/build/
 
+/docs/*-javadoc.jar
 /node_modules/
 
 # JVM crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
