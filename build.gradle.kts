@@ -1,7 +1,7 @@
 // root-level Gradle script to build the jolt-jni-docs project
 
 plugins {
-    `base` // to add a "clean" task to the root project
+    base // to add a "clean" task to the root project
 }
 
 configurations.all {
