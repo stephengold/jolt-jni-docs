@@ -60,10 +60,9 @@ I welcome suggestions concerning the future development of {Project}.
 
 == Getting help
 
-A web tutorial with sample code is under development.
-
 For self-help, utilize
-the javadoc and
+xref:add.adoc[the tutorials],
+the javadoc, and
 https://github.com/stephengold/jolt-jni[the source code].
 
 For issues that are best handled privately, contact me by e-mail.
