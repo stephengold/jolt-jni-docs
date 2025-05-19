@@ -83,7 +83,7 @@ with illustrations and lists of key properties (explained below):
 {item} must be static
 |image:plane.png[height=160]
 
-|11. `RotatatedTranslatedShape`
+|11. `RotatedTranslatedShape`
 
 {item} decorated (non-convex) +
 {item} movable if inner shape is movable
