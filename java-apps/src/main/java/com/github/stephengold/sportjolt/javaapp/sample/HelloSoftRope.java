@@ -49,8 +49,10 @@ import com.github.stephengold.sportjolt.Topology;
 import com.github.stephengold.sportjolt.VertexBuffer;
 import com.github.stephengold.sportjolt.mesh.DividedLine;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
-import com.github.stephengold.sportjolt.physics.LinksGeometry;
+import com.github.stephengold.sportjolt.physics.EdgesGeometry;
 import com.github.stephengold.sportjolt.physics.PinsGeometry;
+import org.joml.Vector3f;
+import org.joml.Vector3fc;
 
 /**
  * A simple rope simulation using a soft body.
@@ -122,8 +124,8 @@ public class HelloSoftRope extends BasePhysicsApp {
     protected void populateSystem() {
         // Generate a subdivided line-segment mesh:
         int numSegments = 40;
-        Vec3 endPoint1 = new Vec3(0f, 4f, 0f);
-        Vec3 endPoint2 = new Vec3(2f, 4f, 2f);
+        Vector3fc endPoint1 = new Vector3f(0f, 4f, 0f);
+        Vector3fc endPoint2 = new Vector3f(2f, 4f, 2f);
         Mesh lineMesh = new DividedLine(endPoint1, endPoint2, numSegments);
 
         // Create a soft body and add it to the physics system:
@@ -150,7 +152,7 @@ public class HelloSoftRope extends BasePhysicsApp {
         bi.addBody(rope, EActivation.Activate);
 
         // Visualize the soft-body links and the pin:
-        new LinksGeometry(rope);
+        new EdgesGeometry(rope);
         new PinsGeometry(rope);
     }
     // *************************************************************************

@@ -188,7 +188,7 @@ public class HelloWalk extends BasePhysicsApp implements PhysicsTickListener {
         character.postSimulation(maxSeparation);
 
         RVec3Arg location = character.getPosition();
-        cam.setLocation(location.toVec3());
+        cam.setLocation(location);
     }
 
     /**

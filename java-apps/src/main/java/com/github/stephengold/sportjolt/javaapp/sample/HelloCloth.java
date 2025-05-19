@@ -51,7 +51,7 @@ import com.github.stephengold.sportjolt.Topology;
 import com.github.stephengold.sportjolt.VertexBuffer;
 import com.github.stephengold.sportjolt.mesh.ClothGrid;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
-import com.github.stephengold.sportjolt.physics.LinksGeometry;
+import com.github.stephengold.sportjolt.physics.EdgesGeometry;
 
 /**
  * A simple cloth simulation using a soft body.
@@ -151,8 +151,8 @@ public class HelloCloth extends BasePhysicsApp {
         ConstBody cloth = bi.createSoftBody(sbcs);
         bi.addBody(cloth, EActivation.Activate);
 
-        // Visualize the soft-body links:
-        new LinksGeometry(cloth);
+        // Visualize the soft-body edges:
+        new EdgesGeometry(cloth);
     }
     // *************************************************************************
     // private methods

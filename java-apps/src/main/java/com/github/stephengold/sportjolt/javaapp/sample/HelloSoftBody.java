@@ -51,8 +51,8 @@ import com.github.stephengold.sportjolt.Mesh;
 import com.github.stephengold.sportjolt.VertexBuffer;
 import com.github.stephengold.sportjolt.mesh.IcosphereMesh;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
+import com.github.stephengold.sportjolt.physics.EdgesGeometry;
 import com.github.stephengold.sportjolt.physics.FacesGeometry;
-import com.github.stephengold.sportjolt.physics.LinksGeometry;
 
 /**
  * A simple example of a soft body colliding with a static rigid body.
@@ -173,7 +173,7 @@ public class HelloSoftBody extends BasePhysicsApp {
 
         // Visualize the soft body:
         new FacesGeometry(body);
-        new LinksGeometry(body);
+        new EdgesGeometry(body);
     }
     // *************************************************************************
     // private methods
