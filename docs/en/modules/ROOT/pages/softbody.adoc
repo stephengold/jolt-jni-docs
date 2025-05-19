@@ -80,7 +80,7 @@ You can improve accuracy by increasing the number of iterations:
 [source,java]
 ----
 SoftBodyMotionProperties sbmp = (SoftBodyMotionProperties)body.getMotionProperties();
-sbmp.setNumInterations(10);
+sbmp.setNumIterations(10);
 ----
 
 
