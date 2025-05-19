@@ -38,7 +38,7 @@ Thus `mShape` member data
 are accessed using `getShape()` and `setShape()` methods.
 
 {Project} has a different notion of camel case than Jolt Physics does:
-abbreviations such as "AA", "COM", "DOF", "ID", "TV", and "WV"
+abbreviations such as "AA", "COM", "DOF", "ID", "LRA", "TV", and "WV"
 are treated as single words.
 Thus:
 
@@ -46,6 +46,7 @@ Thus:
 * `SetPositionCOM()` becomes `setPositionCom()`
 * `SixDOFConstraint` becomes `SixDofConstraint`
 * `BodyID` becomes `BodyId`
+* `ELRAType` becomes `ELraType`
 * `WheelTV` becomes `WheelTv`
 * `WheelWV` becomes `WheelWv`
 
