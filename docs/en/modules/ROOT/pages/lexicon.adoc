@@ -233,8 +233,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |ContactSettings
  ConstContactSettings
 
-|{url-jolt}convex_hull_builder.html[JPH::ConvexHullBuider]
-|ConvexHullBuider
+|{url-jolt}convex_hull_builder.html[JPH::ConvexHullBuilder]
+|ConvexHullBuilder
 
 |{url-jolt}convex_hull_shape.html[JPH::ConvexHullShape]
 |ConvexHullShape
