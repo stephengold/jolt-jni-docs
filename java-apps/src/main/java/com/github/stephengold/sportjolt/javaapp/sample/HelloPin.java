@@ -133,7 +133,8 @@ public class HelloPin extends BasePhysicsApp {
         SoftBodySharedSettings sbss = generateSharedSettings(squareGrid);
 
         // Pin one of the corner vertices by zeroing its inverse mass:
-        Vertex cornerVertex = sbss.getVertex(0);
+        int vertexIndex = 0;
+        Vertex cornerVertex = sbss.getVertex(vertexIndex);
         cornerVertex.setInvMass(0f);
 
         int numVertices = sbss.countVertices();
