@@ -140,19 +140,8 @@ public class HelloCcd extends BasePhysicsApp {
                 = controlBall.getMotionProperties();
         assert controlProperties.getMotionQuality() == EMotionQuality.Discrete;
 
-        // Create a thin, static disc and add it to the system:
-        float discRadius = 2f;
-        float discThickness = 0.05f;
-        float discConvexRadius = 0.02f;
-        ConstShape discShape = new CylinderShape(
-                discThickness / 2f, discRadius, discConvexRadius);
-
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setPosition(0., 0., 0.);
-        bcs.setShape(discShape);
-        ConstBody disc = bi.createBody(bcs);
-        bi.addBody(disc, EActivation.DontActivate);
+        // Add an obstacle:
+        ConstBody disc = addDisc();
 
         // Visualize the shapes of all 3 bodies:
         visualizeShape(ccdBall);
@@ -172,5 +161,31 @@ public class HelloCcd extends BasePhysicsApp {
         // For clarity, simulate at 1/10th normal speed:
         float simulateSeconds = 0.1f * wallClockSeconds;
         super.updatePhysics(simulateSeconds);
+    }
+    // *************************************************************************
+    // private methods
+
+    /**
+     * Add a thin static disc to serve as an obstacle.
+     *
+     * @return the new object
+     */
+    private ConstBody addDisc() {
+        float discRadius = 2f;
+        float discThickness = 0.05f;
+        float discConvexRadius = 0.02f;
+        ConstShape discShape = new CylinderShape(
+                discThickness / 2f, discRadius, discConvexRadius);
+
+        BodyCreationSettings bcs = new BodyCreationSettings();
+        bcs.setMotionType(EMotionType.Static);
+        bcs.setObjectLayer(objLayerNonMoving);
+        bcs.setShape(discShape);
+
+        BodyInterface bi = physicsSystem.getBodyInterface();
+        ConstBody result = bi.createBody(bcs);
+        bi.addBody(result, EActivation.DontActivate);
+
+        return result;
     }
 }
