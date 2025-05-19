@@ -180,6 +180,7 @@ public class HelloCloth extends BasePhysicsApp {
      * TriangleList mesh.
      *
      * @param mesh the mesh to use (not null, unaffected)
+     * @return a new object
      */
     private static SoftBodySharedSettings generateSharedSettings(Mesh mesh) {
         assert mesh.topology() == Topology.TriangleList;
