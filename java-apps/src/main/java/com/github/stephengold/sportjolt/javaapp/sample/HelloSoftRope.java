@@ -37,7 +37,6 @@ import com.github.stephengold.joltjni.SoftBodyCreationSettings;
 import com.github.stephengold.joltjni.SoftBodySharedSettings;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.Vertex;
-import com.github.stephengold.joltjni.VertexAttributes;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.operator.Op;
 import com.github.stephengold.joltjni.readonly.ConstBody;
@@ -136,11 +135,6 @@ public class HelloSoftRope extends BasePhysicsApp {
         Vertex endVertex = sbss.getVertex(vertexIndex);
         endVertex.setInvMass(0f);
 
-        int numVertices = sbss.countVertices();
-        VertexAttributes[] vertexAttributes = new VertexAttributes[numVertices];
-        for (int i = 0; i < numVertices; ++i) {
-            vertexAttributes[i] = new VertexAttributes();
-        }
         sbss.optimize();
 
         RVec3Arg startLocation = new RVec3(0., 0., 0.);
