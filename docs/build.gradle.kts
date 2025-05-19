@@ -21,6 +21,10 @@ val jarVersion = "1.0.0"
 val jarName = artifactId + "-" + jarVersion + "-javadoc.jar"
 val downloadUrl = centralUrl + "/" + artifactId + "/" + jarVersion + "/" + jarName
 
+tasks.register<Delete>("cleanJavadocJar") {
+    delete(jarName)
+}
+
 tasks.register<Copy>("copyJavadocToSite") {
     dependsOn("downloadJavadocJar")
     from(zipTree(jarName))

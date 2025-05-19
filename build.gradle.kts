@@ -16,7 +16,7 @@ tasks.register("checkstyle") {
 // Register cleanup tasks:
 
 tasks.named("clean") {
-    dependsOn("cleanDocsBuild", "cleanNodeModules")
+    dependsOn("cleanDocsBuild", "cleanNodeModules", ":docs:cleanJavadocJar")
 }
 tasks.register<Delete>("cleanDocsBuild") {
     delete("docs/build")
