@@ -62,7 +62,7 @@ I welcome suggestions concerning the future development of {Project}.
 
 For self-help, utilize
 xref:add.adoc[the tutorials],
-the javadoc, and
+https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html[the javadoc], and
 https://github.com/stephengold/jolt-jni[the source code].
 
 For issues that are best handled privately, contact me by e-mail.
