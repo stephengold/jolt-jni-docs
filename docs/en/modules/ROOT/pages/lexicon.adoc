@@ -2,6 +2,7 @@
 :page-pagination:
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
+:url-api: https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-jolt: https://jrouwe.github.io/JoltPhysics/class_
 
@@ -64,171 +65,171 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{ProjectAdj} classes and interfaces
 
 |{url-jolt}a_a_box.html[JPH::AABox]
-|AaBox
- ConstAaBox
+|{url-api}/AaBox.html[AaBox]
+ {url-api}/readonly/ConstAaBox.html[ConstAaBox]
 
 |{url-jolt}body.html[JPH::Body]
-|Body
- ConstBody
+|{url-api}/Body.html[Body]
+ {url-api}/readonly/ConstBody.html[ConstBody]
 
 |{url-jolt}_body_creation_settings.html[JPH::BodyCreationSettings]
-|BodyCreationSettings
- ConstBodyCreationSettings
+|{url-api}/BodyCreationSettings.html[BodyCreationSettings]
+ {url-api}/readonly/ConstBodyCreationSettings.html[ConstBodyCreationSettings]
 
 |{url-jolt}body_filter.html[JPH::BodyFilter]
-|BodyFilter
+|{url-api}/BodyFilter.html[BodyFilter]
 
 |{url-jolt}body_interface.html[JPH::BodyInterface]
-|BodyInterface
+|{url-api}/BodyInterface.html[BodyInterface]
 
 |{url-jolt}body_lock_interface.html[JPH::BodyLockInterface]
-|BodyLockInterface
+|{url-api}/BodyLockInterface.html[BodyLockInterface]
 
 |{url-jolt}body_lock_interface_locking.html[JPH::BodyLockInterfaceLocking]
-|BodyLockInterfaceLocking
+|{url-api}/BodyLockInterfaceLocking.html[BodyLockInterfaceLocking]
 
 |{url-jolt}body_lock_interface_no_lock.html[JPH::BodyLockInterfaceNoLock]
-|BodyLockInterfaceNoLock
+|{url-api}/BodyLockInterfaceNoLock.html[BodyLockInterfaceNoLock]
 
 |{url-jolt}body_lock_read.html[JPH::BodyLockRead]
-|BodyLockRead
+|{url-api}/BodyLockRead.html[BodyLockRead]
 
 |{url-jolt}body_lock_write.html[JPH::BodyLockWrite]
-|BodyLockWrite
+|{url-api}/BodyLockWrite.html[BodyLockWrite]
 
 |{url-jolt}body_manager.html[JPH::BodyManager]
-|BodyManager
+|{url-api}/BodyManager.html[BodyManager]
 
 |{url-jolt}box_shape.html[JPH::BoxShape]
-|BoxShape
+|{url-api}/BoxShape.html[BoxShape]
 
 |{url-jolt}box_shape_settings.html[JPH::BoxShapeSettings]
-|BoxShapeSettings
+|{url-api}/BoxShapeSettings.html[BoxShapeSettings]
 
 |{url-jolt}broad_phase.html[JPH::BroadPhase]
-|BroadPhase
+|{url-api}/BroadPhase.html[BroadPhase]
 
 |{url-jolt}broad_phase_brute_force.html[JPH::BroadPhaseBruteForce]
-|BroadPhaseBruteForce
+|{url-api}/BroadPhaseBruteForce.html[BroadPhaseBruteForce]
 
 |{url-jolt}broad_phase_cast_result.html[JPH::BroadPhaseCastResult]
-|BroadPhaseCastResult
+|{url-api}/BroadPhaseCastResult.html[BroadPhaseCastResult]
 
 |{url-jolt}broad_phase_layer_filter.html[JPH::BroadPhaseLayerFilter]
-|BroadPhaseLayerFilter
+|{url-api}/BroadPhaseLayerFilter.html[BroadPhaseLayerFilter]
 
 |{url-jolt}broad_phase_layer_interface.html[JPH::BroadPhaseLayerInterface]
-|BroadPhaseLayerInterface
- ConstBroadPhaseLayerInterface
+|{url-api}/BroadPhaseLayerInterface.html[BroadPhaseLayerInterface]
+ {url-api}/readonly/ConstBroadPhaseLayerInterface.html[ConstBroadPhaseLayerInterface]
 
 |{url-jolt}broad_phase_layer_interface_table.html[JPH::BroadPhaseLayerInterfaceTable]
-|BroadPhaseLayerInterfaceTable
+|{url-api}/BroadPhaseLayerInterfaceTable.html[BroadPhaseLayerInterfaceTable]
 
 |{url-jolt}broad_phase_quad_tree.html[JPH::BroadPhaseQuadTree]
-|BroadPhaseQuadTree
+|{url-api}/BroadPhaseQuadTree.html[BroadPhaseQuadTree]
 
 |{url-jolt}broad_phase_query.html[JPH::BroadPhaseQuery]
-|BroadPhaseQuery
+|{url-api}/BroadPhaseQuery.html[BroadPhaseQuery]
 
 |{url-jolt}capsule_shape.html[JPH::CapsuleShape]
-|CapsuleShape
+|{url-api}/CapsuleShape.html[CapsuleShape]
 
 |{url-jolt}capsule_shape_settings.html[JPH::CapsuleShapeSettings]
-|CapsuleShapeSettings
+|{url-api}/CapsuleShapeSettings.html[CapsuleShapeSettings]
 
 |{url-jolt}character.html[JPH::Character]
-|Character
- ConstCharacter
- CharacterRef
- CharacterRefC
+|{url-api}/Character.html[Character]
+ {url-api}/readonly/ConstCharacter.html[ConstCharacter]
+ {url-api}/CharacterRef.html[CharacterRef]
+ {url-api}/CharacterRefC.html[CharacterRefC]
 
 |{url-jolt}character_base.html[JPH::CharacterBase]
-|CharacterBase
- ConstCharacterBase
+|{url-api}/CharacterBase.html[CharacterBase]
+ {url-api}/readonly/ConstCharacterBase.html[ConstCharacterBase]
 
 |{url-jolt}character_base_settings.html[JPH::CharacterBaseSettings]
-|CharacterBaseSettings
- ConstCharacterBaseSettings
+|{url-api}/CharacterBaseSettings.html[CharacterBaseSettings]
+ {url-api}/readonly/ConstCharacterBaseSettings.html[ConstCharacterBaseSettings]
 
 |{url-jolt}character_contact_listener.html[JPH::CharacterContactListener]
-|CharacterContactListener
+|{url-api}/CharacterContactListener.html[CharacterContactListener]
 
 |{url-jolt}character_contact_settings.html[JPH::CharacterContactSettings]
-|CharacterContactSettings
+|{url-api}/CharacterContactSettings.html[CharacterContactSettings]
 
 |{url-jolt}character_settings.html[JPH::CharacterSettings]
-|CharacterSettings
- ConstCharacterSettings
- CharacterSettingsRef
+|{url-api}/CharacterSettings.html[CharacterSettings]
+ {url-api}/readonly/ConstCharacterSettings.html[ConstCharacterSettings]
+ {url-api}/CharacterSettingsRef.html[CharacterSettingsRef]
 
 |{url-jolt}character_virtual.html[JPH::CharacterVirtual]
-|CharacterVirtual
- ConstCharacterVirtual
- CharacterVirtualRef
- CharacterVirtualRefC
+|{url-api}/CharacterVirtual.html[CharacterVirtual]
+ {url-api}/readonly/ConstCharacterVirtual.html[ConstCharacterVirtual]
+ {url-api}/CharacterVirtualRef.html[CharacterVirtualRef]
+ {url-api}/CharacterVirtualRefC.html[CharacterVirtualRefC]
 
 |{url-jolt}character_virtual_settings.html[JPH::CharacterVirtualSettings]
-|CharacterVirtualSettings
- ConstCharacterVirtualSettings
- CharacterVirtualSettingsRef
+|{url-api}/CharacterVirtualSettings.html[CharacterVirtualSettings]
+ {url-api}/readonly/ConstCharacterVirtualSettings.html[ConstCharacterVirtualSettings]
+ {url-api}/CharacterVirtualSettingsRef.html[CharacterVirtualSettingsRef]
 
 |{url-jolt}character_vs_character_collision.html[JPH::CharacterVsCharacterCollision]
-|CharacterVsCharacterCollision
+|{url-api}/CharacterVsCharacterCollision.html[CharacterVsCharacterCollision]
 
 |{url-jolt}character_vs_character_collision_simple.html[JPH::CharacterVsCharacterCollisionSimple]
-|CharacterVsCharacterCollisionSimple
+|{url-api}/CharacterVsCharacterCollisionSimple.html[CharacterVsCharacterCollisionSimple]
 
 |{url-jolt}collide_point_result.html[JPH::CollidePointResult]
-|CollidePointResult
+|{url-api}/CollidePointResult.html[CollidePointResult]
 
 |{url-jolt}collide_settings_base.html[JPH::CollideSettingsBase]
-|CollideSettingsBase
+|{url-api}/CollideSettingsBase.html[CollideSettingsBase]
 
 |{url-jolt}collide_shape_result.html[JPH::CollideShapeResult]
-|CollideShapeResult
+|{url-api}/CollideShapeResult.html[CollideShapeResult]
 
 |{url-jolt}collide_shape_settings.html[JPH::CollideShapeSettings]
-|CollideShapeSettings
+|{url-api}/CollideShapeSettings.html[CollideShapeSettings]
 
 |{url-jolt}collision_dispatch.html[JPH::CollisionDispatch]
-|CollisionDispatch
+|{url-api}/CollisionDispatch.html[CollisionDispatch]
 
 |{url-jolt}collision_group.html[JPH::CollisionGroup]
-|CollisionGroup
- ConstCollisionGroup
+|{url-api}/CollisionGroup.html[CollisionGroup]
+ {url-api}/readonly/ConstCollisionGroup.html[ConstCollisionGroup]
 
 |{url-jolt}color.html[JPH::Color]
-|Color
- ConstColor
+|{url-api}/Color.html[Color]
+ {url-api}/readonly/ConstColor.html[ConstColor]
 
 |{url-jolt}compound_shape.html[JPH::CompoundShape]
-|CompoundShape
+|{url-api}/CompoundShape.html[CompoundShape]
 
 |{url-jolt}compound_shape_settings.html[JPH::CompoundShapeSettings]
-|CompoundShapeSettings
+|{url-api}/CompoundShapeSettings.html[CompoundShapeSettings]
 
 |{url-jolt}cone_constraint.html[JPH::ConeConstraint]
-|ConeConstraint
+|{url-api}/ConeConstraint.html[ConeConstraint]
 
 |{url-jolt}cone_constraint_settings.html[JPH::ConeConstraintSettings]
-|ConeConstraintSettings
+|{url-api}/ConeConstraintSettings.html[ConeConstraintSettings]
 
 |{url-jolt}constraint.html[JPH::Constraint]
-|Constraint
- ConstConstraint
- ConstraintRef
+|{url-api}/Constraint.html[Constraint]
+ {url-api}/readonly/ConstConstraint.html[ConstConstraint]
+ {url-api}/ConstraintRef.html[ConstraintRef]
 
 |{url-jolt}constraint_settings.html[JPH::ConstraintSettings]
-|ConstraintSettings
- ConstConstraintSettings
- ConstraintSettingsRef
+|{url-api}/ConstraintSettings.html[ConstraintSettings]
+ {url-api}/readonly/ConstConstraintSettings.html[ConstConstraintSettings]
+ {url-api}/ConstraintSettingsRef.html[ConstraintSettingsRef]
 
 |{url-jolt}contact_listener.html[JPH::ContactListener]
-|ContactListener
+|{url-api}/ContactListener.html[ContactListener]
 
 |{url-jolt}contact_manifold.html[JPH::ContactManifold]
-|ContactManifold
- ConstContactManifold
+|{url-api}/ContactManifold.html[ContactManifold]
+ {url-api}/readonly/ConstContactManifold.html[ConstContactManifold]
 
 |{url-jolt}contact_settings.html[JPH::ContactSettings]
 |ContactSettings
