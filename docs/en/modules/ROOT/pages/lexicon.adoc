@@ -272,9 +272,6 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}default_broad_phase_layer_filter.html[JPH::DefaultBroadPhaseLayerFilter]
 |{url-api}/DefaultBroadPhaseLayerFilter.html[DefaultBroadPhaseLayerFilter]
 
-|{url-jolt}default_broad_phase_layer_filter.html[JPH::DefaultBroadPhaseLayerFilter]
-|DefaultBroadPhaseLayerFilter
-
 |{url-jolt}default_object_layer_filter.html[JPH::DefaultObjectLayerFilter]
 |{url-api}/DefaultObjectLayerFilter.html[DefaultObjectLayerFilter]
 
@@ -518,9 +515,6 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}rotated_translated_shape.html[JPH::RotatedTranslatedShape]
 |{url-api}/RotatedTranslatedShape.html[RotatedTranslatedShape]
-
-|{url-jolt}rotated_translated_shape.html[JPH::RotatedTranslatedShapeSettings]
-|RotatedTranslatedShapeSettings
 
 |{url-jolt}r_ray_cast.html[JPH::RRayCast]
 |{url-api}/RRayCast.html[RRayCast]
