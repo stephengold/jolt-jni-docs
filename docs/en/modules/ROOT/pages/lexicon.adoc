@@ -494,6 +494,12 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/Quat.html[Quat]
  {url-api}/readonly/QuatArg.html[QuatArg]
 
+|{url-jolt}r_ray_cast.html[JPH::RRayCast]
+|{url-api}/RRayCast.html[RRayCast]
+
+|{url-jolt}r_shape_cast.html[JPH::RShapeCast]
+|{url-api}/RShapeCast.html[RShapeCast]
+
 |{url-jolt}rack_and_pinion_constraint.html[JPH::RackAndPinionConstraint]
 |{url-api}/RackAndPinionConstraint.html[RackAndPinionConstraint]
 
@@ -522,12 +528,6 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}rotated_translated_shape_settings.html[JPH::RotatedTranslatedShapeSettings]
 |{url-api}/RotatedTranslatedShapeSettings.html[RotatedTranslatedShapeSettings]
-
-|{url-jolt}r_ray_cast.html[JPH::RRayCast]
-|{url-api}/RRayCast.html[RRayCast]
-
-|{url-jolt}r_shape_cast.html[JPH::RShapeCast]
-|{url-api}/RShapeCast.html[RShapeCast]
 
 |{url-jolt}scaled_shape.html[JPH::ScaledShape]
 |{url-api}/ScaledShape.html[ScaledShape]
