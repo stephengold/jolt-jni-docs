@@ -190,6 +190,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}collide_shape_result.html[JPH::CollideShapeResult]
 |{url-api}/CollideShapeResult.html[CollideShapeResult]
+ {url-api}/readonly/ConstCollideShapeResult.html[ConstCollideShapeResult]
 
 |{url-jolt}collide_shape_settings.html[JPH::CollideShapeSettings]
 |{url-api}/CollideShapeSettings.html[CollideShapeSettings]
@@ -669,6 +670,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}sub_shape_i_d_pair.html[JPH::SubShapeIDPair]
 |{url-api}/SubShapeIdPair.html[SubShapeIdPair]
+ {url-api}/readonly/ConstSubShapeIdPair.html[ConstSubShapeIdPair]
 
 |{url-jolt}swing_twist_constraint.html[JPH::SwingTwistConstraint]
 |{url-api}/SwingTwistConstraint.html[SwingTwistConstraint]
@@ -730,6 +732,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}u_vec4.html[JPH::UVec4]
 |{url-api}/UVec4.html[UVec4]
+ {url-api}/readonly/UVec4Arg.html[UVec4Arg]
 
 |{url-jolt}vec3.html[JPH::Vec3]
 |{url-api}/Vec3.html[Vec3]
@@ -795,6 +798,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}wheel_settings.html[JPH::WheelSettings]
 |{url-api}/WheelSettings.html[WheelSettings]
+ {url-api}/readonly/ConstWheelSettings.html[ConstWheelSettings]
 
 |{url-jolt}wheel_settings_t_v.html[JPH::WheelSettingsTV]
 |{url-api}/WheelSettingsTv.html[WheelSettingsTv]
