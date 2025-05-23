@@ -72,6 +72,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/Body.html[Body]
  {url-api}/readonly/ConstBody.html[ConstBody]
 
+|{url-jolt}body_activation_listener.html[JPH::BodyActivationListener]
+|{url-api}/BodyActivationListener.html[BodyActivationListener]
+
 |{url-jolt}body_creation_settings.html[JPH::BodyCreationSettings]
 |{url-api}/BodyCreationSettings.html[BodyCreationSettings]
  {url-api}/readonly/ConstBodyCreationSettings.html[ConstBodyCreationSettings]
@@ -515,6 +518,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}rotated_translated_shape.html[JPH::RotatedTranslatedShape]
 |{url-api}/RotatedTranslatedShape.html[RotatedTranslatedShape]
+
+|{url-jolt}rotated_translated_shape_settings.html[JPH::RotatedTranslatedShapeSettings]
+|{url-api}/RotatedTranslatedShapeSettings.html[RotatedTranslatedShapeSettings]
 
 |{url-jolt}r_ray_cast.html[JPH::RRayCast]
 |{url-api}/RRayCast.html[RRayCast]
