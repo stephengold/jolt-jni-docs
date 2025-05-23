@@ -352,10 +352,6 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}job_system_with_barrier.html[JPH::JobSystemWithBarrier]
 |{url-api}/JobSystemWithBarrier.html[JobSystemWithBarrier]
 
-|{url-jolt}joint.html[JPH::Joint]
-|{url-api}/Joint.html[Joint]
- {url-api}/readonly/ConstJoint.html[ConstJoint]
-
 |{url-jolt}mass_properties.html[JPH::MassProperties]
 |{url-api}/MassProperties.html[MassProperties]
  {url-api}/readonly/ConstMassProperties.html[ConstMassProperties]
