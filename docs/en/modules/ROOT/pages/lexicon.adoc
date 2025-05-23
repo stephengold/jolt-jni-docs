@@ -5,6 +5,7 @@
 :url-api: https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-jolt: https://jrouwe.github.io/JoltPhysics/class_
+:url-jolt-struct: https://jrouwe.github.io/JoltPhysics/struct_
 
 When reading documentation for Jolt Physics,
 it may help to understand the differences
@@ -456,7 +457,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/PhysicsScene.html[PhysicsScene]
  {url-api}/PhysicsSceneRef.html[PhysicsSceneRef]
 
-|{url-jolt}physics_settings.html[JPH::PhysicsSettings]
+|{url-jolt-struct}physics_settings.html[JPH::PhysicsSettings]
 |{url-api}/PhysicsSettings.html[PhysicsSettings]
 
 |{url-jolt}physics_step_listener.html[JPH::PhysicsStepListener]
@@ -494,10 +495,10 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/Quat.html[Quat]
  {url-api}/readonly/QuatArg.html[QuatArg]
 
-|{url-jolt}r_ray_cast.html[JPH::RRayCast]
+|{url-jolt-struct}r_ray_cast.html[JPH::RRayCast]
 |{url-api}/RRayCast.html[RRayCast]
 
-|{url-jolt}r_shape_cast.html[JPH::RShapeCast]
+|{url-jolt-struct}r_shape_cast.html[JPH::RShapeCast]
 |{url-api}/RShapeCast.html[RShapeCast]
 
 |{url-jolt}rack_and_pinion_constraint.html[JPH::RackAndPinionConstraint]
@@ -514,7 +515,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/RagdollSettings.html[RagdollSettings]
  {url-api}/RagdollSettingsRef.html[RagdollSettingsRef]
 
-|{url-jolt}ray_cast.html[JPH::RayCast]
+|{url-jolt-struct}ray_cast.html[JPH::RayCast]
 |{url-api}/RayCast.html[RayCast]
 
 |{url-jolt}ray_cast_result.html[JPH::RayCastResult]
