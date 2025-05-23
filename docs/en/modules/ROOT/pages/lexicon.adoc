@@ -72,7 +72,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/Body.html[Body]
  {url-api}/readonly/ConstBody.html[ConstBody]
 
-|{url-jolt}_body_creation_settings.html[JPH::BodyCreationSettings]
+|{url-jolt}body_creation_settings.html[JPH::BodyCreationSettings]
 |{url-api}/BodyCreationSettings.html[BodyCreationSettings]
  {url-api}/readonly/ConstBodyCreationSettings.html[ConstBodyCreationSettings]
 
@@ -232,588 +232,588 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/readonly/ConstContactManifold.html[ConstContactManifold]
 
 |{url-jolt}contact_settings.html[JPH::ContactSettings]
-|ContactSettings
- ConstContactSettings
+|{url-api}/ContactSettings.html[ContactSettings]
+ {url-api}/readonly/ConstContactSettings.html[ConstContactSettings]
 
 |{url-jolt}convex_hull_builder.html[JPH::ConvexHullBuilder]
-|ConvexHullBuilder
+|{url-api}/ConvexHullBuilder.html[ConvexHullBuilder]
 
 |{url-jolt}convex_hull_shape.html[JPH::ConvexHullShape]
-|ConvexHullShape
+|{url-api}/ConvexHullShape.html[ConvexHullShape]
 
 |{url-jolt}convex_hull_shape_settings.html[JPH::ConvexHullShapeSettings]
-|ConvexHullShapeSettings
+|{url-api}/ConvexHullShapeSettings.html[ConvexHullShapeSettings]
 
 |{url-jolt}convex_shape.html[JPH::ConvexShape]
-|ConvexShape
+|{url-api}/ConvexShape.html[ConvexShape]
 
 |{url-jolt}convex_shape_settings.html[JPH::ConvexShapeSettings]
-|ConvexShapeSettings
- ConstConvexShapeSettings
+|{url-api}/ConvexShapeSettings.html[ConvexShapeSettings]
+ {url-api}/readonly/ConstConvexShapeSettings.html[ConstConvexShapeSettings]
 
 |{url-jolt}cylinder_shape.html[JPH::CylinderShape]
-|CylinderShape
+|{url-api}/CylinderShape.html[CylinderShape]
 
 |{url-jolt}cylinder_shape_settings.html[JPH::CylinderShapeSettings]
-|CylinderShapeSettings
+|{url-api}/CylinderShapeSettings.html[CylinderShapeSettings]
 
 |{url-jolt}debug_renderer.html[JPH::DebugRenderer]
-|DebugRenderer
+|{url-api}/DebugRenderer.html[DebugRenderer]
 
 |{url-jolt}debug_renderer_recorder.html[JPH::DebugRendererRecorder]
-|DebugRendererRecorder
+|{url-api}/DebugRendererRecorder.html[DebugRendererRecorder]
 
 |{url-jolt}decorated_shape.html[JPH::DecoratedShape]
-|DecoratedShape
+|{url-api}/DecoratedShape.html[DecoratedShape]
 
 |{url-jolt}decorated_shape_settings.html[JPH::DecoratedShapeSettings]
-|DecoratedShapeSettings
+|{url-api}/DecoratedShapeSettings.html[DecoratedShapeSettings]
 
 |{url-jolt}default_broad_phase_layer_filter.html[JPH::DefaultBroadPhaseLayerFilter]
-|DefaultBroadPhaseLayerFilter
+|{url-api}/DefaultBroadPhaseLayerFilter.html[DefaultBroadPhaseLayerFilter]
 
 |{url-jolt}default_broad_phase_layer_filter.html[JPH::DefaultBroadPhaseLayerFilter]
 |DefaultBroadPhaseLayerFilter
 
 |{url-jolt}default_object_layer_filter.html[JPH::DefaultObjectLayerFilter]
-|DefaultObjectLayerFilter
+|{url-api}/DefaultObjectLayerFilter.html[DefaultObjectLayerFilter]
 
 |{url-jolt}distance_constraint.html[JPH::DistanceConstraint]
-|DistanceConstraint
+|{url-api}/DistanceConstraint.html[DistanceConstraint]
 
 |{url-jolt}distance_constraint_settings.html[JPH::DistanceConstraintSettings]
-|DistanceConstraintSettings
+|{url-api}/DistanceConstraintSettings.html[DistanceConstraintSettings]
 
 |{url-jolt}empty_shape.html[JPH::EmptyShape]
-|EmptyShape
+|{url-api}/EmptyShape.html[EmptyShape]
 
 |{url-jolt}empty_shape_settings.html[JPH::EmptyShapeSettings]
-|EmptyShapeSettings
+|{url-api}/EmptyShapeSettings.html[EmptyShapeSettings]
 
 |{url-jolt}fixed_constraint.html[JPH::FixedConstraint]
-|FixedConstraint
+|{url-api}/FixedConstraint.html[FixedConstraint]
 
 |{url-jolt}fixed_constraint_settings.html[JPH::FixedConstraintSettings]
-|FixedConstraintSettings
+|{url-api}/FixedConstraintSettings.html[FixedConstraintSettings]
 
 |{url-jolt}float2.html[JPH::Float2]
-|Float2
+|{url-api}/Float2.html[Float2]
 
 |{url-jolt}float3.html[JPH::Float3]
-|Float3
+|{url-api}/Float3.html[Float3]
 
 |{url-jolt}gear_constraint.html[JPH::GearConstraint]
-|GearConstraint
+|{url-api}/GearConstraint.html[GearConstraint]
 
 |{url-jolt}gear_constraint_settings.html[JPH::GearConstraintSettings]
-|GearConstraintSettings
+|{url-api}/GearConstraintSettings.html[GearConstraintSettings]
 
 |{url-jolt}group_filter.html[JPH::GroupFilter]
-|GroupFilter
- ConstGroupFilter
- GroupFilterRef
+|{url-api}/GroupFilter.html[GroupFilter]
+ {url-api}/readonly/ConstGroupFilter.html[ConstGroupFilter]
+ {url-api}/GroupFilterRef.html[GroupFilterRef]
 
 |{url-jolt}group_filter_table.html[JPH::GroupFilterTable]
-|GroupFilterTable
- GroupFilterTableRef
+|{url-api}/GroupFilterTable.html[GroupFilterTable]
+ {url-api}/GroupFilterTableRef.html[GroupFilterTableRef]
 
 |{url-jolt}height_field_shape.html[JPH::HeightFieldShape]
-|HeightFieldShape
+|{url-api}/HeightFieldShape.html[HeightFieldShape]
 
 |{url-jolt}height_field_shape_settings.html[JPH::HeightFieldShapeSettings]
-|HeightFieldShapeSettings
+|{url-api}/HeightFieldShapeSettings.html[HeightFieldShapeSettings]
 
 |{url-jolt}hinge_constraint.html[JPH::HingeConstraint]
-|HingeConstraint
+|{url-api}/HingeConstraint.html[HingeConstraint]
 
 |{url-jolt}hinge_constraint_settings.html[JPH::HingeConstraintSettings]
-|HingeConstraintSettings
+|{url-api}/HingeConstraintSettings.html[HingeConstraintSettings]
 
 |{url-jolt}ignore_multiple_bodies_filter.html[JPH::IgnoreMultipleBodiesFilter]
-|IgnoreMultipleBodiesFilter
+|{url-api}/IgnoreMultipleBodiesFilter.html[IgnoreMultipleBodiesFilter]
 
 |{url-jolt}indexed_triangle.html[JPH::IndexedTriangle]
-|IndexedTriangle
+|{url-api}/IndexedTriangle.html[IndexedTriangle]
 
 |{url-jolt}indexed_triangle_no_material.html[JPH::IndexedTriangleNoMaterial]
-|IndexedTriangleNoMaterial
+|{url-api}/IndexedTriangleNoMaterial.html[IndexedTriangleNoMaterial]
 
 |{url-jolt}job_system.html[JPH::JobSystem]
-|JobSystem
+|{url-api}/JobSystem.html[JobSystem]
 
 |{url-jolt}job_system_single_threaded.html[JPH::JobSystemSingleThreaded]
-|JobSystemSingleThreaded
+|{url-api}/JobSystemSingleThreaded.html[JobSystemSingleThreaded]
 
 |{url-jolt}job_system_thread_pool.html[JPH::JobSystemThreadPool]
-|JobSystemThreadPool
+|{url-api}/JobSystemThreadPool.html[JobSystemThreadPool]
 
 |{url-jolt}job_system_with_barrier.html[JPH::JobSystemWithBarrier]
-|JobSystemWithBarrier
+|{url-api}/JobSystemWithBarrier.html[JobSystemWithBarrier]
 
 |{url-jolt}joint.html[JPH::Joint]
-|Joint
- ConstJoint
+|{url-api}/Joint.html[Joint]
+ {url-api}/readonly/ConstJoint.html[ConstJoint]
 
 |{url-jolt}mass_properties.html[JPH::MassProperties]
-|MassProperties
- ConstMassProperties
+|{url-api}/MassProperties.html[MassProperties]
+ {url-api}/readonly/ConstMassProperties.html[ConstMassProperties]
 
 |{url-jolt}mat44.html[JPH::Mat44]
-|Mat44
- Mat44Arg
+|{url-api}/Mat44.html[Mat44]
+ {url-api}/readonly/Mat44Arg.html[Mat44Arg]
 
 |{url-jolt}mesh_shape.html[JPH::MeshShape]
-|MeshShape
+|{url-api}/MeshShape.html[MeshShape]
 
 |{url-jolt}mesh_shape_settings.html[JPH::MeshShapeSettings]
-|MeshShapeSettings
+|{url-api}/MeshShapeSettings.html[MeshShapeSettings]
 
 |{url-jolt}motion_properties.html[JPH::MotionProperties]
-|MotionProperties
- ConstMotionProperties
+|{url-api}/MotionProperties.html[MotionProperties]
+ {url-api}/readonly/ConstMotionProperties.html[ConstMotionProperties]
 
 |{url-jolt}motor_settings.html[JPH::MotorSettings]
-|MotorSettings
+|{url-api}/MotorSettings.html[MotorSettings]
 
 |{url-jolt}motorcycle_controller.html[JPH::MotorcycleController]
-|MotorcycleController
+|{url-api}/MotorcycleController.html[MotorcycleController]
 
 |{url-jolt}motorcycle_controller_settings.html[JPH::MotorcycleControllerSettings]
-|MotorcycleControllerSettings
+|{url-api}/MotorcycleControllerSettings.html[MotorcycleControllerSettings]
 
 |{url-jolt}mutable_compound_shape.html[JPH::MutableCompoundShape]
-|MutableCompoundShape
+|{url-api}/MutableCompoundShape.html[MutableCompoundShape]
 
 |{url-jolt}mutable_compound_shape_settings.html[JPH::MutableCompoundShapeSettings]
-|MutableCompoundShapeSettings
+|{url-api}/MutableCompoundShapeSettings.html[MutableCompoundShapeSettings]
 
 |{url-jolt}mutex.html[JPH::Mutex]
-|Mutex
+|{url-api}/Mutex.html[Mutex]
 
 |{url-jolt}narrow_phase_query.html[JPH::NarrowPhaseQuery]
-|NarrowPhaseQuery
+|{url-api}/NarrowPhaseQuery.html[NarrowPhaseQuery]
 
 |{url-jolt}non_copyable.html[JPH::NonCopyable]
-|NonCopyable
+|{url-api}/NonCopyable.html[NonCopyable]
 
 |{url-jolt}object_layer_filter.html[JPH::ObjectLayerFilter]
-|ObjectLayerFilter
+|{url-api}/ObjectLayerFilter.html[ObjectLayerFilter]
 
 |{url-jolt}object_layer_pair_filter.html[JPH::ObjectLayerPairFilter]
-|ObjectLayerPairFilter
- ConstObjectLayerPairFilter
+|{url-api}/ObjectLayerPairFilter.html[ObjectLayerPairFilter]
+ {url-api}/readonly/ConstObjectLayerPairFilter.html[ConstObjectLayerPairFilter]
 
 |{url-jolt}object_layer_pair_filter_table.html[JPH::ObjectLayerPairFilterTable]
-|ObjectLayerPairFilterTable
+|{url-api}/ObjectLayerPairFilterTable.html[ObjectLayerPairFilterTable]
 
 |{url-jolt}object_stream_in.html[JPH::ObjectStreamIn]
-|ObjectStreamIn
+|{url-api}/ObjectStreamIn.html[ObjectStreamIn]
 
 |{url-jolt}object_stream_out.html[JPH::ObjectStreamOut]
-|ObjectStreamOut
+|{url-api}/ObjectStreamOut.html[ObjectStreamOut]
 
 |{url-jolt}object_vs_broad_phase_layer_filter.html[JPH::ObjectVsBroadPhaseLayerFilter]
-|ObjectVsBroadPhaseLayerFilter
- ConstObjectVsBroadPhaseLayerFilter
+|{url-api}/ObjectVsBroadPhaseLayerFilter.html[ObjectVsBroadPhaseLayerFilter]
+ {url-api}/readonly/ConstObjectVsBroadPhaseLayerFilter.html[ConstObjectVsBroadPhaseLayerFilter]
 
 |{url-jolt}object_vs_broad_phase_layer_filter_table.html[JPH::ObjectVsBroadPhaseLayerFilterTable]
-|ObjectVsBroadPhaseLayerFilterTable
+|{url-api}/ObjectVsBroadPhaseLayerFilterTable.html[ObjectVsBroadPhaseLayerFilterTable]
 
 |{url-jolt}offset_center_of_mass_shape.html[JPH::OffsetCenterOfMassShape]
-|OffsetCenterOfMassShape
+|{url-api}/OffsetCenterOfMassShape.html[OffsetCenterOfMassShape]
 
 |{url-jolt}offset_center_of_mass_shape_settings.html[JPH::OffsetCenterOfMassShapeSettings]
-|OffsetCenterOfMassShapeSettings
+|{url-api}/OffsetCenterOfMassShapeSettings.html[OffsetCenterOfMassShapeSettings]
 
 |{url-jolt}oriented_box.html[JPH::OrientedBox]
-|OrientedBox
- ConstOrientedBox
+|{url-api}/OrientedBox.html[OrientedBox]
+ {url-api}/readonly/ConstOrientedBox.html[ConstOrientedBox]
 
 |{url-jolt}path_constraint.html[JPH::PathConstraint]
-|PathConstraint
+|{url-api}/PathConstraint.html[PathConstraint]
 
 |{url-jolt}path_constraint_path.html[JPH::PathConstraintPath]
-|PathConstraintPath
- PathConstraintPathRef
+|{url-api}/PathConstraintPath.html[PathConstraintPath]
+ {url-api}/PathConstraintPathRef.html[PathConstraintPathRef]
 
 |{url-jolt}path_constraint_path_hermite.html[JPH::PathConstraintPathHermite]
-|PathConstraintPathHermite
+|{url-api}/PathConstraintPathHermite.html[PathConstraintPathHermite]
 
 |{url-jolt}path_constraint_settings.html[JPH::PathConstraintSettings]
-|PathConstraintSettings
+|{url-api}/PathConstraintSettings.html[PathConstraintSettings]
 
 |{url-jolt}physics_material.html[JPH::PhysicsMaterial]
-|PhysicsMaterial
- ConstPhysicsMaterial
- PhysicsMaterialRef
- PhysicsMaterialRefC
+|{url-api}/PhysicsMaterial.html[PhysicsMaterial]
+ {url-api}/readonly/ConstPhysicsMaterial.html[ConstPhysicsMaterial]
+ {url-api}/PhysicsMaterialRef.html[PhysicsMaterialRef]
+ {url-api}/PhysicsMaterialRefC.html[PhysicsMaterialRefC]
 
 |{url-jolt}physics_material_simple.html[JPH::PhysicsMaterialSimple]
-|PhysicsMaterialSimple
+|{url-api}/PhysicsMaterialSimple.html[PhysicsMaterialSimple]
 
 |{url-jolt}physics_scene.html[JPH::PhysicsScene]
-|PhysicsScene
- PhysicsSceneRef
+|{url-api}/PhysicsScene.html[PhysicsScene]
+ {url-api}/PhysicsSceneRef.html[PhysicsSceneRef]
 
 |{url-jolt}physics_settings.html[JPH::PhysicsSettings]
-|PhysicsSettings
+|{url-api}/PhysicsSettings.html[PhysicsSettings]
 
 |{url-jolt}physics_step_listener.html[JPH::PhysicsStepListener]
-|PhysicsStepListener
+|{url-api}/PhysicsStepListener.html[PhysicsStepListener]
 
 |{url-jolt}physics_step_listener_context.html[JPH::PhysicsStepListenerContext]
-|PhysicsStepListenerContext
+|{url-api}/PhysicsStepListenerContext.html[PhysicsStepListenerContext]
 
 |{url-jolt}physics_system.html[JPH::PhysicsSystem]
-|PhysicsSystem
+|{url-api}/PhysicsSystem.html[PhysicsSystem]
 
 |{url-jolt}plane.html[JPH::Plane]
-|Plane
- ConstPlane
+|{url-api}/Plane.html[Plane]
+ {url-api}/readonly/ConstPlane.html[ConstPlane]
 
 |{url-jolt}plane_shape.html[JPH::PlaneShape]
-|PlaneShape
+|{url-api}/PlaneShape.html[PlaneShape]
 
 |{url-jolt}plane_shape_settings.html[JPH::PlaneShapeSettings]
-|PlaneShapeSettings
+|{url-api}/PlaneShapeSettings.html[PlaneShapeSettings]
 
 |{url-jolt}point_constraint.html[JPH::PointConstraint]
-|PointConstraint
+|{url-api}/PointConstraint.html[PointConstraint]
 
 |{url-jolt}point_constraint_settings.html[JPH::PointConstraintSettings]
-|PointConstraintSettings
+|{url-api}/PointConstraintSettings.html[PointConstraintSettings]
 
 |{url-jolt}pulley_constraint.html[JPH::PulleyConstraint]
-|PulleyConstraint
+|{url-api}/PulleyConstraint.html[PulleyConstraint]
 
 |{url-jolt}pulley_constraint_settings.html[JPH::PulleyConstraintSettings]
-|PulleyConstraintSettings
+|{url-api}/PulleyConstraintSettings.html[PulleyConstraintSettings]
 
 |{url-jolt}quat.html[JPH::Quat]
-|Quat
- QuatArg
+|{url-api}/Quat.html[Quat]
+ {url-api}/readonly/QuatArg.html[QuatArg]
 
 |{url-jolt}rack_and_pinion_constraint.html[JPH::RackAndPinionConstraint]
-|RackAndPinionConstraint
+|{url-api}/RackAndPinionConstraint.html[RackAndPinionConstraint]
 
 |{url-jolt}rack_and_pinion_constraint_settings.html[JPH::RackAndPinionConstraintSettings]
-|RackAndPinionConstraintSettings
+|{url-api}/RackAndPinionConstraintSettings.html[RackAndPinionConstraintSettings]
 
 |{url-jolt}ragdoll.html[JPH::Ragdoll]
-|Ragdoll
- RagdollRef
+|{url-api}/Ragdoll.html[Ragdoll]
+ {url-api}/RagdollRef.html[RagdollRef]
 
 |{url-jolt}ragdoll_settings.html[JPH::RagdollSettings]
-|RagdollSettings
- RagdollSettingsRef
+|{url-api}/RagdollSettings.html[RagdollSettings]
+ {url-api}/RagdollSettingsRef.html[RagdollSettingsRef]
 
 |{url-jolt}ray_cast.html[JPH::RayCast]
-|RayCast
+|{url-api}/RayCast.html[RayCast]
 
 |{url-jolt}ray_cast_result.html[JPH::RayCastResult]
-|RayCastResult
+|{url-api}/RayCastResult.html[RayCastResult]
 
 |{url-jolt}ray_cast_settings.html[JPH::RayCastSettings]
-|RayCastSettings
+|{url-api}/RayCastSettings.html[RayCastSettings]
 
 |{url-jolt}rotated_translated_shape.html[JPH::RotatedTranslatedShape]
-|RotatedTranslatedShape
+|{url-api}/RotatedTranslatedShape.html[RotatedTranslatedShape]
 
 |{url-jolt}rotated_translated_shape.html[JPH::RotatedTranslatedShapeSettings]
 |RotatedTranslatedShapeSettings
 
 |{url-jolt}r_ray_cast.html[JPH::RRayCast]
-|RRayCast
+|{url-api}/RRayCast.html[RRayCast]
 
 |{url-jolt}r_shape_cast.html[JPH::RShapeCast]
-|RShapeCast
+|{url-api}/RShapeCast.html[RShapeCast]
 
 |{url-jolt}scaled_shape.html[JPH::ScaledShape]
-|ScaledShape
+|{url-api}/ScaledShape.html[ScaledShape]
 
 |{url-jolt}scaled_shape_settings.html[JPH::ScaledShapeSettings]
-|ScaledShapeSettings
+|{url-api}/ScaledShapeSettings.html[ScaledShapeSettings]
 
 |{url-jolt}serializable_object.html[JPH::SerializableObject]
-|SerializableObject
+|{url-api}/SerializableObject.html[SerializableObject]
 
 |{url-jolt}shape.html[JPH::Shape]
-|Shape
- ConstShape
- ShapeRef
- ShapeRefC
+|{url-api}/Shape.html[Shape]
+ {url-api}/readonly/ConstShape.html[ConstShape]
+ {url-api}/ShapeRef.html[ShapeRef]
+ {url-api}/ShapeRefC.html[ShapeRefC]
 
 |{url-jolt}shape_cast_result.html[JPH::ShapeCastResult]
-|ShapeCastResult
+|{url-api}/ShapeCastResult.html[ShapeCastResult]
 
 |{url-jolt}shape_cast_settings.html[JPH::ShapeCastSettings]
-|ShapeCastSettings
+|{url-api}/ShapeCastSettings.html[ShapeCastSettings]
 
 |{url-jolt}shape_filter.html[JPH::ShapeFilter]
-|ShapeFilter
+|{url-api}/ShapeFilter.html[ShapeFilter]
 
 |{url-jolt}shape_settings.html[JPH::ShapeSettings]
-|ShapeSettings
- ConstShapeSettings
- ShapeSettingsRef
- ShapeSettingsRefC
+|{url-api}/ShapeSettings.html[ShapeSettings]
+ {url-api}/readonly/ConstShapeSettings.html[ConstShapeSettings]
+ {url-api}/ShapeSettingsRef.html[ShapeSettingsRef]
+ {url-api}/ShapeSettingsRefC.html[ShapeSettingsRefC]
 
 |{url-jolt}shared_mutex.html[JPH::SharedMutex]
-|SharedMutex
+|{url-api}/SharedMutex.html[SharedMutex]
 
 |{url-jolt}six_d_o_f_constraint.html[JPH::SixDOFConstraint]
-|SixDofConstraint
+|{url-api}/SixDofConstraint.html[SixDofConstraint]
 
 |{url-jolt}six_d_o_f_constraint_settings.html[JPH::SixDOFConstraintSettings]
-|SixDofConstraintSettings
+|{url-api}/SixDofConstraintSettings.html[SixDofConstraintSettings]
 
 |{url-jolt}skeletal_animation.html[JPH::SkeletalAnimation]
-|SkeletalAnimation
- SkeletalAnimationRef
+|{url-api}/SkeletalAnimation.html[SkeletalAnimation]
+ {url-api}/SkeletalAnimationRef.html[SkeletalAnimationRef]
 
 |{url-jolt}skeleton.html[JPH::Skeleton]
-|Skeleton
- ConstSkeleton
- SkeletonRef
+|{url-api}/Skeleton.html[Skeleton]
+ {url-api}/readonly/ConstSkeleton.html[ConstSkeleton]
+ {url-api}/SkeletonRef.html[SkeletonRef]
 
 |{url-jolt}skeleton_mapper.html[JPH::SkeletonMapper]
-|SkeletonMapper
- SkeletonMapperRef
+|{url-api}/SkeletonMapper.html[SkeletonMapper]
+ {url-api}/SkeletonMapperRef.html[SkeletonMapperRef]
 
 |{url-jolt}skeleton_pose.html[JPH::SkeletonPose]
-|SkeletonPose
+|{url-api}/SkeletonPose.html[SkeletonPose]
 
 |{url-jolt}slider_constraint.html[JPH::SliderConstraint]
-|SliderConstraint
+|{url-api}/SliderConstraint.html[SliderConstraint]
 
 |{url-jolt}slider_constraint_settings.html[JPH::SliderConstraintSettings]
-|SliderConstraintSettings
+|{url-api}/SliderConstraintSettings.html[SliderConstraintSettings]
 
 |{url-jolt}soft_body_contact_listener.html[JPH::SoftBodyContactListener]
-|SoftBodyContactListener
+|{url-api}/SoftBodyContactListener.html[SoftBodyContactListener]
 
 |{url-jolt}soft_body_contact_settings.html[JPH::SoftBodyContactSettings]
-|SoftBodyContactSettings
- ConstSoftBodyContactSettings
+|{url-api}/SoftBodyContactSettings.html[SoftBodyContactSettings]
+ {url-api}/readonly/ConstSoftBodyContactSettings.html[ConstSoftBodyContactSettings]
 
 |{url-jolt}soft_body_creation_settings.html[JPH::SoftBodyCreationSettings]
-|SoftBodyCreationSettings
- ConstSoftBodyCreationSettings
+|{url-api}/SoftBodyCreationSettings.html[SoftBodyCreationSettings]
+ {url-api}/readonly/ConstSoftBodyCreationSettings.html[ConstSoftBodyCreationSettings]
 
 |{url-jolt}soft_body_manifold.html[JPH::SoftBodyManifold]
-|SoftBodyManifold
+|{url-api}/SoftBodyManifold.html[SoftBodyManifold]
 
 |{url-jolt}soft_body_motion_properties.html[JPH::SoftBodyMotionProperties]
-|SoftBodyMotionProperties
- ConstSoftBodyMotionProperties
+|{url-api}/SoftBodyMotionProperties.html[SoftBodyMotionProperties]
+ {url-api}/readonly/ConstSoftBodyMotionProperties.html[ConstSoftBodyMotionProperties]
 
 |{url-jolt}soft_body_shape.html[JPH::SoftBodyShape]
-|SoftBodyShape
+|{url-api}/SoftBodyShape.html[SoftBodyShape]
 
 |{url-jolt}soft_body_shared_settings.html[JPH::SoftBodySharedSettings]
-|SoftBodySharedSettings
- ConstSoftBodySharedSettings
- SoftBodySharedSettingsRef
+|{url-api}/SoftBodySharedSettings.html[SoftBodySharedSettings]
+ {url-api}/readonly/ConstSoftBodySharedSettings.html[ConstSoftBodySharedSettings]
+ {url-api}/SoftBodySharedSettingsRef.html[SoftBodySharedSettingsRef]
 
 |{url-jolt}soft_body_vertex.html[JPH::SoftBodyVertex]
-|SoftBodyVertex
- ConstSoftBodyVertex
+|{url-api}/SoftBodyVertex.html[SoftBodyVertex]
+ {url-api}/readonly/ConstSoftBodyVertex.html[ConstSoftBodyVertex]
 
 |{url-jolt}specified_broad_phase_layer_filter.html[JPH::SpecifiedBroadPhaseLayerFilter]
-|SpecifiedBroadPhaseLayerFilter
+|{url-api}/SpecifiedBroadPhaseLayerFilter.html[SpecifiedBroadPhaseLayerFilter]
 
 |{url-jolt}specified_object_layer_filter.html[JPH::SpecifiedObjectLayerFilter]
-|SpecifiedObjectLayerFilter
+|{url-api}/SpecifiedObjectLayerFilter.html[SpecifiedObjectLayerFilter]
 
 |{url-jolt}sphere.html[JPH::Sphere]
-|Sphere
+|{url-api}/Sphere.html[Sphere]
 
 |{url-jolt}sphere_shape.html[JPH::SphereShape]
-|SphereShape
+|{url-api}/SphereShape.html[SphereShape]
 
 |{url-jolt}sphere_shape_settings.html[JPH::SphereShapeSettings]
-|SphereShapeSettings
+|{url-api}/SphereShapeSettings.html[SphereShapeSettings]
 
 |{url-jolt}spring_settings.html[JPH::SpringSettings]
-|SpringSettings
+|{url-api}/SpringSettings.html[SpringSettings]
 
 |{url-jolt}state_recorder.html[JPH::StateRecorder]
-|StateRecorder
+|{url-api}/StateRecorder.html[StateRecorder]
 
 |{url-jolt}state_recorder_filter.html[JPH::StateRecorderFilter]
-|StateRecorderFilter
+|{url-api}/StateRecorderFilter.html[StateRecorderFilter]
 
 |{url-jolt}state_recorder_impl.html[JPH::StateRecorderImpl]
-|StateRecorderImpl
+|{url-api}/StateRecorderImpl.html[StateRecorderImpl]
 
 |{url-jolt}static_compound_shape.html[JPH::StaticCompoundShape]
-|StaticCompoundShape
+|{url-api}/StaticCompoundShape.html[StaticCompoundShape]
 
 |{url-jolt}static_compound_shape_settings.html[JPH::StaticCompoundShapeSettings]
-|StaticCompoundShapeSettings
+|{url-api}/StaticCompoundShapeSettings.html[StaticCompoundShapeSettings]
 
 |{url-jolt}stream_in.html[JPH::StreamIn]
-|StreamIn
+|{url-api}/StreamIn.html[StreamIn]
 
 |{url-jolt}stream_in_wrapper.html[JPH::StreamInWrapper]
-|StreamInWrapper
+|{url-api}/StreamInWrapper.html[StreamInWrapper]
 
 |{url-jolt}stream_out.html[JPH::StreamOut]
-|StreamOut
+|{url-api}/StreamOut.html[StreamOut]
 
 |{url-jolt}stream_out_wrapper.html[JPH::StreamOutWrapper]
-|StreamOutWrapper
+|{url-api}/StreamOutWrapper.html[StreamOutWrapper]
 
 |{url-jolt}sub_shape_i_d_creator.html[JPH::SubShapeIDCreator]
-|SubShapeIdCreator
+|{url-api}/SubShapeIdCreator.html[SubShapeIdCreator]
 
 |{url-jolt}sub_shape_i_d_pair.html[JPH::SubShapeIDPair]
-|SubShapeIdPair
+|{url-api}/SubShapeIdPair.html[SubShapeIdPair]
 
 |{url-jolt}swing_twist_constraint.html[JPH::SwingTwistConstraint]
-|SwingTwistConstraint
+|{url-api}/SwingTwistConstraint.html[SwingTwistConstraint]
 
 |{url-jolt}swing_twist_constraint_settings.html[JPH::SwingTwistConstraintSettings]
-|SwingTwistConstraintSettings
+|{url-api}/SwingTwistConstraintSettings.html[SwingTwistConstraintSettings]
 
 |{url-jolt}tapered_capsule_shape.html[JPH::TaperedCapsuleShape]
-|TaperedCapsuleShape
+|{url-api}/TaperedCapsuleShape.html[TaperedCapsuleShape]
 
 |{url-jolt}tapered_capsule_shape_settings.html[JPH::TaperedCapsuleShapeSettings]
-|TaperedCapsuleShapeSettings
+|{url-api}/TaperedCapsuleShapeSettings.html[TaperedCapsuleShapeSettings]
 
 |{url-jolt}tapered_cylinder_shape.html[JPH::TaperedCylinderShape]
-|TaperedCylinderShape
+|{url-api}/TaperedCylinderShape.html[TaperedCylinderShape]
 
 |{url-jolt}tapered_cylinder_shape_settings.html[JPH::TaperedCylinderShapeSettings]
-|TaperedCylinderShapeSettings
+|{url-api}/TaperedCylinderShapeSettings.html[TaperedCylinderShapeSettings]
 
 |{url-jolt}temp_allocator.html[JPH::TempAllocator]
-|TempAllocator
+|{url-api}/TempAllocator.html[TempAllocator]
 
 |{url-jolt}temp_allocator_impl.html[JPH::TempAllocatorImpl]
-|TempAllocatorImpl
+|{url-api}/TempAllocatorImpl.html[TempAllocatorImpl]
 
 |{url-jolt}temp_allocator_impl_with_malloc_fallback.html[JPH::TempAllocatorImplWithMallocFallback]
-|TempAllocatorImplWithMallocFallback
+|{url-api}/TempAllocatorImplWithMallocFallback.html[TempAllocatorImplWithMallocFallback]
 
 |{url-jolt}temp_allocator_malloc.html[JPH::TempAllocatorMalloc]
-|TempAllocatorMalloc
+|{url-api}/TempAllocatorMalloc.html[TempAllocatorMalloc]
 
 |{url-jolt}tracked_vehicle_controller.html[JPH::TrackedVehicleController]
-|TrackedVehicleController
+|{url-api}/TrackedVehicleController.html[TrackedVehicleController]
 
 |{url-jolt}tracked_vehicle_controller_settings.html[JPH::TrackedVehicleControllerSettings]
-|TrackedVehicleControllerSettings
+|{url-api}/TrackedVehicleControllerSettings.html[TrackedVehicleControllerSettings]
 
 |{url-jolt}transformed_shape.html[JPH::TransformedShape]
-|TransformedShape
- ConstTransformedShape
+|{url-api}/TransformedShape.html[TransformedShape]
+ {url-api}/readonly/ConstTransformedShape.html[ConstTransformedShape]
 
 |{url-jolt}triangle.html[JPH::Triangle]
-|Triangle
+|{url-api}/Triangle.html[Triangle]
 
 |{url-jolt}triangle_shape.html[JPH::TriangleShape]
-|TriangleShape
+|{url-api}/TriangleShape.html[TriangleShape]
 
 |{url-jolt}triangle_shape_settings.html[JPH::TriangleShapeSettings]
-|TriangleShapeSettings
+|{url-api}/TriangleShapeSettings.html[TriangleShapeSettings]
 
 |{url-jolt}two_body_constraint.html[JPH::TwoBodyConstraint]
-|TwoBodyConstraint
- TwoBodyConstraintRef
- ConstTwoBodyConstraint
+|{url-api}/TwoBodyConstraint.html[TwoBodyConstraint]
+ {url-api}/readonly/ConstTwoBodyConstraint.html[ConstTwoBodyConstraint]
+ {url-api}/TwoBodyConstraintRef.html[TwoBodyConstraintRef]
 
 |{url-jolt}two_body_constraint_settings.html[JPH::TwoBodyConstraintSettings]
-|TwoBodyConstraintSettings
- TwoBodyConstraintSettingsRef
+|{url-api}/TwoBodyConstraintSettings.html[TwoBodyConstraintSettings]
+ {url-api}/TwoBodyConstraintSettingsRef.html[TwoBodyConstraintSettingsRef]
 
 |{url-jolt}u_vec4.html[JPH::UVec4]
-|UVec4
+|{url-api}/UVec4.html[UVec4]
 
 |{url-jolt}vec3.html[JPH::Vec3]
-|Vec3
- Vec3Arg
+|{url-api}/Vec3.html[Vec3]
+ {url-api}/readonly/Vec3Arg.html[Vec3Arg]
 
 |{url-jolt}vec4.html[JPH::Vec4]
-|Vec4
- Vec4Arg
+|{url-api}/Vec4.html[Vec4]
+ {url-api}/readonly/Vec4Arg.html[Vec4Arg]
 
 |{url-jolt}vehicle_anti_roll_bar.html[JPH::VehicleAntiRollBar]
-|VehicleAntiRollBar
+|{url-api}/VehicleAntiRollBar.html[VehicleAntiRollBar]
 
 |{url-jolt}vehicle_collision_tester.html[JPH::VehicleCollisionTester]
-|VehicleCollisionTester
- VehicleCollisionTesterRef
+|{url-api}/VehicleCollisionTester.html[VehicleCollisionTester]
+ {url-api}/VehicleCollisionTesterRef.html[VehicleCollisionTesterRef]
 
 |{url-jolt}vehicle_collision_tester_cast_cylinder.html[JPH::VehicleCollisionTesterCastCylinder]
-|VehicleCollisionTesterCastCylinder
- VehicleCollisionTesterCastCylinderRef
+|{url-api}/VehicleCollisionTesterCastCylinder.html[VehicleCollisionTesterCastCylinder]
+ {url-api}/VehicleCollisionTesterCastCylinderRef.html[VehicleCollisionTesterCastCylinderRef]
 
 |{url-jolt}vehicle_collision_tester_cast_sphere.html[JPH::VehicleCollisionTesterCastSphere]
-|VehicleCollisionTesterCastSphere
- VehicleCollisionTesterCastSphereRef
+|{url-api}/VehicleCollisionTesterCastSphere.html[VehicleCollisionTesterCastSphere]
+ {url-api}/VehicleCollisionTesterCastSphereRef.html[VehicleCollisionTesterCastSphereRef]
 
 |{url-jolt}vehicle_collision_tester_ray.html[JPH::VehicleCollisionTesterRay]
-|VehicleCollisionTesterRay
- VehicleCollisionTesterRayRef
+|{url-api}/VehicleCollisionTesterRay.html[VehicleCollisionTesterRay]
+ {url-api}/VehicleCollisionTesterRayRef.html[VehicleCollisionTesterRayRef]
 
 |{url-jolt}vehicle_constraint.html[JPH::VehicleConstraint]
-|VehicleConstraint
- VehicleConstraintRef
+|{url-api}/VehicleConstraint.html[VehicleConstraint]
+ {url-api}/VehicleConstraintRef.html[VehicleConstraintRef]
 
 |{url-jolt}vehicle_constraint_settings.html[JPH::VehicleConstraintSettings]
-|VehicleConstraintSettings
+|{url-api}/VehicleConstraintSettings.html[VehicleConstraintSettings]
 
 |{url-jolt}vehicle_controller.html[JPH::VehicleController]
-|VehicleController
+|{url-api}/VehicleController.html[VehicleController]
 
 |{url-jolt}vehicle_controller_settings.html[JPH::VehicleControllerSettings]
-|VehicleControllerSettings
- VehicleControllerSettingsRef
+|{url-api}/VehicleControllerSettings.html[VehicleControllerSettings]
+ {url-api}/VehicleControllerSettingsRef.html[VehicleControllerSettingsRef]
 
 |{url-jolt}vehicle_differential_settings.html[JPH::VehicleDifferentialSettings]
-|VehicleDifferentialSettings
+|{url-api}/VehicleDifferentialSettings.html[VehicleDifferentialSettings]
 
 |{url-jolt}vehicle_engine.html[JPH::VehicleEngine]
-|VehicleEngine
+|{url-api}/VehicleEngine.html[VehicleEngine]
 
 |{url-jolt}vehicle_engine_settings.html[JPH::VehicleEngineSettings]
-|VehicleEngineSettings
+|{url-api}/VehicleEngineSettings.html[VehicleEngineSettings]
 
 |{url-jolt}vehicle_track_settings.html[JPH::VehicleTrackSettings]
-|VehicleTrackSettings
+|{url-api}/VehicleTrackSettings.html[VehicleTrackSettings]
 
 |{url-jolt}vehicle_transmission.html[JPH::VehicleTransmission]
-|VehicleTransmission
+|{url-api}/VehicleTransmission.html[VehicleTransmission]
 
 |{url-jolt}vehicle_transmission_settings.html[JPH::VehicleTransmissionSettings]
-|VehicleTransmissionSettings
+|{url-api}/VehicleTransmissionSettings.html[VehicleTransmissionSettings]
 
 |{url-jolt}wheel.html[JPH::Wheel]
-|Wheel
+|{url-api}/Wheel.html[Wheel]
 
 |{url-jolt}wheel_settings.html[JPH::WheelSettings]
-|WheelSettings
+|{url-api}/WheelSettings.html[WheelSettings]
 
 |{url-jolt}wheel_settings_t_v.html[JPH::WheelSettingsTV]
-|WheelSettingsTv
- WheelSettingsTvRef
+|{url-api}/WheelSettingsTv.html[WheelSettingsTv]
+ {url-api}/WheelSettingsTvRef.html[WheelSettingsTvRef]
 
 |{url-jolt}wheel_settings_w_v.html[JPH::WheelSettingsWV]
-|WheelSettingsWv
- WheelSettingsWvRef
+|{url-api}/WheelSettingsWv.html[WheelSettingsWv]
+ {url-api}/WheelSettingsWvRef.html[WheelSettingsWvRef]
 
 |{url-jolt}wheel_t_v.html[JPH::WheelTV]
-|WheelTv
+|{url-api}/WheelTv.html[WheelTv]
 
 |{url-jolt}wheel_w_v.html[JPH::WheelWV]
-|WheelWv
+|{url-api}/WheelWv.html[WheelWv]
 
 |{url-jolt}wheeled_vehicle_controller.html[JPH::WheeledVehicleController]
-|WheeledVehicleController
+|{url-api}/WheeledVehicleController.html[WheeledVehicleController]
 
 |{url-jolt}wheeled_vehicle_controller_settings.html[JPH::WheeledVehicleControllerSettings]
-|WheeledVehicleControllerSettings
+|{url-api}/WheeledVehicleControllerSettings.html[WheeledVehicleControllerSettings]
 
 |===
