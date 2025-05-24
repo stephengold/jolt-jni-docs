@@ -5,6 +5,7 @@
 :url-api: https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-jolt: https://jrouwe.github.io/JoltPhysics/class_
+:url-jolt-namespace: https://jrouwe.github.io/JoltPhysics/namespace_
 :url-jolt-struct: https://jrouwe.github.io/JoltPhysics/struct_
 
 When reading documentation for Jolt Physics,
@@ -183,6 +184,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}character_vs_character_collision_simple.html[JPH::CharacterVsCharacterCollisionSimple]
 |{url-api}/CharacterVsCharacterCollisionSimple.html[CharacterVsCharacterCollisionSimple]
 
+|{url-jolt-namespace}closest_point.html[ClosestPoint::]
+|{url-api}/ClosestPoint.html[ClosestPoint]
+
 |{url-jolt}collide_point_result.html[JPH::CollidePointResult]
 |{url-api}/CollidePointResult.html[CollidePointResult]
 
@@ -321,6 +325,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}height_field_shape.html[JPH::HeightFieldShape]
 |{url-api}/HeightFieldShape.html[HeightFieldShape]
+
+|{url-jolt-namespace}height_field_shape_constants.html[HeightFieldShapeConstants::]
+|{url-api}/HeightFieldShapeConstants.html[HeightFieldShapeConstants]
 
 |{url-jolt}height_field_shape_settings.html[JPH::HeightFieldShapeSettings]
 |{url-api}/HeightFieldShapeSettings.html[HeightFieldShapeSettings]
@@ -525,6 +532,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}rotated_translated_shape_settings.html[JPH::RotatedTranslatedShapeSettings]
 |{url-api}/RotatedTranslatedShapeSettings.html[RotatedTranslatedShapeSettings]
+
+|{url-jolt-namespace}scale_helpers.html[ScaleHelpers::]
+|{url-api}/ScaleHelpers.html[ScaleHelpers]
 
 |{url-jolt}scaled_shape.html[JPH::ScaledShape]
 |{url-api}/ScaledShape.html[ScaledShape]
