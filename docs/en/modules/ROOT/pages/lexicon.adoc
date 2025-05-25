@@ -63,7 +63,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 [cols="2,3",grid="none",options="header"]
 |===
-|Jolt-Physics class or struct
+|Jolt-Physics class or namespace or struct
 |{ProjectAdj} classes and interfaces
 
 |{url-jolt}a_a_box.html[JPH::AABox]
