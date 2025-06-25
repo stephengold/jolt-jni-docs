@@ -61,7 +61,7 @@ You can restore the project to a pristine state:
 [github]: https://en.wikipedia.org/wiki/GitHub "GitHub"
 [gradle]: https://gradle.org "Gradle build tool"
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language) "Java programming language"
-[joltjni]: https://github.com/stephengold/jolt-jni "Jolt-JNI project"
+[joltjni]: https://stephengold.github.io/jolt-jni-docs "Jolt-JNI project"
 [license]: https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE "jolt-jni-docs license"
 [project]: https://github.com/stephengold/jolt-jni-docs "jolt-jni-docs project"
 [sportjolt]: https://github.com/stephengold/sport-jolt "Sport graphics engine for Jolt"
