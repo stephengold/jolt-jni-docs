@@ -18,7 +18,8 @@ It's important to clearly distinguish JVM objects from native objects,
 even though they tend to exist in one-to-one relationship.
 
 A handful of {ProjectAdj} classes are implemented entirely in Java, notably:
-`Color`, `Float3`, `Plane`, `Quat`, `RVec3`, `Vec3`, and `Vec4`.
+`Color`, `Float2`, `Float3`, `Plane`, `Quat`, `RVec3`,
+`UVec4`, `Vec3`, `Vec4`, and `VertexList`.
 These classes don't allocate any native memory;
 instances exist entirely on the JVM's heap.
 After such an object become unreachable, the JVM's garbage collector
