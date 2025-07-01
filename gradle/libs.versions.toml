@@ -2,7 +2,7 @@
 
 [versions]
 
-checkstyle = "10.26.0"
+checkstyle = "10.26.1"
 joltjni = "2.0.1"
 lwjgl = "3.3.6"
 
