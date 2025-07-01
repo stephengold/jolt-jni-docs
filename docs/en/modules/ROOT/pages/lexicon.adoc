@@ -109,7 +109,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/BoxShape.html[BoxShape]
 
 |{url-jolt}box_shape_settings.html[JPH::BoxShapeSettings]
-|{url-api}/BoxShapeSettings.html[BoxShapeSettings]
+|{url-api}/BoxShapeSettings.html[BoxShapeSettings] +
+ {url-api}/readonly/ConstBoxShapeSettings.html[ConstBoxShapeSettings]
 
 |{url-jolt}broad_phase.html[JPH::BroadPhase]
 |{url-api}/BroadPhase.html[BroadPhase]
@@ -296,6 +297,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}empty_shape_settings.html[JPH::EmptyShapeSettings]
 |{url-api}/EmptyShapeSettings.html[EmptyShapeSettings]
 
+|{url-jolt}e_p_a_penetration_depth.html[JPH::EPAPenetrationDepth]
+|{url-api}/EpaPenetrationDepth.html[EpaPenetrationDepth]
+
 |{url-jolt}fixed_constraint.html[JPH::FixedConstraint]
 |{url-api}/FixedConstraint.html[FixedConstraint]
 
@@ -461,7 +465,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/PhysicsSceneRef.html[PhysicsSceneRef]
 
 |{url-jolt-struct}physics_settings.html[JPH::PhysicsSettings]
-|{url-api}/PhysicsSettings.html[PhysicsSettings]
+|{url-api}/PhysicsSettings.html[PhysicsSettings] +
+ {url-api}/readonly/ConstPhysicsSettings.html[ConstPhysicsSettings]
 
 |{url-jolt}physics_step_listener.html[JPH::PhysicsStepListener]
 |{url-api}/PhysicsStepListener.html[PhysicsStepListener]
@@ -487,6 +492,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}point_constraint_settings.html[JPH::PointConstraintSettings]
 |{url-api}/PointConstraintSettings.html[PointConstraintSettings]
+
+|{url-jolt-struct}point_convex_support.html[JPH::PointConvexSupport]
+|{url-api}/PointConvexSupport.html[PointConvexSupport]
 
 |{url-jolt}pulley_constraint.html[JPH::PulleyConstraint]
 |{url-api}/PulleyConstraint.html[PulleyConstraint]
@@ -533,6 +541,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}rotated_translated_shape_settings.html[JPH::RotatedTranslatedShapeSettings]
 |{url-api}/RotatedTranslatedShapeSettings.html[RotatedTranslatedShapeSettings]
 
+|{url-jolt}r_t_t_i.html[JPH::RTTI]
+|{url-api}/Rtti.html[Rtti]
+
 |{url-jolt-namespace}scale_helpers.html[ScaleHelpers::]
 |{url-api}/ScaleHelpers.html[ScaleHelpers]
 
@@ -543,7 +554,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/ScaledShapeSettings.html[ScaledShapeSettings]
 
 |{url-jolt}serializable_object.html[JPH::SerializableObject]
-|{url-api}/SerializableObject.html[SerializableObject]
+|{url-api}/SerializableObject.html[SerializableObject] +
+ {url-api}/readonly/ConstSerializableObject.html[ConstSerializableObject]
 
 |{url-jolt}shape.html[JPH::Shape]
 |{url-api}/Shape.html[Shape] +
@@ -609,7 +621,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/readonly/ConstSoftBodyCreationSettings.html[ConstSoftBodyCreationSettings]
 
 |{url-jolt}soft_body_manifold.html[JPH::SoftBodyManifold]
-|{url-api}/SoftBodyManifold.html[SoftBodyManifold]
+|{url-api}/SoftBodyManifold.html[SoftBodyManifold] +
+ {url-api}/readonly/ConstSoftBodyManifold.html[ConstSoftBodyManifold]
 
 |{url-jolt}soft_body_motion_properties.html[JPH::SoftBodyMotionProperties]
 |{url-api}/SoftBodyMotionProperties.html[SoftBodyMotionProperties] +
@@ -634,7 +647,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/SpecifiedObjectLayerFilter.html[SpecifiedObjectLayerFilter]
 
 |{url-jolt}sphere.html[JPH::Sphere]
-|{url-api}/Sphere.html[Sphere]
+|{url-api}/Sphere.html[Sphere] +
+ {url-api}/readonly/ConstSphere.html[ConstSphere]
 
 |{url-jolt}sphere_shape.html[JPH::SphereShape]
 |{url-api}/SphereShape.html[SphereShape]
@@ -643,7 +657,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/SphereShapeSettings.html[SphereShapeSettings]
 
 |{url-jolt}spring_settings.html[JPH::SpringSettings]
-|{url-api}/SpringSettings.html[SpringSettings]
+|{url-api}/SpringSettings.html[SpringSettings] +
+ {url-api}/readonly/ConstSpringSettings.html[ConstSpringSettings]
 
 |{url-jolt}state_recorder.html[JPH::StateRecorder]
 |{url-api}/StateRecorder.html[StateRecorder]
@@ -715,6 +730,10 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}tracked_vehicle_controller_settings.html[JPH::TrackedVehicleControllerSettings]
 |{url-api}/TrackedVehicleControllerSettings.html[TrackedVehicleControllerSettings]
 
+|{url-jolt-struct}transformed_convex_object.html[JPH::TransformedConvexObject]
+|{url-api}/TransformedConvexObject.html[TransformedConvexObject] +
+ {url-api}/readonly/ConstTransformedConvexObject.html[ConstTransformedConvexObject]
+
 |{url-jolt}transformed_shape.html[JPH::TransformedShape]
 |{url-api}/TransformedShape.html[TransformedShape] +
  {url-api}/readonly/ConstTransformedShape.html[ConstTransformedShape]
@@ -750,7 +769,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/readonly/Vec4Arg.html[Vec4Arg]
 
 |{url-jolt}vehicle_anti_roll_bar.html[JPH::VehicleAntiRollBar]
-|{url-api}/VehicleAntiRollBar.html[VehicleAntiRollBar]
+|{url-api}/VehicleAntiRollBar.html[VehicleAntiRollBar] +
+ {url-api}/readonly/ConstVehicleAntiRollBar.html[ConstVehicleAntiRollBar]
 
 |{url-jolt}vehicle_collision_tester.html[JPH::VehicleCollisionTester]
 |{url-api}/VehicleCollisionTester.html[VehicleCollisionTester] +
@@ -773,13 +793,15 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/VehicleConstraintRef.html[VehicleConstraintRef]
 
 |{url-jolt}vehicle_constraint_settings.html[JPH::VehicleConstraintSettings]
-|{url-api}/VehicleConstraintSettings.html[VehicleConstraintSettings]
+|{url-api}/VehicleConstraintSettings.html[VehicleConstraintSettings] +
+ {url-api}/readonly/ConstVehicleConstraintSettings.html[ConstVehicleConstraintSettings]
 
 |{url-jolt}vehicle_controller.html[JPH::VehicleController]
 |{url-api}/VehicleController.html[VehicleController]
 
 |{url-jolt}vehicle_controller_settings.html[JPH::VehicleControllerSettings]
 |{url-api}/VehicleControllerSettings.html[VehicleControllerSettings] +
+ {url-api}/readonly/ConstVehicleControllerSettings.html[ConstVehicleControllerSettings] +
  {url-api}/VehicleControllerSettingsRef.html[VehicleControllerSettingsRef]
 
 |{url-jolt}vehicle_differential_settings.html[JPH::VehicleDifferentialSettings]
