@@ -115,6 +115,10 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <div class="col-last even-row-color">
 <div class="block">Instantiate with the default settings.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSoftBodySharedSettings)" class="member-name-link">SoftBodySharedSettings</a><wbr>(<a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
+</div>
 </div>
 </section>
 </li>
@@ -130,7 +134,7 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addEdgeConstraint(com.github.stephengold.joltjni.Edge)" class="member-name-link">addEdgeConstraint</a><wbr>(<a href="Edge.html" title="class in com.github.stephengold.joltjni">Edge</a>&nbsp;edge)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addEdgeConstraint(com.github.stephengold.joltjni.readonly.ConstEdge)" class="member-name-link">addEdgeConstraint</a><wbr>(<a href="readonly/ConstEdge.html" title="interface in com.github.stephengold.joltjni.readonly">ConstEdge</a>&nbsp;edge)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add the specified edge constraint.</div>
 </div>
@@ -145,17 +149,27 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <div class="block">Append the specified inverse-bind matrix.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRodBendTwistConstraint(com.github.stephengold.joltjni.readonly.ConstRodBendTwist)" class="member-name-link">addRodBendTwistConstraint</a><wbr>(<a href="readonly/ConstRodBendTwist.html" title="interface in com.github.stephengold.joltjni.readonly">ConstRodBendTwist</a>&nbsp;constraint)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Append the specified bend-twist constraint.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRodStretchShearConstraint(com.github.stephengold.joltjni.readonly.ConstRodStretchShear)" class="member-name-link">addRodStretchShearConstraint</a><wbr>(<a href="readonly/ConstRodStretchShear.html" title="interface in com.github.stephengold.joltjni.readonly">ConstRodStretchShear</a>&nbsp;rod)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Append the specified discrete Cosserat rod.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSkinnedConstraint(com.github.stephengold.joltjni.Skinned)" class="member-name-link">addSkinnedConstraint</a><wbr>(<a href="Skinned.html" title="class in com.github.stephengold.joltjni">Skinned</a>&nbsp;skinned)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Append the specified skinning constraint.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVertex(com.github.stephengold.joltjni.Vertex)" class="member-name-link">addVertex</a><wbr>(<a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a>&nbsp;vertex)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVertex(com.github.stephengold.joltjni.readonly.ConstVertex)" class="member-name-link">addVertex</a><wbr>(<a href="readonly/ConstVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertex</a>&nbsp;vertex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add the specified vertex.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVolumeConstraint(com.github.stephengold.joltjni.Volume)" class="member-name-link">addVolumeConstraint</a><wbr>(<a href="Volume.html" title="class in com.github.stephengold.joltjni">Volume</a>&nbsp;volume)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVolumeConstraint(com.github.stephengold.joltjni.readonly.ConstVolume)" class="member-name-link">addVolumeConstraint</a><wbr>(<a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a>&nbsp;volume)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add the specified volume constraint.</div>
 </div>
@@ -165,79 +179,99 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <div class="block">Calculate the initial lengths of all edges in the body.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateSkinnedConstraintNormals()" class="member-name-link">calculateSkinnedConstraintNormals</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateRodProperties()" class="member-name-link">calculateRodProperties</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Calculate the information needed to simulate Cosserat rods.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateSkinnedConstraintNormals()" class="member-name-link">calculateSkinnedConstraintNormals</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate the information needed for skinned constraint normals.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateVolumeConstraintVolumes()" class="member-name-link">calculateVolumeConstraintVolumes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateVolumeConstraintVolumes()" class="member-name-link">calculateVolumeConstraintVolumes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate the initial volumes of all tetrahedra in the body.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countEdgeConstraints()" class="member-name-link">countEdgeConstraints</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countEdgeConstraints()" class="member-name-link">countEdgeConstraints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the edge constraints.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countFaces()" class="member-name-link">countFaces</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countFaces()" class="member-name-link">countFaces</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the faces.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countPinnedVertices()" class="member-name-link">countPinnedVertices</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countPinnedVertices()" class="member-name-link">countPinnedVertices</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the pinned vertices.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countRodBendTwistConstraints()" class="member-name-link">countRodBendTwistConstraints</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Count the bend-twist constraints.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countVertices()" class="member-name-link">countVertices</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countRodStretchShearConstraints()" class="member-name-link">countRodStretchShearConstraints</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Count the vertices.</div>
+<div class="block">Count the discrete Cosserat rods.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countVolumeConstraints()" class="member-name-link">countVolumeConstraints</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countVertices()" class="member-name-link">countVertices</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Count the vertices.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countVolumeConstraints()" class="member-name-link">countVolumeConstraints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the volume constraints.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createConstraints(com.github.stephengold.joltjni.readonly.ConstVertexAttributes%5B%5D,com.github.stephengold.joltjni.enumerate.EBendType)" class="member-name-link">createConstraints</a><wbr>(<a href="readonly/ConstVertexAttributes.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexAttributes</a>[]&nbsp;vertexAttributes,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createConstraints(com.github.stephengold.joltjni.readonly.ConstVertexAttributes%5B%5D,com.github.stephengold.joltjni.enumerate.EBendType)" class="member-name-link">createConstraints</a><wbr>(<a href="readonly/ConstVertexAttributes.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexAttributes</a>[]&nbsp;vertexAttributes,
  <a href="enumerate/EBendType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBendType</a>&nbsp;bendType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Automatically generate constraints based on the faces.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createConstraints(com.github.stephengold.joltjni.readonly.ConstVertexAttributes%5B%5D,com.github.stephengold.joltjni.enumerate.EBendType,float)" class="member-name-link">createConstraints</a><wbr>(<a href="readonly/ConstVertexAttributes.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexAttributes</a>[]&nbsp;vertexAttributes,
+ <a href="enumerate/EBendType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBendType</a>&nbsp;bendType,
+ float&nbsp;angleTolerance)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Automatically generate constraints based on the faces.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createConstraints(com.github.stephengold.joltjni.readonly.ConstVertexAttributes%5B%5D,com.github.stephengold.joltjni.enumerate.EBendType,float)" class="member-name-link">createConstraints</a><wbr>(<a href="readonly/ConstVertexAttributes.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexAttributes</a>[]&nbsp;vertexAttributes,
- <a href="enumerate/EBendType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBendType</a>&nbsp;bendType,
- float&nbsp;angleTolerance)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Automatically generate constraints based on the faces.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createConstraints(com.github.stephengold.joltjni.readonly.ConstVertexAttributes,int,com.github.stephengold.joltjni.enumerate.EBendType)" class="member-name-link">createConstraints</a><wbr>(<a href="readonly/ConstVertexAttributes.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexAttributes</a>&nbsp;vertexAttributes,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createConstraints(com.github.stephengold.joltjni.readonly.ConstVertexAttributes,int,com.github.stephengold.joltjni.enumerate.EBendType)" class="member-name-link">createConstraints</a><wbr>(<a href="readonly/ConstVertexAttributes.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexAttributes</a>&nbsp;vertexAttributes,
  int&nbsp;numAttributes,
  <a href="enumerate/EBendType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBendType</a>&nbsp;bendType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Automatically generate constraints based on the faces.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Edge.html" title="class in com.github.stephengold.joltjni">Edge</a>[]</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEdgeConstraints()" class="member-name-link">getEdgeConstraints</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Edge.html" title="class in com.github.stephengold.joltjni">Edge</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEdgeConstraints()" class="member-name-link">getEdgeConstraints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Enumerate all edge constraints in the settings.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the active references to the native <code>SoftBodySharedSettings</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertex(int)" class="member-name-link">getVertex</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the specified vertex.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertexRadius()" class="member-name-link">getVertexRadius</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RodBendTwist.html" title="class in com.github.stephengold.joltjni">RodBendTwist</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRodBendTwistConstraints()" class="member-name-link">getRodBendTwistConstraints</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the radius of each particle.</div>
+<div class="block">Enumerate all bend-twist constraints in the settings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RodStretchShear.html" title="class in com.github.stephengold.joltjni">RodStretchShear</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRodStretchShearConstraints()" class="member-name-link">getRodStretchShearConstraints</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Enumerate all Cosserat rods in the settings.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertex(int)" class="member-name-link">getVertex</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the specified vertex.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a>[]</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertices()" class="member-name-link">getVertices</a>()</code></div>
@@ -261,30 +295,51 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <div class="block">Write the vertex indices of all faces to the specified buffer and advance
  the buffer's position.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SoftBodySharedSettingsRef.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettingsRef</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sCreateCube(int,float)" class="member-name-link">sCreateCube</a><wbr>(int&nbsp;gridSize,
- float&nbsp;gridSpacing)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Create a cube with edge constraints, volume constraints, and faces.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Read the state of this object from the specified stream, excluding the
+ shape and group filter.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Mark the native <code>SoftBodySharedSettings</code> as embedded.</div>
+<div class="block">Write the state of this object to the specified stream, excluding the
+ materials.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterials(com.github.stephengold.joltjni.PhysicsMaterial)" class="member-name-link">setMaterials</a><wbr>(<a href="PhysicsMaterial.html" title="class in com.github.stephengold.joltjni">PhysicsMaterial</a>&nbsp;material)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveWithMaterials(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap)" class="member-name-link">saveWithMaterials</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;settingsMap,
+ <a href="streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Replace the materials.</div>
+<div class="block">Write the state of this object to the specified stream.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SoftBodySharedSettingsRef.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettingsRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sCreateCube(int,float)" class="member-name-link">sCreateCube</a><wbr>(int&nbsp;gridSize,
+ float&nbsp;gridSpacing)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Create a cube with edge constraints, volume constraints, and faces.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Mark the native <code>SoftBodySharedSettings</code> as embedded.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVertexRadius(float)" class="member-name-link">setVertexRadius</a><wbr>(float&nbsp;radius)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterials(com.github.stephengold.joltjni.PhysicsMaterial)" class="member-name-link">setMaterials</a><wbr>(<a href="PhysicsMaterial.html" title="class in com.github.stephengold.joltjni">PhysicsMaterial</a>&nbsp;material)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the size of every particle.</div>
+<div class="block">Replace the materials.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodySharedSettingsRef.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettingsRef</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SettingsResult.html" title="class in com.github.stephengold.joltjni">SettingsResult</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreWithMaterials(com.github.stephengold.joltjni.StreamIn,com.github.stephengold.joltjni.streamutils.IdToSharedSettingsMap,com.github.stephengold.joltjni.streamutils.IdToMaterialMap)" class="member-name-link">sRestoreWithMaterials</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream,
+ <a href="streamutils/IdToSharedSettingsMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToSharedSettingsMap</a>&nbsp;settingsMap,
+ <a href="streamutils/IdToMaterialMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToMaterialMap</a>&nbsp;materialMap)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Read a settings object from the specified binary stream.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodySharedSettingsRef.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettingsRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the native <code>SoftBodySharedSettings</code>.</div>
 </div>
 </div>
@@ -320,6 +375,17 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <div class="block">Instantiate with the default settings.</div>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstSoftBodySharedSettings)">
+<h3>SoftBodySharedSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SoftBodySharedSettings</span><wbr><span class="parameters">(<a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -329,9 +395,9 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="addEdgeConstraint(com.github.stephengold.joltjni.Edge)">
+<section class="detail" id="addEdgeConstraint(com.github.stephengold.joltjni.readonly.ConstEdge)">
 <h3>addEdgeConstraint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEdgeConstraint</span><wbr><span class="parameters">(<a href="Edge.html" title="class in com.github.stephengold.joltjni">Edge</a>&nbsp;edge)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEdgeConstraint</span><wbr><span class="parameters">(<a href="readonly/ConstEdge.html" title="interface in com.github.stephengold.joltjni.readonly">ConstEdge</a>&nbsp;edge)</span></div>
 <div class="block">Add the specified edge constraint.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -354,7 +420,7 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <section class="detail" id="addInvBindMatrix(com.github.stephengold.joltjni.InvBind)">
 <h3>addInvBindMatrix</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addInvBindMatrix</span><wbr><span class="parameters">(<a href="InvBind.html" title="class in com.github.stephengold.joltjni">InvBind</a>&nbsp;invBind)</span></div>
-<div class="block">Append the specified inverse-bind matrix. (native property:
+<div class="block">Append the specified inverse-bind matrix. (native member:
  mInvBindMatrices)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -363,10 +429,34 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 </section>
 </li>
 <li>
+<section class="detail" id="addRodBendTwistConstraint(com.github.stephengold.joltjni.readonly.ConstRodBendTwist)">
+<h3>addRodBendTwistConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addRodBendTwistConstraint</span><wbr><span class="parameters">(<a href="readonly/ConstRodBendTwist.html" title="interface in com.github.stephengold.joltjni.readonly">ConstRodBendTwist</a>&nbsp;constraint)</span></div>
+<div class="block">Append the specified bend-twist constraint. (native member:
+ mRodBendTwistConstraints)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>constraint</code> - the constraint to add (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addRodStretchShearConstraint(com.github.stephengold.joltjni.readonly.ConstRodStretchShear)">
+<h3>addRodStretchShearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addRodStretchShearConstraint</span><wbr><span class="parameters">(<a href="readonly/ConstRodStretchShear.html" title="interface in com.github.stephengold.joltjni.readonly">ConstRodStretchShear</a>&nbsp;rod)</span></div>
+<div class="block">Append the specified discrete Cosserat rod. (native member:
+ mRodStretchShearConstraints)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rod</code> - the rod to add (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="addSkinnedConstraint(com.github.stephengold.joltjni.Skinned)">
 <h3>addSkinnedConstraint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addSkinnedConstraint</span><wbr><span class="parameters">(<a href="Skinned.html" title="class in com.github.stephengold.joltjni">Skinned</a>&nbsp;skinned)</span></div>
-<div class="block">Append the specified skinning constraint. (native property:
+<div class="block">Append the specified skinning constraint. (native member:
  mSkinnedConstraints)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -375,10 +465,10 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 </section>
 </li>
 <li>
-<section class="detail" id="addVertex(com.github.stephengold.joltjni.Vertex)">
+<section class="detail" id="addVertex(com.github.stephengold.joltjni.readonly.ConstVertex)">
 <h3>addVertex</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addVertex</span><wbr><span class="parameters">(<a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a>&nbsp;vertex)</span></div>
-<div class="block">Add the specified vertex. (native attribute: mVertices)</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addVertex</span><wbr><span class="parameters">(<a href="readonly/ConstVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertex</a>&nbsp;vertex)</span></div>
+<div class="block">Add the specified vertex. (native member: mVertices)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>vertex</code> - the vertex to add (not null, unaffected)</dd>
@@ -386,9 +476,9 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 </section>
 </li>
 <li>
-<section class="detail" id="addVolumeConstraint(com.github.stephengold.joltjni.Volume)">
+<section class="detail" id="addVolumeConstraint(com.github.stephengold.joltjni.readonly.ConstVolume)">
 <h3>addVolumeConstraint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addVolumeConstraint</span><wbr><span class="parameters">(<a href="Volume.html" title="class in com.github.stephengold.joltjni">Volume</a>&nbsp;volume)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addVolumeConstraint</span><wbr><span class="parameters">(<a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a>&nbsp;volume)</span></div>
 <div class="block">Add the specified volume constraint.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -401,6 +491,13 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <h3>calculateEdgeLengths</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">calculateEdgeLengths</span>()</div>
 <div class="block">Calculate the initial lengths of all edges in the body.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="calculateRodProperties()">
+<h3>calculateRodProperties</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">calculateRodProperties</span>()</div>
+<div class="block">Calculate the information needed to simulate Cosserat rods.</div>
 </section>
 </li>
 <li>
@@ -468,8 +565,21 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <section class="detail" id="getEdgeConstraints()">
 <h3>getEdgeConstraints</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Edge.html" title="class in com.github.stephengold.joltjni">Edge</a>[]</span>&nbsp;<span class="element-name">getEdgeConstraints</span>()</div>
-<div class="block">Enumerate all edge constraints in the settings. (native attribute:
+<div class="block">Enumerate all edge constraints in the settings. (native member:
  mEdgeConstraints)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new array of new JVM objects with the pre-existing native
+ objects assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRodBendTwistConstraints()">
+<h3>getRodBendTwistConstraints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RodBendTwist.html" title="class in com.github.stephengold.joltjni">RodBendTwist</a>[]</span>&nbsp;<span class="element-name">getRodBendTwistConstraints</span>()</div>
+<div class="block">Enumerate all bend-twist constraints in the settings. (native member:
+ mRodBendTwistConstraints)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new array of new JVM objects with the pre-existing native
@@ -494,7 +604,7 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <section class="detail" id="getVertices()">
 <h3>getVertices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a>[]</span>&nbsp;<span class="element-name">getVertices</span>()</div>
-<div class="block">Enumerate all vertices in the settings. (native attribute: mVertices)</div>
+<div class="block">Enumerate all vertices in the settings. (native member: mVertices)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new array of new JVM objects with pre-existing native objects
@@ -507,6 +617,18 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <h3>optimize</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">optimize</span>()</div>
 <div class="block">Optimize the settings without writing any results.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">
+<h3>restoreBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
+<div class="block">Read the state of this object from the specified stream, excluding the
+ shape and group filter.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to read objects from (not null)</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -528,7 +650,7 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <section class="detail" id="setMaterials(com.github.stephengold.joltjni.PhysicsMaterial)">
 <h3>setMaterials</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaterials</span><wbr><span class="parameters">(<a href="PhysicsMaterial.html" title="class in com.github.stephengold.joltjni">PhysicsMaterial</a>&nbsp;material)</span></div>
-<div class="block">Replace the materials. (native attribute: mMaterials)</div>
+<div class="block">Replace the materials. (native member: mMaterials)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>material</code> - the desired material, or <code>null</code></dd>
@@ -536,13 +658,21 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 </section>
 </li>
 <li>
-<section class="detail" id="setVertexRadius(float)">
-<h3>setVertexRadius</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVertexRadius</span><wbr><span class="parameters">(float&nbsp;radius)</span></div>
-<div class="block">Alter the size of every particle.</div>
+<section class="detail" id="sRestoreWithMaterials(com.github.stephengold.joltjni.StreamIn,com.github.stephengold.joltjni.streamutils.IdToSharedSettingsMap,com.github.stephengold.joltjni.streamutils.IdToMaterialMap)">
+<h3>sRestoreWithMaterials</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SettingsResult.html" title="class in com.github.stephengold.joltjni">SettingsResult</a></span>&nbsp;<span class="element-name">sRestoreWithMaterials</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream,
+ <a href="streamutils/IdToSharedSettingsMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToSharedSettingsMap</a>&nbsp;settingsMap,
+ <a href="streamutils/IdToMaterialMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToMaterialMap</a>&nbsp;materialMap)</span></div>
+<div class="block">Read a settings object from the specified binary stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>radius</code> - the desired radius (&ge;0, default=0)</dd>
+<dd><code>stream</code> - where to read objects (not null)</dd>
+<dd><code>settingsMap</code> - track multiple uses of shared settings (not
+ <code>null</code>)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (not
+ <code>null</code>)</dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
 </dl>
 </section>
 </li>
@@ -550,8 +680,8 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <section class="detail" id="countEdgeConstraints()">
 <h3>countEdgeConstraints</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countEdgeConstraints</span>()</div>
-<div class="block">Count the edge constraints. The settings are unaffected. (native
- attribute: mEdgeConstraints)</div>
+<div class="block">Count the edge constraints. The settings are unaffected. (native member:
+ mEdgeConstraints)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSoftBodySharedSettings.html#countEdgeConstraints()">countEdgeConstraints</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
@@ -564,7 +694,7 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <section class="detail" id="countFaces()">
 <h3>countFaces</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countFaces</span>()</div>
-<div class="block">Count the faces. The settings are unaffected. (native attribute: mFaces)</div>
+<div class="block">Count the faces. The settings are unaffected. (native member: mFaces)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSoftBodySharedSettings.html#countFaces()">countFaces</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
@@ -587,10 +717,38 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 </section>
 </li>
 <li>
+<section class="detail" id="countRodBendTwistConstraints()">
+<h3>countRodBendTwistConstraints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countRodBendTwistConstraints</span>()</div>
+<div class="block">Count the bend-twist constraints. The settings are unaffected. (native
+ member: mRodBendTwistConstraint)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodySharedSettings.html#countRodBendTwistConstraints()">countRodBendTwistConstraints</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countRodStretchShearConstraints()">
+<h3>countRodStretchShearConstraints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countRodStretchShearConstraints</span>()</div>
+<div class="block">Count the discrete Cosserat rods. The settings are unaffected. (native
+ member: mRodStretchShearConstraint)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodySharedSettings.html#countRodStretchShearConstraints()">countRodStretchShearConstraints</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="countVertices()">
 <h3>countVertices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countVertices</span>()</div>
-<div class="block">Count the vertices. The settings are unaffected. (native attribute:
+<div class="block">Count the vertices. The settings are unaffected. (native member:
  mVertices)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -605,7 +763,7 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <h3>countVolumeConstraints</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countVolumeConstraints</span>()</div>
 <div class="block">Count the volume constraints. The settings are unaffected. (native
- attribute: mVolumeConstraints)</div>
+ member: mVolumeConstraints)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSoftBodySharedSettings.html#countVolumeConstraints()">countVolumeConstraints</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
@@ -615,16 +773,17 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 </section>
 </li>
 <li>
-<section class="detail" id="getVertexRadius()">
-<h3>getVertexRadius</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getVertexRadius</span>()</div>
-<div class="block">Return the radius of each particle. The settings are unaffected. (native
- attribute: mVertexRadius)</div>
+<section class="detail" id="getRodStretchShearConstraints()">
+<h3>getRodStretchShearConstraints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RodStretchShear.html" title="class in com.github.stephengold.joltjni">RodStretchShear</a>[]</span>&nbsp;<span class="element-name">getRodStretchShearConstraints</span>()</div>
+<div class="block">Enumerate all Cosserat rods in the settings. (native member:
+ mRodStretchShearConstraints)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="readonly/ConstSoftBodySharedSettings.html#getVertexRadius()">getVertexRadius</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
+<dd><code><a href="readonly/ConstSoftBodySharedSettings.html#getRodStretchShearConstraints()">getRodStretchShearConstraints</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
 <dt>Returns:</dt>
-<dd>the radius (in meters)</dd>
+<dd>a new array of new JVM objects with the pre-existing native
+ objects assigned</dd>
 </dl>
 </section>
 </li>
@@ -653,6 +812,40 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <dd><code><a href="readonly/ConstSoftBodySharedSettings.html#putFaceIndices(java.nio.IntBuffer)">putFaceIndices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>storeIndices</code> - the destination buffer (not null, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Write the state of this object to the specified stream, excluding the
+ materials. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodySharedSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveWithMaterials(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap)">
+<h3>saveWithMaterials</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveWithMaterials</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;settingsMap,
+ <a href="streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap)</span></div>
+<div class="block">Write the state of this object to the specified stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodySharedSettings.html#saveWithMaterials(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap)">saveWithMaterials</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not <code>null</code>)</dd>
+<dd><code>settingsMap</code> - track multiple uses of shared settings (not
+ <code>null</code>)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (not
+ <code>null</code>)</dd>
 </dl>
 </section>
 </li>

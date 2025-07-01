@@ -110,17 +110,25 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(float,float)" class="member-name-link">MotorSettings</a><wbr>(float&nbsp;frequency,
- float&nbsp;damping)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">MotorSettings</a>()</code></div>
 <div class="col-last even-row-color">
+<div class="block">Instantiate default settings.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float,float)" class="member-name-link">MotorSettings</a><wbr>(float&nbsp;frequency,
+ float&nbsp;damping)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Instantiate settings for the specified spring parameters with no limits.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float,float,float,float)" class="member-name-link">MotorSettings</a><wbr>(float&nbsp;frequency,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(float,float,float,float)" class="member-name-link">MotorSettings</a><wbr>(float&nbsp;frequency,
  float&nbsp;damping,
  float&nbsp;forceLimit,
  float&nbsp;torqueLimit)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Instantiate settings for the specified spring parameters and limits.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.MotorSettings)" class="member-name-link">MotorSettings</a><wbr>(<a href="MotorSettings.html" title="class in com.github.stephengold.joltjni">MotorSettings</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
 </div>
 </div>
 </section>
@@ -239,6 +247,13 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>MotorSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorSettings</span>()</div>
+<div class="block">Instantiate default settings.</div>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(float,float)">
 <h3>MotorSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorSettings</span><wbr><span class="parameters">(float&nbsp;frequency,
@@ -265,6 +280,17 @@ loadScripts(document, 'script');</script>
 <dd><code>damping</code> - the desired damping</dd>
 <dd><code>forceLimit</code> - the desired force limit</dd>
 <dd><code>torqueLimit</code> - the desired torque limit</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.MotorSettings)">
+<h3>MotorSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorSettings</span><wbr><span class="parameters">(<a href="MotorSettings.html" title="class in com.github.stephengold.joltjni">MotorSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

@@ -100,8 +100,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">BodyInterface</span>
 <span class="extends-implements">extends <a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">NonCopyable</a></span></div>
-<div class="block">An interface to a <code>PhysicsSystem</code> that's used to create, add, modify,
- query, remove, and delete bodies.</div>
+<div class="block">An interface to a <code>PhysicsSystem</code>, used to create, add, modify, query,
+ remove, and delete bodies.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -326,7 +326,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSystem()" class="member-name-link">getSystem</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the underlying <code>PhysicsSystem</code>.</div>
+<div class="block">Access the containing <code>PhysicsSystem</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserData(int)" class="member-name-link">getUserData</a><wbr>(int&nbsp;bodyId)</code></div>
@@ -343,44 +343,55 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the specified body is added to the system.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveKinematic(int,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,float)" class="member-name-link">moveKinematic</a><wbr>(int&nbsp;bodyId,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSensor(int)" class="member-name-link">isSensor</a><wbr>(int&nbsp;bodyId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether the specified body is a sensor.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveKinematic(int,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,float)" class="member-name-link">moveKinematic</a><wbr>(int&nbsp;bodyId,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  <a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;orientation,
  float&nbsp;deltaTime)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reposition the specified body, assuming it's kinematic.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#notifyShapeChanged(int,com.github.stephengold.joltjni.readonly.Vec3Arg,boolean,com.github.stephengold.joltjni.enumerate.EActivation)" class="member-name-link">notifyShapeChanged</a><wbr>(int&nbsp;bodyId,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#notifyShapeChanged(int,com.github.stephengold.joltjni.readonly.Vec3Arg,boolean,com.github.stephengold.joltjni.enumerate.EActivation)" class="member-name-link">notifyShapeChanged</a><wbr>(int&nbsp;bodyId,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;prevCom,
  boolean&nbsp;updateMassProperties,
  <a href="enumerate/EActivation.html" title="enum class in com.github.stephengold.joltjni.enumerate">EActivation</a>&nbsp;activation)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Notify all systems that the shape of the specified body has changed.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeBody(int)" class="member-name-link">removeBody</a><wbr>(int&nbsp;bodyId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeBody(int)" class="member-name-link">removeBody</a><wbr>(int&nbsp;bodyId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Remove the specified body from the physics system, but don't destroy it.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(int,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setAngularVelocity</a><wbr>(int&nbsp;bodyId,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(int,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setAngularVelocity</a><wbr>(int&nbsp;bodyId,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;omega)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the linear velocity of the specified body.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFriction(int,float)" class="member-name-link">setFriction</a><wbr>(int&nbsp;bodyId,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFriction(int,float)" class="member-name-link">setFriction</a><wbr>(int&nbsp;bodyId,
  float&nbsp;friction)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the friction ratio of the specified body.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGravityFactor(int,float)" class="member-name-link">setGravityFactor</a><wbr>(int&nbsp;bodyId,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGravityFactor(int,float)" class="member-name-link">setGravityFactor</a><wbr>(int&nbsp;bodyId,
  float&nbsp;factor)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the gravity factor of the specified body.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIsSensor(int,boolean)" class="member-name-link">setIsSensor</a><wbr>(int&nbsp;bodyId,
+ boolean&nbsp;setting)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter whether the specified body is a sensor.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearAndAngularVelocity(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setLinearAndAngularVelocity</a><wbr>(int&nbsp;bodyId,
@@ -956,7 +967,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getShape(int)">
 <h3>getShape</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></span>&nbsp;<span class="element-name">getShape</span><wbr><span class="parameters">(int&nbsp;bodyId)</span></div>
-<div class="block">Access the body's shape. TODO return ConstShape?</div>
+<div class="block">Access the body's shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body</dd>
@@ -969,7 +980,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getSystem()">
 <h3>getSystem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></span>&nbsp;<span class="element-name">getSystem</span>()</div>
-<div class="block">Access the underlying <code>PhysicsSystem</code>.</div>
+<div class="block">Access the containing <code>PhysicsSystem</code>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the pre-existing instance</dd>
@@ -1012,6 +1023,19 @@ loadScripts(document, 'script');</script>
 <dd><code>bodyId</code> - the ID of the body to search for</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if added, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isSensor(int)">
+<h3>isSensor</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSensor</span><wbr><span class="parameters">(int&nbsp;bodyId)</span></div>
+<div class="block">Test whether the specified body is a sensor.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyId</code> - the ID of the body to test</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if a sensor, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>
@@ -1104,6 +1128,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setIsSensor(int,boolean)">
+<h3>setIsSensor</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setIsSensor</span><wbr><span class="parameters">(int&nbsp;bodyId,
+ boolean&nbsp;setting)</span></div>
+<div class="block">Alter whether the specified body is a sensor.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyId</code> - the ID of the body to modify</dd>
+<dd><code>setting</code> - <code>true</code> for a sensor, or <code>false</code> for a
+ non-sensor</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setLinearAndAngularVelocity(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setLinearAndAngularVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLinearAndAngularVelocity</span><wbr><span class="parameters">(int&nbsp;bodyId,
@@ -1113,7 +1151,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to modify</dd>
-<dd><code>linearVelocity</code> - the desired linear velocity of body's the center of
+<dd><code>linearVelocity</code> - the desired linear velocity of the body's center of
  mass (not null, unaffected)</dd>
 <dd><code>angularVelocity</code> - the desired angular velocity (not null,
  unaffected)</dd>

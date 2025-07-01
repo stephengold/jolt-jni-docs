@@ -128,6 +128,17 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the location of the rigid body's center of mass.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCharacterSettings()" class="member-name-link">getCharacterSettings</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Generate settings to reconstruct the character, using the locking body
+ interface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCharacterSettings(boolean)" class="member-name-link">getCharacterSettings</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Generate settings to reconstruct the character.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLayer()" class="member-name-link">getLayer</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -186,13 +197,13 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTransformedShape()" class="member-name-link">getTransformedShape</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character, using the locking body interface.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTransformedShape(boolean)" class="member-name-link">getTransformedShape</a><wbr>(boolean&nbsp;lockBodies)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
@@ -270,6 +281,32 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 <dt>Returns:</dt>
 <dd>a new location vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCharacterSettings()">
+<h3>getCharacterSettings</h3>
+<div class="member-signature"><span class="return-type"><a href="../CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></span>&nbsp;<span class="element-name">getCharacterSettings</span>()</div>
+<div class="block">Generate settings to reconstruct the character, using the locking body
+ interface. The character is unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCharacterSettings(boolean)">
+<h3>getCharacterSettings</h3>
+<div class="member-signature"><span class="return-type"><a href="../CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></span>&nbsp;<span class="element-name">getCharacterSettings</span><wbr><span class="parameters">(boolean&nbsp;lockBodies)</span></div>
+<div class="block">Generate settings to reconstruct the character. The character is
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,</dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
 </dl>
 </section>
 </li>
@@ -415,7 +452,7 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <section class="detail" id="getTransformedShape()">
 <h3>getTransformedShape</h3>
 <div class="member-signature"><span class="return-type"><a href="../TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></span>&nbsp;<span class="element-name">getTransformedShape</span>()</div>
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character, using the locking body interface. The character is unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -427,7 +464,7 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <section class="detail" id="getTransformedShape(boolean)">
 <h3>getTransformedShape</h3>
 <div class="member-signature"><span class="return-type"><a href="../TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></span>&nbsp;<span class="element-name">getTransformedShape</span><wbr><span class="parameters">(boolean&nbsp;lockBodies)</span></div>
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character. The character is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

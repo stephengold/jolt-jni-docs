@@ -204,6 +204,17 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location of the rigid body's center of mass.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCharacterSettings()" class="member-name-link">getCharacterSettings</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Generate settings to reconstruct the character, using the locking body
+ interface.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCharacterSettings(boolean)" class="member-name-link">getCharacterSettings</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Generate settings to reconstruct the character.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLayer()" class="member-name-link">getLayer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -262,13 +273,13 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTransformedShape()" class="member-name-link">getTransformedShape</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character, using the locking body interface.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTransformedShape(boolean)" class="member-name-link">getTransformedShape</a><wbr>(boolean&nbsp;lockBodies)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
@@ -966,6 +977,36 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 </section>
 </li>
 <li>
+<section class="detail" id="getCharacterSettings()">
+<h3>getCharacterSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></span>&nbsp;<span class="element-name">getCharacterSettings</span>()</div>
+<div class="block">Generate settings to reconstruct the character, using the locking body
+ interface. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getCharacterSettings()">getCharacterSettings</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCharacterSettings(boolean)">
+<h3>getCharacterSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></span>&nbsp;<span class="element-name">getCharacterSettings</span><wbr><span class="parameters">(boolean&nbsp;lockBodies)</span></div>
+<div class="block">Generate settings to reconstruct the character. The character is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getCharacterSettings(boolean)">getCharacterSettings</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,</dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getLayer()">
 <h3>getLayer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getLayer</span>()</div>
@@ -1066,10 +1107,10 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacter.html#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)">getPositionAndRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeLocation</code> - the desired location (in system coordinates, not
- null, unaffected)</dd>
-<dd><code>storeOrientation</code> - the desired orientation (in system coordinates,
- not null, unaffected)</dd>
+<dd><code>storeLocation</code> - storage for the location (in system coordinates, not
+ null, modified)</dd>
+<dd><code>storeOrientation</code> - storage for the orientation (in system
+ coordinates, not null, modified)</dd>
 </dl>
 </section>
 </li>
@@ -1084,10 +1125,10 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacter.html#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat,boolean)">getPositionAndRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeLocation</code> - the desired location (in system coordinates, not
- null, unaffected)</dd>
-<dd><code>storeOrientation</code> - the desired orientation (in system coordinates,
- not null, unaffected)</dd>
+<dd><code>storeLocation</code> - storage for the location (in system coordinates, not
+ null, modified)</dd>
+<dd><code>storeOrientation</code> - storage for the orientation (in system
+ coordinates, not null, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -1127,7 +1168,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <section class="detail" id="getTransformedShape()">
 <h3>getTransformedShape</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></span>&nbsp;<span class="element-name">getTransformedShape</span>()</div>
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character, using the locking body interface. The character is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -1141,7 +1182,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <section class="detail" id="getTransformedShape(boolean)">
 <h3>getTransformedShape</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></span>&nbsp;<span class="element-name">getTransformedShape</span><wbr><span class="parameters">(boolean&nbsp;lockBodies)</span></div>
-<div class="block">Return a TransformedShape that represents the volume occupied by the
+<div class="block">Generate a TransformedShape that represents the volume occupied by the
  character. The character is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>

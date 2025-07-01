@@ -149,8 +149,22 @@ loadScripts(document, 'script');</script>
 <div class="block">Expand or truncate the list, initializing any new vertices to (0,0,0).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.Float3)" class="member-name-link">set</a><wbr>(int&nbsp;vertexIndex,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,float,float,float)" class="member-name-link">set</a><wbr>(int&nbsp;vertexIndex,
+ float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Store the specified vertex location at the specified index.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.Float3)" class="member-name-link">set</a><wbr>(int&nbsp;vertexIndex,
  <a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Store the specified vertex location at the specified index.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">set</a><wbr>(int&nbsp;vertexIndex,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Store the specified vertex location at the specified index.</div>
 </div>
@@ -162,7 +176,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toDirectBuffer()" class="member-name-link">toDirectBuffer</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access a direct Buffer containing all vertices in the list, in order.</div>
+<div class="block">Access a direct buffer containing all vertices in the list, in order.</div>
 </div>
 </div>
 </div>
@@ -255,10 +269,40 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="set(int,float,float,float)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(int&nbsp;vertexIndex,
+ float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Store the specified vertex location at the specified index.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>vertexIndex</code> - an index in the list (&ge;0, &lt;size)</dd>
+<dd><code>x</code> - the X-coordinate to store</dd>
+<dd><code>y</code> - the Y-coordinate to store</dd>
+<dd><code>z</code> - the Z-coordinate to store</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="set(int,com.github.stephengold.joltjni.Float3)">
 <h3>set</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(int&nbsp;vertexIndex,
  <a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</span></div>
+<div class="block">Store the specified vertex location at the specified index.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>vertexIndex</code> - an index in the list (&ge;0, &lt;size)</dd>
+<dd><code>location</code> - the data to store (not null, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(int,com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(int&nbsp;vertexIndex,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</span></div>
 <div class="block">Store the specified vertex location at the specified index.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -282,7 +326,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toDirectBuffer()">
 <h3>toDirectBuffer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></span>&nbsp;<span class="element-name">toDirectBuffer</span>()</div>
-<div class="block">Access a direct Buffer containing all vertices in the list, in order. No
+<div class="block">Access a direct buffer containing all vertices in the list, in order. No
  further <code>resize()</code> or <code>set()</code> is allowed.</div>
 <dl class="notes">
 <dt>Returns:</dt>

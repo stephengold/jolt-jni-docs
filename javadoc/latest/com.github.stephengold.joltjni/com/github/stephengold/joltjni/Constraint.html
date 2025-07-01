@@ -128,7 +128,7 @@ implements <a href="readonly/ConstConstraint.html" title="interface in com.githu
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">ConstraintSettingsRef</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConstraintSettings()" class="member-name-link">getConstraintSettings</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Convert the constraint to a <code>ConstraintSettings</code> object.</div>
+<div class="block">Generate settings to reconstruct the constraint.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnabled()" class="member-name-link">getEnabled</a>()</code></div>
@@ -307,13 +307,13 @@ implements <a href="readonly/ConstConstraint.html" title="interface in com.githu
 <section class="detail" id="getConstraintSettings()">
 <h3>getConstraintSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">ConstraintSettingsRef</a></span>&nbsp;<span class="element-name">getConstraintSettings</span>()</div>
-<div class="block">Convert the constraint to a <code>ConstraintSettings</code> object. The
- constraint is unaffected.</div>
+<div class="block">Generate settings to reconstruct the constraint. The constraint is
+ unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstConstraint.html#getConstraintSettings()">getConstraintSettings</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a></code></dd>
 <dt>Returns:</dt>
-<dd>a new reference to a new settings object</dd>
+<dd>a counted reference to a new settings object</dd>
 </dl>
 </section>
 </li>

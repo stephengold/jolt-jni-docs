@@ -92,7 +92,18 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">ObjectStreamOut</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Utility class for writing Jolt Physics objects to streams.</div>
+<div class="block">Utility class for writing uncooked Jolt-Physics objects to files or streams.
+ Data serialized this way is more like to be compatible with future versions
+ of the library than the
+ <code>saveBinaryState()</code>/<code>restoreBinaryState()</code> methods.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="ObjectStreamIn.html" title="class in com.github.stephengold.joltjni"><code>ObjectStreamIn</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -108,18 +119,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sWriteObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.PhysicsScene)" class="member-name-link">sWriteObject</a><wbr>(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sWriteObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject)" class="member-name-link">sWriteObject</a><wbr>(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
  <a href="enumerate/EStreamType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EStreamType</a>&nbsp;streamType,
- <a href="PhysicsScene.html" title="class in com.github.stephengold.joltjni">PhysicsScene</a>&nbsp;scene)</code></div>
+ <a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a>&nbsp;writeObject)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Write the specified scene to the specified stream.</div>
+<div class="block">Write the specified object to the specified stream.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sWriteObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.RagdollSettings)" class="member-name-link">sWriteObject</a><wbr>(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sWriteObject(java.lang.String,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject)" class="member-name-link">sWriteObject</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName,
  <a href="enumerate/EStreamType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EStreamType</a>&nbsp;streamType,
- <a href="RagdollSettings.html" title="class in com.github.stephengold.joltjni">RagdollSettings</a>&nbsp;settings)</code></div>
+ <a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a>&nbsp;writeObject)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Write the specified ragdoll settings to the specified stream.</div>
+<div class="block">Write the specified object to the specified file.</div>
 </div>
 </div>
 </div>
@@ -139,34 +150,34 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="sWriteObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.PhysicsScene)">
+<section class="detail" id="sWriteObject(java.lang.String,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject)">
 <h3>sWriteObject</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">sWriteObject</span><wbr><span class="parameters">(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">sWriteObject</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName,
  <a href="enumerate/EStreamType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EStreamType</a>&nbsp;streamType,
- <a href="PhysicsScene.html" title="class in com.github.stephengold.joltjni">PhysicsScene</a>&nbsp;scene)</span></div>
-<div class="block">Write the specified scene to the specified stream.</div>
+ <a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a>&nbsp;writeObject)</span></div>
+<div class="block">Write the specified object to the specified file.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to write to (not null)</dd>
-<dd><code>streamType</code> - the type of stream (not null)</dd>
-<dd><code>scene</code> - the scene to write (not null, unaffected)</dd>
+<dd><code>fileName</code> - the path to the file (not null)</dd>
+<dd><code>streamType</code> - the type of file (not null)</dd>
+<dd><code>writeObject</code> - the object to write (not null, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="sWriteObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.RagdollSettings)">
+<section class="detail" id="sWriteObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.enumerate.EStreamType,com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject)">
 <h3>sWriteObject</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">sWriteObject</span><wbr><span class="parameters">(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
  <a href="enumerate/EStreamType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EStreamType</a>&nbsp;streamType,
- <a href="RagdollSettings.html" title="class in com.github.stephengold.joltjni">RagdollSettings</a>&nbsp;settings)</span></div>
-<div class="block">Write the specified ragdoll settings to the specified stream.</div>
+ <a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a>&nbsp;writeObject)</span></div>
+<div class="block">Write the specified object to the specified stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stream</code> - the stream to write to (not null)</dd>
 <dd><code>streamType</code> - the type of stream (not null)</dd>
-<dd><code>settings</code> - the settings to write (not null, unaffected)</dd>
+<dd><code>writeObject</code> - the object to write (not null, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
 </dl>

@@ -109,7 +109,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>static final float</code></div>
 <div class="col-second even-row-color"><code><a href="#cMinScale" class="member-name-link">cMinScale</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The smalled valid scale factor.</div>
+<div class="block">The smallest valid scale factor.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final float</code></div>
 <div class="col-second odd-row-color"><code><a href="#cScaleToleranceSq" class="member-name-link">cScaleToleranceSq</a></code></div>
@@ -133,12 +133,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isInsideOut(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">isInsideOut</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Test whether the specified scale turns 3-D objects inside-out.</div>
+<div class="block">Test whether the specified scale turns 3-D normals inside-out.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isNotScaled(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">isNotScaled</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Test whether the specified scale is identity.</div>
+<div class="block">Test whether the specified scale is close to identity.</div>
 </div>
 </div>
 </div>
@@ -161,7 +161,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="cMinScale">
 <h3>cMinScale</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">cMinScale</span></div>
-<div class="block">The smalled valid scale factor.</div>
+<div class="block">The smallest valid scale factor.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -199,12 +199,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isInsideOut(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>isInsideOut</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isInsideOut</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</span></div>
-<div class="block">Test whether the specified scale turns 3-D objects inside-out.</div>
+<div class="block">Test whether the specified scale turns 3-D normals inside-out.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>scale</code> - the scale vector to test (not null, unaffected)</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if it turns objects inside-out, otherwise
+<dd><code>true</code> if it turns normals inside-out, otherwise
  <code>false</code></dd>
 </dl>
 </section>
@@ -213,7 +213,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isNotScaled(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>isNotScaled</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isNotScaled</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</span></div>
-<div class="block">Test whether the specified scale is identity.</div>
+<div class="block">Test whether the specified scale is close to identity.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>scale</code> - the scale vector to test (not null, unaffected)</dd>

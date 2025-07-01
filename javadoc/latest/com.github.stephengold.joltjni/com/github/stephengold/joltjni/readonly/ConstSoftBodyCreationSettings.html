@@ -167,7 +167,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPressure()" class="member-name-link">getPressure</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Return the pressure.</div>
+<div class="block">Return the internal pressure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRestitution()" class="member-name-link">getRestitution</a>()</code></div>
@@ -193,6 +193,25 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserData()" class="member-name-link">getUserData</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the user data.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVertexRadius()" class="member-name-link">getVertexRadius</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the radius of each particle.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write the state of this object to the specified stream, excluding the
+ shared settings, materials, and group filter.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)" class="member-name-link">saveWithChildren</a><wbr>(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="../streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;sbssMap,
+ <a href="../streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap,
+ <a href="../streamutils/GroupFilterToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">GroupFilterToIdMap</a>&nbsp;filterMap)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write the state of this object to the specified stream.</div>
 </div>
 </div>
 </div>
@@ -332,7 +351,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <section class="detail" id="getPressure()">
 <h3>getPressure</h3>
 <div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getPressure</span>()</div>
-<div class="block">Return the pressure. The settings are unaffected.</div>
+<div class="block">Return the internal pressure. The settings are unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the pressure</dd>
@@ -391,11 +410,52 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <section class="detail" id="getUserData()">
 <h3>getUserData</h3>
 <div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">getUserData</span>()</div>
-<div class="block">Return the user data. The settings are unaffected. (native member:
- mUserData)</div>
+<div class="block">Return the user data. The settings are unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVertexRadius()">
+<h3>getVertexRadius</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getVertexRadius</span>()</div>
+<div class="block">Return the radius of each particle. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the radius (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Write the state of this object to the specified stream, excluding the
+ shared settings, materials, and group filter. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)">
+<h3>saveWithChildren</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">saveWithChildren</span><wbr><span class="parameters">(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="../streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;sbssMap,
+ <a href="../streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap,
+ <a href="../streamutils/GroupFilterToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">GroupFilterToIdMap</a>&nbsp;filterMap)</span></div>
+<div class="block">Write the state of this object to the specified stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not null)</dd>
+<dd><code>sbssMap</code> - track multiple uses of shared settings (may be null)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (may be null)</dd>
+<dd><code>filterMap</code> - track multiple uses of group filters (may be null)</dd>
 </dl>
 </section>
 </li>

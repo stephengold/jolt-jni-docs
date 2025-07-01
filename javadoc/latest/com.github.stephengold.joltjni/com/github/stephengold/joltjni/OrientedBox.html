@@ -115,9 +115,13 @@ implements <a href="readonly/ConstOrientedBox.html" title="interface in com.gith
 <div class="col-last even-row-color">
 <div class="block">Instantiate a default box.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">OrientedBox</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;orientation,
- <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstOrientedBox)" class="member-name-link">OrientedBox</a><wbr>(<a href="readonly/ConstOrientedBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstOrientedBox</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified box.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">OrientedBox</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;orientation,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Instantiate a box with the specified transform and half extents.</div>
 </div>
 </div>
@@ -176,6 +180,17 @@ implements <a href="readonly/ConstOrientedBox.html" title="interface in com.gith
 <h3>OrientedBox</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">OrientedBox</span>()</div>
 <div class="block">Instantiate a default box.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstOrientedBox)">
+<h3>OrientedBox</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">OrientedBox</span><wbr><span class="parameters">(<a href="readonly/ConstOrientedBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstOrientedBox</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified box.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the box to copy (not <code>null</code>, unaffected)</dd>
+</dl>
 </section>
 </li>
 <li>

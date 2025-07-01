@@ -95,7 +95,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">ShapeSettingsRef</span>
@@ -142,19 +142,24 @@ implements <a href="readonly/ConstShapeSettings.html" title="interface in com.gi
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Temporarily access the referenced <code>ShapeSettings</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Rtti.html" title="class in com.github.stephengold.joltjni">Rtti</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRtti()" class="member-name-link">getRtti</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the type information of the current object.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the address of the native <code>ShapeSettings</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShapeSettingsRef.html" title="class in com.github.stephengold.joltjni">ShapeSettingsRef</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShapeSettingsRef.html" title="class in com.github.stephengold.joltjni">ShapeSettingsRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create another counted reference to the native <code>ShapeSettings</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShapeSettingsRefC.html" title="class in com.github.stephengold.joltjni">ShapeSettingsRefC</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShapeSettingsRefC.html" title="class in com.github.stephengold.joltjni">ShapeSettingsRefC</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the native <code>ShapeSettings</code>.</div>
 </div>
 </div>
@@ -208,6 +213,20 @@ implements <a href="readonly/ConstShapeSettings.html" title="interface in com.gi
 <dd><code><a href="readonly/ConstShapeSettings.html#create()">create</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with a new native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRtti()">
+<h3>getRtti</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Rtti.html" title="class in com.github.stephengold.joltjni">Rtti</a></span>&nbsp;<span class="element-name">getRtti</span>()</div>
+<div class="block">Access the type information of the current object. (native method:
+ getRTTI)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
 </dl>
 </section>
 </li>

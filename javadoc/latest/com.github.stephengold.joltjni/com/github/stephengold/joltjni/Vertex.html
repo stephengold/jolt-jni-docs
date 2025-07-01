@@ -93,11 +93,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertex</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Vertex</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertex</a></span></div>
 <div class="block">Attributes of a particle, for use during the creation of a soft body. (native
  type: <code>SoftBodySharedSettings::Vertex</code>)</div>
 </section>
@@ -144,27 +145,41 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the initial velocity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvMass(float)" class="member-name-link">setInvMass</a><wbr>(float&nbsp;invMass)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the inverse mass.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.Float3)" class="member-name-link">setPosition</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(float,float,float)" class="member-name-link">setPosition</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the initial location of the vertex.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.Float3)" class="member-name-link">setPosition</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the initial location of the vertex.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the initial location of the vertex.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(float,float,float)" class="member-name-link">setVelocity</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the initial location of the vertex.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(com.github.stephengold.joltjni.Float3)" class="member-name-link">setVelocity</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the initial velocity of the vertex.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the initial velocity of the vertex.</div>
@@ -178,6 +193,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -205,12 +226,117 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="setInvMass(float)">
+<h3>setInvMass</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></span>&nbsp;<span class="element-name">setInvMass</span><wbr><span class="parameters">(float&nbsp;invMass)</span></div>
+<div class="block">Alter the inverse mass. (native attribute: mInvMass)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>invMass</code> - the desired inverse mass (in 1/kilograms, default=1)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPosition(float,float,float)">
+<h3>setPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the initial location of the vertex. (native attribute: mPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X coordinate</dd>
+<dd><code>y</code> - the desired Y coordinate</dd>
+<dd><code>z</code> - the desired Z coordinate</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPosition(com.github.stephengold.joltjni.Float3)">
+<h3>setPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</span></div>
+<div class="block">Alter the initial location of the vertex. (native attribute: mPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>location</code> - the desired location (not null, unaffected
+ default=(0,0,0))</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</span></div>
+<div class="block">Alter the initial location of the vertex. (native attribute: mPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>location</code> - the desired location (not null, unaffected
+ default=(0,0,0))</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVelocity(float,float,float)">
+<h3>setVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></span>&nbsp;<span class="element-name">setVelocity</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the initial location of the vertex. (native attribute: mPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X component</dd>
+<dd><code>y</code> - the desired Y component</dd>
+<dd><code>z</code> - the desired Z component</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVelocity(com.github.stephengold.joltjni.Float3)">
+<h3>setVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></span>&nbsp;<span class="element-name">setVelocity</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;velocity)</span></div>
+<div class="block">Alter the initial velocity of the vertex. (native attribute: mVelocity)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>velocity</code> - the desired velocity (in meters per second, not null,
+ unaffected default=(0,0,0))</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></span>&nbsp;<span class="element-name">setVelocity</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</span></div>
+<div class="block">Alter the initial velocity of the vertex. (native attribute: mVelocity)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>velocity</code> - the desired velocity (in meters per second, not null,
+ unaffected, default=(0,0,0))</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getInvMass()">
 <h3>getInvMass</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getInvMass</span>()</div>
 <div class="block">Return the inverse mass. The vertex is unaffected. (native attribute:
  mInvMass)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertex.html#getInvMass()">getInvMass</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertex</a></code></dd>
 <dt>Returns:</dt>
 <dd>the inverse of the mass (in 1/kilograms)</dd>
 </dl>
@@ -223,6 +349,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the initial location. The vertex is unaffected. (native attribute:
  mPosition)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertex.html#getPosition()">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertex</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new location vector</dd>
 </dl>
@@ -235,67 +363,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the initial velocity. The vertex is unaffected. (native attribute:
  mVelocity)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertex.html#getVelocity()">getVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertex</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new velocity vector (in meters per second)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setInvMass(float)">
-<h3>setInvMass</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInvMass</span><wbr><span class="parameters">(float&nbsp;invMass)</span></div>
-<div class="block">Alter the inverse mass. (native attribute: mInvMass)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>invMass</code> - the desired inverse mass (in 1/kilograms, default=1)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setPosition(com.github.stephengold.joltjni.Float3)">
-<h3>setPosition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</span></div>
-<div class="block">Alter the initial location of the vertex. (native attribute: mPosition)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (not null, unaffected
- default=(0,0,0))</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)">
-<h3>setPosition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</span></div>
-<div class="block">Alter the initial location of the vertex. (native attribute: mPosition)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (not null, unaffected
- default=(0,0,0))</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVelocity(com.github.stephengold.joltjni.Float3)">
-<h3>setVelocity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVelocity</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;velocity)</span></div>
-<div class="block">Alter the initial velocity of the vertex. (native attribute: mVelocity)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>velocity</code> - the desired velocity (in meters per second, not null,
- unaffected default=(0,0,0))</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)">
-<h3>setVelocity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVelocity</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</span></div>
-<div class="block">Alter the initial velocity of the vertex. (native attribute: mVelocity)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>velocity</code> - the desired velocity (in meters per second, not null,
- unaffected, default=(0,0,0))</dd>
 </dl>
 </section>
 </li>

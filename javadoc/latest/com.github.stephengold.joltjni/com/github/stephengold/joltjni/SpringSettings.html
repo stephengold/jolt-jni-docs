@@ -93,11 +93,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">SpringSettings</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></span></div>
 <div class="block">Settings used to construct a spring.</div>
 </section>
 <section class="summary">
@@ -113,6 +114,10 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">SpringSettings</a>()</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSpringSettings)" class="member-name-link">SpringSettings</a><wbr>(<a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
 </div>
 </div>
 </section>
@@ -163,6 +168,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test for valid frequency/stiffness.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Load settings from the specified binary stream.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Save the settings to the specified binary stream.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDamping(float)" class="member-name-link">setDamping</a><wbr>(float&nbsp;damping)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -192,6 +207,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -210,6 +231,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate default settings.</div>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstSpringSettings)">
+<h3>SpringSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SpringSettings</span><wbr><span class="parameters">(<a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -219,103 +251,13 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getConstraint()">
-<h3>getConstraint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Constraint.html" title="class in com.github.stephengold.joltjni">Constraint</a></span>&nbsp;<span class="element-name">getConstraint</span>()</div>
-<div class="block">Access the underlying <code>Constraint</code>, if any.</div>
+<section class="detail" id="restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">
+<h3>restoreBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
+<div class="block">Load settings from the specified binary stream.</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing instance, or <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getConstraintSettings()">
-<h3>getConstraintSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConstraintSettings</a></span>&nbsp;<span class="element-name">getConstraintSettings</span>()</div>
-<div class="block">Access the underlying <code>ConstraintSettings</code>, if any.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing instance, or <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getDamping()">
-<h3>getDamping</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDamping</span>()</div>
-<div class="block">Return the spring's damping. The settings are unaffected. (native
- attribute: mDamping)
- <p>
- When the mode is FrequencyAndDamping, this is the damping ratio (0 = no
- damping, 1 = critical damping). When the mode is StiffnessAndDamping,
- this is the damping coefficient <code>c</code> in the spring equation:
- <code>F = -k * x - c * v</code> for a linear spring or
- <code>T = -k * theta - c * w</code> for an angular spring.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the damping value</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getFrequency()">
-<h3>getFrequency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFrequency</span>()</div>
-<div class="block">Return the spring's frequency. The settings are unaffected. (native
- attribute: mFrequency)
- <p>
- Effective only when the mode is FrequencyAndDamping. If positive, the
- constraint will have soft limits, and mFrequency specifies the
- oscillation frequency in Hz. If negative, the constraint will have hard
- limits.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the frequency value</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMode()">
-<h3>getMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enumerate/ESpringMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ESpringMode</a></span>&nbsp;<span class="element-name">getMode</span>()</div>
-<div class="block">Return how the spring is specified. The settings are unaffected. (native
- attribute: mMode)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getStiffness()">
-<h3>getStiffness</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getStiffness</span>()</div>
-<div class="block">Return the spring's stiffness. The settings are unaffected. (native
- attribute: mStiffness)
- <p>
- Effective only when the mode is StiffnessAndDamping. If positive, the
- constraint will have soft limits, and mStiffness specifies the stiffness
- <code>k</code> in the spring equation: <code>F = -k * x - c * v</code> for a linear
- spring or <code>T = -k *
- theta - c * w</code> for an angular spring.
- <p>
- If negative, the constraint will have hard limits.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the stiffness value</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="hasStiffness()">
-<h3>hasStiffness</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasStiffness</span>()</div>
-<div class="block">Test for valid frequency/stiffness. The settings are unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd><code>true</code> if valid (the constraint will have soft limits),
- otherwise <code>false</code> (hard limits)</dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to read from (not null)</dd>
 </dl>
 </section>
 </li>
@@ -387,6 +329,135 @@ loadScripts(document, 'script');</script>
 <dd><code>stiffness</code> - (default=0)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConstraint()">
+<h3>getConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Constraint.html" title="class in com.github.stephengold.joltjni">Constraint</a></span>&nbsp;<span class="element-name">getConstraint</span>()</div>
+<div class="block">Access the underlying <code>Constraint</code>, if any.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#getConstraint()">getConstraint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing instance, or <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConstraintSettings()">
+<h3>getConstraintSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConstraintSettings</a></span>&nbsp;<span class="element-name">getConstraintSettings</span>()</div>
+<div class="block">Access the underlying <code>ConstraintSettings</code>, if any.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#getConstraintSettings()">getConstraintSettings</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing instance, or <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDamping()">
+<h3>getDamping</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDamping</span>()</div>
+<div class="block">Return the spring's damping. The settings are unaffected. (native
+ attribute: mDamping)
+ <p>
+ When the mode is FrequencyAndDamping, this is the damping ratio (0 = no
+ damping, 1 = critical damping). When the mode is StiffnessAndDamping,
+ this is the damping coefficient <code>c</code> in the spring equation:
+ <code>F = -k * x - c * v</code> for a linear spring or
+ <code>T = -k * theta - c * w</code> for an angular spring.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#getDamping()">getDamping</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the damping value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFrequency()">
+<h3>getFrequency</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFrequency</span>()</div>
+<div class="block">Return the spring's frequency. The settings are unaffected. (native
+ attribute: mFrequency)
+ <p>
+ Effective only when the mode is FrequencyAndDamping. If positive, the
+ constraint will have soft limits, and mFrequency specifies the
+ oscillation frequency in Hz. If negative, the constraint will have hard
+ limits.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#getFrequency()">getFrequency</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the frequency value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMode()">
+<h3>getMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enumerate/ESpringMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ESpringMode</a></span>&nbsp;<span class="element-name">getMode</span>()</div>
+<div class="block">Return how the spring is specified. The settings are unaffected. (native
+ attribute: mMode)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#getMode()">getMode</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>an enum value (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStiffness()">
+<h3>getStiffness</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getStiffness</span>()</div>
+<div class="block">Return the spring's stiffness. The settings are unaffected. (native
+ attribute: mStiffness)
+ <p>
+ Effective only when the mode is StiffnessAndDamping. If positive, the
+ constraint will have soft limits, and mStiffness specifies the stiffness
+ <code>k</code> in the spring equation: <code>F = -k * x - c * v</code> for a linear
+ spring or <code>T = -k *
+ theta - c * w</code> for an angular spring.
+ <p>
+ If negative, the constraint will have hard limits.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#getStiffness()">getStiffness</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the stiffness value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasStiffness()">
+<h3>hasStiffness</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasStiffness</span>()</div>
+<div class="block">Test for valid frequency/stiffness. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#hasStiffness()">hasStiffness</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if valid (the constraint will have soft limits),
+ otherwise <code>false</code> (hard limits)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Save the settings to the specified binary stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSpringSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to write to (not null)</dd>
 </dl>
 </section>
 </li>

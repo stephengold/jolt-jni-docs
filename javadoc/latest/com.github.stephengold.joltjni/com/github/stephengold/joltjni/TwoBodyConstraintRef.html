@@ -137,10 +137,20 @@ implements <a href="readonly/ConstTwoBodyConstraint.html" title="interface in co
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the first body in the constraint.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Body.html" title="class in com.github.stephengold.joltjni">Body</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBody2()" class="member-name-link">getBody2</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBody1PivotLocation(java.nio.DoubleBuffer)" class="member-name-link">getBody1PivotLocation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the first body's pivot location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Body.html" title="class in com.github.stephengold.joltjni">Body</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBody2()" class="member-name-link">getBody2</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the 2nd body in the constraint.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBody2PivotLocation(java.nio.DoubleBuffer)" class="member-name-link">getBody2PivotLocation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the 2nd body's pivot location.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConstraintPriority()" class="member-name-link">getConstraintPriority</a>()</code></div>
@@ -280,6 +290,20 @@ implements <a href="readonly/ConstTwoBodyConstraint.html" title="interface in co
 </section>
 </li>
 <li>
+<section class="detail" id="getBody1PivotLocation(java.nio.DoubleBuffer)">
+<h3>getBody1PivotLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getBody1PivotLocation</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the first body's pivot location. The constraint is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstTwoBodyConstraint.html#getBody1PivotLocation(java.nio.DoubleBuffer)">getBody1PivotLocation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstTwoBodyConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTwoBodyConstraint</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location in system coordinates (not
+ null, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getBody2()">
 <h3>getBody2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Body.html" title="class in com.github.stephengold.joltjni">Body</a></span>&nbsp;<span class="element-name">getBody2</span>()</div>
@@ -289,6 +313,20 @@ implements <a href="readonly/ConstTwoBodyConstraint.html" title="interface in co
 <dd><code><a href="readonly/ConstTwoBodyConstraint.html#getBody2()">getBody2</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstTwoBodyConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTwoBodyConstraint</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBody2PivotLocation(java.nio.DoubleBuffer)">
+<h3>getBody2PivotLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getBody2PivotLocation</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the 2nd body's pivot location. The constraint is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstTwoBodyConstraint.html#getBody2PivotLocation(java.nio.DoubleBuffer)">getBody2PivotLocation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstTwoBodyConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTwoBodyConstraint</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location in system coordinates (not
+ null, modified)</dd>
 </dl>
 </section>
 </li>

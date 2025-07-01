@@ -87,17 +87,15 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
-<div class="inheritance"><a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.NonCopyable</a>
 <div class="inheritance"><a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.SerializableObject</a>
 <div class="inheritance">com.github.stephengold.joltjni.GroupFilter</div>
-</div>
 </div>
 </div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstGroupFilter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstGroupFilter</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstGroupFilter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstGroupFilter</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -116,7 +114,7 @@ implements <a href="readonly/ConstGroupFilter.html" title="interface in com.gith
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -134,9 +132,19 @@ implements <a href="readonly/ConstGroupFilter.html" title="interface in com.gith
 <div class="block">Count the active references to the native <code>GroupFilter</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Save the settings to the specified binary stream.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Mark the native <code>GroupFilter</code> as embedded.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="GroupFilterResult.html" title="class in com.github.stephengold.joltjni">GroupFilterResult</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreFromBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">sRestoreFromBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Read a filter from the specified binary stream.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
@@ -146,6 +154,9 @@ implements <a href="readonly/ConstGroupFilter.html" title="interface in com.gith
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.SerializableObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">SerializableObject</a></h3>
+<code><a href="SerializableObject.html#getRtti()">getRtti</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
@@ -158,6 +169,9 @@ implements <a href="readonly/ConstGroupFilter.html" title="interface in com.gith
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
+<code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
 </section>
 </li>
 </ul>
@@ -169,6 +183,19 @@ implements <a href="readonly/ConstGroupFilter.html" title="interface in com.gith
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="sRestoreFromBinaryState(com.github.stephengold.joltjni.StreamIn)">
+<h3>sRestoreFromBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GroupFilterResult.html" title="class in com.github.stephengold.joltjni">GroupFilterResult</a></span>&nbsp;<span class="element-name">sRestoreFromBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
+<div class="block">Read a filter from the specified binary stream.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to read objects (not null)</dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="canCollide(com.github.stephengold.joltjni.readonly.ConstCollisionGroup,com.github.stephengold.joltjni.readonly.ConstCollisionGroup)">
 <h3>canCollide</h3>
@@ -183,6 +210,20 @@ implements <a href="readonly/ConstGroupFilter.html" title="interface in com.gith
 <dd><code>group2</code> - the 2nd group (not null, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if they can collide, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Save the settings to the specified binary stream. The filter is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstGroupFilter.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstGroupFilter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstGroupFilter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to write to (not null)</dd>
 </dl>
 </section>
 </li>

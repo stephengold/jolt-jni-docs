@@ -87,7 +87,6 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
-<div class="inheritance"><a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.NonCopyable</a>
 <div class="inheritance"><a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.SerializableObject</a>
 <div class="inheritance"><a href="ConstraintSettings.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.ConstraintSettings</a>
 <div class="inheritance">com.github.stephengold.joltjni.VehicleConstraintSettings</div>
@@ -95,15 +94,15 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 </div>
-</div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraintSettings</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraintSettings</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VehicleConstraintSettings</span>
-<span class="extends-implements">extends <a href="ConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConstraintSettings</a></span></div>
+<span class="extends-implements">extends <a href="ConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConstraintSettings</a>
+implements <a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></span></div>
 <div class="block">Settings used to construct a <code>VehicleConstraint</code>.</div>
 </section>
 <section class="summary">
@@ -119,6 +118,10 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">VehicleConstraintSettings</a>()</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstVehicleConstraintSettings)" class="member-name-link">VehicleConstraintSettings</a><wbr>(<a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
 </div>
 </div>
 </section>
@@ -140,7 +143,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Append the specified wheel settings.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAntiRollBar(int)" class="member-name-link">getAntiRollBar</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAntiRollBar(int)" class="member-name-link">getAntiRollBar</a><wbr>(int&nbsp;barIndex)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the settings for the specified anti-roll bar.</div>
 </div>
@@ -174,34 +177,39 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the "up" vector.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a>[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheels()" class="member-name-link">getWheels</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheel(int)" class="member-name-link">getWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the settings of the specified wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheels()" class="member-name-link">getWheels</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Enumerate all wheel settings.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setController(com.github.stephengold.joltjni.VehicleControllerSettings)" class="member-name-link">setController</a><wbr>(<a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a>&nbsp;controllerSettings)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setController(com.github.stephengold.joltjni.VehicleControllerSettings)" class="member-name-link">setController</a><wbr>(<a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a>&nbsp;controllerSettings)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter how the vehicle accelerates and decelerates.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setForward(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setForward</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;forward)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setForward(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setForward</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;forward)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the forward direction.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxPitchRollAngle(float)" class="member-name-link">setMaxPitchRollAngle</a><wbr>(float&nbsp;angle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxPitchRollAngle(float)" class="member-name-link">setMaxPitchRollAngle</a><wbr>(float&nbsp;angle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the vehicle's maximum pitch/roll angle.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumAntiRollBars(int)" class="member-name-link">setNumAntiRollBars</a><wbr>(int&nbsp;count)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumAntiRollBars(int)" class="member-name-link">setNumAntiRollBars</a><wbr>(int&nbsp;count)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the number of anti-roll bars.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUp(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setUp</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUp(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setUp</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the up direction.</div>
 </div>
 </div>
@@ -209,7 +217,10 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.ConstraintSettings">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="ConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConstraintSettings</a></h3>
-<code><a href="ConstraintSettings.html#getConstraintPriority()">getConstraintPriority</a>, <a href="ConstraintSettings.html#getControllerType()">getControllerType</a>, <a href="ConstraintSettings.html#getDrawConstraintSize()">getDrawConstraintSize</a>, <a href="ConstraintSettings.html#getEnabled()">getEnabled</a>, <a href="ConstraintSettings.html#getNumPositionStepsOverride()">getNumPositionStepsOverride</a>, <a href="ConstraintSettings.html#getNumVelocityStepsOverride()">getNumVelocityStepsOverride</a>, <a href="ConstraintSettings.html#getRefCount()">getRefCount</a>, <a href="ConstraintSettings.html#setConstraintPriority(int)">setConstraintPriority</a>, <a href="ConstraintSettings.html#setDrawConstraintSize(float)">setDrawConstraintSize</a>, <a href="ConstraintSettings.html#setEmbedded()">setEmbedded</a>, <a href="ConstraintSettings.html#setEnabled(boolean)">setEnabled</a>, <a href="ConstraintSettings.html#setNumPositionStepsOverride(int)">setNumPositionStepsOverride</a>, <a href="ConstraintSettings.html#setNumVelocityStepsOverride(int)">setNumVelocityStepsOverride</a>, <a href="ConstraintSettings.html#toRef()">toRef</a></code></div>
+<code><a href="ConstraintSettings.html#getConstraintPriority()">getConstraintPriority</a>, <a href="ConstraintSettings.html#getControllerType()">getControllerType</a>, <a href="ConstraintSettings.html#getDrawConstraintSize()">getDrawConstraintSize</a>, <a href="ConstraintSettings.html#getEnabled()">getEnabled</a>, <a href="ConstraintSettings.html#getNumPositionStepsOverride()">getNumPositionStepsOverride</a>, <a href="ConstraintSettings.html#getNumVelocityStepsOverride()">getNumVelocityStepsOverride</a>, <a href="ConstraintSettings.html#getRefCount()">getRefCount</a>, <a href="ConstraintSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a>, <a href="ConstraintSettings.html#setConstraintPriority(int)">setConstraintPriority</a>, <a href="ConstraintSettings.html#setDrawConstraintSize(float)">setDrawConstraintSize</a>, <a href="ConstraintSettings.html#setEmbedded()">setEmbedded</a>, <a href="ConstraintSettings.html#setEnabled(boolean)">setEnabled</a>, <a href="ConstraintSettings.html#setNumPositionStepsOverride(int)">setNumPositionStepsOverride</a>, <a href="ConstraintSettings.html#setNumVelocityStepsOverride(int)">setNumVelocityStepsOverride</a>, <a href="ConstraintSettings.html#sRestoreFromBinaryState(com.github.stephengold.joltjni.StreamIn)">sRestoreFromBinaryState</a>, <a href="ConstraintSettings.html#toRef()">toRef</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.SerializableObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">SerializableObject</a></h3>
+<code><a href="SerializableObject.html#getRtti()">getRtti</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
@@ -220,8 +231,14 @@ loadScripts(document, 'script');</script>
 <h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
 <div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstConstraintSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraintSettings</a></h3>
+<code><a href="readonly/ConstConstraintSettings.html#getConstraintPriority()">getConstraintPriority</a>, <a href="readonly/ConstConstraintSettings.html#getControllerType()">getControllerType</a>, <a href="readonly/ConstConstraintSettings.html#getDrawConstraintSize()">getDrawConstraintSize</a>, <a href="readonly/ConstConstraintSettings.html#getEnabled()">getEnabled</a>, <a href="readonly/ConstConstraintSettings.html#getNumPositionStepsOverride()">getNumPositionStepsOverride</a>, <a href="readonly/ConstConstraintSettings.html#getNumVelocityStepsOverride()">getNumVelocityStepsOverride</a>, <a href="readonly/ConstConstraintSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code></div>
+<div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
+<code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
 </section>
 </li>
 </ul>
@@ -240,6 +257,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate default settings.</div>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstVehicleConstraintSettings)">
+<h3>VehicleConstraintSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleConstraintSettings</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -256,103 +284,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>wheelSettingsArray</code> - the wheel settings to append</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getAntiRollBar(int)">
-<h3>getAntiRollBar</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></span>&nbsp;<span class="element-name">getAntiRollBar</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block">Access the settings for the specified anti-roll bar. (native field:
- mAntiRollBars)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>index</code> - the index of the anti-roll bar to access (&ge;0)</dd>
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getController()">
-<h3>getController</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a></span>&nbsp;<span class="element-name">getController</span>()</div>
-<div class="block">Access the controller settings.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getForward()">
-<h3>getForward</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getForward</span>()</div>
-<div class="block">Copy the "forward" vector. The settings are unaffected. (native
- attribute: mForward)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new direction vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMaxPitchRollAngle()">
-<h3>getMaxPitchRollAngle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getMaxPitchRollAngle</span>()</div>
-<div class="block">Return the vehicle's maximum pitch/roll angle. The settings are
- unaffected. (native attribute: mMaxPitchRollAngle)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the limit angle (in radians)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNumAntiRollBars()">
-<h3>getNumAntiRollBars</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumAntiRollBars</span>()</div>
-<div class="block">Count the anti-roll bars. The settings are unaffected. (native attribute:
- mAntiRollBars)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNumWheels()">
-<h3>getNumWheels</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumWheels</span>()</div>
-<div class="block">Count the wheels. The settings are unaffected. (native attribute:
- mWheels)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getUp()">
-<h3>getUp</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getUp</span>()</div>
-<div class="block">Copy the "up" vector. The settings are unaffected. (native attribute:
- mUp)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new direction vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getWheels()">
-<h3>getWheels</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a>[]</span>&nbsp;<span class="element-name">getWheels</span>()</div>
-<div class="block">Enumerate all wheel settings. The settings are unaffected. (native
- attribute: mWheels)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new array of pre-existing objects</dd>
 </dl>
 </section>
 </li>
@@ -412,6 +343,137 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>up</code> - the desired up direction (not null, unaffected,
  default=(0,1,0))</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAntiRollBar(int)">
+<h3>getAntiRollBar</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></span>&nbsp;<span class="element-name">getAntiRollBar</span><wbr><span class="parameters">(int&nbsp;barIndex)</span></div>
+<div class="block">Access the settings for the specified anti-roll bar. (native field:
+ mAntiRollBars)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getAntiRollBar(int)">getAntiRollBar</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>barIndex</code> - the index of the anti-roll bar to access (&ge;0,
+ &lt;numBars)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getController()">
+<h3>getController</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a></span>&nbsp;<span class="element-name">getController</span>()</div>
+<div class="block">Access the controller settings.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getController()">getController</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getForward()">
+<h3>getForward</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getForward</span>()</div>
+<div class="block">Copy the "forward" vector. The settings are unaffected. (native
+ attribute: mForward)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getForward()">getForward</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxPitchRollAngle()">
+<h3>getMaxPitchRollAngle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getMaxPitchRollAngle</span>()</div>
+<div class="block">Return the vehicle's maximum pitch/roll angle. The settings are
+ unaffected. (native attribute: mMaxPitchRollAngle)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getMaxPitchRollAngle()">getMaxPitchRollAngle</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the limit angle (in radians)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumAntiRollBars()">
+<h3>getNumAntiRollBars</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumAntiRollBars</span>()</div>
+<div class="block">Count the anti-roll bars. The settings are unaffected. (native attribute:
+ mAntiRollBars)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getNumAntiRollBars()">getNumAntiRollBars</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumWheels()">
+<h3>getNumWheels</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumWheels</span>()</div>
+<div class="block">Count the wheels. The settings are unaffected. (native attribute:
+ mWheels)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getNumWheels()">getNumWheels</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUp()">
+<h3>getUp</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getUp</span>()</div>
+<div class="block">Copy the "up" vector. The settings are unaffected. (native attribute:
+ mUp)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getUp()">getUp</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWheel(int)">
+<h3>getWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a></span>&nbsp;<span class="element-name">getWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
+<div class="block">Access the settings of the specified wheel. (native attribute: mWheels)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getWheel(int)">getWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>wheelIndex</code> - which wheel (&ge;0, &lt;numWheels)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWheels()">
+<h3>getWheels</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a>[]</span>&nbsp;<span class="element-name">getWheels</span>()</div>
+<div class="block">Enumerate all wheel settings. The settings are unaffected. (native
+ attribute: mWheels)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraintSettings.html#getWheels()">getWheels</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new array of pre-existing objects</dd>
 </dl>
 </section>
 </li>

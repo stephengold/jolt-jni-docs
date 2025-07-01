@@ -87,17 +87,15 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
-<div class="inheritance"><a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.NonCopyable</a>
 <div class="inheritance"><a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.SerializableObject</a>
 <div class="inheritance">com.github.stephengold.joltjni.WheelSettings</div>
-</div>
 </div>
 </div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -193,6 +191,16 @@ implements <a href="readonly/ConstWheelSettings.html" title="interface in com.gi
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the width of the wheel.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Load settings from the specified binary stream.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Save the settings to the specified binary stream.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -268,6 +276,9 @@ implements <a href="readonly/ConstWheelSettings.html" title="interface in com.gi
 </div>
 </div>
 <div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.SerializableObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">SerializableObject</a></h3>
+<code><a href="SerializableObject.html#getRtti()">getRtti</a></code></div>
+<div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
 <div class="inherited-list">
@@ -279,6 +290,9 @@ implements <a href="readonly/ConstWheelSettings.html" title="interface in com.gi
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
+<code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
 </section>
 </li>
 </ul>
@@ -291,14 +305,13 @@ implements <a href="readonly/ConstWheelSettings.html" title="interface in com.gi
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getSuspensionSpring()">
-<h3>getSuspensionSpring</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></span>&nbsp;<span class="element-name">getSuspensionSpring</span>()</div>
-<div class="block">Access the settings for the suspension spring. (native attribute:
- mSuspensionSpring)</div>
+<section class="detail" id="restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">
+<h3>restoreBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
+<div class="block">Load settings from the specified binary stream.</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to read from (not null)</dd>
 </dl>
 </section>
 </li>
@@ -604,6 +617,20 @@ implements <a href="readonly/ConstWheelSettings.html" title="interface in com.gi
 </section>
 </li>
 <li>
+<section class="detail" id="getSuspensionSpring()">
+<h3>getSuspensionSpring</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></span>&nbsp;<span class="element-name">getSuspensionSpring</span>()</div>
+<div class="block">Access the settings for the suspension spring. (native attribute:
+ mSuspensionSpring)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSuspensionSpring()">getSuspensionSpring</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getWheelForward()">
 <h3>getWheelForward</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getWheelForward</span>()</div>
@@ -642,6 +669,20 @@ implements <a href="readonly/ConstWheelSettings.html" title="interface in com.gi
 <dd><code><a href="readonly/ConstWheelSettings.html#getWidth()">getWidth</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>the width (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Save the settings to the specified binary stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to write to (not null)</dd>
 </dl>
 </section>
 </li>

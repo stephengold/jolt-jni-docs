@@ -136,14 +136,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Temporarily access the referenced <code>GroupFilter</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GroupFilterTable.html" title="class in com.github.stephengold.joltjni">GroupFilterTable</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtrAsTable()" class="member-name-link">getPtrAsTable</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Temporarily access the referenced filter, assuming it is a
+ <code>GroupFilterTable</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the address of the native <code>GroupFilter</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create another counted reference to the native <code>GroupFilter</code>.</div>
 </div>
 </div>
@@ -181,6 +187,18 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getPtrAsTable()">
+<h3>getPtrAsTable</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GroupFilterTable.html" title="class in com.github.stephengold.joltjni">GroupFilterTable</a></span>&nbsp;<span class="element-name">getPtrAsTable</span>()</div>
+<div class="block">Temporarily access the referenced filter, assuming it is a
+ <code>GroupFilterTable</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getPtr()">
 <h3>getPtr</h3>

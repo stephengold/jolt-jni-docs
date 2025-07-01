@@ -233,9 +233,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Save the shape to the specified binary stream.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../ShapeResult.html" title="class in com.github.stephengold.joltjni">ShapeResult</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#scaleShape(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">scaleShape</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scaleFactors)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Scale the current shape, which is unaffected.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a counted reference to the native <code>Shape</code>.</div>
 </div>
 </div>
@@ -544,6 +549,20 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stream</code> - the stream to write to (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="scaleShape(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>scaleShape</h3>
+<div class="member-signature"><span class="return-type"><a href="../ShapeResult.html" title="class in com.github.stephengold.joltjni">ShapeResult</a></span>&nbsp;<span class="element-name">scaleShape</span><wbr><span class="parameters">(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scaleFactors)</span></div>
+<div class="block">Scale the current shape, which is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>scaleFactors</code> - the desired scaling on each axis (not null,
+ unaffected)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with a new native object assigned</dd>
 </dl>
 </section>
 </li>

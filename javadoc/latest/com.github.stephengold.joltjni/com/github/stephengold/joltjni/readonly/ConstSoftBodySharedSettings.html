@@ -129,6 +129,16 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Count the pinned vertices.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#countRodBendTwistConstraints()" class="member-name-link">countRodBendTwistConstraints</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Count the bend-twist constraints.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#countRodStretchShearConstraints()" class="member-name-link">countRodStretchShearConstraints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Count the discrete Cosserat rods.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#countVertices()" class="member-name-link">countVertices</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Count the vertices.</div>
@@ -138,10 +148,10 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Count the volume constraints.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVertexRadius()" class="member-name-link">getVertexRadius</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstRodStretchShear.html" title="interface in com.github.stephengold.joltjni.readonly">ConstRodStretchShear</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRodStretchShearConstraints()" class="member-name-link">getRodStretchShearConstraints</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Return the radius of each particle.</div>
+<div class="block">Enumerate all Cosserat rods in the settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#putEdgeIndices(java.nio.IntBuffer)" class="member-name-link">putEdgeIndices</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeIndices)</code></div>
@@ -154,6 +164,19 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Write the vertex indices of all faces to the specified buffer and advance
  the buffer's position.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write the state of this object to the specified stream, excluding the
+ materials.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#saveWithMaterials(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap)" class="member-name-link">saveWithMaterials</a><wbr>(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="../streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;settingsMap,
+ <a href="../streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write the state of this object to the specified stream.</div>
 </div>
 </div>
 </div>
@@ -209,6 +232,28 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="countRodBendTwistConstraints()">
+<h3>countRodBendTwistConstraints</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">countRodBendTwistConstraints</span>()</div>
+<div class="block">Count the bend-twist constraints. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countRodStretchShearConstraints()">
+<h3>countRodStretchShearConstraints</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">countRodStretchShearConstraints</span>()</div>
+<div class="block">Count the discrete Cosserat rods. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="countVertices()">
 <h3>countVertices</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">countVertices</span>()</div>
@@ -231,13 +276,15 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
-<section class="detail" id="getVertexRadius()">
-<h3>getVertexRadius</h3>
-<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getVertexRadius</span>()</div>
-<div class="block">Return the radius of each particle. The settings are unaffected.</div>
+<section class="detail" id="getRodStretchShearConstraints()">
+<h3>getRodStretchShearConstraints</h3>
+<div class="member-signature"><span class="return-type"><a href="ConstRodStretchShear.html" title="interface in com.github.stephengold.joltjni.readonly">ConstRodStretchShear</a>[]</span>&nbsp;<span class="element-name">getRodStretchShearConstraints</span>()</div>
+<div class="block">Enumerate all Cosserat rods in the settings. (native member:
+ mRodStretchShearConstraints)</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the radius (in meters)</dd>
+<dd>a new array of new JVM objects with the pre-existing native
+ objects assigned</dd>
 </dl>
 </section>
 </li>
@@ -262,6 +309,36 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storeIndices</code> - the destination buffer (not null, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Write the state of this object to the specified stream, excluding the
+ materials. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveWithMaterials(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap)">
+<h3>saveWithMaterials</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">saveWithMaterials</span><wbr><span class="parameters">(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="../streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;settingsMap,
+ <a href="../streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap)</span></div>
+<div class="block">Write the state of this object to the specified stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not <code>null</code>)</dd>
+<dd><code>settingsMap</code> - track multiple uses of shared settings (not
+ <code>null</code>)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (not
+ <code>null</code>)</dd>
 </dl>
 </section>
 </li>

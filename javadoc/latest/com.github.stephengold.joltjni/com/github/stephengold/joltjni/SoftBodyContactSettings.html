@@ -121,6 +121,10 @@ implements <a href="readonly/ConstSoftBodyContactSettings.html" title="interface
 <div class="block">Instantiate settings with the specified native object assigned but not
  owned.</div>
 </div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSoftBodyContactSettings)" class="member-name-link">SoftBodyContactSettings</a><wbr>(<a href="readonly/ConstSoftBodyContactSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyContactSettings</a>&nbsp;original)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
+</div>
 </div>
 </section>
 </li>
@@ -211,11 +215,24 @@ implements <a href="readonly/ConstSoftBodyContactSettings.html" title="interface
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstSoftBodyContactSettings)">
+<h3>SoftBodyContactSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SoftBodyContactSettings</span><wbr><span class="parameters">(<a href="readonly/ConstSoftBodyContactSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyContactSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the constraint to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(long)">
 <h3>SoftBodyContactSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SoftBodyContactSettings</span><wbr><span class="parameters">(long&nbsp;settingsVa)</span></div>
 <div class="block">Instantiate settings with the specified native object assigned but not
- owned.</div>
+ owned.
+ <p>
+ For use in custom contact listeners.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>settingsVa</code> - the virtual address of the native object to assign (not

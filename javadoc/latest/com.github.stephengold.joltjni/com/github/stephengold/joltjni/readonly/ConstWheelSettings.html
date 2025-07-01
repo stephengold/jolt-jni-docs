@@ -88,7 +88,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="../JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code>, <code><a href="ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="../JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code>, <code><a href="ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -96,7 +96,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ConstWheelSettings</span><span class="extends-implements">
-extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></span></div>
+extends <a href="ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></span></div>
 <div class="block">Read-only access to <code>WheelSettings</code>. (native type: const WheelSettings)</div>
 </section>
 <section class="summary">
@@ -157,20 +157,30 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the suspension preload length.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWheelForward()" class="member-name-link">getWheelForward</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSuspensionSpring()" class="member-name-link">getSuspensionSpring</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Copy the forward direction when steering is neutral.</div>
+<div class="block">Access the settings for the suspension spring.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWheelUp()" class="member-name-link">getWheelUp</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWheelForward()" class="member-name-link">getWheelForward</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the forward direction when steering is neutral.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWheelUp()" class="member-name-link">getWheelUp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the "up" direction when steering is neutral.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWidth()" class="member-name-link">getWidth</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWidth()" class="member-name-link">getWidth</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the width of the wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Save the settings to the specified binary stream.</div>
 </div>
 </div>
 </div>
@@ -181,6 +191,9 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="ConstJoltPhysicsObject.html#close()">close</a>, <a href="ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
+<code><a href="ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
 </section>
 </li>
 </ul>
@@ -297,6 +310,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getSuspensionSpring()">
+<h3>getSuspensionSpring</h3>
+<div class="member-signature"><span class="return-type"><a href="ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a></span>&nbsp;<span class="element-name">getSuspensionSpring</span>()</div>
+<div class="block">Access the settings for the suspension spring. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getWheelForward()">
 <h3>getWheelForward</h3>
 <div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getWheelForward</span>()</div>
@@ -328,6 +353,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the width (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Save the settings to the specified binary stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to write to (not null)</dd>
 </dl>
 </section>
 </li>

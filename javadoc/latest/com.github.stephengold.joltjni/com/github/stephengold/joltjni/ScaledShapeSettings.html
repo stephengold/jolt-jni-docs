@@ -87,7 +87,6 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
-<div class="inheritance"><a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.NonCopyable</a>
 <div class="inheritance"><a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.SerializableObject</a>
 <div class="inheritance"><a href="ShapeSettings.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.ShapeSettings</a>
 <div class="inheritance"><a href="DecoratedShapeSettings.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.DecoratedShapeSettings</a>
@@ -97,11 +96,10 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 </div>
-</div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ScaledShapeSettings</span>
@@ -128,6 +126,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a settings based on the specified settings and scale factors.</div>
 </div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.ScaledShapeSettings)" class="member-name-link">ScaledShapeSettings</a><wbr>(<a href="ScaledShapeSettings.html" title="class in com.github.stephengold.joltjni">ScaledShapeSettings</a>&nbsp;original)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
+</div>
 </div>
 </section>
 </li>
@@ -152,7 +154,10 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.ShapeSettings">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="ShapeSettings.html" title="class in com.github.stephengold.joltjni">ShapeSettings</a></h3>
-<code><a href="ShapeSettings.html#clearCachedResult()">clearCachedResult</a>, <a href="ShapeSettings.html#create()">create</a>, <a href="ShapeSettings.html#getRefCount()">getRefCount</a>, <a href="ShapeSettings.html#setEmbedded()">setEmbedded</a>, <a href="ShapeSettings.html#toRef()">toRef</a>, <a href="ShapeSettings.html#toRefC()">toRefC</a></code></div>
+<code><a href="ShapeSettings.html#clearCachedResult()">clearCachedResult</a>, <a href="ShapeSettings.html#cloneShapeSettings(com.github.stephengold.joltjni.readonly.ConstShapeSettings)">cloneShapeSettings</a>, <a href="ShapeSettings.html#create()">create</a>, <a href="ShapeSettings.html#getRefCount()">getRefCount</a>, <a href="ShapeSettings.html#setEmbedded()">setEmbedded</a>, <a href="ShapeSettings.html#toRef()">toRef</a>, <a href="ShapeSettings.html#toRefC()">toRefC</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.SerializableObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">SerializableObject</a></h3>
+<code><a href="SerializableObject.html#getRtti()">getRtti</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
@@ -165,6 +170,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
+<code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
 </section>
 </li>
 </ul>
@@ -199,6 +207,17 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>baseSettings</code> - the unscaled base shape settings (not null)</dd>
 <dd><code>scaleFactors</code> - the desired scale factors (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.ScaledShapeSettings)">
+<h3>ScaledShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ScaledShapeSettings</span><wbr><span class="parameters">(<a href="ScaledShapeSettings.html" title="class in com.github.stephengold.joltjni">ScaledShapeSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

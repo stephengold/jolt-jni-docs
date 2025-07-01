@@ -39,7 +39,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li>Nested</li>
 <li>Field</li>
-<li>Constr</li>
+<li><a href="#constructor-summary">Constr</a></li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
 </li>
@@ -47,7 +47,7 @@ loadScripts(document, 'script');</script>
 <p>Detail:</p>
 <ul>
 <li>Field</li>
-<li>Constr</li>
+<li><a href="#constructor-detail">Constr</a></li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
 </li>
@@ -59,13 +59,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
 </div>
@@ -93,15 +93,35 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VehicleAntiRollBar</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></span></div>
 <div class="block">A spring that connects two wheels and reduces a vehicle's rolling motion.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<li>
+<section class="constructor-summary" id="constructor-summary">
+<h2>Constructor Summary</h2>
+<div class="caption"><span>Constructors</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Constructor</div>
+<div class="table-header col-last">Description</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">VehicleAntiRollBar</a>()</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a default bar.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstVehicleAntiRollBar)" class="member-name-link">VehicleAntiRollBar</a><wbr>(<a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -129,16 +149,26 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the stiffness of the bar.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Load settings from the specified binary stream.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Save the bar to the specified binary stream.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeftWheel(int)" class="member-name-link">setLeftWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the index of the left wheel.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRightWheel(int)" class="member-name-link">setRightWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the index of the right wheel.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStiffness(float)" class="member-name-link">setStiffness</a><wbr>(float&nbsp;stiffness)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the stiffness of the bar.</div>
@@ -152,17 +182,100 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li>
+<section class="constructor-details" id="constructor-detail">
+<h2>Constructor Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>VehicleAntiRollBar</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleAntiRollBar</span>()</div>
+<div class="block">Instantiate a default bar.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstVehicleAntiRollBar)">
+<h3>VehicleAntiRollBar</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleAntiRollBar</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">
+<h3>restoreBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
+<div class="block">Load settings from the specified binary stream.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to read from (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLeftWheel(int)">
+<h3>setLeftWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></span>&nbsp;<span class="element-name">setLeftWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
+<div class="block">Alter the index of the left wheel. (native attribute: mLeftWheel)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>wheelIndex</code> - the index of the desired wheel (default=0)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRightWheel(int)">
+<h3>setRightWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></span>&nbsp;<span class="element-name">setRightWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
+<div class="block">Alter the index of the right wheel. (native attribute: mRightWheel)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>wheelIndex</code> - the index of the desired wheel (default=1)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setStiffness(float)">
+<h3>setStiffness</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></span>&nbsp;<span class="element-name">setStiffness</span><wbr><span class="parameters">(float&nbsp;stiffness)</span></div>
+<div class="block">Alter the stiffness of the bar. (native attribute: mStiffness)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stiffness</code> - the desired spring constant (in Newtons per meter,
+ default=1000)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getLeftWheel()">
 <h3>getLeftWheel</h3>
@@ -170,6 +283,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the index of the left wheel. The bar is unaffected. (native
  attribute: mLeftWheel)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleAntiRollBar.html#getLeftWheel()">getLeftWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></code></dd>
 <dt>Returns:</dt>
 <dd>the index of the wheel</dd>
 </dl>
@@ -182,6 +297,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the index of the right wheel. The bar is unaffected. (native
  attribute: mRightWheel)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleAntiRollBar.html#getRightWheel()">getRightWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></code></dd>
 <dt>Returns:</dt>
 <dd>the index of the wheel</dd>
 </dl>
@@ -194,42 +311,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the stiffness of the bar. The bar is unaffected. (native
  attribute: mStiffness)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleAntiRollBar.html#getStiffness()">getStiffness</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></code></dd>
 <dt>Returns:</dt>
 <dd>the spring constant (in Newtons per meter)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setLeftWheel(int)">
-<h3>setLeftWheel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeftWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
-<div class="block">Alter the index of the left wheel. (native attribute: mLeftWheel)</div>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Save the bar to the specified binary stream. The bar is unaffected.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleAntiRollBar.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>wheelIndex</code> - the index of the desired wheel (default=0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setRightWheel(int)">
-<h3>setRightWheel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRightWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
-<div class="block">Alter the index of the right wheel. (native attribute: mRightWheel)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>wheelIndex</code> - the index of the desired wheel (default=1)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setStiffness(float)">
-<h3>setStiffness</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setStiffness</span><wbr><span class="parameters">(float&nbsp;stiffness)</span></div>
-<div class="block">Alter the stiffness of the bar. (native attribute: mStiffness)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>stiffness</code> - the desired spring constant (in Newtons per meter,
- default=1000)</dd>
+<dd><code>stream</code> - the stream to write to (not null)</dd>
 </dl>
 </section>
 </li>

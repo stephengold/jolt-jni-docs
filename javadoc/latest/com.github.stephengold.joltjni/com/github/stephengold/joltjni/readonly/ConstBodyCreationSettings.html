@@ -143,25 +143,35 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Test whether the gyroscopic force will be applied.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollisionGroup()" class="member-name-link">getCollisionGroup</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollideKinematicVsNonDynamic()" class="member-name-link">getCollideKinematicVsNonDynamic</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Access the collision group.</div>
+<div class="block">Test whether a kinematic body will collide with kinematic/static bodies.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnhancedInternalEdgeRemoval()" class="member-name-link">getEnhancedInternalEdgeRemoval</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollisionGroup()" class="member-name-link">getCollisionGroup</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Access the collision group to which the body will belong.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnhancedInternalEdgeRemoval()" class="member-name-link">getEnhancedInternalEdgeRemoval</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Test whether extra effort should be made to remove ghost contacts.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFriction()" class="member-name-link">getFriction</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFriction()" class="member-name-link">getFriction</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the friction ratio.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getGravityFactor()" class="member-name-link">getGravityFactor</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getGravityFactor()" class="member-name-link">getGravityFactor</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the gravity factor.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInertiaMultiplier()" class="member-name-link">getInertiaMultiplier</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the multiplier for inertia calculations.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIsSensor()" class="member-name-link">getIsSensor</a>()</code></div>
@@ -181,7 +191,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMassProperties()" class="member-name-link">getMassProperties</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Calculate the mass and inertia.</div>
+<div class="block">Calculate the body's mass and inertia.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMassPropertiesOverride()" class="member-name-link">getMassPropertiesOverride</a>()</code></div>
@@ -207,6 +217,16 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMotionType()" class="member-name-link">getMotionType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the motion type.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumPositionStepsOverride()" class="member-name-link">getNumPositionStepsOverride</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the override for the number position iterations in the solver.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumVelocityStepsOverride()" class="member-name-link">getNumVelocityStepsOverride</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the override for the number velocity iterations in the solver.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getObjectLayer()" class="member-name-link">getObjectLayer</a>()</code></div>
@@ -236,12 +256,41 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShape()" class="member-name-link">getShape</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Acquire read-only access to the <code>Shape</code>.</div>
+<div class="block">Acquire read-only access to the shape.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMassProperties()" class="member-name-link">hasMassProperties</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShapeSettings()" class="member-name-link">getShapeSettings</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Test whether the body's mass properties will be calculated.</div>
+<div class="block">Acquire read-only access to the <code>ShapeSettings</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUseManifoldReduction()" class="member-name-link">getUseManifoldReduction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether manifold reduction will be enabled.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserData()" class="member-name-link">getUserData</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the body's user data: can be used for anything.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMassProperties()" class="member-name-link">hasMassProperties</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether mass properties are required.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write the state of this object to the specified stream, excluding the
+ shape, materials, and group filter.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.ShapeToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)" class="member-name-link">saveWithChildren</a><wbr>(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="../streamutils/ShapeToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">ShapeToIdMap</a>&nbsp;shapeMap,
+ <a href="../streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap,
+ <a href="../streamutils/GroupFilterToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">GroupFilterToIdMap</a>&nbsp;filterMap)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write the state of this object to the specified stream.</div>
 </div>
 </div>
 </div>
@@ -333,10 +382,21 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getCollideKinematicVsNonDynamic()">
+<h3>getCollideKinematicVsNonDynamic</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getCollideKinematicVsNonDynamic</span>()</div>
+<div class="block">Test whether a kinematic body will collide with kinematic/static bodies.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if it will collide, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCollisionGroup()">
 <h3>getCollisionGroup</h3>
 <div class="member-signature"><span class="return-type"><a href="ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a></span>&nbsp;<span class="element-name">getCollisionGroup</span>()</div>
-<div class="block">Access the collision group.</div>
+<div class="block">Access the collision group to which the body will belong.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
@@ -371,6 +431,17 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <h3>getGravityFactor</h3>
 <div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getGravityFactor</span>()</div>
 <div class="block">Return the gravity factor. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the factor</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInertiaMultiplier()">
+<h3>getInertiaMultiplier</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getInertiaMultiplier</span>()</div>
+<div class="block">Return the multiplier for inertia calculations.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the factor</dd>
@@ -414,10 +485,12 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <section class="detail" id="getMassProperties()">
 <h3>getMassProperties</h3>
 <div class="member-signature"><span class="return-type"><a href="../MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></span>&nbsp;<span class="element-name">getMassProperties</span>()</div>
-<div class="block">Calculate the mass and inertia. The settings are unaffected.</div>
+<div class="block">Calculate the body's mass and inertia. As a side effect, this method may
+ "cook" the settings.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>a new JVM object with a new native object assigned</dd>
+<dd>a new JVM object with a new native object assigned, or
+ <code>null</code> if a shape is required but not available</dd>
 </dl>
 </section>
 </li>
@@ -473,6 +546,30 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an enum value (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumPositionStepsOverride()">
+<h3>getNumPositionStepsOverride</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getNumPositionStepsOverride</span>()</div>
+<div class="block">Return the override for the number position iterations in the solver.
+ Applicable only to a dynamic colliding body. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number (0 &rarr; use default in <code>PhysicsSettings</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumVelocityStepsOverride()">
+<h3>getNumVelocityStepsOverride</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getNumVelocityStepsOverride</span>()</div>
+<div class="block">Return the override for the number velocity iterations in the solver.
+ Applicable only to a dynamic colliding body. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number (0 &rarr; use default in <code>PhysicsSettings</code>)</dd>
 </dl>
 </section>
 </li>
@@ -538,8 +635,21 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <section class="detail" id="getShape()">
 <h3>getShape</h3>
 <div class="member-signature"><span class="return-type"><a href="ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></span>&nbsp;<span class="element-name">getShape</span>()</div>
-<div class="block">Acquire read-only access to the <code>Shape</code>. The settings are
- unaffected.</div>
+<div class="block">Acquire read-only access to the shape. As a side effect, if the
+ body-creation settings aren't already cooked, this method cooks them.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new JVM object, or <code>null</code> if the shape settings are
+ <code>null</code> and the body-creation settings aren't cooked</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getShapeSettings()">
+<h3>getShapeSettings</h3>
+<div class="member-signature"><span class="return-type"><a href="ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></span>&nbsp;<span class="element-name">getShapeSettings</span>()</div>
+<div class="block">Acquire read-only access to the <code>ShapeSettings</code>. The body-creation
+ settings are unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned, or
@@ -548,14 +658,67 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getUseManifoldReduction()">
+<h3>getUseManifoldReduction</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getUseManifoldReduction</span>()</div>
+<div class="block">Test whether manifold reduction will be enabled. The settings are
+ unaffected. (member data: mUseManifoldReduction)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if enabled, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserData()">
+<h3>getUserData</h3>
+<div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">getUserData</span>()</div>
+<div class="block">Return the body's user data: can be used for anything. The settings are
+ unaffected. (member data: mUserData)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="hasMassProperties()">
 <h3>hasMassProperties</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMassProperties</span>()</div>
-<div class="block">Test whether the body's mass properties will be calculated. The settings
- are unaffected.</div>
+<div class="block">Test whether mass properties are required. The settings are unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if calculated, otherwise <code>false</code></dd>
+<dd><code>true</code> if required, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Write the state of this object to the specified stream, excluding the
+ shape, materials, and group filter. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.ShapeToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)">
+<h3>saveWithChildren</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">saveWithChildren</span><wbr><span class="parameters">(<a href="../StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="../streamutils/ShapeToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">ShapeToIdMap</a>&nbsp;shapeMap,
+ <a href="../streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap,
+ <a href="../streamutils/GroupFilterToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">GroupFilterToIdMap</a>&nbsp;filterMap)</span></div>
+<div class="block">Write the state of this object to the specified stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not null)</dd>
+<dd><code>shapeMap</code> - track multiple uses of shapes (may be null)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (may be null)</dd>
+<dd><code>filterMap</code> - track multiple uses of group filters (may be null)</dd>
 </dl>
 </section>
 </li>

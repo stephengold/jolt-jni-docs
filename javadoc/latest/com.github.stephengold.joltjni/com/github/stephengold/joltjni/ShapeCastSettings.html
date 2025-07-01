@@ -116,6 +116,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.ShapeCastSettings)" class="member-name-link">ShapeCastSettings</a><wbr>(<a href="ShapeCastSettings.html" title="class in com.github.stephengold.joltjni">ShapeCastSettings</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
+</div>
 </div>
 </section>
 </li>
@@ -133,12 +137,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBackFaceModeConvex()" class="member-name-link">getBackFaceModeConvex</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the treatment of back-facing triangles in convex shapes.</div>
+<div class="block">Return the policy for back-facing triangles in convex shapes.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBackFaceModeTriangles()" class="member-name-link">getBackFaceModeTriangles</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the treatment of back-facing triangles in triangle-based shapes.</div>
+<div class="block">Return the policy for back-facing triangles in triangle-based shapes.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReturnDeepestPoint()" class="member-name-link">getReturnDeepestPoint</a>()</code></div>
@@ -159,7 +163,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBackFaceModeTriangles(com.github.stephengold.joltjni.enumerate.EBackFaceMode)" class="member-name-link">setBackFaceModeTriangles</a><wbr>(<a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a>&nbsp;mode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the treatment of back-facing triangles in triangle-based shapes.</div>
+<div class="block">Alter the policy for back-facing triangles in triangle-based shapes.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReturnDeepestPoint(boolean)" class="member-name-link">setReturnDeepestPoint</a><wbr>(boolean&nbsp;enable)</code></div>
@@ -202,6 +206,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate default settings.</div>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.ShapeCastSettings)">
+<h3>ShapeCastSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ShapeCastSettings</span><wbr><span class="parameters">(<a href="ShapeCastSettings.html" title="class in com.github.stephengold.joltjni">ShapeCastSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -214,7 +229,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getBackFaceModeConvex()">
 <h3>getBackFaceModeConvex</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a></span>&nbsp;<span class="element-name">getBackFaceModeConvex</span>()</div>
-<div class="block">Return the treatment of back-facing triangles in convex shapes. The
+<div class="block">Return the policy for back-facing triangles in convex shapes. The
  settings are unaffected. (native attribute: mBackFaceModeConvex)</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -226,7 +241,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getBackFaceModeTriangles()">
 <h3>getBackFaceModeTriangles</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a></span>&nbsp;<span class="element-name">getBackFaceModeTriangles</span>()</div>
-<div class="block">Return the treatment of back-facing triangles in triangle-based shapes.
+<div class="block">Return the policy for back-facing triangles in triangle-based shapes.
  The settings are unaffected. (native attribute: mBackFaceModeTriangles)</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -275,7 +290,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setBackFaceModeTriangles(com.github.stephengold.joltjni.enumerate.EBackFaceMode)">
 <h3>setBackFaceModeTriangles</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBackFaceModeTriangles</span><wbr><span class="parameters">(<a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a>&nbsp;mode)</span></div>
-<div class="block">Alter the treatment of back-facing triangles in triangle-based shapes.
+<div class="block">Alter the policy for back-facing triangles in triangle-based shapes.
  (native attribute: mBackFaceModeTriangles)</div>
 <dl class="notes">
 <dt>Parameters:</dt>

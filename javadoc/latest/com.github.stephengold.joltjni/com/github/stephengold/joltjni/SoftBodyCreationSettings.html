@@ -115,11 +115,15 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSoftBodySharedSettings,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,int)" class="member-name-link">SoftBodyCreationSettings</a><wbr>(<a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a>&nbsp;settings,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSoftBodyCreationSettings)" class="member-name-link">SoftBodyCreationSettings</a><wbr>(<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSoftBodySharedSettings,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,int)" class="member-name-link">SoftBodyCreationSettings</a><wbr>(<a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a>&nbsp;settings,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  <a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;orientation,
  int&nbsp;objectLayer)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Instantiate settings for the specified shared settings.</div>
 </div>
 </div>
@@ -130,7 +134,7 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -190,7 +194,7 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPressure()" class="member-name-link">getPressure</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the pressure.</div>
+<div class="block">Return the internal pressure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRestitution()" class="member-name-link">getRestitution</a>()</code></div>
@@ -216,6 +220,31 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserData()" class="member-name-link">getUserData</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the user data.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertexRadius()" class="member-name-link">getVertexRadius</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the radius of each particle.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Read the state of this object from the specified stream, excluding the
+ shape and group filter.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Write the state of this object to the specified stream, excluding the
+ shared settings, materials, and group filter.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)" class="member-name-link">saveWithChildren</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;sbssMap,
+ <a href="streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap,
+ <a href="streamutils/GroupFilterToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">GroupFilterToIdMap</a>&nbsp;filterMap)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Write the state of this object to the specified stream.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAllowSleeping(boolean)" class="member-name-link">setAllowSleeping</a><wbr>(boolean&nbsp;allow)</code></div>
@@ -271,7 +300,7 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPressure(float)" class="member-name-link">setPressure</a><wbr>(float&nbsp;pressure)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the pressure.</div>
+<div class="block">Alter the internal pressure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRestitution(float)" class="member-name-link">setRestitution</a><wbr>(float&nbsp;restitution)</code></div>
@@ -297,6 +326,19 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserData(long)" class="member-name-link">setUserData</a><wbr>(long&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the user data.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVertexRadius(float)" class="member-name-link">setVertexRadius</a><wbr>(float&nbsp;radius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the size of every particle.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SbcsResult.html" title="class in com.github.stephengold.joltjni">SbcsResult</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreWithChildren(com.github.stephengold.joltjni.StreamIn,com.github.stephengold.joltjni.streamutils.IdToSharedSettingsMap,com.github.stephengold.joltjni.streamutils.IdToMaterialMap,com.github.stephengold.joltjni.streamutils.IdToGroupFilterMap)" class="member-name-link">sRestoreWithChildren</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream,
+ <a href="streamutils/IdToSharedSettingsMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToSharedSettingsMap</a>&nbsp;settingsMap,
+ <a href="streamutils/IdToMaterialMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToMaterialMap</a>&nbsp;materialMap,
+ <a href="streamutils/IdToGroupFilterMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToGroupFilterMap</a>&nbsp;filterMap)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Read a settings object from the specified binary stream.</div>
 </div>
 </div>
 </div>
@@ -332,6 +374,17 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstSoftBodyCreationSettings)">
+<h3>SoftBodyCreationSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SoftBodyCreationSettings</span><wbr><span class="parameters">(<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstSoftBodySharedSettings,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,int)">
 <h3>SoftBodyCreationSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SoftBodyCreationSettings</span><wbr><span class="parameters">(<a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a>&nbsp;settings,
@@ -358,6 +411,18 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">
+<h3>restoreBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
+<div class="block">Read the state of this object from the specified stream, excluding the
+ shape and group filter.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to read objects from (not null)</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="setAllowSleeping(boolean)">
 <h3>setAllowSleeping</h3>
@@ -503,7 +568,7 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <section class="detail" id="setPressure(float)">
 <h3>setPressure</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></span>&nbsp;<span class="element-name">setPressure</span><wbr><span class="parameters">(float&nbsp;pressure)</span></div>
-<div class="block">Alter the pressure. (native member: mPressure)</div>
+<div class="block">Alter the internal pressure. (native member: mPressure)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pressure</code> - the desired pressure (default=0)</dd>
@@ -578,6 +643,36 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <dd><code>value</code> - the desired value (default=0)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVertexRadius(float)">
+<h3>setVertexRadius</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVertexRadius</span><wbr><span class="parameters">(float&nbsp;radius)</span></div>
+<div class="block">Alter the size of every particle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>radius</code> - the desired radius (&ge;0, default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="sRestoreWithChildren(com.github.stephengold.joltjni.StreamIn,com.github.stephengold.joltjni.streamutils.IdToSharedSettingsMap,com.github.stephengold.joltjni.streamutils.IdToMaterialMap,com.github.stephengold.joltjni.streamutils.IdToGroupFilterMap)">
+<h3>sRestoreWithChildren</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SbcsResult.html" title="class in com.github.stephengold.joltjni">SbcsResult</a></span>&nbsp;<span class="element-name">sRestoreWithChildren</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream,
+ <a href="streamutils/IdToSharedSettingsMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToSharedSettingsMap</a>&nbsp;settingsMap,
+ <a href="streamutils/IdToMaterialMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToMaterialMap</a>&nbsp;materialMap,
+ <a href="streamutils/IdToGroupFilterMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToGroupFilterMap</a>&nbsp;filterMap)</span></div>
+<div class="block">Read a settings object from the specified binary stream.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to read objects (not null)</dd>
+<dd><code>settingsMap</code> - track multiple uses of shared settings (not null)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (not null)</dd>
+<dd><code>filterMap</code> - track multiple uses of group filters (not null)</dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
 </dl>
 </section>
 </li>
@@ -727,8 +822,8 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <section class="detail" id="getPressure()">
 <h3>getPressure</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getPressure</span>()</div>
-<div class="block">Return the pressure. The settings are unaffected. (native member:
- mPressure)</div>
+<div class="block">Return the internal pressure. The settings are unaffected. (native
+ member: mPressure)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSoftBodyCreationSettings.html#getPressure()">getPressure</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></code></dd>
@@ -805,6 +900,55 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <dd><code><a href="readonly/ConstSoftBodyCreationSettings.html#getUserData()">getUserData</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>the value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVertexRadius()">
+<h3>getVertexRadius</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getVertexRadius</span>()</div>
+<div class="block">Return the radius of each particle. The settings are unaffected. (native
+ attribute: mVertexRadius)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyCreationSettings.html#getVertexRadius()">getVertexRadius</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the radius (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Write the state of this object to the specified stream, excluding the
+ shared settings, materials, and group filter. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyCreationSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)">
+<h3>saveWithChildren</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveWithChildren</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+ <a href="streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;sbssMap,
+ <a href="streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap,
+ <a href="streamutils/GroupFilterToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">GroupFilterToIdMap</a>&nbsp;filterMap)</span></div>
+<div class="block">Write the state of this object to the specified stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyCreationSettings.html#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)">saveWithChildren</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to write objects (not null)</dd>
+<dd><code>sbssMap</code> - track multiple uses of shared settings (may be null)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (may be null)</dd>
+<dd><code>filterMap</code> - track multiple uses of group filters (may be null)</dd>
 </dl>
 </section>
 </li>

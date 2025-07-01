@@ -87,7 +87,6 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
-<div class="inheritance"><a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.NonCopyable</a>
 <div class="inheritance"><a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.SerializableObject</a>
 <div class="inheritance"><a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.WheelSettings</a>
 <div class="inheritance">com.github.stephengold.joltjni.WheelSettingsTv</div>
@@ -95,11 +94,10 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 </div>
-</div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">WheelSettingsTv</span>
@@ -119,6 +117,10 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">WheelSettingsTv</a>()</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.WheelSettingsTv)" class="member-name-link">WheelSettingsTv</a><wbr>(<a href="WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified settings.</div>
 </div>
 </div>
 </section>
@@ -154,7 +156,10 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.WheelSettings">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a></h3>
-<code><a href="WheelSettings.html#getEnableSuspensionForcePoint()">getEnableSuspensionForcePoint</a>, <a href="WheelSettings.html#getPosition()">getPosition</a>, <a href="WheelSettings.html#getRadius()">getRadius</a>, <a href="WheelSettings.html#getSteeringAxis()">getSteeringAxis</a>, <a href="WheelSettings.html#getSuspensionDirection()">getSuspensionDirection</a>, <a href="WheelSettings.html#getSuspensionForcePoint()">getSuspensionForcePoint</a>, <a href="WheelSettings.html#getSuspensionMaxLength()">getSuspensionMaxLength</a>, <a href="WheelSettings.html#getSuspensionMinLength()">getSuspensionMinLength</a>, <a href="WheelSettings.html#getSuspensionPreloadLength()">getSuspensionPreloadLength</a>, <a href="WheelSettings.html#getSuspensionSpring()">getSuspensionSpring</a>, <a href="WheelSettings.html#getWheelForward()">getWheelForward</a>, <a href="WheelSettings.html#getWheelUp()">getWheelUp</a>, <a href="WheelSettings.html#getWidth()">getWidth</a>, <a href="WheelSettings.html#setEnableSuspensionForcePoint(boolean)">setEnableSuspensionForcePoint</a>, <a href="WheelSettings.html#setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)">setPosition</a>, <a href="WheelSettings.html#setRadius(float)">setRadius</a>, <a href="WheelSettings.html#setSteeringAxis(com.github.stephengold.joltjni.readonly.Vec3Arg)">setSteeringAxis</a>, <a href="WheelSettings.html#setSuspensionDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)">setSuspensionDirection</a>, <a href="WheelSettings.html#setSuspensionForcePoint(com.github.stephengold.joltjni.readonly.Vec3Arg)">setSuspensionForcePoint</a>, <a href="WheelSettings.html#setSuspensionMaxLength(float)">setSuspensionMaxLength</a>, <a href="WheelSettings.html#setSuspensionMinLength(float)">setSuspensionMinLength</a>, <a href="WheelSettings.html#setSuspensionPreloadLength(float)">setSuspensionPreloadLength</a>, <a href="WheelSettings.html#setWheelForward(com.github.stephengold.joltjni.readonly.Vec3Arg)">setWheelForward</a>, <a href="WheelSettings.html#setWheelUp(com.github.stephengold.joltjni.readonly.Vec3Arg)">setWheelUp</a>, <a href="WheelSettings.html#setWidth(float)">setWidth</a></code></div>
+<code><a href="WheelSettings.html#getEnableSuspensionForcePoint()">getEnableSuspensionForcePoint</a>, <a href="WheelSettings.html#getPosition()">getPosition</a>, <a href="WheelSettings.html#getRadius()">getRadius</a>, <a href="WheelSettings.html#getSteeringAxis()">getSteeringAxis</a>, <a href="WheelSettings.html#getSuspensionDirection()">getSuspensionDirection</a>, <a href="WheelSettings.html#getSuspensionForcePoint()">getSuspensionForcePoint</a>, <a href="WheelSettings.html#getSuspensionMaxLength()">getSuspensionMaxLength</a>, <a href="WheelSettings.html#getSuspensionMinLength()">getSuspensionMinLength</a>, <a href="WheelSettings.html#getSuspensionPreloadLength()">getSuspensionPreloadLength</a>, <a href="WheelSettings.html#getSuspensionSpring()">getSuspensionSpring</a>, <a href="WheelSettings.html#getWheelForward()">getWheelForward</a>, <a href="WheelSettings.html#getWheelUp()">getWheelUp</a>, <a href="WheelSettings.html#getWidth()">getWidth</a>, <a href="WheelSettings.html#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">restoreBinaryState</a>, <a href="WheelSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a>, <a href="WheelSettings.html#setEnableSuspensionForcePoint(boolean)">setEnableSuspensionForcePoint</a>, <a href="WheelSettings.html#setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)">setPosition</a>, <a href="WheelSettings.html#setRadius(float)">setRadius</a>, <a href="WheelSettings.html#setSteeringAxis(com.github.stephengold.joltjni.readonly.Vec3Arg)">setSteeringAxis</a>, <a href="WheelSettings.html#setSuspensionDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)">setSuspensionDirection</a>, <a href="WheelSettings.html#setSuspensionForcePoint(com.github.stephengold.joltjni.readonly.Vec3Arg)">setSuspensionForcePoint</a>, <a href="WheelSettings.html#setSuspensionMaxLength(float)">setSuspensionMaxLength</a>, <a href="WheelSettings.html#setSuspensionMinLength(float)">setSuspensionMinLength</a>, <a href="WheelSettings.html#setSuspensionPreloadLength(float)">setSuspensionPreloadLength</a>, <a href="WheelSettings.html#setWheelForward(com.github.stephengold.joltjni.readonly.Vec3Arg)">setWheelForward</a>, <a href="WheelSettings.html#setWheelUp(com.github.stephengold.joltjni.readonly.Vec3Arg)">setWheelUp</a>, <a href="WheelSettings.html#setWidth(float)">setWidth</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.SerializableObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">SerializableObject</a></h3>
+<code><a href="SerializableObject.html#getRtti()">getRtti</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
@@ -167,6 +172,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
+<code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
 </section>
 </li>
 </ul>
@@ -183,6 +191,17 @@ loadScripts(document, 'script');</script>
 <h3>WheelSettingsTv</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">WheelSettingsTv</span>()</div>
 <div class="block">Instantiate default settings.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.WheelSettingsTv)">
+<h3>WheelSettingsTv</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">WheelSettingsTv</span><wbr><span class="parameters">(<a href="WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
 </section>
 </li>
 </ul>

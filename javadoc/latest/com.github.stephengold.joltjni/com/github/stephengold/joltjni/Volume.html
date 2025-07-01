@@ -93,11 +93,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Volume</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a></span></div>
 <div class="block">Join 4 soft-body vertices into a tetrahedron with a preferred volume. (native
  type: <code>SoftBodySharedSettings::Volume</code>)</div>
 </section>
@@ -169,6 +170,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -195,44 +202,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="getCompliance()">
-<h3>getCompliance</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getCompliance</span>()</div>
-<div class="block">Return the inverse of the volume's stiffness. The volume is unaffected.
- (native attribute: mCompliance)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the compliance value</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSixRestVolume()">
-<h3>getSixRestVolume</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSixRestVolume</span>()</div>
-<div class="block">Return the rest size of the volume. The volume is unaffected. (native
- attribute: mSixRestVolume)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>6 times the rest volume of the tetrahedron (in cubic meters)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getVertex(int)">
-<h3>getVertex</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getVertex</span><wbr><span class="parameters">(int&nbsp;indexInVolume)</span></div>
-<div class="block">Return the mesh vertex at the specified corner. The volume is unaffected.
- (native attribute: mVertex)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>indexInVolume</code> - which corner of the volume (0 or 1 or 2 or 3)</dd>
-<dt>Returns:</dt>
-<dd>the mesh index of the vertex (&ge;0)</dd>
-</dl>
-</section>
-</li>
 <li>
 <section class="detail" id="setCompliance(float)">
 <h3>setCompliance</h3>
@@ -266,6 +235,50 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>indexInVolume</code> - which corner of the tetrahedron (0 or 1 or 2 or 3)</dd>
 <dd><code>indexInMesh</code> - the index of the vertex to assign (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCompliance()">
+<h3>getCompliance</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getCompliance</span>()</div>
+<div class="block">Return the inverse of the volume's stiffness. The volume is unaffected.
+ (native attribute: mCompliance)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVolume.html#getCompliance()">getCompliance</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a></code></dd>
+<dt>Returns:</dt>
+<dd>the compliance value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSixRestVolume()">
+<h3>getSixRestVolume</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSixRestVolume</span>()</div>
+<div class="block">Return the rest size of the volume. The volume is unaffected. (native
+ attribute: mSixRestVolume)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVolume.html#getSixRestVolume()">getSixRestVolume</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a></code></dd>
+<dt>Returns:</dt>
+<dd>6 times the rest volume of the tetrahedron (in cubic meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVertex(int)">
+<h3>getVertex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getVertex</span><wbr><span class="parameters">(int&nbsp;indexInVolume)</span></div>
+<div class="block">Return the mesh vertex at the specified corner. The volume is unaffected.
+ (native attribute: mVertex)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVolume.html#getVertex(int)">getVertex</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>indexInVolume</code> - which corner of the volume (0 or 1 or 2 or 3)</dd>
+<dt>Returns:</dt>
+<dd>the mesh index of the vertex (&ge;0)</dd>
 </dl>
 </section>
 </li>

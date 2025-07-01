@@ -87,7 +87,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
+<div class="inheritance"><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">com.github.stephengold.joltjni.template.Result</a>&lt;<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&gt;
 <div class="inheritance">com.github.stephengold.joltjni.ShapeResult</div>
+</div>
 </div>
 </div>
 <section class="class-description" id="class-description">
@@ -97,9 +99,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">ShapeResult</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&gt;</span></div>
 <div class="block">Either an error or a <code>ShapeRefC</code>. (native type:
- <code>Result&lt;Ref&lt;Shape&gt;&gt;</code>)</div>
+ <code>Result&lt;RefConst&lt;Shape&gt;&gt;</code>)</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -119,24 +121,27 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the <code>ShapeRefC</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError(long)" class="member-name-link">getError</a><wbr>(long&nbsp;resultVa)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the error string.</div>
+<div class="block">Return the error message.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasError()" class="member-name-link">hasError</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasError(long)" class="member-name-link">hasError</a><wbr>(long&nbsp;resultVa)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Test whether there was an error.</div>
+<div class="block">Test whether an error occurred.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValid()" class="member-name-link">isValid</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValid(long)" class="member-name-link">isValid</a><wbr>(long&nbsp;resultVa)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Test whether the <code>ShapeRefC</code> is valid.</div>
+<div class="block">Test whether the value returned by <code>get()</code> is valid.</div>
 </div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.template.Result">Methods inherited from class&nbsp;com.github.stephengold.joltjni.template.<a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a></h3>
+<code><a href="template/Result.html#getError()">getError</a>, <a href="template/Result.html#hasError()">hasError</a>, <a href="template/Result.html#isValid()">isValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
@@ -160,39 +165,56 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></span>&nbsp;<span class="element-name">get</span>()</div>
 <div class="block">Return the <code>ShapeRefC</code>.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="template/Result.html#get()">get</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with a new native object assigned</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getError()">
+<section class="detail" id="getError(long)">
 <h3>getError</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getError</span>()</div>
-<div class="block">Return the error string.</div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getError</span><wbr><span class="parameters">(long&nbsp;resultVa)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="template/Result.html#getError(long)">Result</a></code></span></div>
+<div class="block">Return the error message.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="template/Result.html#getError(long)">getError</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>resultVa</code> - the virtual address of the result (not zero)</dd>
 <dt>Returns:</dt>
-<dd>the string</dd>
+<dd>a string of text</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="hasError()">
+<section class="detail" id="hasError(long)">
 <h3>hasError</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasError</span>()</div>
-<div class="block">Test whether there was an error.</div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasError</span><wbr><span class="parameters">(long&nbsp;resultVa)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="template/Result.html#hasError(long)">Result</a></code></span></div>
+<div class="block">Test whether an error occurred.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="template/Result.html#hasError(long)">hasError</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>resultVa</code> - the virtual address of the result (not zero)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if error, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="isValid()">
+<section class="detail" id="isValid(long)">
 <h3>isValid</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isValid</span>()</div>
-<div class="block">Test whether the <code>ShapeRefC</code> is valid.</div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isValid</span><wbr><span class="parameters">(long&nbsp;resultVa)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="template/Result.html#isValid(long)">Result</a></code></span></div>
+<div class="block">Test whether the value returned by <code>get()</code> is valid.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="template/Result.html#isValid(long)">isValid</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>resultVa</code> - the virtual address of the result (not zero)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if valid, otherwise <code>false</code></dd>
 </dl>

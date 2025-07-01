@@ -93,11 +93,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">SoftBodyManifold</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></span></div>
 <div class="block">The vertices of a soft body that are colliding with other bodies.</div>
 </section>
 <section class="summary">
@@ -173,6 +174,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -214,6 +221,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the ID of the body with which the specified vertex collided. The
  manifold is unaffected. (native method: GetContactBodyID)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyManifold.html#getContactBodyId(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)">getContactBodyId</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>vertex</code> - the vertex to query (not null, unaffected)</dd>
 <dt>Returns:</dt>
@@ -228,6 +237,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the contact normal direction for the specified vertex. The manifold
  is unaffected.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyManifold.html#getContactNormal(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)">getContactNormal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>vertex</code> - the vertex to query (not null, unaffected)</dd>
 <dt>Returns:</dt>
@@ -242,6 +253,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the location of the contact point for the specified vertex. The
  manifold is unaffected.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyManifold.html#getLocalContactPoint(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)">getLocalContactPoint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>vertex</code> - the vertex to query (not null, unaffected)</dd>
 <dt>Returns:</dt>
@@ -256,6 +269,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Count how many sensors are in contact with the soft body. The manifold is
  unaffected.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyManifold.html#getNumSensorContacts()">getNumSensorContacts</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code></dd>
 <dt>Returns:</dt>
 <dd>the count (&ge;0)</dd>
 </dl>
@@ -268,6 +283,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the ID of the specified sensor contact. The manifold is
  unaffected. (native method: GetSensorContactBodyID)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyManifold.html#getSensorContactBodyId(int)">getSensorContactBodyId</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - among the sensor contacts (&ge;0)</dd>
 <dt>Returns:</dt>
@@ -281,6 +298,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstSoftBodyVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a>[]</span>&nbsp;<span class="element-name">getVertices</span>()</div>
 <div class="block">Enumerate all vertices of the soft body. The manifold is unaffected.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyManifold.html#getVertices()">getVertices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new array of new JVM objects with pre-existing native objects
  assigned</dd>
@@ -294,6 +313,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Test whether the specified vertex collided with something in this update.
  The manifold is unaffected.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyManifold.html#hasContact(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)">hasContact</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>vertex</code> - the vertex to query (not null, unaffected)</dd>
 <dt>Returns:</dt>
