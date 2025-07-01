@@ -3,7 +3,7 @@
 [versions]
 
 checkstyle = "10.26.0"
-joltjni = "1.0.0"
+joltjni = "2.0.1"
 lwjgl = "3.3.6"
 
 [libraries]
@@ -27,7 +27,7 @@ lwjgl-assimp = { module = "org.lwjgl:lwjgl-assimp", version.ref = "lwjgl" }
 lwjgl-glfw = { module = "org.lwjgl:lwjgl-glfw", version.ref = "lwjgl" }
 lwjgl-opengl = { module = "org.lwjgl:lwjgl-opengl", version.ref = "lwjgl" }
 
-sport-jolt = "com.github.stephengold:sport-jolt:0.9.4"
+sport-jolt = "com.github.stephengold:sport-jolt:0.9.5"
 
 [bundles]
 
