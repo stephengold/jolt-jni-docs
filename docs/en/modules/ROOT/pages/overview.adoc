@@ -55,8 +55,6 @@ https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE[The projec
 disclaims liability for defects.
 Please don't use this software in safety-critical applications.
 
-I welcome suggestions concerning the future development of {Project}.
-
 
 == Getting help
 
@@ -68,6 +66,8 @@ https://github.com/stephengold/jolt-jni[the source code].
 For issues that are best handled privately, contact me by e-mail.
 My personal e-mail address appears at the bottom
 of https://stephengold.github.io/[my homepage] and in the source code.
+
+I welcome suggestions concerning the future development of {Project}.
 
 
 == Next steps
