@@ -48,6 +48,7 @@ import com.github.stephengold.joltjni.TempAllocatorMalloc;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
+import com.github.stephengold.joltjni.enumerate.EPhysicsUpdateError;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
@@ -156,8 +157,9 @@ final public class HelloJoltJni {
         float timePerStep = 0.02f; // seconds
         for (int iteration = 0; iteration < 50; ++iteration) {
             int collisionSteps = 1;
-            physicsSystem.update(
+            int errors = physicsSystem.update(
                     timePerStep, collisionSteps, tempAllocator, jobSystem);
+            assert errors == EPhysicsUpdateError.None : errors;
 
             RVec3Arg location = ball.getPosition();
             System.out.println(location);
