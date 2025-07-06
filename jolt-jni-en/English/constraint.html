@@ -315,7 +315,7 @@ to represent both single-ended and double-ended constraints.</p>
 You configure settings to specify constraint details
 such as its initial location and orientation.
 Then you invoke the <code>create()</code> method of the settings object,
-specifying 2 bodies the new constraint will apply to.</p>
+specifying the 2 rigid bodies to be constrained.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -328,7 +328,7 @@ both bodies should be movable and added to the same physics system:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettings settings = /* ... */;
-TwoBodyConstraint constraint = settings.create(body1, body2);</code></pre>
+TwoBodyConstraint constraint = settings.create(rigidBody1, rigidBody2);</code></pre>
 </div>
 </div>
 <div class="ulist">
