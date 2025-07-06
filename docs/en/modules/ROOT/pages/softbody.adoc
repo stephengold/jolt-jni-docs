@@ -32,6 +32,8 @@ the center of its axis-aligned bounding box.
 Soft bodies collide only with rigid bodies;
 they do not collide with other soft bodies.
 
+Furthermore, two-body constraints won't work with soft bodies.
+
 
 == Creation
 
