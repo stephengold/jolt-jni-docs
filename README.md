@@ -39,6 +39,10 @@ Complete source code is provided under
   + using Bash or Fish or PowerShell or Zsh: `./gradlew build`
   + using Windows Command Prompt: `.\gradlew build`
 
+To run the "HelloJoltJni" application:
+  + using Bash or Fish or PowerShell or Zsh: `./gradlew :java-apps:HelloJoltJni`
+  + using Windows Command Prompt: `.\gradlew :java-apps:HelloJoltJni`
+
 ### Antora documentation
 
 1. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-docs"
