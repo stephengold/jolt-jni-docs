@@ -9,7 +9,7 @@ In long-running apps,
 it's important to reclaim objects that are no longer in use,
 lest the app run out of memory.
 But it's even more important to ensure
-objects doesn't get reclaimed while they *are* still in use!
+objects don't get reclaimed while they *are* still in use!
 
 
 == Native objects assigned to JVM objects
