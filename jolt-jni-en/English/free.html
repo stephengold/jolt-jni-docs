@@ -247,7 +247,7 @@
 it&#8217;s important to reclaim objects that are no longer in use,
 lest the app run out of memory.
 But it&#8217;s even more important to ensure
-objects doesn&#8217;t get reclaimed while they <strong>are</strong> still in use!</p>
+objects don&#8217;t get reclaimed while they <strong>are</strong> still in use!</p>
 </div>
 </div>
 </div>
@@ -339,6 +339,24 @@ by invoking <code>JoltPhysicsObject.startCleaner()</code>).</p>
 </td>
 <td class="content">
 <div class="paragraph">
+<p>If your app starts a cleaner task,
+it must avoid reclaiming any <code>JoltPhysicsObject</code>
+using <code>close()</code> or a <code>try</code> block.
+Combining a cleaner task with other techniques for freeing native memory
+will likely crash the JVM.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
 <p>Explicitly closing a <code>JoltPhysicsObject</code> is dangerous
 because it invalidates the native object,
 which nevertheless remains reachable.
@@ -358,8 +376,8 @@ This could lead to undefined behavior.</p>
 <div class="paragraph">
 <p>Sport-Jolt automatically starts a cleaner task
 for any app that extends <code>BasePhysicsApp</code>.
-As a consequence,
-all the Jolt-JNI tutorial apps rely on automatic reclamation.</p>
+Consequently, none of the Jolt-JNI tutorial apps
+use <code>close()</code> or a <code>try</code> block.</p>
 </div>
 </td>
 </tr>
