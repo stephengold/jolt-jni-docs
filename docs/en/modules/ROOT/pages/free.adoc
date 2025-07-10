@@ -73,6 +73,15 @@ its memory can be freed in 3 ways:
 
 [IMPORTANT]
 ====
+If your app starts a cleaner task,
+it must avoid reclaiming any `JoltPhysicsObject`
+using `close()` or a `try` block.
+Combining a cleaner task with other techniques for freeing native memory
+will likely crash the JVM.
+====
+
+[IMPORTANT]
+====
 Explicitly closing a `JoltPhysicsObject` is dangerous
 because it invalidates the native object,
 which nevertheless remains reachable.
@@ -83,8 +92,8 @@ This could lead to undefined behavior.
 ====
 {Sport} automatically starts a cleaner task
 for any app that extends `BasePhysicsApp`.
-As a consequence,
-all the {ProjectAdj} tutorial apps rely on automatic reclamation.
+Consequently, none of the {ProjectAdj} tutorial apps
+use `close()` or a `try` block.
 ====
 
 === Contained objects
