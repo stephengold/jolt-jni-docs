@@ -8,6 +8,9 @@ _Demo applications_ are provided to showcase certain features of {Project}.
 The following demos are found in
 {url-examples}[the com.github.stephengold.sportjolt.javaapp.demo package of the {Sport} "java-apps" sub-project]:
 
+* {url-examples}/MarbleGame.java[`MarbleGame`]
+  demonstrates compound shapes and sensor bodies +
+  image:marbleGame.png[height=50]
 * {url-examples}/NewtonsCradle.java[`NewtonsCradle`]
   demonstrates dynamic restitution and distance constraints +
   image:newtonsCradle.png[height=50]
@@ -17,6 +20,9 @@ The following demos are found in
 * {url-examples}/ThousandCubes.java[`ThousandCubes`]
   demonstrates stacking cubes and launching projectiles +
   image:thousandCubes.png[height=100]
+* {url-examples}/Windlass.java[`Windlass`]
+  demonstrates rope simulation using rigid bodies +
+  image:windlass.png[height=100]
 
 
 == User interface
@@ -27,14 +33,16 @@ NOTE: The descriptions below assume a keyboard with the "US" (QWERTY) layout.
 On keyboards with other layouts, the keys may be labeled differently.
 
 For convenience, the mapping of keys to actions is partly standardized.
-In all demo apps:
+In most demo apps:
 
 * kbd:[.] and kbd:[Pause] toggle the simulation between running and paused,
 * kbd:[C] dumps the camera's position to the console, and
 * kbd:[Esc] ends the application.
 
-For camera control, all demo apps use `DragLMB` rotation mode.
-This means you can rotate the camera by dragging with the left mouse button.
+For camera control,
+all demos except `MarbleGame` and `ThousandCubes` use `DragLMB` rotation mode.
+This means you can rotate the camera
+by dragging the mouse with its left button depressed.
 Furthermore:
 
 * kbd:[W] and kbd:[S] dolly the camera forward and back, respectively,
@@ -43,6 +51,13 @@ Furthermore:
 * kbd:[Z] lowers the camera.
 
 Additional mappings are specific to each application:
+
+* In `MarbleGame`:
+
+** kbd:[W] pushes the marble away from the viewer,
+** kbd:[S] pushes the marble towards the viewer,
+** kbd:[A] push the marble to the viewer's left, and
+** kbd:[D] pushes the marble to the viewer's right.
 
 * In `NewtonsCradle`:
 
@@ -64,3 +79,8 @@ Additional mappings are specific to each application:
 * In `ThousandCubes`:
 
 ** kbd:[E] launch a red ball
+
+* In `Windlass`:
+
+** kbd:[Down arrow] turn the barrel counter-clockwise
+** kbd:[Up arrow] turn the barrel clockwise
