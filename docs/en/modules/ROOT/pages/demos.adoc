@@ -4,8 +4,8 @@
 :Sport: Sport-Jolt
 :url-examples: https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo
 
-_Demo apps_ are provided to showcase certain features of {Project}.
-The following apps are found in
+_Demo applications_ are provided to showcase certain features of {Project}.
+The following demos are found in
 {url-examples}[the com.github.stephengold.sportjolt.javaapp.demo package of the {Sport} "java-apps" sub-project]:
 
 * {url-examples}/NewtonsCradle.java[`NewtonsCradle`]
@@ -21,7 +21,7 @@ The following apps are found in
 
 == User interface
 
-The demo apps are controlled primarily by keyboard input.
+The demos are controlled primarily by keyboard input.
 
 NOTE: The descriptions below assume a keyboard with the "US" (QWERTY) layout.
 On keyboards with other layouts, the keys may be labeled differently.
@@ -31,7 +31,7 @@ In all demo apps:
 
 * kbd:[.] and kbd:[Pause] toggle the simulation between running and paused,
 * kbd:[C] dumps the camera's position to the console, and
-* kbd:[Esc] ends the app.
+* kbd:[Esc] ends the application.
 
 For camera control, all demo apps use `DragLMB` rotation mode.
 This means you can rotate the camera by dragging with the left mouse button.
@@ -42,7 +42,7 @@ Furthermore:
 * kbd:[Q] raises the camera, and
 * kbd:[Z] lowers the camera.
 
-Additional mappings are specific to each app:
+Additional mappings are specific to each application:
 
 * In `NewtonsCradle`:
 
