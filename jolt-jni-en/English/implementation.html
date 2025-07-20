@@ -361,20 +361,36 @@ that describes the shape of its surface.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A body&#8217;s absolute location and orientation are quantified
-in <em>system coordinates</em>,
-based on a right-handed Cartesian coordinate system.</p>
+in <em>system coordinates</em> (also known as <em>world space</em>),
+a right-handed Cartesian coordinate system.</p>
+</div>
+<div class="paragraph">
+<p>Dimensions and distances are nominally in meters.
+Simulation is most accurate for dynamic objects
+between 0.1 and 10 meters in size,
+with speeds under 500 meters per second.
+Static object should be 0.1 to 2,000 meters in size.
+To simulate outside these ranges, scale dimensions and distances accordingly.</p>
+</div>
+<div class="paragraph">
+<p>In the JVM library, double-precision floating point is always used
+to represent locations in system coordinates.
+If all simulation takes place within roughly 5,000 meters of the origin,
+single-precision native libraries provide sufficient accuracy.
+For larger worlds, use double-precision native libraries.</p>
 </div>
 <div class="paragraph">
 <p>Jolt JNI doesn&#8217;t require a particular "up" direction.
-However, the "up" direction for characters defaults to +Y,
-and the direction of gravity in a physics system defaults to -Y.</p>
+However, the "up" directions for characters, heightfields, and vehicles
+all default to +Y,
+and the direction of gravity defaults to -Y.</p>
+</div>
+<div class="paragraph">
+<p>Masses are nominally in kilograms.</p>
 </div>
 <div class="paragraph">
 <p>Locations relative to a shape&#8217;s origin and subject to its rotation
 are quantified using <em>local coordinates</em>.</p>
-</div>
-<div class="paragraph">
-<p>Dimensions and distances are specified in meters.</p>
 </div>
 </div>
 </div>
