@@ -73,17 +73,31 @@ that describes the shape of its surface.
 == Coordinate systems and units
 
 A body's absolute location and orientation are quantified
-in _system coordinates_,
-based on a right-handed Cartesian coordinate system.
+in _system coordinates_ (also known as _world space_),
+a right-handed Cartesian coordinate system.
+
+Dimensions and distances are nominally in meters.
+Simulation is most accurate for dynamic objects
+between 0.1 and 10 meters in size,
+with speeds under 500 meters per second.
+Static object should be 0.1 to 2,000 meters in size.
+To simulate outside these ranges, scale dimensions and distances accordingly.
+
+In the JVM library, double-precision floating point is always used
+to represent locations in system coordinates. 
+If all simulation takes place within roughly 5,000 meters of the origin,
+single-precision native libraries provide sufficient accuracy.
+For larger worlds, use double-precision native libraries.
 
 {Project} doesn't require a particular "up" direction.
-However, the "up" direction for characters defaults to +Y,
-and the direction of gravity in a physics system defaults to -Y.
+However, the "up" directions for characters, heightfields, and vehicles
+all default to +Y,
+and the direction of gravity defaults to -Y.
+
+Masses are nominally in kilograms.
 
 Locations relative to a shape's origin and subject to its rotation
 are quantified using _local coordinates_.
-
-Dimensions and distances are specified in meters.
 
 
 == Discrete time and collision detection
