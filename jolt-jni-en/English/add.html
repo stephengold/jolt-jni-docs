@@ -296,7 +296,7 @@ then switch to "Release" libraries for performance testing and production.</p>
 </div>
 <div class="paragraph">
 <p>Flavors:  use "Dp" native libraries to simulate large worlds
-(&gt;1000 meters in diameter) otherwise use "Sp".</p>
+(&gt;10,000 meters in diameter) otherwise use "Sp".</p>
 </div>
 <div class="sect2">
 <h3 id="_gradle_built_android_projects"><a class="anchor" href="#_gradle_built_android_projects"></a>Gradle-built Android projects</h3>
@@ -400,7 +400,7 @@ Add to the relevant "build.gradle" or "build.gradle.kts" file:</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
     implementation("io.github.electrostat-lab:snaploader:1.1.1-stable")
-    runtimeOnly("com.github.oshi:oshi-core:6.8.1")
+    runtimeOnly("com.github.oshi:oshi-core:6.8.2")
 }</code></pre>
 </div>
 </div>
@@ -591,6 +591,9 @@ and mapping both object layers to broadphase layer 0.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numObjLayers = 2;
 int numBpLayers = 1;
+
+final int objLayerMoving = 0;
+final int objLayerNonMoving = 1;
 
 ObjectLayerPairFilterTable ovoFilter
         = new ObjectLayerPairFilterTable(numObjLayers);
