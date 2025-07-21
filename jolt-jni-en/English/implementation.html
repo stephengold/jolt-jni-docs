@@ -340,7 +340,7 @@ so a single JVM library suffices.</p>
 <h2 id="_bodies_physics_systems_and_shapes"><a class="anchor" href="#_bodies_physics_systems_and_shapes"></a>Bodies, physics systems, and shapes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Collision detection is organized around <em>bodies</em>
+<p>Collision detection is organized around <em>bodies</em> and <em>constraints</em>
 that interact in the context of a <em>physics system</em>.</p>
 </div>
 <div class="paragraph">
@@ -349,6 +349,46 @@ Rigid bodies can be <em>moving</em> or <em>static</em> (non-moving).
 And moving bodies can be <em>dynamic</em> (driven by <a href="https://en.wikipedia.org/wiki/Force">forces</a>,
 <a href="https://en.wikipedia.org/wiki/Torque">torques</a>, and <a href="https://en.wikipedia.org/wiki/Impulse_(physics)">impulses</a>)
 or <em>kinematic</em> (driven directly by external calculations).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bodies (<code>Body</code> class)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>soft bodies</p>
+</li>
+<li>
+<p>rigid bodies</p>
+<div class="ulist">
+<ul>
+<li>
+<p>moving</p>
+<div class="ulist">
+<ul>
+<li>
+<p>dynamic</p>
+</li>
+<li>
+<p>kinematic</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>static</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>constraints (<code>Constraint</code> abstract class)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Each rigid body references a <em>collision shape</em>
@@ -401,7 +441,7 @@ are quantified using <em>local coordinates</em>.</p>
 <p>Physics simulation occurs in discrete steps of short duration.</p>
 </div>
 <div class="paragraph">
-<p>For fast-moving bodies,
+<p>For fast-moving rigid bodies,
 Jolt JNI offers optional continuous collision detection (CCD)
 using linear casting.</p>
 </div>

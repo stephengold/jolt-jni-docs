@@ -243,7 +243,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Adding Jolt JNI to an existing project is an 10-step process:</p>
+<p>Adding Jolt JNI to an existing project is a 10-step process:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -333,7 +333,8 @@ plus a set of (separately-packaged) native libraries.</p>
 </div>
 <div class="paragraph">
 <p>Because of how releases are built,
-the desktop JVM library is released under 8 distinct names (artifact IDs).
+each desktop JVM library is released under 8 distinct names (artifact IDs)
+that can be used interchangeably.
 In contrast, each desktop native library is specific to a particular platform,
 build type, and flavor.</p>
 </div>
@@ -463,7 +464,7 @@ Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free</code><
 <p>Similarly, Jolt Physics allows custom callbacks
 for native assertions and trace output,
 but Jolt JNI exposes only the default callbacks,
-which print to <code>cout</code>, the standard output.</p>
+which print to the standard output.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -555,8 +556,8 @@ JobSystem jobSystem = new JobSystemThreadPool(
 <div class="sectionbody">
 <div class="paragraph">
 <p>Jolt Physics allows you to organize bodies into <em>collision layers</em>
-and specify that some layers never collide.
-For instance, it&#8217;s typical to put moving and non-moving bodies
+and specify which layers may collide.
+It&#8217;s typical to put moving and non-moving bodies
 into separate layers
 and specify that non-moving bodies collide only with moving bodies,
 not with other non-moving bodies.</p>
@@ -617,7 +618,7 @@ ObjectVsBroadPhaseLayerFilter ovbFilter
 </div>
 </div>
 <div class="paragraph">
-<p>For more advice regarding layers, see
+<p>For further advice regarding collision layers, see
 <a href="https://jrouwe.github.io/JoltPhysics/index.html#collision-detection">the collision-detection section of the Jolt-Physics documentation</a>.</p>
 </div>
 </div>
@@ -633,13 +634,13 @@ so I suggest setting these limits fairly high.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PhysicsSystem system = new PhysicsSystem();
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PhysicsSystem physicsSystem = new PhysicsSystem();
 
 int maxBodies = 5_000;
 int numBodyMutexes = 0; // 0 means "use the default number"
 int maxBodyPairs = 65_536;
 int maxContacts = 20_480;
-system.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
+physicsSystem.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
         layerMap, ovbFilter, ovoFilter);</code></pre>
 </div>
 </div>
@@ -649,7 +650,7 @@ system.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
 <h2 id="_add_physics_objects"><a class="anchor" href="#_add_physics_objects"></a>Add physics objects</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Physics objects include:</p>
+<p><em>Physics objects</em> include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -658,10 +659,10 @@ system.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
 <div class="ulist">
 <ul>
 <li>
-<p>soft bodies</p>
+<p>rigid bodies</p>
 </li>
 <li>
-<p>rigid bodies</p>
+<p>soft bodies</p>
 </li>
 </ul>
 </div>
@@ -680,6 +681,9 @@ system.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
 <p>characters (<code>CharacterBase</code>)</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>This tutorial first introduces rigid bodies.</p>
 </div>
 <div class="paragraph">
 <p>Body creation starts with a <code>BodyCreationSettings</code> object, which can be reused.
@@ -701,8 +705,8 @@ Body ball = bi.createBody(bcs);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Bodies aren&#8217;t simulated unless they&#8217;re added to a physics system.
-The best way is to use <code>BodyInterface.addBody()</code>:</p>
+<p>A body isn&#8217;t simulated unless it&#8217;s added to the system.
+Use <code>BodyInterface.addBody()</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -733,7 +737,7 @@ physicsSystem.update(
 <div class="paragraph">
 <p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/console/HelloJoltJni.java">HelloJoltJni</a>
 is a complete console app (no graphics)
-that serves as a starting point for using Jolt JNI.</p>
+that serves as a starting point for running Jolt JNI.</p>
 </div>
 <div class="paragraph">
 <p>It illustrates:</p>
@@ -802,8 +806,7 @@ you should be able to launch tutorial apps from a command shell, like so:</p>
 <p>Two libraries are required: a JVM library and a native library.</p>
 </li>
 <li>
-<p>You can organize bodies into object layers
-and specify that some layers never collide.</p>
+<p>You can organize bodies into layers and specify which layers collide.</p>
 </li>
 <li>
 <p>Physics objects aren&#8217;t simulated unless they&#8217;re added to a system.</p>
