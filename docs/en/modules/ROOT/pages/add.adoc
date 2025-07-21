@@ -5,7 +5,7 @@
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
-Adding {Project} to an existing project is an 10-step process:
+Adding {Project} to an existing project is a 10-step process:
 
 . Add libraries to the classpath.
 . Load the native library.
@@ -62,7 +62,8 @@ dependencies {
 plus a set of (separately-packaged) native libraries.
 
 Because of how releases are built,
-the desktop JVM library is released under 8 distinct names (artifact IDs).
+each desktop JVM library is released under 8 distinct names (artifact IDs)
+that can be used interchangeably.
 In contrast, each desktop native library is specific to a particular platform,
 build type, and flavor.
 
@@ -170,7 +171,7 @@ Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free
 Similarly, Jolt Physics allows custom callbacks
 for native assertions and trace output,
 but {Project} exposes only the default callbacks,
-which print to `cout`, the standard output.
+which print to the standard output.
 
 [source,java]
 ----
@@ -242,8 +243,8 @@ JobSystem jobSystem = new JobSystemThreadPool(
 == Collision layers
 
 Jolt Physics allows you to organize bodies into _collision layers_
-and specify that some layers never collide.
-For instance, it's typical to put moving and non-moving bodies
+and specify which layers may collide.
+It's typical to put moving and non-moving bodies
 into separate layers
 and specify that non-moving bodies collide only with moving bodies,
 not with other non-moving bodies.
@@ -292,7 +293,7 @@ ObjectVsBroadPhaseLayerFilter ovbFilter
                 layerMap, numBpLayers, ovoFilter, numObjLayers);
 ----
 
-For more advice regarding layers, see
+For further advice regarding collision layers, see
 https://jrouwe.github.io/JoltPhysics/index.html#collision-detection[the collision-detection section of the Jolt-Physics documentation].
 
 
@@ -318,14 +319,16 @@ physicsSystem.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
 
 == Add physics objects
 
-Physics objects include:
+_Physics objects_ include:
 
 * bodies (`Body`)
-** soft bodies
 ** rigid bodies
+** soft bodies
 * constraints (`Constraint`)
 ** vehicles (`VehicleConstraint`)
 * characters (`CharacterBase`)
+
+This tutorial first introduces rigid bodies.
 
 Body creation starts with a `BodyCreationSettings` object, which can be reused.
 Here's a code fragment that creates a spherical rigid body:
@@ -345,8 +348,8 @@ BodyInterface bi = physicsSystem.getBodyInterface();
 Body ball = bi.createBody(bcs);
 ----
 
-Bodies aren't simulated unless they're added to a physics system.
-The best way is to use `BodyInterface.addBody()`:
+A body isn't simulated unless it's added to the system.
+Use `BodyInterface.addBody()`:
 
 [source,java]
 ----
@@ -371,7 +374,7 @@ physicsSystem.update(
 
 {url-tutorial}/console/HelloJoltJni.java[HelloJoltJni]
 is a complete console app (no graphics)
-that serves as a starting point for using {Project}.
+that serves as a starting point for running {Project}.
 
 It illustrates:
 
@@ -402,6 +405,5 @@ you should be able to launch tutorial apps from a command shell, like so:
 == Summary
 
 * Two libraries are required: a JVM library and a native library.
-* You can organize bodies into object layers
-  and specify that some layers never collide.
+* You can organize bodies into layers and specify which layers collide.
 * Physics objects aren't simulated unless they're added to a system.

@@ -57,7 +57,7 @@ so a single JVM library suffices.
 
 == Bodies, physics systems, and shapes
 
-Collision detection is organized around _bodies_
+Collision detection is organized around _bodies_ and _constraints_
 that interact in the context of a _physics system_.
 
 Bodies can be _soft_ (varying shape) or _rigid_ (non-varying shape).
@@ -113,7 +113,7 @@ are quantified using _local coordinates_.
 
 Physics simulation occurs in discrete steps of short duration.
 
-For fast-moving bodies,
+For fast-moving rigid bodies,
 {Project} offers optional continuous collision detection (CCD)
 using linear casting.
 
