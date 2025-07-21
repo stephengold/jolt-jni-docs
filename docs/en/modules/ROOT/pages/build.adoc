@@ -108,7 +108,7 @@ You can install them to your local Maven repository.
 . Download and extract the jolt-jni-docs source code from GitHub:
 .. using Git:
 ... `git clone https://github.com/stephengold/jolt-jni-docs.git`
-... `cd jolt-jni`
+... `cd jolt-jni-docs`
 .. using a web browser:
 ... browse to https://github.com/stephengold/jolt-jni-docs/archive/refs/heads/master.zip
 ... extract the contents of the downloaded ZIP file
