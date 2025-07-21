@@ -590,8 +590,8 @@ and mapping both object layers to broadphase layer 0.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numObjLayers = 2;
-int numBpLayers = 1;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final int numObjLayers = 2;
+final int numBpLayers = 1;
 
 final int objLayerMoving = 0;
 final int objLayerNonMoving = 1;
@@ -612,7 +612,7 @@ layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
 layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
 
 // Pre-compute the rules for colliding object layers with broadphase layers:
-ObjectVsBroadPhaseLayerFilter ovbFilter
+ObjectVsBroadPhaseLayerFilterTable ovbFilter
         = new ObjectVsBroadPhaseLayerFilterTable(
                 layerMap, numBpLayers, ovoFilter, numObjLayers);</code></pre>
 </div>
