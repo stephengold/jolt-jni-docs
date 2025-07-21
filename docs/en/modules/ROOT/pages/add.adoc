@@ -266,8 +266,8 @@ and mapping both object layers to broadphase layer 0.
 
 [source,java]
 ----
-int numObjLayers = 2;
-int numBpLayers = 1;
+final int numObjLayers = 2;
+final int numBpLayers = 1;
 
 final int objLayerMoving = 0;
 final int objLayerNonMoving = 1;
@@ -288,7 +288,7 @@ layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
 layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
 
 // Pre-compute the rules for colliding object layers with broadphase layers:
-ObjectVsBroadPhaseLayerFilter ovbFilter
+ObjectVsBroadPhaseLayerFilterTable ovbFilter
         = new ObjectVsBroadPhaseLayerFilterTable(
                 layerMap, numBpLayers, ovoFilter, numObjLayers);
 ----
