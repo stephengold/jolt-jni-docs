@@ -66,6 +66,15 @@ And moving bodies can be _dynamic_ (driven by {url-enwiki}/Force[forces],
 {url-enwiki}/Torque[torques], and {url-enwiki}/Impulse_(physics)[impulses])
 or _kinematic_ (driven directly by external calculations).
 
+* bodies (`Body` class)
+** soft bodies
+** rigid bodies
+*** moving
+**** dynamic
+**** kinematic
+*** static
+* constraints (`Constraint` abstract class)
+
 Each rigid body references a _collision shape_
 that describes the shape of its surface.
 
