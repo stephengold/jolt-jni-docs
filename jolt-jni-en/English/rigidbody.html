@@ -264,20 +264,20 @@ and <a href="https://en.wikipedia.org/wiki/Moment_of_inertia"><em>moment of iner
 using <code>BodyCreationSettings.setShape()</code>.</p>
 </div>
 <div class="paragraph">
-<p><code>BodyCreationSettings</code> offers 3 ways to specify a body&#8217;s inertia:</p>
+<p><code>BodyCreationSettings</code> offers 3 ways
+to specify a body&#8217;s mass and moment of inertia:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>MassAndInertiaProvided</code>: specify mass and moment of inertia directly
-using a mass-properties override</p>
+<p><code>MassAndInertiaProvided</code>:
+specify them directly using a mass-properties override</p>
 </li>
 <li>
-<p><code>CalculateMassAndInertia</code>: calculate mass and moment of inertia
-based on the shape and density</p>
+<p><code>CalculateMassAndInertia</code>: calculate them based on the shape and density</p>
 </li>
 <li>
-<p><code>CalculateInertia</code>: specify mass directly using the mass-properties override
+<p><code>CalculateInertia</code>: specify mass directly using a mass-properties override
 and calculate the moment of inertia based on the shape and mass</p>
 </li>
 </ul>
@@ -441,8 +441,8 @@ body.setObjectLayer(objLayerNonMoving);</code></pre>
 </div>
 <div class="paragraph">
 <p>However, the reverse is not true:
-you can only convert a static body to a dynamic one
-if you configured it to allow the conversion
+you cannot convert a static body to a dynamic one
+unless you configured it
 with <code>BodyCreationSettings.setAllowDynamicOrKinematic(true)</code>.</p>
 </div>
 </td>
@@ -478,7 +478,7 @@ QuatArg orientation = body.getRotation();</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Furthermore, a body&#8217;s origin might differ from its center of mass (COM):</p>
+<p>Furthermore, a body&#8217;s origin may be distinct from its center of mass (COM):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -494,18 +494,19 @@ RVec3Arg comLocation = body.getCenterOfMassPosition();</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Positions are represented by <code>RVec3Arg</code> objects such as <code>RVec3</code>.
+<p>Positions and locations are represented
+using <code>R</code> objects such as <code>RMat44</code> and <code>RVec3</code>.
 The precision of such objects
 depends on the flavor of the native library:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>When an Sp-flavored library is loaded,
+<p>In an Sp-flavored native library,
 locations have single-precision components.</p>
 </li>
 <li>
-<p>When a Dp-flavored library is loaded,
+<p>In a Dp-flavored native library,
 locations have double-precision components.</p>
 </li>
 </ul>
@@ -534,7 +535,7 @@ you should use forces, torques, and impulses to move it.</p>
 <div class="sect2">
 <h3 id="_kinematic_motion"><a class="anchor" href="#_kinematic_motion"></a>Kinematic motion</h3>
 <div class="paragraph">
-<p>In addition to static and dynamic rigid bodies, there&#8217;s a third type.</p>
+<p>In addition to static and dynamic motion, there&#8217;s a third type of motion.</p>
 </div>
 <div class="paragraph">
 <p><em>Kinematic</em> bodies share some properties with both static and dynamic ones.
@@ -657,7 +658,7 @@ rate and axis direction of the body&#8217;s spinning motion (if any).</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The velocities of a static body are both zero.
+Both velocities of a static body are zero.
 </td>
 </tr>
 </table>
@@ -801,7 +802,7 @@ a downward force that&#8217;s proportional to mass (so it causes a constant
 <a href="https://en.wikipedia.org/wiki/Acceleration">acceleration</a>).</p>
 </div>
 <div class="paragraph">
-<p>To simulate this phenomenon, each physics system has a gravity vector
+<p>To simulate gravity, each physics system has a gravity vector
 that quantifies the acceleration of dynamic bodies.
 To configure a system&#8217;s gravity,
 use <code>PhysicsSystem.setGravity(accelerationVector)</code>.</p>
@@ -821,7 +822,8 @@ vector should be zero and its Y component should be <strong>negative</strong>.
 </div>
 <div class="paragraph">
 <p>To disable gravity for a specific rigid body,
-use <code>BodyCreationSettings.setGravityFactor(0f)</code> (during configuration)
+set its gravity factor to zero
+using <code>BodyCreationSettings.setGravityFactor(0f)</code> (during creation)
 or <code>BodyInterface.setGravityFactor(body.getId(), 0f)</code> (during simulation).</p>
 </div>
 </div>
@@ -829,8 +831,8 @@ or <code>BodyInterface.setGravityFactor(body.getId(), 0f)</code> (during simulat
 <h4 id="_restitution"><a class="anchor" href="#_restitution"></a>Restitution</h4>
 <div class="paragraph">
 <p>When responsive rigid bodies collide,
-contact forces come into play, altering their velocities.
-These forces are split into 2 components:  restitution and friction.</p>
+contact forces come into play, altering their motions.
+These forces can be split into 2 components:  restitution and friction.</p>
 </div>
 <div class="paragraph">
 <p><em>Restitution</em> is a force parallel to the contact normal.
@@ -858,14 +860,10 @@ For each collision, the coefficient of restitution
 is calculated as the maximum of the ratios of the colliding bodies.</p>
 </div>
 <div class="paragraph">
-<p>To simulate a perfectly elastic collision, set the restitution parameter of
-either body to one:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Body body = /* ... */
-body.setRestitution(1f); // default=0</code></pre>
-</div>
+<p>To simulate a perfectly elastic collision,
+set the restitution ratio of either body to one
+using <code>BodyCreationSettings.setRestitution(1f)</code> (during creation)
+or <code>BodyInterface.setRestitution(body.getId(), 1f)</code> (during simulation).</p>
 </div>
 </div>
 <div class="sect3">
@@ -906,7 +904,7 @@ bcs.setAllowedDofs(
 </div>
 </div>
 <div class="paragraph">
-<p>Allowed DOFs can also be used to simulate physics in 2 dimensions.
+<p>Allowed DOFs can also be used to simulate physics in 2 dimensions instead of 3.
 For instance, one might constrain a body
 to rotate only around axes parallel to the Z axis
 and translate only in directions parallel to the X-Y plane:</p>
@@ -927,7 +925,7 @@ bcs.setAllowedDofs(
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Allowed DOFs are defined by the system&#8217;s axes,
+Allowed DOFs are defined in terms of the system&#8217;s axes,
 not the body&#8217;s local axes.
 </td>
 </tr>
@@ -941,7 +939,7 @@ not the body&#8217;s local axes.
 <a href="https://en.wikipedia.org/wiki/Steady_state"><em>steady state</em></a> in which
 the some or all bodies have stopped moving.
 If a dynamic rigid body doesn&#8217;t move for 2 seconds,
-the simulator may automatically <em>deactivate</em> it to reduce CPU utilization.</p>
+the simulator may automatically <em>deactivate</em> it to reduce CPU usage.</p>
 </div>
 <div class="paragraph">
 <p>To prevent a body from being deactivated,
@@ -1044,10 +1042,10 @@ so no collision is detected and no contact forces are simulated.</p>
 <div class="paragraph">
 <p>To some extent, this issue could be mitigated by reducing the time step.
 But since CPU utilization is inversely proportional to the time step,
-this approach quickly becomes inefficient.</p>
+that approach quickly becomes inefficient.</p>
 </div>
 <div class="paragraph">
-<p>To solve this issue,
+<p>To solve the issue,
 Jolt JNI implements <em>continuous collision detection</em> (CCD) using LinearCast,
 an algorithm for detecting collisions that in the middle of a simulation step.</p>
 </div>
@@ -1087,7 +1085,7 @@ passing from one side to the other in a single simulation step.</p>
 <p>Rigid bodies simulate familiar features of real-world objects.</p>
 </li>
 <li>
-<p>There are 3 kinds: static, kinematic, and dynamic &#8230;&#8203;</p>
+<p>There are 3 motion types: static, kinematic, and dynamic &#8230;&#8203;</p>
 </li>
 </ul>
 </div>
@@ -1155,13 +1153,22 @@ passing from one side to the other in a single simulation step.</p>
 <p>How to configure</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>setMotionType(EMotionType.Static)</code> <code>setObjectLayer(objLayerNonMoving)</code></p>
+<p><code>setMotionType(</code><br>
+  <code>EMotionType.Static)</code><br>
+  <code>setObjectLayer(</code><br>
+  <code>objLayerNonMoving)</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>setMotionType(EMotionType.Kinematic)</code> <code>setObjectLayer(objLayerMoving)</code></p>
+<p><code>setMotionType(</code><br>
+  <code>EMotionType.Kinematic)</code><br>
+  <code>setObjectLayer(</code><br>
+  <code>objLayerMoving)</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>setMotionType(EMotionType.Dynamic)</code> <code>setObjectLayer(objLayerMoving)</code></p>
+<p><code>setMotionType(</code><br>
+  <code>EMotionType.Dynamic)</code><br>
+  <code>setObjectLayer(</code><br>
+  <code>objLayerMoving)</code></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1175,7 +1182,8 @@ damping (linear and angular), gravity, restitution, friction,
 sleeping thresholds, and motion quality.</p>
 </li>
 <li>
-<p>Mobility, contact response, gravity, and friction are all optional features.</p>
+<p>Mobility, contact response, gravity, restitution, and friction
+are all optional features.</p>
 </li>
 <li>
 <p>If a dynamic rigid body moves too slowly,
