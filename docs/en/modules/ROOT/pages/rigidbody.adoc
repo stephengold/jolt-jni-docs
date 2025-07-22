@@ -21,13 +21,13 @@ that exhibits some familiar features of real-world objects, including:
 You've already seen how to specify a body's shape
 using `BodyCreationSettings.setShape()`.
 
-`BodyCreationSettings` offers 3 ways to specify a body's inertia:
+`BodyCreationSettings` offers 3 ways
+to specify a body's mass and moment of inertia:
 
-* `MassAndInertiaProvided`: specify mass and moment of inertia directly
-  using a mass-properties override
-* `CalculateMassAndInertia`: calculate mass and moment of inertia
-  based on the shape and density
-* `CalculateInertia`: specify mass directly using the mass-properties override
+* `MassAndInertiaProvided`:
+  specify them directly using a mass-properties override
+* `CalculateMassAndInertia`: calculate them based on the shape and density
+* `CalculateInertia`: specify mass directly using a mass-properties override
   and calculate the moment of inertia based on the shape and mass
 
 For now, we'll use `CalculateInertia`, like so:
@@ -120,8 +120,8 @@ body.setObjectLayer(objLayerNonMoving);
 ----
 
 However, the reverse is not true:
-you can only convert a static body to a dynamic one
-if you configured it to allow the conversion
+you cannot convert a static body to a dynamic one
+unless you configured it
 with `BodyCreationSettings.setAllowDynamicOrKinematic(true)`.
 ====
 
@@ -143,7 +143,7 @@ RVec3Arg location = body.getPosition();
 QuatArg orientation = body.getRotation();
 ----
 
-Furthermore, a body's origin might differ from its center of mass (COM):
+Furthermore, a body's origin may be distinct from its center of mass (COM):
 
 [source,java]
 ----
@@ -153,13 +153,14 @@ RVec3Arg comLocation = body.getCenterOfMassPosition();
 
 [NOTE]
 ====
-Positions are represented by `RVec3Arg` objects such as `RVec3`.
+Positions and locations are represented
+using `R` objects such as `RMat44` and `RVec3`.
 The precision of such objects
 depends on the flavor of the native library:
 
-* When an Sp-flavored library is loaded,
+* In an Sp-flavored native library,
   locations have single-precision components.
-* When a Dp-flavored library is loaded,
+* In a Dp-flavored native library,
   locations have double-precision components.
 ====
 
@@ -179,7 +180,7 @@ you should use forces, torques, and impulses to move it.
 
 === Kinematic motion
 
-In addition to static and dynamic rigid bodies, there's a third type.
+In addition to static and dynamic motion, there's a third type of motion.
 
 _Kinematic_ bodies share some properties with both static and dynamic ones.
 Like dynamic bodies, kinematic ones can move.
@@ -251,7 +252,7 @@ and direction at which the body's origin is moving (if at all).
 The magnitude and direction of the angular-velocity vector quantify the
 rate and axis direction of the body's spinning motion (if any).
 
-NOTE: The velocities of a static body are both zero.
+NOTE: Both velocities of a static body are zero.
 
 To directly alter the velocities of a dynamic rigid body,
 use its `setLinearVelocity()` and `setAngularVelocity()` methods.
@@ -328,7 +329,7 @@ This behavior is caused by _gravity_,
 a downward force that's proportional to mass (so it causes a constant
 {url-enwiki}/Acceleration[acceleration]).
 
-To simulate this phenomenon, each physics system has a gravity vector
+To simulate gravity, each physics system has a gravity vector
 that quantifies the acceleration of dynamic bodies.
 To configure a system's gravity,
 use `PhysicsSystem.setGravity(accelerationVector)`.
@@ -337,14 +338,15 @@ NOTE: If following the Y-up axes convention, the X and Z components of the
 vector should be zero and its Y component should be *negative*.
 
 To disable gravity for a specific rigid body,
-use `BodyCreationSettings.setGravityFactor(0f)` (during configuration)
+set its gravity factor to zero
+using `BodyCreationSettings.setGravityFactor(0f)` (during creation)
 or `BodyInterface.setGravityFactor(body.getId(), 0f)` (during simulation).
 
 ==== Restitution
 
 When responsive rigid bodies collide,
-contact forces come into play, altering their velocities.
-These forces are split into 2 components:  restitution and friction.
+contact forces come into play, altering their motions.
+These forces can be split into 2 components:  restitution and friction.
 
 _Restitution_ is a force parallel to the contact normal.
 Its strength hints at what the bodies might be made out of.
@@ -367,14 +369,11 @@ Each rigid body has a _restitution ratio_, which defaults to zero.
 For each collision, the coefficient of restitution
 is calculated as the maximum of the ratios of the colliding bodies.
 
-To simulate a perfectly elastic collision, set the restitution parameter of
-either body to one:
+To simulate a perfectly elastic collision,
+set the restitution ratio of either body to one
+using `BodyCreationSettings.setRestitution(1f)` (during creation)
+or `BodyInterface.setRestitution(body.getId(), 1f)` (during simulation).
 
-[source,java]
-----
-Body body = /* ... */
-body.setRestitution(1f); // default=0
-----
 
 ==== Friction
 
@@ -406,7 +405,7 @@ bcs.setAllowedDofs(
         | EAllowedDofs.TranslationZ);
 ----
 
-Allowed DOFs can also be used to simulate physics in 2 dimensions.
+Allowed DOFs can also be used to simulate physics in 2 dimensions instead of 3.
 For instance, one might constrain a body
 to rotate only around axes parallel to the Z axis
 and translate only in directions parallel to the X-Y plane:
@@ -420,7 +419,7 @@ bcs.setAllowedDofs(
         | EAllowedDofs.RotationZ);
 ----
 
-NOTE: Allowed DOFs are defined by the system's axes,
+NOTE: Allowed DOFs are defined in terms of the system's axes,
 not the body's local axes.
 
 === Deactivation
@@ -429,7 +428,7 @@ It's common for physics simulations to reach a
 {url-enwiki}/Steady_state[_steady state_] in which
 the some or all bodies have stopped moving.
 If a dynamic rigid body doesn't move for 2 seconds,
-the simulator may automatically _deactivate_ it to reduce CPU utilization.
+the simulator may automatically _deactivate_ it to reduce CPU usage.
 
 To prevent a body from being deactivated,
 a certain amount of motion
@@ -498,9 +497,9 @@ so no collision is detected and no contact forces are simulated.
 
 To some extent, this issue could be mitigated by reducing the time step.
 But since CPU utilization is inversely proportional to the time step,
-this approach quickly becomes inefficient.
+that approach quickly becomes inefficient.
 
-To solve this issue,
+To solve the issue,
 {Project} implements _continuous collision detection_ (CCD) using LinearCast,
 an algorithm for detecting collisions that in the middle of a simulation step.
 
@@ -521,7 +520,7 @@ Things to notice while running the app:
 == Summary
 
 * Rigid bodies simulate familiar features of real-world objects.
-* There are 3 kinds: static, kinematic, and dynamic ...
+* There are 3 motion types: static, kinematic, and dynamic ...
 
 [cols="4", options="header"]
 |===
@@ -544,16 +543,26 @@ a|App-controlled objects such as airships and elevators
 a|Physics-controlled objects such as balls, bricks, and ragdolls
 
 a|How to configure
-a|`setMotionType(EMotionType.Static)` `setObjectLayer(objLayerNonMoving)`
-a|`setMotionType(EMotionType.Kinematic)` `setObjectLayer(objLayerMoving)`
-a|`setMotionType(EMotionType.Dynamic)` `setObjectLayer(objLayerMoving)`
+a|`setMotionType(` +
+  `EMotionType.Static)` +
+  `setObjectLayer(` +
+  `objLayerNonMoving)`
+a|`setMotionType(` +
+  `EMotionType.Kinematic)` +
+  `setObjectLayer(` +
+  `objLayerMoving)`
+a|`setMotionType(` + 
+  `EMotionType.Dynamic)` +
+  `setObjectLayer(` +
+  `objLayerMoving)`
 |===
 
 * The properties of rigid bodies include: shape, mass, moment of inertia,
   location, orientation, velocities (linear and angular),
   damping (linear and angular), gravity, restitution, friction,
   sleeping thresholds, and motion quality.
-* Mobility, contact response, gravity, and friction are all optional features.
+* Mobility, contact response, gravity, restitution, and friction
+  are all optional features.
 * If a dynamic rigid body moves too slowly,
   it might get automatically deactivated after half a second.
 * Continuous collision detection (CCD) solves the problem
