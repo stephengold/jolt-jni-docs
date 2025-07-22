@@ -44,6 +44,8 @@ Details to note:
 Running `HelloSport` should open a window on your computer's desktop
 and play a brief animation of a sphere falling onto a horizontal surface.
 
+image:helloSport.png[width=386]
+
 Pressing kbd:[Esc] should close the window and terminate the app.
 
 Hereafter, all the tutorial apps will use {Sport}.
