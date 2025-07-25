@@ -1,0 +1,183 @@
+= Managing collisions
+:experimental:
+:page-pagination:
+:Project: Jolt JNI
+:Sport: Sport-Jolt
+:url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
+
+During each simulation step, Jolt Physics performs collision detection in 2 phases:
+broadphase and narrowphase.
+
+. _Broadphase_ enumerates pairs of objects in close proximity,
+  based on overlaps between their axis-aligned bounding boxes (AABBs).
+. _Narrowphase_ uses detailed collision shapes
+  to test each pair found during broadphase,
+  resulting in a list of _manifolds_ where the shapes intersect.
+
+Each manifold is composed of up to 64 _contact points_.
+Jolt's rigid-body dynamics
+uses manifolds and contact points to implement contact response,
+including friction and restitution.
+
+{Project} provides mechanisms to:
+
+* customize which collisions are handled and which are ignored
+* perform custom actions when a contact point is created or destroyed
+* query the broadphase detector to find bodies in a particular region
+* query the narrowphase detector to find bodies in a particular region
+
+
+== Collision groups
+
+We've seen how layers can be used
+to prevent static bodies from colliding with one another.
+For finer control over which bodies are allowed to collide,
+you can configure collision groups and filters.
+
+A _collision group_ consists of:
+
+* a group ID,
+* a subgroup ID, and
+* an optional _group filter_,
+  which takes 2 collision groups and decides whether collisions are allowed.
+
+Every body has a collision group.
+By default, bodies are created with invalid IDs and no filter.
+
+Two bodies are allowed to collide only if:
+
+* neither body has a filter,
+* the first body's filter says the bodies can collide, or
+* if the first body has no filter
+  and the 2nd body's filter says they can collide.
+
+The typical use case is a chain of bodies,
+all of which are allowed to collide except those adjacent in the chain.
+
+[source,java]
+----
+GroupFilterTable filter = new GroupFilterTable(chainLength);
+for (int subGroupId = 0; subGroupId < chainLength - 1; ++subGroupId)
+        filter.disableCollision(subGroupId, subGroupId + 1);
+----
+
+
+== Contact listener
+
+During simulation, contact points can be tracked
+by means of a listener object:
+
+[source,java]
+----
+physicsSystem.setContactListener(contactListener);
+----
+
+A _sensor_ is a body without contact response,
+created solely to report contacts with nearby bodies.
+In order to work, a sensor must be added to a physics system.
+
+{url-tutorial}/HelloSensor.java[`HelloSensor`] is a {Sport} app
+that illustrates how a contact listener and a sensor could be used
+to detect the first moving body entering a spherical zone.
+
+Things notice while running the app:
+
+. The character includes a body with capsule shape.
+. Press kbd:[Right arrow] to walk the character toward the sensor.
+. Immediately after the character's body comes in contact with the sensor,
+  the app removes the sensor from the system,
+  producing the effect of popping a bubble.
+
+There is, of course, no reason a sensor has to be visible.
+
+A contact listener can also be used to customize collision handling,
+by overloading its `onContactValidate()` method.
+This isn't the most efficient way to filter collisions;
+in most cases it would be better to use layers or collision groups.
+
+
+== Broadphase queries
+
+If you simply want to find bodies in a particular region,
+creating sensors and tracking contact points is unnecessarily complicated.
+
+Instead, you can directly query the system's broadphase data
+to enumerate bodies whose bounding boxes intersect with:
+
+* a non-moving point,
+* a point moving along a straight line,
+* a non-moving axis-aligned box,
+* an axis-aligned box moving along a straight line,
+* a non-moving sphere, or
+* a non-moving box with arbitrary orientation.
+
+In general, a body's bounding box is larger than its collision shape,
+so broadphase queries are not very precise.
+They are efficient, however,
+and their precision is adequate for many purposes.
+
+Broadphase queries are usually performed *between* simulation steps.
+The system's `BroadPhaseQuery` interface is used,
+along with an appropriate collector object, like so:
+
+[source,java]
+----
+BroadPhaseQuery query = physicsSystem.getBroadPhaseQuery();
+AllHitCollideShapeBodyCollector collector
+        = new AllHitCollideShapeBodyCollector();
+query.collideAaBox(aaBox, collector);
+----
+
+Filters can be specified to limit query results to specific layers.
+
+{url-tutorial}/HelloBroadphase.java[`HelloBroadphase`] is a {Sport} app
+that illustrates how broadphase queries can be used
+to detect characters entering/leaving a box-shaped zone.
+
+Things notice while running the app:
+
+. The ghost zone is shown in yellow.
+. To clarify what's going on, the character's bounding box is outlined in white.
+. Press kbd:[Right arrow] to walk the character toward the ghost.
+. As soon as the character's box overlaps the ghost, the ghost turns red,
+  indicating an intrusion,
+  even though their collision shapes haven't intersected yet.
+. Press kbd:[Space bar] to jump.
+. The character can jump high enough to leave the ghost zone,
+  at which time the ghost will momentarily turn yellow again.
+
+
+== Narrowphase queries
+
+For more precise detections,
+you can query a system's narrowphase data between simulation steps.
+
+Narrowphase queries can enumerate bodies whose shapes intersect with:
+
+* a non-moving point,
+* a point moving along a straight line,
+* a non-moving axis-aligned box,
+* a non-moving shape, or
+* a shape moving along a straight line.
+
+Like broadphase queries,
+narrowphase queries are best performed *between* simulation steps.
+The system's `NarrowPhaseQuery` interface is used,
+along with an appropriate collector object, like so:
+
+[source,java]
+----
+NarrowPhaseQuery query = physicsSystem.getNarrowPhaseQuery();
+Vec3Arg scale = Vec3.sOne();
+CollideShapeSettings settings = new CollideShapeSettings();
+AllHitCollideShapeCollector collector = new AllHitCollideShapeCollector();
+query.collideShape(shape, scale, transform, settings, base, collector);
+----
+
+
+== Summary
+
+* Collision groups offer fine control over which bodies are allowed to collide.
+* To track individual contacts in real time, use a contact listener.
+* To search a region for bodies, use a broadphase query or a narrowphase query.
+* Narrowphase queries are more precise, but also more expensive.
