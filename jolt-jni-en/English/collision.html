@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>An overview of the demo applications :: The Jolt-JNI project</title>
-    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/demos.html">
+    <title>Managing collisions :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/collision.html">
+    <link rel="prev" href="vehicle.html">
+    <link rel="next" href="softbody.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="An overview of the demo applications">
+<meta property="og:description" content="Managing collisions">
 <meta property="og:title" content="The Jolt-JNI project">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -88,7 +90,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="vehicle.html">Vehicles</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="collision.html">Managing collisions</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -99,7 +101,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="build.html">Build procedures</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="demos.html">Demo apps</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -232,209 +234,333 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="overview.html">The Jolt-JNI project</a></li>
-    <li><a href="demos.html">Demo apps</a></li>
+    <li>Library tutorials</li>
+    <li><a href="collision.html">Managing collisions</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/demos.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/collision.adoc">Edit this page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">An overview of the demo applications</h1>
+<h1 class="page">Managing collisions</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>Demo applications</em> are provided to showcase certain features of Jolt JNI.
-The following demos are found in
-<a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo">the com.github.stephengold.sportjolt.javaapp.demo package of the Sport-Jolt "java-apps" sub-project</a>:</p>
+<p>During each simulation step, Jolt Physics performs collision detection in 2 phases:
+broadphase and narrowphase.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>Broadphase</em> enumerates pairs of objects in close proximity,
+based on overlaps between their axis-aligned bounding boxes (AABBs).</p>
+</li>
+<li>
+<p><em>Narrowphase</em> uses detailed collision shapes
+to test each pair found during broadphase,
+resulting in a list of <em>manifolds</em> where the shapes intersect.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Each manifold is composed of up to 64 <em>contact points</em>.
+Jolt&#8217;s rigid-body dynamics
+uses manifolds and contact points to implement contact response,
+including friction and restitution.</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI provides mechanisms to:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/MarbleGame.java"><code>MarbleGame</code></a>
-demonstrates compound shapes and sensor bodies<br>
-<span class="image"><img src="_images/marbleGame.png" alt="marbleGame" height="50"></span></p>
+<p>customize which collisions are handled and which are ignored</p>
 </li>
 <li>
-<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/NewtonsCradle.java"><code>NewtonsCradle</code></a>
-demonstrates dynamic restitution and distance constraints<br>
-<span class="image"><img src="_images/newtonsCradle.png" alt="newtonsCradle" height="50"></span></p>
+<p>perform custom actions when a contact point is created or destroyed</p>
 </li>
 <li>
-<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/Pachinko.java"><code>Pachinko</code></a>
-demonstrates compound shapes and 2-D physics<br>
-<span class="image"><img src="_images/pachinko.png" alt="pachinko" height="100"></span></p>
+<p>query the broadphase detector to find bodies in a particular region</p>
 </li>
 <li>
-<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/ThousandCubes.java"><code>ThousandCubes</code></a>
-demonstrates stacking cubes and launching projectiles<br>
-<span class="image"><img src="_images/thousandCubes.png" alt="thousandCubes" height="100"></span></p>
-</li>
-<li>
-<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/Windlass.java"><code>Windlass</code></a>
-demonstrates rope simulation using rigid bodies<br>
-<span class="image"><img src="_images/windlass.png" alt="windlass" height="100"></span></p>
+<p>query the narrowphase detector to find bodies in a particular region</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_user_interface"><a class="anchor" href="#_user_interface"></a>User interface</h2>
+<h2 id="_collision_groups"><a class="anchor" href="#_collision_groups"></a>Collision groups</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The demos are controlled primarily by keyboard input.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The descriptions below assume a keyboard with the "US" (QWERTY) layout.
-On keyboards with other layouts, the keys may be labeled differently.
-</td>
-</tr>
-</table>
+<p>We&#8217;ve seen how layers can be used
+to prevent static bodies from colliding with one another.
+For finer control over which bodies are allowed to collide,
+you can configure collision groups and filters.</p>
 </div>
 <div class="paragraph">
-<p>For convenience, the mapping of keys to actions is partly standardized.
-In most demo apps:</p>
+<p>A <em>collision group</em> consists of:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><kbd>.</kbd> and <kbd>Pause</kbd> toggle the simulation between running and paused,</p>
+<p>a group ID,</p>
 </li>
 <li>
-<p><kbd>C</kbd> dumps the camera&#8217;s position to the console, and</p>
+<p>a subgroup ID, and</p>
 </li>
 <li>
-<p><kbd>Esc</kbd> ends the application.</p>
+<p>an optional <em>group filter</em>,
+which takes 2 collision groups and decides whether collisions are allowed.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For camera control,
-all demos except <code>MarbleGame</code> and <code>ThousandCubes</code> use <code>DragLMB</code> rotation mode.
-This means you can rotate the camera
-by dragging the mouse with its left button depressed.
-Furthermore:</p>
+<p>Every body has a collision group.
+By default, bodies are created with invalid IDs and no filter.</p>
+</div>
+<div class="paragraph">
+<p>Two bodies are allowed to collide only if:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><kbd>W</kbd> and <kbd>S</kbd> dolly the camera forward and back, respectively,</p>
+<p>neither body has a filter,</p>
 </li>
 <li>
-<p><kbd>A</kbd> and <kbd>D</kbd> dolly the camera left and right, respectively,</p>
+<p>the first body&#8217;s filter says the bodies can collide, or</p>
 </li>
 <li>
-<p><kbd>Q</kbd> raises the camera, and</p>
-</li>
-<li>
-<p><kbd>Z</kbd> lowers the camera.</p>
+<p>if the first body has no filter
+and the 2nd body&#8217;s filter says they can collide.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Additional key mappings are specific to each application:</p>
+<p>The typical use case is a chain of bodies,
+all of which are allowed to collide except those adjacent in the chain.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GroupFilterTable filter = new GroupFilterTable(chainLength);
+for (int subGroupId = 0; subGroupId &lt; chainLength - 1; ++subGroupId)
+        filter.disableCollision(subGroupId, subGroupId + 1);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contact_listener"><a class="anchor" href="#_contact_listener"></a>Contact listener</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During simulation, contact points can be tracked
+by means of a listener object:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">physicsSystem.setContactListener(contactListener);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A <em>sensor</em> is a body without contact response,
+created solely to report contacts with nearby bodies.
+In order to work, a sensor must be added to a physics system.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloSensor.java"><code>HelloSensor</code></a> is a Sport-Jolt app
+that illustrates how a contact listener and a sensor could be used
+to detect the first moving body entering a spherical zone.</p>
+</div>
+<div class="paragraph">
+<p>Things notice while running the app:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The character includes a body with capsule shape.</p>
+</li>
+<li>
+<p>Press <kbd>Right arrow</kbd> to walk the character toward the sensor.</p>
+</li>
+<li>
+<p>Immediately after the character&#8217;s body comes in contact with the sensor,
+the app removes the sensor from the system,
+producing the effect of popping a bubble.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>There is, of course, no reason a sensor has to be visible.</p>
+</div>
+<div class="paragraph">
+<p>A contact listener can also be used to customize collision handling,
+by overloading its <code>onContactValidate()</code> method.
+This isn&#8217;t the most efficient way to filter collisions;
+in most cases it would be better to use layers or collision groups.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_broadphase_queries"><a class="anchor" href="#_broadphase_queries"></a>Broadphase queries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you simply want to find bodies in a particular region,
+creating sensors and tracking contact points is unnecessarily complicated.</p>
+</div>
+<div class="paragraph">
+<p>Instead, you can directly query the system&#8217;s broadphase data
+to enumerate bodies whose bounding boxes intersect with:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>In <code>MarbleGame</code>:</p>
+<p>a non-moving point,</p>
+</li>
+<li>
+<p>a point moving along a straight line,</p>
+</li>
+<li>
+<p>a non-moving axis-aligned box,</p>
+</li>
+<li>
+<p>an axis-aligned box moving along a straight line,</p>
+</li>
+<li>
+<p>a non-moving sphere, or</p>
+</li>
+<li>
+<p>a non-moving box with arbitrary orientation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In general, a body&#8217;s bounding box is larger than its collision shape,
+so broadphase queries are not very precise.
+They are efficient, however,
+and their precision is adequate for many purposes.</p>
+</div>
+<div class="paragraph">
+<p>Broadphase queries are usually performed <strong>between</strong> simulation steps.
+The system&#8217;s <code>BroadPhaseQuery</code> interface is used,
+along with an appropriate collector object, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BroadPhaseQuery query = physicsSystem.getBroadPhaseQuery();
+AllHitCollideShapeBodyCollector collector
+        = new AllHitCollideShapeBodyCollector();
+query.collideAaBox(aaBox, collector);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Filters can be specified to limit query results to specific layers.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloBroadphase.java"><code>HelloBroadphase</code></a> is a Sport-Jolt app
+that illustrates how broadphase queries can be used
+to detect characters entering/leaving a box-shaped zone.</p>
+</div>
+<div class="paragraph">
+<p>Things notice while running the app:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The ghost zone is shown in yellow.</p>
+</li>
+<li>
+<p>To clarify what&#8217;s going on, the character&#8217;s bounding box is outlined in white.</p>
+</li>
+<li>
+<p>Press <kbd>Right arrow</kbd> to walk the character toward the ghost.</p>
+</li>
+<li>
+<p>As soon as the character&#8217;s box overlaps the ghost, the ghost turns red,
+indicating an intrusion,
+even though their collision shapes haven&#8217;t intersected yet.</p>
+</li>
+<li>
+<p>Press <kbd>Space bar</kbd> to jump.</p>
+</li>
+<li>
+<p>The character can jump high enough to leave the ghost zone,
+at which time the ghost will momentarily turn yellow again.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_narrowphase_queries"><a class="anchor" href="#_narrowphase_queries"></a>Narrowphase queries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For more precise detections,
+you can query a system&#8217;s narrowphase data between simulation steps.</p>
+</div>
+<div class="paragraph">
+<p>Narrowphase queries can enumerate bodies whose shapes intersect with:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><kbd>W</kbd> and <kbd>Up arrow</kbd> push the marble away from the viewer</p>
+<p>a non-moving point,</p>
 </li>
 <li>
-<p><kbd>S</kbd> and <kbd>Down arrow</kbd> push the marble towards the viewer</p>
+<p>a point moving along a straight line,</p>
 </li>
 <li>
-<p><kbd>A</kbd> and <kbd>Left arrow</kbd> push the marble to the viewer&#8217;s left</p>
+<p>a non-moving axis-aligned box,</p>
 </li>
 <li>
-<p><kbd>D</kbd> and <kbd>Right arrow</kbd> push the marble to the viewer&#8217;s right</p>
+<p>a non-moving shape, or</p>
+</li>
+<li>
+<p>a shape moving along a straight line.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>In <code>NewtonsCradle</code>:</p>
+<div class="paragraph">
+<p>Like broadphase queries,
+narrowphase queries are best performed <strong>between</strong> simulation steps.
+The system&#8217;s <code>NarrowPhaseQuery</code> interface is used,
+along with an appropriate collector object, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">NarrowPhaseQuery query = physicsSystem.getNarrowPhaseQuery();
+Vec3Arg scale = Vec3.sOne();
+CollideShapeSettings settings = new CollideShapeSettings();
+AllHitCollideShapeCollector collector = new AllHitCollideShapeCollector();
+query.collideShape(shape, scale, transform, settings, base, collector);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><kbd>F1</kbd>, <kbd>1</kbd>, and <kbd>Numpad1</kbd> restart with a single ball</p>
+<p>Collision groups offer fine control over which bodies are allowed to collide.</p>
 </li>
 <li>
-<p><kbd>F2</kbd>, <kbd>2</kbd>, and <kbd>Numpad2</kbd> restart with 2 balls</p>
+<p>To track individual contacts in real time, use a contact listener.</p>
 </li>
 <li>
-<p><kbd>F3</kbd>, <kbd>3</kbd>, and <kbd>Numpad3</kbd> restart with 3 balls</p>
+<p>To search a region for bodies, use a broadphase query or a narrowphase query.</p>
 </li>
 <li>
-<p><kbd>F4</kbd>, <kbd>4</kbd>, and <kbd>Numpad4</kbd> restart with 4 balls</p>
-</li>
-<li>
-<p><kbd>F5</kbd>, <kbd>5</kbd>, and <kbd>Numpad5</kbd> restart with 5 balls</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>In <code>Pachinko</code>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><kbd>F4</kbd>, <kbd>4</kbd>, and <kbd>Numpad4</kbd> restart with 4 rows of pins</p>
-</li>
-<li>
-<p><kbd>F5</kbd>, <kbd>5</kbd>, and <kbd>Numpad5</kbd> restart with 5 rows of pins</p>
-</li>
-<li>
-<p><kbd>F6</kbd>, <kbd>6</kbd>, and <kbd>Numpad6</kbd> restart with 6 rows of pins</p>
-</li>
-<li>
-<p><kbd>F7</kbd>, <kbd>7</kbd>, and <kbd>Numpad7</kbd> restart with 7 rows of pins</p>
-</li>
-<li>
-<p><kbd>F8</kbd>, <kbd>8</kbd>, and <kbd>Numpad8</kbd> restart with 8 rows of pins</p>
-</li>
-<li>
-<p><kbd>F9</kbd>, <kbd>9</kbd>, and <kbd>Numpad9</kbd> restart with 9 rows of pins</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>In <code>ThousandCubes</code>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><kbd>E</kbd> launch a red ball</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>In <code>Windlass</code>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><kbd>Down arrow</kbd> turn the barrel counter-clockwise</p>
-</li>
-<li>
-<p><kbd>Up arrow</kbd> turn the barrel clockwise</p>
-</li>
-</ul>
-</div>
+<p>Narrowphase queries are more precise, but also more expensive.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="vehicle.html">Vehicles</a></span>
+  <span class="next"><a href="softbody.html">Soft bodies</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">
   <div class="toc-menu"></div>
