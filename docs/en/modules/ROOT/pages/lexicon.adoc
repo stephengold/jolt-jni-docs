@@ -70,6 +70,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/AaBox.html[AaBox] +
  {url-api}/readonly/ConstAaBox.html[ConstAaBox]
 
+|{url-jolt-struct}a_a_box_cast.html[JPH::AABoxCast]
+|{url-api}/AaBoxCast.html[AaBoxCast]
+
 |{url-jolt}body.html[JPH::Body]
 |{url-api}/Body.html[Body] +
  {url-api}/readonly/ConstBody.html[ConstBody]
@@ -203,6 +206,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}collision_dispatch.html[JPH::CollisionDispatch]
 |{url-api}/CollisionDispatch.html[CollisionDispatch]
+
+|{url-jolt-struct}collision_estimation_result.html[JPH::CollisionEstimationResult]
+|{url-api}/CollisionEstimationResult.html[CollisionEstimationResult]
 
 |{url-jolt}collision_group.html[JPH::CollisionGroup]
 |{url-api}/CollisionGroup.html[CollisionGroup] +
@@ -346,10 +352,12 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/IgnoreMultipleBodiesFilter.html[IgnoreMultipleBodiesFilter]
 
 |{url-jolt}indexed_triangle.html[JPH::IndexedTriangle]
-|{url-api}/IndexedTriangle.html[IndexedTriangle]
+|{url-api}/IndexedTriangle.html[IndexedTriangle] +
+ {url-api}/readonly/ConstIndexedTriangle.html[ConstIndexedTriangle]
 
 |{url-jolt}indexed_triangle_no_material.html[JPH::IndexedTriangleNoMaterial]
-|{url-api}/IndexedTriangleNoMaterial.html[IndexedTriangleNoMaterial]
+|{url-api}/IndexedTriangleNoMaterial.html[IndexedTriangleNoMaterial] +
+ {url-api}/readonly/ConstIndexedTriangleNoMaterial.html[ConstIndexedTriangleNoMaterial]
 
 |{url-jolt}job_system.html[JPH::JobSystem]
 |{url-api}/JobSystem.html[JobSystem]
@@ -535,6 +543,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}ray_cast_settings.html[JPH::RayCastSettings]
 |{url-api}/RayCastSettings.html[RayCastSettings]
 
+|{url-jolt}ray_inv_direction.html[JPH::RayInvDirection]
+|{url-api}/RayInvDirection.html[RayInvDirection]
+
 |{url-jolt}rotated_translated_shape.html[JPH::RotatedTranslatedShape]
 |{url-api}/RotatedTranslatedShape.html[RotatedTranslatedShape]
 
@@ -580,6 +591,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}shared_mutex.html[JPH::SharedMutex]
 |{url-api}/SharedMutex.html[SharedMutex]
+
+|{url-jolt}sim_shape_filter.html[JPH::SimShapeFilter]
+|{url-api}/SimShapeFilter.html[SimShapeFilter]
 
 |{url-jolt}six_d_o_f_constraint.html[JPH::SixDOFConstraint]
 |{url-api}/SixDofConstraint.html[SixDofConstraint]
@@ -739,7 +753,11 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/readonly/ConstTransformedShape.html[ConstTransformedShape]
 
 |{url-jolt}triangle.html[JPH::Triangle]
-|{url-api}/Triangle.html[Triangle]
+|{url-api}/Triangle.html[Triangle] +
+ {url-api}/readonly/ConstTriangle.html[ConstTriangle]
+
+|{url-jolt-struct}triangle_convex_support.html[JPH::TriangleConvexSupport]
+|{url-api}/TriangleConvexSupport.html[TriangleConvexSupport]
 
 |{url-jolt}triangle_shape.html[JPH::TriangleShape]
 |{url-api}/TriangleShape.html[TriangleShape]
