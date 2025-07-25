@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -211,152 +212,196 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Append a message to the determinism log.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getConfigurationString()" class="member-name-link">getConfigurationString</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#estimateCollisionResponse(com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstContactManifold,com.github.stephengold.joltjni.CollisionEstimationResult,float,float)" class="member-name-link">estimateCollisionResponse</a><wbr>(<a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body1,
+ <a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body2,
+ <a href="readonly/ConstContactManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactManifold</a>&nbsp;manifold,
+ <a href="CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a>&nbsp;storeResult,
+ float&nbsp;combinedFriction,
+ float&nbsp;combinedRestitution)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Estimate the contact impulses and body velocity changes resulting from a
+ collision.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#estimateCollisionResponse(com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstContactManifold,com.github.stephengold.joltjni.CollisionEstimationResult,float,float,float)" class="member-name-link">estimateCollisionResponse</a><wbr>(<a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body1,
+ <a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body2,
+ <a href="readonly/ConstContactManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactManifold</a>&nbsp;manifold,
+ <a href="CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a>&nbsp;storeResult,
+ float&nbsp;combinedFriction,
+ float&nbsp;combinedRestitution,
+ float&nbsp;minVelocity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Estimate the contact impulses and body velocity changes resulting from a
+ collision.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#estimateCollisionResponse(com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstContactManifold,com.github.stephengold.joltjni.CollisionEstimationResult,float,float,float,int)" class="member-name-link">estimateCollisionResponse</a><wbr>(<a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body1,
+ <a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body2,
+ <a href="readonly/ConstContactManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactManifold</a>&nbsp;manifold,
+ <a href="CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a>&nbsp;storeResult,
+ float&nbsp;combinedFriction,
+ float&nbsp;combinedRestitution,
+ float&nbsp;minVelocity,
+ int&nbsp;numIterations)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Estimate the contact impulses and body velocity changes resulting from a
+ collision.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getConfigurationString()" class="member-name-link">getConfigurationString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return a string containing important configuration settings.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(long,int)" class="member-name-link">hashBytes</a><wbr>(long&nbsp;dataVa,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(long,int)" class="member-name-link">hashBytes</a><wbr>(long&nbsp;dataVa,
  int&nbsp;inSize)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return a hash code for the specified data bytes.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.QuatArg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;quaternion,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.QuatArg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;quaternion,
  long&nbsp;oldHash)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified quaternion with the specified hash code.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.RVec3Arg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vector,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.RVec3Arg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vector,
  long&nbsp;oldHash)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified vector with the specified hash code.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,int)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,int)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
  int&nbsp;iValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified 32-bit integer with the specified hash code.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,long)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,long)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
  long&nbsp;lValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified 64-bit integer with the specified hash code.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vector)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified location vector with the specified hash code.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
- <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vector)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified vector with the specified hash code.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDebugRendering()" class="member-name-link">implementsDebugRendering</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDebugRendering()" class="member-name-link">implementsDebugRendering</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Test whether the native library implements debug rendering.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDeterminismLog()" class="member-name-link">implementsDeterminismLog</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDeterminismLog()" class="member-name-link">implementsDeterminismLog</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Test whether the native library implements extra logging to help debug
  determinism issues.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Install the default assert callback.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Install the default trace callback.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isDoublePrecision()" class="member-name-link">isDoublePrecision</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isDoublePrecision()" class="member-name-link">isDoublePrecision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Test whether the native library uses double-precision location vectors.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#listClasses(java.lang.String)" class="member-name-link">listClasses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;packageName)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#listClasses(java.lang.String)" class="member-name-link">listClasses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;packageName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">List all classes in the specified Jolt-JNI package.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectByteBuffer(int)" class="member-name-link">newDirectByteBuffer</a><wbr>(int&nbsp;numBytes)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectByteBuffer(int)" class="member-name-link">newDirectByteBuffer</a><wbr>(int&nbsp;numBytes)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>ByteBuffer</code> with the specified capacity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectDoubleBuffer(int)" class="member-name-link">newDirectDoubleBuffer</a><wbr>(int&nbsp;numDoubles)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectDoubleBuffer(int)" class="member-name-link">newDirectDoubleBuffer</a><wbr>(int&nbsp;numDoubles)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>DoubleBuffer</code> with native byte order and the
  specified capacity.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectFloatBuffer(int)" class="member-name-link">newDirectFloatBuffer</a><wbr>(int&nbsp;numFloats)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectFloatBuffer(int)" class="member-name-link">newDirectFloatBuffer</a><wbr>(int&nbsp;numFloats)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>FloatBuffer</code> with native byte order and the
  specified capacity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectIntBuffer(int)" class="member-name-link">newDirectIntBuffer</a><wbr>(int&nbsp;numInts)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectIntBuffer(int)" class="member-name-link">newDirectIntBuffer</a><wbr>(int&nbsp;numInts)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>IntBuffer</code> with native byte order and the
  specified capacity.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ShortBuffer.html" title="class or interface in java.nio" class="external-link">ShortBuffer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectShortBuffer(int)" class="member-name-link">newDirectShortBuffer</a><wbr>(int&nbsp;numShorts)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ShortBuffer.html" title="class or interface in java.nio" class="external-link">ShortBuffer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectShortBuffer(int)" class="member-name-link">newDirectShortBuffer</a><wbr>(int&nbsp;numShorts)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>ShortBuffer</code> with native byte order and the
  specified capacity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newFactory()" class="member-name-link">newFactory</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newFactory()" class="member-name-link">newFactory</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a factory for deserialization of saved data.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#perlinNoise3(float,float,float,int,int,int)" class="member-name-link">perlinNoise3</a><wbr>(float&nbsp;x,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#perlinNoise3(float,float,float,int,int,int)" class="member-name-link">perlinNoise3</a><wbr>(float&nbsp;x,
  float&nbsp;y,
  float&nbsp;z,
  int&nbsp;xWrap,
  int&nbsp;yWrap,
  int&nbsp;zWrap)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Generate 3-D Perlin noise.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileDump(java.lang.String)" class="member-name-link">profileDump</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileDump(java.lang.String)" class="member-name-link">profileDump</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Dump profiler data.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileEnd()" class="member-name-link">profileEnd</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileEnd()" class="member-name-link">profileEnd</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Terminate the profiler.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileNextFrame()" class="member-name-link">profileNextFrame</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileNextFrame()" class="member-name-link">profileNextFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Increment the profiler's frame counter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileStart(java.lang.String)" class="member-name-link">profileStart</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#profileStart(java.lang.String)" class="member-name-link">profileStart</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Start an instrumented code section.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#radiansToDegrees(float)" class="member-name-link">radiansToDegrees</a><wbr>(float&nbsp;radians)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#radiansToDegrees(float)" class="member-name-link">radiansToDegrees</a><wbr>(float&nbsp;radians)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Convert the specified angle from radians to degrees.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rayAaBox(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RayInvDirection,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">rayAaBox</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="RayInvDirection.html" title="class in com.github.stephengold.joltjni">RayInvDirection</a>&nbsp;invDirection,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;minimum,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;maximum)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Intersect the specified axis-aligned box with the specified ray.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rayAaBoxHits(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">rayAaBoxHits</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;startLocation,
@@ -365,6 +410,55 @@ loadScripts(document, 'script');</script>
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;maximum)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Intersect the specified axis-aligned box with the specified ray.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rayCapsule(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float)" class="member-name-link">rayCapsule</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ float&nbsp;capsuleHalfHeight,
+ float&nbsp;capsuleRadius)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Intersect the specified capsule with the specified ray.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rayCylinder(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">rayCylinder</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ float&nbsp;cylinderRadius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Intersect the specified infinite cylinder with the specified ray.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rayCylinder(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float)" class="member-name-link">rayCylinder</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ float&nbsp;cylinderHalfHeight,
+ float&nbsp;cylinderRadius)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Intersect the specified finite cylinder with the specified ray.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#raySphere(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">raySphere</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;sphereCenter,
+ float&nbsp;sphereRadius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Intersect the specified sphere with the specified ray.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rayTriangle(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">rayTriangle</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v0,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v1,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v2)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Intersect the specified triangle with the specified ray.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#registerCustomAllocator(long,long,long,long,long)" class="member-name-link">registerCustomAllocator</a><wbr>(long&nbsp;allocateVa,
+ long&nbsp;reallocateVa,
+ long&nbsp;freeVa,
+ long&nbsp;alignedAllocateVa,
+ long&nbsp;alignedFreeVa)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Register the allocation hook to use the specified functions.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#registerDefaultAllocator()" class="member-name-link">registerDefaultAllocator</a>()</code></div>
@@ -435,7 +529,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#versionString()" class="member-name-link">versionString</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return the Jolt-JNI version string that's hard-coded in the native
+<div class="block">Return the Jolt-JNI version string that's hard-coded into the native
  library.</div>
 </div>
 </div>
@@ -719,6 +813,84 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="estimateCollisionResponse(com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstContactManifold,com.github.stephengold.joltjni.CollisionEstimationResult,float,float)">
+<h3>estimateCollisionResponse</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">estimateCollisionResponse</span><wbr><span class="parameters">(<a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body1,
+ <a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body2,
+ <a href="readonly/ConstContactManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactManifold</a>&nbsp;manifold,
+ <a href="CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a>&nbsp;storeResult,
+ float&nbsp;combinedFriction,
+ float&nbsp;combinedRestitution)</span></div>
+<div class="block">Estimate the contact impulses and body velocity changes resulting from a
+ collision.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>body1</code> - the first colliding body (not null, unaffected)</dd>
+<dd><code>body2</code> - the 2nd colliding body (not null, unaffected)</dd>
+<dd><code>manifold</code> - the collision manifold (not null, unaffected)</dd>
+<dd><code>storeResult</code> - storage for impulses and velocities (not null,
+ modified)</dd>
+<dd><code>combinedFriction</code> - the combined friction of the 2 bodies</dd>
+<dd><code>combinedRestitution</code> - the combined restitution of the 2 bodies</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="estimateCollisionResponse(com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstContactManifold,com.github.stephengold.joltjni.CollisionEstimationResult,float,float,float)">
+<h3>estimateCollisionResponse</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">estimateCollisionResponse</span><wbr><span class="parameters">(<a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body1,
+ <a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body2,
+ <a href="readonly/ConstContactManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactManifold</a>&nbsp;manifold,
+ <a href="CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a>&nbsp;storeResult,
+ float&nbsp;combinedFriction,
+ float&nbsp;combinedRestitution,
+ float&nbsp;minVelocity)</span></div>
+<div class="block">Estimate the contact impulses and body velocity changes resulting from a
+ collision.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>body1</code> - the first colliding body (not null, unaffected)</dd>
+<dd><code>body2</code> - the 2nd colliding body (not null, unaffected)</dd>
+<dd><code>manifold</code> - the collision manifold (not null, unaffected)</dd>
+<dd><code>storeResult</code> - storage for impulses and velocities (not null,
+ modified)</dd>
+<dd><code>combinedFriction</code> - the combined friction of the 2 bodies</dd>
+<dd><code>combinedRestitution</code> - the combined restitution of the 2 bodies</dd>
+<dd><code>minVelocity</code> - the minimum speed for restitution to be applied (in
+ meters per second, default=1)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="estimateCollisionResponse(com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstBody,com.github.stephengold.joltjni.readonly.ConstContactManifold,com.github.stephengold.joltjni.CollisionEstimationResult,float,float,float,int)">
+<h3>estimateCollisionResponse</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">estimateCollisionResponse</span><wbr><span class="parameters">(<a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body1,
+ <a href="readonly/ConstBody.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBody</a>&nbsp;body2,
+ <a href="readonly/ConstContactManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactManifold</a>&nbsp;manifold,
+ <a href="CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a>&nbsp;storeResult,
+ float&nbsp;combinedFriction,
+ float&nbsp;combinedRestitution,
+ float&nbsp;minVelocity,
+ int&nbsp;numIterations)</span></div>
+<div class="block">Estimate the contact impulses and body velocity changes resulting from a
+ collision.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>body1</code> - the first colliding body (not null, unaffected)</dd>
+<dd><code>body2</code> - the 2nd colliding body (not null, unaffected)</dd>
+<dd><code>manifold</code> - the collision manifold (not null, unaffected)</dd>
+<dd><code>storeResult</code> - storage for impulses and velocities (not null,
+ modified)</dd>
+<dd><code>combinedFriction</code> - the combined friction of the 2 bodies</dd>
+<dd><code>combinedRestitution</code> - the combined restitution of the 2 bodies</dd>
+<dd><code>minVelocity</code> - the minimum speed for restitution to be applied (in
+ meters per second, default=1)</dd>
+<dd><code>numIterations</code> - the number of iterations the impulse solver to use
+ (default=10)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getConfigurationString()">
 <h3>getConfigurationString</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getConfigurationString</span>()</div>
@@ -823,12 +995,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="hashCombine(long,com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>hashCombine</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">hashCombine</span><wbr><span class="parameters">(long&nbsp;oldHash,
- <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec)</span></div>
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vector)</span></div>
 <div class="block">Combine the specified vector with the specified hash code.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>oldHash</code> - the old hash code</dd>
-<dd><code>vec</code> - the vector to combine (not null, unaffected)</dd>
+<dd><code>vector</code> - the vector to combine (not null, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the new hash code</dd>
 </dl>
@@ -912,20 +1084,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="newDirectFloatBuffer(int)">
-<h3>newDirectFloatBuffer</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></span>&nbsp;<span class="element-name">newDirectFloatBuffer</span><wbr><span class="parameters">(int&nbsp;numFloats)</span></div>
-<div class="block">Create a direct <code>FloatBuffer</code> with native byte order and the
- specified capacity.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>numFloats</code> - the desired capacity (in floats)</dd>
-<dt>Returns:</dt>
-<dd>a new direct buffer, zeroed and rewound but not flipped</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="newDirectDoubleBuffer(int)">
 <h3>newDirectDoubleBuffer</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a></span>&nbsp;<span class="element-name">newDirectDoubleBuffer</span><wbr><span class="parameters">(int&nbsp;numDoubles)</span></div>
@@ -934,6 +1092,20 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numDoubles</code> - the desired capacity (in doubles)</dd>
+<dt>Returns:</dt>
+<dd>a new direct buffer, zeroed and rewound but not flipped</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="newDirectFloatBuffer(int)">
+<h3>newDirectFloatBuffer</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></span>&nbsp;<span class="element-name">newDirectFloatBuffer</span><wbr><span class="parameters">(int&nbsp;numFloats)</span></div>
+<div class="block">Create a direct <code>FloatBuffer</code> with native byte order and the
+ specified capacity.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>numFloats</code> - the desired capacity (in floats)</dd>
 <dt>Returns:</dt>
 <dd>a new direct buffer, zeroed and rewound but not flipped</dd>
 </dl>
@@ -964,6 +1136,23 @@ loadScripts(document, 'script');</script>
 <dd><code>numShorts</code> - the desired capacity (in ints)</dd>
 <dt>Returns:</dt>
 <dd>a new direct buffer, zeroed and rewound but not flipped</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="newFactory()">
+<h3>newFactory</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">newFactory</span>()</div>
+<div class="block">Create a factory for deserialization of saved data.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if successful, otherwise <code>false</code></dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="#destroyFactory()"><code>destroyFactory()</code></a></li>
+</ul>
+</dd>
 </dl>
 </section>
 </li>
@@ -1030,23 +1219,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="newFactory()">
-<h3>newFactory</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">newFactory</span>()</div>
-<div class="block">Create a factory for deserialization of saved data.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd><code>true</code> if successful, otherwise <code>false</code></dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="#destroyFactory()"><code>destroyFactory()</code></a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="radiansToDegrees(float)">
 <h3>radiansToDegrees</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">radiansToDegrees</span><wbr><span class="parameters">(float&nbsp;radians)</span></div>
@@ -1060,6 +1232,27 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="rayAaBox(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RayInvDirection,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>rayAaBox</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">rayAaBox</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="RayInvDirection.html" title="class in com.github.stephengold.joltjni">RayInvDirection</a>&nbsp;invDirection,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;minimum,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;maximum)</span></div>
+<div class="block">Intersect the specified axis-aligned box with the specified ray.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
+<dd><code>invDirection</code> - the inverse direction of the ray (not null,
+ unaffected)</dd>
+<dd><code>minimum</code> - the minimum coordinates of the box (not null, unaffected)</dd>
+<dd><code>maximum</code> - the maximum coordinates of the box (not null, unaffected)</dd>
+<dt>Returns:</dt>
+<dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
+ misses the box</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="rayAaBoxHits(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>rayAaBoxHits</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">rayAaBoxHits</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;startLocation,
@@ -1069,13 +1262,137 @@ loadScripts(document, 'script');</script>
 <div class="block">Intersect the specified axis-aligned box with the specified ray.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>startLocation</code> - the desired start location (not null, unaffected)</dd>
-<dd><code>offset</code> - the desired end offset from the start (not null,
+<dd><code>startLocation</code> - the desired start location of the ray (not null,
+ unaffected)</dd>
+<dd><code>offset</code> - the desired end offset from the start location (not null,
  unaffected)</dd>
 <dd><code>minimum</code> - the minimum coordinates of the box (not null, unaffected)</dd>
 <dd><code>maximum</code> - the maximum coordinates of the box (not null, unaffected)</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if there is a hit</dd>
+<dd><code>true</code> if there is a hit, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="rayCapsule(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float)">
+<h3>rayCapsule</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">rayCapsule</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ float&nbsp;capsuleHalfHeight,
+ float&nbsp;capsuleRadius)</span></div>
+<div class="block">Intersect the specified capsule with the specified ray.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>capsuleHalfHeight</code> - half the height of the capsule</dd>
+<dd><code>capsuleRadius</code> - the radius of the capsule</dd>
+<dt>Returns:</dt>
+<dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
+ misses the capsule</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="rayCylinder(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float)">
+<h3>rayCylinder</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">rayCylinder</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ float&nbsp;cylinderRadius)</span></div>
+<div class="block">Intersect the specified infinite cylinder with the specified ray.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>cylinderRadius</code> - the radius of the cylinder</dd>
+<dt>Returns:</dt>
+<dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
+ misses the cylinder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="rayCylinder(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float)">
+<h3>rayCylinder</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">rayCylinder</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ float&nbsp;cylinderHalfHeight,
+ float&nbsp;cylinderRadius)</span></div>
+<div class="block">Intersect the specified finite cylinder with the specified ray.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>cylinderHalfHeight</code> - half of the height of the cylinder</dd>
+<dd><code>cylinderRadius</code> - the radius of the cylinder</dd>
+<dt>Returns:</dt>
+<dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
+ misses the cylinder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="raySphere(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float)">
+<h3>raySphere</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">raySphere</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;sphereCenter,
+ float&nbsp;sphereRadius)</span></div>
+<div class="block">Intersect the specified sphere with the specified ray.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>sphereCenter</code> - the center of the sphere (not null, unaffected)</dd>
+<dd><code>sphereRadius</code> - the radius of the sphere</dd>
+<dt>Returns:</dt>
+<dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
+ misses the sphere</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="rayTriangle(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>rayTriangle</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">rayTriangle</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v0,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v1,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v2)</span></div>
+<div class="block">Intersect the specified triangle with the specified ray.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>v0</code> - the first vertex of the triangle (not null, unaffected)</dd>
+<dd><code>v1</code> - the 2nd vertex of the triangle (not null, unaffected)</dd>
+<dd><code>v2</code> - the 3rd vertex of the triangle (not null, unaffected)</dd>
+<dt>Returns:</dt>
+<dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
+ misses the triangle</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="registerCustomAllocator(long,long,long,long,long)">
+<h3>registerCustomAllocator</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">registerCustomAllocator</span><wbr><span class="parameters">(long&nbsp;allocateVa,
+ long&nbsp;reallocateVa,
+ long&nbsp;freeVa,
+ long&nbsp;alignedAllocateVa,
+ long&nbsp;alignedFreeVa)</span></div>
+<div class="block">Register the allocation hook to use the specified functions. This must be
+ done before any other Jolt function is called.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>allocateVa</code> - the virtual address of the desired Allocate function</dd>
+<dd><code>reallocateVa</code> - the virtual address of the desired Reallocate
+ function</dd>
+<dd><code>freeVa</code> - the virtual address of the desired Free function</dd>
+<dd><code>alignedAllocateVa</code> - the virtual address of the desired
+ AlignedAllocate function</dd>
+<dd><code>alignedFreeVa</code> - the virtual address of the desired AlignedFree
+ function</dd>
 </dl>
 </section>
 </li>
@@ -1240,7 +1557,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="versionString()">
 <h3>versionString</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">versionString</span>()</div>
-<div class="block">Return the Jolt-JNI version string that's hard-coded in the native
+<div class="block">Return the Jolt-JNI version string that's hard-coded into the native
  library.</div>
 <dl class="notes">
 <dt>Returns:</dt>

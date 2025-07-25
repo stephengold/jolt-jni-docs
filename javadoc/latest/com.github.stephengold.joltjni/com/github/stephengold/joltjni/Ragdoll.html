@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -169,6 +170,17 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the low-level pose.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">getPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the ragdoll's pose using the locking body interface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.SkeletonPose,boolean)" class="member-name-link">getPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose,
+ boolean&nbsp;lockBodies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the ragdoll's pose.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -219,7 +231,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
-<code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
+<code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#isCleanerStarted()">isCleanerStarted</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -242,7 +254,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
  the bodies.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>activation</code> - whether to activate bodies (not null)</dd>
+<dd><code>activation</code> - whether to activate bodies (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -281,7 +293,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Drive the ragdoll to the specified pose using motors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pose</code> - the desired pose (not null, unaffected)</dd>
+<dd><code>pose</code> - the desired pose (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -327,9 +339,10 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Copy the low-level pose using a locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeRootOffset</code> - storage for the root offset (not null, modified)</dd>
-<dd><code>storeJointMatrices</code> - storage for the joint matrices (not null,
+<dd><code>storeRootOffset</code> - storage for the root offset (not <code>null</code>,
  modified)</dd>
+<dd><code>storeJointMatrices</code> - storage for the joint matrices (not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -342,11 +355,37 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Copy the low-level pose.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeRootOffset</code> - storage for the root offset (not null, modified)</dd>
-<dd><code>storeJointMatrices</code> - storage for the joint matrices (not null,
+<dd><code>storeRootOffset</code> - storage for the root offset (not <code>null</code>,
  modified)</dd>
+<dd><code>storeJointMatrices</code> - storage for the joint matrices (not
+ <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPose(com.github.stephengold.joltjni.SkeletonPose)">
+<h3>getPose</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPose</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose)</span></div>
+<div class="block">Copy the ragdoll's pose using the locking body interface.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storePose</code> - storage for the pose (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPose(com.github.stephengold.joltjni.SkeletonPose,boolean)">
+<h3>getPose</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPose</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose,
+ boolean&nbsp;lockBodies)</span></div>
+<div class="block">Copy the ragdoll's pose.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storePose</code> - storage for the pose (not <code>null</code>, modified)</dd>
+<dd><code>lockBodies</code> - true&rarr;use the locking body interface,
+ false&rarr;use the non-locking body interface</dd>
 </dl>
 </section>
 </li>
@@ -359,9 +398,10 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
  interface. The ragdoll is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeLocation</code> - storage for the root location (not null, modified)</dd>
-<dd><code>storeOrientation</code> - storage for the root orientation (not null,
+<dd><code>storeLocation</code> - storage for the root location (not <code>null</code>,
  modified)</dd>
+<dd><code>storeOrientation</code> - storage for the root orientation (not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -374,9 +414,10 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Copy the transform of the ragdoll's root. The ragdoll is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeLocation</code> - storage for the root location (not null, modified)</dd>
-<dd><code>storeOrientation</code> - storage for the root orientation (not null,
+<dd><code>storeLocation</code> - storage for the root location (not <code>null</code>,
  modified)</dd>
+<dd><code>storeOrientation</code> - storage for the root orientation (not
+ <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -396,7 +437,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Alter the ragdoll's pose using the locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pose</code> - the desired pose (not null, unaffected)</dd>
+<dd><code>pose</code> - the desired pose (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -408,7 +449,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Alter the ragdoll's pose.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pose</code> - the desired pose (not null, unaffected)</dd>
+<dd><code>pose</code> - the desired pose (not <code>null</code>, unaffected)</dd>
 <dd><code>lockBodies</code> - true&rarr;use the locking body interface,
  false&rarr;use the non-locking body interface</dd>
 </dl>

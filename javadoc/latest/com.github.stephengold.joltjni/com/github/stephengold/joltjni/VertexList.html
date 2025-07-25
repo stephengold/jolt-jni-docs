@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -89,9 +90,14 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">com.github.stephengold.joltjni.VertexList</div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>All Implemented Interfaces:</dt>
+<dd><code><a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></code></dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">VertexList</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+implements <a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></span></div>
 <div class="block">A variable-length list of 3-D vectors, implemented using a direct
  <code>FloatBuffer</code>. (native type: <code>Array&lt;Float3&gt;</code>)</div>
 </section>
@@ -211,42 +217,6 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="capacity()">
-<h3>capacity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">capacity</span>()</div>
-<div class="block">Count how many vertices can be held in the currently allocated storage.
- The list is unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the number of vertices (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="empty()">
-<h3>empty</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">empty</span>()</div>
-<div class="block">Test whether the list contains no vertices. The list is unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd><code>true</code> if empty, otherwise <code>false</code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="get(int)">
-<h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;listIndex)</span></div>
-<div class="block">Copy the vertex at the specified index. The list is unaffected.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>listIndex</code> - the index from which to get the vertex</dd>
-<dt>Returns:</dt>
-<dd>the vertex</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="pushBack(com.github.stephengold.joltjni.Float3)">
 <h3>pushBack</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">pushBack</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</span></div>
@@ -312,11 +282,55 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="capacity()">
+<h3>capacity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">capacity</span>()</div>
+<div class="block">Count how many vertices can be held in the currently allocated storage.
+ The list is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertexList.html#capacity()">capacity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></code></dd>
+<dt>Returns:</dt>
+<dd>the number of vertices (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="empty()">
+<h3>empty</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">empty</span>()</div>
+<div class="block">Test whether the list contains no vertices. The list is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertexList.html#empty()">empty</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if empty, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="get(int)">
+<h3>get</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;listIndex)</span></div>
+<div class="block">Copy the vertex at the specified index. The list is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertexList.html#get(int)">get</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>listIndex</code> - the index from which to get the vertex</dd>
+<dt>Returns:</dt>
+<dd>the vertex</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="size()">
 <h3>size</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">size</span>()</div>
 <div class="block">Count how many vertices are in the list. The list is unaffected.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertexList.html#size()">size</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></code></dd>
 <dt>Returns:</dt>
 <dd>the number of vertices (&ge;0)</dd>
 </dl>
@@ -329,6 +343,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Access a direct buffer containing all vertices in the list, in order. No
  further <code>resize()</code> or <code>set()</code> is allowed.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVertexList.html#toDirectBuffer()">toDirectBuffer</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></code></dd>
 <dt>Returns:</dt>
 <dd>the pre-existing Buffer, flipped but possibly not rewound</dd>
 </dl>
