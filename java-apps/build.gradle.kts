@@ -26,6 +26,10 @@ tasks.withType<JavaCompile>().all { // Java compile-time options:
 
 // Register tasks to run specific applications:
 
+tasks.register<JavaExec>("HelloBroadPhase") {
+    description = "Runs the HelloBroadPhase tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloBroadPhase"
+}
 tasks.register<JavaExec>("HelloCcd") {
     description = "Runs the HelloCcd tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloCcd"
@@ -78,6 +82,10 @@ tasks.register<JavaExec>("HelloMotor") {
     description = "Runs the HelloMotor tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloMotor"
 }
+tasks.register<JavaExec>("HelloNarrowPhase") {
+    description = "Runs the HelloNarrowPhase tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloNarrowPhase"
+}
 tasks.register<JavaExec>("HelloPin") {
     description = "Runs the HelloPin tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloPin"
@@ -89,6 +97,10 @@ tasks.register<JavaExec>("HelloPivot") {
 tasks.register<JavaExec>("HelloRigidBody") {
     description = "Runs the HelloRigidBody tutorial app."
     mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloRigidBody"
+}
+tasks.register<JavaExec>("HelloSensor") {
+    description = "Runs the HelloSensor tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloSensor"
 }
 tasks.register<JavaExec>("HelloSoftRope") {
     description = "Runs the HelloSoftRope tutorial app."
