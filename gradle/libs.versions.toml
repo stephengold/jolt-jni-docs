@@ -3,7 +3,7 @@
 [versions]
 
 checkstyle = "10.26.1"
-joltjni = "2.0.1"
+joltjni = "2.1.0"
 lwjgl = "3.3.6"
 
 [libraries]
@@ -27,7 +27,7 @@ lwjgl-glfw = { module = "org.lwjgl:lwjgl-glfw", version.ref = "lwjgl" }
 lwjgl-opengl = { module = "org.lwjgl:lwjgl-opengl", version.ref = "lwjgl" }
 
 oshi-core = "com.github.oshi:oshi-core:6.8.2"
-sport-jolt = "com.github.stephengold:sport-jolt:0.9.5"
+sport-jolt = "com.github.stephengold:sport-jolt:0.9.6"
 
 [bundles]
 

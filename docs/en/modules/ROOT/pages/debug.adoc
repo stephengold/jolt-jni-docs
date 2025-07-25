@@ -11,7 +11,7 @@ During development, Java assertions should be enabled using:
 
 Similarly, native-code assertions should be enabled during development.
 You do this by loading a native library with the "Debug" buildtype,
-such as "com.github.stephengold:jolt-jni-Windows64:2.0.1:DebugSp".
+such as "com.github.stephengold:jolt-jni-Windows64:2.1.0:DebugSp".
 
 [NOTE]
 ====
