@@ -534,6 +534,32 @@ AllHitCollideShapeCollector collector = new AllHitCollideShapeCollector();
 query.collideShape(shape, scale, transform, settings, base, collector);</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloNarrowphase.java"><code>HelloNarrowphase</code></a> is a Sport-Jolt app
+that illustrates how narrowphase queries can be used
+to detect characters entering/leaving an octahedral zone.</p>
+</div>
+<div class="paragraph">
+<p>Things notice while running the app:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Press <kbd>Right arrow</kbd> to walk the character toward the ghost zone.</p>
+</li>
+<li>
+<p>As soon as the character&#8217;s shape intersects with the ghost&#8217;s shape,
+the ghost turns red, indicating an intrusion.</p>
+</li>
+<li>
+<p>Press <kbd>Space bar</kbd> to jump.</p>
+</li>
+<li>
+<p>The character can jump high enough to leave the ghost zone,
+at which time the ghost will momentarily turn yellow again.</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
