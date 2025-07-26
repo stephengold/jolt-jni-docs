@@ -1,7 +1,7 @@
 = How to add Jolt JNI to an existing project
-:Project: Jolt JNI
 :experimental:
 :page-pagination:
+:Project: Jolt JNI
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 

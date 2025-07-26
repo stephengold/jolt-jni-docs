@@ -1,7 +1,7 @@
 = Choosing collision shapes
-:Project: Jolt JNI
 :item: &rarr;
 :page-pagination:
+:Project: Jolt JNI
 :url-jj: https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni
 
 A _collision shape_
@@ -177,9 +177,9 @@ To test whether a shape belongs to a convex class:
 
 [source,java]
 ----
-boolean convexClass = (shape instanceof ConvexShape);
+boolean isConvexClass = (shape instanceof ConvexShape);
 // or
-boolean convexClass = (shape.getType() == EShapeType.Convex);
+boolean isConvexClass = (shape.getType() == EShapeType.Convex);
 ----
 
 NOTE: In {Project}, "convex" is a property of classes, not objects.
@@ -234,7 +234,7 @@ when compounded together, approximate the desired behavior.
 Depending how much you know about a mesh,
 there are various approaches to decomposing it:
 
-* If the mesh is generated procedurally, it may be convenient
+* If the mesh was generated procedurally, it may be convenient
   to decompose it during the generation process.
 * If the mesh was crafted in a tool such as https://www.blender.org/[Blender],
   it may be practical to manually decompose it there,

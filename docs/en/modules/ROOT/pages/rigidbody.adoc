@@ -1,8 +1,8 @@
 = An introduction to rigid-body physics
-:Project: Jolt JNI
 :experimental:
 :page-pagination:
 :page-toclevels: 3
+:Project: Jolt JNI
 :Sport: Sport-Jolt
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
@@ -272,7 +272,7 @@ using the following 6 methods:
 * `Body.addTorque(Vec3Arg)`
 
 However, some forces are so commonplace that they are
-"built into" rigid-body simulation:
+built into rigid-body simulation:
 
 * drag forces:
 ** damping
