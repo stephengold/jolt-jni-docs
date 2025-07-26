@@ -269,6 +269,10 @@ StaticCompoundShapeSettings compoundSettings
 compoundSettings.addHulls(hulls);
 ----
 
+The V-HACD algorithm is costly to run, but for many applications it can
+be run in advance and the output stored until needed.
+During simulation, the resulting shape will usually be much more efficient
+than a compound-of-triangles shape.
 
 == Summary
 
