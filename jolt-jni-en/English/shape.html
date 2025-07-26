@@ -260,7 +260,7 @@ describes the shape and size of a physics object such as a rigid body.</p>
 <div class="paragraph">
 <p>The examples so far have all used spheres, cubes, and/or cylinders.
 However, those are but 3 of the 18 concrete subclasses of
-<code>Shape</code>.</p>
+<a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/Shape.html"><code>Shape</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>The subclasses are summarized here, in lexicographic order,
@@ -273,38 +273,38 @@ with illustrations and lists of key properties (explained below):</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1. <code>BoxShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/BoxShape.html"><code>BoxShape</code></a></p>
 <p class="tableblock">&rarr; convex with convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/box.png" alt="box" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2. <code>CapsuleShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/CapsuleShape.html"><code>CapsuleShape</code></a></p>
 <p class="tableblock">&rarr; convex without convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/capsule.png" alt="capsule" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3. <code>ConvexHullShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexHullShape.html"><code>ConvexHullShape</code></a></p>
 <p class="tableblock">&rarr; convex with convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/convexHull.png" alt="convexHull" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4. <code>CylinderShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/CylinderShape.html"><code>CylinderShape</code></a></p>
 <p class="tableblock">&rarr; convex with convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/cylinder.png" alt="cylinder" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5. <code>EmptyShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/EmptyShape.html"><code>EmptyShape</code></a></p>
 <p class="tableblock">&rarr; non-convex<br>
 &rarr; movable<br>
 &rarr; used as a placeholder</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(no image)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6. <code>HeightfieldShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightfieldShape.html"><code>HeightfieldShape</code></a></p>
 <p class="tableblock">&rarr; used to simulate terrain efficiently<br>
 &rarr; may contain holes<br>
 &rarr; non-convex<br>
@@ -312,74 +312,74 @@ with illustrations and lists of key properties (explained below):</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/heightField.png" alt="heightField" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7. <code>MeshShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/MeshShape.html"><code>MeshShape</code></a></p>
 <p class="tableblock">&rarr; non-convex<br>
 &rarr; must be static<br>
 &rarr; costly to simulate</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/mesh.png" alt="mesh" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8. <code>MutableCompoundShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/MutableCompoundShape.html"><code>MutableCompoundShape</code></a></p>
 <p class="tableblock">&rarr; compound (non-convex)<br>
 &rarr; movable if all children are movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/compound.png" alt="compound" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9. <code>OffsetCenterOfMassShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/OffsetCenterOfMassShape.html"><code>OffsetCenterOfMassShape</code></a></p>
 <p class="tableblock">&rarr; decorated (non-convex)<br>
 &rarr; movable if inner shape is movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ocoms.png" alt="ocoms" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10. <code>PlaneShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/PlaneShape.html"><code>PlaneShape</code></a></p>
 <p class="tableblock">&rarr; non-convex<br>
 &rarr; must be static</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/plane.png" alt="plane" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11. <code>RotatedTranslatedShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/RotatedTranslatedShape.html"><code>RotatedTranslatedShape</code></a></p>
 <p class="tableblock">&rarr; decorated (non-convex)<br>
 &rarr; movable if inner shape is movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/rotatedTranslated.png" alt="rotatedTranslated" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">12. <code>ScaledShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/ScaledShape.html"><code>ScaledShape</code></a></p>
 <p class="tableblock">&rarr; decorated (non-convex)<br>
 &rarr; movable if inner shape is movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(no image)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13. <code>SoftBodyShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyShape.html"><code>SoftBodyShape</code></a></p>
 <p class="tableblock">&rarr; non-convex<br>
 &rarr; applies only to soft bodies, not rigid ones</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(no image)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">14. <code>SphereShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/SphereShape.html"><code>SphereShape</code></a></p>
 <p class="tableblock">&rarr; convex without convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/sphere.png" alt="sphere" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">15. <code>StaticCompoundShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/StaticCompoundShape.html"><code>StaticCompoundShape</code></a></p>
 <p class="tableblock">&rarr; compound (non-convex)<br>
 &rarr; movable if all children are movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/compound.png" alt="compound" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16. <code>TaperedCapsuleShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/TaperedCapsuleShape.html"><code>TaperedCapsuleShape</code></a></p>
 <p class="tableblock">&rarr; convex without convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/taperedCapsule.png" alt="taperedCapsule" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">17. <code>TaperedCylinderShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/TaperedCylinderShape.html"><code>TaperedCylinderShape</code></a></p>
 <p class="tableblock">&rarr; convex with convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/taperedCylinder.png" alt="taperedCylinder" height="160"></span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18. <code>TriangleShape</code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18. <a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/TriangleShape.html"><code>TriangleShape</code></a></p>
 <p class="tableblock">&rarr; convex with convex radius<br>
 &rarr; movable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/triangle.png" alt="triangle" height="160"></span></p></td>
@@ -447,9 +447,9 @@ the line segment connecting those locations lies entirely inside the shape.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boolean convexClass = (shape instanceof ConvexShape);
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boolean isConvexClass = (shape instanceof ConvexShape);
 // or
-boolean convexClass = (shape.getType() == EShapeType.Convex);</code></pre>
+boolean isConvexClass = (shape.getType() == EShapeType.Convex);</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -537,7 +537,7 @@ there are various approaches to decomposing it:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>If the mesh is generated procedurally, it may be convenient
+<p>If the mesh was generated procedurally, it may be convenient
 to decompose it during the generation process.</p>
 </li>
 <li>
@@ -578,6 +578,12 @@ StaticCompoundShapeSettings compoundSettings
         = new StaticCompoundShapeSettings();
 compoundSettings.addHulls(hulls);</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>The V-HACD algorithm is costly to run, but for many applications it can
+be run in advance and the output stored until needed.
+During simulation, the resulting shape will usually be much more efficient
+than a compound-of-triangles shape.</p>
 </div>
 </div>
 </div>
