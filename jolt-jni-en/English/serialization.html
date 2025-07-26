@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jolt-JNI project overview :: The Jolt-JNI project</title>
-    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/overview.html">
+    <title>Serialization :: The Jolt-JNI project</title>
+    <link rel="canonical" href="https://stephengold.github.io/jolt-jni/jolt-jni-en/English/serialization.html">
+    <link rel="prev" href="softbody.html">
+    <link rel="next" href="build.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="Jolt-JNI project overview">
+<meta property="og:description" content="Serialization">
 <meta property="og:title" content="The Jolt-JNI project">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -94,7 +96,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="softbody.html">Soft bodies</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="serialization.html">Serialization</a>
   </li>
 </ul>
@@ -235,133 +237,206 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="overview.html">The Jolt-JNI project</a></li>
-    <li><a href="overview.html">Jolt-JNI project overview</a></li>
+    <li>Library tutorials</li>
+    <li><a href="serialization.html">Serialization</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/overview.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/stephengold/jolt-jni-docs/edit/master/docs/en/modules/ROOT/pages/serialization.adoc">Edit this page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Jolt-JNI project overview</h1>
+<h1 class="page">Serialization</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>Jolt JNI</em> is a <a href="https://en.wikipedia.org/wiki/Physics_engine">physics-simulation</a> library
-for <a href="https://en.wikipedia.org/wiki/Java_virtual_machine">Java</a>.</p>
+<p>Serialization is required to save a data structure to stable storage or
+transmit it across a network.
+A typical use case for serialization is
+to quickly re-create pre-computed shapes.
+However, Jolt JNI also allows serialization of body settings and entire scenes.</p>
 </div>
 <div class="paragraph">
-<p>Use it to:</p>
+<p>There are 2 serialization systems:
+a <em>snapshot</em> system for short-term use with <em>cooked</em> data structures, and
+an <em>object-stream</em> system for long-term use with <em>uncooked</em> data structures.</p>
+</div>
+<div class="paragraph">
+<p>The main distinction between cooked and uncooked
+is that cooked data structures contain <code>Shape</code> objects
+instead of <code>ShapeSettings</code> ones.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_snapshot_system"><a class="anchor" href="#_the_snapshot_system"></a>The snapshot system</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many Jolt-JNI classes implement the <code>saveBinaryState(StreamOut)</code> method:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>add solidity to walls, characters, projectiles, landscapes, and vehicles,</p>
+<p><code>BodyCreationSettings</code> (cooked, with <code>Shape</code>)</p>
 </li>
 <li>
-<p>detect collisions between complex shapes,</p>
+<p><code>ConstraintSettings</code></p>
 </li>
 <li>
-<p>perform contact, ray, and sweep tests,</p>
+<p><code>GroupFilter</code></p>
 </li>
 <li>
-<p>simulate characters and buildings collapsing in real time, and</p>
+<p><code>PathConstraintPath</code></p>
 </li>
 <li>
-<p>simulate cloth, rope, and deformable volumes,
-including their interactions with rigid bodies.</p>
+<p><code>PhysicsMaterial</code></p>
+</li>
+<li>
+<p><code>PhysicsScene</code></p>
+</li>
+<li>
+<p><code>RagdollSettings</code></p>
+</li>
+<li>
+<p><code>Shape</code></p>
+</li>
+<li>
+<p><code>Skeleton</code></p>
+</li>
+<li>
+<p><code>SoftBodyCreationSettings</code></p>
+</li>
+<li>
+<p><code>SpringSettings</code></p>
+</li>
+<li>
+<p><code>VehicleAntiRollBar</code></p>
+</li>
+<li>
+<p><code>VehicleControllerSettings</code></p>
+</li>
+<li>
+<p><code>WheelSettings</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Tutorials and sample apps are provided to help you get started.</p>
+<p>The <code>StreamOut</code> argument can be either
+a wrapped <code>OfStream</code> (a file) or
+a wrapped <code>StringStream</code> (a variable-length buffer).
+In some classes, <code>saveBinaryState()</code> takes additional arguments.</p>
 </div>
 <div class="paragraph">
-<p>All software in the Jolt-JNI project is free and open-source,
-including the JVM library, the native libraries, the demo and tutorial apps,
-and the software used to build, test, and run them.</p>
+<p>To de-serialize snapshot data, you must know the type of the original object.
+You either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>instantiate an object of the expected type
+and invoke its <code>restoreBinaryState(StreamIn)</code> method or else</p>
+</li>
+<li>
+<p>invoke the static <code>sRestoreFromBinaryState(StreamIn)</code> method
+for the expected type.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The underlying simulation software comes from
-<a href="https://jrouwe.github.io/JoltPhysics"><em>Jolt Physics</em></a>, a modern, thread-aware physics simulator.
-But although Jolt Physics is written in <a href="https://en.wikipedia.org/wiki/C%2B%2B">C&#43;&#43;</a>,
-you won&#8217;t need any knowledge of C&#43;&#43; to use Jolt JNI.</p>
-</div>
-<div class="paragraph">
-<p>Jolt JNI also incorporates source code from
-<a href="https://github.com/kmammou/v-hacd">the V-HACD project</a>.</p>
+<p>Snapshot data is optimized for loading speed.
+It&#8217;s in a binary format that&#8217;s likely to change between library versions
+and might not be compatible between Sp- and Dp-flavored native libraries.
+For these reasons, snapshots shouldn&#8217;t be your primary data format.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_caveats"><a class="anchor" href="#_caveats"></a>Caveats</h2>
+<h2 id="_the_object_stream_system"><a class="anchor" href="#_the_object_stream_system"></a>The object-stream system</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jolt JNI&#8217;s focus is on simulating
-<a href="https://en.wikipedia.org/wiki/Classical_mechanics">classical mechanics</a>
-in just enough detail to add verisimilitude to 3-D games.
-It&#8217;s not intended for 2-D <a href="https://en.wikipedia.org/wiki/Platform_game">platformers</a>,
-nor for scientific research.
-For 2-D physics, consider using <a href="http://www.dyn4j.org/">dyn4j</a> instead.</p>
+<p>The <code>ObjectStreamOut.sWriteObject()</code> method can serialize
+physics objects of many types, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>BodyCreationSettings</code> (uncooked, with <code>ShapeSettings</code>)</p>
+</li>
+<li>
+<p><code>ConstraintSettings</code></p>
+</li>
+<li>
+<p><code>GroupFilter</code></p>
+</li>
+<li>
+<p><code>PathConstraintPath</code></p>
+</li>
+<li>
+<p><code>PhysicsMaterial</code></p>
+</li>
+<li>
+<p><code>PhysicsScene</code></p>
+</li>
+<li>
+<p><code>RagdollSettings</code></p>
+</li>
+<li>
+<p><code>ShapeSettings</code></p>
+</li>
+<li>
+<p><code>SoftBodyCreationSettings</code></p>
+</li>
+<li>
+<p><code>SoftBodySharedSettings</code></p>
+</li>
+<li>
+<p><code>VehicleControllerSettings</code></p>
+</li>
+<li>
+<p><code>WheelSettings</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Jolt JNI and its documentation
-assume a certain level of proficiency with
-<a href="https://en.wikipedia.org/wiki/Java_(programming_language)">the Java programming language</a>.
-The project isn&#8217;t aimed at non-programmers,
-nor developers without prior Java experience.
-Similarly, it assumes familiarity with vector math and 3-D computer graphics.</p>
+<p>Objects can be serialized in either binary or text format,
+either to a file or a <code>StringStream</code> (variable-length buffer).</p>
 </div>
 <div class="paragraph">
-<p>While an understanding of classical mechanics is assumed,
-many of its technical terms are linked (at first use)
-to the relevant article in the English Wikipedia.</p>
+<p>To de-serialize object-stream data, you must know the approximate type of
+the original object.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For <code>RefCount</code> types,
+instantiate an empty counted reference of the expected type
+and pass it to the <code>ObjectStreamIn.sReadObject()</code> method.</p>
+</li>
+<li>
+<p>For non-<code>RefCount</code> types, instantiate an object of the expected type
+and pass it to <code>ObjectStreamIn.sReadObject()</code>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Jolt JNI requires Java version 11 or higher.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">The project&#8217;s open-source license</a>
-disclaims liability for defects.
-Please don&#8217;t use this software in safety-critical applications.</p>
+<p>Data stored in this way is likely to be compatible
+with future versions of the library (although compatibility is not guaranteed).</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_getting_help"><a class="anchor" href="#_getting_help"></a>Getting help</h2>
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For self-help, utilize
-<a href="add.html" class="xref page">the tutorials</a>,
-<a href="https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">the javadoc</a>, and
-<a href="https://github.com/stephengold/jolt-jni">the source code</a>.</p>
-</div>
-<div class="paragraph">
-<p>For further reading there is also
-<a href="https://jrouwe.github.io/JoltPhysics/index.html">the official Jolt-Physics documentation</a>.</p>
-</div>
-<div class="paragraph">
-<p>For issues that are best handled privately, contact me by e-mail.
-My personal e-mail address appears at the bottom
-of <a href="https://stephengold.github.io/">my homepage</a> and in the source code.</p>
-</div>
-<div class="paragraph">
-<p>I welcome suggestions concerning the future development of Jolt JNI.</p>
+<p>Jolt JNI provides 2 serialization systems:
+one for quick, non-portable snapshots
+and another, slower system for portable saves.</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_next_steps"><a class="anchor" href="#_next_steps"></a>Next steps</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you&#8217;re curious how Jolt JNI works,
-proceed to <a href="implementation.html" class="xref page">the Implementation page</a>.</p>
-</div>
-<div class="paragraph">
-<p>To gain hands-on experience,
-proceed to <a href="add.html" class="xref page">the first tutorial page</a>.</p>
-</div>
-</div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="softbody.html">Soft bodies</a></span>
+  <span class="next"><a href="build.html">Build procedures</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">
   <div class="toc-menu"></div>
