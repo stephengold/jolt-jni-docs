@@ -2,6 +2,7 @@
 :Project: Jolt JNI
 :item: &rarr;
 :page-pagination:
+:url-jj: https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni
 
 A _collision shape_
 describes the shape and size of a physics object such as a rigid body.
@@ -11,7 +12,7 @@ describes the shape and size of a physics object such as a rigid body.
 
 The examples so far have all used spheres, cubes, and/or cylinders.
 However, those are but 3 of the 18 concrete subclasses of
-`Shape`.
+{url-jj}/Shape.html[`Shape`].
 
 The subclasses are summarized here, in lexicographic order,
 with illustrations and lists of key properties (explained below):
@@ -19,38 +20,38 @@ with illustrations and lists of key properties (explained below):
 [cols="2*",grid="none"]
 |===
 
-|1. `BoxShape`
+|1. {url-jj}/BoxShape.html[`BoxShape`]
 
 {item} convex with convex radius +
 {item} movable
 |image:box.png[height=160]
 
-|2. `CapsuleShape`
+|2. {url-jj}/CapsuleShape.html[`CapsuleShape`]
 
 {item} convex without convex radius +
 {item} movable
 |image:capsule.png[height=160]
 
-|3. `ConvexHullShape`
+|3. {url-jj}/ConvexHullShape.html[`ConvexHullShape`]
 
 {item} convex with convex radius +
 {item} movable
 |image:convexHull.png[height=160]
 
-|4. `CylinderShape`
+|4. {url-jj}/CylinderShape.html[`CylinderShape`]
 
 {item} convex with convex radius +
 {item} movable
 |image:cylinder.png[height=160]
 
-|5. `EmptyShape`
+|5. {url-jj}/EmptyShape.html[`EmptyShape`]
 
 {item} non-convex +
 {item} movable +
 {item} used as a placeholder
 |(no image)
 
-|6. `HeightfieldShape`
+|6. {url-jj}/HeightfieldShape.html[`HeightfieldShape`]
 
 {item} used to simulate terrain efficiently +
 {item} may contain holes +
@@ -58,74 +59,74 @@ with illustrations and lists of key properties (explained below):
 {item} must be static
 |image:heightField.png[height=160]
 
-|7. `MeshShape`
+|7. {url-jj}/MeshShape.html[`MeshShape`]
 
 {item} non-convex +
 {item} must be static +
 {item} costly to simulate
 |image:mesh.png[height=160]
 
-|8. `MutableCompoundShape`
+|8. {url-jj}/MutableCompoundShape.html[`MutableCompoundShape`]
 
 {item} compound (non-convex) +
 {item} movable if all children are movable
 |image:compound.png[height=160]
 
-|9. `OffsetCenterOfMassShape`
+|9. {url-jj}/OffsetCenterOfMassShape.html[`OffsetCenterOfMassShape`]
 
 {item} decorated (non-convex) +
 {item} movable if inner shape is movable
 |image:ocoms.png[height=160]
 
-|10. `PlaneShape`
+|10. {url-jj}/PlaneShape.html[`PlaneShape`]
 
 {item} non-convex +
 {item} must be static
 |image:plane.png[height=160]
 
-|11. `RotatedTranslatedShape`
+|11. {url-jj}/RotatedTranslatedShape.html[`RotatedTranslatedShape`]
 
 {item} decorated (non-convex) +
 {item} movable if inner shape is movable
 |image:rotatedTranslated.png[height=160]
 
-|12. `ScaledShape`
+|12. {url-jj}/ScaledShape.html[`ScaledShape`]
 
 {item} decorated (non-convex) +
 {item} movable if inner shape is movable
 |(no image)
 
-|13. `SoftBodyShape`
+|13. {url-jj}/SoftBodyShape.html[`SoftBodyShape`]
 
 {item} non-convex +
 {item} applies only to soft bodies, not rigid ones
 |(no image)
 
-|14. `SphereShape`
+|14. {url-jj}/SphereShape.html[`SphereShape`]
 
 {item} convex without convex radius +
 {item} movable
 |image:sphere.png[height=160]
 
-|15. `StaticCompoundShape`
+|15. {url-jj}/StaticCompoundShape.html[`StaticCompoundShape`]
 
 {item} compound (non-convex) +
 {item} movable if all children are movable
 |image:compound.png[height=160]
 
-|16. `TaperedCapsuleShape`
+|16. {url-jj}/TaperedCapsuleShape.html[`TaperedCapsuleShape`]
 
 {item} convex without convex radius +
 {item} movable
 |image:taperedCapsule.png[height=160]
 
-|17. `TaperedCylinderShape`
+|17. {url-jj}/TaperedCylinderShape.html[`TaperedCylinderShape`]
 
 {item} convex with convex radius +
 {item} movable
 |image:taperedCylinder.png[height=160]
 
-|18. `TriangleShape`
+|18. {url-jj}/TriangleShape.html[`TriangleShape`]
 
 {item} convex with convex radius +
 {item} movable
