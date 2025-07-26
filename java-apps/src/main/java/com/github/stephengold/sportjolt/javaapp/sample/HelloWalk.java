@@ -72,7 +72,7 @@ public class HelloWalk extends BasePhysicsApp implements PhysicsTickListener {
     // fields
 
     /**
-     * true when the spacebar is pressed, otherwise false
+     * true when the space bar is pressed, otherwise false
      */
     private static volatile boolean jumpRequested;
     /**
@@ -263,7 +263,7 @@ public class HelloWalk extends BasePhysicsApp implements PhysicsTickListener {
     }
 
     /**
-     * Configure the projection and CIP during startup.
+     * Configure the projection and CIP during initialization.
      */
     private static void configureCamera() {
         getCameraInputProcessor().setRotationMode(RotateMode.DragLMB);
@@ -274,7 +274,7 @@ public class HelloWalk extends BasePhysicsApp implements PhysicsTickListener {
     }
 
     /**
-     * Configure keyboard input during startup.
+     * Configure keyboard input during initialization.
      */
     private void configureInput() {
         getInputManager().add(new InputProcessor() {
