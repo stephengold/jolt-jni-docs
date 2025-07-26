@@ -85,8 +85,8 @@ public class HelloCcd extends BasePhysicsApp {
     @Override
     protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
-        int numBpLayers = 1;
         int maxBodies = 3;
+        int numBpLayers = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         // Increase gravity to make the balls fall faster:

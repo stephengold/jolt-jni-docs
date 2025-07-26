@@ -111,8 +111,8 @@ public class HelloConstraint
     @Override
     protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
-        int numBpLayers = 1;
         int maxBodies = 2;
+        int numBpLayers = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
         // To enable the callbacks, register this app as a tick listener:
