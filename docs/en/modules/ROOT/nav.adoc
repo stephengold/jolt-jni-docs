@@ -11,6 +11,7 @@
 ** xref:vehicle.adoc[Vehicles]
 ** xref:collision.adoc[Managing collisions]
 ** xref:softbody.adoc[Soft bodies]
+** xref:serialization.adoc[Serialization]
 * xref:build.adoc[Build procedures]
 * xref:demos.adoc[Demo apps]
 * xref:lexicon.adoc[Type lexicon]

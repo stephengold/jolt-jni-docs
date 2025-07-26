@@ -1,0 +1,97 @@
+= Serialization
+:page-pagination:
+:Project: Jolt JNI
+:ProjectAdj: Jolt-JNI
+
+Serialization is required to save a data structure to stable storage or
+transmit it across a network.
+A typical use case for serialization is
+to quickly re-create pre-computed shapes.
+However, {Project} also allows serialization of body settings and entire scenes.
+
+There are 2 serialization systems:
+a _snapshot_ system for short-term use with _cooked_ data structures, and
+an _object-stream_ system for long-term use with _uncooked_ data structures.
+
+The main distinction between cooked and uncooked
+is that cooked data structures contain `Shape` objects
+instead of `ShapeSettings` ones.
+
+
+== The snapshot system
+
+Many {ProjectAdj} classes implement the `saveBinaryState(StreamOut)` method:
+
+* `BodyCreationSettings` (cooked, with `Shape`)
+* `ConstraintSettings`
+* `GroupFilter`
+* `PathConstraintPath`
+* `PhysicsMaterial`
+* `PhysicsScene`
+* `RagdollSettings`
+* `Shape`
+* `Skeleton`
+* `SoftBodyCreationSettings`
+* `SpringSettings`
+* `VehicleAntiRollBar`
+* `VehicleControllerSettings`
+* `WheelSettings`
+
+The `StreamOut` argument can be either
+a wrapped `OfStream` (a file) or
+a wrapped `StringStream` (a variable-length buffer).
+In some classes, `saveBinaryState()` takes additional arguments.
+
+To de-serialize snapshot data, you must know the type of the original object.
+You either:
+
+* instantiate an object of the expected type
+  and invoke its `restoreBinaryState(StreamIn)` method or else
+* invoke the static `sRestoreFromBinaryState(StreamIn)` method
+  for the expected type.
+
+Snapshot data is optimized for loading speed.
+It's in a binary format that's likely to change between library versions
+and might not be compatible between Sp- and Dp-flavored native libraries.
+For these reasons, snapshots shouldn't be your primary data format.
+
+
+== The object-stream system
+
+The `ObjectStreamOut.sWriteObject()` method can serialize
+physics objects of many types, including:
+
+* `BodyCreationSettings` (uncooked, with `ShapeSettings`)
+* `ConstraintSettings`
+* `GroupFilter`
+* `PathConstraintPath`
+* `PhysicsMaterial`
+* `PhysicsScene`
+* `RagdollSettings`
+* `ShapeSettings`
+* `SoftBodyCreationSettings`
+* `SoftBodySharedSettings`
+* `VehicleControllerSettings`
+* `WheelSettings`
+
+Objects can be serialized in either binary or text format,
+either to a file or a `StringStream` (variable-length buffer).
+
+To de-serialize object-stream data, you must know the approximate type of
+the original object.
+
+* For `RefCount` types,
+  instantiate an empty counted reference of the expected type
+  and pass it to the `ObjectStreamIn.sReadObject()` method.
+* For non-`RefCount` types, instantiate an object of the expected type
+  and pass it to `ObjectStreamIn.sReadObject()`.
+
+Data stored in this way is likely to be compatible
+with future versions of the library (although compatibility is not guaranteed).
+
+
+== Summary
+
+{Project} provides 2 serialization systems:
+one for quick, non-portable snapshots
+and another, slower system for portable saves.
