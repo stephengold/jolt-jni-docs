@@ -116,7 +116,7 @@ public class HelloNarrowPhase
     /**
      * broadphase-layer filter that has no effect
      */
-    private static BroadPhaseLayerFilter filterBpLayerNoop;
+    private static BroadPhaseLayerFilter filterBpLayerNoOp;
     /**
      * character to trigger the ghost shape
      */
@@ -192,7 +192,7 @@ public class HelloNarrowPhase
 
         // Initialize collector and filters:
         collector = new AllHitCollideShapeCollector();
-        filterBpLayerNoop = new BroadPhaseLayerFilter();
+        filterBpLayerNoOp = new BroadPhaseLayerFilter();
         filterObjLayerMoving = new SpecifiedObjectLayerFilter(objLayerMoving);
 
         // Create a ghost shape:
@@ -261,7 +261,7 @@ public class HelloNarrowPhase
         RVec3Arg base = ghostCenter.toRVec3();
         collector.reset();
         query.collideShape(ghost, scale, transform, settings, base,
-                collector, filterBpLayerNoop, filterObjLayerMoving);
+                collector, filterBpLayerNoOp, filterObjLayerMoving);
 
         // Update the color of the ghost:
         int numHits = collector.countHits();

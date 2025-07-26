@@ -107,7 +107,7 @@ public class HelloBroadPhase
     /**
      * broadphase-layer filter that has no effect
      */
-    private static BroadPhaseLayerFilter filterBpLayerNoop;
+    private static BroadPhaseLayerFilter filterBpLayerNoOp;
     /**
      * character to trigger the ghost box
      */
@@ -183,7 +183,7 @@ public class HelloBroadPhase
 
         // Initialize collector and filters:
         collector = new AllHitCollideShapeBodyCollector();
-        filterBpLayerNoop = new BroadPhaseLayerFilter();
+        filterBpLayerNoOp = new BroadPhaseLayerFilter();
         filterObjLayerMoving = new SpecifiedObjectLayerFilter(objLayerMoving);
 
         // Create a ghost box:
@@ -246,7 +246,7 @@ public class HelloBroadPhase
         BroadPhaseQuery query = physicsSystem.getBroadPhaseQuery();
         collector.reset();
         query.collideAaBox(
-                ghost, collector, filterBpLayerNoop, filterObjLayerMoving);
+                ghost, collector, filterBpLayerNoOp, filterObjLayerMoving);
 
         // Update the color of the ghost:
         int numHits = collector.countHits();
