@@ -95,7 +95,7 @@ Android library artifacts will be found "build/outputs/aar".
 === Local installation
 
 Once you've successfully built one or more libraries,
-You can install them to your local Maven repository.
+you can install them to your local Maven repository.
 
 . using Bash or Fish or PowerShell or Zsh: `./gradlew install;./gradlew -b android.gradle install`
 . using Windows Command Prompt:
