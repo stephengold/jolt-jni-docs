@@ -45,6 +45,7 @@ The following demos are found in
 .. using https://git-scm.com[Git]:
 ... `git clone https://github.com/stephengold/sport-jolt.git`
 ... `cd sport-jolt`
+... `git checkout -b latest 0.9.6`
 . Edit the "gradle.properties" file to configure the build.
 . Run the https://gradle.org[Gradle] wrapper on the desktop build script:
 .. using Bash or Fish or PowerShell or Zsh: `./gradlew build`
