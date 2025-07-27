@@ -246,8 +246,11 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>Demo applications</em> are provided to showcase certain features of Jolt JNI.
-The following demos are found in
+<p><em>Demo applications</em> are provided to showcase certain features of Jolt JNI
+in desktop environments.</p>
+</div>
+<div class="paragraph">
+<p>The following demos are found in
 <a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo">the com.github.stephengold.sportjolt.javaapp.demo package of the Sport-Jolt "java-apps" sub-project</a>:</p>
 </div>
 <div class="ulist">
@@ -278,6 +281,98 @@ demonstrates rope simulation using rigid bodies<br>
 <span class="image"><img src="_images/windlass.png" alt="windlass" height="100"></span></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_build_and_run_the_demos_from_source"><a class="anchor" href="#_how_to_build_and_run_the_demos_from_source"></a>How to build and run the demos from source</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install build software:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>a <a href="https://adoptium.net/releases.html">Java Development Kit (JDK)</a>,
+version 11 or higher</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Point the <code>JAVA_HOME</code> environment variable to your JDK installation:
+(The path might look something like
+"C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
+or "/usr/lib/jvm/java-17-openjdk-amd64/" or
+"/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home".)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Zsh: <code>export JAVA_HOME="</code> <strong>path to installation</strong> <code>"</code></p>
+</li>
+<li>
+<p>using <a href="https://fishshell.com/">Fish</a>: <code>set -g JAVA_HOME "</code> <strong>path to installation</strong> <code>"</code></p>
+</li>
+<li>
+<p>using PowerShell: <code>$env:JAVA_HOME = '</code> <strong>path to installation</strong> <code>'</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>set JAVA_HOME="</code> <strong>path to installation</strong> <code>"</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Download and extract the source code from GitHub:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using <a href="https://git-scm.com">Git</a>:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><code>git clone <a href="https://github.com/stephengold/sport-jolt.git" class="bare">https://github.com/stephengold/sport-jolt.git</a></code></p>
+</li>
+<li>
+<p><code>cd sport-jolt</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit the "gradle.properties" file to configure the build.</p>
+</li>
+<li>
+<p>Run the <a href="https://gradle.org">Gradle</a> wrapper on the desktop build script:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew build</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew build</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To run (for example) the <code>MarbleGame</code> demo:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>using Bash or Fish or PowerShell or Zsh: <code>./gradlew :java-apps:MarbleGame</code></p>
+</li>
+<li>
+<p>using Windows Command Prompt: <code>.\gradlew :java-apps:MarbleGame</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
