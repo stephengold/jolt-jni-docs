@@ -4,7 +4,9 @@
 :Sport: Sport-Jolt
 :url-examples: https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo
 
-_Demo applications_ are provided to showcase certain features of {Project}.
+_Demo applications_ are provided to showcase certain features of {Project}
+in desktop environments.
+
 The following demos are found in
 {url-examples}[the com.github.stephengold.sportjolt.javaapp.demo package of the {Sport} "java-apps" sub-project]:
 
