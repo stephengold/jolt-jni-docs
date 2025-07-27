@@ -12,6 +12,9 @@ You can also build a local copy of the documentation website (including HTML).
 This is useful if you are editing the documentation,
 or if your Internet access is limited or unreliable.
 
+The official demo applications are maintained in a separate GitHub repo.
+Instructions for running them are on xref:demos.adoc[the Demo apps page].
+
 
 == Libraries
 
