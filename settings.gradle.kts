@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 // subprojects:
 include("docs")
 include("java-apps")
+include("kotlin-apps")

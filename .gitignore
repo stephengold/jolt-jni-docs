@@ -5,6 +5,7 @@
 /build/
 /docs/build/
 /java-apps/build/
+/kotlin-apps/build/
 
 /docs/*-javadoc.jar
 /node_modules/

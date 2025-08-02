@@ -2,12 +2,13 @@
 documentation and sample applications
 for [the Jolt-JNI physics library][joltjni].
 
-It contains 2 subprojects:
+It contains 3 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
+3. kotlin-apps: sample applications in [Kotlin]
 
-The sample applications utilize [the Sport graphics engine for Jolt][sportjolt],
+The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
 
 Complete source code is provided under
@@ -66,6 +67,7 @@ You can restore the project to a pristine state:
 [gradle]: https://gradle.org "Gradle build tool"
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language) "Java programming language"
 [joltjni]: https://stephengold.github.io/jolt-jni-docs "Jolt-JNI project"
+[kotlin]: https://en.wikipedia.org/wiki/Kotlin_(programming_language) "Kotlin programming language"
 [license]: https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE "jolt-jni-docs license"
 [project]: https://github.com/stephengold/jolt-jni-docs "jolt-jni-docs project"
 [sportjolt]: https://github.com/stephengold/sport-jolt "Sport graphics engine for Jolt"
