@@ -30,10 +30,8 @@ package com.github.stephengold.sportjolt.ktapps.tutorial
 
 import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
-import com.github.stephengold.joltjni.BodyInterface
 import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable
 import com.github.stephengold.joltjni.ObjectLayerPairFilterTable
-import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilter
 import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilterTable
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.Plane
@@ -42,10 +40,6 @@ import com.github.stephengold.joltjni.SphereShape
 import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
-import com.github.stephengold.joltjni.readonly.ConstBody
-import com.github.stephengold.joltjni.readonly.ConstPlane
-import com.github.stephengold.joltjni.readonly.ConstShape
-import com.github.stephengold.joltjni.readonly.Vec3Arg
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 
 /*
