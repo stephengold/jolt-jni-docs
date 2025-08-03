@@ -51,6 +51,16 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp
  * author: Stephen Gold sgold@sonic.net
  */
 
+private const val BALL_RADIUS = 0.3f
+private const val GROUND_Y = -1f
+private const val MAX_BODIES = 5_000
+private const val MAX_BODY_PAIRS = 65_536
+private const val MAX_CONTACTS = 20_480
+private const val NUM_BODY_MUTEXES = 0  // 0 means "use the default number"
+
+// For simplicity, use a single broadphase layer:
+private const val NUM_BP_LAYERS = 1
+
 private var ball: Body? = null
 
 /*
@@ -70,9 +80,6 @@ class HelloSport : BasePhysicsApp() {
      * Create the PhysicsSystem. Invoked once during initialization.
      */
     override fun createSystem(): PhysicsSystem {
-        // For simplicity, use a single broadphase layer:
-        val numBpLayers = 1
-
         val ovoFilter = ObjectLayerPairFilterTable(numObjLayers)
         // Enable collisions between 2 moving bodies:
         ovoFilter.enableCollision(objLayerMoving, objLayerMoving)
@@ -82,23 +89,19 @@ class HelloSport : BasePhysicsApp() {
         ovoFilter.disableCollision(objLayerNonMoving, objLayerNonMoving)
 
         // Map both object layers to broadphase layer 0:
-        val layerMap = BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
+        val layerMap = BroadPhaseLayerInterfaceTable(numObjLayers, NUM_BP_LAYERS)
         layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0)
         layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
 
         // Rules for colliding object layers with broadphase layers:
         val ovbFilter = ObjectVsBroadPhaseLayerFilterTable(
-                layerMap, numBpLayers, ovoFilter, numObjLayers)
+            layerMap, NUM_BP_LAYERS, ovoFilter, numObjLayers)
 
         val result = PhysicsSystem()
 
         // Set high limits, even though this sample app uses only 2 bodies:
-        val maxBodies = 5_000
-        val numBodyMutexes = 0 // 0 means "use the default number"
-        val maxBodyPairs = 65_536
-        val maxContacts = 20_480
-        result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
-                layerMap, ovbFilter, ovoFilter)
+        result.init(MAX_BODIES, NUM_BODY_MUTEXES, MAX_BODY_PAIRS, MAX_CONTACTS,
+            layerMap, ovbFilter, ovoFilter)
 
         return result
     }
@@ -118,9 +121,8 @@ class HelloSport : BasePhysicsApp() {
         val bi = physicsSystem.getBodyInterface()
 
         // Add a static horizontal plane at y=-1:
-        val groundY = -1f
         val normal = Vec3.sAxisY()
-        val plane = Plane(normal, -groundY)
+        val plane = Plane(normal, -GROUND_Y)
         val floorShape = PlaneShape(plane)
         val bcs = BodyCreationSettings()
         bcs.setMotionType(EMotionType.Static)
@@ -130,8 +132,7 @@ class HelloSport : BasePhysicsApp() {
         bi.addBody(floor, EActivation.DontActivate)
 
         // Add a sphere-shaped, dynamic, rigid body at the origin:
-        val ballRadius = 0.3f
-        val ballShape = SphereShape(ballRadius)
+        val ballShape = SphereShape(BALL_RADIUS)
         bcs.setMotionType(EMotionType.Dynamic)
         bcs.setObjectLayer(objLayerMoving)
         bcs.setShape(ballShape)
