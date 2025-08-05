@@ -15,8 +15,7 @@ jobs:
           java-version: 11
       - uses: actions/checkout@v4
       - uses: gradle/actions/wrapper-validation@v4
-      - run: ./gradlew build javadoc --console=plain --stacktrace
-      - run: ./gradlew :java-apps:HelloJoltJni --console=plain --stacktrace
+      - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
 
   Java17-MacOS:
     if: contains(toJson(github.event.commits), '[ci skip] ') == false
@@ -27,8 +26,7 @@ jobs:
           distribution: 'zulu'
           java-version: 17
       - uses: actions/checkout@v4
-      - run: ./gradlew build javadoc --console=plain --stacktrace
-      - run: ./gradlew :java-apps:HelloJoltJni --console=plain --stacktrace
+      - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
 
   Java21-MacOS:
     if: contains(toJson(github.event.commits), '[ci skip] ') == false
@@ -39,8 +37,7 @@ jobs:
           distribution: 'zulu'
           java-version: 21
       - uses: actions/checkout@v4
-      - run: ./gradlew build javadoc --console=plain --stacktrace
-      - run: ./gradlew :java-apps:HelloJoltJni --console=plain --stacktrace
+      - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
 
   Java24-Windows:
     if: contains(toJson(github.event.commits), '[ci skip] ') == false
@@ -51,7 +48,5 @@ jobs:
           distribution: 'zulu'
           java-version: 24
       - uses: actions/checkout@v4
-      - run: ./gradlew build javadoc --console=plain --stacktrace
-        shell: bash
-      - run: ./gradlew :java-apps:HelloJoltJni --console=plain --stacktrace
+      - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
         shell: bash
