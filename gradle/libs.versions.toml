@@ -8,6 +8,8 @@ lwjgl = "3.3.6"
 
 [libraries]
 
+groovy-all = "org.codehaus.groovy:groovy-all:3.0.24"
+
 jolt-jni-linux64 = { module = "com.github.stephengold:jolt-jni-Linux64", version.ref = "joltjni" }
 jolt-jni-linux64fma = { module = "com.github.stephengold:jolt-jni-Linux64_fma", version.ref = "joltjni" }
 jolt-jni-linuxarm32hf = { module = "com.github.stephengold:jolt-jni-Linux_ARM32hf", version.ref = "joltjni" }

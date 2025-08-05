@@ -7,6 +7,7 @@ It contains 3 subprojects:
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
 3. kotlin-apps: sample applications in [Kotlin]
+4. groovy-apps: sample applications in [Groovy]
 
 The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
@@ -65,6 +66,7 @@ You can restore the project to a pristine state:
 [git]: https://git-scm.com "Git version-control system"
 [github]: https://en.wikipedia.org/wiki/GitHub "GitHub"
 [gradle]: https://gradle.org "Gradle build tool"
+[groovy]: https://en.wikipedia.org/wiki/Apache_Groovy "Groovy programming language"
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language) "Java programming language"
 [joltjni]: https://stephengold.github.io/jolt-jni-docs "Jolt-JNI project"
 [kotlin]: https://en.wikipedia.org/wiki/Kotlin_(programming_language) "Kotlin programming language"
