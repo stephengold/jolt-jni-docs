@@ -59,6 +59,7 @@ import electrostatic4j.snaploader.NativeBinaryLoader
 import electrostatic4j.snaploader.filesystem.DirectoryPath
 import electrostatic4j.snaploader.platform.NativeDynamicLibrary
 import electrostatic4j.snaploader.platform.util.PlatformPredicate
+import groovy.transform.CompileStatic
 
 /**
  * Drop a dynamic sphere onto a horizontal surface (non-graphical illustrative
@@ -66,22 +67,24 @@ import electrostatic4j.snaploader.platform.util.PlatformPredicate
  *
  * @author Stephen Gold sgold@sonic.net
  */
+@CompileStatic
 final public class HelloJoltJni {
+
     // *************************************************************************
     // constants
 
     /**
      * number of object layers
      */
-    final private static int numObjLayers = 2
+    final private static int NUM_OBJ_LAYERS = 2
     /**
      * object layer for moving objects
      */
-    final private static int objLayerMoving = 0
+    final private static int OBJ_LAYER_MOVING = 0
     /**
      * object layer for non-moving objects
      */
-    final private static int objLayerNonMoving = 1
+    final private static int OBJ_LAYER_NONMOVING = 1
     // *************************************************************************
     // fields
 
@@ -101,22 +104,22 @@ final public class HelloJoltJni {
      *
      * @param arguments array of command-line arguments (not null)
      */
-    public static void main(String[] arguments) {
-        LibraryInfo info = new LibraryInfo(null, "joltjni", DirectoryPath.USER_DIR)
+    static void main(String[] arguments) {
+        LibraryInfo info = new LibraryInfo(null, 'joltjni', DirectoryPath.USER_DIR)
         NativeBinaryLoader loader = new NativeBinaryLoader(info)
 
         NativeDynamicLibrary[] libraries = [
-            new NativeDynamicLibrary("linux/aarch64/com/github/stephengold",
+            new NativeDynamicLibrary('linux/aarch64/com/github/stephengold',
                 PlatformPredicate.LINUX_ARM_64),
-            new NativeDynamicLibrary("linux/armhf/com/github/stephengold",
+            new NativeDynamicLibrary('linux/armhf/com/github/stephengold',
                 PlatformPredicate.LINUX_ARM_32),
-            new NativeDynamicLibrary("linux/x86-64/com/github/stephengold",
+            new NativeDynamicLibrary('linux/x86-64/com/github/stephengold',
                 PlatformPredicate.LINUX_X86_64),
-            new NativeDynamicLibrary("osx/aarch64/com/github/stephengold",
+            new NativeDynamicLibrary('osx/aarch64/com/github/stephengold',
                 PlatformPredicate.MACOS_ARM_64),
-            new NativeDynamicLibrary("osx/x86-64/com/github/stephengold",
+            new NativeDynamicLibrary('osx/x86-64/com/github/stephengold',
                 PlatformPredicate.MACOS_X86_64),
-            new NativeDynamicLibrary("windows/x86-64/com/github/stephengold",
+            new NativeDynamicLibrary('windows/x86-64/com/github/stephengold',
                 PlatformPredicate.WIN_X86_64)
         ]
         loader.registerNativeLibraries(libraries).initPlatformLibrary()
@@ -124,7 +127,7 @@ final public class HelloJoltJni {
             loader.loadLibrary(LoadingCriterion.CLEAN_EXTRACTION)
         } catch (Exception exception) {
             throw new IllegalStateException(
-                    "Failed to load a Jolt-JNI native library!")
+                    'Failed to load a Jolt-JNI native library!')
         }
 
         //Jolt.setTraceAllocations(true) // to log Jolt-JNI heap allocations
@@ -141,7 +144,7 @@ final public class HelloJoltJni {
         physicsSystem.optimizeBroadPhase()
 
         TempAllocator tempAllocator = new TempAllocatorMalloc()
-        int numWorkerThreads = Runtime.getRuntime().availableProcessors()
+        int numWorkerThreads = Runtime.runtime.availableProcessors()
         JobSystem jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
             Jolt.cMaxPhysicsBarriers, numWorkerThreads)
 
@@ -152,7 +155,7 @@ final public class HelloJoltJni {
                 timePerStep, collisionSteps, tempAllocator, jobSystem)
             assert errors == EPhysicsUpdateError.None : errors
 
-            RVec3Arg location = ball.getPosition()
+            RVec3Arg location = ball.position
             System.out.println(location)
         }
     }
@@ -168,22 +171,22 @@ final public class HelloJoltJni {
         // For simplicity, use a single broadphase layer:
         int numBpLayers = 1
 
-        ObjectLayerPairFilterTable ovoFilter = new ObjectLayerPairFilterTable(numObjLayers)
+        ObjectLayerPairFilterTable ovoFilter = new ObjectLayerPairFilterTable(NUM_OBJ_LAYERS)
         // Enable collisions between 2 moving bodies:
-        ovoFilter.enableCollision(objLayerMoving, objLayerMoving)
+        ovoFilter.enableCollision(OBJ_LAYER_MOVING, OBJ_LAYER_MOVING)
         // Enable collisions between a moving body and a non-moving one:
-        ovoFilter.enableCollision(objLayerMoving, objLayerNonMoving)
+        ovoFilter.enableCollision(OBJ_LAYER_MOVING, OBJ_LAYER_NONMOVING)
         // Disable collisions between 2 non-moving bodies:
-        ovoFilter.disableCollision(objLayerNonMoving, objLayerNonMoving)
+        ovoFilter.disableCollision(OBJ_LAYER_NONMOVING, OBJ_LAYER_NONMOVING)
 
         // Map both object layers to broadphase layer 0:
-        BroadPhaseLayerInterfaceTable layerMap = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
-        layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0)
-        layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
+        BroadPhaseLayerInterfaceTable layerMap = new BroadPhaseLayerInterfaceTable(NUM_OBJ_LAYERS, numBpLayers)
+        layerMap.mapObjectToBroadPhaseLayer(OBJ_LAYER_MOVING, 0)
+        layerMap.mapObjectToBroadPhaseLayer(OBJ_LAYER_NONMOVING, 0)
 
         // Rules for colliding object layers with broadphase layers:
         ObjectVsBroadPhaseLayerFilter ovbFilter = new ObjectVsBroadPhaseLayerFilterTable(
-            layerMap, numBpLayers, ovoFilter, numObjLayers)
+            layerMap, numBpLayers, ovoFilter, NUM_OBJ_LAYERS)
 
         PhysicsSystem result = new PhysicsSystem()
 
@@ -203,7 +206,7 @@ final public class HelloJoltJni {
      * initialization.
      */
     private static void populateSystem() {
-        BodyInterface bi = physicsSystem.getBodyInterface()
+        BodyInterface bi = physicsSystem.bodyInterface
 
         // Add a static horizontal plane at y=-1:
         float groundY = -1f
@@ -211,19 +214,20 @@ final public class HelloJoltJni {
         ConstPlane plane = new Plane(normal, -groundY)
         ConstShape floorShape = new PlaneShape(plane)
         BodyCreationSettings bcs = new BodyCreationSettings()
-        bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(objLayerNonMoving)
-        bcs.setShape(floorShape)
+        bcs.motionType = EMotionType.Static
+        bcs.objectLayer = OBJ_LAYER_NONMOVING
+        bcs.shape = floorShape
         Body floor = bi.createBody(bcs)
         bi.addBody(floor, EActivation.DontActivate)
 
         // Add a sphere-shaped, dynamic, rigid body at the origin:
         float ballRadius = 0.3f
         ConstShape ballShape = new SphereShape(ballRadius)
-        bcs.setMotionType(EMotionType.Dynamic)
-        bcs.setObjectLayer(objLayerMoving)
-        bcs.setShape(ballShape)
+        bcs.motionType = EMotionType.Dynamic
+        bcs.objectLayer = OBJ_LAYER_MOVING
+        bcs.shape = ballShape
         ball = bi.createBody(bcs)
         bi.addBody(ball, EActivation.Activate)
     }
+
 }
