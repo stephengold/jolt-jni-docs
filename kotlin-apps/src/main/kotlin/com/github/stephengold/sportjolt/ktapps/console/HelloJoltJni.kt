@@ -26,6 +26,7 @@
  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
 package com.github.stephengold.sportjolt.ktapps.console
 
 import com.github.stephengold.joltjni.Body
@@ -100,9 +101,9 @@ fun main() {
         throw IllegalStateException("Failed to load a Jolt-JNI native library!")
     }
 
-    //Jolt.setTraceAllocations(true) // to log Jolt-JNI heap allocations
-    JoltPhysicsObject.startCleaner() // to reclaim native memory automatically
-    Jolt.registerDefaultAllocator() // tell Jolt Physics to use malloc/free
+    // Jolt.setTraceAllocations(true)  // to log Jolt-JNI heap allocations
+    JoltPhysicsObject.startCleaner()  // to reclaim native memory automatically
+    Jolt.registerDefaultAllocator()  // tell Jolt Physics to use malloc/free
     Jolt.installDefaultAssertCallback()
     Jolt.installDefaultTraceCallback()
     val success = Jolt.newFactory()
@@ -116,7 +117,7 @@ fun main() {
     val tempAllocator = TempAllocatorMalloc()
     val numWorkerThreads = Runtime.getRuntime().availableProcessors()
     val jobSystem = JobSystemThreadPool(
-            Jolt.cMaxPhysicsJobs, Jolt.cMaxPhysicsBarriers, numWorkerThreads)
+        Jolt.cMaxPhysicsJobs, Jolt.cMaxPhysicsBarriers, numWorkerThreads)
 
     for (iteration in 0 ..< 50) {
         val collisionSteps = 1

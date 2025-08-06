@@ -26,6 +26,7 @@
  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
 package com.github.stephengold.sportjolt.ktapps.tutorial
 
 import com.github.stephengold.joltjni.Body
@@ -48,11 +49,12 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp
  *
  * Builds upon HelloJoltJni.
  *
- * author: Stephen Gold sgold@sonic.net
+ * author:  Stephen Gold sgold@sonic.net
  */
 
 private const val BALL_RADIUS = 0.3f
 private const val GROUND_Y = -1f
+
 private const val MAX_BODIES = 5_000
 private const val MAX_BODY_PAIRS = 65_536
 private const val MAX_CONTACTS = 20_480
