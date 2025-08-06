@@ -47,7 +47,7 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp
  * Drop a dynamic sphere onto a horizontal surface and visualize them both using
  * Sport-Jolt graphics.
  *
- * Builds upon HelloJoltJni.
+ * Builds upon HelloJoltJniKt.
  *
  * author:  Stephen Gold sgold@sonic.net
  */
@@ -65,6 +65,9 @@ private const val NUM_BP_LAYERS = 1
 
 private var ball: Body? = null
 
+/**
+ * Drop a dynamic sphere onto a horizontal surface.
+ */
 class HelloSport : BasePhysicsApp() {
     /*
      * Create the PhysicsSystem. Invoked once during initialization.
