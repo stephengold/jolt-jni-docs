@@ -2,6 +2,7 @@
 
 plugins {
     base // to add a "clean" task to the root project
+    alias(libs.plugins.diktat) // to analyze Kotlin sourcecode
 }
 
 configurations.all {
@@ -11,6 +12,13 @@ configurations.all {
 tasks.register("checkstyle") {
     dependsOn(":java-apps:checkstyleMain")
     description = "Checks the style of all Java sourcecode."
+}
+
+diktat {
+    diktatConfigFile = file(rootDir.path + "/config/diktat.yml")
+    inputs {
+        include("kotlin-apps/src/main/kotlin/**/*.kt")
+    }
 }
 
 // Register cleanup tasks:

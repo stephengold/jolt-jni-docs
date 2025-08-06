@@ -16,6 +16,10 @@ tasks.named<Jar>("jar") {
     }
 }
 
+tasks.named("test") {
+    dependsOn(":diktatCheck")
+}
+
 // Register tasks to run specific applications:
 
 // physics console apps (no graphics)
