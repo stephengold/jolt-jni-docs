@@ -24,6 +24,10 @@ tasks.withType<JavaCompile>().all { // Java compile-time options:
     options.release = 11
 }
 
+application {
+    mainClass = "com.github.stephengold.sportjolt.javaapp.sample.HelloSport"
+}
+
 // Register tasks to run specific applications:
 
 // physics console apps (no graphics)
