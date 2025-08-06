@@ -56,26 +56,14 @@ private const val BALL_RADIUS = 0.3f
 private const val GROUND_Y = -1f
 
 private const val MAX_BODIES = 5_000
+private const val NUM_BODY_MUTEXES = 0  // 0 means "use the default number"
 private const val MAX_BODY_PAIRS = 65_536
 private const val MAX_CONTACTS = 20_480
-private const val NUM_BODY_MUTEXES = 0  // 0 means "use the default number"
 
 // For simplicity, use a single broadphase layer:
 private const val NUM_BP_LAYERS = 1
 
 private var ball: Body? = null
-
-/*
- * Main entry point for the HelloSport application.
- */
-fun main() {
-    val application = HelloSport()
-    application.start()
-    /*
-     * During initialization, BasePhysicsApp loads the native library
-     * and invokes createSystem() and populateSystem().
-     */
-}
 
 class HelloSport : BasePhysicsApp() {
     /*
@@ -145,4 +133,16 @@ class HelloSport : BasePhysicsApp() {
         visualizeShape(floor)
         visualizeShape(ball)
     }
+}
+
+/**
+ * Main entry point for the HelloSportKt application.
+ */
+fun main() {
+    val application = HelloSport()
+    application.start()
+    /*
+     * During initialization, BasePhysicsApp loads the native library
+     * and invokes createSystem() and populateSystem().
+     */
 }
