@@ -162,9 +162,10 @@ tasks.withType<JavaExec>().all { // JVM runtime options:
 val btf = providers.gradleProperty("btf").get()
 
 dependencies {
-    runtimeOnly(libs.oshi.core)
-    runtimeOnly(libs.log4j.impl)
     implementation(libs.sport.jolt)
+
+    runtimeOnly(libs.log4j.impl)
+    runtimeOnly(libs.oshi.core)
 
     if (includeLinux) {
         runtimeOnly(variantOf(libs.jolt.jni.linux64){classifier(btf)})
