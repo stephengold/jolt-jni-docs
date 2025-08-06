@@ -19,6 +19,12 @@ tasks.register<JavaExec>("HelloJoltJni") {
     mainClass = "com.github.stephengold.sportjolt.groovy.console.HelloJoltJni"
 }
 
+// physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloSport") {
+    description = "Runs the Groovy version of the HelloSport tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.groovy.tutorial.HelloSport"
+}
+
 val assertions = providers.gradleProperty("assertions").get().equals("true")
 
 val os = DefaultNativePlatform.getCurrentOperatingSystem()
