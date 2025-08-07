@@ -45,6 +45,7 @@ import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.joltjni.enumerate.EPhysicsUpdateError
+import com.github.stephengold.joltjni.readonly.ConstBody
 import electrostatic4j.snaploader.LibraryInfo
 import electrostatic4j.snaploader.LoadingCriterion
 import electrostatic4j.snaploader.NativeBinaryLoader
@@ -65,26 +66,26 @@ object HelloJoltJni {
     /**
      * number of object layers
      */
-    val numObjLayers = 2
+    private val numObjLayers = 2
     /**
      * object layer for moving objects
      */
-    val objLayerMoving = 0
+    private val objLayerMoving = 0
     /**
      * object layer for non-moving objects
      */
-    val objLayerNonMoving = 1
+    private val objLayerNonMoving = 1
     // *************************************************************************
     // fields
 
     /**
      * falling rigid body
      */
-    var ball = null: Body
+    private var ball: ConstBody = null
     /**
      * system to simulate
      */
-    var physicsSystem = null: PhysicsSystem
+    private var physicsSystem: PhysicsSystem = null
     // *************************************************************************
     // new methods exposed
 
@@ -153,7 +154,7 @@ object HelloJoltJni {
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
-    def createSystem(): PhysicsSystem = {
+    private def createSystem: PhysicsSystem = {
         // For simplicity, use a single broadphase layer:
         val numBpLayers = 1
 
@@ -190,7 +191,7 @@ object HelloJoltJni {
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
-     def populateSystem(): Unit = {
+    private def populateSystem: Unit = {
         val bi = physicsSystem.getBodyInterface
 
         // Add a static horizontal plane at y=-1:
