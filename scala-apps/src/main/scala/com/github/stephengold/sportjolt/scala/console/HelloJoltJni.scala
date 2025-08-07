@@ -109,7 +109,7 @@ object HelloJoltJni {
             new NativeDynamicLibrary("windows/x86-64/com/github/stephengold",
                     PlatformPredicate.WIN_X86_64)
         )
-        loader.registerNativeLibraries(libraries).initPlatformLibrary()
+        loader.registerNativeLibraries(libraries).initPlatformLibrary
         try
             loader.loadLibrary(LoadingCriterion.CLEAN_EXTRACTION)
         catch {
@@ -119,20 +119,20 @@ object HelloJoltJni {
         }
 
         //Jolt.setTraceAllocations(true) // to log Jolt-JNI heap allocations
-        JoltPhysicsObject.startCleaner() // to reclaim native memory
-        Jolt.registerDefaultAllocator() // tell Jolt Physics to use malloc/free
-        Jolt.installDefaultAssertCallback()
-        Jolt.installDefaultTraceCallback()
-        val success = Jolt.newFactory()
+        JoltPhysicsObject.startCleaner // to reclaim native memory
+        Jolt.registerDefaultAllocator // tell Jolt Physics to use malloc/free
+        Jolt.installDefaultAssertCallback
+        Jolt.installDefaultTraceCallback
+        val success = Jolt.newFactory
         assert(success)
-        Jolt.registerTypes()
+        Jolt.registerTypes
 
-        physicsSystem = createSystem()
-        populateSystem()
-        physicsSystem.optimizeBroadPhase()
+        physicsSystem = createSystem
+        populateSystem
+        physicsSystem.optimizeBroadPhase
 
-        val tempAllocator = new TempAllocatorMalloc()
-        val numWorkerThreads = Runtime.getRuntime().availableProcessors()
+        val tempAllocator = new TempAllocatorMalloc
+        val numWorkerThreads = Runtime.getRuntime.availableProcessors
         val jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
                 Jolt.cMaxPhysicsBarriers, numWorkerThreads)
 
@@ -143,7 +143,7 @@ object HelloJoltJni {
                     timePerStep, collisionSteps, tempAllocator, jobSystem)
             assert(errors == EPhysicsUpdateError.None)
 
-            val location = ball.getPosition()
+            val location = ball.getPosition
             println(location)
         }
     }
@@ -174,7 +174,7 @@ object HelloJoltJni {
         val ovbFilter = new ObjectVsBroadPhaseLayerFilterTable(
                         layerMap, numBpLayers, ovoFilter, numObjLayers)
 
-        val result = new PhysicsSystem()
+        val result = new PhysicsSystem
 
         // Set high limits, even though this sample app uses only 2 bodies:
         val maxBodies = 5_000
@@ -191,14 +191,14 @@ object HelloJoltJni {
      * initialization.
      */
      def populateSystem(): Unit = {
-        val bi = physicsSystem.getBodyInterface()
+        val bi = physicsSystem.getBodyInterface
 
         // Add a static horizontal plane at y=-1:
         val groundY = -1f
-        val normal = Vec3.sAxisY()
+        val normal = Vec3.sAxisY
         val plane = new Plane(normal, -groundY)
         val floorShape = new PlaneShape(plane)
-        val bcs = new BodyCreationSettings()
+        val bcs = new BodyCreationSettings
         bcs.setMotionType(EMotionType.Static)
         bcs.setObjectLayer(objLayerNonMoving)
         bcs.setShape(floorShape)
