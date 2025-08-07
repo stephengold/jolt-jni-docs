@@ -2,13 +2,14 @@
 documentation and sample applications
 for [the Jolt-JNI physics library][joltjni].
 
-It contains 5 subprojects:
+It contains 6 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
 3. kotlin-apps: sample applications in [Kotlin]
 4. groovy-apps: sample applications in [Groovy]
 5. scala-apps: sample applications in [Scala]
+6. src/clojure: sample applications in [Clojure]
 
 The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
@@ -19,7 +20,7 @@ Complete source code is provided under
 
 ## How to build and run jolt-jni-docs from source
 
-### Sample applications
+### Sample applications (except Clojure)
 
 1. Install a [Java Development Kit (JDK)][adoptium],
    if you don't already have one.
@@ -46,6 +47,14 @@ To run the "HelloJoltJni" application:
   + using Bash or Fish or PowerShell or Zsh: `./gradlew :java-apps:HelloJoltJni`
   + using Windows Command Prompt: `.\gradlew :java-apps:HelloJoltJni`
 
+### Clojure sample applications
+
+1. Install a [Java Development Kit (JDK)][adoptium],
+   if you don't already have one.
+2. Install a [Leiningen build tool][leiningen].
+3. Download and extract the jolt-jni-docs source code from GitHub.
+4. `lein run`
+
 ### Antora documentation
 
 1. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-docs"
@@ -63,6 +72,7 @@ You can restore the project to a pristine state:
 
 [adoptium]: https://adoptium.net/releases.html "Adoptium"
 [antora]: https://antora.org/ "Antora site generator"
+[clojure]: https://clojure.org/ "Clojure programming language"
 [fish]: https://fishshell.com/ "Fish command-line shell"
 [git]: https://git-scm.com "Git version-control system"
 [github]: https://en.wikipedia.org/wiki/GitHub "GitHub"
@@ -71,6 +81,7 @@ You can restore the project to a pristine state:
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language) "Java programming language"
 [joltjni]: https://stephengold.github.io/jolt-jni-docs "Jolt-JNI project"
 [kotlin]: https://en.wikipedia.org/wiki/Kotlin_(programming_language) "Kotlin programming language"
+[leiningen]: https://codeberg.org/leiningen/leiningen/src/branch/stable/README.md "Leiningen build tool"
 [license]: https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE "jolt-jni-docs license"
 [project]: https://github.com/stephengold/jolt-jni-docs "jolt-jni-docs project"
 [scala]: https://en.wikipedia.org/wiki/Scala_(programming_language) "Scala programming language"

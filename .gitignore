@@ -9,6 +9,9 @@
 /kotlin-apps/build/
 /scala-apps/build/
 
+# Ignore Leiningen's build output directory:
+/target/
+
 /docs/*-javadoc.jar
 /node_modules/
 
