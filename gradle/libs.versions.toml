@@ -29,6 +29,7 @@ lwjgl-glfw = { module = "org.lwjgl:lwjgl-glfw", version.ref = "lwjgl" }
 lwjgl-opengl = { module = "org.lwjgl:lwjgl-opengl", version.ref = "lwjgl" }
 
 oshi-core = "com.github.oshi:oshi-core:6.8.2"
+scala-library = "org.scala-lang:scala-library:2.13.16"
 sport-jolt = "com.github.stephengold:sport-jolt:0.9.6"
 
 [bundles]
