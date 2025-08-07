@@ -91,6 +91,8 @@ object HelloJoltJni {
 
     /**
      * Main entry point for the HelloJoltJni application.
+     *
+     * @param arguments array of command-line arguments (not null)
      */
     def main(arguments: Array[String]): Unit = {
         val info = new LibraryInfo(null, "joltjni", DirectoryPath.USER_DIR)
@@ -153,6 +155,8 @@ object HelloJoltJni {
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
+     *
+     * @return a new object
      */
     private def createSystem: PhysicsSystem = {
         // For simplicity, use a single broadphase layer:
