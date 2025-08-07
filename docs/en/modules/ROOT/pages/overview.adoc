@@ -11,7 +11,7 @@ such as {url-enwiki}/Java_(programming_language)[Java] and
 
 Use it to:
 
-* add solidity to walls, characters, projectiles, landscapes, and vehicles,
+* add solidity to architecture, characters, projectiles, terrain, and vehicles,
 * detect collisions between complex shapes,
 * perform contact, ray, and sweep tests,
 * simulate characters and buildings collapsing in real time, and
