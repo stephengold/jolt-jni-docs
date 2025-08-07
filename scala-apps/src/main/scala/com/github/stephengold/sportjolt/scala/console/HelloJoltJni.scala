@@ -114,9 +114,9 @@ object HelloJoltJni {
         try
             loader.loadLibrary(LoadingCriterion.CLEAN_EXTRACTION)
         catch {
-            case exception: Exception => {
-                exception.printStackTrace
-            }
+            case exception: Exception =>
+                throw new IllegalStateException(
+                    "Failed to load a Jolt-JNI native library!")
         }
 
         //Jolt.setTraceAllocations(true) // to log Jolt-JNI heap allocations
