@@ -13,13 +13,14 @@ sourceSets.main {
     }
 }
 
-application {
-    mainClass = "com.github.stephengold.sportjolt.scala.console.HelloJoltJni"
-}
 tasks.named<Jar>("jar") {
     manifest {
         attributes["Main-Class"] = application.mainClass
     }
+}
+
+application {
+    mainClass = "com.github.stephengold.sportjolt.scala.console.HelloJoltJni"
 }
 
 // Register tasks to run specific applications:
