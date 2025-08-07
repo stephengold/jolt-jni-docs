@@ -92,7 +92,7 @@ object HelloJoltJni {
     /**
      * Main entry point for the HelloJoltJni application.
      */
-    def main(args: Array[String]): Unit = {
+    def main(arguments: Array[String]): Unit = {
         val info = new LibraryInfo(null, "joltjni", DirectoryPath.USER_DIR)
         val loader = new NativeBinaryLoader(info)
 
