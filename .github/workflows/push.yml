@@ -65,4 +65,3 @@ jobs:
       - uses: DeLaGuardo/setup-clojure@13.4
         with:
           lein: 2.11.2
-      - run: lein run
