@@ -26,7 +26,7 @@
 ; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ; HelloJoltJni class
-:
+;
 ; Drop a dynamic sphere onto a horizontal surface (non-graphical illustrative example).
 ;
 ; author: Stephen Gold sgold@sonic.net
