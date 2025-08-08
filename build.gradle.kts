@@ -24,11 +24,14 @@ diktat {
 // Register cleanup tasks:
 
 tasks.named("clean") {
-    dependsOn("cleanDocsBuild", "cleanNodeModules", ":docs:cleanJavadocJar")
+    dependsOn("cleanDocsBuild", "cleanNodeModules", "cleanTarget", ":docs:cleanJavadocJar")
 }
 tasks.register<Delete>("cleanDocsBuild") {
     delete("docs/build")
 }
 tasks.register<Delete>("cleanNodeModules") {
     delete("node_modules")
+}
+tasks.register<Delete>("cleanTarget") {
+    delete("target")
 }
