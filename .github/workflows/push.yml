@@ -19,7 +19,7 @@ jobs:
       - name: Install clojure tools
         uses: DeLaGuardo/setup-clojure@13.4
         with:
-          lein: 2.9.10
+          lein: 2.11.2
       - run: lein run
 
   Java17-MacOS:
