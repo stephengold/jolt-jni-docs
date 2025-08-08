@@ -66,4 +66,3 @@ jobs:
         with:
           lein: 2.11.2
       - run: lein run
-        shell: bash
