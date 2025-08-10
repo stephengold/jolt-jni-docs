@@ -3,11 +3,7 @@
 
 # Ignore Gradle's build output directories:
 /build/
-/docs/build/
-/groovy-apps/build/
-/java-apps/build/
-/kotlin-apps/build/
-/scala-apps/build/
+/*/build/
 
 # Ignore Leiningen's build output directory:
 /target/
