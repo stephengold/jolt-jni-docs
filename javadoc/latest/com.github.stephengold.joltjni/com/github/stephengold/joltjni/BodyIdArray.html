@@ -113,7 +113,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int)" class="member-name-link">BodyIdArray</a><wbr>(int&nbsp;length)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Instantiate an array with the specified length.</div>
+<div class="block">Instantiate an uninitialized array with the specified length.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int...)" class="member-name-link">BodyIdArray</a><wbr>(int...&nbsp;idArray)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate an array initialized from a Java array.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.nio.IntBuffer)" class="member-name-link">BodyIdArray</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;idBuffer)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate an array initialized from a direct buffer.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.List)" class="member-name-link">BodyIdArray</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;idList)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate an array initialized from a Java list.</div>
 </div>
 </div>
 </section>
@@ -134,10 +146,15 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the ID at the specified index.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,int)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
- int&nbsp;bodyId)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#length()" class="member-name-link">length</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the length of the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,int)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
+ int&nbsp;bodyId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Store the specified ID at the specified index.</div>
 </div>
 </div>
@@ -164,10 +181,44 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(int)">
 <h3>BodyIdArray</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BodyIdArray</span><wbr><span class="parameters">(int&nbsp;length)</span></div>
-<div class="block">Instantiate an array with the specified length.</div>
+<div class="block">Instantiate an uninitialized array with the specified length.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>length</code> - the desired number of IDs (&ge;0)</dd>
+<dd><code>length</code> - the desired number of IDs (&gt;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int...)">
+<h3>BodyIdArray</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BodyIdArray</span><wbr><span class="parameters">(int...&nbsp;idArray)</span></div>
+<div class="block">Instantiate an array initialized from a Java array.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>idArray</code> - the ID values (not null, not empty, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.nio.IntBuffer)">
+<h3>BodyIdArray</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BodyIdArray</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;idBuffer)</span></div>
+<div class="block">Instantiate an array initialized from a direct buffer.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>idBuffer</code> - the ID values (not null, direct, positive capacity,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.util.List)">
+<h3>BodyIdArray</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BodyIdArray</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;idList)</span></div>
+<div class="block">Instantiate an array initialized from a Java list.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>idList</code> - the ID values (not null, not empty, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -189,6 +240,17 @@ loadScripts(document, 'script');</script>
 <dd><code>elementIndex</code> - the index from which to copy the ID (&ge;0)</dd>
 <dt>Returns:</dt>
 <dd>the <code>BodyID</code> value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="length()">
+<h3>length</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">length</span>()</div>
+<div class="block">Return the length of the array.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the length (in IDs)</dd>
 </dl>
 </section>
 </li>

@@ -260,13 +260,13 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Return the product of the specified matrices.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#put3x3ColumnMajor(java.nio.FloatBuffer)" class="member-name-link">put3x3ColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#put3x3ColumnMajor(java.nio.FloatBuffer)" class="member-name-link">put3x3ColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write the 3x3 matrix in single precision to the specified buffer in
  column-major order and advance the buffer's position by 9.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putColumnMajor(java.nio.FloatBuffer)" class="member-name-link">putColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putColumnMajor(java.nio.FloatBuffer)" class="member-name-link">putColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write all 16 components in single precision to the specified buffer in
  column-major order and advance the buffer's position by 16.</div>
@@ -922,7 +922,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <li>
 <section class="detail" id="put3x3ColumnMajor(java.nio.FloatBuffer)">
 <h3>put3x3ColumnMajor</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">put3x3ColumnMajor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">put3x3ColumnMajor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</span></div>
 <div class="block">Write the 3x3 matrix in single precision to the specified buffer in
  column-major order and advance the buffer's position by 9. The matrix is
  unaffected.</div>
@@ -930,14 +930,14 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#put3x3ColumnMajor(java.nio.FloatBuffer)">put3x3ColumnMajor</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the destination buffer (not null)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not null)</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="putColumnMajor(java.nio.FloatBuffer)">
 <h3>putColumnMajor</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">putColumnMajor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">putColumnMajor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</span></div>
 <div class="block">Write all 16 components in single precision to the specified buffer in
  column-major order and advance the buffer's position by 16. The matrix is
  unaffected.</div>
@@ -945,7 +945,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#putColumnMajor(java.nio.FloatBuffer)">putColumnMajor</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the destination buffer (not null)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not null)</dd>
 </dl>
 </section>
 </li>

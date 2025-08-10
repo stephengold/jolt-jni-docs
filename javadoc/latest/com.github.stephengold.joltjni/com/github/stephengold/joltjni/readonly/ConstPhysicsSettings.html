@@ -151,8 +151,13 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Return the point-motion threshold, below which objects can fall asleep.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeBeforeSleep()" class="member-name-link">getTimeBeforeSleep</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSpeculativeContactDistance()" class="member-name-link">getSpeculativeContactDistance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the speculative contact distance.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeBeforeSleep()" class="member-name-link">getTimeBeforeSleep</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Alter the time interval before an object can fall asleep.</div>
 </div>
 </div>
@@ -254,6 +259,17 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the speed threshold (in meters per second, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSpeculativeContactDistance()">
+<h3>getSpeculativeContactDistance</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getSpeculativeContactDistance</span>()</div>
+<div class="block">Return the speculative contact distance. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the distance (in meters, ≥0)</dd>
 </dl>
 </section>
 </li>

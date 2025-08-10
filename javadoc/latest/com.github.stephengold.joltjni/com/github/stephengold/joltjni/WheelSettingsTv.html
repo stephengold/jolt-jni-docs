@@ -98,11 +98,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code>, <code><a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">WheelSettingsTv</span>
-<span class="extends-implements">extends <a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a></span></div>
+<span class="extends-implements">extends <a href="WheelSettings.html" title="class in com.github.stephengold.joltjni">WheelSettings</a>
+implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></span></div>
 <div class="block">Settings used to construct a <code>WheelTv</code>. (native type: WheelSettingsTV)</div>
 </section>
 <section class="summary">
@@ -119,7 +120,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.WheelSettingsTv)" class="member-name-link">WheelSettingsTv</a><wbr>(<a href="WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstWheelSettingsTv)" class="member-name-link">WheelSettingsTv</a><wbr>(<a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -137,6 +138,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLateralFriction()" class="member-name-link">getLateralFriction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the tire's friction in the sideways direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLongitudinalFriction()" class="member-name-link">getLongitudinalFriction</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the tire's friction in the forward direction.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -146,6 +157,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Mark the native <code>WheelSettingsTV</code> as embedded.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLateralFriction(float)" class="member-name-link">setLateralFriction</a><wbr>(float&nbsp;friction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the wheel's friction in the sideways direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLongitudinalFriction(float)" class="member-name-link">setLongitudinalFriction</a><wbr>(float&nbsp;friction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the wheel's friction in the forward direction.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
@@ -176,6 +197,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
 <code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstWheelSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></h3>
+<code><a href="readonly/ConstWheelSettings.html#getEnableSuspensionForcePoint()">getEnableSuspensionForcePoint</a>, <a href="readonly/ConstWheelSettings.html#getPosition()">getPosition</a>, <a href="readonly/ConstWheelSettings.html#getRadius()">getRadius</a>, <a href="readonly/ConstWheelSettings.html#getSteeringAxis()">getSteeringAxis</a>, <a href="readonly/ConstWheelSettings.html#getSuspensionDirection()">getSuspensionDirection</a>, <a href="readonly/ConstWheelSettings.html#getSuspensionForcePoint()">getSuspensionForcePoint</a>, <a href="readonly/ConstWheelSettings.html#getSuspensionMaxLength()">getSuspensionMaxLength</a>, <a href="readonly/ConstWheelSettings.html#getSuspensionMinLength()">getSuspensionMinLength</a>, <a href="readonly/ConstWheelSettings.html#getSuspensionPreloadLength()">getSuspensionPreloadLength</a>, <a href="readonly/ConstWheelSettings.html#getSuspensionSpring()">getSuspensionSpring</a>, <a href="readonly/ConstWheelSettings.html#getWheelForward()">getWheelForward</a>, <a href="readonly/ConstWheelSettings.html#getWheelUp()">getWheelUp</a>, <a href="readonly/ConstWheelSettings.html#getWidth()">getWidth</a>, <a href="readonly/ConstWheelSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code></div>
 </section>
 </li>
 </ul>
@@ -195,9 +219,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.WheelSettingsTv)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstWheelSettingsTv)">
 <h3>WheelSettingsTv</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">WheelSettingsTv</span><wbr><span class="parameters">(<a href="WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">WheelSettingsTv</span><wbr><span class="parameters">(<a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -213,6 +237,58 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="setLateralFriction(float)">
+<h3>setLateralFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLateralFriction</span><wbr><span class="parameters">(float&nbsp;friction)</span></div>
+<div class="block">Alter the wheel's friction in the sideways direction. (native attribute:
+ mLateralFriction)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>friction</code> - the desired friction (default=2)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLongitudinalFriction(float)">
+<h3>setLongitudinalFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLongitudinalFriction</span><wbr><span class="parameters">(float&nbsp;friction)</span></div>
+<div class="block">Alter the wheel's friction in the forward direction. (native attribute:
+ mLongitudinalFriction)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>friction</code> - the desired friction (default=4)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLateralFriction()">
+<h3>getLateralFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLateralFriction</span>()</div>
+<div class="block">Return the tire's friction in the sideways direction. The settings are
+ unaffected. (native attribute: mLateralFriction)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsTv.html#getLateralFriction()">getLateralFriction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></code></dd>
+<dt>Returns:</dt>
+<dd>the friction</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLongitudinalFriction()">
+<h3>getLongitudinalFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLongitudinalFriction</span>()</div>
+<div class="block">Return the tire's friction in the forward direction. The settings are
+ unaffected. (native attribute: mLongitudinalFriction)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsTv.html#getLongitudinalFriction()">getLongitudinalFriction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></code></dd>
+<dt>Returns:</dt>
+<dd>the friction</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getRefCount()">
 <h3>getRefCount</h3>

@@ -179,10 +179,24 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the lower limit on distance.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoint1(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setPoint1</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoint1(double,double,double)" class="member-name-link">setPoint1</a><wbr>(double&nbsp;xx,
+ double&nbsp;yy,
+ double&nbsp;zz)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the constraint location for body 1.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoint1(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setPoint1</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the constraint location for body 1.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoint2(double,double,double)" class="member-name-link">setPoint2</a><wbr>(double&nbsp;xx,
+ double&nbsp;yy,
+ double&nbsp;zz)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the constraint location for body 2.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoint2(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setPoint2</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</code></div>
@@ -353,6 +367,21 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setPoint1(double,double,double)">
+<h3>setPoint1</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPoint1</span><wbr><span class="parameters">(double&nbsp;xx,
+ double&nbsp;yy,
+ double&nbsp;zz)</span></div>
+<div class="block">Alter the constraint location for body 1. (native attribute: mPoint1)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xx</code> - the desired X component (default=0)</dd>
+<dd><code>yy</code> - the desired Y component (default=0)</dd>
+<dd><code>zz</code> - the desired Z component (default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setPoint1(com.github.stephengold.joltjni.readonly.RVec3Arg)">
 <h3>setPoint1</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a></span>&nbsp;<span class="element-name">setPoint1</span><wbr><span class="parameters">(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</span></div>
@@ -363,6 +392,21 @@ loadScripts(document, 'script');</script>
  default=(0,0,0))</dd>
 <dt>Returns:</dt>
 <dd>the argument, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPoint2(double,double,double)">
+<h3>setPoint2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPoint2</span><wbr><span class="parameters">(double&nbsp;xx,
+ double&nbsp;yy,
+ double&nbsp;zz)</span></div>
+<div class="block">Alter the constraint location for body 2. (native attribute: mPoint2)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xx</code> - the desired X component (default=0)</dd>
+<dd><code>yy</code> - the desired Y component (default=0)</dd>
+<dd><code>zz</code> - the desired Z component (default=0)</dd>
 </dl>
 </section>
 </li>

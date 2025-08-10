@@ -276,31 +276,37 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
  the buffer's position.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putRodIndices(java.nio.IntBuffer)" class="member-name-link">putRodIndices</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeIndices)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Write the vertex indices of all Cosserat rods to the specified buffer and
+ advance the buffer's position.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write the state of this object to the specified stream, excluding the
  materials.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveWithMaterials(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap)" class="member-name-link">saveWithMaterials</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveWithMaterials(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.SharedSettingsToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap)" class="member-name-link">saveWithMaterials</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
  <a href="streamutils/SharedSettingsToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">SharedSettingsToIdMap</a>&nbsp;settingsMap,
  <a href="streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write the state of this object to the specified stream.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterials(com.github.stephengold.joltjni.PhysicsMaterial)" class="member-name-link">setMaterials</a><wbr>(<a href="PhysicsMaterial.html" title="class in com.github.stephengold.joltjni">PhysicsMaterial</a>&nbsp;material)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterials(com.github.stephengold.joltjni.PhysicsMaterial)" class="member-name-link">setMaterials</a><wbr>(<a href="PhysicsMaterial.html" title="class in com.github.stephengold.joltjni">PhysicsMaterial</a>&nbsp;material)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Replace the materials.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the address of the native <code>SoftBodySharedSettings</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodySharedSettingsRef.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettingsRef</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodySharedSettingsRef.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettingsRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create another counted reference to the native
  <code>SoftBodySharedSettings</code>.</div>
 </div>
@@ -664,6 +670,20 @@ implements <a href="readonly/ConstSoftBodySharedSettings.html" title="interface 
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSoftBodySharedSettings.html#putFaceIndices(java.nio.IntBuffer)">putFaceIndices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeIndices</code> - the destination buffer (not null, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="putRodIndices(java.nio.IntBuffer)">
+<h3>putRodIndices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">putRodIndices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeIndices)</span></div>
+<div class="block">Write the vertex indices of all Cosserat rods to the specified buffer and
+ advance the buffer's position. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodySharedSettings.html#putRodIndices(java.nio.IntBuffer)">putRodIndices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>storeIndices</code> - the destination buffer (not null, modified)</dd>
 </dl>
