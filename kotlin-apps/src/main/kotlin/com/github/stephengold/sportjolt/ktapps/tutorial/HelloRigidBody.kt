@@ -53,6 +53,7 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 
 private const val BALL_RADIUS = 1f
 private const val MAX_BODIES = 2
+private const val SIMULATION_SPEED = 0.1f
 
 // For simplicity, use a single broadphase layer:
 private const val NUM_BP_LAYERS = 1
@@ -119,7 +120,7 @@ class HelloRigidBody : BasePhysicsApp() {
      */
     override fun updatePhysics(wallClockSeconds: Float): Unit {
         // For clarity, simulate at 1/10th normal speed:
-        val simulateSeconds = 0.1f * wallClockSeconds
+        val simulateSeconds = SIMULATION_SPEED * wallClockSeconds
         super.updatePhysics(simulateSeconds)
     }
 }
