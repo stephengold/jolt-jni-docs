@@ -32,6 +32,10 @@ tasks.register<JavaExec>("HelloJoltJni") {
 }
 
 // physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloRigidBody") {
+    description = "Runs the Scala version of the HelloRigidBody tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.scala.tutorial.HelloRigidBody"
+}
 tasks.register<JavaExec>("HelloSport") {
     description = "Runs the Scala version of the HelloSport tutorial app."
     mainClass = "com.github.stephengold.sportjolt.scala.tutorial.HelloSport"
