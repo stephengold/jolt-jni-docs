@@ -138,7 +138,7 @@ public class HelloRigidBody extends BasePhysicsApp {
         // Apply an impulse to ball2 to put it on a collision course with ball1:
         ball2.addImpulse(-25f, 0f, 0f);
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         visualizeShape(ball1);
         visualizeShape(ball2);
     }

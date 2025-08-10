@@ -1,4 +1,4 @@
-# Common configuration
+# Diktat configuration for the jolt-jni-docs project.
 - name: DIKTAT_COMMON
   enabled: true
   configuration:
