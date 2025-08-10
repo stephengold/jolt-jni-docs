@@ -24,7 +24,7 @@ Here's the recommended procedure for building desktop libraries:
 
 . Install build software:
 .. a https://adoptium.net/releases.html[Java Development Kit (JDK)],
-  version 11 or higher, and
+  version 17 or higher, and
 .. one of the supported C++ compilers:
 ... for Linux:  https://gcc.gnu.org/[the GNU Compiler Collection] or https://www.llvm.org[Clang]
 ... for macOS:  https://developer.apple.com/xcode[Xcode]
@@ -44,7 +44,7 @@ Here's the recommended procedure for building desktop libraries:
 .. using https://git-scm.com[Git]:
 ... `git clone https://github.com/stephengold/jolt-jni.git`
 ... `cd jolt-jni`
-... `git checkout -b latest 2.1.0`
+... `git checkout -b latest 2.2.0`
 .. using a web browser:
 ... browse to https://github.com/stephengold/jolt-jni/releases/latest
 ... follow the "Source code (zip)" link
