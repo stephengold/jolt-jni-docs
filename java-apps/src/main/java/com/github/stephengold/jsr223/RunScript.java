@@ -34,8 +34,10 @@ import java.io.FileReader;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import javax.script.ScriptEngine;
+import javax.script.ScriptEngineFactory;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
@@ -76,8 +78,13 @@ final public class RunScript {
         if (numArgs < 2) {
             System.err.println(
                     "Usage:  RunScript <engine> <script> <classList>...");
+
+            System.out.println();
+            printFactories();
+
             System.exit(0);
         }
+
         String scriptEngineShortName = arguments[0];
         String scriptFilePath = arguments[1];
         String[] classListPaths = Arrays.copyOfRange(arguments, 2, numArgs);
@@ -88,7 +95,11 @@ final public class RunScript {
         if (scriptingEngine == null) {
             System.err.println("Script engine not found:  \""
                     + scriptEngineShortName + "\"");
-            System.exit(1);
+
+            System.out.println();
+            printFactories();
+
+            System.exit(0);
         }
 
         for (String classListFilePath : classListPaths) {
@@ -168,6 +179,36 @@ final public class RunScript {
                 String fullName = scanner.nextLine();
                 importClass(fullName);
             }
+        }
+    }
+
+    /**
+     * Print a description of each available script-engine factories.
+     */
+    private static void printFactories() {
+        ScriptEngineManager manager = new ScriptEngineManager();
+        List<ScriptEngineFactory> factories = manager.getEngineFactories();
+
+        int numFactories = factories.size();
+        System.out.println("Number of factories found: " + numFactories);
+
+        for (int i = 0; i < numFactories; ++i) {
+            ScriptEngineFactory factory = factories.get(i);
+            System.out.println("  Factory #" + (i + 1));
+
+            String engineName = factory.getEngineName();
+            String engineVersion = factory.getEngineVersion();
+
+            System.out.printf("    Engine:  \"%s\"   version \"%s\"%n",
+                    engineName, engineVersion);
+
+            List<String> aliases = factory.getNames();
+            System.out.printf("    Aliases: %s%n", aliases);
+
+            String lanuage = factory.getLanguageName();
+            String languageVersion = factory.getLanguageVersion();
+            System.out.printf("    Language:  \"%s\"   version \"%s\"%n",
+                    lanuage, languageVersion);
         }
     }
 }
