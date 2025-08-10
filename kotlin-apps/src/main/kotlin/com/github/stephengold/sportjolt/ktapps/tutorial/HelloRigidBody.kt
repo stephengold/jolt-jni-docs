@@ -103,7 +103,7 @@ class HelloRigidBody : BasePhysicsApp() {
         bi.addBody(ball2, EActivation.Activate)
 
         assert(ball2.isDynamic())
-        val actualMass = 1f / ball2.getMotionProperties().getInverseMass()
+        val actualMass = 1 / ball2.getMotionProperties().getInverseMass()
         assert(Math.abs(actualMass - 2f) < 1e-6f)
 
         // Apply an impulse to ball2 to put it on a collision course with ball1:
