@@ -20,6 +20,10 @@ tasks.register<JavaExec>("HelloJoltJni") {
 }
 
 // physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloRigidBody") {
+    description = "Runs the Groovy version of the HelloRigidBody tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.groovy.tutorial.HelloRigidBody"
+}
 tasks.register<JavaExec>("HelloSport") {
     description = "Runs the Groovy version of the HelloSport tutorial app."
     mainClass = "com.github.stephengold.sportjolt.groovy.tutorial.HelloSport"
