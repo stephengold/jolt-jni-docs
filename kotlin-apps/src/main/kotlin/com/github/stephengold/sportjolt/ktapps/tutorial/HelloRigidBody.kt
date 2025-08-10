@@ -51,6 +51,7 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp
  * author:  Stephen Gold sgold@sonic.net
  */
 
+private const val BALL_MASS = 2f
 private const val BALL_RADIUS = 1f
 private const val MAX_BODIES = 2
 private const val SIMULATION_SPEED = 0.1f
@@ -89,7 +90,7 @@ class HelloRigidBody : BasePhysicsApp() {
         val ballShape = SphereShape(BALL_RADIUS)
 
         val bcs = BodyCreationSettings()
-        bcs.getMassPropertiesOverride().setMass(2f)
+        bcs.getMassPropertiesOverride().setMass(BALL_MASS)
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
         bcs.setShape(ballShape)
 
@@ -104,7 +105,7 @@ class HelloRigidBody : BasePhysicsApp() {
 
         assert(ball2.isDynamic())
         val actualMass = 1 / ball2.getMotionProperties().getInverseMass()
-        assert(Math.abs(actualMass - 2f) < 1e-6f)
+        assert(Math.abs(actualMass - BALL_MASS) < 1e-6f)
 
         // Apply an impulse to ball2 to put it on a collision course with ball1:
         ball2.addImpulse(-25f, 0f, 0f)
