@@ -202,7 +202,7 @@ final public class RunScript {
     }
 
     /**
-     * Print a description of each available script-engine factories.
+     * Print a description of each available script-engine factory.
      */
     private static void printFactories() {
         ScriptEngineManager manager = new ScriptEngineManager();
