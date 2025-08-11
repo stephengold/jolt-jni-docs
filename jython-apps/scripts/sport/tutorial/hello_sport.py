@@ -27,17 +27,16 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-"""
- * Drop a dynamic sphere onto a horizontal surface and visualize them both using
- * Sport-Jolt graphics.
- *
- * Builds upon HelloJoltJni.
- *
- * author:  Stephen Gold sgold@sonic.net
-"""
-
 
 class HelloSport(BasePhysicsApp):
+    """
+    * Drop a dynamic sphere onto a horizontal surface and visualize them both using
+    * Sport-Jolt graphics.
+    *
+    * Builds upon HelloJoltJni.
+    *
+    * author:  Stephen Gold sgold@sonic.net
+    """
 
     def createSystem(self):
         "Create the PhysicsSystem. Invoked once during initialization."
