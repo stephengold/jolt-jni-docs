@@ -28,6 +28,13 @@ tasks.register<JavaExec>("HelloJoltJni") {
 }
 
 // physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloRigidBody") {
+    args("jython", "scripts/sport/tutorial/hello_rigid_body.py",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the Jython version of the HelloRigidBody tutorial app."
+    mainClass = "com.github.stephengold.jsr223.RunScript"
+}
 tasks.register<JavaExec>("HelloSport") {
     args("jython", "scripts/sport/tutorial/hello_sport.py",
          "../class-lists/jolt-jni-classes.txt",
