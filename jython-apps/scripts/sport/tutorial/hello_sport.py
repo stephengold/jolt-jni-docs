@@ -42,49 +42,49 @@ class HelloSport(BasePhysicsApp):
     # Create the PhysicsSystem. Invoked once during initialization.
     def createSystem(self):
         # For simplicity, use a single broadphase layer:
-        numBpLayers = 1
+        num_bp_layers = 1
 
-        ovoFilter = ObjectLayerPairFilterTable(BasePhysicsApp.numObjLayers)
+        ovo_filter = ObjectLayerPairFilterTable(BasePhysicsApp.numObjLayers)
         # Enable collisions between 2 moving bodies:
-        ovoFilter.enableCollision(
+        ovo_filter.enableCollision(
             BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerMoving
         )
         # Enable collisions between a moving body and a non-moving one:
-        ovoFilter.enableCollision(
+        ovo_filter.enableCollision(
             BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerNonMoving
         )
         # Disable collisions between 2 non-moving bodies:
-        ovoFilter.disableCollision(
+        ovo_filter.disableCollision(
             BasePhysicsApp.objLayerNonMoving, BasePhysicsApp.objLayerNonMoving
         )
 
         # Map both object layers to broadphase layer 0:
-        layerMap = BroadPhaseLayerInterfaceTable(
-            BasePhysicsApp.numObjLayers, numBpLayers
+        layer_map = BroadPhaseLayerInterfaceTable(
+            BasePhysicsApp.numObjLayers, num_bp_layers
         )
-        layerMap.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerMoving, 0)
-        layerMap.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerNonMoving, 0)
+        layer_map.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerMoving, 0)
+        layer_map.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerNonMoving, 0)
 
         # Rules for colliding object layers with broadphase layers:
-        ovbFilter = ObjectVsBroadPhaseLayerFilterTable(
-            layerMap, numBpLayers, ovoFilter, BasePhysicsApp.numObjLayers
+        ovb_filter = ObjectVsBroadPhaseLayerFilterTable(
+            layer_map, num_bp_layers, ovo_filter, BasePhysicsApp.numObjLayers
         )
 
         result = PhysicsSystem()
 
         # Set high limits, even though this sample app uses only 2 bodies:
-        maxBodies = 5000
-        numBodyMutexes = 0  # 0 means "use the default number"
-        maxBodyPairs = 65536
-        maxContacts = 20480
+        max_bodies = 5000
+        num_body_mutexes = 0  # 0 means "use the default number"
+        max_body_pairs = 65536
+        max_contacts = 20480
         result.init(
-            maxBodies,
-            numBodyMutexes,
-            maxBodyPairs,
-            maxContacts,
-            layerMap,
-            ovbFilter,
-            ovoFilter,
+            max_bodies,
+            num_body_mutexes,
+            max_body_pairs,
+            max_contacts,
+            layer_map,
+            ovb_filter,
+            ovo_filter,
         )
 
         return result
@@ -94,30 +94,30 @@ class HelloSport(BasePhysicsApp):
         bi = self.physicsSystem.getBodyInterface()
 
         # Add a static horizontal plane at y=-1:
-        groundY = -1
+        ground_y = -1
         normal = Vec3.sAxisY()
-        plane = Plane(normal, -groundY)
-        floorShape = PlaneShape(plane)
+        plane = Plane(normal, -ground_y)
+        floor_shape = PlaneShape(plane)
         bcs = BodyCreationSettings()
         bcs.setMotionType(EMotionType.Static)
         bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
-        bcs.setShape(floorShape)
+        bcs.setShape(floor_shape)
         floor = bi.createBody(bcs)
         bi.addBody(floor, EActivation.DontActivate)
 
         # Add a sphere-shaped, dynamic, rigid body at the origin:
-        ballRadius = 0.3
-        ballShape = SphereShape(ballRadius)
+        ball_radius = 0.3
+        ball_shape = SphereShape(ball_radius)
         bcs.setMotionType(EMotionType.Dynamic)
         bcs.setObjectLayer(BasePhysicsApp.objLayerMoving)
-        bcs.setShape(ballShape)
-        global ball
-        ball = bi.createBody(bcs)
-        bi.addBody(ball, EActivation.Activate)
+        bcs.setShape(ball_shape)
+        global BALL
+        BALL = bi.createBody(bcs)
+        bi.addBody(BALL, EActivation.Activate)
 
         # Visualize the shapes of both bodies:
         BasePhysicsApp.visualizeShape(floor)
-        BasePhysicsApp.visualizeShape(ball)
+        BasePhysicsApp.visualizeShape(BALL)
 
 
 application = HelloSport()
