@@ -8,8 +8,8 @@ plugins {
 import de.undercouch.gradle.tasks.download.Download
 
 sourceSets.main {
-    java {
-        srcDir("en") // for IDE access (no Java there)
+    resources {
+        srcDir("en") // for NetBeans access
     }
 }
 

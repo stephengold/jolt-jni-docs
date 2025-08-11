@@ -8,8 +8,8 @@ plugins {
 }
 
 sourceSets.main {
-    java {
-        srcDir("src") // for NetBeans access (no Java there)
+    resources {
+        srcDir("src/main/scala") // for NetBeans access
     }
 }
 
