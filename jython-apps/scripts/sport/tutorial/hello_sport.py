@@ -39,8 +39,9 @@
 
 class HelloSport(BasePhysicsApp):
 
-    # Create the PhysicsSystem. Invoked once during initialization.
     def createSystem(self):
+        "Create the PhysicsSystem. Invoked once during initialization."
+
         # For simplicity, use a single broadphase layer:
         num_bp_layers = 1
 
@@ -89,8 +90,9 @@ class HelloSport(BasePhysicsApp):
 
         return result
 
-    # Populate the PhysicsSystem with bodies. Invoked once during initialization.
     def populateSystem(self):
+        "Populate the PhysicsSystem with bodies. Invoked once during initialization."
+
         bi = self.physicsSystem.getBodyInterface()
 
         # Add a static horizontal plane at y=-1:

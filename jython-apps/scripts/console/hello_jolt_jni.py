@@ -47,8 +47,9 @@ OBJ_LAYER_MOVING = 0
 OBJ_LAYER_NONMOVING = 1
 
 
-# Create the PhysicsSystem. Invoked once during initialization.
 def create_system():
+    "Create the PhysicsSystem. Invoked once during initialization."
+
     # For simplicity, use a single broadphase layer:
     num_bp_layers = 1
 
@@ -90,8 +91,9 @@ def create_system():
     return result
 
 
-# Populate the PhysicsSystem with bodies. Invoked once during initialization.
 def populate_system():
+    "Populate the PhysicsSystem with bodies. Invoked once during initialization."
+
     bi = physics_system.getBodyInterface()
 
     # Add a static horizontal plane at y=-1:
