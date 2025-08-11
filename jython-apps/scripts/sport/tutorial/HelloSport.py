@@ -36,6 +36,7 @@
  * author:  Stephen Gold sgold@sonic.net
 """
 
+
 class HelloSport(BasePhysicsApp):
 
     # Create the PhysicsSystem. Invoked once during initialization.
@@ -45,31 +46,48 @@ class HelloSport(BasePhysicsApp):
 
         ovoFilter = ObjectLayerPairFilterTable(BasePhysicsApp.numObjLayers)
         # Enable collisions between 2 moving bodies:
-        ovoFilter.enableCollision(BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerMoving)
+        ovoFilter.enableCollision(
+            BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerMoving
+        )
         # Enable collisions between a moving body and a non-moving one:
-        ovoFilter.enableCollision(BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerNonMoving)
+        ovoFilter.enableCollision(
+            BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerNonMoving
+        )
         # Disable collisions between 2 non-moving bodies:
-        ovoFilter.disableCollision(BasePhysicsApp.objLayerNonMoving, BasePhysicsApp.objLayerNonMoving)
+        ovoFilter.disableCollision(
+            BasePhysicsApp.objLayerNonMoving, BasePhysicsApp.objLayerNonMoving
+        )
 
         # Map both object layers to broadphase layer 0:
-        layerMap = BroadPhaseLayerInterfaceTable(BasePhysicsApp.numObjLayers, numBpLayers)
+        layerMap = BroadPhaseLayerInterfaceTable(
+            BasePhysicsApp.numObjLayers, numBpLayers
+        )
         layerMap.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerMoving, 0)
         layerMap.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerNonMoving, 0)
 
         # Rules for colliding object layers with broadphase layers:
-        ovbFilter = ObjectVsBroadPhaseLayerFilterTable(layerMap, numBpLayers, ovoFilter, BasePhysicsApp.numObjLayers)
+        ovbFilter = ObjectVsBroadPhaseLayerFilterTable(
+            layerMap, numBpLayers, ovoFilter, BasePhysicsApp.numObjLayers
+        )
 
         result = PhysicsSystem()
 
         # Set high limits, even though this sample app uses only 2 bodies:
         maxBodies = 5000
-        numBodyMutexes = 0 # 0 means "use the default number"
+        numBodyMutexes = 0  # 0 means "use the default number"
         maxBodyPairs = 65536
         maxContacts = 20480
-        result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts, layerMap, ovbFilter, ovoFilter)
+        result.init(
+            maxBodies,
+            numBodyMutexes,
+            maxBodyPairs,
+            maxContacts,
+            layerMap,
+            ovbFilter,
+            ovoFilter,
+        )
 
         return result
-
 
     # Populate the PhysicsSystem with bodies. Invoked once during initialization.
     def populateSystem(self):
