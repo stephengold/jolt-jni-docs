@@ -31,7 +31,7 @@ The following demos are found in
 
 . Install build software:
 .. a https://adoptium.net/releases.html[Java Development Kit (JDK)],
-  version 11 or higher
+  version 17 or higher
 . Point the `JAVA_HOME` environment variable to your JDK installation:
    (The path might look something like
    "C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
@@ -45,7 +45,7 @@ The following demos are found in
 .. using https://git-scm.com[Git]:
 ... `git clone https://github.com/stephengold/sport-jolt.git`
 ... `cd sport-jolt`
-... `git checkout -b latest 0.9.6`
+... `git checkout -b latest 0.9.7`
 . Edit the "gradle.properties" file to configure the build.
 . Run the https://gradle.org[Gradle] wrapper on the desktop build script:
 .. using Bash or Fish or PowerShell or Zsh: `./gradlew build`
