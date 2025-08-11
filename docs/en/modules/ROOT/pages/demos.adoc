@@ -10,6 +10,9 @@ in desktop environments.
 The following demos are found in
 {url-examples}[the com.github.stephengold.sportjolt.javaapp.demo package of the {Sport} "java-apps" sub-project]:
 
+* {url-examples}/Botany.java[`Botany`]
+  demonstrates Cosserat rods +
+  image:botany.png[height=50]
 * {url-examples}/MarbleGame.java[`MarbleGame`]
   demonstrates compound shapes and sensor bodies +
   image:marbleGame.png[height=50]
@@ -81,6 +84,10 @@ Furthermore:
 * kbd:[Z] lowers the camera.
 
 Additional key mappings are specific to each application:
+
+* In `Botany`:
+
+** kbd:[E] launch a red ball
 
 * In `MarbleGame`:
 
