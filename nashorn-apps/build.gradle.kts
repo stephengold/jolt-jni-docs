@@ -34,7 +34,7 @@ tasks.register<JavaExec>("HelloRigidBody") {
          "scripts/sport/tutorial/HelloRigidBody.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Nashorn version of the HelloRigidBody console app."
+    description = "Runs the Nashorn version of the HelloRigidBody tutorial app."
     mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 tasks.register<JavaExec>("HelloSport") {
@@ -42,7 +42,7 @@ tasks.register<JavaExec>("HelloSport") {
          "scripts/sport/tutorial/HelloSport.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Nashorn version of the HelloSport console app."
+    description = "Runs the Nashorn version of the HelloSport tutorial app."
     mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 
