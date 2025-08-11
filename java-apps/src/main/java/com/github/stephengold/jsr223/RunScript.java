@@ -148,10 +148,25 @@ final public class RunScript {
     private static void importClass(String fullName) {
         int lastDotPos = fullName.lastIndexOf('.');
         assert lastDotPos >= 0 : lastDotPos;
+        String packageName = fullName.substring(0, lastDotPos);
         String simpleName = fullName.substring(lastDotPos + 1);
 
-        String codeSnippet = String.format("var %s = Java.type('%s');",
+        String codeSnippet;
+        switch (factoryName) {
+            case "jython":
+                codeSnippet = String.format(
+                        "from %s import %s", packageName, simpleName);
+                break;
+
+            case "nashorn":
+                codeSnippet = String.format("var %s = Java.type('%s');",
                         simpleName, fullName);
+                break;
+
+            default:
+                throw new IllegalStateException("factoryName = " + factoryName);
+        }
+
         try {
             scriptEngine.eval(codeSnippet);
         } catch (ScriptException exception) {

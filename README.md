@@ -6,11 +6,12 @@ It contains 7 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
-3. nashorn-apps: sample applications in [JavaScript]
-4. kotlin-apps: sample applications in [Kotlin]
-5. groovy-apps: sample applications in [Groovy]
-6. scala-apps: sample applications in [Scala]
-7. src/clojure: sample applications in [Clojure]
+3. jython-apps: sample applications in [Python]
+4. nashorn-apps: sample applications in [JavaScript]
+5. kotlin-apps: sample applications in [Kotlin]
+6. groovy-apps: sample applications in [Groovy]
+7. scala-apps: sample applications in [Scala]
+8. src/clojure: sample applications in [Clojure]
 
 The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
@@ -88,5 +89,6 @@ You can restore the project to a pristine state:
 [leiningen]: https://codeberg.org/leiningen/leiningen/src/branch/stable/README.md "Leiningen build tool"
 [license]: https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE "jolt-jni-docs license"
 [project]: https://github.com/stephengold/jolt-jni-docs "jolt-jni-docs project"
+[python]: https://en.wikipedia.org/wiki/Python_(programming_language) "Python programming language"
 [scala]: https://en.wikipedia.org/wiki/Scala_(programming_language) "Scala programming language"
 [sportjolt]: https://github.com/stephengold/sport-jolt "Sport graphics engine for Jolt"
