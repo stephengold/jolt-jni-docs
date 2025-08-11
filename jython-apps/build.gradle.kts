@@ -20,7 +20,7 @@ application {
 
 // physics console apps (no graphics)
 tasks.register<JavaExec>("HelloJoltJni") {
-    args("jython", "scripts/console/HelloJoltJni.py",
+    args("jython", "scripts/console/hello_jolt_jni.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/snap-loader-classes.txt")
     description = "Runs the Jython version of the HelloJoltJni console app."
@@ -29,7 +29,7 @@ tasks.register<JavaExec>("HelloJoltJni") {
 
 // physics tutorial apps (very simple)
 tasks.register<JavaExec>("HelloSport") {
-    args("jython", "scripts/sport/tutorial/HelloSport.py",
+    args("jython", "scripts/sport/tutorial/hello_sport.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Jython version of the HelloSport tutorial app."
