@@ -1,0 +1,6 @@
+electrostatic4j.snaploader.filesystem.DirectoryPath
+electrostatic4j.snaploader.LibraryInfo
+electrostatic4j.snaploader.LoadingCriterion
+electrostatic4j.snaploader.NativeBinaryLoader
+electrostatic4j.snaploader.platform.NativeDynamicLibrary
+electrostatic4j.snaploader.platform.util.PlatformPredicate

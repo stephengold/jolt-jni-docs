@@ -2,14 +2,15 @@
 documentation and sample applications
 for [the Jolt-JNI physics library][joltjni].
 
-It contains 6 subprojects:
+It contains 7 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
-3. kotlin-apps: sample applications in [Kotlin]
-4. groovy-apps: sample applications in [Groovy]
-5. scala-apps: sample applications in [Scala]
-6. src/clojure: sample applications in [Clojure]
+3. nashorn-apps: sample applications in [JavaScript]
+4. kotlin-apps: sample applications in [Kotlin]
+5. groovy-apps: sample applications in [Groovy]
+6. scala-apps: sample applications in [Scala]
+7. src/clojure: sample applications in [Clojure]
 
 The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
@@ -81,6 +82,7 @@ You can restore the project to a pristine state:
 [gradle]: https://gradle.org "Gradle build tool"
 [groovy]: https://en.wikipedia.org/wiki/Apache_Groovy "Groovy programming language"
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language) "Java programming language"
+[javaScript]: https://en.wikipedia.org/wiki/JavaScript "JavaScript programming language"
 [joltjni]: https://stephengold.github.io/jolt-jni-docs "Jolt-JNI project"
 [kotlin]: https://en.wikipedia.org/wiki/Kotlin_(programming_language) "Kotlin programming language"
 [leiningen]: https://codeberg.org/leiningen/leiningen/src/branch/stable/README.md "Leiningen build tool"
