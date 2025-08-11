@@ -30,12 +30,12 @@
 
 class HelloSport(BasePhysicsApp):
     """
-    * Drop a dynamic sphere onto a horizontal surface and visualize them both using
-    * Sport-Jolt graphics.
-    *
-    * Builds upon HelloJoltJni.
-    *
-    * author:  Stephen Gold sgold@sonic.net
+    Drop a dynamic sphere onto a horizontal surface and visualize them both using
+    Sport-Jolt graphics.
+
+    Builds upon HelloJoltJni.
+
+    author:  Stephen Gold sgold@sonic.net
     """
 
     def createSystem(self):
