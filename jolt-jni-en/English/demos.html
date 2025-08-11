@@ -256,6 +256,11 @@ in desktop environments.</p>
 <div class="ulist">
 <ul>
 <li>
+<p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/Botany.java"><code>Botany</code></a>
+demonstrates Cosserat rods<br>
+<span class="image"><img src="_images/botany.png" alt="botany" height="50"></span></p>
+</li>
+<li>
 <p><a href="https://github.com/stephengold/sport-jolt/tree/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/demo/MarbleGame.java"><code>MarbleGame</code></a>
 demonstrates compound shapes and sensor bodies<br>
 <span class="image"><img src="_images/marbleGame.png" alt="marbleGame" height="50"></span></p>
@@ -347,7 +352,9 @@ or "/usr/lib/jvm/java-17-openjdk-amd64/" or
 </div>
 </li>
 <li>
-<p>Edit the "gradle.properties" file to configure the build.</p>
+<p>Edit the "gradle.properties" file to configure the build.
+To run CPU-intensive demos like <code>Botany</code> and <code>ThousandCubes</code>,
+I recommend configuring "assertions=false" and "btf=ReleaseSp".</p>
 </li>
 <li>
 <p>Run the <a href="https://gradle.org">Gradle</a> wrapper on the desktop build script:</p>
@@ -416,11 +423,23 @@ In most demo apps:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For camera control,
-all demos except <code>MarbleGame</code> and <code>ThousandCubes</code> use <code>DragLMB</code> rotation mode.
-This means you can rotate the camera
-by dragging the mouse with its left button depressed.
-Furthermore:</p>
+<p>Camera rotation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Botany</code> and <code>ThousandCubes</code> use <code>Immediate</code> rotation mode.
+Any mouse motion rotates the camera.</p>
+</li>
+<li>
+<p><code>NewtonsCradle</code>, <code>Pachinko</code>, and <code>Windlass</code> use <code>DragLMB</code> rotation mode.
+You can rotate the camera
+by dragging the mouse with its left button depressed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Camera translation:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -443,6 +462,16 @@ Furthermore:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>In <code>Botany</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><kbd>E</kbd> launch a red ball</p>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>In <code>MarbleGame</code>:</p>
 <div class="ulist">
