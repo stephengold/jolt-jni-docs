@@ -209,24 +209,25 @@ final public class RunScript {
         List<ScriptEngineFactory> factories = manager.getEngineFactories();
 
         int numFactories = factories.size();
-        System.out.println("Number of factories found: " + numFactories);
+        System.out.println(
+                "Number of script-engine factories found:  " + numFactories);
 
         for (int i = 0; i < numFactories; ++i) {
             ScriptEngineFactory factory = factories.get(i);
-            System.out.println("  Factory #" + (i + 1));
+            System.out.printf("  Factory#%d%n", i + 1);
 
             String engineName = factory.getEngineName();
             String engineVersion = factory.getEngineVersion();
 
-            System.out.printf("    Engine:  \"%s\"   version \"%s\"%n",
+            System.out.printf("    engine:  \"%s\"   version \"%s\"%n",
                     engineName, engineVersion);
 
             List<String> aliases = factory.getNames();
-            System.out.printf("    Aliases: %s%n", aliases);
+            System.out.printf("    aliases:  %s%n", aliases);
 
             String lanuage = factory.getLanguageName();
             String languageVersion = factory.getLanguageVersion();
-            System.out.printf("    Language:  \"%s\"   version \"%s\"%n",
+            System.out.printf("    language:  \"%s\"   version \"%s\"%n",
                     lanuage, languageVersion);
         }
     }
