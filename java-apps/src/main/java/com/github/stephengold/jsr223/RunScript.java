@@ -54,7 +54,11 @@ final public class RunScript {
     /**
      * engine for evaluating scripts
      */
-    private static ScriptEngine scriptingEngine;
+    private static ScriptEngine scriptEngine;
+    /**
+     * short name for the engine factory
+     */
+    private static String factoryName;
     // *************************************************************************
     // constructors
 
@@ -85,16 +89,16 @@ final public class RunScript {
             System.exit(0);
         }
 
-        String scriptEngineShortName = arguments[0];
+        factoryName = arguments[0];
         String scriptFilePath = arguments[1];
         String[] classListPaths = Arrays.copyOfRange(arguments, 2, numArgs);
 
         // Acquire a script engine via the Java Scripting API (aka JSR 223):
         ScriptEngineManager manager = new ScriptEngineManager();
-        scriptingEngine = manager.getEngineByName(scriptEngineShortName);
-        if (scriptingEngine == null) {
-            System.err.println("Script engine not found:  \""
-                    + scriptEngineShortName + "\"");
+        scriptEngine = manager.getEngineByName(factoryName);
+        if (scriptEngine == null) {
+            System.err.println("Script-engine factory not found:  \""
+                    + factoryName + "\"");
 
             System.out.println();
             printFactories();
@@ -129,7 +133,7 @@ final public class RunScript {
 
         // Evaluate the script:
         try {
-            scriptingEngine.eval(scriptReader);
+            scriptEngine.eval(scriptReader);
         } catch (ScriptException exception) {
             exception.printStackTrace();
             System.exit(1);
@@ -137,7 +141,7 @@ final public class RunScript {
     }
 
     /**
-     * Import the specified class into the scripting engine.
+     * Import the specified class into the script engine.
      *
      * @param fullName the full name of the class to import (not null)
      */
@@ -146,10 +150,10 @@ final public class RunScript {
         assert lastDotPos >= 0 : lastDotPos;
         String simpleName = fullName.substring(lastDotPos + 1);
 
-        String importScript = String.format("var %s = Java.type('%s');",
-                simpleName, fullName);
+        String codeSnippet = String.format("var %s = Java.type('%s');",
+                        simpleName, fullName);
         try {
-            scriptingEngine.eval(importScript);
+            scriptEngine.eval(codeSnippet);
         } catch (ScriptException exception) {
             exception.printStackTrace();
             System.exit(1);
