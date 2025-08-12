@@ -165,7 +165,7 @@ job_system = JobSystemThreadPool(
 )
 
 TIME_PER_STEP = 0.02  # seconds
-for iteration in range(0, 49):
+for iteration in range(50):
     COLLISION_STEPS = 1
     physics_system.update(TIME_PER_STEP, COLLISION_STEPS, temp_allocator, job_system)
 
