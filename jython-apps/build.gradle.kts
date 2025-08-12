@@ -49,6 +49,13 @@ tasks.register<JavaExec>("HelloSport") {
     description = "Runs the Jython version of the HelloSport tutorial app."
     mainClass = "com.github.stephengold.jsr223.RunScript"
 }
+tasks.register<JavaExec>("HelloStaticBody") {
+    args("jython", "scripts/sport/tutorial/hello_static_body.py",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the Jython version of the HelloStaticBody tutorial app."
+    mainClass = "com.github.stephengold.jsr223.RunScript"
+}
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")
 
