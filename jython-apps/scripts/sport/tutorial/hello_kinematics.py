@@ -115,4 +115,4 @@ class HelloKinematics(BasePhysicsApp, PhysicsTickListener):
 
 
 application = HelloKinematics()
-application.start()
+application.start("HelloKinematics", 0, 0, 0)

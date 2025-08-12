@@ -103,4 +103,4 @@ class HelloRigidBody(BasePhysicsApp):
 
 
 application = HelloRigidBody()
-application.start()
+application.start("HelloRigidBody", 0, 0, 0)

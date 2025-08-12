@@ -112,4 +112,4 @@ var application = new HelloRigidBody() {
         Java.super(application).updatePhysics(simulateSeconds);
     }
 };
-application.start();
+application.start("HelloRigidBody", 0, 0, 0);

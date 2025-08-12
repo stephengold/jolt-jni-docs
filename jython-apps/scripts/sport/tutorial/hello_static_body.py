@@ -87,4 +87,4 @@ class HelloStaticBody(BasePhysicsApp):
 
 
 application = HelloStaticBody()
-application.start()
+application.start("HelloStaticBody", 0, 0, 0)

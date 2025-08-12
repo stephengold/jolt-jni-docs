@@ -124,4 +124,4 @@ class HelloDamping(BasePhysicsApp):
 
 
 application = HelloDamping()
-application.start()
+application.start("HelloDamping", 0, 0, 0)
