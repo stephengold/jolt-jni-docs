@@ -24,7 +24,6 @@ tasks.register<JavaExec>("HelloJoltJni") {
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/snap-loader-classes.txt")
     description = "Runs the Jython version of the HelloJoltJni console app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 
 // physics tutorial apps (very simple)
@@ -33,28 +32,24 @@ tasks.register<JavaExec>("HelloDamping") {
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Jython version of the HelloDamping tutorial app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 tasks.register<JavaExec>("HelloRigidBody") {
     args("jython", "scripts/sport/tutorial/hello_rigid_body.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Jython version of the HelloRigidBody tutorial app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 tasks.register<JavaExec>("HelloSport") {
     args("jython", "scripts/sport/tutorial/hello_sport.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Jython version of the HelloSport tutorial app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 tasks.register<JavaExec>("HelloStaticBody") {
     args("jython", "scripts/sport/tutorial/hello_static_body.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Jython version of the HelloStaticBody tutorial app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")
@@ -75,6 +70,7 @@ tasks.withType<JavaExec>().all { // JVM runtime options:
         jvmArgs("--enable-native-access=ALL-UNNAMED") // suppress System::load() warning
     }
     jvmArgs("-XX:+UseG1GC", "-XX:MaxGCPauseMillis=10")
+    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 
 // which BTF (build type + flavor) of native physics libraries to include:

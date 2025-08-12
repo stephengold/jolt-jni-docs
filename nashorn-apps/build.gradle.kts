@@ -25,7 +25,6 @@ tasks.register<JavaExec>("HelloJoltJni") {
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/snap-loader-classes.txt")
     description = "Runs the Nashorn version of the HelloJoltJni console app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 
 // physics tutorial apps (very simple)
@@ -35,7 +34,6 @@ tasks.register<JavaExec>("HelloRigidBody") {
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn version of the HelloRigidBody tutorial app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 tasks.register<JavaExec>("HelloSport") {
     args("nashorn",
@@ -43,7 +41,6 @@ tasks.register<JavaExec>("HelloSport") {
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn version of the HelloSport tutorial app."
-    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")
@@ -64,6 +61,7 @@ tasks.withType<JavaExec>().all { // JVM runtime options:
         jvmArgs("--enable-native-access=ALL-UNNAMED") // suppress System::load() warning
     }
     jvmArgs("-XX:+UseG1GC", "-XX:MaxGCPauseMillis=10")
+    mainClass = "com.github.stephengold.jsr223.RunScript"
 }
 
 // which BTF (build type + flavor) of native physics libraries to include:
