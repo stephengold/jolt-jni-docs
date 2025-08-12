@@ -129,7 +129,7 @@ public class HelloStaticBody extends BasePhysicsApp {
 
         assert statBall.isStatic();
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         visualizeShape(dynaBall);
         visualizeShape(statBall);
     }

@@ -29,7 +29,7 @@
 
 import math
 
-# physics-simulation time (in seconds, &ge;0)
+# physics-simulation time (in seconds, >=0)
 ELAPSED_TIME = 0.0
 
 
