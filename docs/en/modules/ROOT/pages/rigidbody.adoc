@@ -155,7 +155,7 @@ RVec3Arg comLocation = body.getCenterOfMassPosition();
 [NOTE]
 ====
 Positions and locations are represented
-using `R` objects such as `RMat44` and `RVec3`.
+using `R`-classes such as `RMat44` and `RVec3`.
 The precision of such objects
 depends on the flavor of the native library:
 

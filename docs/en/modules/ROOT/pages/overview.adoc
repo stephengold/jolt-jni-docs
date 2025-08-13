@@ -82,7 +82,7 @@ Current limitations gated by {JPH}:
 
 Also, {Project} doesn't yet run on every known platform.
 In particular, native libraries aren't provided for AIX, FreeBSD, iOS,
-LoongArch, PowerPC, RISCV, 32-bit Windows, or Window-on-ARM.
+LoongArch, PowerPC, RISCV, 32-bit Windows, or Windows-on-ARM.
 These limitations aren't inherent to {Project};
 they're gated by access to test hardware.
 
