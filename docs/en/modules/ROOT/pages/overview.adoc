@@ -59,7 +59,9 @@ While an understanding of classical mechanics is assumed,
 many of its technical terms are linked (at first use)
 to the relevant article in the English Wikipedia.
 
-{Project} requires Java version 11 or higher.
+{Project} requires a Java runtime, version 11 or higher.
+To build {Project} from source, I recommend a Java Development Kit,
+version 17 or higher.
 
 https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE[The project's open-source license]
 disclaims liability for defects.
