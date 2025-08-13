@@ -1,5 +1,6 @@
 = An introduction to rigid-body physics
 :experimental:
+:JPHAdj: Jolt-Physics
 :page-pagination:
 :page-toclevels: 3
 :Project: Jolt JNI
@@ -133,7 +134,7 @@ Every body occupies a _position_ described by 2 properties:
 * the body's _orientation_:
   the rotation of its (local) axes relative to those of the physics system.
 
-Unfortunately, the Jolt Physics API and documentation refer to a body's
+Unfortunately, the {JPHAdj} API and documentation refer to a body's
 location as its "position" and its orientation as its "rotation". Thus:
 
 [source,java]

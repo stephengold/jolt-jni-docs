@@ -1,6 +1,7 @@
 = How Jolt JNI works
 :Cplusplus: C&#43;&#43;
 :JPH: Jolt Physics
+:JPHAdj: Jolt-Physics
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
 :url-enwiki: https://en.wikipedia.org/wiki
@@ -138,7 +139,7 @@ that's typically created during initialization.
 == Next steps
 
 For more detail about how {JPH} works, refer to
-https://jrouwe.github.io/JoltPhysics[the Jolt Physics website].
+https://jrouwe.github.io/JoltPhysics[the {JPHAdj} website].
 
 To gain hands-on experience,
 proceed to xref:add.adoc[the first tutorial page].

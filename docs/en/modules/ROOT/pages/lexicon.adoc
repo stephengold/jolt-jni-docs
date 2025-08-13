@@ -1,5 +1,6 @@
 = Lexicon of type names
 :JPH: Jolt Physics
+:JPHAdj: Jolt-Physics
 :page-pagination:
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
@@ -41,7 +42,7 @@ have names that replace the initial "m" with "get" or "set".
 Thus `mShape` member data
 are accessed using `getShape()` and `setShape()` methods.
 
-{Project} has a different notion of camel case than Jolt Physics does:
+{Project} has a different notion of camel case than {JPHAdj} does:
 abbreviations such as "AA", "BCS", "COM", "DOF", "ID", "LRA", "TV", and "WV"
 are treated as single words.
 Thus:

@@ -1,6 +1,7 @@
 = Jolt-JNI project overview
 :Cplusplus: C&#43;&#43;
 :JPH: Jolt Physics
+:JPHAdj: Jolt-Physics
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
 :url-enwiki: https://en.wikipedia.org/wiki
@@ -73,7 +74,7 @@ https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengol
 https://github.com/stephengold/jolt-jni[the source code].
 
 For further reading there is also
-https://jrouwe.github.io/JoltPhysics/index.html[the official Jolt-Physics documentation].
+https://jrouwe.github.io/JoltPhysics/index.html[the official {JPHAdj} documentation].
 
 For issues that are best handled privately, contact me by e-mail.
 My personal e-mail address appears at the bottom
