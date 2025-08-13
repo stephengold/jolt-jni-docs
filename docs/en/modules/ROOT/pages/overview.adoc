@@ -70,12 +70,12 @@ Please don't use this software in safety-critical applications.
 
 Current limitations gated by {JPH}:
 
-+ {Project} doesn't simulate collisions between soft bodies,
+* {Project} doesn't simulate collisions between soft bodies,
   nor self collisions within soft bodies.
   See https://github.com/jrouwe/JoltPhysics/issues/789[{JPHAdj} issue 789].
-+ {Project} doesn't simulate anisotropic friction.
+* {Project} doesn't simulate anisotropic friction.
   See https://github.com/jrouwe/JoltPhysics/issues/1216[{JPHAdj} issue 1216].
-+ Aside from buoyancy and drag on rigid objects,
+* Aside from buoyancy and drag on rigid objects,
   {Project} doesn't simulate fluid dynamics.
 
 Also, {Project} doesn't yet run on every known platform.
