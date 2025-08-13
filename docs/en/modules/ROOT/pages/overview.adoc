@@ -89,6 +89,8 @@ they're gated by access to test hardware.
 Furthermore, {JPH} is a large project,
 and {Project} doesn’t yet provide access to all its features.
 (Its goal is utility, not completeness.)
+For instance, {Project} doesn't implement custom collision shapes yet.
+
 Feature requests are welcome, and can be submitted via
 https://github.com/stephengold/jolt-jni/issues[the issue tracker].
 
