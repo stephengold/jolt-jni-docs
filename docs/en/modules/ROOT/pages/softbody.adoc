@@ -1,5 +1,6 @@
 = An introduction to soft-body physics
 :page-pagination:
+:JPH: Jolt Physics
 :Project: Jolt JNI
 :Sport: Sport-Jolt
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
@@ -73,7 +74,7 @@ For a simple example of a soft body, see
 
 == Solver iterations
 
-During each simulation step, Jolt Physics applies
+During each simulation step, {JPH} applies
 an iterative solver to update the vertex locations in each soft body.
 
 The number of iterations is stored in the body's motion properties.

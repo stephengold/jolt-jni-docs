@@ -1,5 +1,6 @@
 = How to add Jolt JNI to an existing project
 :experimental:
+:JPH: Jolt Physics
 :page-pagination:
 :Project: Jolt JNI
 :url-enwiki: https://en.wikipedia.org/wiki
@@ -154,7 +155,7 @@ To avoid the need to explicitly free Jolt-Physics objects,
 I recommend starting {Project}'s built-in cleaner thread,
 which frees objects automatically during JVM garbage collection.
 
-Jolt Physics allows custom allocators for native heap memory,
+{JPH} allows custom allocators for native heap memory,
 but {Project} exposes only the default allocator.
 
 [source,java]
@@ -168,7 +169,7 @@ JoltPhysicsObject.startCleaner(); // to free Jolt-Physics objects automatically
 Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free
 ----
 
-Similarly, Jolt Physics allows custom callbacks
+Similarly, {JPH} allows custom callbacks
 for native assertions and trace output,
 but {Project} exposes only the default callbacks,
 which print to the standard output.
@@ -188,7 +189,7 @@ so `installDefaultAssertCallback()` is a no-op.
 
 == Create factory and register types
 
-Jolt Physics uses a factory object to create instances of classes
+{JPH} uses a factory object to create instances of classes
 based on their name or hash,
 for instance when deserializing saved data.
 
@@ -206,7 +207,7 @@ Jolt.registerTypes();
 
 == Temporary allocator and job system
 
-Jolt Physics needs a `TempAllocator` to allocate temporary memory
+{JPH} needs a `TempAllocator` to allocate temporary memory
 during simulation.
 Since it's difficult to predict how much temporary memory will be needed,
 I recommend using `TempAllocatorMalloc`, the most flexible implementation.
@@ -221,7 +222,7 @@ import com.github.stephengold.joltjni.TempAllocatorMalloc;
 TempAllocator tempAllocator = new TempAllocatorMalloc();
 ----
 
-Similarly, Jolt Physics needs a `JobSystem` to assign simulation tasks to CPUs.
+Similarly, {JPH} needs a `JobSystem` to assign simulation tasks to CPUs.
 Since it's difficult to predict how many jobs and barriers will be needed,
 I suggest using the default limits,
 even though they may be larger than needed.
@@ -242,7 +243,7 @@ JobSystem jobSystem = new JobSystemThreadPool(
 
 == Collision layers
 
-Jolt Physics allows you to organize bodies into _collision layers_
+{JPH} allows you to organize bodies into _collision layers_
 and specify which layers may collide.
 It's typical to put moving and non-moving bodies
 into separate layers

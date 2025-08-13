@@ -1,11 +1,12 @@
 = How Jolt JNI works
 :Cplusplus: C&#43;&#43;
+:JPH: Jolt Physics
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
 :url-enwiki: https://en.wikipedia.org/wiki
 
 For physics simulation and collision detection,
-{Project} uses https://jrouwe.github.io/JoltPhysics[Jolt Physics],
+{Project} uses https://jrouwe.github.io/JoltPhysics[{JPH}],
 a modern, open-source, 3-D physics simulator,
 released under https://github.com/jrouwe/JoltPhysics?tab=MIT-1-ov-file[an MIT license].
 
@@ -18,7 +19,7 @@ https://github.com/kmammou/v-hacd/blob/master/LICENSE[a 3-Clause BSD License].
 
 == Native libraries
 
-Jolt Physics and V-HACD are written in {Cplusplus}, so {Project} uses
+{JPH} and V-HACD are written in {Cplusplus}, so {Project} uses
 https://docs.oracle.com/en/java/javase/11/docs/specs/jni/index.html[the Java Native Interface (JNI)]
 to access their objects and methods.
 
@@ -136,7 +137,7 @@ that's typically created during initialization.
 
 == Next steps
 
-For more detail about how Jolt Physics works, refer to
+For more detail about how {JPH} works, refer to
 https://jrouwe.github.io/JoltPhysics[the Jolt Physics website].
 
 To gain hands-on experience,

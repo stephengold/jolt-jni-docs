@@ -1,5 +1,6 @@
 = An introduction to constraints
 :experimental:
+:JPH: Jolt Physics
 :page-pagination:
 :Project: Jolt JNI
 :Sport: Sport-Jolt
@@ -11,7 +12,7 @@ that restricts the motion of one or more rigid bodies.
 
 The motion of a rigid body is decomposed into 6 _degrees of freedom (DOFs)_:
 3 axes of _translation_ (purely linear motion) and 3 axes of rotation.
-(Confusingly, Jolt Physics refers to all 6 DOFs as "axes".)
+(Confusingly, {JPH} refers to all 6 DOFs as "axes".)
 
 Constraints can limit specific DOFs of a body to specific ranges,
 or even _fix_ (freeze) those DOFs completely.

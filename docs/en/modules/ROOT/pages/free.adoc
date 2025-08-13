@@ -1,5 +1,6 @@
 = Freeing native memory
 :Cplusplus: C&#43;&#43;
+:JPH: Jolt Physics
 :page-pagination:
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
@@ -49,7 +50,7 @@ it assumes responsibility for freeing that memory.
 For native objects, this convention carries over into {Project}:
 an app is solely responsible for all objects it creates explicitly.
 (On the other hand, it cannot free the memory
-of objects created internally by {Project} or Jolt Physics.)
+of objects created internally by {Project} or {JPH}.)
 
 === Owned by a JVM object
 
@@ -113,7 +114,7 @@ BodyLockInterface bli = system.getBodyLockInterface();
 When the app invokes `getBodyLockInterface()`,
 a new JVM object `bli` is returned.
 However, `bli` refers to a pre-existing native object
-(the one Jolt Physics allocated while initializing `system`).
+(the one {JPH} allocated while initializing `system`).
 The app cannot reclaim the native object assigned to `bli`
 separately from the native object assigned to `system`.
 

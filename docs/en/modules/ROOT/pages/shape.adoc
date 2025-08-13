@@ -1,5 +1,6 @@
 = Choosing collision shapes
 :item: &rarr;
+:JPH: Jolt Physics
 :page-pagination:
 :Project: Jolt JNI
 :url-jj: https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni
@@ -193,7 +194,7 @@ _Convex radius_ is a property found only in convex shapes
 with sharp edges and/or corners.
 
 To speed up collision detection,
-Jolt Physics rounds off edges and corners.
+{JPH} rounds off edges and corners.
 The geometrical shape is first shrunk by the convex radius,
 then inflated again by the same amount.
 

@@ -1,5 +1,6 @@
 = Jolt-JNI project overview
 :Cplusplus: C&#43;&#43;
+:JPH: Jolt Physics
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
 :url-enwiki: https://en.wikipedia.org/wiki
@@ -29,8 +30,8 @@ including the JVM library, the native libraries, the demo and tutorial apps,
 and the software used to build, test, and run them.
 
 The underlying simulation software comes from
-https://jrouwe.github.io/JoltPhysics[_Jolt Physics_], a modern, thread-aware physics simulator.
-But although Jolt Physics is written in {url-enwiki}/C%2B%2B[{Cplusplus}],
+https://jrouwe.github.io/JoltPhysics[_{JPH}_], a modern, thread-aware physics simulator.
+But although {JPH} is written in {url-enwiki}/C%2B%2B[{Cplusplus}],
 you won't need any knowledge of {Cplusplus} to use {Project}.
 
 {Project} also incorporates source code from

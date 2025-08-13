@@ -1,11 +1,12 @@
 = Managing collisions
 :experimental:
+:JPH: Jolt Physics
 :page-pagination:
 :Project: Jolt JNI
 :Sport: Sport-Jolt
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
-During each simulation step, Jolt Physics performs collision detection in 2 phases:
+During each simulation step, {JPH} performs collision detection in 2 phases:
 broadphase and narrowphase.
 
 . _Broadphase_ enumerates pairs of objects in close proximity,

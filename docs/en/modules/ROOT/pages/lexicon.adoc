@@ -1,4 +1,5 @@
 = Lexicon of type names
+:JPH: Jolt Physics
 :page-pagination:
 :Project: Jolt JNI
 :ProjectAdj: Jolt-JNI
@@ -8,14 +9,14 @@
 :url-jolt-namespace: https://jrouwe.github.io/JoltPhysics/namespace_
 :url-jolt-struct: https://jrouwe.github.io/JoltPhysics/struct_
 
-When reading documentation for Jolt Physics,
+When reading documentation for {JPH},
 it may help to understand the differences
 between Jolt-Physics names and {ProjectAdj} names.
 
 
 == Naming conventions
 
-{Project} follows many of the naming conventions of Jolt Physics:
+{Project} follows many of the naming conventions of {JPH}:
 
 * Most names are in {url-enwiki}/Camel_case[camel case],
   with word boundaries indicated by an uppercase letter.
@@ -27,13 +28,13 @@ between Jolt-Physics names and {ProjectAdj} names.
 * Names that end with "Ref" are "Ref<>" typedefs.
 * Names that end with "RefC" are "RefConst<>" typedefs.
 
-Non-static member functions in Jolt Physics
+Non-static member functions in {JPH}
 have names that start with an uppercase letter.
 The corresponding methods in {Project}
 have names that start with a *lowercase* letter.
 Thus `IsRigidBody()` becomes `isRigidBody()`.
 
-Attributes and member data in Jolt Physics
+Attributes and member data in {JPH}
 have names that start with "m".
 In {Project}, the corresponding accessor methods
 have names that replace the initial "m" with "get" or "set".
