@@ -333,6 +333,37 @@ Please don&#8217;t use this software in safety-critical applications.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_whats_missing"><a class="anchor" href="#_whats_missing"></a>What&#8217;s missing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Current limitations gated by Jolt Physics:</p>
+</div>
+<div class="paragraph">
+<p>+ Jolt JNI doesn&#8217;t simulate collisions between soft bodies,
+  nor self collisions within soft bodies.
+  See <a href="https://github.com/jrouwe/JoltPhysics/issues/789">Jolt-Physics issue 789</a>.
++ Jolt JNI doesn&#8217;t simulate anisotropic friction.
+  See <a href="https://github.com/jrouwe/JoltPhysics/issues/1216">Jolt-Physics issue 1216</a>.
++ Aside from buoyancy and drag on rigid objects,
+  Jolt JNI doesn&#8217;t simulate fluid dynamics.</p>
+</div>
+<div class="paragraph">
+<p>Also, Jolt JNI doesn&#8217;t yet run on every known platform.
+In particular, native libraries aren&#8217;t provided for AIX, FreeBSD, iOS,
+LoongArch, PowerPC, RISCV, 32-bit Windows, or Window-on-ARM.
+These limitations aren&#8217;t inherent to Jolt JNI;
+they&#8217;re gated by access to test hardware.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, Jolt Physics is a large project,
+and Jolt JNI doesn’t yet provide access to all its features.
+(Its goal is utility, not completeness.)
+Feature requests are welcome, and can be submitted via
+<a href="https://github.com/stephengold/jolt-jni/issues">the issue tracker</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_getting_help"><a class="anchor" href="#_getting_help"></a>Getting help</h2>
 <div class="sectionbody">
 <div class="paragraph">
