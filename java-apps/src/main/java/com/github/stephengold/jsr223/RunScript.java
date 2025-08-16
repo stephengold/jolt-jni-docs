@@ -158,6 +158,17 @@ final public class RunScript {
                         "from %s import %s", packageName, simpleName);
                 break;
 
+            case "lua54":
+                codeSnippet = String.format(
+                        "local %s = java.import(\"%s\")", simpleName, fullName);
+                break;
+
+            case "luaj":
+                codeSnippet = String.format(
+                        "local %s = luajava.bindClass(\"%s\")",
+                        simpleName, fullName);
+                break;
+
             case "nashorn":
                 codeSnippet = String.format("var %s = Java.type('%s');",
                         simpleName, fullName);
