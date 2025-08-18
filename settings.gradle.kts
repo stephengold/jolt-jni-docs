@@ -1,4 +1,4 @@
-// global build settings shared by all jolt-jni-docs subprojects
+// global build settings shared by all jolt-jni-docs subprojects except src/clojure
 
 rootProject.name = "jolt-jni-docs"
 
