@@ -68,7 +68,7 @@ for important classes.
 These interfaces are in the "com.github.stephengold.joltjni.readonly" package
 and have names beginning with "Const" or ending with "Arg".
 
-For instance, if a {JPHAdj} class declares a member function
+For instance, if the {JPHAdj} `CharacterVirtual` class declares a member function
 
 [source,c++]
 ----
