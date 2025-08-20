@@ -122,7 +122,10 @@
     <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/README.md">ReadMe file</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">License</a>
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/CONTRIBUTING.md">Contributor guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/LICENSE">License</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="https://github.com/stephengold/jolt-jni/blob/master/release-log.md">Release log</a>
@@ -339,6 +342,44 @@ count as distinct platforms!
 <div class="paragraph">
 <p>All these native libraries share a common API,
 so a single JVM library suffices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_read_only_interfaces"><a class="anchor" href="#_read_only_interfaces"></a>Read-only interfaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In C&#43;&#43;, member functions can be qualified with the <code>const</code> keyword,
+to indicate they don&#8217;t significantly modify the current object.
+The Java language lacks such a feature.</p>
+</div>
+<div class="paragraph">
+<p>Jolt JNI mimics the <code>const</code> feature by declaring read-only interfaces
+for important classes.
+These interfaces are in the "com.github.stephengold.joltjni.readonly" package
+and have names beginning with "Const" or ending with "Arg".</p>
+</div>
+<div class="paragraph">
+<p>For instance, if a Jolt-Physics class declares a member function</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">bool HasCollidedWith (const Body &amp;inBody) const</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then the corresponding method in Jolt JNI
+should take a <code>ConstBody</code> argument (due to the first <code>const</code>) and
+should be included in the <code>ConstCharacterVirtual</code> interface
+(due to the second <code>const</code>).</p>
+</div>
+<div class="paragraph">
+<p>C&#43;&#43; allows public fields and member data of a <code>const</code> object
+to be read but not modified.
+So if the Jolt-Physics <code>BarSettings</code> struct declares a public field <code>mFoo</code>,
+then the corresponding <code>getFoo()</code> method in Jolt JNI
+should be included in the <code>ConstBarSettings</code> interface,
+but the <code>setFoo()</code> method should not.</p>
 </div>
 </div>
 </div>
