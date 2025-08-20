@@ -57,6 +57,37 @@ All these native libraries share a common API,
 so a single JVM library suffices.
 
 
+== Read-only interfaces
+
+In {Cplusplus}, member functions can be qualified with the `const` keyword,
+to indicate they don't significantly modify the current object.
+The Java language lacks such a feature.
+
+{Project} mimics the `const` feature by declaring read-only interfaces
+for important classes.
+These interfaces are in the "com.github.stephengold.joltjni.readonly" package
+and have names beginning with "Const" or ending with "Arg".
+
+For instance, if a {JPHAdj} class declares a member function
+
+[source,c++]
+----
+bool HasCollidedWith (const Body &inBody) const
+----
+
+then the corresponding method in {Project}
+should take a `ConstBody` argument (due to the first `const`) and
+should be included in the `ConstCharacterVirtual` interface
+(due to the second `const`).
+
+{Cplusplus} allows public fields and member data of a `const` object
+to be read but not modified.
+So if the {JPHAdj} `BarSettings` struct declares a public field `mFoo`,
+then the corresponding `getFoo()` method in {Project}
+should be included in the `ConstBarSettings` interface,
+but the `setFoo()` method should not.
+
+
 == Bodies, physics systems, and shapes
 
 Collision detection is organized around _bodies_ and _constraints_
