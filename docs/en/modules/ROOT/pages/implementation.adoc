@@ -126,7 +126,7 @@ Static object should be 0.1 to 2,000 meters in size.
 To simulate outside these ranges, scale dimensions and distances accordingly.
 
 In the JVM library, double-precision floating point is always used
-to represent locations in system coordinates. 
+to represent locations in system coordinates.
 If all simulation takes place within roughly 5,000 meters of the origin,
 single-precision native libraries provide sufficient accuracy.
 For larger worlds, use double-precision native libraries.

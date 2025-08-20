@@ -1,6 +1,7 @@
 = How to add Jolt JNI to an existing project
 :experimental:
 :JPH: Jolt Physics
+:JPHAdj: Jolt-Physics
 :page-pagination:
 :Project: Jolt JNI
 :url-enwiki: https://en.wikipedia.org/wiki
@@ -295,7 +296,7 @@ ObjectVsBroadPhaseLayerFilterTable ovbFilter
 ----
 
 For further advice regarding collision layers, see
-https://jrouwe.github.io/JoltPhysics/index.html#collision-detection[the collision-detection section of the Jolt-Physics documentation].
+https://jrouwe.github.io/JoltPhysics/index.html#collision-detection[the collision-detection section of the {JPHAdj} documentation].
 
 
 == Create a physics system
