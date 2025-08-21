@@ -49,7 +49,7 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloCcd extends BasePhysicsApp {
+final public class HelloCcd extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 

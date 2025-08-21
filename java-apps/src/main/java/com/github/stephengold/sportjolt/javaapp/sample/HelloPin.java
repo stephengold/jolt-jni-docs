@@ -61,7 +61,7 @@ import com.github.stephengold.sportjolt.physics.PinsGeometry;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloPin extends BasePhysicsApp {
+final public class HelloPin extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 

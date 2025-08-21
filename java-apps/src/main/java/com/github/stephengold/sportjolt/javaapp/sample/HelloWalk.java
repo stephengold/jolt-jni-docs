@@ -67,7 +67,9 @@ import org.lwjgl.glfw.GLFW;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloWalk extends BasePhysicsApp implements PhysicsTickListener {
+final public class HelloWalk
+        extends BasePhysicsApp
+        implements PhysicsTickListener {
     // *************************************************************************
     // fields
 

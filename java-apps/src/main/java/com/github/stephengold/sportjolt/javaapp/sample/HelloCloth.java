@@ -60,7 +60,7 @@ import com.github.stephengold.sportjolt.physics.EdgesGeometry;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloCloth extends BasePhysicsApp {
+final public class HelloCloth extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 

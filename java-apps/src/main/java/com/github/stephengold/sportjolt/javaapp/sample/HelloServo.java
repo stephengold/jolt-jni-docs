@@ -63,7 +63,7 @@ import org.lwjgl.glfw.GLFW;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloServo extends BasePhysicsApp {
+final public class HelloServo extends BasePhysicsApp {
     // *************************************************************************
     // fields
 

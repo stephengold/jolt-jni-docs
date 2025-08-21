@@ -62,7 +62,9 @@ import org.joml.Vector3fc;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloSpring extends BasePhysicsApp implements PhysicsTickListener {
+final public class HelloSpring
+        extends BasePhysicsApp
+        implements PhysicsTickListener {
     // *************************************************************************
     // constants
 

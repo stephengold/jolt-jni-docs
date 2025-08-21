@@ -61,7 +61,9 @@ import org.joml.Vector3fc;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloLimit extends BasePhysicsApp implements PhysicsTickListener {
+final public class HelloLimit
+        extends BasePhysicsApp
+        implements PhysicsTickListener {
     // *************************************************************************
     // constants
 

@@ -60,7 +60,7 @@ import org.joml.Vector3fc;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloSoftRope extends BasePhysicsApp {
+final public class HelloSoftRope extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 

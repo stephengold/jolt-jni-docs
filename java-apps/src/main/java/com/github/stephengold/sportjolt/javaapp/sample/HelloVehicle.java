@@ -67,7 +67,7 @@ import org.joml.Vector3f;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloVehicle extends BasePhysicsApp {
+final public class HelloVehicle extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 

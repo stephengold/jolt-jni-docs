@@ -63,7 +63,7 @@ import com.github.stephengold.sportjolt.physics.PhysicsTickListener;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloCharacterVirtual
+final public class HelloCharacterVirtual
         extends BasePhysicsApp
         implements PhysicsTickListener {
     // *************************************************************************

@@ -61,7 +61,7 @@ import com.github.stephengold.sportjolt.physics.FacesGeometry;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloSoftBody extends BasePhysicsApp {
+final public class HelloSoftBody extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 

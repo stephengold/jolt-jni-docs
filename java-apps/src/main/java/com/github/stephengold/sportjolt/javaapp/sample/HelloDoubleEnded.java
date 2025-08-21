@@ -68,7 +68,7 @@ import org.joml.Vector3fc;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloDoubleEnded
+final public class HelloDoubleEnded
         extends BasePhysicsApp
         implements PhysicsTickListener {
     // *************************************************************************

@@ -50,7 +50,7 @@ import org.lwjgl.glfw.GLFW;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloDeactivation
+final public class HelloDeactivation
         extends BasePhysicsApp
         implements PhysicsTickListener {
     // *************************************************************************

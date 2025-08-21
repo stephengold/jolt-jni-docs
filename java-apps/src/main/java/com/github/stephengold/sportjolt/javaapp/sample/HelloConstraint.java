@@ -62,7 +62,7 @@ import org.joml.Vector3fc;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloConstraint
+final public class HelloConstraint
         extends BasePhysicsApp
         implements PhysicsTickListener {
     // *************************************************************************

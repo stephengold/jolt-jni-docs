@@ -54,7 +54,7 @@ import org.lwjgl.glfw.GLFW;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloContactResponse extends BasePhysicsApp {
+final public class HelloContactResponse extends BasePhysicsApp {
     // *************************************************************************
     // fields
 

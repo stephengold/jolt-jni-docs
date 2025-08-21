@@ -50,7 +50,7 @@ import com.github.stephengold.sportjolt.physics.PhysicsTickListener;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloKinematics
+final public class HelloKinematics
         extends BasePhysicsApp
         implements PhysicsTickListener {
     // *************************************************************************

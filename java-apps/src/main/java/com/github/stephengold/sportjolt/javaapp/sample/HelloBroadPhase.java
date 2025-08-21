@@ -74,7 +74,7 @@ import org.lwjgl.glfw.GLFW;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloBroadPhase
+final public class HelloBroadPhase
         extends BasePhysicsApp
         implements PhysicsTickListener {
     // *************************************************************************

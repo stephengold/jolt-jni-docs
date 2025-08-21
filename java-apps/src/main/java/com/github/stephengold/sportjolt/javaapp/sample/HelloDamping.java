@@ -50,7 +50,7 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloDamping extends BasePhysicsApp {
+final public class HelloDamping extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 

@@ -66,7 +66,7 @@ import org.lwjgl.glfw.GLFW;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloMotor extends BasePhysicsApp {
+final public class HelloMotor extends BasePhysicsApp {
     // *************************************************************************
     // fields
 

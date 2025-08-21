@@ -46,7 +46,7 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloStaticBody extends BasePhysicsApp {
+final public class HelloStaticBody extends BasePhysicsApp {
     // *************************************************************************
     // constructors
 
