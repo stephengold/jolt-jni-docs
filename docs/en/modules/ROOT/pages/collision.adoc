@@ -131,7 +131,7 @@ query.collideAaBox(aaBox, collector);
 
 Filters can be specified to limit query results to specific layers.
 
-{url-tutorial}/HelloBroadphase.java[`HelloBroadphase`] is a {Sport} app
+{url-tutorial}/HelloBroadPhase.java[`HelloBroadPhase`] is a {Sport} app
 that illustrates how broadphase queries can be used
 to detect characters entering/leaving a box-shaped zone.
 
