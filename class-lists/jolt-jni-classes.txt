@@ -24,6 +24,9 @@ com.github.stephengold.joltjni.BodyInterface
 com.github.stephengold.joltjni.BodyLockInterface
 com.github.stephengold.joltjni.BodyLockInterfaceLocking
 com.github.stephengold.joltjni.BodyLockInterfaceNoLock
+com.github.stephengold.joltjni.BodyLockMultiBase
+com.github.stephengold.joltjni.BodyLockMultiRead
+com.github.stephengold.joltjni.BodyLockMultiWrite
 com.github.stephengold.joltjni.BodyLockRead
 com.github.stephengold.joltjni.BodyLockWrite
 com.github.stephengold.joltjni.BodyManager
@@ -89,7 +92,6 @@ com.github.stephengold.joltjni.ConstraintSettings
 com.github.stephengold.joltjni.ConstraintSettingsRef
 com.github.stephengold.joltjni.Constraints
 com.github.stephengold.joltjni.Contact
-com.github.stephengold.joltjni.ContactList
 com.github.stephengold.joltjni.ContactListener
 com.github.stephengold.joltjni.ContactManifold
 com.github.stephengold.joltjni.ContactSettings
@@ -108,6 +110,7 @@ com.github.stephengold.joltjni.CustomCollidePointCollector
 com.github.stephengold.joltjni.CustomCollideShapeBodyCollector
 com.github.stephengold.joltjni.CustomCollideShapeCollector
 com.github.stephengold.joltjni.CustomContactListener
+com.github.stephengold.joltjni.CustomDebugRendererSimple
 com.github.stephengold.joltjni.CustomPhysicsStepListener
 com.github.stephengold.joltjni.CustomRayCastBodyCollector
 com.github.stephengold.joltjni.CustomSoftBodyContactListener
@@ -115,6 +118,7 @@ com.github.stephengold.joltjni.CylinderShape
 com.github.stephengold.joltjni.CylinderShapeSettings
 com.github.stephengold.joltjni.DebugRenderer
 com.github.stephengold.joltjni.DebugRendererRecorder
+com.github.stephengold.joltjni.DebugRendererSimple
 com.github.stephengold.joltjni.DecoratedShape
 com.github.stephengold.joltjni.DecoratedShapeSettings
 com.github.stephengold.joltjni.DefaultBroadPhaseLayerFilter
@@ -133,6 +137,8 @@ com.github.stephengold.joltjni.Float2
 com.github.stephengold.joltjni.Float3
 com.github.stephengold.joltjni.GearConstraint
 com.github.stephengold.joltjni.GearConstraintSettings
+com.github.stephengold.joltjni.Geometry
+com.github.stephengold.joltjni.GeometryRef
 com.github.stephengold.joltjni.GetTrianglesContext
 com.github.stephengold.joltjni.GroupFilter
 com.github.stephengold.joltjni.GroupFilterRef
@@ -158,6 +164,7 @@ com.github.stephengold.joltjni.Joint
 com.github.stephengold.joltjni.JointState
 com.github.stephengold.joltjni.Jolt
 com.github.stephengold.joltjni.JoltPhysicsObject
+com.github.stephengold.joltjni.Lod
 com.github.stephengold.joltjni.MassProperties
 com.github.stephengold.joltjni.Mat44
 com.github.stephengold.joltjni.Mat44Array
@@ -341,6 +348,7 @@ com.github.stephengold.joltjni.VehicleCollisionTesterRef
 com.github.stephengold.joltjni.VehicleConstraint
 com.github.stephengold.joltjni.VehicleConstraintRef
 com.github.stephengold.joltjni.VehicleConstraintSettings
+com.github.stephengold.joltjni.VehicleConstraintSettingsRef
 com.github.stephengold.joltjni.VehicleController
 com.github.stephengold.joltjni.VehicleControllerSettings
 com.github.stephengold.joltjni.VehicleControllerSettingsRef
