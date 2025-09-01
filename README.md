@@ -2,7 +2,7 @@
 documentation and sample applications
 for [the Jolt-JNI physics library][joltjni].
 
-It contains 7 subprojects:
+It contains 8 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
