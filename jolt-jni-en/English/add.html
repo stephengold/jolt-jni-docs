@@ -450,7 +450,7 @@ loader.loadLibrary(LoadingCriterion.CLEAN_EXTRACTION);</code></pre>
 <h2 id="_memory_allocators_and_callbacks"><a class="anchor" href="#_memory_allocators_and_callbacks"></a>Memory allocators and callbacks</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To avoid the need to explicitly free Jolt-Physics objects,
+<p>To avoid the need to explicitly close <code>JoltPhysicsObject</code> instances,
 I recommend starting Jolt JNI&#8217;s built-in cleaner thread,
 which frees objects automatically during JVM garbage collection.</p>
 </div>
