@@ -83,8 +83,8 @@ should be included in the `ConstCharacterVirtual` interface
 {Cplusplus} allows public fields and member data of a `const` object
 to be read but not modified.
 So if the {JPHAdj} `BarSettings` struct declares a public field `mFoo`,
-then the corresponding `getFoo()` method in {Project}
-should be included in the `ConstBarSettings` interface,
+then the `getFoo()` method
+should be included in {Project}'s `ConstBarSettings` interface,
 but the `setFoo()` method should not.
 
 

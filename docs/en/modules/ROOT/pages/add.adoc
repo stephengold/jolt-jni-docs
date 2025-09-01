@@ -152,7 +152,7 @@ loader.loadLibrary(LoadingCriterion.CLEAN_EXTRACTION);
 
 == Memory allocators and callbacks
 
-To avoid the need to explicitly free Jolt-Physics objects,
+To avoid the need to explicitly close `JoltPhysicsObject` instances,
 I recommend starting {Project}'s built-in cleaner thread,
 which frees objects automatically during JVM garbage collection.
 

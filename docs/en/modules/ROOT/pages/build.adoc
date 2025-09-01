@@ -60,10 +60,10 @@ Here's the recommended procedure for building desktop libraries:
 After a successful build,
 desktop library artifacts will be found in "build/libs".
 
-==== Translated examples
+==== Ported examples
 
 Once you've built a desktop library for your current platform,
-you can test it by running example apps that have been translated from {Cplusplus}.
+you can test it by running example apps that have been ported from {Cplusplus}.
 
 The "hello world" example app:
 
