@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -123,12 +122,78 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBaumgarte()" class="member-name-link">getBaumgarte</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the Baumgarte stabilization factor, the fraction of position error
- that is corrected in each update.</div>
+ that is corrected in each iteration.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBodyPairCacheCosMaxDeltaRotationDiv2()" class="member-name-link">getBodyPairCacheCosMaxDeltaRotationDiv2</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum rotation for reusing collision results from the
+ previous step.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBodyPairCacheMaxDeltaPositionSq()" class="member-name-link">getBodyPairCacheMaxDeltaPositionSq</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum translation for re-using collision results from the
+ previous step.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCheckActiveEdges()" class="member-name-link">getCheckActiveEdges</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether collisions with non-active (shared) edges are checked.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getConstraintWarmStart()" class="member-name-link">getConstraintWarmStart</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether warm starting is enabled for constraints.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getContactNormalCosMaxDeltaRotation()" class="member-name-link">getContactNormalCosMaxDeltaRotation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum angle between normals for which manifolds from
+ different sub shapes of the same body pair will be combined.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getContactPointPreserveLambdaMaxDistSq()" class="member-name-link">getContactPointPreserveLambdaMaxDistSq</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum translation of a contact point for warm starting.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeterministicSimulation()" class="member-name-link">getDeterministicSimulation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Test whether physics simulation is deterministic.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLinearCastMaxPenetration()" class="member-name-link">getLinearCastMaxPenetration</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the amount of penetration tolerated by a <code>LinearCast</code> cast.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLinearCastThreshold()" class="member-name-link">getLinearCastThreshold</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the amount of translation that triggers casting for
+ <code>LinearCast</code> motion quality.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getManifoldTolerance()" class="member-name-link">getManifoldTolerance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the tolerance used to determine whether 2 points are coplanar when
+ calculating the contact manifold between 2 faces.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxInFlightBodyPairs()" class="member-name-link">getMaxInFlightBodyPairs</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum number of in-flight body pairs.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxPenetrationDistance()" class="member-name-link">getMaxPenetrationDistance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum distance to correct in a single iteration when solving
+ position constraints.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMinVelocityForRestitution()" class="member-name-link">getMinVelocityForRestitution</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the minimum normal speed for elastic collision.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumPositionSteps()" class="member-name-link">getNumPositionSteps</a>()</code></div>
@@ -155,10 +220,36 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the speculative contact distance.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStepListenerBatchesPerJob()" class="member-name-link">getStepListenerBatchesPerJob</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum number of step-listener batches notified by a single
+ job.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStepListenersBatchSize()" class="member-name-link">getStepListenersBatchSize</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the maximum number of step listeners notified in a single batch.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeBeforeSleep()" class="member-name-link">getTimeBeforeSleep</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Alter the time interval before an object can fall asleep.</div>
+<div class="block">Return the time interval before a body can fall asleep.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUseBodyPairContactCache()" class="member-name-link">getUseBodyPairContactCache</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether the body-pair cache is enabled.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUseLargeIslandSplitter()" class="member-name-link">getUseLargeIslandSplitter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether island splitting is enabled.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUseManifoldReduction()" class="member-name-link">getUseManifoldReduction</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether manifold reduction is enabled.</div>
 </div>
 </div>
 </div>
@@ -196,10 +287,83 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <h3>getBaumgarte</h3>
 <div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getBaumgarte</span>()</div>
 <div class="block">Return the Baumgarte stabilization factor, the fraction of position error
- that is corrected in each update. The settings are unaffected.</div>
+ that is corrected in each iteration. The settings are unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the factor (&ge;0, &le;1)</dd>
+<dd>the fraction (&ge;0, &le;1)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBodyPairCacheCosMaxDeltaRotationDiv2()">
+<h3>getBodyPairCacheCosMaxDeltaRotationDiv2</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getBodyPairCacheCosMaxDeltaRotationDiv2</span>()</div>
+<div class="block">Return the maximum rotation for reusing collision results from the
+ previous step. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the cosine of half the maximum rotation angle (&ge;0, &le;1)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBodyPairCacheMaxDeltaPositionSq()">
+<h3>getBodyPairCacheMaxDeltaPositionSq</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getBodyPairCacheMaxDeltaPositionSq</span>()</div>
+<div class="block">Return the maximum translation for re-using collision results from the
+ previous step. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the square of the maximum displacement (in square meters, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCheckActiveEdges()">
+<h3>getCheckActiveEdges</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getCheckActiveEdges</span>()</div>
+<div class="block">Test whether collisions with non-active (shared) edges are checked. The
+ settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if checked, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConstraintWarmStart()">
+<h3>getConstraintWarmStart</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getConstraintWarmStart</span>()</div>
+<div class="block">Test whether warm starting is enabled for constraints. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if enabled, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactNormalCosMaxDeltaRotation()">
+<h3>getContactNormalCosMaxDeltaRotation</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getContactNormalCosMaxDeltaRotation</span>()</div>
+<div class="block">Return the maximum angle between normals for which manifolds from
+ different sub shapes of the same body pair will be combined. The settings
+ are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the cosine of the threshold angle (&ge;-1, &le;1)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactPointPreserveLambdaMaxDistSq()">
+<h3>getContactPointPreserveLambdaMaxDistSq</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getContactPointPreserveLambdaMaxDistSq</span>()</div>
+<div class="block">Return the maximum translation of a contact point for warm starting. The
+ settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the square of the threshold distance (in meters squared, &ge;0)</dd>
 </dl>
 </section>
 </li>
@@ -212,6 +376,81 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if it is deterministic, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLinearCastMaxPenetration()">
+<h3>getLinearCastMaxPenetration</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getLinearCastMaxPenetration</span>()</div>
+<div class="block">Return the amount of penetration tolerated by a <code>LinearCast</code> cast.
+ The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the penetration distance (as a fraction of the body's inner
+ radius, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLinearCastThreshold()">
+<h3>getLinearCastThreshold</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getLinearCastThreshold</span>()</div>
+<div class="block">Return the amount of translation that triggers casting for
+ <code>LinearCast</code> motion quality. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the translation distance per step (as a fraction of the body's
+ inner radius, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getManifoldTolerance()">
+<h3>getManifoldTolerance</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getManifoldTolerance</span>()</div>
+<div class="block">Return the tolerance used to determine whether 2 points are coplanar when
+ calculating the contact manifold between 2 faces. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the distance (in meters, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxInFlightBodyPairs()">
+<h3>getMaxInFlightBodyPairs</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getMaxInFlightBodyPairs</span>()</div>
+<div class="block">Return the maximum number of in-flight body pairs. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the limit (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxPenetrationDistance()">
+<h3>getMaxPenetrationDistance</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getMaxPenetrationDistance</span>()</div>
+<div class="block">Return the maximum distance to correct in a single iteration when solving
+ position constraints. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the distance per iteration (in meters, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMinVelocityForRestitution()">
+<h3>getMinVelocityForRestitution</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getMinVelocityForRestitution</span>()</div>
+<div class="block">Return the minimum normal speed for elastic collision. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the speed threshold (in meters per second, &ge;0)</dd>
 </dl>
 </section>
 </li>
@@ -274,14 +513,72 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getStepListenerBatchesPerJob()">
+<h3>getStepListenerBatchesPerJob</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getStepListenerBatchesPerJob</span>()</div>
+<div class="block">Return the maximum number of step-listener batches notified by a single
+ job. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number of batches per job (&gt;0), or <code>INT_MAX</code> to
+ serialize step listeners</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStepListenersBatchSize()">
+<h3>getStepListenersBatchSize</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getStepListenersBatchSize</span>()</div>
+<div class="block">Return the maximum number of step listeners notified in a single batch.
+ The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number of listeners (&gt;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getTimeBeforeSleep()">
 <h3>getTimeBeforeSleep</h3>
 <div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getTimeBeforeSleep</span>()</div>
-<div class="block">Alter the time interval before an object can fall asleep. The settings
- are unaffected.</div>
+<div class="block">Return the time interval before a body can fall asleep. The settings are
+ unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the interval (in seconds, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUseBodyPairContactCache()">
+<h3>getUseBodyPairContactCache</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getUseBodyPairContactCache</span>()</div>
+<div class="block">Test whether the body-pair cache is enabled. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if it is enabled, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUseLargeIslandSplitter()">
+<h3>getUseLargeIslandSplitter</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getUseLargeIslandSplitter</span>()</div>
+<div class="block">Test whether island splitting is enabled. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if enabled, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUseManifoldReduction()">
+<h3>getUseManifoldReduction</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getUseManifoldReduction</span>()</div>
+<div class="block">Test whether manifold reduction is enabled. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if enabled, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>

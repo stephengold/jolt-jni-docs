@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li>Class</li>
 <li class="nav-bar-cell1-rev">Tree</li>
-<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#tree">Help</a></li>
 </ul>
@@ -77,7 +76,6 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="BodyVector.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyVector</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Constraints.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Constraints</a></li>
-<li class="circle">com.github.stephengold.joltjni.<a href="ContactList.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ContactList</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="IndexedTriangleList.html" class="type-name-link" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="PhysicsMaterialList.html" class="type-name-link" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="ShapeList.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ShapeList</a></li>
@@ -180,6 +178,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="EpaPenetrationDepth.html" class="type-name-link" title="class in com.github.stephengold.joltjni">EpaPenetrationDepth</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="ExtendedUpdateSettings.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Face.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Face</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstFace.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFace</a>)</li>
+<li class="circle">com.github.stephengold.joltjni.<a href="Geometry.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Geometry</a> (implements com.github.stephengold.joltjni.template.<a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="GetTrianglesContext.html" class="type-name-link" title="class in com.github.stephengold.joltjni">GetTrianglesContext</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Impulse.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Impulse</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="IndexedTriangleNoMaterial.html" class="type-name-link" title="class in com.github.stephengold.joltjni">IndexedTriangleNoMaterial</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>)
@@ -190,6 +189,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="InvBind.html" class="type-name-link" title="class in com.github.stephengold.joltjni">InvBind</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Joint.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Joint</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoint</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="JointState.html" class="type-name-link" title="class in com.github.stephengold.joltjni">JointState</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="Lod.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Lod</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstLod.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLod</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="MassProperties.html" class="type-name-link" title="class in com.github.stephengold.joltjni">MassProperties</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Mat44.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Mat44</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Mat44Array.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Mat44Array</a></li>
@@ -210,10 +210,16 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 <li class="circle">com.github.stephengold.joltjni.<a href="BodyInterface.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyInterface</a></li>
-<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockInterface.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockInterface</a>
+<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockInterface.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockInterface</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstBodyLockInterface.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterface</a>)
 <ul>
-<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockInterfaceLocking.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockInterfaceLocking</a></li>
-<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockInterfaceNoLock.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockInterfaceNoLock</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockInterfaceLocking.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockInterfaceLocking</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstBodyLockInterfaceLocking.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterfaceLocking</a>)</li>
+<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockInterfaceNoLock.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockInterfaceNoLock</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstBodyLockInterfaceNoLock.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterfaceNoLock</a>)</li>
+</ul>
+</li>
+<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockMultiBase.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockMultiBase</a>
+<ul>
+<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockMultiRead.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockMultiRead</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="BodyLockMultiWrite.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockMultiWrite</a></li>
 </ul>
 </li>
 <li class="circle">com.github.stephengold.joltjni.<a href="BodyLockRead.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyLockRead</a></li>
@@ -230,7 +236,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="BroadPhaseLayerInterfaceTable.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterfaceTable</a></li>
 </ul>
 </li>
-<li class="circle">com.github.stephengold.joltjni.<a href="BroadPhaseQuery.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BroadPhaseQuery</a>
+<li class="circle">com.github.stephengold.joltjni.<a href="BroadPhaseQuery.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BroadPhaseQuery</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstBroadPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseQuery</a>)
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="BroadPhase.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BroadPhase</a>
 <ul>
@@ -252,7 +258,7 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 <li class="circle">com.github.stephengold.joltjni.<a href="ChbEdge.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ChbEdge</a></li>
-<li class="circle">com.github.stephengold.joltjni.<a href="ChbFace.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ChbFace</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="ChbFace.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ChbFace</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstChbFace.html" title="interface in com.github.stephengold.joltjni.readonly">ConstChbFace</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Constraint.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Constraint</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a>, com.github.stephengold.joltjni.template.<a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a>)
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="TwoBodyConstraint.html" class="type-name-link" title="class in com.github.stephengold.joltjni">TwoBodyConstraint</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstTwoBodyConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTwoBodyConstraint</a>)
@@ -278,6 +284,11 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="DebugRenderer.html" class="type-name-link" title="class in com.github.stephengold.joltjni">DebugRenderer</a>
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="DebugRendererRecorder.html" class="type-name-link" title="class in com.github.stephengold.joltjni">DebugRendererRecorder</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="DebugRendererSimple.html" class="type-name-link" title="class in com.github.stephengold.joltjni">DebugRendererSimple</a>
+<ul>
+<li class="circle">com.github.stephengold.joltjni.<a href="CustomDebugRendererSimple.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CustomDebugRendererSimple</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="circle">com.github.stephengold.joltjni.<a href="JobSystem.html" class="type-name-link" title="class in com.github.stephengold.joltjni">JobSystem</a>
@@ -290,7 +301,7 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
-<li class="circle">com.github.stephengold.joltjni.<a href="NarrowPhaseQuery.html" class="type-name-link" title="class in com.github.stephengold.joltjni">NarrowPhaseQuery</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="NarrowPhaseQuery.html" class="type-name-link" title="class in com.github.stephengold.joltjni">NarrowPhaseQuery</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstNarrowPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstNarrowPhaseQuery</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="ObjectLayerFilter.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="DefaultObjectLayerFilter.html" class="type-name-link" title="class in com.github.stephengold.joltjni">DefaultObjectLayerFilter</a></li>
@@ -414,11 +425,12 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.template.<a href="template/Ref.html" class="type-name-link" title="class in com.github.stephengold.joltjni.template">Ref</a>
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="CharacterRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CharacterRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a>)</li>
-<li class="circle">com.github.stephengold.joltjni.<a href="CharacterSettingsRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CharacterSettingsRef</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="CharacterSettingsRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CharacterSettingsRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstCharacterSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterSettings</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="CharacterVirtualRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CharacterVirtualRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a>)</li>
-<li class="circle">com.github.stephengold.joltjni.<a href="CharacterVirtualSettingsRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CharacterVirtualSettingsRef</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="CharacterVirtualSettingsRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CharacterVirtualSettingsRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstCharacterVirtualSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtualSettings</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="ConstraintRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ConstraintRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="ConstraintSettingsRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ConstraintSettingsRef</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="GeometryRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">GeometryRef</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="GroupFilterRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">GroupFilterRef</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="GroupFilterTableRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">GroupFilterTableRef</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="PathConstraintPathRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">PathConstraintPathRef</a></li>
@@ -439,9 +451,10 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="VehicleCollisionTesterRayRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">VehicleCollisionTesterRayRef</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="VehicleCollisionTesterRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">VehicleCollisionTesterRef</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="VehicleConstraintRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="VehicleConstraintSettingsRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">VehicleConstraintSettingsRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="VehicleControllerSettingsRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">VehicleControllerSettingsRef</a></li>
-<li class="circle">com.github.stephengold.joltjni.<a href="WheelSettingsTvRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></li>
-<li class="circle">com.github.stephengold.joltjni.<a href="WheelSettingsWvRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="WheelSettingsTvRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a>)</li>
+<li class="circle">com.github.stephengold.joltjni.<a href="WheelSettingsWvRef.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a>)</li>
 </ul>
 </li>
 <li class="circle">com.github.stephengold.joltjni.template.<a href="template/Result.html" class="type-name-link" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;T&gt;
@@ -492,7 +505,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="GroupFilterTable.html" class="type-name-link" title="class in com.github.stephengold.joltjni">GroupFilterTable</a></li>
 </ul>
 </li>
-<li class="circle">com.github.stephengold.joltjni.<a href="PathConstraintPath.html" class="type-name-link" title="class in com.github.stephengold.joltjni">PathConstraintPath</a> (implements com.github.stephengold.joltjni.template.<a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a>)
+<li class="circle">com.github.stephengold.joltjni.<a href="PathConstraintPath.html" class="type-name-link" title="class in com.github.stephengold.joltjni">PathConstraintPath</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstPathConstraintPath.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPathConstraintPath</a>, com.github.stephengold.joltjni.template.<a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a>)
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="PathConstraintPathHermite.html" class="type-name-link" title="class in com.github.stephengold.joltjni">PathConstraintPathHermite</a></li>
 </ul>
@@ -548,7 +561,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="WheelSettings.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettings</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a>, com.github.stephengold.joltjni.template.<a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a>)
 <ul>
 <li class="circle">com.github.stephengold.joltjni.<a href="WheelSettingsTv.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a>)</li>
-<li class="circle">com.github.stephengold.joltjni.<a href="WheelSettingsWv.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettingsWv</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="WheelSettingsWv.html" class="type-name-link" title="class in com.github.stephengold.joltjni">WheelSettingsWv</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a>)</li>
 </ul>
 </li>
 </ul>
@@ -581,7 +594,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.github.stephengold.joltjni.<a href="SpringSettings.html" class="type-name-link" title="class in com.github.stephengold.joltjni">SpringSettings</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="StateRecorderFilter.html" class="type-name-link" title="class in com.github.stephengold.joltjni">StateRecorderFilter</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Stats.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Stats</a></li>
-<li class="circle">com.github.stephengold.joltjni.<a href="SubShape.html" class="type-name-link" title="class in com.github.stephengold.joltjni">SubShape</a></li>
+<li class="circle">com.github.stephengold.joltjni.<a href="SubShape.html" class="type-name-link" title="class in com.github.stephengold.joltjni">SubShape</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSubShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSubShape</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="SubShapeIdCreator.html" class="type-name-link" title="class in com.github.stephengold.joltjni">SubShapeIdCreator</a></li>
 <li class="circle">com.github.stephengold.joltjni.<a href="SubShapeIdPair.html" class="type-name-link" title="class in com.github.stephengold.joltjni">SubShapeIdPair</a> (implements com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSubShapeIdPair.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSubShapeIdPair</a>)</li>
 <li class="circle">com.github.stephengold.joltjni.<a href="Support.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Support</a></li>

@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -202,31 +201,37 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
  component of the right factor implied to be one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;leftVector)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#multiply3x4InPlace(com.github.stephengold.joltjni.RVec3)" class="member-name-link">multiply3x4InPlace</a><wbr>(<a href="../RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeVec)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Post multiply by the specified translation vector.</div>
+<div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
+ component of the right factor implied to be one.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;leftVector)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Post multiply by the specified translation vector.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#put3x3ColumnMajor(java.nio.FloatBuffer)" class="member-name-link">put3x3ColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Post multiply by the specified translation vector.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#put3x3ColumnMajor(java.nio.FloatBuffer)" class="member-name-link">put3x3ColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Write the 3x3 matrix in single precision to the specified buffer in
  column-major order and advance the buffer's position by 9.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#putColumnMajor(java.nio.FloatBuffer)" class="member-name-link">putColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#putColumnMajor(java.nio.FloatBuffer)" class="member-name-link">putColumnMajor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Write all 16 components in single precision to the specified buffer in
  column-major order and advance the buffer's position by 16.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toMat44()" class="member-name-link">toMat44</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toMat44()" class="member-name-link">toMat44</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the current matrix to a new, single-precision matrix.</div>
 </div>
 </div>
@@ -464,6 +469,19 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dd><code>vec3</code> - the right factor (not null, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="multiply3x4InPlace(com.github.stephengold.joltjni.RVec3)">
+<h3>multiply3x4InPlace</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">multiply3x4InPlace</span><wbr><span class="parameters">(<a href="../RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeVec)</span></div>
+<div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
+ component of the right factor implied to be one. Store the result in the
+ argument vector. The matrix is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeVec</code> - the right factor and storage for the result (not null)</dd>
 </dl>
 </section>
 </li>

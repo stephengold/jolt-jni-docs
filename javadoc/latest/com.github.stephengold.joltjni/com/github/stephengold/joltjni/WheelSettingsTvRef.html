@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -96,11 +95,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code>, <code><a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">WheelSettingsTvRef</span>
-<span class="extends-implements">extends <a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></span></div>
+<span class="extends-implements">extends <a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a>
+implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></span></div>
 <div class="block">A counted reference to a <code>WheelSettingsTv</code> object. (native type:
  <code>Ref&lt;WheelSettingsTV&gt;</code>)</div>
 </section>
@@ -132,19 +132,176 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnableSuspensionForcePoint()" class="member-name-link">getEnableSuspensionForcePoint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Determine where to apply tire forces.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLateralFriction()" class="member-name-link">getLateralFriction</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the tire's friction in the sideways direction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLongitudinalFriction()" class="member-name-link">getLongitudinalFriction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the tire's friction in the forward direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the attachment point.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Temporarily access the referenced <code>WheelSettingsTv</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRadius()" class="member-name-link">getRadius</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the address of the native <code>WheelSettingsTV</code>.</div>
+<div class="block">Return the radius of the wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Rtti.html" title="class in com.github.stephengold.joltjni">Rtti</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRtti()" class="member-name-link">getRtti</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the type information of the target.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSteeringAxis()" class="member-name-link">getSteeringAxis</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the steering axis (upward direction).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionDirection()" class="member-name-link">getSuspensionDirection</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the downward direction of the suspension.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionForcePoint()" class="member-name-link">getSuspensionForcePoint</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location where tire forces will be applied if the force-point
+ option is enabled.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionMaxLength()" class="member-name-link">getSuspensionMaxLength</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the maximum displacement from the attachment point.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionMinLength()" class="member-name-link">getSuspensionMinLength</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the minimum displacement from the attachment point.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionPreloadLength()" class="member-name-link">getSuspensionPreloadLength</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the suspension preload length.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionSpring()" class="member-name-link">getSuspensionSpring</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the settings for the suspension spring.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelForward()" class="member-name-link">getWheelForward</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the forward direction when steering is neutral.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelUp()" class="member-name-link">getWheelUp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the "up" direction when steering is neutral.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWidth()" class="member-name-link">getWidth</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the width of the wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Save the settings to the specified binary stream.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnableSuspensionForcePoint(boolean)" class="member-name-link">setEnableSuspensionForcePoint</a><wbr>(boolean&nbsp;enable)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter where to apply tire forces.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLateralFriction(float)" class="member-name-link">setLateralFriction</a><wbr>(float&nbsp;friction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the wheel's friction in the sideways direction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLongitudinalFriction(float)" class="member-name-link">setLongitudinalFriction</a><wbr>(float&nbsp;friction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the wheel's friction in the forward direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;position)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Relocate the attachment point.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRadius(float)" class="member-name-link">setRadius</a><wbr>(float&nbsp;radius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the radius of the wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSteeringAxis(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setSteeringAxis</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the steering axis (upward direction).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSuspensionDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setSuspensionDirection</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the downward direction of the suspension.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSuspensionForcePoint(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setSuspensionForcePoint</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the location where tire forces will be applied if the force-point
+ option is enabled.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSuspensionMaxLength(float)" class="member-name-link">setSuspensionMaxLength</a><wbr>(float&nbsp;length)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the maximum displacement from the attachment point.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSuspensionMinLength(float)" class="member-name-link">setSuspensionMinLength</a><wbr>(float&nbsp;length)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the minimum displacement from the attachment point.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSuspensionPreloadLength(float)" class="member-name-link">setSuspensionPreloadLength</a><wbr>(float&nbsp;length)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the suspension preload length.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWheelForward(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setWheelForward</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the forward direction when steering is neutral.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWheelUp(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setWheelUp</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the "up" direction when steering is neutral.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWidth(float)" class="member-name-link">setWidth</a><wbr>(float&nbsp;width)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the width of the wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the address of the native <code>WheelSettingsTV</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create another counted reference to the native <code>WheelSettingsTV</code>.</div>
 </div>
 </div>
@@ -156,6 +313,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a></code></div>
 </section>
 </li>
 </ul>
@@ -182,6 +345,446 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="setEnableSuspensionForcePoint(boolean)">
+<h3>setEnableSuspensionForcePoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setEnableSuspensionForcePoint</span><wbr><span class="parameters">(boolean&nbsp;enable)</span></div>
+<div class="block">Alter where to apply tire forces. (native attribute:
+ mEnableSuspensionForcePoint)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>enable</code> - <code>true</code> to apply at the configured suspension-force
+ point, <code>false</code> to apply at the wheel's point of contact
+ (default=false)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLateralFriction(float)">
+<h3>setLateralFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setLateralFriction</span><wbr><span class="parameters">(float&nbsp;friction)</span></div>
+<div class="block">Alter the wheel's friction in the sideways direction. (native attribute:
+ mLateralFriction)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>friction</code> - the desired friction (default=2)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLongitudinalFriction(float)">
+<h3>setLongitudinalFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setLongitudinalFriction</span><wbr><span class="parameters">(float&nbsp;friction)</span></div>
+<div class="block">Alter the wheel's friction in the forward direction. (native attribute:
+ mLongitudinalFriction)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>friction</code> - the desired friction (default=4)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;position)</span></div>
+<div class="block">Relocate the attachment point. (native attribute: mPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>position</code> - the location of the attachment point (in the body's local
+ coordinates, not null, unaffected, default=(0,0,0))</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRadius(float)">
+<h3>setRadius</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setRadius</span><wbr><span class="parameters">(float&nbsp;radius)</span></div>
+<div class="block">Alter the radius of the wheel. (native attribute: mRadius)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>radius</code> - the desired radius (in meters, default=0.3)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSteeringAxis(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setSteeringAxis</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setSteeringAxis</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</span></div>
+<div class="block">Alter the steering axis (upward direction). (native attribute:
+ mSteeringAxis)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the desired direction (not null, unaffected,
+ default=(0,1,0))</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSuspensionDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setSuspensionDirection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setSuspensionDirection</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</span></div>
+<div class="block">Alter the downward direction of the suspension. (native attribute:
+ mSuspensionDirection)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the desired direction (not null, unaffected,
+ default=(0,-1,0))</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSuspensionForcePoint(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setSuspensionForcePoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setSuspensionForcePoint</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</span></div>
+<div class="block">Alter the location where tire forces will be applied if the force-point
+ option is enabled. (native attribute: mSuspensionForcePoint)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>location</code> - the desired location (in the body coordinates, not null,
+ unaffected, default=(0,0,0))</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSuspensionMaxLength(float)">
+<h3>setSuspensionMaxLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setSuspensionMaxLength</span><wbr><span class="parameters">(float&nbsp;length)</span></div>
+<div class="block">Alter the maximum displacement from the attachment point. (native
+ attribute: mSuspensionMaxLength)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>length</code> - the desired limit (in meters, default=0.5)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSuspensionMinLength(float)">
+<h3>setSuspensionMinLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setSuspensionMinLength</span><wbr><span class="parameters">(float&nbsp;length)</span></div>
+<div class="block">Alter the minimum displacement from the attachment point. (native
+ attribute: mSuspensionMinLength)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>length</code> - the desired limit (in meters, default=0.3)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSuspensionPreloadLength(float)">
+<h3>setSuspensionPreloadLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setSuspensionPreloadLength</span><wbr><span class="parameters">(float&nbsp;length)</span></div>
+<div class="block">Alter the suspension preload length. (native attribute:
+ mSuspensionPreloadLength)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>length</code> - the desired offset (in meters, default=0)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWheelForward(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setWheelForward</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setWheelForward</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</span></div>
+<div class="block">Alter the forward direction when steering is neutral. (native attribute:
+ mWheelForward)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the desired direction (not null, unaffected,
+ default=(0,0,1))</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWheelUp(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setWheelUp</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setWheelUp</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</span></div>
+<div class="block">Alter the "up" direction when steering is neutral. (native attribute:
+ mWheelUp)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the desired direction (not null, unaffected,
+ default=(0,1,0))</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWidth(float)">
+<h3>setWidth</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">setWidth</span><wbr><span class="parameters">(float&nbsp;width)</span></div>
+<div class="block">Alter the width of the wheel. (native attribute: mWidth)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>width</code> - the desired width (in meters, default=0.1)</dd>
+<dt>Returns:</dt>
+<dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEnableSuspensionForcePoint()">
+<h3>getEnableSuspensionForcePoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getEnableSuspensionForcePoint</span>()</div>
+<div class="block">Determine where to apply tire forces. The settings are unaffected.
+ (native attribute: mEnableSuspensionForcePoint)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getEnableSuspensionForcePoint()">getEnableSuspensionForcePoint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if applied at the configured suspension-force point,
+ <code>false</code> if applied at the wheel's point of contact</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLateralFriction()">
+<h3>getLateralFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLateralFriction</span>()</div>
+<div class="block">Return the tire's friction in the sideways direction. The settings are
+ unaffected. (native attribute: mLateralFriction)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsTv.html#getLateralFriction()">getLateralFriction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></code></dd>
+<dt>Returns:</dt>
+<dd>the friction</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLongitudinalFriction()">
+<h3>getLongitudinalFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLongitudinalFriction</span>()</div>
+<div class="block">Return the tire's friction in the forward direction. The settings are
+ unaffected. (native attribute: mLongitudinalFriction)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsTv.html#getLongitudinalFriction()">getLongitudinalFriction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsTv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a></code></dd>
+<dt>Returns:</dt>
+<dd>the friction</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPosition()">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getPosition</span>()</div>
+<div class="block">Copy the location of the attachment point. The settings are unaffected.
+ (native attribute: mPosition)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getPosition()">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new location vector (in the body's local coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRadius()">
+<h3>getRadius</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getRadius</span>()</div>
+<div class="block">Return the radius of the wheel. The settings are unaffected. (native
+ attribute: mRadius)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getRadius()">getRadius</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the radius (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRtti()">
+<h3>getRtti</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Rtti.html" title="class in com.github.stephengold.joltjni">Rtti</a></span>&nbsp;<span class="element-name">getRtti</span>()</div>
+<div class="block">Access the type information of the target. (native method: GetRTTI)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSteeringAxis()">
+<h3>getSteeringAxis</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getSteeringAxis</span>()</div>
+<div class="block">Copy the steering axis (upward direction). The settings are unaffected.
+ (native attribute: mSteeringAxis)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSteeringAxis()">getSteeringAxis</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionDirection()">
+<h3>getSuspensionDirection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getSuspensionDirection</span>()</div>
+<div class="block">Copy the downward direction of the suspension. The settings are
+ unaffected. (native attribute: mSuspensionDirection)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSuspensionDirection()">getSuspensionDirection</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionForcePoint()">
+<h3>getSuspensionForcePoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getSuspensionForcePoint</span>()</div>
+<div class="block">Copy the location where tire forces will be applied if the force-point
+ option is enabled. The settings are unaffected. (native attribute:
+ mSuspensionForcePoint)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSuspensionForcePoint()">getSuspensionForcePoint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new location vector (in body coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionMaxLength()">
+<h3>getSuspensionMaxLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSuspensionMaxLength</span>()</div>
+<div class="block">Return the maximum displacement from the attachment point. The settings
+ are unaffected. (native attribute: mSuspensionMaxLength)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSuspensionMaxLength()">getSuspensionMaxLength</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the distance (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionMinLength()">
+<h3>getSuspensionMinLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSuspensionMinLength</span>()</div>
+<div class="block">Return the minimum displacement from the attachment point. The settings
+ are unaffected. (native attribute: mSuspensionMinLength)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSuspensionMinLength()">getSuspensionMinLength</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the distance (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionPreloadLength()">
+<h3>getSuspensionPreloadLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSuspensionPreloadLength</span>()</div>
+<div class="block">Return the suspension preload length. The settings are unaffected.
+ (native attribute: mSuspensionPreloadLength)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSuspensionPreloadLength()">getSuspensionPreloadLength</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the offset (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionSpring()">
+<h3>getSuspensionSpring</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></span>&nbsp;<span class="element-name">getSuspensionSpring</span>()</div>
+<div class="block">Access the settings for the suspension spring. (native attribute:
+ mSuspensionSpring)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getSuspensionSpring()">getSuspensionSpring</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWheelForward()">
+<h3>getWheelForward</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getWheelForward</span>()</div>
+<div class="block">Copy the forward direction when steering is neutral. The settings are
+ unaffected. (native attribute: mWheelForward)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getWheelForward()">getWheelForward</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWheelUp()">
+<h3>getWheelUp</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getWheelUp</span>()</div>
+<div class="block">Copy the "up" direction when steering is neutral. The settings are
+ unaffected. (native attribute: mWheelUp)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getWheelUp()">getWheelUp</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWidth()">
+<h3>getWidth</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getWidth</span>()</div>
+<div class="block">Return the width of the wheel. The settings are unaffected. (native
+ attribute: mWidth)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#getWidth()">getWidth</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the width (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Save the settings to the specified binary stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to write to (not null)</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getPtr()">
 <h3>getPtr</h3>

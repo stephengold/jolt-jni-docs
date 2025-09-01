@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -132,6 +131,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate a support vector for the specified direction.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportBulk(java.nio.FloatBuffer,java.nio.FloatBuffer)" class="member-name-link">getSupportBulk</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;directions,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storePoints)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Calculate support vectors for the specified directions.</div>
+</div>
 </div>
 </div>
 </div>
@@ -190,6 +195,21 @@ loadScripts(document, 'script');</script>
 <dd><code>direction</code> - the input direction (not null, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new location vector relative to the shape's center of mass</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSupportBulk(java.nio.FloatBuffer,java.nio.FloatBuffer)">
+<h3>getSupportBulk</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getSupportBulk</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;directions,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storePoints)</span></div>
+<div class="block">Calculate support vectors for the specified directions.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>directions</code> - the input directions (not null, capacity a multiple of
+ 3, unaffected)</dd>
+<dd><code>storePoints</code> - storage for location vectors relative to the shape's
+ center of mass (not null, same capacity as <code>directions</code>)</dd>
 </dl>
 </section>
 </li>
