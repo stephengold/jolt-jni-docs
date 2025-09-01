@@ -93,13 +93,25 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/BodyInterface.html[BodyInterface]
 
 |{url-jolt}body_lock_interface.html[JPH::BodyLockInterface]
-|{url-api}/BodyLockInterface.html[BodyLockInterface]
+|{url-api}/BodyLockInterface.html[BodyLockInterface] +
+ {url-api}/readonly/ConstBodyLockInterface.html[ConstBodyLockInterface]
 
 |{url-jolt}body_lock_interface_locking.html[JPH::BodyLockInterfaceLocking]
-|{url-api}/BodyLockInterfaceLocking.html[BodyLockInterfaceLocking]
+|{url-api}/BodyLockInterfaceLocking.html[BodyLockInterfaceLocking] +
+ {url-api}/readonly/ConstBodyLockInterfaceLocking.html[ConstBodyLockInterfaceLocking]
 
 |{url-jolt}body_lock_interface_no_lock.html[JPH::BodyLockInterfaceNoLock]
-|{url-api}/BodyLockInterfaceNoLock.html[BodyLockInterfaceNoLock]
+|{url-api}/BodyLockInterfaceNoLock.html[BodyLockInterfaceNoLock] +
+ {url-api}/readonly/ConstBodyLockInterfaceNoLock.html[ConstBodyLockInterfaceNoLock]
+
+|{url-jolt}body_lock_multi_base.html[JPH::BodyLockMultiBase]
+|{url-api}/BodyLockMultiBase.html[BodyLockMultiBase]
+
+|{url-jolt}body_lock_multi_read.html[JPH::BodyLockMultiRead]
+|{url-api}/BodyLockMultiRead.html[BodyLockMultiRead]
+
+|{url-jolt}body_lock_multi_write.html[JPH::BodyLockMultiWrite]
+|{url-api}/BodyLockMultiWrite.html[BodyLockMultiWrite]
 
 |{url-jolt}body_lock_read.html[JPH::BodyLockRead]
 |{url-api}/BodyLockRead.html[BodyLockRead]
@@ -140,7 +152,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/BroadPhaseQuadTree.html[BroadPhaseQuadTree]
 
 |{url-jolt}broad_phase_query.html[JPH::BroadPhaseQuery]
-|{url-api}/BroadPhaseQuery.html[BroadPhaseQuery]
+|{url-api}/BroadPhaseQuery.html[BroadPhaseQuery] +
+ {url-api}/readonly/ConstBroadPhaseQuery.html[ConstBroadPhaseQuery]
 
 |{url-jolt}capsule_shape.html[JPH::CapsuleShape]
 |{url-api}/CapsuleShape.html[CapsuleShape]
@@ -281,6 +294,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}debug_renderer_recorder.html[JPH::DebugRendererRecorder]
 |{url-api}/DebugRendererRecorder.html[DebugRendererRecorder]
 
+|{url-jolt}debug_renderer_simple.html[JPH::DebugRendererSimple]
+|{url-api}/DebugRendererSimple.html[DebugRendererSimple]
+
 |{url-jolt}decorated_shape.html[JPH::DecoratedShape]
 |{url-api}/DecoratedShape.html[DecoratedShape]
 
@@ -410,7 +426,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/Mutex.html[Mutex]
 
 |{url-jolt}narrow_phase_query.html[JPH::NarrowPhaseQuery]
-|{url-api}/NarrowPhaseQuery.html[NarrowPhaseQuery]
+|{url-api}/NarrowPhaseQuery.html[NarrowPhaseQuery] +
+ {url-api}/readonly/ConstNarrowPhaseQuery.html[ConstNarrowPhaseQuery]
 
 |{url-jolt}non_copyable.html[JPH::NonCopyable]
 |{url-api}/NonCopyable.html[NonCopyable]
@@ -453,6 +470,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}path_constraint_path.html[JPH::PathConstraintPath]
 |{url-api}/PathConstraintPath.html[PathConstraintPath] +
+ {url-api}/readonly/ConstPathConstraintPath.html[ConstPathConstraintPath] +
  {url-api}/PathConstraintPathRef.html[PathConstraintPathRef]
 
 |{url-jolt}path_constraint_path_hermite.html[JPH::PathConstraintPathHermite]
@@ -814,7 +832,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}vehicle_constraint_settings.html[JPH::VehicleConstraintSettings]
 |{url-api}/VehicleConstraintSettings.html[VehicleConstraintSettings] +
- {url-api}/readonly/ConstVehicleConstraintSettings.html[ConstVehicleConstraintSettings]
+ {url-api}/readonly/ConstVehicleConstraintSettings.html[ConstVehicleConstraintSettings] +
+ {url-api}/VehicleConstraintSettingsRef.html[VehicleConstraintSettingsRef]
 
 |{url-jolt}vehicle_controller.html[JPH::VehicleController]
 |{url-api}/VehicleController.html[VehicleController]
@@ -851,10 +870,12 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}wheel_settings_t_v.html[JPH::WheelSettingsTV]
 |{url-api}/WheelSettingsTv.html[WheelSettingsTv] +
+ {url-api}/readonly/ConstWheelSettingsTv.html[ConstWheelSettingsTv] +
  {url-api}/WheelSettingsTvRef.html[WheelSettingsTvRef]
 
 |{url-jolt}wheel_settings_w_v.html[JPH::WheelSettingsWV]
 |{url-api}/WheelSettingsWv.html[WheelSettingsWv] +
+ {url-api}/readonly/ConstWheelSettingsWv.html[ConstWheelSettingsWv] +
  {url-api}/WheelSettingsWvRef.html[WheelSettingsWvRef]
 
 |{url-jolt}wheel_t_v.html[JPH::WheelTV]
