@@ -38,7 +38,6 @@ import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
 import com.github.stephengold.joltjni.CollideShapeSettings;
 import com.github.stephengold.joltjni.ConvexHullShapeSettings;
-import com.github.stephengold.joltjni.NarrowPhaseQuery;
 import com.github.stephengold.joltjni.ObjectLayerFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
@@ -51,6 +50,7 @@ import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.operator.Op;
+import com.github.stephengold.joltjni.readonly.ConstNarrowPhaseQuery;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RMat44Arg;
@@ -254,7 +254,7 @@ final public class HelloNarrowPhase
         character.postSimulation(maxSeparation);
 
         // Collect all movable bodies intersecting the ghost shape:
-        NarrowPhaseQuery query = physicsSystem.getNarrowPhaseQuery();
+        ConstNarrowPhaseQuery query = physicsSystem.getNarrowPhaseQuery();
         Vec3Arg scale = Vec3.sOne();
         RMat44Arg transform = RMat44.sTranslation(ghostCenter.toRVec3());
         CollideShapeSettings settings = new CollideShapeSettings();

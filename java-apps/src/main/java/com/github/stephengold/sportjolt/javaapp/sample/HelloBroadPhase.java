@@ -34,7 +34,6 @@ import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BroadPhaseLayerFilter;
-import com.github.stephengold.joltjni.BroadPhaseQuery;
 import com.github.stephengold.joltjni.CapsuleShape;
 import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
@@ -50,6 +49,7 @@ import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.operator.Op;
 import com.github.stephengold.joltjni.readonly.ConstAaBox;
+import com.github.stephengold.joltjni.readonly.ConstBroadPhaseQuery;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
@@ -243,7 +243,7 @@ final public class HelloBroadPhase
         character.postSimulation(maxSeparation);
 
         // Collect all movable bodies with AABBs overlapping the ghost box:
-        BroadPhaseQuery query = physicsSystem.getBroadPhaseQuery();
+        ConstBroadPhaseQuery query = physicsSystem.getBroadPhaseQuery();
         collector.reset();
         query.collideAaBox(
                 ghost, collector, filterBpLayerNoOp, filterObjLayerMoving);
