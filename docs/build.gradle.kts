@@ -17,7 +17,7 @@ sourceSets.main {
 
 val artifactId = "jolt-jni-Windows64"
 val centralUrl = "https://repo1.maven.org/maven2/com/github/stephengold"
-val jarVersion = "2.2.0"
+val jarVersion = "3.0.1"
 val jarName = artifactId + "-" + jarVersion + "-javadoc.jar"
 val downloadUrl = centralUrl + "/" + artifactId + "/" + jarVersion + "/" + jarName
 
