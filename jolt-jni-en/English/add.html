@@ -410,7 +410,7 @@ Add to the relevant "build.gradle" or "build.gradle.kts" file:</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
     implementation("io.github.electrostat-lab:snaploader:1.1.1-stable")
-    runtimeOnly("com.github.oshi:oshi-core:6.8.2")
+    runtimeOnly("com.github.oshi:oshi-core:6.8.3")
 }</code></pre>
 </div>
 </div>
@@ -599,9 +599,9 @@ and mapping both object layers to broadphase layer 0.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final int numObjLayers = 2;
-final int numBpLayers = 1;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final int numBpLayers = 1;
 
+final int numObjLayers = 2;
 final int objLayerMoving = 0;
 final int objLayerNonMoving = 1;
 
@@ -619,8 +619,10 @@ BroadPhaseLayerInterfaceTable layerMap
         = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
 layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
 layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
-
-// Pre-compute the rules for colliding object layers with broadphase layers:
+/*
+ * Pre-compute the rules for colliding object layers
+ * with broadphase layers:
+ */
 ObjectVsBroadPhaseLayerFilterTable ovbFilter
         = new ObjectVsBroadPhaseLayerFilterTable(
                 layerMap, numBpLayers, ovoFilter, numObjLayers);</code></pre>
@@ -701,12 +703,13 @@ Here&#8217;s a code fragment that creates a spherical rigid body:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Create a collision shape:
-float ballRadius = 1f;
+float ballRadius = 0.3f;
 ConstShape ballShape = new SphereShape(ballRadius);
+ShapeRefC ballShapeRef = ballShape.toRefC(); // ballShape ref count -&gt; 1
 
 // Create and configure body-creation settings:
 BodyCreationSettings bcs = new BodyCreationSettings();
-bcs.setShape(ballShape);
+bcs.setShape(ballShapeRef);
 
 // Create a rigid body for a specific PhysicsSystem:
 BodyInterface bi = physicsSystem.getBodyInterface();
