@@ -268,9 +268,9 @@ and mapping both object layers to broadphase layer 0.
 
 [source,java]
 ----
-final int numObjLayers = 2;
 final int numBpLayers = 1;
 
+final int numObjLayers = 2;
 final int objLayerMoving = 0;
 final int objLayerNonMoving = 1;
 
@@ -288,8 +288,10 @@ BroadPhaseLayerInterfaceTable layerMap
         = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
 layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
 layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
-
-// Pre-compute the rules for colliding object layers with broadphase layers:
+/*
+ * Pre-compute the rules for colliding object layers
+ * with broadphase layers:
+ */
 ObjectVsBroadPhaseLayerFilterTable ovbFilter
         = new ObjectVsBroadPhaseLayerFilterTable(
                 layerMap, numBpLayers, ovoFilter, numObjLayers);
@@ -338,12 +340,13 @@ Here's a code fragment that creates a spherical rigid body:
 [source,java]
 ----
 // Create a collision shape:
-float ballRadius = 1f;
+float ballRadius = 0.3f;
 ConstShape ballShape = new SphereShape(ballRadius);
+ShapeRefC ballShapeRef = ballShape.toRefC(); // ballShape ref count -> 1
 
 // Create and configure body-creation settings:
 BodyCreationSettings bcs = new BodyCreationSettings();
-bcs.setShape(ballShape);
+bcs.setShape(ballShapeRef);
 
 // Create a rigid body for a specific PhysicsSystem:
 BodyInterface bi = physicsSystem.getBodyInterface();
