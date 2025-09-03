@@ -156,7 +156,7 @@ final public class HelloJoltJni {
         JobSystem jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
                 Jolt.cMaxPhysicsBarriers, numWorkerThreads);
 
-        float timePerStep = 0.02f; // seconds
+        float timePerStep = 0.02f; // in seconds
         for (int iteration = 0; iteration < 50; ++iteration) {
             int collisionSteps = 1;
             int errors = physicsSystem.update(
@@ -193,8 +193,10 @@ final public class HelloJoltJni {
                 = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
         layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
         layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
-
-        // Rules for colliding object layers with broadphase layers:
+        /*
+         * Pre-compute the rules for colliding object layers
+         * with broadphase layers:
+         */
         ObjectVsBroadPhaseLayerFilter ovbFilter
                 = new ObjectVsBroadPhaseLayerFilterTable(
                         layerMap, numBpLayers, ovoFilter, numObjLayers);
