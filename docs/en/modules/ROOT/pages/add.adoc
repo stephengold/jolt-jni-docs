@@ -252,7 +252,7 @@ and specify that non-moving bodies collide only with moving bodies,
 not with other non-moving bodies.
 
 Each body belongs to an _object layer_, defaulting to layer 0.
-You can define up to 65_536 object layers.
+You can define up to 65,536 object layers.
 
 Collision layers can be defined both for objects and broadphase:
 
