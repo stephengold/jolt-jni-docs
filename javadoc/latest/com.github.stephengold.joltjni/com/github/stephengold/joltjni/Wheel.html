@@ -95,7 +95,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -103,7 +103,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Wheel</span>
-<span class="extends-implements">extends <a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">NonCopyable</a></span></div>
+<span class="extends-implements">extends <a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">NonCopyable</a>
+implements <a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></span></div>
 <div class="block">A single wheel of a vehicle.</div>
 </section>
 <section class="summary">
@@ -119,10 +120,91 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSettings()" class="member-name-link">getSettings</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAngularVelocity()" class="member-name-link">getAngularVelocity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the wheel's angular velocity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactBodyId()" class="member-name-link">getContactBodyId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the ID of the body that's supporting the wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactLateral()" class="member-name-link">getContactLateral</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the wheel's lateral (sideways) direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactLongitudinal()" class="member-name-link">getContactLongitudinal</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the wheel's longitudinal direction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactNormal()" class="member-name-link">getContactNormal</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the contact normal direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactPointVelocity()" class="member-name-link">getContactPointVelocity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the velocity of the contact point.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactPosition()" class="member-name-link">getContactPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the contact point.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactSubShapeId()" class="member-name-link">getContactSubShapeId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return ID of the sub-shape that's supporting the vehicle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLateralLambda()" class="member-name-link">getLateralLambda</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the lateral (sideways) component of the impulse applied to the
+ wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLongitudinalLambda()" class="member-name-link">getLongitudinalLambda</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the forward component of the impulse applied to the wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotationAngle()" class="member-name-link">getRotationAngle</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the wheel's rotation angle.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSettings()" class="member-name-link">getSettings</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the settings used to create this wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSteerAngle()" class="member-name-link">getSteerAngle</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the steering angle.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionLambda()" class="member-name-link">getSuspensionLambda</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the total impulse applied to the suspension.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionLength()" class="member-name-link">getSuspensionLength</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the length of the suspension.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasContact()" class="member-name-link">hasContact</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether the wheel is supported.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasHitHardPoint()" class="member-name-link">hasHitHardPoint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether the suspension has hit its hard point.</div>
 </div>
 </div>
 </div>
@@ -133,6 +215,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -145,13 +233,227 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getAngularVelocity()">
+<h3>getAngularVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getAngularVelocity</span>()</div>
+<div class="block">Return the wheel's angular velocity.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getAngularVelocity()">getAngularVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the angular velocity (in radians per second, positive when the
+ vehicle is moving forward)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactBodyId()">
+<h3>getContactBodyId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getContactBodyId</span>()</div>
+<div class="block">Return the ID of the body that's supporting the wheel. (native method:
+ GetContactBodyID)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactBodyId()">getContactBodyId</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the body ID</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactLateral()">
+<h3>getContactLateral</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getContactLateral</span>()</div>
+<div class="block">Copy the wheel's lateral (sideways) direction.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactLateral()">getContactLateral</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactLongitudinal()">
+<h3>getContactLongitudinal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getContactLongitudinal</span>()</div>
+<div class="block">Copy the wheel's longitudinal direction.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactLongitudinal()">getContactLongitudinal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactNormal()">
+<h3>getContactNormal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getContactNormal</span>()</div>
+<div class="block">Copy the contact normal direction.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactNormal()">getContactNormal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new direction vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactPointVelocity()">
+<h3>getContactPointVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getContactPointVelocity</span>()</div>
+<div class="block">Copy the velocity of the contact point.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactPointVelocity()">getContactPointVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new velocity vector (meters per second in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactPosition()">
+<h3>getContactPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">getContactPosition</span>()</div>
+<div class="block">Copy the location of the contact point.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactPosition()">getContactPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new location vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactSubShapeId()">
+<h3>getContactSubShapeId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getContactSubShapeId</span>()</div>
+<div class="block">Return ID of the sub-shape that's supporting the vehicle. (native method:
+ GetContactSubShapeID)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactSubShapeId()">getContactSubShapeId</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the sub-shape ID</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLateralLambda()">
+<h3>getLateralLambda</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLateralLambda</span>()</div>
+<div class="block">Return the lateral (sideways) component of the impulse applied to the
+ wheel.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getLateralLambda()">getLateralLambda</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the impulse component (in Newton seconds)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLongitudinalLambda()">
+<h3>getLongitudinalLambda</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLongitudinalLambda</span>()</div>
+<div class="block">Return the forward component of the impulse applied to the wheel.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getLongitudinalLambda()">getLongitudinalLambda</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the impulse component (in Newton seconds)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRotationAngle()">
+<h3>getRotationAngle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getRotationAngle</span>()</div>
+<div class="block">Return the wheel's rotation angle.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getRotationAngle()">getRotationAngle</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the angle (in radians)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getSettings()">
 <h3>getSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></span>&nbsp;<span class="element-name">getSettings</span>()</div>
 <div class="block">Access the settings used to create this wheel.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getSettings()">getSettings</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSteerAngle()">
+<h3>getSteerAngle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSteerAngle</span>()</div>
+<div class="block">Return the steering angle.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getSteerAngle()">getSteerAngle</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the leftward angle (in radians, &ge;-Pi, &le;Pi)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionLambda()">
+<h3>getSuspensionLambda</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSuspensionLambda</span>()</div>
+<div class="block">Return the total impulse applied to the suspension.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getSuspensionLambda()">getSuspensionLambda</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the magnitude of the impulse (in Newton seconds)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspensionLength()">
+<h3>getSuspensionLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSuspensionLength</span>()</div>
+<div class="block">Return the length of the suspension.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getSuspensionLength()">getSuspensionLength</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd>the distance between the axle and the hard point (in meters)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasContact()">
+<h3>hasContact</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasContact</span>()</div>
+<div class="block">Test whether the wheel is supported.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#hasContact()">hasContact</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if supported, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasHitHardPoint()">
+<h3>hasHitHardPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasHitHardPoint</span>()</div>
+<div class="block">Test whether the suspension has hit its hard point.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#hasHitHardPoint()">hasHitHardPoint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if hit, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>

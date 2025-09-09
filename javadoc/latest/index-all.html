@@ -54,7 +54,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBox.html" class="type-name-link" title="class in com.github.stephengold.joltjni">AaBox</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
-<div class="block">An axis-aligned box.</div>
+<div class="block">3-D geometric description of an axis-aligned box.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBox.html#%3Cinit%3E()" class="member-name-link">AaBox()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></dt>
 <dd>
@@ -2477,9 +2477,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Read-only access to a <code>VehicleAntiRollBar</code> object.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to <code>VehicleCollisionTester</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to <code>VehicleConstraint</code>.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraintSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
 <div class="block">Read-only access to a <code>VehicleConstraintSettings</code> object.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleController.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleController</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to a <code>VehicleController</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleControllerSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2500,6 +2512,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVolume.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
 <div class="block">Read-only access to an <code>Volume</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to <code>Wheel</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2716,7 +2732,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the cosine of the specified single-precision angle.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#countAntiRollBars()" class="member-name-link">countAntiRollBars()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Count how many anti-roll bars the vehicle has.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#countAntiRollBars()" class="member-name-link">countAntiRollBars()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Count how many anti-roll bars the vehicle has.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#countAntiRollBars()" class="member-name-link">countAntiRollBars()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Count how many anti-roll bars the vehicle has.</div>
 </dd>
@@ -2872,7 +2896,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count the volume constraints.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#countWheels()" class="member-name-link">countWheels()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Count how many wheels the vehicle has.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#countWheels()" class="member-name-link">countWheels()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Count how many wheels the vehicle has.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#countWheels()" class="member-name-link">countWheels()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Count how many wheels the vehicle has.</div>
 </dd>
@@ -4523,9 +4555,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the angular velocity.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getAngularVelocity()" class="member-name-link">getAngularVelocity()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the wheel's angular velocity.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleEngine.html#getAngularVelocity()" class="member-name-link">getAngularVelocity()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleEngine.html" title="class in com.github.stephengold.joltjni">VehicleEngine</a></dt>
 <dd>
 <div class="block">Return the engine's rotation rate in SI units.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getAngularVelocity()" class="member-name-link">getAngularVelocity()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the wheel's angular velocity.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getAngularVelocity(int)" class="member-name-link">getAngularVelocity(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
@@ -4539,11 +4579,19 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the angular velocity of body 2.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getAntiRollBar(int)" class="member-name-link">getAntiRollBar(int)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Access the specified anti-roll bar.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraintSettings.html#getAntiRollBar(int)" class="member-name-link">getAntiRollBar(int)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></dt>
 <dd>
 <div class="block">Access the settings for the specified anti-roll bar.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getAntiRollBar(int)" class="member-name-link">getAntiRollBar(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Access the specified anti-roll bar.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getAntiRollBar(int)" class="member-name-link">getAntiRollBar(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Access the specified anti-roll bar.</div>
 </dd>
@@ -5586,6 +5634,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the constraint's priority when solving.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getConstraintPriority()" class="member-name-link">getConstraintPriority()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Return the constraint's priority when solving.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettingsRef.html#getConstraintPriority()" class="member-name-link">getConstraintPriority()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintSettingsRef</a></dt>
 <dd>
 <div class="block">Return the constraint's priority when solving.</div>
@@ -5622,6 +5674,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Convert the constraint to a <code>ConstraintSettings</code> object.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getConstraintSettings()" class="member-name-link">getConstraintSettings()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Generate settings to reconstruct the constraint.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTwoBodyConstraint.html#getConstraintToBody1Matrix()" class="member-name-link">getConstraintToBody1Matrix()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTwoBodyConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTwoBodyConstraint</a></dt>
 <dd>
 <div class="block">Calculate the coordinate transform from constraint space to body 1.</div>
@@ -5654,6 +5710,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether warm starting is enabled for constraints.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getContactBodyId()" class="member-name-link">getContactBodyId()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the ID of the body that's supporting the wheel.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getContactBodyId()" class="member-name-link">getContactBodyId()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the ID of the body that's supporting the wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyManifold.html#getContactBodyId(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)" class="member-name-link">getContactBodyId(ConstSoftBodyVertex)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></dt>
 <dd>
 <div class="block">Return the ID of the body with which the specified vertex collided.</div>
@@ -5666,9 +5730,25 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the contact (normal) component.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getContactLateral()" class="member-name-link">getContactLateral()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Copy the wheel's lateral (sideways) direction.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getContactLateral()" class="member-name-link">getContactLateral()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Copy the wheel's lateral (sideways) direction.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html#getContactListener()" class="member-name-link">getContactListener()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></dt>
 <dd>
 <div class="block">Access the (application-provided) contact listener.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getContactLongitudinal()" class="member-name-link">getContactLongitudinal()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Copy the wheel's longitudinal direction.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getContactLongitudinal()" class="member-name-link">getContactLongitudinal()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Copy the wheel's longitudinal direction.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Contact.html#getContactNormal()" class="member-name-link">getContactNormal()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Contact.html" title="class in com.github.stephengold.joltjni">Contact</a></dt>
 <dd>
@@ -5677,6 +5757,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstContact.html#getContactNormal()" class="member-name-link">getContactNormal()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstContact.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContact</a></dt>
 <dd>
 <div class="block">Copy the contact normal.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getContactNormal()" class="member-name-link">getContactNormal()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Copy the contact normal direction.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getContactNormal()" class="member-name-link">getContactNormal()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Copy the contact normal direction.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyManifold.html#getContactNormal(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)" class="member-name-link">getContactNormal(ConstSoftBodyVertex)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></dt>
 <dd>
@@ -5719,6 +5807,30 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstPhysicsSettings.html#getContactPointPreserveLambdaMaxDistSq()" class="member-name-link">getContactPointPreserveLambdaMaxDistSq()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstPhysicsSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSettings</a></dt>
 <dd>
 <div class="block">Return the maximum translation of a contact point for warm starting.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getContactPointVelocity()" class="member-name-link">getContactPointVelocity()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Copy the velocity of the contact point.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getContactPointVelocity()" class="member-name-link">getContactPointVelocity()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Copy the velocity of the contact point.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getContactPosition()" class="member-name-link">getContactPosition()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Copy the location of the contact point.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getContactPosition()" class="member-name-link">getContactPosition()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Copy the location of the contact point.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getContactSubShapeId()" class="member-name-link">getContactSubShapeId()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return ID of the sub-shape that's supporting the vehicle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getContactSubShapeId()" class="member-name-link">getContactSubShapeId()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return ID of the sub-shape that's supporting the vehicle.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html#getContainingObject()" class="member-name-link">getContainingObject()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></dt>
 <dd>
@@ -6043,6 +6155,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Test whether the constraint will be enabled initially.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TwoBodyConstraintRef.html#getEnabled()" class="member-name-link">getEnabled()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TwoBodyConstraintRef.html" title="class in com.github.stephengold.joltjni">TwoBodyConstraintRef</a></dt>
+<dd>
+<div class="block">Test whether the constraint is enabled.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getEnabled()" class="member-name-link">getEnabled()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Test whether the constraint is enabled.</div>
 </dd>
@@ -6377,7 +6493,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the gravity factor of the specified body.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getGravityOverride()" class="member-name-link">getGravityOverride()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the gravity override.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getGravityOverride()" class="member-name-link">getGravityOverride()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the gravity override.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getGravityOverride()" class="member-name-link">getGravityOverride()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Copy the gravity override.</div>
 </dd>
@@ -7177,6 +7301,16 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the tire's friction in the sideways direction.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getLateralLambda()" class="member-name-link">getLateralLambda()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the lateral (sideways) component of the impulse applied to the
+ wheel.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getLateralLambda()" class="member-name-link">getLateralLambda()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the lateral (sideways) component of the impulse applied to the
+ wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Character.html#getLayer()" class="member-name-link">getLayer()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Character.html" title="class in com.github.stephengold.joltjni">Character</a></dt>
 <dd>
 <div class="block">Return the character's object layer, using the locking body interface.</div>
@@ -7528,7 +7662,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the location of the contact point for the specified vertex.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getLocalForward()" class="member-name-link">getLocalForward()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the local "forward" direction.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getLocalForward()" class="member-name-link">getLocalForward()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the local "forward" direction.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getLocalForward()" class="member-name-link">getLocalForward()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Copy the local "forward" direction.</div>
 </dd>
@@ -7550,7 +7692,15 @@ loadScripts(document, 'script');</script>
 <div class="block">Calculate the local transform for this shape, given the scale of the
  child.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getLocalUp()" class="member-name-link">getLocalUp()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the local "up" direction.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getLocalUp()" class="member-name-link">getLocalUp()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the local "up" direction.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getLocalUp()" class="member-name-link">getLocalUp()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Copy the local "up" direction.</div>
 </dd>
@@ -7577,6 +7727,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsTvRef.html#getLongitudinalFriction()" class="member-name-link">getLongitudinalFriction()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></dt>
 <dd>
 <div class="block">Return the tire's friction in the forward direction.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getLongitudinalLambda()" class="member-name-link">getLongitudinalLambda()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the forward component of the impulse applied to the wheel.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getLongitudinalLambda()" class="member-name-link">getLongitudinalLambda()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the forward component of the impulse applied to the wheel.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVertexAttributes.html#getLraMaxDistanceMultiplier()" class="member-name-link">getLraMaxDistanceMultiplier()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVertexAttributes.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexAttributes</a></dt>
 <dd>
@@ -7987,11 +8145,19 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the maximum distance to correct in a single iteration when solving
  position constraints.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getMaxPitchRollAngle()" class="member-name-link">getMaxPitchRollAngle()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Return the vehicle's maximum pitch/roll angle.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraintSettings.html#getMaxPitchRollAngle()" class="member-name-link">getMaxPitchRollAngle()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraintSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraintSettings</a></dt>
 <dd>
 <div class="block">Return the vehicle's maximum pitch/roll angle.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getMaxPitchRollAngle()" class="member-name-link">getMaxPitchRollAngle()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Return the vehicle's maximum pitch/roll angle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getMaxPitchRollAngle()" class="member-name-link">getMaxPitchRollAngle()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Return the vehicle's maximum pitch/roll angle.</div>
 </dd>
@@ -8476,6 +8642,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the override for the number of position iterations used in the
  solver.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getNumPositionStepsOverride()" class="member-name-link">getNumPositionStepsOverride()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Return the override for the number of position iterations used in the
+ solver.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettingsRef.html#getNumPositionStepsOverride()" class="member-name-link">getNumPositionStepsOverride()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintSettingsRef</a></dt>
 <dd>
 <div class="block">Return the override for the number of position iterations used in the
@@ -8493,12 +8664,32 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count how many sensors are in contact with the soft body.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getNumStepsBetweenCollisionTestActive()" class="member-name-link">getNumStepsBetweenCollisionTestActive()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Return the number of simulation steps between wheel-collision tests when
+ the vehicle is active.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getNumStepsBetweenCollisionTestActive()" class="member-name-link">getNumStepsBetweenCollisionTestActive()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
 <dd>
 <div class="block">Return the number of simulation steps between wheel-collision tests when
  the vehicle is active.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getNumStepsBetweenCollisionTestActive()" class="member-name-link">getNumStepsBetweenCollisionTestActive()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Return the number of simulation steps between wheel-collision tests when
+ the vehicle is active.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getNumStepsBetweenCollisionTestInactive()" class="member-name-link">getNumStepsBetweenCollisionTestInactive()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Return the number of simulation steps between collision tests when the
+ body is inactive.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getNumStepsBetweenCollisionTestInactive()" class="member-name-link">getNumStepsBetweenCollisionTestInactive()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Return the number of simulation steps between collision tests when the
+ body is inactive.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getNumStepsBetweenCollisionTestInactive()" class="member-name-link">getNumStepsBetweenCollisionTestInactive()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Return the number of simulation steps between collision tests when the
  body is inactive.</div>
@@ -8569,6 +8760,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the override for the number of velocity iterations used in the
  solver.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getNumVelocityStepsOverride()" class="member-name-link">getNumVelocityStepsOverride()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Return the override for the number of velocity iterations used in the
+ solver.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettingsRef.html#getNumVelocityStepsOverride()" class="member-name-link">getNumVelocityStepsOverride()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintSettingsRef</a></dt>
 <dd>
 <div class="block">Return the override for the number of velocity iterations used in the
@@ -8618,9 +8814,19 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the index of the object layer.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html#getObjectLayer()" class="member-name-link">getObjectLayer()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Return the object layer used for collision detection when no filters
+ are overridden.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html#getObjectLayer()" class="member-name-link">getObjectLayer()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></dt>
 <dd>
 <div class="block">Return the index of the object layer.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#getObjectLayer()" class="member-name-link">getObjectLayer()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Return the object layer used for collision detection when no filters are
+ overridden.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getObjectLayer(int)" class="member-name-link">getObjectLayer(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
@@ -9830,6 +10036,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the orientation of the specified body.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getRotationAngle()" class="member-name-link">getRotationAngle()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the wheel's rotation angle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getRotationAngle()" class="member-name-link">getRotationAngle()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the wheel's rotation angle.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintSettings.html#getRotationConstraintType()" class="member-name-link">getRotationConstraintType()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintSettings.html" title="class in com.github.stephengold.joltjni">PathConstraintSettings</a></dt>
 <dd>
 <div class="block">The settings are unaffected.</div>
@@ -9902,6 +10116,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Access the shared settings.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleController.html#getSettings()" class="member-name-link">getSettings()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleController.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleController</a></dt>
+<dd>
+<div class="block">Recreate the settings for this controller.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getSettings()" class="member-name-link">getSettings()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Access the settings used to create this wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html#getSettings()" class="member-name-link">getSettings()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></dt>
 <dd>
 <div class="block">Access the shared settings.</div>
@@ -9909,6 +10131,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyMotionProperties.html#getSettings()" class="member-name-link">getSettings()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyMotionProperties.html" title="class in com.github.stephengold.joltjni">SoftBodyMotionProperties</a></dt>
 <dd>
 <div class="block">Access the shared settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleController.html#getSettings()" class="member-name-link">getSettings()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleController.html" title="class in com.github.stephengold.joltjni">VehicleController</a></dt>
+<dd>
+<div class="block">Recreate the settings for this controller.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getSettings()" class="member-name-link">getSettings()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
 <dd>
@@ -10246,6 +10472,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the statistics.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getSteerAngle()" class="member-name-link">getSteerAngle()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the steering angle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getSteerAngle()" class="member-name-link">getSteerAngle()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the steering angle.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettings.html#getSteeringAxis()" class="member-name-link">getSteeringAxis()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></dt>
 <dd>
 <div class="block">Copy the steering axis (upward direction).</div>
@@ -10432,6 +10666,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the constraint's subtype.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getSubType()" class="member-name-link">getSubType()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Return the constraint's subtype.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Support.html#getSupport(float,float,float)" class="member-name-link">getSupport(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Support.html" title="class in com.github.stephengold.joltjni">Support</a></dt>
 <dd>
 <div class="block">Calculate a support vector for the specified direction.</div>
@@ -10564,6 +10802,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the location where tire forces will be applied if the force-point
  option is enabled.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getSuspensionLambda()" class="member-name-link">getSuspensionLambda()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the total impulse applied to the suspension.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getSuspensionLambda()" class="member-name-link">getSuspensionLambda()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the total impulse applied to the suspension.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#getSuspensionLength()" class="member-name-link">getSuspensionLength()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Return the length of the suspension.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getSuspensionLength()" class="member-name-link">getSuspensionLength()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Return the length of the suspension.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettings.html#getSuspensionMaxLength()" class="member-name-link">getSuspensionMaxLength()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></dt>
 <dd>
@@ -10993,6 +11247,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the constraint's type.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getType()" class="member-name-link">getType()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Return the constraint's type.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html#getUInt32()" class="member-name-link">getUInt32()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html" title="class in com.github.stephengold.joltjni">Color</a></dt>
 <dd>
 <div class="block">Return the integer value.</div>
@@ -11403,7 +11661,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the forward direction when steering is neutral.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getWheelLocalBasis(Wheel, Vec3, Vec3, Vec3)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the basis vectors for the specified wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getWheelLocalBasis(Wheel, Vec3, Vec3, Vec3)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the basis vectors for the specified wheel.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getWheelLocalBasis(Wheel, Vec3, Vec3, Vec3)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Copy the basis vectors for the specified wheel.</div>
 </dd>
@@ -11434,6 +11700,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWvRef.html#getWheelUp()" class="member-name-link">getWheelUp()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a></dt>
 <dd>
 <div class="block">Copy the "up" direction when steering is neutral.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getWheelWorldTransform(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getWheelWorldTransform(int, Vec3Arg, Vec3Arg)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the world transform of the specified wheel.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getWheelWorldTransform(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getWheelWorldTransform(int, Vec3Arg, Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
 <dd>
@@ -11576,6 +11846,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCharacter.html#getWorldTransform(boolean)" class="member-name-link">getWorldTransform(boolean)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></dt>
 <dd>
 <div class="block">Calculate the character's local-to-system coordinate transform.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#getWorldUp()" class="member-name-link">getWorldUp()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Copy the "up" direction based on gravity.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#getWorldUp()" class="member-name-link">getWorldUp()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
 <dd>
@@ -11840,9 +12114,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether the vertex collided during the previous update.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#hasContact()" class="member-name-link">hasContact()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Test whether the wheel is supported.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyVertex.html#hasContact()" class="member-name-link">hasContact()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyVertex.html" title="class in com.github.stephengold.joltjni">SoftBodyVertex</a></dt>
 <dd>
 <div class="block">Test whether the vertex collided during the previous update.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#hasContact()" class="member-name-link">hasContact()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Test whether the wheel is supported.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyManifold.html#hasContact(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)" class="member-name-link">hasContact(ConstSoftBodyVertex)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyManifold.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyManifold</a></dt>
 <dd>
@@ -11927,6 +12209,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#hashCombine(long,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">hashCombine(long, Vec3Arg)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
 <div class="block">Combine the specified vector with the specified hash code.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html#hasHitHardPoint()" class="member-name-link">hasHitHardPoint()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></dt>
+<dd>
+<div class="block">Test whether the suspension has hit its hard point.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#hasHitHardPoint()" class="member-name-link">hasHitHardPoint()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
+<dd>
+<div class="block">Test whether the suspension has hit its hard point.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HingeConstraint.html#hasLimits()" class="member-name-link">hasLimits()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HingeConstraint.html" title="class in com.github.stephengold.joltjni">HingeConstraint</a></dt>
 <dd>
@@ -12261,6 +12551,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether the constraint is active.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#isActive()" class="member-name-link">isActive()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
+<dd>
+<div class="block">Test whether the constraint is active.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#isActive(int)" class="member-name-link">isActive(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
 <div class="block">Test whether the specified body is active.</div>
@@ -12391,7 +12685,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether the specified degree of freedom is free.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html#isGravityOverridden()" class="member-name-link">isGravityOverridden()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></dt>
+<dd>
+<div class="block">Test whether gravity is overridden.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#isGravityOverridden()" class="member-name-link">isGravityOverridden()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Test whether gravity is overridden.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#isGravityOverridden()" class="member-name-link">isGravityOverridden()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Test whether gravity is overridden.</div>
 </dd>
@@ -13938,6 +14240,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Check if this box overlaps with a plane.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html#overrideGravity(float,float,float)" class="member-name-link">overrideGravity(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraint.html" title="class in com.github.stephengold.joltjni">VehicleConstraint</a></dt>
+<dd>
+<div class="block">Override the vehicle's gravity vector.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#overrideGravity(float,float,float)" class="member-name-link">overrideGravity(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Override the vehicle's gravity vector.</div>
 </dd>
@@ -15615,6 +15921,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Save the state of the constraint, for possible replay.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TwoBodyConstraintRef.html#saveState(com.github.stephengold.joltjni.StateRecorder)" class="member-name-link">saveState(StateRecorder)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TwoBodyConstraintRef.html" title="class in com.github.stephengold.joltjni">TwoBodyConstraintRef</a></dt>
+<dd>
+<div class="block">Save the state of the constraint, for possible replay.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html#saveState(com.github.stephengold.joltjni.StateRecorder)" class="member-name-link">saveState(StateRecorder)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></dt>
 <dd>
 <div class="block">Save the state of the constraint, for possible replay.</div>
 </dd>
@@ -17680,6 +17990,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the object layer.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#setObjectLayer(int)" class="member-name-link">setObjectLayer(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Alter the object layer used for collision detection when no filters are
+ overridden.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#setObjectLayer(int,int)" class="member-name-link">setObjectLayer(int, int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
 <div class="block">Alter the object layer of the specified body.</div>
@@ -19510,9 +19825,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">SphereShape</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html#%3Cinit%3E()" class="member-name-link">Sphere()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html" title="class in com.github.stephengold.joltjni">Sphere</a></dt>
+<dd>
+<div class="block">Instantiate an default sphere.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html#%3Cinit%3E(com.github.stephengold.joltjni.Float3,float)" class="member-name-link">Sphere(Float3, float)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html" title="class in com.github.stephengold.joltjni">Sphere</a></dt>
 <dd>
 <div class="block">Instantiate a sphere with the specified center and radius.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSphere)" class="member-name-link">Sphere(ConstSphere)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html" title="class in com.github.stephengold.joltjni">Sphere</a></dt>
+<dd>
+<div class="block">Instantiate a copy of the specified sphere.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">Sphere(Vec3Arg, float)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html" title="class in com.github.stephengold.joltjni">Sphere</a></dt>
 <dd>
@@ -19645,6 +19968,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html#sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.SoftBodySharedSettingsRef)" class="member-name-link">sReadObject(StringStream, SoftBodySharedSettingsRef)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html" title="class in com.github.stephengold.joltjni">ObjectStreamIn</a></dt>
 <dd>
 <div class="block">Read a soft-body shared-settings object from the specified stream.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html#sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef)" class="member-name-link">sReadObject(StringStream, TwoBodyConstraintSettingsRef)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html" title="class in com.github.stephengold.joltjni">ObjectStreamIn</a></dt>
+<dd>
+<div class="block">Read a two-body constraint settings object from the specified stream.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html#sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.VehicleConstraintSettingsRef)" class="member-name-link">sReadObject(StringStream, VehicleConstraintSettingsRef)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html" title="class in com.github.stephengold.joltjni">ObjectStreamIn</a></dt>
+<dd>
+<div class="block">Read a vehicle-constraint settings object from the specified stream.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html#sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.VehicleControllerSettingsRef)" class="member-name-link">sReadObject(StringStream, VehicleControllerSettingsRef)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ObjectStreamIn.html" title="class in com.github.stephengold.joltjni">ObjectStreamIn</a></dt>
 <dd>

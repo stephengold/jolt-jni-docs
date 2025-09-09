@@ -111,10 +111,18 @@ implements <a href="readonly/ConstSphere.html" title="interface in com.github.st
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.Float3,float)" class="member-name-link">Sphere</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;center,
- float&nbsp;radius)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Sphere</a>()</code></div>
 <div class="col-last even-row-color">
+<div class="block">Instantiate an default sphere.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.Float3,float)" class="member-name-link">Sphere</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;center,
+ float&nbsp;radius)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Instantiate a sphere with the specified center and radius.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSphere)" class="member-name-link">Sphere</a><wbr>(<a href="readonly/ConstSphere.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSphere</a>&nbsp;original)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a copy of the specified sphere.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">Sphere</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;center,
  float&nbsp;radius)</code></div>
@@ -183,6 +191,24 @@ implements <a href="readonly/ConstSphere.html" title="interface in com.github.st
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>Sphere</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Sphere</span>()</div>
+<div class="block">Instantiate an default sphere.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstSphere)">
+<h3>Sphere</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Sphere</span><wbr><span class="parameters">(<a href="readonly/ConstSphere.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSphere</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified sphere.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the sphere to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.Float3,float)">
 <h3>Sphere</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Sphere</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;center,
@@ -190,7 +216,8 @@ implements <a href="readonly/ConstSphere.html" title="interface in com.github.st
 <div class="block">Instantiate a sphere with the specified center and radius.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>center</code> - the desired location for the center (not null, unaffected)</dd>
+<dd><code>center</code> - the desired location for the center (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>radius</code> - the desired radius</dd>
 </dl>
 </section>
@@ -203,7 +230,8 @@ implements <a href="readonly/ConstSphere.html" title="interface in com.github.st
 <div class="block">Instantiate a sphere with the specified center and radius.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>center</code> - the desired location for the center (not null, unaffected)</dd>
+<dd><code>center</code> - the desired location for the center (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>radius</code> - the desired radius</dd>
 </dl>
 </section>
@@ -224,7 +252,7 @@ implements <a href="readonly/ConstSphere.html" title="interface in com.github.st
  specified point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - the point to encapsulate (not null, unaffected)</dd>
+<dd><code>point</code> - the point to encapsulate (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -263,7 +291,7 @@ implements <a href="readonly/ConstSphere.html" title="interface in com.github.st
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSphere.html#getSupport(com.github.stephengold.joltjni.readonly.Vec3Arg)">getSupport</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSphere.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSphere</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>direction</code> - the direction to use (not null, unaffected)</dd>
+<dd><code>direction</code> - the direction to use (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new offset vector</dd>
 </dl>

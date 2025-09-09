@@ -170,6 +170,18 @@ loadScripts(document, 'script');</script>
 <div class="block">Read a soft-body shared-settings object from the specified stream.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef)" class="member-name-link">sReadObject</a><wbr>(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
+ <a href="TwoBodyConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">TwoBodyConstraintSettingsRef</a>&nbsp;settingsRef)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Read a two-body constraint settings object from the specified stream.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.VehicleConstraintSettingsRef)" class="member-name-link">sReadObject</a><wbr>(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
+ <a href="VehicleConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintSettingsRef</a>&nbsp;settingsRef)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Read a vehicle-constraint settings object from the specified stream.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.VehicleControllerSettingsRef)" class="member-name-link">sReadObject</a><wbr>(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
  <a href="VehicleControllerSettingsRef.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettingsRef</a>&nbsp;settingsRef)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -348,6 +360,38 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">sReadObject</span><wbr><span class="parameters">(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
  <a href="SoftBodySharedSettingsRef.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettingsRef</a>&nbsp;settingsRef)</span></div>
 <div class="block">Read a soft-body shared-settings object from the specified stream.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to read from (not null)</dd>
+<dd><code>settingsRef</code> - where to store the reference to the de-serialized
+ settings (not null, modified)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if successful, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef)">
+<h3>sReadObject</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">sReadObject</span><wbr><span class="parameters">(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
+ <a href="TwoBodyConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">TwoBodyConstraintSettingsRef</a>&nbsp;settingsRef)</span></div>
+<div class="block">Read a two-body constraint settings object from the specified stream.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to read from (not null)</dd>
+<dd><code>settingsRef</code> - where to store the reference to the de-serialized
+ settings (not null, modified)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if successful, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="sReadObject(com.github.stephengold.joltjni.std.StringStream,com.github.stephengold.joltjni.VehicleConstraintSettingsRef)">
+<h3>sReadObject</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">sReadObject</span><wbr><span class="parameters">(<a href="std/StringStream.html" title="class in com.github.stephengold.joltjni.std">StringStream</a>&nbsp;stream,
+ <a href="VehicleConstraintSettingsRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintSettingsRef</a>&nbsp;settingsRef)</span></div>
+<div class="block">Read a vehicle-constraint settings object from the specified stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stream</code> - the stream to read from (not null)</dd>
