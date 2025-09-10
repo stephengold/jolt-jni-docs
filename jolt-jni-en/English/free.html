@@ -265,7 +265,7 @@ objects don&#8217;t get reclaimed while they <strong>are</strong> still in use!<
 <div class="sectionbody">
 <div class="paragraph">
 <p>It&#8217;s important to clearly distinguish JVM objects from native objects,
-even though they tend to exist in one-to-one relationship.</p>
+even though they tend to exist in a one-to-one relationship.</p>
 </div>
 <div class="paragraph">
 <p>A handful of Jolt-JNI classes are implemented entirely in Java, notably:
@@ -348,25 +348,7 @@ by invoking <code>JoltPhysicsObject.startCleaner()</code>).</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If your app starts a cleaner task,
-it must avoid reclaiming any <code>JoltPhysicsObject</code>
-using <code>close()</code> or a <code>try</code> block.
-Combining a cleaner task with other techniques for freeing native memory
-will likely crash the JVM.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Explicitly closing a <code>JoltPhysicsObject</code> is dangerous
+<p>Explicitly closing a <code>JoltPhysicsObject</code> is risky
 because it invalidates the native object,
 which nevertheless remains reachable.
 This could lead to undefined behavior.</p>
@@ -384,9 +366,7 @@ This could lead to undefined behavior.</p>
 <td class="content">
 <div class="paragraph">
 <p>Sport-Jolt automatically starts a cleaner task
-for any app that extends <code>BasePhysicsApp</code>.
-Consequently, none of the Jolt-JNI tutorial apps
-use <code>close()</code> or a <code>try</code> block.</p>
+for any app that extends <code>BasePhysicsApp</code>.</p>
 </div>
 </td>
 </tr>
