@@ -18,8 +18,8 @@ Adding {Project} to an existing project is a 10-step process:
    the mapping from object layers to broadphase layers,
    and the collision filters for layers.
 . Create and configure a physics system.
-. Create and configure physics objects and add them to the system.
-. Simulate the system.
+. Create and configure physics objects and add them to the physics system.
+. Simulate the physics system.
 . Test and tune as necessary.
 
 
@@ -353,7 +353,7 @@ BodyInterface bi = physicsSystem.getBodyInterface();
 Body ball = bi.createBody(bcs);
 ----
 
-A body isn't simulated unless it's added to the system.
+A body isn't simulated unless it's added to the physics system.
 Use `BodyInterface.addBody()`:
 
 [source,java]
@@ -362,7 +362,7 @@ bi.addBody(ball, EActivation.Activate);
 ----
 
 
-== Simulate the system
+== Simulate the physics system
 
 To simulate a single 20-millisecond step:
 
@@ -385,7 +385,7 @@ It illustrates:
 
 . loading a native library
 . creating a `PhysicsSystem`
-. creating 2 bodies and adding them to the system
+. creating 2 bodies and adding them to the physics system
 . simulating 50 steps
 
 [IMPORTANT]
@@ -411,4 +411,4 @@ you should be able to launch tutorial apps from a command shell, like so:
 
 * Two libraries are required: a JVM library and a native library.
 * You can organize bodies into layers and specify which layers collide.
-* Physics objects aren't simulated unless they're added to a system.
+* Physics objects aren't simulated unless they're added to a physics system.
