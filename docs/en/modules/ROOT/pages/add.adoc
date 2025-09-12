@@ -156,8 +156,8 @@ To avoid the need to explicitly close `JoltPhysicsObject` instances,
 I recommend starting {Project}'s built-in cleaner thread,
 which frees objects automatically during JVM garbage collection.
 
-{JPH} allows custom allocators for native heap memory,
-but {Project} exposes only the default allocator.
+{JPH} allows custom allocators for native heap memory.
+For simplicity, I recommend registering the default allocator.
 
 [source,java]
 ----
@@ -170,8 +170,7 @@ JoltPhysicsObject.startCleaner(); // to free Jolt-Physics objects automatically
 Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free
 ----
 
-Similarly, {JPH} allows custom callbacks
-for native assertions and trace output,
+{JPH} allows custom callbacks for native assertions and trace output,
 but {Project} exposes only the default callbacks,
 which print to the standard output.
 
