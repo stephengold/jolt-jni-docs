@@ -280,10 +280,10 @@ and the collision filters for layers.</p>
 <p>Create and configure a physics system.</p>
 </li>
 <li>
-<p>Create and configure physics objects and add them to the system.</p>
+<p>Create and configure physics objects and add them to the physics system.</p>
 </li>
 <li>
-<p>Simulate the system.</p>
+<p>Simulate the physics system.</p>
 </li>
 <li>
 <p>Test and tune as necessary.</p>
@@ -455,8 +455,8 @@ I recommend starting Jolt JNI&#8217;s built-in cleaner thread,
 which frees objects automatically during JVM garbage collection.</p>
 </div>
 <div class="paragraph">
-<p>Jolt Physics allows custom allocators for native heap memory,
-but Jolt JNI exposes only the default allocator.</p>
+<p>Jolt Physics allows custom allocators for native heap memory.
+For simplicity, I recommend registering the default allocator.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -470,8 +470,7 @@ Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free</code><
 </div>
 </div>
 <div class="paragraph">
-<p>Similarly, Jolt Physics allows custom callbacks
-for native assertions and trace output,
+<p>Jolt Physics allows custom callbacks for native assertions and trace output,
 but Jolt JNI exposes only the default callbacks,
 which print to the standard output.</p>
 </div>
@@ -717,7 +716,7 @@ Body ball = bi.createBody(bcs);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>A body isn&#8217;t simulated unless it&#8217;s added to the system.
+<p>A body isn&#8217;t simulated unless it&#8217;s added to the physics system.
 Use <code>BodyInterface.addBody()</code>:</p>
 </div>
 <div class="listingblock">
@@ -728,7 +727,7 @@ Use <code>BodyInterface.addBody()</code>:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_simulate_the_system"><a class="anchor" href="#_simulate_the_system"></a>Simulate the system</h2>
+<h2 id="_simulate_the_physics_system"><a class="anchor" href="#_simulate_the_physics_system"></a>Simulate the physics system</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To simulate a single 20-millisecond step:</p>
@@ -763,7 +762,7 @@ that serves as a starting point for running Jolt JNI.</p>
 <p>creating a <code>PhysicsSystem</code></p>
 </li>
 <li>
-<p>creating 2 bodies and adding them to the system</p>
+<p>creating 2 bodies and adding them to the physics system</p>
 </li>
 <li>
 <p>simulating 50 steps</p>
@@ -821,7 +820,7 @@ you should be able to launch tutorial apps from a command shell, like so:</p>
 <p>You can organize bodies into layers and specify which layers collide.</p>
 </li>
 <li>
-<p>Physics objects aren&#8217;t simulated unless they&#8217;re added to a system.</p>
+<p>Physics objects aren&#8217;t simulated unless they&#8217;re added to a physics system.</p>
 </li>
 </ul>
 </div>
