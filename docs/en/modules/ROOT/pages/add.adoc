@@ -331,9 +331,9 @@ _Physics objects_ include:
 ** vehicles (`VehicleConstraint`)
 * characters (`CharacterBase`)
 
-This tutorial first introduces rigid bodies.
+This tutorial starts with rigid bodies.
 
-Body creation starts with a `BodyCreationSettings` object, which can be reused.
+Body creation begins with a `BodyCreationSettings` object, which can be reused.
 Here's a code fragment that creates a spherical rigid body:
 
 [source,java]
