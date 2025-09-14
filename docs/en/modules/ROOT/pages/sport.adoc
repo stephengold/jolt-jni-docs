@@ -8,7 +8,7 @@
 The `HelloJoltJni` app
 (introduced on xref:add.adoc[the previous page])
 is simple, readable, and complete.
-However, as a console app, its output is limited to text.
+Being a console app, however, its output is limited to text.
 
 Text provides scant insight into what the physics simulation is doing.
 For most people, pictures are much easier to understand.
@@ -36,9 +36,9 @@ Details to note:
   which are invoked automatically.
 . `BasePhysicsApp` automatically loads the {ProjectAdj} native library.
 . `BasePhysicsApp` provides:
-..  the `physicsSystem` field to access the system and
+..  the `physicsSystem` field to access the physics system and
 ..  the `visualizeShape()` method to visualize the shape of a physics object.
-. Whereas `HelloJoltJni` simulated one step at a time,
+. Whereas `HelloJoltJni` simulated as quickly as possible,
   `HelloSport` attempts real-time simulation.
 
 Running `HelloSport` should open a window on your computer's desktop

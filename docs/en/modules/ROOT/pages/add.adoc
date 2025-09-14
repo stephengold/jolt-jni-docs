@@ -362,7 +362,7 @@ In the code fragment above,
 increasing its reference count (initially zero) to one.
 ====
 
-A body isn't simulated unless it's added to the physics system.
+A body isn't simulated unless added to its physics system.
 Use `BodyInterface.addBody()`:
 
 [source,java]

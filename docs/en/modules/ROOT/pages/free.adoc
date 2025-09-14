@@ -75,8 +75,7 @@ its memory can be freed in 3 ways:
 [IMPORTANT]
 ====
 Explicitly closing a `JoltPhysicsObject` is risky
-because it invalidates the native object,
-which nevertheless remains reachable.
+because it invalidates the native object, which might remain reachable.
 This could lead to undefined behavior.
 ====
 
@@ -128,7 +127,7 @@ is shared among other objects (called _references_) that refer to it.
 
 The {ProjectAdj} classes that implement reference counting
 are precisely those that implement the `RefTarget` interface.
-They include `BaseCharacter`, `Constraint`, `ConstraintSettings`,
+These include `BaseCharacter`, `Constraint`, `ConstraintSettings`,
 `GroupFilter`, `PhysicsMaterial`, `PhysicsScene`, `Ragdoll`, `Shape`,
 `ShapeSettings`, and all their subclasses.
 
@@ -145,7 +144,7 @@ This implies creating one or more references
 and then reclaiming them all, either explicitly, implicitly, or automatically.
 
 As long as one reference is active, its target cannot be reclaimed.
-Nor can a target be reclaimed before a reference to it has been created
+Nor can a target be reclaimed before a reference to it is created
 (because in that case the reference count is already zero).
 
 [IMPORTANT]
@@ -158,7 +157,7 @@ invalidating the target.
 You can disable reference counting on a particular target by
 invoking `target.setEmbedded()`.
 However, this is an irreversible action,
-so if you plan to ever free the target's native memory,
+so if you plan to free the target's native memory,
 you mustn't invoke `setEmbedded()`.
 
 In light of these considerations,
@@ -166,7 +165,8 @@ I suggest treating targets as a temporary objects.
 If you plan to access a `RefTarget` object for a significant period of time,
 create a reference to it.
 
-* The simplest way to create a reference is to invoke `target.toRef()`.
+* The simplest way to create a reference
+  is to invoke `target.toRef()` or `target.toRefC()`.
 * As long as you retain a counted reference,
   you can always access its target by invoking `ref.getPtr()`.
 
