@@ -4,7 +4,8 @@
 :page-pagination:
 :page-toclevels: 3
 :Project: Jolt JNI
-:Sport: Sport-Jolt
+:Sport: Sport Jolt
+:SportAdj: Sport-Jolt
 :url-enwiki: https://en.wikipedia.org/wiki
 :url-tutorial: https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample
 
@@ -56,7 +57,7 @@ bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
 
 === HelloRigidBody
 
-{url-tutorial}/HelloRigidBody.java[HelloRigidBody] is a {Sport} app
+{url-tutorial}/HelloRigidBody.java[HelloRigidBody] is a {SportAdj} app
 that demonstrates the 5 familiar features of rigid bodies.
 
 Things to notice while running the app:
@@ -97,7 +98,7 @@ as if its mass were infinite.
 
 NOTE: Java's `static` keyword is completely unrelated to physics.
 
-{url-tutorial}/HelloStaticBody.java[HelloStaticBody] is a {Sport} app
+{url-tutorial}/HelloStaticBody.java[HelloStaticBody] is a {SportAdj} app
 that combines static and dynamic rigid bodies.
 Things to notice while running the app:
 
@@ -207,7 +208,7 @@ bi.addBody(body, EActivation.Activate);
 To move a kinematic body, invoke
 `Body.moveKinematic(newLocation, newOrientation, timeStep)`.
 
-{url-tutorial}/HelloKinematics.java[HelloKinematics] is a {Sport} app
+{url-tutorial}/HelloKinematics.java[HelloKinematics] is a {SportAdj} app
 that combines kinematic and dynamic rigid bodies.
 Things to notice while running the app:
 
@@ -227,7 +228,7 @@ To disable contact response for a specific rigid body,
 configure it as a _sensor_ using `setIsSensor(true)`.
 
 {url-tutorial}/HelloContactResponse.java[HelloContactResponse]
-is a {Sport} app
+is a {SportAdj} app
 that demonstrates contact response.
 Things to notice while running the app:
 
@@ -310,7 +311,7 @@ bcs.setAngularDamping(0.3f); // default=0.05 per second
 bcs.setLinearDamping(0.2f); // default=0.05 per second
 ----
 
-{url-tutorial}/HelloDamping.java[HelloDamping] is a {Sport} app
+{url-tutorial}/HelloDamping.java[HelloDamping] is a {SportAdj} app
 that demonstrates damping.
 Things to notice while running the app:
 
@@ -461,7 +462,7 @@ supported by another body that then gets removed.
 The deactivated body will seem to be "stuck"
 because removals do not, by themselves, reactivate it.
 
-{url-tutorial}/HelloDeactivation.java[HelloDeactivation] is a {Sport} app
+{url-tutorial}/HelloDeactivation.java[HelloDeactivation] is a {SportAdj} app
 that demonstrates deactivation.
 Things to notice while running the app:
 
@@ -508,7 +509,7 @@ Because LinearCast involves extra computation, it's disabled by default.
 To enable LinearCast, use
 `BodyCreationSettings.setMotionQuality(EMotionQuality.LinearCast)`.
 
-{url-tutorial}/HelloCcd.java[HelloCcd] is a {Sport} app
+{url-tutorial}/HelloCcd.java[HelloCcd] is a {SportAdj} app
 that demonstrates CCD.
 Things to notice while running the app:
 
