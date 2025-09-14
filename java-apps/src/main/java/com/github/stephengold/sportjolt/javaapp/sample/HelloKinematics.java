@@ -60,10 +60,6 @@ final public class HelloKinematics
      * kinematic ball, orbiting the origin
      */
     private static Body kineBall;
-    /**
-     * physics-simulation time (in seconds, &ge;0)
-     */
-    private static float elapsedTime;
     // *************************************************************************
     // constructors
 
@@ -177,14 +173,12 @@ final public class HelloKinematics
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
         // Make the kinematic ball orbit the origin:
         double orbitalPeriod = 0.8; // seconds
-        double phaseAngle = 2. * elapsedTime * Math.PI / orbitalPeriod;
+        double phaseAngle = 2. * totalSimulatedTime() * Math.PI / orbitalPeriod;
 
         double orbitRadius = 0.4; // meters
         double x = orbitRadius * Math.sin(phaseAngle);
         double y = orbitRadius * Math.cos(phaseAngle);
         RVec3Arg location = new RVec3(x, y, 0.);
         kineBall.moveKinematic(location, new Quat(), timeStep);
-
-        elapsedTime += timeStep;
     }
 }
