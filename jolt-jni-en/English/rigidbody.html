@@ -324,7 +324,7 @@ and calculate the moment of inertia based on the shape and mass</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs /* ... */;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = new BodyCreationSettings();
 bcs.getMassPropertiesOverride().setMass(2f);
 bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);</code></pre>
 </div>
@@ -384,12 +384,12 @@ When adding a static body to the system, there&#8217;s no reason to activate it:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs /* ... */;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = new BodyCreationSettings();
 bcs.setMotionType(EMotionType.Static); // default=Dynamic
 bcs.setObjectLayer(objLayerNonMoving); // default=0
 // ...
 BodyInterface bi = physicsSystem.getBodyInterface();
-Body body = /* ... */
+Body body = bi.createBody(bcs);
 bi.addBody(body, EActivation.DontActivate);</code></pre>
 </div>
 </div>
@@ -446,7 +446,7 @@ while non-dynamic ones are shown in gray.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Body body = /* ... */
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Body body = /* ... */;
 body.setMotionType(EMotionType.Static);
 body.setObjectLayer(objLayerNonMoving);</code></pre>
 </div>
@@ -484,9 +484,9 @@ location as its "position" and its orientation as its "rotation". Thus:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Body body = /* ... */
-RVec3Arg location = body.getPosition();
-QuatArg orientation = body.getRotation();</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Body body = /* ... */;
+RVec3 location = body.getPosition();
+Quat orientation = body.getRotation();</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -494,8 +494,8 @@ QuatArg orientation = body.getRotation();</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Body body = /* ... */
-RVec3Arg comLocation = body.getCenterOfMassPosition();</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Body body = /* ... */;
+RVec3 comLocation = body.getCenterOfMassPosition();</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -533,7 +533,7 @@ in its creation settings:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = /* ... */
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = new BodyCreationSettings();
 bcs.setPosition(new RVec3(5., 1., 0.));
 bcs.setRotation(new Quaternion(0.5f, 0.5f, 0.5f, 0.5f));</code></pre>
 </div>
@@ -565,7 +565,7 @@ an irresistible battering ram.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = /* ... */
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = new BodyCreationSettings();
 bcs.setMotionType(EMotionType.Kinematic);
 bcs.setObjectLayer(objLayerMoving);
 // ...
@@ -772,7 +772,7 @@ angular damping damps the angular velocity.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = /* ... */
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = new BodyCreationSettings();
 bcs.setAngularDamping(0.3f); // default=0.05 per second
 bcs.setLinearDamping(0.2f); // default=0.05 per second</code></pre>
 </div>
@@ -908,7 +908,7 @@ which can be configured during creation.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = /* ... */
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = new BodyCreationSettings();
 bcs.setAllowedDofs(
           EAllowedDofs.TranslationX
         | EAllowedDofs.TranslationY
@@ -923,7 +923,7 @@ and translate only in directions parallel to the X-Y plane:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = /* ... */
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyCreationSettings bcs = new BodyCreationSettings();
 bcs.setAllowedDofs(
           EAllowedDofs.TranslationX
         | EAllowedDofs.TranslationY
