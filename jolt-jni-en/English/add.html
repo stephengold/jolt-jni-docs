@@ -715,8 +715,27 @@ BodyInterface bi = physicsSystem.getBodyInterface();
 Body ball = bi.createBody(bcs);</code></pre>
 </div>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>A body isn&#8217;t simulated unless it&#8217;s added to the physics system.
+<p>Like all collision shapes, <code>SphereShape</code> implements reference counting.
+For reasons explained on <a href="free.html" class="xref page">the native-memory page</a>,
+best practice is to create a reference for every <code>RefTarget</code> object.
+In the code fragment above,
+<code>toRefC()</code> creates a counted reference to <code>ballShape</code>,
+increasing its reference count (initially zero) to one.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A body isn&#8217;t simulated unless added to its physics system.
 Use <code>BodyInterface.addBody()</code>:</p>
 </div>
 <div class="listingblock">

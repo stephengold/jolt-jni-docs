@@ -269,6 +269,31 @@ and <a href="https://en.wikipedia.org/wiki/Moment_of_inertia"><em>moment of iner
 </ul>
 </div>
 <div class="paragraph">
+<p>By default, rigid bodies also exhibit 3 other features of real-world objects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They are <em>dynamic</em>:
+mobile, with their motion determined by
+<a href="https://en.wikipedia.org/wiki/Force"><em>forces</em></a>,
+<a href="https://en.wikipedia.org/wiki/Torque"><em>torques</em></a>, and
+<a href="https://en.wikipedia.org/wiki/Impulse_(physics)"><em>impulses</em></a>.</p>
+</li>
+<li>
+<p>They are subject to <em>gravity</em>:
+a continual downward force proportional to their mass.</p>
+</li>
+<li>
+<p>They exhibit <em>contact response</em>:
+powerful forces prevent them from intersecting other bodies.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, these last 3 features are optional in Jolt JNI and can easily be disabled.</p>
+</div>
+<div class="paragraph">
 <p>You&#8217;ve already seen how to specify a body&#8217;s shape
 using <code>BodyCreationSettings.setShape()</code>.</p>
 </div>
@@ -300,31 +325,6 @@ and calculate the moment of inertia based on the shape and mass</p>
 bcs.getMassPropertiesOverride().setMass(2f);
 bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>By default, rigid bodies also exhibit 3 other features of real-world objects:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>They are <em>dynamic</em>:
-mobile, with their motion determined by
-<a href="https://en.wikipedia.org/wiki/Force"><em>forces</em></a>,
-<a href="https://en.wikipedia.org/wiki/Torque"><em>torques</em></a>, and
-<a href="https://en.wikipedia.org/wiki/Impulse_(physics)"><em>impulses</em></a>.</p>
-</li>
-<li>
-<p>They are subject to <em>gravity</em>:
-a continual downward force proportional to their mass.</p>
-</li>
-<li>
-<p>They exhibit <em>contact response</em>:
-powerful forces prevent them from intersecting other bodies.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>However, these last 3 features are optional in Jolt JNI and can easily be disabled.</p>
 </div>
 <div class="sect2">
 <h3 id="_hellorigidbody"><a class="anchor" href="#_hellorigidbody"></a>HelloRigidBody</h3>

@@ -349,8 +349,7 @@ by invoking <code>JoltPhysicsObject.startCleaner()</code>).</p>
 <td class="content">
 <div class="paragraph">
 <p>Explicitly closing a <code>JoltPhysicsObject</code> is risky
-because it invalidates the native object,
-which nevertheless remains reachable.
+because it invalidates the native object, which might remain reachable.
 This could lead to undefined behavior.</p>
 </div>
 </td>
@@ -422,7 +421,7 @@ is shared among other objects (called <em>references</em>) that refer to it.</p>
 <div class="paragraph">
 <p>The Jolt-JNI classes that implement reference counting
 are precisely those that implement the <code>RefTarget</code> interface.
-They include <code>BaseCharacter</code>, <code>Constraint</code>, <code>ConstraintSettings</code>,
+These include <code>BaseCharacter</code>, <code>Constraint</code>, <code>ConstraintSettings</code>,
 <code>GroupFilter</code>, <code>PhysicsMaterial</code>, <code>PhysicsScene</code>, <code>Ragdoll</code>, <code>Shape</code>,
 <code>ShapeSettings</code>, and all their subclasses.</p>
 </div>
@@ -443,7 +442,7 @@ and then reclaiming them all, either explicitly, implicitly, or automatically.</
 </div>
 <div class="paragraph">
 <p>As long as one reference is active, its target cannot be reclaimed.
-Nor can a target be reclaimed before a reference to it has been created
+Nor can a target be reclaimed before a reference to it is created
 (because in that case the reference count is already zero).</p>
 </div>
 <div class="admonitionblock important">
@@ -466,7 +465,7 @@ invalidating the target.</p>
 <p>You can disable reference counting on a particular target by
 invoking <code>target.setEmbedded()</code>.
 However, this is an irreversible action,
-so if you plan to ever free the target&#8217;s native memory,
+so if you plan to free the target&#8217;s native memory,
 you mustn&#8217;t invoke <code>setEmbedded()</code>.</p>
 </div>
 <div class="paragraph">
@@ -478,7 +477,8 @@ create a reference to it.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The simplest way to create a reference is to invoke <code>target.toRef()</code>.</p>
+<p>The simplest way to create a reference
+is to invoke <code>target.toRef()</code> or <code>target.toRefC()</code>.</p>
 </li>
 <li>
 <p>As long as you retain a counted reference,
