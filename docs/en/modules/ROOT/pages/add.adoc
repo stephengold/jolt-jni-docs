@@ -352,6 +352,16 @@ BodyInterface bi = physicsSystem.getBodyInterface();
 Body ball = bi.createBody(bcs);
 ----
 
+[IMPORTANT]
+====
+Like all collision shapes, `SphereShape` implements reference counting.
+For reasons explained on xref:free.adoc[the native-memory page],
+best practice is to create a reference for every `RefTarget` object.
+In the code fragment above,
+`toRefC()` creates a counted reference to `ballShape`,
+increasing its reference count (initially zero) to one.
+====
+
 A body isn't simulated unless it's added to the physics system.
 Use `BodyInterface.addBody()`:
 
