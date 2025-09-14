@@ -32,7 +32,7 @@ Build types:  use "Debug" native libraries for development and troubleshooting,
 then switch to "Release" libraries for performance testing and production.
 
 Flavors:  use "Dp" native libraries to simulate large worlds
-(>10,000 meters in diameter) otherwise use "Sp".
+(>10 km in diameter) otherwise use "Sp".
 
 === Gradle-built Android projects
 
