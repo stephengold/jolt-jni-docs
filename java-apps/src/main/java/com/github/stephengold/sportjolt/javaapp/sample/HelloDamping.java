@@ -34,11 +34,11 @@ import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.RVec3;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.operator.Op;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -115,7 +115,7 @@ final public class HelloDamping extends BasePhysicsApp {
 
         // Create a collision shape for unit cubes:
         float cubeHalfExtent = 0.5f;
-        ConstShape cubeShape = new BoxShape(cubeHalfExtent);
+        ShapeRefC cubeShape = new BoxShape(cubeHalfExtent).toRefC();
 
         BodyCreationSettings bcs = new BodyCreationSettings()
                 .setAllowSleeping(false); // Disable sleeping for clarity.

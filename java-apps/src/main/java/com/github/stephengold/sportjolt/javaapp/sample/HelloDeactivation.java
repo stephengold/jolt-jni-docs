@@ -32,12 +32,12 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstBody;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener;
@@ -130,7 +130,7 @@ final public class HelloDeactivation
 
         // Create a dynamic cube and add it to the system:
         float boxHalfExtent = 0.5f;
-        ConstShape smallCubeShape = new BoxShape(boxHalfExtent);
+        ShapeRefC smallCubeShape = new BoxShape(boxHalfExtent).toRefC();
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.getMassPropertiesOverride().setMass(2f);
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
@@ -143,7 +143,7 @@ final public class HelloDeactivation
          * The top body serves as a temporary support.
          */
         float cubeHalfExtent = 1f;
-        ConstShape largeCubeShape = new BoxShape(cubeHalfExtent);
+        ShapeRefC largeCubeShape = new BoxShape(cubeHalfExtent).toRefC();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
         bcs.setPosition(0., 0., 0.);
@@ -153,7 +153,7 @@ final public class HelloDeactivation
 
         // The bottom body serves as a visual reference point:
         float ballRadius = 0.5f;
-        ConstShape ballShape = new SphereShape(ballRadius);
+        ShapeRefC ballShape = new SphereShape(ballRadius).toRefC();
         bcs.setPosition(0., -2., 0.);
         bcs.setShape(ballShape);
         ConstBody bottomBody = bi.createBody(bcs);

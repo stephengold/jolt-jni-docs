@@ -32,6 +32,7 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.CylinderShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionQuality;
@@ -39,7 +40,6 @@ import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstMotionProperties;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 
 /**
@@ -114,7 +114,7 @@ final public class HelloCcd extends BasePhysicsApp {
 
         // Create a collision shape for balls:
         float ballRadius = 0.1f;
-        ConstShape ballShape = new SphereShape(ballRadius);
+        ShapeRefC ballShape = new SphereShape(ballRadius).toRefC();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.getMassPropertiesOverride().setMass(2f);
@@ -174,8 +174,8 @@ final public class HelloCcd extends BasePhysicsApp {
         float discRadius = 2f;
         float discThickness = 0.05f;
         float discConvexRadius = 0.02f;
-        ConstShape discShape = new CylinderShape(
-                discThickness / 2f, discRadius, discConvexRadius);
+        ShapeRefC discShape = new CylinderShape(
+                discThickness / 2f, discRadius, discConvexRadius).toRefC();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
