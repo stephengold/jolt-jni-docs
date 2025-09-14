@@ -79,7 +79,8 @@ Things to notice while running the app:
 Not all rigid bodies move.
 To create a _static_ (non-moving) rigid body,
 set the motion type to `Static` and the object layer to `objLayerNonMoving`.
-When adding a static body to the system, there's no reason to activate it:
+When adding a static body to its physics system,
+there's no reason to activate it:
 
 [source,java]
 ----
@@ -315,12 +316,12 @@ bcs.setLinearDamping(0.2f); // default=0.05 per second
 that demonstrates damping.
 Things to notice while running the app:
 
-. 4 cubes initially share the same linear and angular velocities.
+. Initially, all 4 cubes have identical linear and angular velocities.
 . The top 2 have constant linear velocities, evidence of no linear damping.
 . The left 2 have constant angular velocities, evidence of no angular damping.
-. The linear velocities of the bottom 2 cubes decay quickly to zero
+. The linear velocities of the bottom 2 decay quickly to zero
   due to strong linear damping.
-. The angular velocities of the right 2 cubes decay quickly to zero
+. The angular velocities of the right 2 decay quickly to zero
   due to strong angular damping.
 
 ==== Gravity
@@ -535,9 +536,9 @@ a|`addAngularImpulse()` `addForce()` `addImpulse()` `addTorque()`
   `setAngularVelocity()` `setLinearVelocity()`
 
 a|Affected by forces, impulses, and torques?
-a|No.
-a|No.
-a|Yes.
+a|No
+a|No
+a|Yes
 
 a|Typical use cases
 a|Non-moving objects such as floors, posts, terrain, and walls
