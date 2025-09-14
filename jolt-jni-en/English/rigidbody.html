@@ -380,7 +380,8 @@ that alter the balls' motions but not their shapes.</p>
 <p>Not all rigid bodies move.
 To create a <em>static</em> (non-moving) rigid body,
 set the motion type to <code>Static</code> and the object layer to <code>objLayerNonMoving</code>.
-When adding a static body to the system, there&#8217;s no reason to activate it:</p>
+When adding a static body to its physics system,
+there&#8217;s no reason to activate it:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -785,7 +786,7 @@ Things to notice while running the app:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>4 cubes initially share the same linear and angular velocities.</p>
+<p>Initially, all 4 cubes have identical linear and angular velocities.</p>
 </li>
 <li>
 <p>The top 2 have constant linear velocities, evidence of no linear damping.</p>
@@ -794,11 +795,11 @@ Things to notice while running the app:</p>
 <p>The left 2 have constant angular velocities, evidence of no angular damping.</p>
 </li>
 <li>
-<p>The linear velocities of the bottom 2 cubes decay quickly to zero
+<p>The linear velocities of the bottom 2 decay quickly to zero
 due to strong linear damping.</p>
 </li>
 <li>
-<p>The angular velocities of the right 2 cubes decay quickly to zero
+<p>The angular velocities of the right 2 decay quickly to zero
 due to strong angular damping.</p>
 </li>
 </ol>
@@ -1137,13 +1138,13 @@ passing from one side to the other in a single simulation step.</p>
 <p>Affected by forces, impulses, and torques?</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No.</p>
+<p>No</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No.</p>
+<p>No</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Yes.</p>
+<p>Yes</p>
 </div></div></td>
 </tr>
 <tr>
