@@ -121,12 +121,11 @@ final public class HelloStaticBody extends BasePhysicsApp {
         bi.addBody(dynaBall, EActivation.Activate);
 
         // Create a static body and add it to the system:
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
+        bcs.setMotionType(EMotionType.Static); // default=Dynamic
+        bcs.setObjectLayer(objLayerNonMoving); // default=0
         bcs.setPosition(0.1, 0., 0.);
         Body statBall = bi.createBody(bcs);
         bi.addBody(statBall, EActivation.DontActivate);
-
         assert statBall.isStatic();
 
         // Visualize the shapes of both rigid bodies:

@@ -145,10 +145,9 @@ final public class HelloKinematics
         bcs.setPosition(0., 0., 0.);
         kineBall = bi.createBody(bcs);
         bi.addBody(kineBall, EActivation.Activate);
-
         assert kineBall.isKinematic();
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         visualizeShape(dynaBall);
         visualizeShape(kineBall);
     }

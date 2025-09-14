@@ -120,8 +120,10 @@ final public class HelloSport extends BasePhysicsApp {
                 = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers);
         layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0);
         layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0);
-
-        // Rules for colliding object layers with broadphase layers:
+        /*
+         * Pre-compute the rules for colliding object layers
+         * with broadphase layers:
+         */
         ObjectVsBroadPhaseLayerFilter ovbFilter
                 = new ObjectVsBroadPhaseLayerFilterTable(
                         layerMap, numBpLayers, ovoFilter, numObjLayers);
@@ -179,7 +181,7 @@ final public class HelloSport extends BasePhysicsApp {
         ball = bi.createBody(bcs);
         bi.addBody(ball, EActivation.Activate);
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         visualizeShape(floor);
         visualizeShape(ball);
     }
