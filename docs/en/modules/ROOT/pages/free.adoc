@@ -83,6 +83,7 @@ This could lead to undefined behavior.
 ====
 {Sport} automatically starts a cleaner task
 for any app that extends `BasePhysicsApp`.
+That's why none of the demos or sample applications use `close()`.
 ====
 
 === Contained objects
