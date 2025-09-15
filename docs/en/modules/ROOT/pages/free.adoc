@@ -154,11 +154,14 @@ because other code might create a reference that later gets reclaimed,
 invalidating the target.
 ====
 
+[TIP]
+====
 You can disable reference counting on a particular target by
 invoking `target.setEmbedded()`.
 However, this is an irreversible action,
 so if you plan to free the target's native memory,
 you mustn't invoke `setEmbedded()`.
+====
 
 In light of these considerations,
 I suggest treating targets as a temporary objects.
