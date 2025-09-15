@@ -110,13 +110,13 @@ separately from the native object assigned to `system`.
 On _contained objects_ like `bli`, `close()` is a no-op,
 because the JVM object doesn't own its assigned native object.
 However, closing the container would invalidate the contained object.
-In the example above, invoking `physicsSystem.close()`,
-would invalidate `bli`!
+(In the example above, invoking `physicsSystem.close()`,
+would invalidate `bli`.)
 
 {Project}'s cleaner task is smart enough to delay reclaiming a container
 while any reachable JVM object refers to that container's contents.
 In the example above, as long as `bli` remains reachable,
-it prevents `system` from being reclaimed by a cleaner thread.
+it prevents cleaner threads from reclaiming `system`.
 
 === Refcounted objects
 
