@@ -260,8 +260,8 @@ import com.github.stephengold.joltjni.vhacd.Parameters;
 
 // ...
 
-float[] locationArray = /* vertex locations in the mesh ... */
-int[] indexArray = /* vertex indices in the mesh ... */
+float[] locationArray = /* vertex locations in the mesh ... */;
+int[] indexArray = /* vertex indices in the mesh ... */;
 Decomposer decomposer = new Decomposer();
 Parameters tuningParameters = new Parameters();
 Collection<ConvexHull> hulls
@@ -273,7 +273,7 @@ compoundSettings.addHulls(hulls);
 
 The V-HACD algorithm is costly to run, but for many applications it can
 be run in advance and the output stored until needed.
-During simulation, the resulting shape will usually be much more efficient
+The resulting shape is typically far more efficient for simulation
 than a compound-of-triangles shape.
 
 == Summary
@@ -287,4 +287,4 @@ than a compound-of-triangles shape.
 * Use the simplest shape that yields the desired behavior.
 * For moving bodies,
   mesh shapes can be approximated by compounds of convex shapes,
-  such as convex hulls.
+  such as triangles or convex hulls.
