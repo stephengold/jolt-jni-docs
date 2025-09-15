@@ -368,7 +368,8 @@ This could lead to undefined behavior.</p>
 <td class="content">
 <div class="paragraph">
 <p>Sport-Jolt automatically starts a cleaner task
-for any app that extends <code>BasePhysicsApp</code>.</p>
+for any app that extends <code>BasePhysicsApp</code>.
+That&#8217;s why none of the demos or sample applications use <code>close()</code>.</p>
 </div>
 </td>
 </tr>
@@ -402,14 +403,14 @@ separately from the native object assigned to <code>system</code>.</p>
 <p>On <em>contained objects</em> like <code>bli</code>, <code>close()</code> is a no-op,
 because the JVM object doesn&#8217;t own its assigned native object.
 However, closing the container would invalidate the contained object.
-In the example above, invoking <code>physicsSystem.close()</code>,
-would invalidate <code>bli</code>!</p>
+(In the example above, invoking <code>physicsSystem.close()</code>,
+would invalidate <code>bli</code>.)</p>
 </div>
 <div class="paragraph">
 <p>Jolt JNI&#8217;s cleaner task is smart enough to delay reclaiming a container
 while any reachable JVM object refers to that container&#8217;s contents.
 In the example above, as long as <code>bli</code> remains reachable,
-it prevents <code>system</code> from being reclaimed by a cleaner thread.</p>
+it prevents cleaner threads from reclaiming <code>system</code>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -464,12 +465,23 @@ invalidating the target.</p>
 </tr>
 </table>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>You can disable reference counting on a particular target by
 invoking <code>target.setEmbedded()</code>.
 However, this is an irreversible action,
 so if you plan to free the target&#8217;s native memory,
 you mustn&#8217;t invoke <code>setEmbedded()</code>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>In light of these considerations,
