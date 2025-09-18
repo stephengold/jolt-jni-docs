@@ -165,7 +165,7 @@ final public class HelloLimit
         // Add a dynamic ball:
         Body ballBody = addBall();
 
-        // Constrain the ball's translation:
+        // Constrain the ball to translate in the X-Z plane:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
         TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.setLimitedAxis(EAxis.TranslationX, -halfExtent, +halfExtent);
@@ -232,7 +232,7 @@ final public class HelloLimit
      */
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // Relocate the paddle based on the mouse location:
+        // Relocate the kinematic paddle based on the mouse location:
         float y = groundY + paddleHalfHeight;
         RVec3Arg bodyLocation = new RVec3(mouseLocation.x, y, mouseLocation.z);
         paddleBody.moveKinematic(bodyLocation, new Quat(), timeStep);

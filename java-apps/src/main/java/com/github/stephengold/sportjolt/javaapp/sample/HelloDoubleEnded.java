@@ -242,7 +242,7 @@ final public class HelloDoubleEnded
      */
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // Reposition the paddle based on the mouse location:
+        // Reposition the kinematic paddle based on the mouse location:
         Vec3Arg mouse = Utils.toJoltVector(mouseLocation);
         RVec3Arg bodyLocation
                 = Op.plus(mouse, new RVec3(0., paddleHalfHeight, 0.));

@@ -147,7 +147,7 @@ final public class HelloContactResponse extends BasePhysicsApp {
         ball = bi.createBody(bcs2);
         bi.addBody(ball, EActivation.Activate);
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         visualizeShape(ball);
         visualizeShape(box);
     }

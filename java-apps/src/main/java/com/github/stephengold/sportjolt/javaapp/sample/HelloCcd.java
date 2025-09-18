@@ -134,6 +134,7 @@ final public class HelloCcd extends BasePhysicsApp {
         ConstBody controlBall = bi.createBody(bcs);
         bi.addBody(controlBall, EActivation.Activate);
 
+        // Verify the motion quality of each ball:
         ConstMotionProperties ccdProperties = ccdBall.getMotionProperties();
         assert ccdProperties.getMotionQuality() == EMotionQuality.LinearCast;
         ConstMotionProperties controlProperties
