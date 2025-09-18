@@ -35,14 +35,15 @@ import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.TwoBodyConstraint;
+import com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.Projection;
@@ -166,11 +167,13 @@ final public class HelloLimit
 
         // Constrain the ball's translation:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
+        TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.setLimitedAxis(EAxis.TranslationX, -halfExtent, +halfExtent);
         settings.makeFixedAxis(EAxis.TranslationY);
         settings.setLimitedAxis(EAxis.TranslationZ, -halfExtent, +halfExtent);
         Body fixedToWorld = Body.sFixedToWorld();
-        TwoBodyConstraint constraint = settings.create(fixedToWorld, ballBody);
+        TwoBodyConstraint constraint
+                = settingsRef.create(fixedToWorld, ballBody);
         physicsSystem.addConstraint(constraint);
 
         // Visualize the ground:
@@ -244,7 +247,7 @@ final public class HelloLimit
      */
     private Body addBall() {
         float radius = 0.4f;
-        ConstShape shape = new SphereShape(radius);
+        ShapeRefC shape = new SphereShape(radius).toRefC();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -271,7 +274,7 @@ final public class HelloLimit
      * @return the new body
      */
     private Body addBox() {
-        ConstShape shape = new BoxShape(0.2f, paddleHalfHeight, 0.2f);
+        ShapeRefC shape = new BoxShape(0.2f, paddleHalfHeight, 0.2f).toRefC();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -297,7 +300,8 @@ final public class HelloLimit
      */
     private Body addSquare(float halfExtent, float y) {
         float halfThickness = 0.1f;
-        ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
+        ShapeRefC shape
+                = new BoxShape(halfExtent, halfThickness, halfExtent).toRefC();
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);

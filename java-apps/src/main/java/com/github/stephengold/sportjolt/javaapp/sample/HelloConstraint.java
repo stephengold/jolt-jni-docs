@@ -35,14 +35,15 @@ import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
-import com.github.stephengold.joltjni.TwoBodyConstraint;
+import com.github.stephengold.joltjni.TwoBodyConstraintRef;
+import com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Projection;
 import com.github.stephengold.sportjolt.Utils;
@@ -152,6 +153,7 @@ final public class HelloConstraint
 
         // Constrain the box to rotate around its Y axis:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
+        TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.makeFixedAxis(EAxis.RotationX);
         // Y-axis rotation remains free.
         settings.makeFixedAxis(EAxis.RotationZ);
@@ -160,7 +162,8 @@ final public class HelloConstraint
         settings.makeFixedAxis(EAxis.TranslationZ);
 
         Body fixedToWorld = Body.sFixedToWorld();
-        TwoBodyConstraint constraint = settings.create(fixedToWorld, rotor);
+        TwoBodyConstraintRef constraint
+                = settingsRef.create(fixedToWorld, rotor).toRef();
         physicsSystem.addConstraint(constraint);
 
         // Visualize the axis of rotation:
@@ -233,7 +236,7 @@ final public class HelloConstraint
      * @return the new body
      */
     private Body addBox() {
-        ConstShape shape = new BoxShape(0.3f, 1f, 3f);
+        ShapeRefC shape = new BoxShape(0.3f, 1f, 3f).toRefC();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -257,7 +260,7 @@ final public class HelloConstraint
      */
     private Body addKineBall() {
         float ballRadius = 1f;
-        ConstShape shape = new SphereShape(ballRadius);
+        ShapeRefC shape = new SphereShape(ballRadius).toRefC();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
