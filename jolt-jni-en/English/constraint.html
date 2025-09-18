@@ -329,6 +329,9 @@ such as its initial location and orientation.
 Then you invoke the <code>create()</code> method of the settings object,
 specifying the 2 rigid bodies to be constrained.</p>
 </div>
+<div class="paragraph">
+<p>Both constaints and constraint settings are refcounted objects.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -339,8 +342,9 @@ both bodies should be movable and added to the same physics system:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettings settings = /* ... */;
-TwoBodyConstraint constraint = settings.create(rigidBody1, rigidBody2);</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettingsRef settings = /* ... */;
+TwoBodyConstraintRef constraint
+         = settings.create(rigidBody1, rigidBody2).toRef();</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -354,9 +358,9 @@ The other body should be dynamic and added to a physics system:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettings settings = /* ... */;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettingsRef settings = /* ... */;
 Body dummyBody = Body.sFixedToWorld();
-TwoBodyConstraint constraint = settings.create(realBody, dummyBody);</code></pre>
+TwoBodyConstraintRef constraint = settings.create(realBody, dummyBody).toRef();</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -365,7 +369,8 @@ as its movable bodies:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Constraint constraint = settings.create(body1, body2);
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintRef constraint
+        = settings.create(rigidBody1, rigidBody2).toRef();
 physicsSystem.addConstraint(constraint);</code></pre>
 </div>
 </div>
@@ -689,10 +694,13 @@ This can be accomplished by applying a collision-group filter to the bodies:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numSubGroups = 1;
-GroupFilterTable filter = new GroupFilterTable(numSubGroups);
+GroupFilterTableRef filter = new GroupFilterTable(numSubGroups).toRef();
 body1.setCollisionGroup(new CollisionGroup(filter, 0, 0));
 body2.setCollisionGroup(new CollisionGroup(filter, 0, 0));</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Collision-group filters are refcounted objects.</p>
 </div>
 </div>
 </div>
