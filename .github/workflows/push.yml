@@ -51,14 +51,14 @@ jobs:
           lein: 2.11.2
       - run: lein run
 
-  Java25-Windows:
+  Java24-Windows:
     if: contains(toJson(github.event.commits), '[ci skip] ') == false
     runs-on: windows-2025
     steps:
       - uses: actions/setup-java@v5
         with:
-          distribution: 'liberica'
-          java-version: 25
+          distribution: 'zulu'
+          java-version: 24
       - uses: actions/checkout@v5
       - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
         shell: bash
