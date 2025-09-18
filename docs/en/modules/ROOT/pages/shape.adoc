@@ -152,6 +152,8 @@ ShapeRefC ref = result.get();
 ConvexHullShape shape = (ConvexHullShape) ref.getPtr();
 ----
 
+Both shapes and shape settings are refcounted objects.
+
 
 == Decorated and compound
 

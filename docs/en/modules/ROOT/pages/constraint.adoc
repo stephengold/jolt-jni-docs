@@ -68,6 +68,8 @@ such as its initial location and orientation.
 Then you invoke the `create()` method of the settings object,
 specifying the 2 rigid bodies to be constrained.
 
+Both constaints and constraint settings are refcounted objects.
+
 * For a double-ended constraint,
   both bodies should be movable and added to the same physics system:
 
@@ -280,6 +282,8 @@ GroupFilterTable filter = new GroupFilterTable(numSubGroups);
 body1.setCollisionGroup(new CollisionGroup(filter, 0, 0));
 body2.setCollisionGroup(new CollisionGroup(filter, 0, 0));
 ----
+
+Collision-group filters are refcounted objects.
 
 
 == Other constraint classes
