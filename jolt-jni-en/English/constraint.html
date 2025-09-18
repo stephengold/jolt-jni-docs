@@ -279,10 +279,10 @@ such that the motion of one body affects the motion of another.</p>
 In simulation, those hinges could be represented by a <em>hinge constraint</em>
 applied to the door body.
 The constraint would fix 5 of the door&#8217;s DOFs,
-preventing it from translating away from its hinges
-or rotating around any axis except that of its hinges.
+preventing it from flying off the hinges
+or rotating around any axis except that of the hinges.
 Thus constrained, the door&#8217;s only possible motion
-would be rotation around the axis of its hinges.</p>
+would be rotation around the axis of the hinges.</p>
 </div>
 <div class="paragraph">
 <p>Or a door might slide along a linear track.
@@ -290,9 +290,9 @@ In that case, the track could be represented by a <em>slider constraint</em>
 applied to the door body.
 The constraint would fix 5 of the door&#8217;s DOFs,
 preventing it from rotating in any way
-or translating along any axis except that of its track.
+or translating along any axis except that of the track.
 Thus constrained, the door&#8217;s only possible motion
-would be to translate along its track.</p>
+would be to translate along the track.</p>
 </div>
 <div class="paragraph">
 <p>Or imagine a pen holder mounted on a ball and socket:
@@ -303,14 +303,14 @@ translation but not rotation, called a <em>point constraint</em>.</p>
 </div>
 <div class="paragraph">
 <p>The above examples use <em>single-ended</em> constraints,
-which limit the motion of one rigid body.
+which constrain the motion of one rigid body.
 Constraints can also be <em>double-ended</em>,
 in which case they link the motions of 2 rigid bodies.</p>
 </div>
 <div class="paragraph">
 <p>For instance, an arm bone attached to a shoulder socket
 could be simulated with a double-ended point constraint.
-The constraint would prevent separation of the arm from the shoulder
+The constraint would prevent severing the arm from the shoulder
 without limiting the absolute motion of the arm-shoulder combination.</p>
 </div>
 </div>
@@ -364,7 +364,8 @@ TwoBodyConstraintRef constraint = settings.create(realBody, dummyBody).toRef();<
 </div>
 </div>
 <div class="paragraph">
-<p>For a constraint to be effective, it must be added to the same physics system
+<p>For a constraint to be effective,
+it must be explicitly added to the same physics system
 as its movable bodies:</p>
 </div>
 <div class="listingblock">
