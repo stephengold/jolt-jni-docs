@@ -307,7 +307,8 @@ of `TwoBodyConstraint`:
 * `PathConstraint` constrains bodies to a specific path
 * `PointConstraint` fixes all translation DOFs,
   joining bodies at a specific point while allowing rotation around any axis
-* `PulleyConstraint`
+* `PulleyConstraint` constrains bodies to have proportional distances
+  from specific points
 * `RackAndPinionConstraint` constrains rotation of body1 to translation of body2
 * `SliderConstraint`
   allows translation along a single axis while preventing rotation
