@@ -89,9 +89,10 @@ you can build Android libraries.
 
 . You'll need to install https://developer.android.com/studio[Android Studio]
   and point the `ANDROID_HOME` environment variable to that installation.
+. Edit the "gradle.properties" file to configure the build.
 . Run the Gradle wrapper:
-.. using Bash or Fish or PowerShell or Zsh: `./gradlew -b android.gradle build`
-.. using Windows Command Prompt: `.\gradlew -b android.gradle build`
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew -b android.gradle assemble`
+.. using Windows Command Prompt: `.\gradlew -b android.gradle assemble`
 
 After a successful build,
 Android library artifacts will be found "build/outputs/aar".
