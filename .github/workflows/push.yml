@@ -18,7 +18,7 @@ jobs:
       - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
       - uses: DeLaGuardo/setup-clojure@13.4
         with:
-          lein: 2.11.2
+          lein: 2.12.0
       - run: lein run
 
   Java17-MacOS:
@@ -33,7 +33,7 @@ jobs:
       - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
       - uses: DeLaGuardo/setup-clojure@13.4
         with:
-          lein: 2.11.2
+          lein: 2.12.0
       - run: lein run
 
   Java21-MacOS:
@@ -48,7 +48,7 @@ jobs:
       - run: ./gradlew build javadoc HelloJoltJni --console=plain --stacktrace
       - uses: DeLaGuardo/setup-clojure@13.4
         with:
-          lein: 2.11.2
+          lein: 2.12.0
       - run: lein run
 
   Java24-Windows:
@@ -64,4 +64,4 @@ jobs:
         shell: bash
       - uses: DeLaGuardo/setup-clojure@13.4
         with:
-          lein: 2.11.2
+          lein: 2.12.0
