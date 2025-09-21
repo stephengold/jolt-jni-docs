@@ -297,8 +297,9 @@ from the wrapper class with the same name in the "java.lang" package.</p>
 <div class="paragraph">
 <p>To create a physics character, you first configure a settings object,
 which is then passed to a constructor.
-Jolt JNI doesn&#8217;t keep track of characters;
-the app is responsible for that.</p>
+The physics system doesn&#8217;t keep track of characters;
+the app is responsible for that.
+Characters and their settings objects are refcounted objects.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/stephengold/jolt-jni-docs/blob/master/java-apps/src/main/java/com/github/stephengold/sportjolt/javaapp/sample/HelloCharacter.java">HelloCharacter</a> is a Sport-Jolt app
