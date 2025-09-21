@@ -223,8 +223,7 @@ final public class HelloPivot
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
         // Relocate the kinematic ball based on the mouse location:
-        RVec3Arg bodyLocation
-                = new RVec3(mouseLocation.x, mouseLocation.y, mouseLocation.z);
+        RVec3Arg bodyLocation = Utils.toLocationVector(mouseLocation);
         kineBall.moveKinematic(bodyLocation, new Quat(), timeStep);
     }
     // *************************************************************************

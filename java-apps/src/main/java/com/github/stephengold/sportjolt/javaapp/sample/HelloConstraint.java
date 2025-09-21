@@ -34,7 +34,6 @@ import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
-import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
@@ -223,8 +222,7 @@ final public class HelloConstraint
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
         // Relocate the kinematic ball based on the mouse location:
-        RVec3Arg bodyLocation
-                = new RVec3(mouseLocation.x, mouseLocation.y, mouseLocation.z);
+        RVec3Arg bodyLocation = Utils.toLocationVector(mouseLocation);
         kineBall.moveKinematic(bodyLocation, new Quat(), timeStep);
     }
     // *************************************************************************
