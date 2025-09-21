@@ -38,7 +38,7 @@ import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
-import com.github.stephengold.joltjni.TwoBodyConstraint;
+import com.github.stephengold.joltjni.TwoBodyConstraintRef;
 import com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
@@ -172,8 +172,8 @@ final public class HelloLimit
         settings.makeFixedAxis(EAxis.TranslationY);
         settings.setLimitedAxis(EAxis.TranslationZ, -halfExtent, +halfExtent);
         Body fixedToWorld = Body.sFixedToWorld();
-        TwoBodyConstraint constraint
-                = settingsRef.create(fixedToWorld, ballBody);
+        TwoBodyConstraintRef constraint
+                = settingsRef.create(fixedToWorld, ballBody).toRef();
         physicsSystem.addConstraint(constraint);
 
         // Visualize the ground:
