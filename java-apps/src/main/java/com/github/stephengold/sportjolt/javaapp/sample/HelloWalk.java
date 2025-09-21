@@ -33,17 +33,17 @@ import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.CapsuleShape;
 import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
+import com.github.stephengold.joltjni.CharacterSettingsRef;
 import com.github.stephengold.joltjni.HeightFieldShapeSettings;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.ShapeRefC;
-import com.github.stephengold.joltjni.ShapeSettings;
+import com.github.stephengold.joltjni.ShapeSettingsRef;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.readonly.ConstBody;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.Constants;
@@ -151,9 +151,10 @@ final public class HelloWalk
         // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 3f; // meters
         float capsuleHeight = 4f; // meters
-        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
+        ShapeRefC shape
+                = new CapsuleShape(capsuleHeight / 2f, capsuleRadius).toRefC();
 
-        CharacterSettings settings = new CharacterSettings();
+        CharacterSettingsRef settings = new CharacterSettings().toRef();
         settings.setShape(shape);
 
         RVec3Arg startLocation = new RVec3(-73.6, 19.09, -45.58);
@@ -248,8 +249,8 @@ final public class HelloWalk
         Vec3Arg scale = new Vec3(1f, 1f, 1f);
         int sampleCount = 512;
         assert numFloats == sampleCount * sampleCount : numFloats;
-        ShapeSettings ss = new HeightFieldShapeSettings(
-                heightBuffer, offset, scale, sampleCount);
+        ShapeSettingsRef ss = new HeightFieldShapeSettings(
+                heightBuffer, offset, scale, sampleCount).toRef();
 
         ShapeRefC shapeRef = ss.create().get();
         BodyCreationSettings bcs = new BodyCreationSettings();
