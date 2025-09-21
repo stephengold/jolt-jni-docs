@@ -34,9 +34,11 @@ import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.CapsuleShape;
 import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
+import com.github.stephengold.joltjni.CharacterSettingsRef;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
@@ -130,16 +132,19 @@ final public class HelloCharacter
         // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 0.5f; // meters
         float capsuleHeight = 1f; // meters
-        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
+        ConstShape sh = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
+        ShapeRefC shape = sh.toRefC();
 
-        CharacterSettings settings = new CharacterSettings();
+        CharacterSettingsRef settings = new CharacterSettings().toRef();
         settings.setShape(shape);
 
         RVec3Arg startLocation = new RVec3(0., 2., 0.);
         long userData = 0L;
-        character = new com.github.stephengold.joltjni.Character(
-                settings, startLocation, new Quat(), userData, physicsSystem)
-                .toRef();
+        com.github.stephengold.joltjni.Character ch
+                = new com.github.stephengold.joltjni.Character(
+                        settings, startLocation, new Quat(), userData,
+                        physicsSystem);
+        character = ch.toRef();
         character.addToPhysicsSystem();
 
         // Add a static square to represent the ground:
@@ -196,7 +201,8 @@ final public class HelloCharacter
     private ConstBody addSquare(float halfExtent, float y) {
         // Create a static rigid body with a square shape:
         float halfThickness = 0.1f;
-        ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
+        ShapeRefC shape
+                = new BoxShape(halfExtent, halfThickness, halfExtent).toRefC();
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
