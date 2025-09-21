@@ -29,8 +29,9 @@ from the wrapper class with the same name in the "java.lang" package.
 
 To create a physics character, you first configure a settings object,
 which is then passed to a constructor.
-{Project} doesn't keep track of characters;
+The physics system doesn't keep track of characters;
 the app is responsible for that.
+Characters and their settings objects are refcounted objects.
 
 {url-tutorial}/HelloCharacter.java[HelloCharacter] is a {Sport} app
 that demonstrates the creation of a `Character`,
