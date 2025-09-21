@@ -79,6 +79,7 @@ TwoBodyConstraintSettingsRef settings = /* ... */;
 TwoBodyConstraintRef constraint
          = settings.create(rigidBody1, rigidBody2).toRef();
 ----
+
 * For a single-ended constraint,
   one of the bodies should be a dummy returned by `Body.sFixedToWorld()`.
   The other body should be dynamic and added to a physics system:
@@ -292,7 +293,7 @@ Collision-group filters are refcounted objects.
 == Other constraint classes
 
 `SixDofConstraint` is just one of the 12 concrete subclasses
-of `TwoBodyConstraint`:
+of `TwoBodyConstraint`. The others are:
 
 * `ConeConstraint` joins bodies at a specific point
    while limiting the angle between specific local axes
