@@ -37,12 +37,14 @@ import com.github.stephengold.joltjni.CapsuleShape;
 import com.github.stephengold.joltjni.CharacterVirtual;
 import com.github.stephengold.joltjni.CharacterVirtualRef;
 import com.github.stephengold.joltjni.CharacterVirtualSettings;
+import com.github.stephengold.joltjni.CharacterVirtualSettingsRef;
 import com.github.stephengold.joltjni.ExtendedUpdateSettings;
 import com.github.stephengold.joltjni.ObjectLayerFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.ShapeFilter;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.TempAllocator;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -157,10 +159,13 @@ final public class HelloCharacterVirtual
         // Create a character with a capsule shape:
         float capsuleRadius = 0.5f; // meters
         float capsuleHeight = 1f; // meters
-        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
+        ConstShape sh = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
+        ShapeRefC shape = sh.toRefC();
 
-        CharacterVirtualSettings settings = new CharacterVirtualSettings();
+        CharacterVirtualSettingsRef settings
+                = new CharacterVirtualSettings().toRef();
         settings.setShape(shape);
+        assert settings.getShape().equals(sh);
 
         RVec3Arg startLocation = new RVec3(0., 2., 0.);
         long userData = 0L;
@@ -235,7 +240,8 @@ final public class HelloCharacterVirtual
     private ConstBody addSquare(float halfExtent, float y) {
         // Create a static rigid body with a square shape:
         float halfThickness = 0.1f;
-        ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
+        ShapeRefC shape
+                = new BoxShape(halfExtent, halfThickness, halfExtent).toRefC();
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
