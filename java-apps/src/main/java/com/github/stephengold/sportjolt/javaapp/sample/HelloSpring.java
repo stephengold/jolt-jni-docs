@@ -166,7 +166,7 @@ final public class HelloSpring
         // Add a dynamic ball:
         Body ballBody = addBall();
 
-        // Constrain the ball's translation:
+        // Constrain the ball to the origin:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
         TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.makeFixedAxis(EAxis.TranslationX);
@@ -242,7 +242,7 @@ final public class HelloSpring
      */
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // Relocate the paddle based on the mouse location:
+        // Relocate the kinematic paddle based on the mouse location:
         float y = groundY + paddleHalfHeight;
         RVec3Arg bodyLocation = new RVec3(mouseLocation.x, y, mouseLocation.z);
         paddleBody.moveKinematic(bodyLocation, new Quat(), timeStep);

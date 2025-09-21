@@ -165,7 +165,7 @@ final public class HelloLimit
         // Add a dynamic ball:
         Body ballBody = addBall();
 
-        // Constrain the ball to translate in the X-Z plane:
+        // Constrain the ball to a square in the X-Z plane:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
         TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.setLimitedAxis(EAxis.TranslationX, -halfExtent, +halfExtent);

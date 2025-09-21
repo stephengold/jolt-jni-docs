@@ -188,8 +188,8 @@ final public class HelloDoubleEnded
         physicsSystem.addConstraint(constraint);
 
         // Visualize the constraint:
-        new ConstraintGeometry(constraint.getPtr(), 1); // paddleBody at 1st end
-        new ConstraintGeometry(constraint.getPtr(), 2); // ballBody at 2nd end
+        new ConstraintGeometry(constraint.getPtr(), 1); // paddleBody is 1st end
+        new ConstraintGeometry(constraint.getPtr(), 2); // ballBody is 2nd end
     }
 
     /**
@@ -242,7 +242,7 @@ final public class HelloDoubleEnded
      */
     @Override
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
-        // Reposition the kinematic paddle based on the mouse location:
+        // Relocate the kinematic paddle based on the mouse location:
         Vec3Arg mouse = Utils.toJoltVector(mouseLocation);
         RVec3Arg bodyLocation
                 = Op.plus(mouse, new RVec3(0., paddleHalfHeight, 0.));
