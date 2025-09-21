@@ -206,8 +206,8 @@ final public class HelloMotor extends BasePhysicsApp {
     private Body addFrame() {
         float halfLength = 1f;
         float radius = 0.1f;
-        CapsuleShapeSettings yShape
-                = new CapsuleShapeSettings(halfLength, radius);
+        ShapeSettingsRef yShape
+                = new CapsuleShapeSettings(halfLength, radius).toRef();
 
         QuatArg y2x = Quat.sEulerAngles(0f, 0f, Jolt.JPH_PI / 2f);
         StaticCompoundShapeSettings frameSettings
