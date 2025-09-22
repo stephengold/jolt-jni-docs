@@ -816,7 +816,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyFilter.html#%3Cinit%3E()" class="member-name-link">BodyFilter()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a></dt>
 <dd>
-<div class="block">Instantiate a default filter that selects all layers.</div>
+<div class="block">Instantiate a default filter that selects all bodies.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyIdArray.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyIdArray</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
@@ -875,7 +875,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Lock multiple bodies for read-only access.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiRead.html#%3Cinit%3E(com.github.stephengold.joltjni.BodyLockInterface,int...)" class="member-name-link">BodyLockMultiRead(BodyLockInterface, int...)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiRead.html" title="class in com.github.stephengold.joltjni">BodyLockMultiRead</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiRead.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstBodyLockInterface,int...)" class="member-name-link">BodyLockMultiRead(ConstBodyLockInterface, int...)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiRead.html" title="class in com.github.stephengold.joltjni">BodyLockMultiRead</a></dt>
 <dd>
 <div class="block">Acquire body locks using the specified interface and body IDs.</div>
 </dd>
@@ -883,7 +883,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Lock multiple bodies for read-write access.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiWrite.html#%3Cinit%3E(com.github.stephengold.joltjni.BodyLockInterface,int...)" class="member-name-link">BodyLockMultiWrite(BodyLockInterface, int...)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiWrite.html" title="class in com.github.stephengold.joltjni">BodyLockMultiWrite</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiWrite.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstBodyLockInterface,int...)" class="member-name-link">BodyLockMultiWrite(ConstBodyLockInterface, int...)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiWrite.html" title="class in com.github.stephengold.joltjni">BodyLockMultiWrite</a></dt>
 <dd>
 <div class="block">Acquire body locks using the specified interface and body IDs.</div>
 </dd>
@@ -930,6 +930,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyVector.html" class="type-name-link" title="class in com.github.stephengold.joltjni">BodyVector</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
 <div class="block">A variable-length vector (array) of bodies.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html#Both" class="member-name-link">Both</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a></dt>
+<dd>
+<div class="block">invoke associated callbacks if <code>shouldCollide()</code> returns
+ <code>true</code> for both bodies in contact</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EShapeSubType.html#Box" class="member-name-link">Box</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EShapeSubType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EShapeSubType</a></dt>
 <dd>
@@ -1605,6 +1610,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Clamp the engine's RPM between its minimum and maximum values.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#clear()" class="member-name-link">clear()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Remove all sub-listeners.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IgnoreMultipleBodiesFilter.html#clear()" class="member-name-link">clear()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IgnoreMultipleBodiesFilter.html" title="class in com.github.stephengold.joltjni">IgnoreMultipleBodiesFilter</a></dt>
 <dd>
 <div class="block">Remove all bodies from the filter.</div>
@@ -2225,7 +2234,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstChbFace.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstChbFace</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to an <code>ChbFace</code>.</div>
+<div class="block">Read-only access to a <code>ChbFace</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCollideShapeResult.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstCollideShapeResult</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2258,6 +2267,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstContactSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstContactSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
 <div class="block">Read-only access to a <code>ContactSettings</code> object.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShape.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to a <code>ConvexShape</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShapeSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShapeSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2293,7 +2306,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstLod.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstLod</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to a <code>Lod</code>.</div>
+<div class="block">Read-only access to an <code>Lod</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMassProperties.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2301,7 +2314,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotionProperties.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to <code>MotionProperties</code> object.</div>
+<div class="block">Read-only access to a <code>MotionProperties</code> object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstNarrowPhaseQuery.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstNarrowPhaseQuery</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2333,7 +2346,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstPlane.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to an <code>Plane</code>.</div>
+<div class="block">Read-only access to a <code>Plane</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EPathRotationConstraintType.html#ConstrainAroundBinormal" class="member-name-link">ConstrainAroundBinormal</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EPathRotationConstraintType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EPathRotationConstraintType</a></dt>
 <dd>
@@ -2395,11 +2408,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstRodBendTwist.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstRodBendTwist</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to an <code>RodBendTwist</code>.</div>
+<div class="block">Read-only access to a <code>RodBendTwist</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstRodStretchShear.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstRodStretchShear</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to an <code>RodStretchShear</code>.</div>
+<div class="block">Read-only access to a <code>RodStretchShear</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSerializableObject.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2431,7 +2444,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyMotionProperties.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyMotionProperties</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to <code>SoftBodyMotionProperties</code>.</div>
+<div class="block">Read-only access to a <code>SoftBodyMotionProperties</code> object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodySharedSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2439,7 +2452,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyVertex.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to <code>SoftBodyVertex</code>.</div>
+<div class="block">Read-only access to a <code>SoftBodyVertex</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSphere.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstSphere</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2467,7 +2480,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTriangle.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to an <code>Triangle</code>.</div>
+<div class="block">Read-only access to a <code>Triangle</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTwoBodyConstraint.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstTwoBodyConstraint</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2479,7 +2492,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to <code>VehicleCollisionTester</code>.</div>
+<div class="block">Read-only access to a <code>VehicleCollisionTester</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleConstraint.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2507,7 +2520,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVertexList.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to an <code>VertexList</code>.</div>
+<div class="block">Read-only access to a <code>VertexList</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVolume.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2519,15 +2532,15 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to <code>WheelSettings</code>.</div>
+<div class="block">Read-only access to a <code>WheelSettings</code> object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettingsTv.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsTv</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to <code>WheelSettingsTv</code>.</div>
+<div class="block">Read-only access to a <code>WheelSettingsTv</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettingsWv.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
-<div class="block">Read-only access to <code>WheelSettingsWv</code>.</div>
+<div class="block">Read-only access to a <code>WheelSettingsWv</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Contact.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Contact</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
@@ -2541,6 +2554,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListener.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ContactListener</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
 <div class="block">Receive collision-contact events.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ContactListenerList</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
+<dd>
+<div class="block">A variable-length array of contact listeners.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#%3Cinit%3E()" class="member-name-link">ContactListenerList()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Instantiate an empty list.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactManifold.html" class="type-name-link" title="class in com.github.stephengold.joltjni">ContactManifold</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
@@ -3094,7 +3115,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CustomContactListener.html" class="type-name-link" title="class in com.github.stephengold.joltjni">CustomContactListener</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
-<div class="block">A customizable <code>ContactListener</code>.</div>
+<div class="block">A customizable <code>ContactListener</code> without any filtering.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CustomContactListener.html#%3Cinit%3E()" class="member-name-link">CustomContactListener()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CustomContactListener.html" title="class in com.github.stephengold.joltjni">CustomContactListener</a></dt>
 <dd>
@@ -3744,10 +3765,19 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Enumerate ways of drawing triangles.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" class="type-name-link" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a> - Enum Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/package-summary.html">com.github.stephengold.joltjni.enumerate</a></dt>
+<dd>
+<div class="block">Filter modes for a <code>FilteredContactListener</code>.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EGroundState.html" class="type-name-link" title="enum class in com.github.stephengold.joltjni.enumerate">EGroundState</a> - Enum Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/package-summary.html">com.github.stephengold.joltjni.enumerate</a></dt>
 <dd>
 <div class="block">Categorize the possible relationships between a character and its supporting
  surface.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html#Either" class="member-name-link">Either</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a></dt>
+<dd>
+<div class="block">invoke associated callbacks if <code>shouldCollide()</code> returns
+ <code>true</code> for one body or both bodies in contact</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/ELraType.html" class="type-name-link" title="enum class in com.github.stephengold.joltjni.enumerate">ELraType</a> - Enum Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/package-summary.html">com.github.stephengold.joltjni.enumerate</a></dt>
 <dd>
@@ -3767,7 +3797,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyIdVector.html#empty()" class="member-name-link">empty()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyIdVector.html" title="class in com.github.stephengold.joltjni">BodyIdVector</a></dt>
 <dd>
-<div class="block">Test whether the array contains one or more elements.</div>
+<div class="block">Test whether the vector contains one or more IDs.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#empty()" class="member-name-link">empty()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Test whether the list contains one or more sub-listeners.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVertexList.html#empty()" class="member-name-link">empty()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a></dt>
 <dd>
@@ -4043,6 +4077,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Enumerate algorithms that fill voxels to create a solid object.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" class="type-name-link" title="class in com.github.stephengold.joltjni">FilteredContactListener</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
+<dd>
+<div class="block">A customizable <code>ContactListener</code> with configurable filtering.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#%3Cinit%3E()" class="member-name-link">FilteredContactListener()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Instantiate a listener with no filters.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyIdVector.html#find(int)" class="member-name-link">find(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyIdVector.html" title="class in com.github.stephengold.joltjni">BodyIdVector</a></dt>
 <dd>
 <div class="block">Find the element index of the matching ID, if any.</div>
@@ -4296,6 +4338,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraints.html#get(int)" class="member-name-link">get(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraints.html" title="class in com.github.stephengold.joltjni">Constraints</a></dt>
 <dd>
 <div class="block">Copy the reference at the specified index.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#get(int)" class="member-name-link">get(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Access the sub-listener at the specified index.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html#get(int)" class="member-name-link">get(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html" title="class in com.github.stephengold.joltjni">Float2</a></dt>
 <dd>
@@ -4570,6 +4616,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getAngularVelocity(int)" class="member-name-link">getAngularVelocity(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
 <div class="block">Return the angular velocity of the specified body.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getAngularVelocity(int,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getAngularVelocity(int, Vec3)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Copy the angular velocity of the specified body.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionEstimationResult.html#getAngularVelocity1()" class="member-name-link">getAngularVelocity1()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a></dt>
 <dd>
@@ -4945,6 +4995,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Generate settings to reconstruct the (rigid) body.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getBodyFilter()" class="member-name-link">getBodyFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Access the body filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getBodyFilterMode()" class="member-name-link">getBodyFilterMode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Return the body-filter mode.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BroadPhaseCastResult.html#getBodyId()" class="member-name-link">getBodyId()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BroadPhaseCastResult.html" title="class in com.github.stephengold.joltjni">BroadPhaseCastResult</a></dt>
 <dd>
 <div class="block">Return the ID of the body that was hit.</div>
@@ -5089,6 +5147,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstBroadPhaseLayerInterface.html#getBroadPhaseLayer(int)" class="member-name-link">getBroadPhaseLayer(int)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstBroadPhaseLayerInterface.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseLayerInterface</a></dt>
 <dd>
 <div class="block">Return the broad-phase layer for the specified object layer.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getBroadPhaseLayerFilter()" class="member-name-link">getBroadPhaseLayerFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Access the broadphase-layer filter</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getBroadPhaseLayerFilterMode()" class="member-name-link">getBroadPhaseLayerFilterMode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Return the broadphase-layer filter mode.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyManager.html#getBroadPhaseLayerInterface()" class="member-name-link">getBroadPhaseLayerInterface()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyManager.html" title="class in com.github.stephengold.joltjni">BodyManager</a></dt>
 <dd>
@@ -6006,6 +6072,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the density.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShape.html#getDensity()" class="member-name-link">getDensity()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></dt>
+<dd>
+<div class="block">Return the density.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShapeSettings.html#getDensity()" class="member-name-link">getDensity()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShapeSettings</a></dt>
 <dd>
 <div class="block">Return the density.</div>
@@ -6134,6 +6204,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the specified element in double precision.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getEnableAdded()" class="member-name-link">getEnableAdded()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Test whether the <code>onContactAdded()</code> callback is enabled.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraint.html#getEnabled()" class="member-name-link">getEnabled()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraint.html" title="class in com.github.stephengold.joltjni">Constraint</a></dt>
 <dd>
 <div class="block">Test whether the constraint is enabled.</div>
@@ -6166,6 +6240,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether the constraint will be enabled initially.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getEnablePersisted()" class="member-name-link">getEnablePersisted()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Test whether the <code>onContactPersisted()</code> callback is enabled.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getEnableRemoved()" class="member-name-link">getEnableRemoved()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Test whether the <code>onContactRemoved()</code> callback is enabled.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyMotionProperties.html#getEnableSkinConstraints()" class="member-name-link">getEnableSkinConstraints()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyMotionProperties</a></dt>
 <dd>
 <div class="block">Test whether skinning constraints are enabled.</div>
@@ -6189,6 +6271,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWvRef.html#getEnableSuspensionForcePoint()" class="member-name-link">getEnableSuspensionForcePoint()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a></dt>
 <dd>
 <div class="block">Determine where to apply tire forces.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getEnableValidate()" class="member-name-link">getEnableValidate()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Test whether the <code>onContactValidate()</code> callback is enabled.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleController.html#getEngine()" class="member-name-link">getEngine()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleController.html" title="class in com.github.stephengold.joltjni">TrackedVehicleController</a></dt>
 <dd>
@@ -7630,6 +7716,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the linear velocity of the specified body.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getLinearVelocity(int,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getLinearVelocity(int, Vec3)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Copy the linear velocity of the specified body.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionEstimationResult.html#getLinearVelocity1()" class="member-name-link">getLinearVelocity1()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionEstimationResult.html" title="class in com.github.stephengold.joltjni">CollisionEstimationResult</a></dt>
 <dd>
 <div class="block">Copy the linear velocity of body 1.</div>
@@ -8832,6 +8922,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the object layer of the specified body.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getObjectLayerPairFilter()" class="member-name-link">getObjectLayerPairFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Access the object-layer pair filter.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html#getObjectLayerPairFilter()" class="member-name-link">getObjectLayerPairFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></dt>
 <dd>
 <div class="block">Access the (application-provided) interface for testing whether 2 objects
@@ -9319,6 +9413,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the location of specified sample.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getPosition(int,com.github.stephengold.joltjni.RVec3)" class="member-name-link">getPosition(int, RVec3)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Copy the location of the specified body.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SixDofConstraintSettings.html#getPosition1()" class="member-name-link">getPosition1()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SixDofConstraintSettings.html" title="class in com.github.stephengold.joltjni">SixDofConstraintSettings</a></dt>
 <dd>
 <div class="block">Copy the constraint location for body 1.</div>
@@ -9687,11 +9785,31 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count the active references to the native <code>CharacterBase</code>.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterSettings.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterBaseSettings.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterBaseSettings.html" title="class in com.github.stephengold.joltjni">CharacterBaseSettings</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>CharacterBaseSettings</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRef.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRef.html" title="class in com.github.stephengold.joltjni">CharacterRef</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>Character</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRefC.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRefC.html" title="class in com.github.stephengold.joltjni">CharacterRefC</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>Character</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterSettingsRef.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterSettingsRef.html" title="class in com.github.stephengold.joltjni">CharacterSettingsRef</a></dt>
 <dd>
 <div class="block">Count the active references to the native <code>CharacterSettings</code>.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettings.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettings.html" title="class in com.github.stephengold.joltjni">CharacterVirtualSettings</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualRef.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualRef.html" title="class in com.github.stephengold.joltjni">CharacterVirtualRef</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>CharacterVirtual</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualRefC.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualRefC.html" title="class in com.github.stephengold.joltjni">CharacterVirtualRefC</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>CharacterVirtual</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettingsRef.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettingsRef.html" title="class in com.github.stephengold.joltjni">CharacterVirtualSettingsRef</a></dt>
 <dd>
 <div class="block">Count the active references to the native
  <code>CharacterVirtualSettings</code>.</div>
@@ -9732,11 +9850,27 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count the active references to the native <code>RagdollSettings</code>.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCharacterBase.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></dt>
+<dd>
+<div class="block">Count the active references to the native character.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCharacterBaseSettings.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCharacterBaseSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBaseSettings</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>CharacterBaseSettings</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstShape.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>Shape</code>.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstShapeSettings.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></dt>
 <dd>
 <div class="block">Count the active references to the native <code>ShapeSettings</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Shape.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Shape.html" title="class in com.github.stephengold.joltjni">Shape</a></dt>
+<dd>
+<div class="block">Count the active references to the native <code>Shape</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeRefC.html#getRefCount()" class="member-name-link">getRefCount()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></dt>
 <dd>
 <div class="block">Count the active references to the native <code>Shape</code>.</div>
 </dd>
@@ -10033,6 +10167,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the orientation of the character.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getRotation(int)" class="member-name-link">getRotation(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Copy the orientation of the specified body.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getRotation(int,com.github.stephengold.joltjni.Quat)" class="member-name-link">getRotation(int, Quat)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
 <div class="block">Copy the orientation of the specified body.</div>
 </dd>
@@ -10550,6 +10688,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Calculate the shape's volume, submerged volume, and center of buoyancy.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShape.html#getSubmergedVolume(com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstPlane,float%5B%5D,float%5B%5D,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">getSubmergedVolume(Mat44Arg, Vec3Arg, ConstPlane, float[], float[], Vec3, RVec3Arg)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></dt>
+<dd>
+<div class="block">Calculate the shape's volume, submerged volume, and center of buoyancy.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CompoundShape.html#getSubShape(int)" class="member-name-link">getSubShape(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CompoundShape.html" title="class in com.github.stephengold.joltjni">CompoundShape</a></dt>
 <dd>
 <div class="block">Access the specified sub-shape.</div>
@@ -10720,7 +10862,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexShape.html#getSupportFunction(com.github.stephengold.joltjni.enumerate.ESupportMode,com.github.stephengold.joltjni.SupportBuffer,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getSupportFunction(ESupportMode, SupportBuffer, Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexShape.html" title="class in com.github.stephengold.joltjni">ConvexShape</a></dt>
 <dd>
-<div class="block">Access the shape's support function.</div>
+<div class="block">Generate a support function for the shape.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShape.html#getSupportFunction(com.github.stephengold.joltjni.enumerate.ESupportMode,com.github.stephengold.joltjni.SupportBuffer,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getSupportFunction(ESupportMode, SupportBuffer, Vec3Arg)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></dt>
+<dd>
+<div class="block">Generate a support function for the shape.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTransformedShape.html#getSupportingFace(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.SupportingFace)" class="member-name-link">getSupportingFace(int, Vec3Arg, RVec3Arg, SupportingFace)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTransformedShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTransformedShape</a></dt>
 <dd>
@@ -12368,7 +12514,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IgnoreMultipleBodiesFilter.html#%3Cinit%3E()" class="member-name-link">IgnoreMultipleBodiesFilter()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IgnoreMultipleBodiesFilter.html" title="class in com.github.stephengold.joltjni">IgnoreMultipleBodiesFilter</a></dt>
 <dd>
-<div class="block">Instantiate a default filter that selects all layers.</div>
+<div class="block">Instantiate a default filter that selects all bodies.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#implementsDebugRendering()" class="member-name-link">implementsDebugRendering()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
@@ -13721,6 +13867,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Gather and report narrow-phase performance statistics.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html#Neither" class="member-name-link">Neither</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a></dt>
+<dd>
+<div class="block">invoke associated callbacks if <code>shouldCollide()</code> returns
+ <code>false</code> for both bodies in contact</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#newDirectByteBuffer(int)" class="member-name-link">newDirectByteBuffer(int)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
 <div class="block">Create a direct <code>ByteBuffer</code> with the specified capacity.</div>
@@ -13846,6 +13997,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Skinned.html#normalizeWeights()" class="member-name-link">normalizeWeights()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Skinned.html" title="class in com.github.stephengold.joltjni">Skinned</a></dt>
 <dd>
 <div class="block">Normalize the weights so that they sum to one.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html#NotBoth" class="member-name-link">NotBoth</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a></dt>
+<dd>
+<div class="block">invoke associated callbacks if <code>shouldCollide()</code> returns
+ <code>false</code> for one body or both bodies in contact</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/operator/Op.html#notEqual(com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">notEqual(ConstColor, ConstColor)</a> - Static method in class com.github.stephengold.joltjni.operator.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/operator/Op.html" title="class in com.github.stephengold.joltjni.operator">Op</a></dt>
 <dd>
@@ -14085,6 +14241,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Callback invoked (by native code) each time a new contact point is
  detected.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#onContactAdded(long,long,long,long)" class="member-name-link">onContactAdded(long, long, long, long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Callback invoked (by native code) each time a new contact point is
+ detected.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactListener.html#onContactPersisted(long,int,int,double,double,double,float,float,float,long)" class="member-name-link">onContactPersisted(long, int, int, double, double, double, float, float, float, long)</a> - Method in interface com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactListener.html" title="interface in com.github.stephengold.joltjni">CharacterContactListener</a></dt>
 <dd>
 <div class="block">Callback invoked (by native code) whenever a contact between a character
@@ -14100,7 +14261,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Callback invoked (by native code) each time a contact is detected that
  was also detected during the previous update.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#onContactPersisted(long,long,long,long)" class="member-name-link">onContactPersisted(long, long, long, long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Callback invoked (by native code) each time a contact is detected that
+ was also detected during the previous update.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CustomContactListener.html#onContactRemoved(long)" class="member-name-link">onContactRemoved(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CustomContactListener.html" title="class in com.github.stephengold.joltjni">CustomContactListener</a></dt>
+<dd>
+<div class="block">Callback invoked (by native code) each time a contact that was detected
+ during the previous update is no longer detected.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#onContactRemoved(long)" class="member-name-link">onContactRemoved(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
 <div class="block">Callback invoked (by native code) each time a contact that was detected
  during the previous update is no longer detected.</div>
@@ -14136,6 +14307,12 @@ loadScripts(document, 'script');</script>
  can collide with the specified body.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CustomContactListener.html#onContactValidate(long,long,double,double,double,long)" class="member-name-link">onContactValidate(long, long, double, double, double, long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CustomContactListener.html" title="class in com.github.stephengold.joltjni">CustomContactListener</a></dt>
+<dd>
+<div class="block">Callback invoked (by native code) after detecting collision between a
+ pair of bodies, but before invoking <code>onContactAdded()</code> and before
+ adding the contact constraint.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#onContactValidate(long,long,double,double,double,long)" class="member-name-link">onContactValidate(long, long, double, double, double, long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
 <div class="block">Callback invoked (by native code) after detecting collision between a
  pair of bodies, but before invoking <code>onContactAdded()</code> and before
@@ -14682,6 +14859,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Append the specified object to the end.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#pushBack(com.github.stephengold.joltjni.ContactListener)" class="member-name-link">pushBack(ContactListener)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Append the specified listener to the end.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VertexList.html#pushBack(com.github.stephengold.joltjni.Float3)" class="member-name-link">pushBack(Float3)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VertexList.html" title="class in com.github.stephengold.joltjni">VertexList</a></dt>
 <dd>
 <div class="block">Append the specified vertex to the end.</div>
@@ -15163,6 +15344,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiWrite.html#releaseLocks()" class="member-name-link">releaseLocks()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyLockMultiWrite.html" title="class in com.github.stephengold.joltjni">BodyLockMultiWrite</a></dt>
 <dd>
 <div class="block">Release all the locks.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#remove(com.github.stephengold.joltjni.ContactListener)" class="member-name-link">remove(ContactListener)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Remove all sub-listeners equal to the argument.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVsCharacterCollisionSimple.html#remove(com.github.stephengold.joltjni.readonly.ConstCharacterVirtual)" class="member-name-link">remove(ConstCharacterVirtual)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVsCharacterCollisionSimple.html" title="class in com.github.stephengold.joltjni">CharacterVsCharacterCollisionSimple</a></dt>
 <dd>
@@ -16525,6 +16710,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Replace the system's <code>BodyActivationListener</code>.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setBodyFilter(com.github.stephengold.joltjni.BodyFilter)" class="member-name-link">setBodyFilter(BodyFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Replace the listener's body filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setBodyFilterMode(com.github.stephengold.joltjni.enumerate.EFilterMode)" class="member-name-link">setBodyFilterMode(EFilterMode)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Alter the body-filter mode.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#setBodyPairCacheCosMaxDeltaRotationDiv2(float)" class="member-name-link">setBodyPairCacheCosMaxDeltaRotationDiv2(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
 <dd>
 <div class="block">Return the maximum rotation to reuse collision results from the previous
@@ -16558,6 +16751,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleController.html#setBrakeInput(float)" class="member-name-link">setBrakeInput(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleController.html" title="class in com.github.stephengold.joltjni">WheeledVehicleController</a></dt>
 <dd>
 <div class="block">Alter how strongly the brake pedal is pressed.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setBroadPhaseLayerFilter(com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">setBroadPhaseLayerFilter(BroadPhaseLayerFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Replace the listener's broadphase-layer filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setBroadPhaseLayerFilterMode(com.github.stephengold.joltjni.enumerate.EFilterMode)" class="member-name-link">setBroadPhaseLayerFilterMode(EFilterMode)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Alter the broadphase-layer filter mode.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactSettings.html#setCanPushCharacter(boolean)" class="member-name-link">setCanPushCharacter(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactSettings.html" title="class in com.github.stephengold.joltjni">CharacterContactSettings</a></dt>
 <dd>
@@ -16694,7 +16895,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html#setContactListener(com.github.stephengold.joltjni.ContactListener)" class="member-name-link">setContactListener(ContactListener)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></dt>
 <dd>
-<div class="block">Replace the system's contact listener.</div>
+<div class="block">Replace or remove the system's contact listener.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#setContactNormalCosMaxDeltaRotation(float)" class="member-name-link">setContactNormalCosMaxDeltaRotation(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
 <dd>
@@ -16900,6 +17101,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the box to be empty.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setEnableAdded(boolean)" class="member-name-link">setEnableAdded(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Enable or disable the <code>onContactAdded()</code> callback.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraint.html#setEnabled(boolean)" class="member-name-link">setEnabled(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraint.html" title="class in com.github.stephengold.joltjni">Constraint</a></dt>
 <dd>
 <div class="block">Enable or disable the constraint.</div>
@@ -16907,6 +17112,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConstraintSettings.html#setEnabled(boolean)" class="member-name-link">setEnabled(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConstraintSettings</a></dt>
 <dd>
 <div class="block">Initially enable or disable the constraint.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setEnablePersisted(boolean)" class="member-name-link">setEnablePersisted(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Enable or disable the <code>onContactPersisted()</code> callback.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setEnableRemoved(boolean)" class="member-name-link">setEnableRemoved(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Enable or disable the <code>onContactRemoved()</code> callback.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyMotionProperties.html#setEnableSkinConstraints(boolean)" class="member-name-link">setEnableSkinConstraints(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyMotionProperties.html" title="class in com.github.stephengold.joltjni">SoftBodyMotionProperties</a></dt>
 <dd>
@@ -16923,6 +17136,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWvRef.html#setEnableSuspensionForcePoint(boolean)" class="member-name-link">setEnableSuspensionForcePoint(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a></dt>
 <dd>
 <div class="block">Alter where to apply tire forces.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setEnableValidate(boolean)" class="member-name-link">setEnableValidate(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Enable or disable the <code>onContactValidate()</code> callback.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#setEngineTorqueRatio(float)" class="member-name-link">setEngineTorqueRatio(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
 <dd>
@@ -17417,6 +17634,30 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyCreationSettings.html#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></dt>
 <dd>
 <div class="block">Alter the (initial) linear velocity.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Character.html#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Character.html" title="class in com.github.stephengold.joltjni">Character</a></dt>
+<dd>
+<div class="block">Alter the character's linear velocity using the locking body interface.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRef.html#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRef.html" title="class in com.github.stephengold.joltjni">CharacterRef</a></dt>
+<dd>
+<div class="block">Alter the character's linear velocity using the locking body interface.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtual.html#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtual.html" title="class in com.github.stephengold.joltjni">CharacterVirtual</a></dt>
+<dd>
+<div class="block">Alter the character's linear velocity.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualRef.html#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity(float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualRef.html" title="class in com.github.stephengold.joltjni">CharacterVirtualRef</a></dt>
+<dd>
+<div class="block">Alter the character's linear velocity.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Character.html#setLinearVelocity(float,float,float,boolean)" class="member-name-link">setLinearVelocity(float, float, float, boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Character.html" title="class in com.github.stephengold.joltjni">Character</a></dt>
+<dd>
+<div class="block">Alter the character's linear velocity.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRef.html#setLinearVelocity(float,float,float,boolean)" class="member-name-link">setLinearVelocity(float, float, float, boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterRef.html" title="class in com.github.stephengold.joltjni">CharacterRef</a></dt>
+<dd>
+<div class="block">Alter the character's linear velocity.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#setLinearVelocity(int,float,float,float)" class="member-name-link">setLinearVelocity(int, float, float, float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
@@ -17998,6 +18239,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#setObjectLayer(int,int)" class="member-name-link">setObjectLayer(int, int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
 <div class="block">Alter the object layer of the specified body.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setObjectLayerPairFilter(com.github.stephengold.joltjni.ObjectLayerPairFilter)" class="member-name-link">setObjectLayerPairFilter(ObjectLayerPairFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
+<dd>
+<div class="block">Replace the listener's layer-pair filter.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeSettings.html#setOffset(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setOffset(Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeSettings.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeSettings</a></dt>
 <dd>
@@ -18605,7 +18850,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html#setSoftBodyContactListener(com.github.stephengold.joltjni.SoftBodyContactListener)" class="member-name-link">setSoftBodyContactListener(SoftBodyContactListener)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></dt>
 <dd>
-<div class="block">Replace the system's soft-body contact listener.</div>
+<div class="block">Replace or remove the system's soft-body contact listener.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConeConstraintSettings.html#setSpace(com.github.stephengold.joltjni.enumerate.EConstraintSpace)" class="member-name-link">setSpace(EConstraintSpace)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConeConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConeConstraintSettings</a></dt>
 <dd>
@@ -19481,6 +19726,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count how many references are in the array.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#size()" class="member-name-link">size()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Count how many sub-listeners there are.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleList.html#size()" class="member-name-link">size()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a></dt>
 <dd>
 <div class="block">Count how many triangles are in the list.</div>
@@ -19612,6 +19861,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SkinWeight.html#%3Cinit%3E(com.github.stephengold.joltjni.SkinWeight)" class="member-name-link">SkinWeight(SkinWeight)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SkinWeight.html" title="class in com.github.stephengold.joltjni">SkinWeight</a></dt>
 <dd>
 <div class="block">Instantiate a copy of the specified weight.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html#Skip" class="member-name-link">Skip</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a></dt>
+<dd>
+<div class="block">don't invoke associated callbacks</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/operator/Op.html#slash(com.github.stephengold.joltjni.readonly.RVec3Arg,double)" class="member-name-link">slash(RVec3Arg, double)</a> - Static method in class com.github.stephengold.joltjni.operator.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/operator/Op.html" title="class in com.github.stephengold.joltjni.operator">Op</a></dt>
 <dd>
@@ -20787,6 +21040,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy all the elements (in order) to a Java list.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html#toList()" class="member-name-link">toList()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ContactListenerList.html" title="class in com.github.stephengold.joltjni">ContactListenerList</a></dt>
+<dd>
+<div class="block">Add all the sub-listeners (in order) to a Java list.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/template/Array.html#toList()" class="member-name-link">toList()</a> - Method in class com.github.stephengold.joltjni.template.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a></dt>
 <dd>
 <div class="block">Copy all the elements (in order) to a Java list.</div>
@@ -21718,6 +21975,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this class with the specified name.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EGroundState.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EGroundState.html" title="enum class in com.github.stephengold.joltjni.enumerate">EGroundState</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
@@ -21851,6 +22112,11 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EDrawMode.html#values()" class="member-name-link">values()</a> - Static method in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum class, in
+the order they are declared.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html#values()" class="member-name-link">values()</a> - Static method in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/EFilterMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EFilterMode</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>

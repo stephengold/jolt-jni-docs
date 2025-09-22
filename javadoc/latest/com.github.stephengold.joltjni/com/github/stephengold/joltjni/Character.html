@@ -340,6 +340,21 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Alter the character's motion.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity</a><wbr>(float&nbsp;vx,
+ float&nbsp;vy,
+ float&nbsp;vz)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the character's linear velocity using the locking body interface.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(float,float,float,boolean)" class="member-name-link">setLinearVelocity</a><wbr>(float&nbsp;vx,
+ float&nbsp;vy,
+ float&nbsp;vz,
+ boolean&nbsp;lockBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the character's linear velocity.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the character's linear velocity using the locking body interface.</div>
@@ -449,7 +464,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstCharacterBase">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></h3>
-<code><a href="readonly/ConstCharacterBase.html#getCosMaxSlopeAngle()">getCosMaxSlopeAngle</a>, <a href="readonly/ConstCharacterBase.html#getGroundBodyId()">getGroundBodyId</a>, <a href="readonly/ConstCharacterBase.html#getGroundMaterial()">getGroundMaterial</a>, <a href="readonly/ConstCharacterBase.html#getGroundNormal()">getGroundNormal</a>, <a href="readonly/ConstCharacterBase.html#getGroundPosition()">getGroundPosition</a>, <a href="readonly/ConstCharacterBase.html#getGroundState()">getGroundState</a>, <a href="readonly/ConstCharacterBase.html#getGroundSubShapeId()">getGroundSubShapeId</a>, <a href="readonly/ConstCharacterBase.html#getGroundUserData()">getGroundUserData</a>, <a href="readonly/ConstCharacterBase.html#getGroundVelocity()">getGroundVelocity</a>, <a href="readonly/ConstCharacterBase.html#getShape()">getShape</a>, <a href="readonly/ConstCharacterBase.html#getUp()">getUp</a>, <a href="readonly/ConstCharacterBase.html#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)">isSlopeTooSteep</a>, <a href="readonly/ConstCharacterBase.html#isSupported()">isSupported</a>, <a href="readonly/ConstCharacterBase.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code></div>
+<code><a href="readonly/ConstCharacterBase.html#getCosMaxSlopeAngle()">getCosMaxSlopeAngle</a>, <a href="readonly/ConstCharacterBase.html#getGroundBodyId()">getGroundBodyId</a>, <a href="readonly/ConstCharacterBase.html#getGroundMaterial()">getGroundMaterial</a>, <a href="readonly/ConstCharacterBase.html#getGroundNormal()">getGroundNormal</a>, <a href="readonly/ConstCharacterBase.html#getGroundPosition()">getGroundPosition</a>, <a href="readonly/ConstCharacterBase.html#getGroundState()">getGroundState</a>, <a href="readonly/ConstCharacterBase.html#getGroundSubShapeId()">getGroundSubShapeId</a>, <a href="readonly/ConstCharacterBase.html#getGroundUserData()">getGroundUserData</a>, <a href="readonly/ConstCharacterBase.html#getGroundVelocity()">getGroundVelocity</a>, <a href="readonly/ConstCharacterBase.html#getRefCount()">getRefCount</a>, <a href="readonly/ConstCharacterBase.html#getShape()">getShape</a>, <a href="readonly/ConstCharacterBase.html#getUp()">getUp</a>, <a href="readonly/ConstCharacterBase.html#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)">isSlopeTooSteep</a>, <a href="readonly/ConstCharacterBase.html#isSupported()">isSupported</a>, <a href="readonly/ConstCharacterBase.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
@@ -703,6 +718,45 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
  system coordinates, not null, unaffected)</dd>
 <dd><code>omega</code> - the desired angular velocity (radians per second in system
  coordinates, not null, unaffected)</dd>
+<dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
+ <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLinearVelocity(float,float,float)">
+<h3>setLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLinearVelocity</span><wbr><span class="parameters">(float&nbsp;vx,
+ float&nbsp;vy,
+ float&nbsp;vz)</span></div>
+<div class="block">Alter the character's linear velocity using the locking body interface.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>vx</code> - the X component of the desired velocity (in meters per second,
+ default=0)</dd>
+<dd><code>vy</code> - the Y component of the desired velocity (in meters per second,
+ default=0)</dd>
+<dd><code>vz</code> - the Z component of the desired velocity (in meters per second,
+ default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLinearVelocity(float,float,float,boolean)">
+<h3>setLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLinearVelocity</span><wbr><span class="parameters">(float&nbsp;vx,
+ float&nbsp;vy,
+ float&nbsp;vz,
+ boolean&nbsp;lockBodies)</span></div>
+<div class="block">Alter the character's linear velocity.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>vx</code> - the X component of the desired velocity (in meters per second,
+ default=0)</dd>
+<dd><code>vy</code> - the Y component of the desired velocity (in meters per second,
+ default=0)</dd>
+<dd><code>vz</code> - the Z component of the desired velocity (in meters per second,
+ default=0)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>

@@ -410,7 +410,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setContactListener(com.github.stephengold.joltjni.ContactListener)" class="member-name-link">setContactListener</a><wbr>(<a href="ContactListener.html" title="class in com.github.stephengold.joltjni">ContactListener</a>&nbsp;listener)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Replace the system's contact listener.</div>
+<div class="block">Replace or remove the system's contact listener.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGravity(float,float,float)" class="member-name-link">setGravity</a><wbr>(float&nbsp;x,
@@ -442,7 +442,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSoftBodyContactListener(com.github.stephengold.joltjni.SoftBodyContactListener)" class="member-name-link">setSoftBodyContactListener</a><wbr>(<a href="SoftBodyContactListener.html" title="class in com.github.stephengold.joltjni">SoftBodyContactListener</a>&nbsp;listener)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Replace the system's soft-body contact listener.</div>
+<div class="block">Replace or remove the system's soft-body contact listener.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(float,int,com.github.stephengold.joltjni.TempAllocator,com.github.stephengold.joltjni.JobSystem)" class="member-name-link">update</a><wbr>(float&nbsp;deltaTime,
@@ -1127,7 +1127,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Replace the combining function for restitutions.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>function</code> - the desired function (not null, default=max)</dd>
+<dd><code>function</code> - the desired function (not <code>null</code>, default=max)</dd>
 </dl>
 </section>
 </li>
@@ -1135,10 +1135,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setContactListener(com.github.stephengold.joltjni.ContactListener)">
 <h3>setContactListener</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setContactListener</span><wbr><span class="parameters">(<a href="ContactListener.html" title="class in com.github.stephengold.joltjni">ContactListener</a>&nbsp;listener)</span></div>
-<div class="block">Replace the system's contact listener.</div>
+<div class="block">Replace or remove the system's contact listener.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>listener</code> - the desired listener</dd>
+<dd><code>listener</code> - the desired listener, or <code>null</code> for none</dd>
 </dl>
 </section>
 </li>
@@ -1168,7 +1168,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>gravity</code> - the desired acceleration vector (in system coordinates,
- not null, unaffected, default=(0,-9.81,0))</dd>
+ not <code>null</code>, unaffected, default=(0,-9.81,0))</dd>
 </dl>
 </section>
 </li>
@@ -1179,7 +1179,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the specified settings to the system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the desired settings (not null, unaffected)</dd>
+<dd><code>settings</code> - the desired settings (not <code>null</code>, unaffected)</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
@@ -1196,7 +1196,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Replace the system's body-vs-body collide function.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyVsBody</code> - the desired function</dd>
+<dd><code>bodyVsBody</code> - the desired function (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1216,10 +1216,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setSoftBodyContactListener(com.github.stephengold.joltjni.SoftBodyContactListener)">
 <h3>setSoftBodyContactListener</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSoftBodyContactListener</span><wbr><span class="parameters">(<a href="SoftBodyContactListener.html" title="class in com.github.stephengold.joltjni">SoftBodyContactListener</a>&nbsp;listener)</span></div>
-<div class="block">Replace the system's soft-body contact listener.</div>
+<div class="block">Replace or remove the system's soft-body contact listener.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>listener</code> - the desired listener</dd>
+<dd><code>listener</code> - the desired listener, or <code>null</code> for none</dd>
 </dl>
 </section>
 </li>
@@ -1235,8 +1235,8 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>deltaTime</code> - the total time to advance (in seconds)</dd>
 <dd><code>collisionSteps</code> - the number of simulation steps to perform</dd>
-<dd><code>tempAllocator</code> - the allocator to use (not null)</dd>
-<dd><code>jobSystem</code> - the job system to use (not null)</dd>
+<dd><code>tempAllocator</code> - the allocator to use (not <code>null</code>)</dd>
+<dd><code>jobSystem</code> - the job system to use (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>a bitmask of error conditions, or-ed together</dd>
 <dt>See Also:</dt>

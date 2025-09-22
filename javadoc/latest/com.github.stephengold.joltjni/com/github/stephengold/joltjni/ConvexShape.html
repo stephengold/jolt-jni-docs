@@ -97,7 +97,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -105,7 +105,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">ConvexShape</span>
-<span class="extends-implements">extends <a href="Shape.html" title="class in com.github.stephengold.joltjni">Shape</a></span></div>
+<span class="extends-implements">extends <a href="Shape.html" title="class in com.github.stephengold.joltjni">Shape</a>
+implements <a href="readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></span></div>
 <div class="block">A type of <code>Shape</code> that inherently possesses the convex property.</div>
 </section>
 <section class="summary">
@@ -142,7 +143,7 @@ loadScripts(document, 'script');</script>
  <a href="SupportBuffer.html" title="class in com.github.stephengold.joltjni">SupportBuffer</a>&nbsp;buffer,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the shape's support function.</div>
+<div class="block">Generate a support function for the shape.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDensity(float)" class="member-name-link">setDensity</a><wbr>(float&nbsp;density)</code></div>
@@ -167,6 +168,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstShape">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></h3>
+<code><a href="readonly/ConstShape.html#copyDebugTriangles(java.nio.FloatBuffer)">copyDebugTriangles</a>, <a href="readonly/ConstShape.html#countDebugTriangles()">countDebugTriangles</a>, <a href="readonly/ConstShape.html#draw(com.github.stephengold.joltjni.DebugRenderer,com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,boolean,boolean)">draw</a>, <a href="readonly/ConstShape.html#drawGetSupportFunction(com.github.stephengold.joltjni.DebugRenderer,com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,boolean)">drawGetSupportFunction</a>, <a href="readonly/ConstShape.html#getCenterOfMass()">getCenterOfMass</a>, <a href="readonly/ConstShape.html#getInnerRadius()">getInnerRadius</a>, <a href="readonly/ConstShape.html#getLeafShape(int,int%5B%5D)">getLeafShape</a>, <a href="readonly/ConstShape.html#getLocalBounds()">getLocalBounds</a>, <a href="readonly/ConstShape.html#getMassProperties()">getMassProperties</a>, <a href="readonly/ConstShape.html#getMaterial(int)">getMaterial</a>, <a href="readonly/ConstShape.html#getRefCount()">getRefCount</a>, <a href="readonly/ConstShape.html#getRevisionCount()">getRevisionCount</a>, <a href="readonly/ConstShape.html#getStats()">getStats</a>, <a href="readonly/ConstShape.html#getSubShapeIdBitsRecursive()">getSubShapeIdBitsRecursive</a>, <a href="readonly/ConstShape.html#getSubType()">getSubType</a>, <a href="readonly/ConstShape.html#getType()">getType</a>, <a href="readonly/ConstShape.html#getWorldSpaceBounds(com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)">getWorldSpaceBounds</a>, <a href="readonly/ConstShape.html#getWorldSpaceBounds(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)">getWorldSpaceBounds</a>, <a href="readonly/ConstShape.html#isValidScale(com.github.stephengold.joltjni.readonly.Vec3Arg)">isValidScale</a>, <a href="readonly/ConstShape.html#makeScaleValid(com.github.stephengold.joltjni.readonly.Vec3Arg)">makeScaleValid</a>, <a href="readonly/ConstShape.html#mustBeStatic()">mustBeStatic</a>, <a href="readonly/ConstShape.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a>, <a href="readonly/ConstShape.html#scaleShape(com.github.stephengold.joltjni.readonly.Vec3Arg)">scaleShape</a>, <a href="readonly/ConstShape.html#toRefC()">toRefC</a></code></div>
 </section>
 </li>
 </ul>
@@ -179,11 +183,24 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="setDensity(float)">
+<h3>setDensity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDensity</span><wbr><span class="parameters">(float&nbsp;density)</span></div>
+<div class="block">Alter the density.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>density</code> - the desired density</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getDensity()">
 <h3>getDensity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDensity</span>()</div>
 <div class="block">Return the density.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstConvexShape.html#getDensity()">getDensity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></code></dd>
 <dt>Returns:</dt>
 <dd>the density</dd>
 </dl>
@@ -201,6 +218,8 @@ loadScripts(document, 'script');</script>
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;baseOffset)</span></div>
 <div class="block">Calculate the shape's volume, submerged volume, and center of buoyancy.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstConvexShape.html#getSubmergedVolume(com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstPlane,float%5B%5D,float%5B%5D,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.readonly.RVec3Arg)">getSubmergedVolume</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>comTransform</code> - the local-to-system transform (not null, unaffected)</dd>
 <dd><code>scale</code> - the scale vector (not null, unaffected)</dd>
@@ -222,8 +241,10 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Support.html" title="class in com.github.stephengold.joltjni">Support</a></span>&nbsp;<span class="element-name">getSupportFunction</span><wbr><span class="parameters">(<a href="enumerate/ESupportMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ESupportMode</a>&nbsp;supportMode,
  <a href="SupportBuffer.html" title="class in com.github.stephengold.joltjni">SupportBuffer</a>&nbsp;buffer,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</span></div>
-<div class="block">Access the shape's support function.</div>
+<div class="block">Generate a support function for the shape.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstConvexShape.html#getSupportFunction(com.github.stephengold.joltjni.enumerate.ESupportMode,com.github.stephengold.joltjni.SupportBuffer,com.github.stephengold.joltjni.readonly.Vec3Arg)">getSupportFunction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>supportMode</code> - how to handle convex radius (not null)</dd>
 <dd><code>buffer</code> - buffer storage (not null)</dd>
@@ -231,17 +252,6 @@ loadScripts(document, 'script');</script>
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setDensity(float)">
-<h3>setDensity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDensity</span><wbr><span class="parameters">(float&nbsp;density)</span></div>
-<div class="block">Alter the density.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>density</code> - the desired density</dd>
 </dl>
 </section>
 </li>
