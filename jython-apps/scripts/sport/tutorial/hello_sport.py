@@ -122,4 +122,4 @@ class HelloSport(BasePhysicsApp):
 
 
 application = HelloSport()
-application.start("HelloSport", 0, 0, 0)
+application.start("HelloSport")

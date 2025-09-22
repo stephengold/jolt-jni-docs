@@ -115,4 +115,4 @@ var application = new HelloSport() {
         BasePhysicsApp.visualizeShape(ball);
     }
 };
-application.start("HelloSport", 0, 0, 0);
+application.start("HelloSport");
