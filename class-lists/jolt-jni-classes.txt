@@ -93,6 +93,7 @@ com.github.stephengold.joltjni.ConstraintSettingsRef
 com.github.stephengold.joltjni.Constraints
 com.github.stephengold.joltjni.Contact
 com.github.stephengold.joltjni.ContactListener
+com.github.stephengold.joltjni.ContactListenerList
 com.github.stephengold.joltjni.ContactManifold
 com.github.stephengold.joltjni.ContactSettings
 com.github.stephengold.joltjni.ConvexHullBuilder
@@ -131,6 +132,7 @@ com.github.stephengold.joltjni.EmptyShapeSettings
 com.github.stephengold.joltjni.EpaPenetrationDepth
 com.github.stephengold.joltjni.ExtendedUpdateSettings
 com.github.stephengold.joltjni.Face
+com.github.stephengold.joltjni.FilteredContactListener
 com.github.stephengold.joltjni.FixedConstraint
 com.github.stephengold.joltjni.FixedConstraintSettings
 com.github.stephengold.joltjni.Float2
@@ -388,6 +390,7 @@ com.github.stephengold.joltjni.enumerate.EConstraintSubType
 com.github.stephengold.joltjni.enumerate.EConstraintType
 com.github.stephengold.joltjni.enumerate.ECullMode
 com.github.stephengold.joltjni.enumerate.EDrawMode
+com.github.stephengold.joltjni.enumerate.EFilterMode
 com.github.stephengold.joltjni.enumerate.EGroundState
 com.github.stephengold.joltjni.enumerate.ELraType
 com.github.stephengold.joltjni.enumerate.EMotionQuality

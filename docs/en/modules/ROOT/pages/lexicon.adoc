@@ -812,6 +812,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}vehicle_collision_tester.html[JPH::VehicleCollisionTester]
 |{url-api}/VehicleCollisionTester.html[VehicleCollisionTester] +
+ {url-api}/readonly/ConstVehicleCollisionTester.html[ConstVehicleCollisionTester] +
  {url-api}/VehicleCollisionTesterRef.html[VehicleCollisionTesterRef]
 
 |{url-jolt}vehicle_collision_tester_cast_cylinder.html[JPH::VehicleCollisionTesterCastCylinder]
@@ -828,6 +829,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}vehicle_constraint.html[JPH::VehicleConstraint]
 |{url-api}/VehicleConstraint.html[VehicleConstraint] +
+ {url-api}/readonly/ConstVehicleConstraint.html[ConstVehicleConstraint] +
  {url-api}/VehicleConstraintRef.html[VehicleConstraintRef]
 
 |{url-jolt}vehicle_constraint_settings.html[JPH::VehicleConstraintSettings]
@@ -836,7 +838,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/VehicleConstraintSettingsRef.html[VehicleConstraintSettingsRef]
 
 |{url-jolt}vehicle_controller.html[JPH::VehicleController]
-|{url-api}/VehicleController.html[VehicleController]
+|{url-api}/VehicleController.html[VehicleController] +
+ {url-api}/readonly/ConstVehicleController.html[ConstVehicleController]
 
 |{url-jolt}vehicle_controller_settings.html[JPH::VehicleControllerSettings]
 |{url-api}/VehicleControllerSettings.html[VehicleControllerSettings] +
@@ -862,7 +865,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/VehicleTransmissionSettings.html[VehicleTransmissionSettings]
 
 |{url-jolt}wheel.html[JPH::Wheel]
-|{url-api}/Wheel.html[Wheel]
+|{url-api}/Wheel.html[Wheel] +
+ {url-api}/readonly/ConstWheel.html[ConstWheel]
 
 |{url-jolt}wheel_settings.html[JPH::WheelSettings]
 |{url-api}/WheelSettings.html[WheelSettings] +
