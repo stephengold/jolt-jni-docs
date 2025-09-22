@@ -70,10 +70,7 @@ val btf = providers.gradleProperty("btf").get()
 dependencies {
     implementation(project(":java-apps"))
     implementation(libs.sport.jolt)
-
-    runtimeOnly(libs.log4j.impl)
     runtimeOnly(libs.nashorn.core)
-    runtimeOnly(libs.oshi.core)
 
     if (includeLinux) {
         runtimeOnly(variantOf(libs.jolt.jni.linux64){classifier(btf)})

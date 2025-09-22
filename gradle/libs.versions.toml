@@ -21,7 +21,6 @@ jolt-jni-windows64avx2 = { module = "com.github.stephengold:jolt-jni-Windows64_a
 
 jsnaploader = "io.github.electrostat-lab:snaploader:1.1.1-stable"
 jython = "org.python:jython-slim:2.7.4"
-log4j-impl = "org.apache.logging.log4j:log4j-slf4j2-impl:2.25.1"
 
 lwjgl = { module = "org.lwjgl:lwjgl", version.ref = "lwjgl" }
 lwjgl-assimp = { module = "org.lwjgl:lwjgl-assimp", version.ref = "lwjgl" }
@@ -29,7 +28,6 @@ lwjgl-glfw = { module = "org.lwjgl:lwjgl-glfw", version.ref = "lwjgl" }
 lwjgl-opengl = { module = "org.lwjgl:lwjgl-opengl", version.ref = "lwjgl" }
 
 nashorn-core = "org.openjdk.nashorn:nashorn-core:15.7"
-oshi-core = "com.github.oshi:oshi-core:6.9.0"
 scala-library = "org.scala-lang:scala3-library_3:3.7.3"
 sport-jolt = "com.github.stephengold:sport-jolt:0.9.11"
 
