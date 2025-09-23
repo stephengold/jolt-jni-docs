@@ -45,6 +45,7 @@ import com.github.stephengold.joltjni.PlaneShape;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RMat44;
 import com.github.stephengold.joltjni.RVec3;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SpecifiedObjectLayerFilter;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -52,7 +53,6 @@ import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.operator.Op;
 import com.github.stephengold.joltjni.readonly.ConstNarrowPhaseQuery;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
-import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RMat44Arg;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
@@ -124,7 +124,7 @@ final public class HelloNarrowPhase
     /**
      * ghost shape for detecting intrusions
      */
-    private static ConstShape ghost;
+    private static ShapeRefC ghost;
     /**
      * visualize the ghost shape
      */
@@ -218,7 +218,8 @@ final public class HelloNarrowPhase
         // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 3f; // meters
         float capsuleHeight = 4f; // meters
-        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
+        ShapeRefC shape
+                = new CapsuleShape(capsuleHeight / 2f, capsuleRadius).toRefC();
 
         CharacterSettings settings = new CharacterSettings();
         settings.setShape(shape);
@@ -327,7 +328,7 @@ final public class HelloNarrowPhase
      */
     private void addPlane(float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
-        PlaneShape shape = new PlaneShape(plane);
+        ShapeRefC shape = new PlaneShape(plane).toRefC();
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
