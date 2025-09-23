@@ -33,6 +33,7 @@ import com.github.stephengold.joltjni.BodyCreationSettings
 import com.github.stephengold.joltjni.BodyInterface
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.RVec3
+import com.github.stephengold.joltjni.ShapeRefC
 import com.github.stephengold.joltjni.SphereShape
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
@@ -106,7 +107,7 @@ final public class HelloRigidBody extends BasePhysicsApp {
 
         // Create a collision shape for balls:
         float ballRadius = 1f
-        ConstShape ballShape = new SphereShape(ballRadius)
+        ShapeRefC ballShape = new SphereShape(ballRadius).toRefC()
 
         BodyCreationSettings bcs = new BodyCreationSettings()
         bcs.massPropertiesOverride.mass = 2f
