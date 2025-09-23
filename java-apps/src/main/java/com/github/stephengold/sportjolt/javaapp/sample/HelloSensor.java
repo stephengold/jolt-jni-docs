@@ -265,7 +265,7 @@ final public class HelloSensor
         velocity.setX(0f);
         velocity.setZ(0f);
 
-        // If the character is supported, cause it respond to keyboard input:
+        // If the character is supported, make it respond to keyboard input:
         if (character.isSupported()) {
             if (jumpRequested) {
                 // Cause the character to jump:
