@@ -149,7 +149,7 @@ final public class HelloJoltJni {
         JobSystem jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
             Jolt.cMaxPhysicsBarriers, numWorkerThreads)
 
-        float timePerStep = 0.02f // seconds
+        float timePerStep = 0.02f // in seconds
         for (int iteration = 0; iteration < 50; ++iteration) {
             int collisionSteps = 1
             int errors = physicsSystem.update(
