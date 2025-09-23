@@ -146,7 +146,7 @@ final public class HelloSoftRope extends BasePhysicsApp {
         ConstBody rope = bi.createSoftBody(sbcs);
         bi.addBody(rope, EActivation.Activate);
 
-        // Visualize the soft-body links and the pin:
+        // Visualize the soft-body edges and the pin:
         new EdgesGeometry(rope);
         new PinsGeometry(rope);
     }

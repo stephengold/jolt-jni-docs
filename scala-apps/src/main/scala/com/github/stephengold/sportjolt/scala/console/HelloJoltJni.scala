@@ -139,7 +139,7 @@ object HelloJoltJni {
         val jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
                 Jolt.cMaxPhysicsBarriers, numWorkerThreads)
 
-        val timePerStep = 0.02f // seconds
+        val timePerStep = 0.02f // in seconds
         for (iteration <- 0 to 49) {
             val collisionSteps = 1
             val errors = physicsSystem.update(
