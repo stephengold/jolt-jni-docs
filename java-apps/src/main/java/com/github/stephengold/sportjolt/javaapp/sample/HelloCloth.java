@@ -34,8 +34,10 @@ import com.github.stephengold.joltjni.Face;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
+import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SoftBodyCreationSettings;
 import com.github.stephengold.joltjni.SoftBodySharedSettings;
+import com.github.stephengold.joltjni.SoftBodySharedSettingsRef;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.Vertex;
@@ -129,7 +131,7 @@ final public class HelloCloth extends BasePhysicsApp {
         Mesh squareGrid = new ClothGrid(numLines, numLines, lineSpacing);
 
         // Create a compliant soft square and add it to the physics system:
-        SoftBodySharedSettings sbss = generateSharedSettings(squareGrid);
+        SoftBodySharedSettingsRef sbss = generateSharedSettings(squareGrid);
         int numVertices = sbss.countVertices();
         VertexAttributes[] vertexAttributes = new VertexAttributes[numVertices];
         for (int i = 0; i < numVertices; ++i) {
@@ -162,7 +164,7 @@ final public class HelloCloth extends BasePhysicsApp {
      */
     private void addBall() {
         float radius = 1f;
-        SphereShape shape = new SphereShape(radius);
+        ShapeRefC shape = new SphereShape(radius).toRefC();
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
@@ -182,10 +184,11 @@ final public class HelloCloth extends BasePhysicsApp {
      * @param mesh the mesh to use (not null, unaffected)
      * @return a new object
      */
-    private static SoftBodySharedSettings generateSharedSettings(Mesh mesh) {
+    private static SoftBodySharedSettingsRef generateSharedSettings(Mesh mesh) {
         assert mesh.topology() == Topology.TriangleList;
 
-        SoftBodySharedSettings result = new SoftBodySharedSettings();
+        SoftBodySharedSettingsRef result
+                = new SoftBodySharedSettings().toRef();
 
         VertexBuffer locations = mesh.getPositions();
         int numVertices = locations.capacity() / 3;
