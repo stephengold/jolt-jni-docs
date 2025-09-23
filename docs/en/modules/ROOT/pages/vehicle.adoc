@@ -60,8 +60,10 @@ To create a physics vehicle:
 . Create a collision tester and add it to the constraint.
 . Add the constraint and its step listener to the physics system.
 
-{Project} doesn't keep track of vehicles;
+The physics system doesn't keep track of characters;
 the app is responsible for that.
+Collision testers, constraints, constraint settings,
+controller settings, and wheel settings are all refcounted objects.
 
 {url-tutorial}/HelloVehicle.java[HelloVehicle] is a {Sport} app
 that demonstrates the creation of a vehicle
