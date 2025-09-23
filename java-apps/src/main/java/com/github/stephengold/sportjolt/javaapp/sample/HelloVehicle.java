@@ -165,7 +165,7 @@ final public class HelloVehicle extends BasePhysicsApp {
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body body = bi.createBody(bcs);
-        bi.addBody(body.getId(), EActivation.Activate);
+        bi.addBody(body, EActivation.Activate);
 
         // Configure 4 wheels, 2 in the front (for steering) and 2 in the rear:
         float frontAxleZ = 0.7f * noseZ; // offset from body's origin

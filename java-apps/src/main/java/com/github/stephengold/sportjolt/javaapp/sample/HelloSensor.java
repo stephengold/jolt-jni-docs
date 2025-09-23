@@ -80,7 +80,7 @@ final public class HelloSensor
     /**
      * record contact between the sensor and a moving body
      */
-    private volatile static boolean hadContact;
+    private static volatile boolean hadContact;
     /**
      * true when the space bar is pressed, otherwise false
      */
