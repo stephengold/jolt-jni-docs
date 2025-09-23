@@ -101,6 +101,7 @@ It is expressed as an angle in radians relative to the horizontal plane.
 
 The default maximum slope is 5*{pi}/18, indicating a 50-degree angle.
 To alter it, use `character.setMaxSlopeAngle(float)`.
+This works for both `Character` and `CharacterVirtual`.
 
 
 == Summary
