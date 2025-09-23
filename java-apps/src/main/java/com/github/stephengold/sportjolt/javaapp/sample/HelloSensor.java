@@ -34,6 +34,7 @@ import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.CapsuleShape;
 import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
+import com.github.stephengold.joltjni.CharacterSettingsRef;
 import com.github.stephengold.joltjni.CustomContactListener;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
@@ -195,7 +196,7 @@ final public class HelloSensor
         ShapeRefC shape
                 = new CapsuleShape(capsuleHeight / 2f, capsuleRadius).toRefC();
 
-        CharacterSettings settings = new CharacterSettings();
+        CharacterSettingsRef settings = new CharacterSettings().toRef();
         settings.setShape(shape);
 
         RVec3Arg startLocation = new RVec3(0., 3., 0.);
