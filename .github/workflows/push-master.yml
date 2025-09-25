@@ -19,7 +19,7 @@ jobs:
           java-version: 21
       - uses: actions/setup-node@v5
         with:
-          node-version: 22.19.0
+          node-version: 22.20.0
       - uses: actions/checkout@v5
       - run: npm ci
       - run: npx antora docs/ci-playbook.yml
