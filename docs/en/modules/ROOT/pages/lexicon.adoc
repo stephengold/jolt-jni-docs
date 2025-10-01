@@ -276,7 +276,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/ConvexHullShapeSettings.html[ConvexHullShapeSettings]
 
 |{url-jolt}convex_shape.html[JPH::ConvexShape]
-|{url-api}/ConvexShape.html[ConvexShape]
+|{url-api}/ConvexShape.html[ConvexShape] +
+ {url-api}/readonly/ConstConvexShape.html[ConstConvexShape]
 
 |{url-jolt}convex_shape_settings.html[JPH::ConvexShapeSettings]
 |{url-api}/ConvexShapeSettings.html[ConvexShapeSettings] +
