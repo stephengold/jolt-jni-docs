@@ -118,8 +118,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,com.github.stephengold.joltjni.PhysicsSystem)" class="member-name-link">CharacterVirtual</a><wbr>(long&nbsp;characterVa,
  <a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a>&nbsp;physicsSystem)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Instantiate a character with the specified native object assigned but not
- owned.</div>
+<div class="block">Instantiate a character with the specified native object assigned.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstCharacterVirtualSettings,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,long,com.github.stephengold.joltjni.PhysicsSystem)" class="member-name-link">CharacterVirtual</a><wbr>(<a href="readonly/ConstCharacterVirtualSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtualSettings</a>&nbsp;settings,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
@@ -436,23 +435,6 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(long,com.github.stephengold.joltjni.PhysicsSystem)">
-<h3>CharacterVirtual</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CharacterVirtual</span><wbr><span class="parameters">(long&nbsp;characterVa,
- <a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a>&nbsp;physicsSystem)</span></div>
-<div class="block">Instantiate a character with the specified native object assigned but not
- owned.
- <p>
- For use in custom contact listeners.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>characterVa</code> - the virtual address of the native object to assign
- (not zero)</dd>
-<dd><code>physicsSystem</code> - where to add the body (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstCharacterVirtualSettings,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,long,com.github.stephengold.joltjni.PhysicsSystem)">
 <h3>CharacterVirtual</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CharacterVirtual</span><wbr><span class="parameters">(<a href="readonly/ConstCharacterVirtualSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtualSettings</a>&nbsp;settings,
@@ -470,6 +452,22 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
  coordinates, not null, unaffected)</dd>
 <dd><code>userData</code> - the desired user-data value</dd>
 <dd><code>system</code> - where to add the body (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(long,com.github.stephengold.joltjni.PhysicsSystem)">
+<h3>CharacterVirtual</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CharacterVirtual</span><wbr><span class="parameters">(long&nbsp;characterVa,
+ <a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a>&nbsp;physicsSystem)</span></div>
+<div class="block">Instantiate a character with the specified native object assigned.
+ <p>
+ For use in custom contact listeners.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>characterVa</code> - the virtual address of the native object to assign
+ (not zero)</dd>
+<dd><code>physicsSystem</code> - where to add the body (not null)</dd>
 </dl>
 </section>
 </li>

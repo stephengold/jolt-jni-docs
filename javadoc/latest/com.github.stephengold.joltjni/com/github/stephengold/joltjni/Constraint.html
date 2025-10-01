@@ -211,9 +211,15 @@ implements <a href="readonly/ConstConstraint.html" title="interface in com.githu
 <div class="block">Alter the override for the number of velocity iterations used in the
  solver.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner</a><wbr>(long&nbsp;constraintVa)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the native <code>Constraint</code>.</div>
 </div>
 </div>
@@ -312,6 +318,19 @@ implements <a href="readonly/ConstConstraint.html" title="interface in com.githu
 <dt>Parameters:</dt>
 <dd><code>setting</code> - the number of iterations, or 0 to use the default in
  <code>PhysicsSettings</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVirtualAddressAsCoOwner(long)">
+<h3>setVirtualAddressAsCoOwner</h3>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVirtualAddressAsCoOwner</span><wbr><span class="parameters">(long&nbsp;constraintVa)</span></div>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>constraintVa</code> - the virtual address of the native object to assign
+ (not zero)</dd>
 </dl>
 </section>
 </li>

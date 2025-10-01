@@ -142,9 +142,15 @@ implements <a href="readonly/ConstVehicleCollisionTester.html" title="interface 
 <div class="block">Alter the object layer used for collision detection when no filters are
  overridden.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner</a><wbr>(long&nbsp;testerVa)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the native <code>VehicleCollisionTester</code>.</div>
 </div>
 </div>
@@ -182,6 +188,19 @@ implements <a href="readonly/ConstVehicleCollisionTester.html" title="interface 
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>objectLayer</code> - the index of the desired layer</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVirtualAddressAsCoOwner(long)">
+<h3>setVirtualAddressAsCoOwner</h3>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVirtualAddressAsCoOwner</span><wbr><span class="parameters">(long&nbsp;testerVa)</span></div>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>testerVa</code> - the virtual address of the native object to assign (not
+ zero)</dd>
 </dl>
 </section>
 </li>

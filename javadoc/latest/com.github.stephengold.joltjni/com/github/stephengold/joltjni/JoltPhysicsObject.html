@@ -121,7 +121,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 </div>
 <div class="col-first odd-row-color"><code>protected </code></div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.JoltPhysicsObject,long)" class="member-name-link">JoltPhysicsObject</a><wbr>(<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&nbsp;container,
- long&nbsp;virtualAddress)</code></div>
+ long&nbsp;va)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate with the specified container and native object.</div>
 </div>
@@ -181,15 +181,15 @@ implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
  assigned native object.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddress(long)" class="member-name-link">setVirtualAddress</a><wbr>(long&nbsp;virtualAddress)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddress(long)" class="member-name-link">setVirtualAddress</a><wbr>(long&nbsp;va)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Assign a native object, assuming there's none already assigned.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddress(long,java.lang.Runnable)" class="member-name-link">setVirtualAddress</a><wbr>(long&nbsp;virtualAddress,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddress(long,java.lang.Runnable)" class="member-name-link">setVirtualAddress</a><wbr>(long&nbsp;va,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Assign a native object (assuming there's none already assigned) and
+<div class="block">Assign a native object (assuming there's none already assigned) and a
  freeing action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
@@ -243,13 +243,12 @@ implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.JoltPhysicsObject,long)">
 <h3>JoltPhysicsObject</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">JoltPhysicsObject</span><wbr><span class="parameters">(<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&nbsp;container,
- long&nbsp;virtualAddress)</span></div>
+ long&nbsp;va)</span></div>
 <div class="block">Instantiate with the specified container and native object.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>container</code> - the containing object, or <code>null</code> if none</dd>
-<dd><code>virtualAddress</code> - the virtual address of the native object to assign
- (not zero)</dd>
+<dd><code>va</code> - the virtual address of the native object to assign (not zero)</dd>
 </dl>
 </section>
 </li>
@@ -307,26 +306,24 @@ implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <li>
 <section class="detail" id="setVirtualAddress(long)">
 <h3>setVirtualAddress</h3>
-<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVirtualAddress</span><wbr><span class="parameters">(long&nbsp;virtualAddress)</span></div>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVirtualAddress</span><wbr><span class="parameters">(long&nbsp;va)</span></div>
 <div class="block">Assign a native object, assuming there's none already assigned.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>virtualAddress</code> - the virtual address of the native object to assign
- (not zero)</dd>
+<dd><code>va</code> - the virtual address of the native object to assign (not zero)</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setVirtualAddress(long,java.lang.Runnable)">
 <h3>setVirtualAddress</h3>
-<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVirtualAddress</span><wbr><span class="parameters">(long&nbsp;virtualAddress,
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVirtualAddress</span><wbr><span class="parameters">(long&nbsp;va,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</span></div>
-<div class="block">Assign a native object (assuming there's none already assigned) and
+<div class="block">Assign a native object (assuming there's none already assigned) and a
  freeing action.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>virtualAddress</code> - the virtual address of the native object to assign
- (not zero)</dd>
+<dd><code>va</code> - the virtual address of the native object to assign (not zero)</dd>
 <dd><code>action</code> - freeing action if the JVM object will own (be responsible
  for freeing) the native object, or <code>null</code> if not responsible</dd>
 </dl>

@@ -1533,8 +1533,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtual.html#%3Cinit%3E(long,com.github.stephengold.joltjni.PhysicsSystem)" class="member-name-link">CharacterVirtual(long, PhysicsSystem)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtual.html" title="class in com.github.stephengold.joltjni">CharacterVirtual</a></dt>
 <dd>
-<div class="block">Instantiate a character with the specified native object assigned but not
- owned.</div>
+<div class="block">Instantiate a character with the specified native object assigned.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtual.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstCharacterVirtualSettings,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.QuatArg,long,com.github.stephengold.joltjni.PhysicsSystem)" class="member-name-link">CharacterVirtual(ConstCharacterVirtualSettings, RVec3Arg, QuatArg, long, PhysicsSystem)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtual.html" title="class in com.github.stephengold.joltjni">CharacterVirtual</a></dt>
 <dd>
@@ -2749,6 +2748,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Write all 3 components to the start of the specified buffer.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/Vec3Arg.html#copyTo(java.nio.FloatBuffer,int)" class="member-name-link">copyTo(FloatBuffer, int)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></dt>
+<dd>
+<div class="block">Write all 3 components to the specified position in the specified buffer.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vec3.html#copyTo(java.nio.FloatBuffer,int)" class="member-name-link">copyTo(FloatBuffer, int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></dt>
+<dd>
+<div class="block">Write all 3 components to the specified position in the specified buffer.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#cos(float)" class="member-name-link">cos(float)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
 <div class="block">Return the cosine of the specified single-precision angle.</div>
@@ -2784,6 +2791,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TransformedShape.html#countDebugTriangles()" class="member-name-link">countDebugTriangles()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></dt>
 <dd>
 <div class="block">Count the triangles in the shape's debug mesh.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#countDeletes()" class="member-name-link">countDeletes()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">Return the cumulative number of <code>delete</code> operations in glue code,
+ in Debug native libraries.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodySharedSettings.html#countEdgeConstraints()" class="member-name-link">countEdgeConstraints()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></dt>
 <dd>
@@ -2840,6 +2852,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Geometry.html#countLods()" class="member-name-link">countLods()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Geometry.html" title="class in com.github.stephengold.joltjni">Geometry</a></dt>
 <dd>
 <div class="block">Return the number of levels of detail.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#countNews()" class="member-name-link">countNews()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">Return the cumulative number of <code>new</code> operations in glue code, in
+ Debug native libraries, excluding ref targets.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodySharedSettings.html#countPinnedVertices()" class="member-name-link">countPinnedVertices()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodySharedSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodySharedSettings</a></dt>
 <dd>
@@ -3304,6 +3321,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyManager.html#destroyBodies(int...)" class="member-name-link">destroyBodies(int...)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyManager.html" title="class in com.github.stephengold.joltjni">BodyManager</a></dt>
 <dd>
 <div class="block">Remove the specified bodies from the manager.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#destroyBodies(com.github.stephengold.joltjni.BodyIdArray)" class="member-name-link">destroyBodies(BodyIdArray)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Destroy the specified bodies.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#destroyBodies(com.github.stephengold.joltjni.BodyIdArray,int)" class="member-name-link">destroyBodies(BodyIdArray, int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Destroy the specified bodies.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#destroyBody(int)" class="member-name-link">destroyBody(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
@@ -6400,6 +6425,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyMotionProperties.html#getFaces()" class="member-name-link">getFaces()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyMotionProperties.html" title="class in com.github.stephengold.joltjni">SoftBodyMotionProperties</a></dt>
 <dd>
 <div class="block">Enumerate all faces in the soft body.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyCreationSettings.html#getFacesDoubleSided()" class="member-name-link">getFacesDoubleSided()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></dt>
+<dd>
+<div class="block">Test whether faces will be double-sided.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html#getFacesDoubleSided()" class="member-name-link">getFacesDoubleSided()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></dt>
+<dd>
+<div class="block">Test whether faces will be double-sided.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexHullShape.html#getFaceVertices(int,int%5B%5D)" class="member-name-link">getFaceVertices(int, int[])</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexHullShape.html" title="class in com.github.stephengold.joltjni">ConvexHullShape</a></dt>
 <dd>
@@ -10200,11 +10233,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSerializableObject.html#getRtti()" class="member-name-link">getRtti()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></dt>
 <dd>
-<div class="block">Access the type information of the current object.</div>
+<div class="block">Access the run-time type information of the current object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SerializableObject.html#getRtti()" class="member-name-link">getRtti()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SerializableObject.html" title="class in com.github.stephengold.joltjni">SerializableObject</a></dt>
 <dd>
-<div class="block">Access the type information of the current object.</div>
+<div class="block">Access the run-time type information of the current object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeSettingsRef.html#getRtti()" class="member-name-link">getRtti()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeSettingsRef.html" title="class in com.github.stephengold.joltjni">ShapeSettingsRef</a></dt>
 <dd>
@@ -12605,13 +12638,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Initialize the skeleton mapper as specified.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installCerrTraceCallback()" class="member-name-link">installCerrTraceCallback()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">Install an alternative trace callback that uses <code>cerr</code>.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
 <div class="block">Install the default assert callback.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
-<div class="block">Install the default trace callback.</div>
+<div class="block">Install the default trace callback, which uses <code>cout</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installJavaTraceCallback(java.io.PrintStream)" class="member-name-link">installJavaTraceCallback(PrintStream)</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">Install a trace callback that uses a <code>PrintStream</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/std/Std.html#INT_MAX" class="member-name-link">INT_MAX</a> - Static variable in class com.github.stephengold.joltjni.std.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/std/Std.html" title="class in com.github.stephengold.joltjni.std">Std</a></dt>
 <dd>
@@ -15361,6 +15402,16 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Remove all constraints from the system.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#removeBodies(com.github.stephengold.joltjni.BodyIdArray)" class="member-name-link">removeBodies(BodyIdArray)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Remove the specified bodies from the physics system, but don't destroy
+ them.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#removeBodies(com.github.stephengold.joltjni.BodyIdArray,int)" class="member-name-link">removeBodies(BodyIdArray, int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
+<dd>
+<div class="block">Remove the specified bodies from the physics system, but don't destroy
+ them.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BroadPhase.html#removeBodies(com.github.stephengold.joltjni.BodyIdArray,int)" class="member-name-link">removeBodies(BodyIdArray, int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BroadPhase.html" title="class in com.github.stephengold.joltjni">BroadPhase</a></dt>
 <dd>
 <div class="block">Remove multiple bodies from the phase.</div>
@@ -17172,6 +17223,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter whether to make an extra effort to remove contacts with internal
  edges.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html#setFacesDoubleSided(boolean)" class="member-name-link">setFacesDoubleSided(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></dt>
+<dd>
+<div class="block">Alter whether faces will be double-sided.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/vhacd/Parameters.html#setFillMode(com.github.stephengold.joltjni.vhacd.FillMode)" class="member-name-link">setFillMode(FillMode)</a> - Method in class com.github.stephengold.joltjni.vhacd.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/vhacd/Parameters.html" title="class in com.github.stephengold.joltjni.vhacd">Parameters</a></dt>
 <dd>
@@ -19328,8 +19383,53 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)" class="member-name-link">setVirtualAddress(long, Runnable)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></dt>
 <dd>
-<div class="block">Assign a native object (assuming there's none already assigned) and
+<div class="block">Assign a native object (assuming there's none already assigned) and a
  freeing action.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraint.html#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Constraint.html" title="class in com.github.stephengold.joltjni">Constraint</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/GroupFilter.html#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/GroupFilter.html" title="class in com.github.stephengold.joltjni">GroupFilter</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintPath.html#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintPath.html" title="class in com.github.stephengold.joltjni">PathConstraintPath</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsMaterial.html#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsMaterial.html" title="class in com.github.stephengold.joltjni">PhysicsMaterial</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Shape.html#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Shape.html" title="class in com.github.stephengold.joltjni">Shape</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleControllerSettings.html#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner(long)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConstraintSettings.html#setVirtualAddressAsCoOwner(long,com.github.stephengold.joltjni.enumerate.EConstraintSubType)" class="member-name-link">setVirtualAddressAsCoOwner(long, EConstraintSubType)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConstraintSettings</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned),
+ designate the JVM object as a co-owner, and assign a subtype.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeSettings.html#setVirtualAddressAsCoOwner(long,com.github.stephengold.joltjni.enumerate.EShapeSubType)" class="member-name-link">setVirtualAddressAsCoOwner(long, EShapeSubType)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeSettings.html" title="class in com.github.stephengold.joltjni">ShapeSettings</a></dt>
+<dd>
+<div class="block">Assign a native object (assuming there's none already assigned),
+ designate the JVM object as a co-owner, and assign a subtype.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vec4.html#setW(float)" class="member-name-link">setW(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vec4.html" title="class in com.github.stephengold.joltjni">Vec4</a></dt>
 <dd>

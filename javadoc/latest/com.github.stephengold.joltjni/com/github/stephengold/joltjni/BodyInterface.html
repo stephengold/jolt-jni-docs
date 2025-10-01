@@ -260,6 +260,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Deactivate the specified body.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destroyBodies(com.github.stephengold.joltjni.BodyIdArray)" class="member-name-link">destroyBodies</a><wbr>(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Destroy the specified bodies.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destroyBodies(com.github.stephengold.joltjni.BodyIdArray,int)" class="member-name-link">destroyBodies</a><wbr>(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Destroy the specified bodies.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destroyBody(int)" class="member-name-link">destroyBody</a><wbr>(int&nbsp;bodyId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Destroy the specified body.</div>
@@ -420,6 +431,19 @@ loadScripts(document, 'script');</script>
  <a href="enumerate/EActivation.html" title="enum class in com.github.stephengold.joltjni.enumerate">EActivation</a>&nbsp;activation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Notify all systems that the shape of the specified body has changed.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeBodies(com.github.stephengold.joltjni.BodyIdArray)" class="member-name-link">removeBodies</a><wbr>(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Remove the specified bodies from the physics system, but don't destroy
+ them.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeBodies(com.github.stephengold.joltjni.BodyIdArray,int)" class="member-name-link">removeBodies</a><wbr>(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Remove the specified bodies from the physics system, but don't destroy
+ them.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeBody(int)" class="member-name-link">removeBody</a><wbr>(int&nbsp;bodyId)</code></div>
@@ -878,6 +902,32 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="destroyBodies(com.github.stephengold.joltjni.BodyIdArray)">
+<h3>destroyBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyBodies</span><wbr><span class="parameters">(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds)</span></div>
+<div class="block">Destroy the specified bodies. Don't use this on bodies that have been
+ added but not removed yet!</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to destroy (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="destroyBodies(com.github.stephengold.joltjni.BodyIdArray,int)">
+<h3>destroyBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyBodies</span><wbr><span class="parameters">(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</span></div>
+<div class="block">Destroy the specified bodies. Don't use this on bodies that have been
+ added but not removed yet!</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to destroy (not null)</dd>
+<dd><code>numBodies</code> - the number of bodies to destroy (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="destroyBody(int)">
 <h3>destroyBody</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyBody</span><wbr><span class="parameters">(int&nbsp;bodyId)</span></div>
@@ -1278,6 +1328,32 @@ loadScripts(document, 'script');</script>
 <dd><code>prevCom</code> - center of mass prior to the change (not null, unaffected)</dd>
 <dd><code>updateMassProperties</code> - <code>true</code> to recalculate mass and inertia</dd>
 <dd><code>activation</code> - whether to activate the body (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeBodies(com.github.stephengold.joltjni.BodyIdArray)">
+<h3>removeBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeBodies</span><wbr><span class="parameters">(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds)</span></div>
+<div class="block">Remove the specified bodies from the physics system, but don't destroy
+ them.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to remove (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeBodies(com.github.stephengold.joltjni.BodyIdArray,int)">
+<h3>removeBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeBodies</span><wbr><span class="parameters">(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</span></div>
+<div class="block">Remove the specified bodies from the physics system, but don't destroy
+ them.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to remove (not null)</dd>
+<dd><code>numBodies</code> - the number of bodies to remove (&ge;0)</dd>
 </dl>
 </section>
 </li>

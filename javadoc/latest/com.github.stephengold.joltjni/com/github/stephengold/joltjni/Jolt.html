@@ -196,6 +196,18 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the cosine of the specified single-precision angle.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#countDeletes()" class="member-name-link">countDeletes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Return the cumulative number of <code>delete</code> operations in glue code,
+ in Debug native libraries.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#countNews()" class="member-name-link">countNews</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Return the cumulative number of <code>new</code> operations in glue code, in
+ Debug native libraries, excluding ref targets.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#degreesToRadians(float)" class="member-name-link">degreesToRadians</a><wbr>(float&nbsp;degrees)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -306,14 +318,24 @@ loadScripts(document, 'script');</script>
  determinism issues.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installCerrTraceCallback()" class="member-name-link">installCerrTraceCallback</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Install the default assert callback.</div>
+<div class="block">Install an alternative trace callback that uses <code>cerr</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Install the default trace callback.</div>
+<div class="block">Install the default assert callback.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Install the default trace callback, which uses <code>cout</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installJavaTraceCallback(java.io.PrintStream)" class="member-name-link">installJavaTraceCallback</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Install a trace callback that uses a <code>PrintStream</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isDoublePrecision()" class="member-name-link">isDoublePrecision</a>()</code></div>
@@ -775,6 +797,30 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="countDeletes()">
+<h3>countDeletes</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countDeletes</span>()</div>
+<div class="block">Return the cumulative number of <code>delete</code> operations in glue code,
+ in Debug native libraries.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countNews()">
+<h3>countNews</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countNews</span>()</div>
+<div class="block">Return the cumulative number of <code>new</code> operations in glue code, in
+ Debug native libraries, excluding ref targets.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="degreesToRadians(float)">
 <h3>degreesToRadians</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">degreesToRadians</span><wbr><span class="parameters">(float&nbsp;degrees)</span></div>
@@ -1039,10 +1085,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="installCerrTraceCallback()">
+<h3>installCerrTraceCallback</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installCerrTraceCallback</span>()</div>
+<div class="block">Install an alternative trace callback that uses <code>cerr</code>.</div>
+</section>
+</li>
+<li>
 <section class="detail" id="installDefaultTraceCallback()">
 <h3>installDefaultTraceCallback</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installDefaultTraceCallback</span>()</div>
-<div class="block">Install the default trace callback.</div>
+<div class="block">Install the default trace callback, which uses <code>cout</code>.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="installJavaTraceCallback(java.io.PrintStream)">
+<h3>installJavaTraceCallback</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installJavaTraceCallback</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;stream)</span></div>
+<div class="block">Install a trace callback that uses a <code>PrintStream</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stream</code> - where to send trace output (not null)</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -104,7 +104,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PathConstraintPath</span>
 <span class="extends-implements">extends <a href="SerializableObject.html" title="class in com.github.stephengold.joltjni">SerializableObject</a>
-implements <a href="readonly/ConstPathConstraintPath.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPathConstraintPath</a>, <a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></span></div>
+implements <a href="readonly/ConstPathConstraintPath.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPathConstraintPath</a></span></div>
 <div class="block">The path for a path constraint.</div>
 </section>
 <section class="summary">
@@ -167,14 +167,20 @@ implements <a href="readonly/ConstPathConstraintPath.html" title="interface in c
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether the path is looping.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PathResult.html" title="class in com.github.stephengold.joltjni">PathResult</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreFromBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">sRestoreFromBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner</a><wbr>(long&nbsp;pathVa)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PathResult.html" title="class in com.github.stephengold.joltjni">PathResult</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreFromBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">sRestoreFromBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Read a path from the specified binary stream.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PathConstraintPathRef.html" title="class in com.github.stephengold.joltjni">PathConstraintPathRef</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PathConstraintPathRef.html" title="class in com.github.stephengold.joltjni">PathConstraintPathRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the native <code>PathConstraintPath</code>.</div>
 </div>
 </div>
@@ -231,6 +237,19 @@ implements <a href="readonly/ConstPathConstraintPath.html" title="interface in c
 <dd><code>stream</code> - where to read objects (not null)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVirtualAddressAsCoOwner(long)">
+<h3>setVirtualAddressAsCoOwner</h3>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVirtualAddressAsCoOwner</span><wbr><span class="parameters">(long&nbsp;pathVa)</span></div>
+<div class="block">Assign a native object (assuming there's none already assigned) and
+ designate the JVM object as a co-owner.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pathVa</code> - the virtual address of the native object to assign (not
+ zero)</dd>
 </dl>
 </section>
 </li>
