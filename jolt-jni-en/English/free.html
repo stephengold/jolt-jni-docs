@@ -416,14 +416,9 @@ it prevents cleaner threads from reclaiming <code>system</code>.</p>
 <div class="sect2">
 <h3 id="_refcounted_objects"><a class="anchor" href="#_refcounted_objects"></a>Refcounted objects</h3>
 <div class="paragraph">
-<p>Another situation where a <code>JoltPhysicsObject</code>
-doesn&#8217;t own its assigned native object
-arises when a class implements <em>reference counting</em>.
-Responsibility for reclaiming the native object (called the <em>target</em>)
-is shared among other objects (called <em>references</em>) that refer to it.</p>
-</div>
-<div class="paragraph">
-<p>The Jolt-JNI classes that implement reference counting
+<p>Jolt Physics uses reference counting to manage memory that can be shared among multiple
+co-owners, and Jolt-JNI exposes this feature.
+The Jolt-JNI classes that implement reference counting
 are precisely those that implement the <code>RefTarget</code> interface.
 These include <code>BaseCharacter</code>, <code>Constraint</code>, <code>ConstraintSettings</code>,
 <code>GroupFilter</code>, <code>PhysicsMaterial</code>, <code>PhysicsScene</code>, <code>Ragdoll</code>, <code>Shape</code>,
@@ -435,35 +430,17 @@ These include <code>BaseCharacter</code>, <code>Constraint</code>, <code>Constra
 to Java references, strong, weak, or otherwise.)</p>
 </div>
 <div class="paragraph">
-<p>On <code>RefTarget</code> objects, <code>close()</code> is (again) a no-op,
-because the JVM object doesn&#8217;t own its assigned native object.</p>
-</div>
-<div class="paragraph">
 <p>The only way to reclaim a <code>RefTarget</code> native object
 is to decrement its reference count from one to zero.
 This implies creating one or more references
 and then reclaiming them all, either explicitly, implicitly, or automatically.</p>
 </div>
 <div class="paragraph">
-<p>As long as one reference is active, its target cannot be reclaimed.
-Nor can a target be reclaimed before a reference to it is created
-(because in that case the reference count is already zero).</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Creating a <code>RefTarget</code> object without any references is dangerous
-because other code might create a reference that later gets reclaimed,
-invalidating the target.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>To prevent the target native object from being reclaimed prematurely,
+{Jolt} automatically creates a reference to it.
+Invoking <code>close()</code> on the target object removes the automatic reference,
+but the native target might remain active.
+As long as one reference is active, the native target cannot be reclaimed.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -483,16 +460,10 @@ you mustn&#8217;t invoke <code>setEmbedded()</code>.</p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>In light of these considerations,
-I suggest treating targets as a temporary objects.
-If you plan to access a <code>RefTarget</code> object for a significant period of time,
-create a reference to it.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>The simplest way to create a reference
+<p>The simplest way to create a counted reference
 is to invoke <code>target.toRef()</code> or <code>target.toRefC()</code>.</p>
 </li>
 <li>
@@ -522,10 +493,6 @@ and freeing their memory.</p>
 <li>
 <p>An object responsible for reclaiming a native object
 it is said to <em>own</em> that native object.</p>
-</li>
-<li>
-<p>You can assign a native object (and/or parts of it) to multiple JVM objects,
-but only one JVM object (at most) can own it.</p>
 </li>
 <li>
 <p>Refcounted objects add a layer of indirection to managing native memory.</p>

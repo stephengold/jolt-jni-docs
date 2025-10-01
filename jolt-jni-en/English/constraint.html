@@ -342,9 +342,9 @@ both bodies should be movable and added to the same physics system:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettingsRef settings = /* ... */;
-TwoBodyConstraintRef constraint
-         = settings.create(rigidBody1, rigidBody2).toRef();</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettings settings = /* ... */;
+TwoBodyConstraint constraint
+         = settings.create(rigidBody1, rigidBody2);</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -358,9 +358,9 @@ The other body should be dynamic and added to a physics system:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettingsRef settings = /* ... */;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintSettings settings = /* ... */;
 Body dummyBody = Body.sFixedToWorld();
-TwoBodyConstraintRef constraint = settings.create(realBody, dummyBody).toRef();</code></pre>
+TwoBodyConstraint constraint = settings.create(realBody, dummyBody);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -370,8 +370,8 @@ as its movable bodies:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraintRef constraint
-        = settings.create(rigidBody1, rigidBody2).toRef();
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TwoBodyConstraint constraint
+        = settings.create(rigidBody1, rigidBody2);
 physicsSystem.addConstraint(constraint);</code></pre>
 </div>
 </div>
@@ -695,7 +695,7 @@ This can be accomplished by applying a collision-group filter to the bodies:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int numSubGroups = 1;
-GroupFilterTableRef filter = new GroupFilterTable(numSubGroups).toRef();
+GroupFilterTable filter = new GroupFilterTable(numSubGroups);
 body1.setCollisionGroup(new CollisionGroup(filter, 0, 0));
 body2.setCollisionGroup(new CollisionGroup(filter, 0, 0));</code></pre>
 </div>
