@@ -35,10 +35,8 @@ import com.github.stephengold.joltjni.Face;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SoftBodyCreationSettings;
 import com.github.stephengold.joltjni.SoftBodySharedSettings;
-import com.github.stephengold.joltjni.SoftBodySharedSettingsRef;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.Vertex;
 import com.github.stephengold.joltjni.VertexAttributes;
@@ -46,6 +44,7 @@ import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EBendType;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.readonly.ConstBody;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.IndexBuffer;
 import com.github.stephengold.sportjolt.Mesh;
@@ -131,7 +130,7 @@ final public class HelloSoftBody extends BasePhysicsApp {
         Mesh mesh = new IcosphereMesh(numRefinementIterations, indexed);
 
         // Create a soft ball and add it to the physics system:
-        SoftBodySharedSettingsRef sbss = new SoftBodySharedSettings().toRef();
+        SoftBodySharedSettings sbss = new SoftBodySharedSettings();
 
         VertexBuffer locations = mesh.getPositions();
         int numVertices = locations.capacity() / 3;
@@ -184,7 +183,7 @@ final public class HelloSoftBody extends BasePhysicsApp {
      */
     private void addBox() {
         float halfExtent = 3f;
-        ShapeRefC shape = new BoxShape(halfExtent).toRefC();
+        ConstShape shape = new BoxShape(halfExtent);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);

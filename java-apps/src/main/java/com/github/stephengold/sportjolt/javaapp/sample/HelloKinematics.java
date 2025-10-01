@@ -34,11 +34,11 @@ import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener;
@@ -124,7 +124,7 @@ final public class HelloKinematics
 
         // Create a collision shape for balls:
         float ballRadius = 1f;
-        ShapeRefC ballShape = new SphereShape(ballRadius).toRefC();
+        ConstShape ballShape = new SphereShape(ballRadius);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.getMassPropertiesOverride().setMass(2f);

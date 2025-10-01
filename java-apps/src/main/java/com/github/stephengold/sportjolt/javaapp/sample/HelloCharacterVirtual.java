@@ -35,16 +35,13 @@ import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.BroadPhaseLayerFilter;
 import com.github.stephengold.joltjni.CapsuleShape;
 import com.github.stephengold.joltjni.CharacterVirtual;
-import com.github.stephengold.joltjni.CharacterVirtualRef;
 import com.github.stephengold.joltjni.CharacterVirtualSettings;
-import com.github.stephengold.joltjni.CharacterVirtualSettingsRef;
 import com.github.stephengold.joltjni.ExtendedUpdateSettings;
 import com.github.stephengold.joltjni.ObjectLayerFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.ShapeFilter;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.TempAllocator;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -78,7 +75,7 @@ final public class HelloCharacterVirtual
     /**
      * character being tested
      */
-    private static CharacterVirtualRef character;
+    private static CharacterVirtual character;
     /**
      * settings for updating the character
      */
@@ -159,19 +156,16 @@ final public class HelloCharacterVirtual
         // Create a character with a capsule shape:
         float capsuleRadius = 0.5f; // meters
         float capsuleHeight = 1f; // meters
-        ConstShape sh = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
-        ShapeRefC shape = sh.toRefC();
+        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
 
-        CharacterVirtualSettingsRef settings
-                = new CharacterVirtualSettings().toRef();
+        CharacterVirtualSettings settings = new CharacterVirtualSettings();
         settings.setShape(shape);
-        assert settings.getShape().equals(sh);
+        assert settings.getShape().equals(shape);
 
         RVec3Arg startLocation = new RVec3(0., 2., 0.);
         long userData = 0L;
         character = new CharacterVirtual(
-                settings, startLocation, new Quat(), userData, physicsSystem)
-                .toRef();
+                settings, startLocation, new Quat(), userData, physicsSystem);
 
         // Add a static square to represent the ground:
         float halfExtent = 4f;
@@ -240,8 +234,7 @@ final public class HelloCharacterVirtual
     private ConstBody addSquare(float halfExtent, float y) {
         // Create a static rigid body with a square shape:
         float halfThickness = 0.1f;
-        ShapeRefC shape
-                = new BoxShape(halfExtent, halfThickness, halfExtent).toRefC();
+        ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);

@@ -37,15 +37,12 @@ import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
 import com.github.stephengold.joltjni.ShapeRefC;
-import com.github.stephengold.joltjni.ShapeSettingsRef;
+import com.github.stephengold.joltjni.ShapeSettings;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.VehicleCollisionTester;
 import com.github.stephengold.joltjni.VehicleCollisionTesterRay;
 import com.github.stephengold.joltjni.VehicleConstraint;
-import com.github.stephengold.joltjni.VehicleConstraintRef;
 import com.github.stephengold.joltjni.VehicleConstraintSettings;
-import com.github.stephengold.joltjni.VehicleConstraintSettingsRef;
-import com.github.stephengold.joltjni.VehicleControllerSettingsRef;
 import com.github.stephengold.joltjni.VehicleDifferentialSettings;
 import com.github.stephengold.joltjni.WheelSettingsWv;
 import com.github.stephengold.joltjni.WheeledVehicleController;
@@ -54,8 +51,8 @@ import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
-import com.github.stephengold.joltjni.template.Ref;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.TextureKey;
 import com.github.stephengold.sportjolt.input.RotateMode;
@@ -154,8 +151,7 @@ final public class HelloVehicle extends BasePhysicsApp {
         cornerLocations.add(new Vec3(-halfWidth, undercarriageY, tailZ));
         cornerLocations.add(new Vec3(+halfWidth, spoilerY, tailZ));
         cornerLocations.add(new Vec3(-halfWidth, spoilerY, tailZ));
-        ShapeSettingsRef ss
-                = new ConvexHullShapeSettings(cornerLocations).toRef();
+        ShapeSettings ss = new ConvexHullShapeSettings(cornerLocations);
         ShapeRefC wedgeShape = ss.create().get();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
@@ -189,24 +185,20 @@ final public class HelloVehicle extends BasePhysicsApp {
          */
         WheeledVehicleControllerSettings wvcs
                 = new WheeledVehicleControllerSettings();
-        VehicleControllerSettingsRef wvcsRef = wvcs.toRef();
         wvcs.setNumDifferentials(1);
         VehicleDifferentialSettings vds = wvcs.getDifferential(0);
         vds.setLeftWheel(2);
         vds.setRightWheel(3);
 
-        VehicleConstraintSettingsRef vcs
-                = new VehicleConstraintSettings().toRef();
+        VehicleConstraintSettings vcs = new VehicleConstraintSettings();
         vcs.addWheels(wheels);
         vcs.setController(wvcs);
         VehicleConstraint vehicle = new VehicleConstraint(body, vcs);
-        VehicleConstraintRef vehicleRef = vehicle.toRef();
         int objectLayer = body.getObjectLayer();
         VehicleCollisionTester tester
                 = new VehicleCollisionTesterRay(objectLayer);
-        Ref testerRef = tester.toRef();
         vehicle.setVehicleCollisionTester(tester);
-        physicsSystem.addConstraint(vehicleRef);
+        physicsSystem.addConstraint(vehicle);
         physicsSystem.addStepListener(vehicle.getStepListener());
 
         // Visualize the vehicle:
@@ -234,7 +226,7 @@ final public class HelloVehicle extends BasePhysicsApp {
      */
     private void addPlane(float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
-        ShapeRefC shape = new PlaneShape(plane).toRefC();
+        ConstShape shape = new PlaneShape(plane);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);

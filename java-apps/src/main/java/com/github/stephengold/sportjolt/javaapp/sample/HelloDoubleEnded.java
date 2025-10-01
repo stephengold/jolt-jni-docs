@@ -37,17 +37,16 @@ import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
-import com.github.stephengold.joltjni.TwoBodyConstraintRef;
-import com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef;
+import com.github.stephengold.joltjni.TwoBodyConstraint;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.operator.Op;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.Constants;
@@ -176,20 +175,19 @@ final public class HelloDoubleEnded
         RVec3Arg pivotInPaddle = new RVec3(0., 3., 0.);
 
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
-        TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.makeFixedAxis(EAxis.TranslationX);
         settings.makeFixedAxis(EAxis.TranslationY);
         settings.makeFixedAxis(EAxis.TranslationZ);
         settings.setPosition1(pivotInPaddle);
         settings.setPosition2(pivotInBall);
 
-        TwoBodyConstraintRef constraint
-                = settingsRef.create(paddleBody, ballBody).toRef();
+        TwoBodyConstraint constraint
+                = settings.create(paddleBody, ballBody);
         physicsSystem.addConstraint(constraint);
 
         // Visualize the constraint:
-        new ConstraintGeometry(constraint.getPtr(), 1); // paddleBody is 1st end
-        new ConstraintGeometry(constraint.getPtr(), 2); // ballBody is 2nd end
+        new ConstraintGeometry(constraint, 1); // paddleBody is 1st end
+        new ConstraintGeometry(constraint, 2); // ballBody is 2nd end
     }
 
     /**
@@ -258,7 +256,7 @@ final public class HelloDoubleEnded
      */
     private Body addBall() {
         float radius = 0.4f;
-        ShapeRefC shape = new SphereShape(radius).toRefC();
+        ConstShape shape = new SphereShape(radius);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -281,7 +279,7 @@ final public class HelloDoubleEnded
      * @return the new body
      */
     private Body addBox() {
-        ShapeRefC shape = new BoxShape(0.3f, paddleHalfHeight, 1f).toRefC();
+        ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -304,7 +302,7 @@ final public class HelloDoubleEnded
      */
     private void addPlane(float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
-        ShapeRefC shape = new PlaneShape(plane).toRefC();
+        ConstShape shape = new PlaneShape(plane);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);

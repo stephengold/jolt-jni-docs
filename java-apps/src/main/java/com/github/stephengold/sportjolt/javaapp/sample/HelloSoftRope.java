@@ -35,7 +35,6 @@ import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.SoftBodyCreationSettings;
 import com.github.stephengold.joltjni.SoftBodySharedSettings;
-import com.github.stephengold.joltjni.SoftBodySharedSettingsRef;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.Vertex;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -129,7 +128,7 @@ final public class HelloSoftRope extends BasePhysicsApp {
         Mesh lineMesh = new DividedLine(endPoint1, endPoint2, numSegments);
 
         // Create a soft body and add it to the physics system:
-        SoftBodySharedSettingsRef sbss = generateSharedSettings(lineMesh);
+        SoftBodySharedSettings sbss = generateSharedSettings(lineMesh);
 
         // Pin one of the end vertices by zeroing its inverse mass:
         int vertexIndex = 0;
@@ -160,10 +159,10 @@ final public class HelloSoftRope extends BasePhysicsApp {
      * @param mesh the mesh to use (not null, unaffected)
      * @return a new object
      */
-    private static SoftBodySharedSettingsRef generateSharedSettings(Mesh mesh) {
+    private static SoftBodySharedSettings generateSharedSettings(Mesh mesh) {
         assert mesh.topology() == Topology.LineList;
 
-        SoftBodySharedSettingsRef result = new SoftBodySharedSettings().toRef();
+        SoftBodySharedSettings result = new SoftBodySharedSettings();
 
         VertexBuffer locations = mesh.getPositions();
         int numVertices = locations.capacity() / 3;

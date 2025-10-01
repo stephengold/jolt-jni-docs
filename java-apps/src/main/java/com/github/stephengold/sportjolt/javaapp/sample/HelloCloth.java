@@ -34,10 +34,8 @@ import com.github.stephengold.joltjni.Face;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SoftBodyCreationSettings;
 import com.github.stephengold.joltjni.SoftBodySharedSettings;
-import com.github.stephengold.joltjni.SoftBodySharedSettingsRef;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.Vertex;
@@ -46,6 +44,7 @@ import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EBendType;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.readonly.ConstBody;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.IndexBuffer;
 import com.github.stephengold.sportjolt.Mesh;
@@ -131,7 +130,7 @@ final public class HelloCloth extends BasePhysicsApp {
         Mesh squareGrid = new ClothGrid(numLines, numLines, lineSpacing);
 
         // Create a compliant soft square and add it to the physics system:
-        SoftBodySharedSettingsRef sbss = generateSharedSettings(squareGrid);
+        SoftBodySharedSettings sbss = generateSharedSettings(squareGrid);
         int numVertices = sbss.countVertices();
         VertexAttributes[] vertexAttributes = new VertexAttributes[numVertices];
         for (int i = 0; i < numVertices; ++i) {
@@ -164,7 +163,7 @@ final public class HelloCloth extends BasePhysicsApp {
      */
     private void addBall() {
         float radius = 1f;
-        ShapeRefC shape = new SphereShape(radius).toRefC();
+        ConstShape shape = new SphereShape(radius);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
@@ -184,11 +183,10 @@ final public class HelloCloth extends BasePhysicsApp {
      * @param mesh the mesh to use (not null, unaffected)
      * @return a new object
      */
-    private static SoftBodySharedSettingsRef generateSharedSettings(Mesh mesh) {
+    private static SoftBodySharedSettings generateSharedSettings(Mesh mesh) {
         assert mesh.topology() == Topology.TriangleList;
 
-        SoftBodySharedSettingsRef result
-                = new SoftBodySharedSettings().toRef();
+        SoftBodySharedSettings result = new SoftBodySharedSettings();
 
         VertexBuffer locations = mesh.getPositions();
         int numVertices = locations.capacity() / 3;

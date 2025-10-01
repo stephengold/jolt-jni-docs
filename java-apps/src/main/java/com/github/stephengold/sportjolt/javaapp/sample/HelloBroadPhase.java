@@ -35,16 +35,13 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BroadPhaseLayerFilter;
 import com.github.stephengold.joltjni.CapsuleShape;
-import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
-import com.github.stephengold.joltjni.CharacterSettingsRef;
 import com.github.stephengold.joltjni.ObjectLayerFilter;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SpecifiedObjectLayerFilter;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
@@ -53,6 +50,7 @@ import com.github.stephengold.joltjni.operator.Op;
 import com.github.stephengold.joltjni.readonly.ConstAaBox;
 import com.github.stephengold.joltjni.readonly.ConstBroadPhaseQuery;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.Constants;
@@ -112,7 +110,7 @@ final public class HelloBroadPhase
     /**
      * character to trigger the ghost box
      */
-    private static CharacterRef character;
+    private static com.github.stephengold.joltjni.Character character;
     /**
      * ghost box for detecting intrusions
      */
@@ -207,17 +205,15 @@ final public class HelloBroadPhase
         // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 3f; // meters
         float capsuleHeight = 4f; // meters
-        ShapeRefC shape
-                = new CapsuleShape(capsuleHeight / 2f, capsuleRadius).toRefC();
+        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
 
-        CharacterSettingsRef settings = new CharacterSettings().toRef();
+        CharacterSettings settings = new CharacterSettings();
         settings.setShape(shape);
 
         RVec3Arg startLocation = new RVec3(0., 3., 0.);
         long userData = 0L;
         character = new com.github.stephengold.joltjni.Character(
-                settings, startLocation, new Quat(), userData, physicsSystem)
-                .toRef();
+                settings, startLocation, new Quat(), userData, physicsSystem);
         character.addToPhysicsSystem();
 
         // Visualize the character:
@@ -314,7 +310,7 @@ final public class HelloBroadPhase
      */
     private void addPlane(float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
-        ShapeRefC shape = new PlaneShape(plane).toRefC();
+        ConstShape shape = new PlaneShape(plane);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);

@@ -31,19 +31,18 @@ package com.github.stephengold.sportjolt.javaapp.sample;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.CapsuleShape;
-import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
-import com.github.stephengold.joltjni.CharacterSettingsRef;
 import com.github.stephengold.joltjni.HeightFieldShapeSettings;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.ShapeRefC;
-import com.github.stephengold.joltjni.ShapeSettingsRef;
+import com.github.stephengold.joltjni.ShapeSettings;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.readonly.ConstBody;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.Constants;
@@ -84,7 +83,7 @@ final public class HelloWalk
     /**
      * character being tested
      */
-    private static CharacterRef character;
+    private static com.github.stephengold.joltjni.Character character;
     // *************************************************************************
     // constructors
 
@@ -151,17 +150,15 @@ final public class HelloWalk
         // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 3f; // meters
         float capsuleHeight = 4f; // meters
-        ShapeRefC shape
-                = new CapsuleShape(capsuleHeight / 2f, capsuleRadius).toRefC();
+        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
 
-        CharacterSettingsRef settings = new CharacterSettings().toRef();
+        CharacterSettings settings = new CharacterSettings();
         settings.setShape(shape);
 
         RVec3Arg startLocation = new RVec3(-73.6, 19.09, -45.58);
         long userData = 0L;
         character = new com.github.stephengold.joltjni.Character(
-                settings, startLocation, new Quat(), userData, physicsSystem)
-                .toRef();
+                settings, startLocation, new Quat(), userData, physicsSystem);
         character.addToPhysicsSystem();
 
         // Add a static heightmap to represent the ground:
@@ -249,8 +246,8 @@ final public class HelloWalk
         Vec3Arg scale = new Vec3(1f, 1f, 1f);
         int sampleCount = 512;
         assert numFloats == sampleCount * sampleCount : numFloats;
-        ShapeSettingsRef ss = new HeightFieldShapeSettings(
-                heightBuffer, offset, scale, sampleCount).toRef();
+        ShapeSettings ss = new HeightFieldShapeSettings(
+                heightBuffer, offset, scale, sampleCount);
 
         ShapeRefC shapeRef = ss.create().get();
         BodyCreationSettings bcs = new BodyCreationSettings();

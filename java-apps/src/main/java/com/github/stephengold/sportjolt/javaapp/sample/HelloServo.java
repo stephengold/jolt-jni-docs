@@ -205,7 +205,7 @@ final public class HelloServo extends BasePhysicsApp {
         frameSettings.addShape(new Vec3(0f, -1f, 0f), y2x, yShape);
         frameSettings.addShape(+1f, 0f, 0f, yShape);
         frameSettings.addShape(-1f, 0f, 0f, yShape);
-        ShapeRefC frameShape = frameSettings.create().get().toRefC();
+        ShapeRefC frameShape = frameSettings.create().get();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).

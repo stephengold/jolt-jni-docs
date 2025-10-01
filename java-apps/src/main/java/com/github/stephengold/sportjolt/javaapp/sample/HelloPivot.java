@@ -35,15 +35,14 @@ import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
-import com.github.stephengold.joltjni.TwoBodyConstraintRef;
-import com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef;
+import com.github.stephengold.joltjni.TwoBodyConstraint;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Projection;
 import com.github.stephengold.sportjolt.Utils;
@@ -152,7 +151,6 @@ final public class HelloPivot
 
         // Constrain the box to rotate around an offset Y axis:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
-        TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.makeFixedAxis(EAxis.RotationX);
         // Y-axis rotation remains free.
         settings.makeFixedAxis(EAxis.RotationZ);
@@ -164,12 +162,11 @@ final public class HelloPivot
         settings.setPosition2(pivotInWorld);
 
         Body fixedToWorld = Body.sFixedToWorld();
-        TwoBodyConstraintRef constraint
-                = settingsRef.create(fixedToWorld, rotor).toRef();
+        TwoBodyConstraint constraint = settings.create(fixedToWorld, rotor);
         physicsSystem.addConstraint(constraint);
 
         // Visualize the constraint:
-        new ConstraintGeometry(constraint.getPtr(), 2); // ballBody is 2nd end
+        new ConstraintGeometry(constraint, 2); // ballBody is its 2nd end
     }
 
     /**
@@ -235,7 +232,7 @@ final public class HelloPivot
      * @return the new body
      */
     private Body addBox() {
-        ShapeRefC shape = new BoxShape(0.3f, 1f, 1f).toRefC();
+        ConstShape shape = new BoxShape(0.3f, 1f, 1f);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -259,7 +256,7 @@ final public class HelloPivot
      */
     private Body addKineBall() {
         float ballRadius = 1f;
-        ShapeRefC shape = new SphereShape(ballRadius).toRefC();
+        ConstShape shape = new SphereShape(ballRadius);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).

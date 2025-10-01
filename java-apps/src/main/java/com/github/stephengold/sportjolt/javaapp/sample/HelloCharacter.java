@@ -32,13 +32,10 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.CapsuleShape;
-import com.github.stephengold.joltjni.CharacterRef;
 import com.github.stephengold.joltjni.CharacterSettings;
-import com.github.stephengold.joltjni.CharacterSettingsRef;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
@@ -66,7 +63,7 @@ final public class HelloCharacter
     /**
      * character being tested
      */
-    private static CharacterRef character;
+    private static com.github.stephengold.joltjni.Character character;
     // *************************************************************************
     // constructors
 
@@ -132,19 +129,15 @@ final public class HelloCharacter
         // Create a character with a capsule shape and add it to the system:
         float capsuleRadius = 0.5f; // meters
         float capsuleHeight = 1f; // meters
-        ConstShape sh = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
-        ShapeRefC shape = sh.toRefC();
+        ConstShape shape = new CapsuleShape(capsuleHeight / 2f, capsuleRadius);
 
-        CharacterSettingsRef settings = new CharacterSettings().toRef();
+        CharacterSettings settings = new CharacterSettings();
         settings.setShape(shape);
 
         RVec3Arg startLocation = new RVec3(0., 2., 0.);
         long userData = 0L;
-        com.github.stephengold.joltjni.Character ch
-                = new com.github.stephengold.joltjni.Character(
-                        settings, startLocation, new Quat(), userData,
-                        physicsSystem);
-        character = ch.toRef();
+        character = new com.github.stephengold.joltjni.Character(
+                settings, startLocation, new Quat(), userData, physicsSystem);
         character.addToPhysicsSystem();
 
         // Add a static square to represent the ground:
@@ -201,8 +194,7 @@ final public class HelloCharacter
     private ConstBody addSquare(float halfExtent, float y) {
         // Create a static rigid body with a square shape:
         float halfThickness = 0.1f;
-        ShapeRefC shape
-                = new BoxShape(halfExtent, halfThickness, halfExtent).toRefC();
+        ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);

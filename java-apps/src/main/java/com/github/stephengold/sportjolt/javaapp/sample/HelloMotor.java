@@ -38,12 +38,9 @@ import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.ShapeRefC;
-import com.github.stephengold.joltjni.ShapeSettingsRef;
 import com.github.stephengold.joltjni.SixDofConstraint;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.StaticCompoundShapeSettings;
-import com.github.stephengold.joltjni.TwoBodyConstraintRef;
-import com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
@@ -51,6 +48,8 @@ import com.github.stephengold.joltjni.enumerate.EMotorState;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.enumerate.ESwingType;
 import com.github.stephengold.joltjni.operator.Op;
+import com.github.stephengold.joltjni.readonly.ConstShape;
+import com.github.stephengold.joltjni.readonly.ConstShapeSettings;
 import com.github.stephengold.joltjni.readonly.QuatArg;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
@@ -76,7 +75,7 @@ final public class HelloMotor extends BasePhysicsApp {
     /**
      * constraint being tested
      */
-    private static TwoBodyConstraintRef constraint;
+    private static SixDofConstraint constraint;
     // *************************************************************************
     // constructors
 
@@ -147,7 +146,6 @@ final public class HelloMotor extends BasePhysicsApp {
 
         // Add a double-ended hinge to join the door to the frame:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
-        TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         // Fix all 3 translation DOFs:
         settings.makeFixedAxis(EAxis.TranslationX);
         settings.makeFixedAxis(EAxis.TranslationY);
@@ -162,15 +160,14 @@ final public class HelloMotor extends BasePhysicsApp {
         settings.setPosition2(pivotLocation);
         settings.setSwingType(ESwingType.Pyramid); // default=Cone
         // ESwingType.Cone would result in symmetrical rotation limits!
-        constraint = settingsRef.create(doorBody, frameBody).toRef();
+        constraint = (SixDofConstraint) settings.create(doorBody, frameBody);
         physicsSystem.addConstraint(constraint);
 
         // Enable the motor for Y rotation and drive it to a target velocity:
-        SixDofConstraint six = (SixDofConstraint) constraint.getPtr();
-        six.setMotorState(EAxis.RotationY, EMotorState.Velocity);
+        constraint.setMotorState(EAxis.RotationY, EMotorState.Velocity);
 
-        new ConstraintGeometry(constraint.getPtr(), 1).setDepthTest(false);
-        new ConstraintGeometry(constraint.getPtr(), 2).setDepthTest(false);
+        new ConstraintGeometry(constraint, 1).setDepthTest(false);
+        new ConstraintGeometry(constraint, 2).setDepthTest(false);
     }
     // *************************************************************************
     // private methods
@@ -181,7 +178,7 @@ final public class HelloMotor extends BasePhysicsApp {
      * @return the new body
      */
     private Body addDoor() {
-        ShapeRefC shape = new BoxShape(0.8f, 0.8f, 0.1f).toRefC();
+        ConstShape shape = new BoxShape(0.8f, 0.8f, 0.1f);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -206,18 +203,17 @@ final public class HelloMotor extends BasePhysicsApp {
     private Body addFrame() {
         float halfLength = 1f;
         float radius = 0.1f;
-        ShapeSettingsRef yShape
-                = new CapsuleShapeSettings(halfLength, radius).toRef();
+        ConstShapeSettings yShape
+                = new CapsuleShapeSettings(halfLength, radius);
 
         QuatArg y2x = Quat.sEulerAngles(0f, 0f, Jolt.JPH_PI / 2f);
         StaticCompoundShapeSettings frameSettings
                 = new StaticCompoundShapeSettings();
-        ShapeSettingsRef settingsRef = frameSettings.toRef();
         frameSettings.addShape(new Vec3(0f, +1f, 0f), y2x, yShape);
         frameSettings.addShape(new Vec3(0f, -1f, 0f), y2x, yShape);
         frameSettings.addShape(+1f, 0f, 0f, yShape);
         frameSettings.addShape(-1f, 0f, 0f, yShape);
-        ShapeRefC frameShape = frameSettings.create().get().toRefC();
+        ShapeRefC frameShape = frameSettings.create().get();
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -256,16 +252,14 @@ final public class HelloMotor extends BasePhysicsApp {
             public void onKeyboard(int glfwKeyId, boolean isPressed) {
                 if (glfwKeyId == GLFW.GLFW_KEY_SPACE) {
                     if (isPressed) { // Reverse the motor's direction:
-                        SixDofConstraint six
-                                = (SixDofConstraint) constraint.getPtr();
                         Vec3Arg targetVelocity
-                                = six.getTargetAngularVelocityCs();
+                                = constraint.getTargetAngularVelocityCs();
                         if (targetVelocity.length() < 0.1f) { // not moving
                             targetVelocity = new Vec3(0f, 1f, 0f);
                         } else {
                             targetVelocity = Op.minus(targetVelocity);
                         }
-                        six.setTargetAngularVelocityCs(targetVelocity);
+                        constraint.setTargetAngularVelocityCs(targetVelocity);
                     }
                     return;
                 }

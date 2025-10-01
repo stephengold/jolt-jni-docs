@@ -42,7 +42,6 @@ import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilterTable;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.TempAllocator;
 import com.github.stephengold.joltjni.TempAllocatorMalloc;
@@ -227,21 +226,19 @@ final public class HelloJoltJni {
         Vec3Arg normal = Vec3.sAxisY();
         ConstPlane plane = new Plane(normal, -groundY);
         ConstShape floorShape = new PlaneShape(plane);
-        ShapeRefC floorShapeRef = floorShape.toRefC(); // ref count -> 1
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setShape(floorShapeRef);
+        bcs.setShape(floorShape);
         Body floor = bi.createBody(bcs);
         bi.addBody(floor, EActivation.DontActivate);
 
         // Add a sphere-shaped, dynamic, rigid body at the origin:
         float ballRadius = 0.3f;
         ConstShape ballShape = new SphereShape(ballRadius);
-        ShapeRefC ballShapeRef = ballShape.toRefC(); // ballShape ref count -> 1
         bcs.setMotionType(EMotionType.Dynamic);
         bcs.setObjectLayer(objLayerMoving);
-        bcs.setShape(ballShapeRef);
+        bcs.setShape(ballShape);
         ball = bi.createBody(bcs);
         bi.addBody(ball, EActivation.Activate);
     }

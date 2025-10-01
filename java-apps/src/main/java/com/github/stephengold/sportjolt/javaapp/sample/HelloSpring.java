@@ -35,16 +35,15 @@ import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.SpringSettings;
-import com.github.stephengold.joltjni.TwoBodyConstraintRef;
-import com.github.stephengold.joltjni.TwoBodyConstraintSettingsRef;
+import com.github.stephengold.joltjni.TwoBodyConstraint;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.Projection;
@@ -168,7 +167,6 @@ final public class HelloSpring
 
         // Constrain the ball to the origin:
         SixDofConstraintSettings settings = new SixDofConstraintSettings();
-        TwoBodyConstraintSettingsRef settingsRef = settings.toRef();
         settings.makeFixedAxis(EAxis.TranslationX);
         settings.makeFixedAxis(EAxis.TranslationY);
         settings.makeFixedAxis(EAxis.TranslationZ);
@@ -182,8 +180,7 @@ final public class HelloSpring
         zSpring.setDamping(0.2f);
         zSpring.setFrequency(2f); // in Hertz
         Body fixedToWorld = Body.sFixedToWorld();
-        TwoBodyConstraintRef constraint
-                = settingsRef.create(fixedToWorld, ballBody).toRef();
+        TwoBodyConstraint constraint = settings.create(fixedToWorld, ballBody);
         physicsSystem.addConstraint(constraint);
 
         // Visualize the ground:
@@ -257,7 +254,7 @@ final public class HelloSpring
      */
     private Body addBall() {
         float radius = 0.4f;
-        ShapeRefC shape = new SphereShape(radius).toRefC();
+        ConstShape shape = new SphereShape(radius);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -284,7 +281,7 @@ final public class HelloSpring
      * @return the new body
      */
     private Body addBox() {
-        ShapeRefC shape = new BoxShape(0.2f, paddleHalfHeight, 0.2f).toRefC();
+        ConstShape shape = new BoxShape(0.2f, paddleHalfHeight, 0.2f);
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
@@ -310,8 +307,7 @@ final public class HelloSpring
      */
     private Body addSquare(float halfExtent, float y) {
         float halfThickness = 0.1f;
-        ShapeRefC shape
-                = new BoxShape(halfExtent, halfThickness, halfExtent).toRefC();
+        ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setMotionType(EMotionType.Static);
         bcs.setObjectLayer(objLayerNonMoving);
