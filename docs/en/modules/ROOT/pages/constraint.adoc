@@ -75,9 +75,9 @@ Both constaints and constraint settings are refcounted objects.
 
 [source,java]
 ----
-TwoBodyConstraintSettingsRef settings = /* ... */;
-TwoBodyConstraintRef constraint
-         = settings.create(rigidBody1, rigidBody2).toRef();
+TwoBodyConstraintSettings settings = /* ... */;
+TwoBodyConstraint constraint
+         = settings.create(rigidBody1, rigidBody2);
 ----
 
 * For a single-ended constraint,
@@ -86,9 +86,9 @@ TwoBodyConstraintRef constraint
 
 [source,java]
 ----
-TwoBodyConstraintSettingsRef settings = /* ... */;
+TwoBodyConstraintSettings settings = /* ... */;
 Body dummyBody = Body.sFixedToWorld();
-TwoBodyConstraintRef constraint = settings.create(realBody, dummyBody).toRef();
+TwoBodyConstraint constraint = settings.create(realBody, dummyBody);
 ----
 
 For a constraint to be effective,
@@ -97,8 +97,8 @@ as its movable bodies:
 
 [source,java]
 ----
-TwoBodyConstraintRef constraint
-        = settings.create(rigidBody1, rigidBody2).toRef();
+TwoBodyConstraint constraint
+        = settings.create(rigidBody1, rigidBody2);
 physicsSystem.addConstraint(constraint);
 ----
 
@@ -282,7 +282,7 @@ This can be accomplished by applying a collision-group filter to the bodies:
 [source,java]
 ----
 int numSubGroups = 1;
-GroupFilterTableRef filter = new GroupFilterTable(numSubGroups).toRef();
+GroupFilterTable filter = new GroupFilterTable(numSubGroups);
 body1.setCollisionGroup(new CollisionGroup(filter, 0, 0));
 body2.setCollisionGroup(new CollisionGroup(filter, 0, 0));
 ----

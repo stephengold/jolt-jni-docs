@@ -341,26 +341,15 @@ Here's a code fragment that creates a spherical rigid body:
 // Create a collision shape:
 float ballRadius = 0.3f;
 ConstShape ballShape = new SphereShape(ballRadius);
-ShapeRefC ballShapeRef = ballShape.toRefC(); // ballShape ref count -> 1
 
 // Create and configure body-creation settings:
 BodyCreationSettings bcs = new BodyCreationSettings();
-bcs.setShape(ballShapeRef);
+bcs.setShape(ballShape);
 
 // Create a rigid body for a specific PhysicsSystem:
 BodyInterface bi = physicsSystem.getBodyInterface();
 Body ball = bi.createBody(bcs);
 ----
-
-[IMPORTANT]
-====
-Like all collision shapes, `SphereShape` implements reference counting.
-For reasons explained on xref:free.adoc[the native-memory page],
-best practice is to create a reference for every `RefTarget` object.
-In the code fragment above,
-`toRefC()` creates a counted reference to `ballShape`,
-increasing its reference count (initially zero) to one.
-====
 
 A body isn't simulated unless added to its physics system.
 Use `BodyInterface.addBody()`:

@@ -120,12 +120,8 @@ it prevents cleaner threads from reclaiming `system`.
 
 === Refcounted objects
 
-Another situation where a `JoltPhysicsObject`
-doesn't own its assigned native object
-arises when a class implements _reference counting_.
-Responsibility for reclaiming the native object (called the _target_)
-is shared among other objects (called _references_) that refer to it.
-
+{JPH} uses reference counting to manage memory that can be shared among multiple
+co-owners, and {ProjectAdj} exposes this feature.
 The {ProjectAdj} classes that implement reference counting
 are precisely those that implement the `RefTarget` interface.
 These include `BaseCharacter`, `Constraint`, `ConstraintSettings`,
@@ -136,24 +132,16 @@ References are themselves instances of `JoltPhysicsObject`, of course.
 (And please note that {ProjectAdj} reference counting is completely orthogonal
 to Java references, strong, weak, or otherwise.)
 
-On `RefTarget` objects, `close()` is (again) a no-op,
-because the JVM object doesn't own its assigned native object.
-
 The only way to reclaim a `RefTarget` native object
 is to decrement its reference count from one to zero.
 This implies creating one or more references
 and then reclaiming them all, either explicitly, implicitly, or automatically.
 
-As long as one reference is active, its target cannot be reclaimed.
-Nor can a target be reclaimed before a reference to it is created
-(because in that case the reference count is already zero).
-
-[IMPORTANT]
-====
-Creating a `RefTarget` object without any references is dangerous
-because other code might create a reference that later gets reclaimed,
-invalidating the target.
-====
+To prevent the target native object from being reclaimed prematurely,
+{Jolt} automatically creates a reference to it.
+Invoking `close()` on the target object removes the automatic reference,
+but the native target might remain active.
+As long as one reference is active, the native target cannot be reclaimed.
 
 [TIP]
 ====
@@ -164,12 +152,7 @@ so if you plan to free the target's native memory,
 you mustn't invoke `setEmbedded()`.
 ====
 
-In light of these considerations,
-I suggest treating targets as a temporary objects.
-If you plan to access a `RefTarget` object for a significant period of time,
-create a reference to it.
-
-* The simplest way to create a reference
+* The simplest way to create a counted reference
   is to invoke `target.toRef()` or `target.toRefC()`.
 * As long as you retain a counted reference,
   you can always access its target by invoking `ref.getPtr()`.
@@ -183,6 +166,4 @@ create a reference to it.
 * Explicitly closing a `JoltPhysicsObject` is dangerous.
 * An object responsible for reclaiming a native object
   it is said to _own_ that native object.
-* You can assign a native object (and/or parts of it) to multiple JVM objects,
-  but only one JVM object (at most) can own it.
 * Refcounted objects add a layer of indirection to managing native memory.
