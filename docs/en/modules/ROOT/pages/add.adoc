@@ -170,9 +170,9 @@ JoltPhysicsObject.startCleaner(); // to free Jolt-Physics objects automatically
 Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free
 ----
 
-{JPH} allows custom callbacks for native assertions and trace output,
-but {Project} exposes only the default callbacks,
-which print to the standard output.
+{JPH} allows custom callbacks for native assertions and trace output.
+I recommend starting with the default callbacks,
+which print to the standard output:
 
 [source,java]
 ----
