@@ -311,7 +311,7 @@ then switch to "Release" libraries for performance testing and production.</p>
 (&gt;10 km in diameter) otherwise use "Sp".</p>
 </div>
 <div class="sect2">
-<h3 id="_gradle_built_android_projects"><a class="anchor" href="#_gradle_built_android_projects"></a>Gradle-built Android projects</h3>
+<h3 id="_android_projects"><a class="anchor" href="#_android_projects"></a>Android projects</h3>
 <div class="paragraph">
 <p>Jolt JNI comes pre-built for Android as a pair of AARs (one for each build type).
 Each AAR includes both a JVM library and all necessary native libraries.</p>
@@ -392,7 +392,7 @@ dependencies {
 before instantiating any physics objects.</p>
 </div>
 <div class="sect2">
-<h3 id="_android_projects"><a class="anchor" href="#_android_projects"></a>Android projects</h3>
+<h3 id="_android_projects_2"><a class="anchor" href="#_android_projects_2"></a>Android projects</h3>
 <div class="paragraph">
 <p>Add to your physics initialization:</p>
 </div>
@@ -473,9 +473,9 @@ Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free</code><
 </div>
 </div>
 <div class="paragraph">
-<p>Jolt Physics allows custom callbacks for native assertions and trace output,
-but Jolt JNI exposes only the default callbacks,
-which print to the standard output.</p>
+<p>Jolt Physics allows custom callbacks for native assertions and trace output.
+I recommend starting with the default callbacks,
+which print to the standard output:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -542,11 +542,11 @@ TempAllocator tempAllocator = new TempAllocatorMalloc();</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Similarly, Jolt Physics needs a <code>JobSystem</code> to assign simulation tasks to CPUs.
+<p>Similarly, Jolt Physics needs a <code>JobSystem</code> to assign simulation tasks to processors.
 Since it&#8217;s difficult to predict how many jobs and barriers will be needed,
 I suggest using the default limits,
 even though they may be larger than needed.
-For now, I assume you&#8217;ll want to use all available CPUs.</p>
+For now, I assume you&#8217;ll want to use all available processors:</p>
 </div>
 <div class="listingblock">
 <div class="content">

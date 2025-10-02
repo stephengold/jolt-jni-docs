@@ -290,7 +290,7 @@ reclaims the JVM object to which the memory is assigned.</p>
 <p>Aside from those special classes, however,
 every JVM object in Jolt JNI is an instance of <code>JoltPhysicsObject</code>,
 implying it has a native object assigned to it.
-For instance, when a Jolt-JNI app instantiates a matrix using <code>new Mat44()</code>,
+For example, when a Jolt-JNI app instantiates a matrix using <code>new Mat44()</code>,
 both a JVM object and a native object are created.
 How does the native object&#8217;s memory get freed?</p>
 </div>
@@ -369,7 +369,7 @@ This could lead to undefined behavior.</p>
 <div class="paragraph">
 <p>Sport-Jolt automatically starts a cleaner task
 for any app that extends <code>BasePhysicsApp</code>.
-That&#8217;s why none of the demos or sample applications use <code>close()</code>.</p>
+That&#8217;s why none of the demos or sample applications invoke <code>close()</code>.</p>
 </div>
 </td>
 </tr>
