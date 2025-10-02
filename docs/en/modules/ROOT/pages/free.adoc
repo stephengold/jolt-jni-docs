@@ -35,7 +35,7 @@ reclaims the JVM object to which the memory is assigned.
 Aside from those special classes, however,
 every JVM object in {Project} is an instance of `JoltPhysicsObject`,
 implying it has a native object assigned to it.
-For instance, when a {ProjectAdj} app instantiates a matrix using `new Mat44()`,
+For example, when a {ProjectAdj} app instantiates a matrix using `new Mat44()`,
 both a JVM object and a native object are created.
 How does the native object's memory get freed?
 
@@ -83,7 +83,7 @@ This could lead to undefined behavior.
 ====
 {Sport} automatically starts a cleaner task
 for any app that extends `BasePhysicsApp`.
-That's why none of the demos or sample applications use `close()`.
+That's why none of the demos or sample applications invoke `close()`.
 ====
 
 === Contained objects

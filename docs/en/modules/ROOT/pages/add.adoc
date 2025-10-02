@@ -222,11 +222,11 @@ import com.github.stephengold.joltjni.TempAllocatorMalloc;
 TempAllocator tempAllocator = new TempAllocatorMalloc();
 ----
 
-Similarly, {JPH} needs a `JobSystem` to assign simulation tasks to CPUs.
+Similarly, {JPH} needs a `JobSystem` to assign simulation tasks to processors.
 Since it's difficult to predict how many jobs and barriers will be needed,
 I suggest using the default limits,
 even though they may be larger than needed.
-For now, I assume you'll want to use all available CPUs.
+For now, I assume you'll want to use all available processors:
 
 [source,java]
 ----
