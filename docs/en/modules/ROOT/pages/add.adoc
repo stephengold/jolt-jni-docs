@@ -34,7 +34,7 @@ then switch to "Release" libraries for performance testing and production.
 Flavors:  use "Dp" native libraries to simulate large worlds
 (>10 km in diameter) otherwise use "Sp".
 
-=== Gradle-built Android projects
+=== Android projects
 
 {Project} comes pre-built for Android as a pair of AARs (one for each build type).
 Each AAR includes both a JVM library and all necessary native libraries.
