@@ -102,7 +102,7 @@ https://github.com/stephengold/jolt-jni/blob/master/CONTRIBUTING.md[the contribu
 For self-help, utilize
 xref:add.adoc[the tutorials],
 https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html[the javadoc], and
-https://github.com/stephengold/jolt-jni[the source code].
+https://github.com/stephengold/jolt-jni/tree/master/src[the source code].
 
 For further reading there is also
 https://jrouwe.github.io/JoltPhysics/index.html[the official {JPHAdj} documentation].
