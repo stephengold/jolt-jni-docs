@@ -29,7 +29,7 @@ Adding {Project} to an existing project is a 10-step process:
 Both kinds of libraries are available pre-built from Maven Central.
 
 Build types:  use "Debug" native libraries for development and troubleshooting,
-then switch to "Release" libraries for performance testing and production.
+then switch to "Release" native libraries for performance testing and production.
 
 Flavors:  use "Dp" native libraries to simulate large worlds
 (>10 km in diameter) otherwise use "Sp".

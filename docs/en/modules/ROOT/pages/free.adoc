@@ -63,7 +63,7 @@ While it's possible to assign the same native object to multiple JVM objects,
 only one JVM object (at most) can own a particular native object.
 
 When a native object is owned by a JVM object,
-its memory can be freed in 3 ways:
+its memory can be freed in any of 3 ways:
 
 . explicitly using `matrix.close()`,
 . implicitly by `AutoCloseable`
@@ -76,7 +76,7 @@ its memory can be freed in 3 ways:
 ====
 Explicitly closing a `JoltPhysicsObject` is risky
 because it invalidates the native object, which might remain reachable.
-This could lead to undefined behavior.
+This could lead to crashes or undefined behavior.
 ====
 
 [TIP]
@@ -163,7 +163,7 @@ you mustn't invoke `setEmbedded()`.
 * Native objects are distinct from JVM objects.
 * {Project} implements an optional cleaner task for reclaiming native objects
   and freeing their memory.
-* Explicitly closing a `JoltPhysicsObject` is dangerous.
+* Explicitly closing a `JoltPhysicsObject` is potentially dangerous.
 * An object responsible for reclaiming a native object
   it is said to _own_ that native object.
 * Refcounted objects add a layer of indirection to managing native memory.
