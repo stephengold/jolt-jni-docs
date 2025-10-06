@@ -157,7 +157,7 @@ I recommend starting {Project}'s built-in cleaner thread,
 which frees objects automatically during JVM garbage collection.
 
 {JPH} allows custom allocators for native heap memory.
-For simplicity, I recommend registering the default allocator.
+For simplicity, I recommend registering the default allocator:
 
 [source,java]
 ----
@@ -195,7 +195,7 @@ for instance when deserializing saved data.
 
 Once the factory is created,
 you should register all the standard types
-and install their collision handlers.
+and install their collision handlers:
 
 [source,java]
 ----
@@ -263,7 +263,7 @@ from object layers to broadphase layers.
 
 For now, I suggest putting moving and non-moving bodies
 into separate object layers
-and mapping both object layers to broadphase layer 0.
+and mapping both object layers to broadphase layer 0:
 
 [source,java]
 ----
@@ -305,7 +305,7 @@ https://jrouwe.github.io/JoltPhysics/index.html#collision-detection[the collisio
 As soon as you create a `PhysicsSystem`, you should configure it
 to the expected number of number of bodies, mutexes, body pairs, and contacts.
 In many cases, it's difficult to predict how many resources will be needed,
-so I suggest setting these limits fairly high.
+so I suggest setting these limits fairly high:
 
 [source,java]
 ----

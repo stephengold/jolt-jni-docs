@@ -53,7 +53,7 @@ Two bodies are allowed to collide only if:
   and the 2nd body's filter says they can collide.
 
 The typical use case is a chain of bodies,
-all of which are allowed to collide except those adjacent in the chain.
+all of which are allowed to collide except those adjacent in the chain:
 
 [source,java]
 ----
