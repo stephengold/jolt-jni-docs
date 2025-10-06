@@ -325,7 +325,7 @@ only one JVM object (at most) can own a particular native object.</p>
 </div>
 <div class="paragraph">
 <p>When a native object is owned by a JVM object,
-its memory can be freed in 3 ways:</p>
+its memory can be freed in any of 3 ways:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -353,7 +353,7 @@ by invoking <code>JoltPhysicsObject.startCleaner()</code>).</p>
 <div class="paragraph">
 <p>Explicitly closing a <code>JoltPhysicsObject</code> is risky
 because it invalidates the native object, which might remain reachable.
-This could lead to undefined behavior.</p>
+This could lead to crashes or undefined behavior.</p>
 </div>
 </td>
 </tr>
@@ -488,7 +488,7 @@ you can always access its target by invoking <code>ref.getPtr()</code>.</p>
 and freeing their memory.</p>
 </li>
 <li>
-<p>Explicitly closing a <code>JoltPhysicsObject</code> is dangerous.</p>
+<p>Explicitly closing a <code>JoltPhysicsObject</code> is potentially dangerous.</p>
 </li>
 <li>
 <p>An object responsible for reclaiming a native object
