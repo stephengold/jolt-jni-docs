@@ -17,7 +17,7 @@ broadphase and narrowphase.
 
 Each manifold is composed of up to 64 _contact points_.
 Jolt's rigid-body dynamics
-uses manifolds and contact points to implement contact response,
+use manifolds and contact points to implement contact response,
 including friction and restitution.
 
 {Project} provides mechanisms to:
