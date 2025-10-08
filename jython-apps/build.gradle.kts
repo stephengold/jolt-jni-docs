@@ -27,6 +27,12 @@ tasks.register<JavaExec>("HelloJoltJni") {
 }
 
 // physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloContactResponse") {
+    args("jython", "scripts/sport/tutorial/hello_contact_response.py",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the Jython version of the HelloContactResponse tutorial app."
+}
 tasks.register<JavaExec>("HelloDamping") {
     args("jython", "scripts/sport/tutorial/hello_damping.py",
          "../class-lists/jolt-jni-classes.txt",
