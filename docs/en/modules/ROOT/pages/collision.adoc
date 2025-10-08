@@ -189,9 +189,40 @@ Things notice while running the app:
   at which time the ghost will momentarily turn yellow again.
 
 
+== Subshapes in query results
+
+Query results typically report the ID of the body that was hit.
+If the body has a compound shape,
+the result should also include the 32-bit ID of the subshape that was hit.
+
+Because compound shapes can contain other compound shapes, 
+subshape IDs are assigned in a non-obvious fashion.
+To access a subshape by its ID, use the `getLeafShape()` method.
+For example:
+
+[source,java]
+----
+BodyLockInterface bli = physicsSystem.getBodyLockInterface();
+RayCastResult hit = new RayCastResult();
+physicsSystem.getNarrowPhaseQuery().castRay(ray, hit);
+
+int bodyId = hit.getBodyId();
+BodyLockRead lock = new BodyLockRead(bli, bodyId);
+if (lock.succeeded()) {
+    ConstShape bodyShape = lock.getBody().getShape();
+    int subShapeId = hit.getSubShapeId2();
+    int[] remainder = {Jolt.cEmptySubShapeId};
+    ConstShape subShape = bodyShape.getLeafShape(subShapeId, remainder);
+    // do something with subShape
+}
+lock.releaseLock();
+----
+
+
 == Summary
 
 * Collision groups offer fine control over which bodies are allowed to collide.
 * To track individual contacts in real time, use a contact listener.
 * To search a region for bodies, use a broadphase query or a narrowphase query.
 * Narrowphase queries are more precise, but also more expensive.
+* Subshape IDs are assigned in a non-obvious fashion.
