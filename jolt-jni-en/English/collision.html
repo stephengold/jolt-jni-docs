@@ -572,6 +572,40 @@ at which time the ghost will momentarily turn yellow again.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_subshapes_in_query_results"><a class="anchor" href="#_subshapes_in_query_results"></a>Subshapes in query results</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Query results typically report the ID of the body that was hit.
+If the body has a compound shape,
+the result should also include the 32-bit ID of the subshape that was hit.</p>
+</div>
+<div class="paragraph">
+<p>Because compound shapes can contain other compound shapes,
+subshape IDs are assigned in a non-obvious fashion.
+To access a subshape by its ID, use the <code>getLeafShape()</code> method.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BodyLockInterface bli = physicsSystem.getBodyLockInterface();
+RayCastResult hit = new RayCastResult();
+physicsSystem.getNarrowPhaseQuery().castRay(ray, hit);
+
+int bodyId = hit.getBodyId();
+BodyLockRead lock = new BodyLockRead(bli, bodyId);
+if (lock.succeeded()) {
+    ConstShape bodyShape = lock.getBody().getShape();
+    int subShapeId = hit.getSubShapeId2();
+    int[] remainder = {Jolt.cEmptySubShapeId};
+    ConstShape subShape = bodyShape.getLeafShape(subShapeId, remainder);
+    // do something with subShape
+}
+lock.releaseLock();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -587,6 +621,9 @@ at which time the ghost will momentarily turn yellow again.</p>
 </li>
 <li>
 <p>Narrowphase queries are more precise, but also more expensive.</p>
+</li>
+<li>
+<p>Subshape IDs are assigned in a non-obvious fashion.</p>
 </li>
 </ul>
 </div>
