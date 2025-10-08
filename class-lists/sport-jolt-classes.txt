@@ -9,5 +9,7 @@ com.github.stephengold.sportjolt.TextureKey
 com.github.stephengold.sportjolt.UvsOption
 com.github.stephengold.sportjolt.Validate
 com.github.stephengold.sportjolt.WrapFunction
+com.github.stephengold.sportjolt.input.InputProcessor
 com.github.stephengold.sportjolt.physics.BasePhysicsApp
 com.github.stephengold.sportjolt.physics.PhysicsTickListener
+org.lwjgl.glfw.GLFW
