@@ -138,7 +138,7 @@ This implies creating one or more references
 and then reclaiming them all, either explicitly, implicitly, or automatically.
 
 To prevent the target native object from being reclaimed prematurely,
-{Jolt} automatically creates a reference to it.
+{Project} automatically creates a reference to it.
 Invoking `close()` on the target object removes the automatic reference,
 but the native target might remain active.
 As long as one reference is active, the native target cannot be reclaimed.
