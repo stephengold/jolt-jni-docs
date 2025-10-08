@@ -24,17 +24,17 @@ tasks.named("test") {
 
 // physics console apps (no graphics)
 tasks.register<JavaExec>("HelloJoltJni") {
-    description = "Runs the Kotlin version of the HelloJoltJni console app."
+    description = "Runs the Kotlin port of the HelloJoltJni console app."
     mainClass = "com.github.stephengold.sportjolt.ktapps.console.HelloJoltJniKt"
 }
 
 // physics tutorial apps (very simple)
 tasks.register<JavaExec>("HelloRigidBody") {
-    description = "Runs the Kotlin version of the HelloRigidBody tutorial app."
+    description = "Runs the Kotlin port of the HelloRigidBody tutorial app."
     mainClass = "com.github.stephengold.sportjolt.ktapps.tutorial.HelloRigidBodyKt"
 }
 tasks.register<JavaExec>("HelloSport") {
-    description = "Runs the Kotlin version of the HelloSport tutorial app."
+    description = "Runs the Kotlin port of the HelloSport tutorial app."
     mainClass = "com.github.stephengold.sportjolt.ktapps.tutorial.HelloSportKt"
 }
 

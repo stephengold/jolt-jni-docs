@@ -24,7 +24,7 @@ tasks.register<JavaExec>("HelloJoltJni") {
          "scripts/console/HelloJoltJni.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/snap-loader-classes.txt")
-    description = "Runs the Nashorn version of the HelloJoltJni console app."
+    description = "Runs the Nashorn port of the HelloJoltJni console app."
 }
 
 // physics tutorial apps (very simple)
@@ -33,14 +33,14 @@ tasks.register<JavaExec>("HelloRigidBody") {
          "scripts/sport/tutorial/HelloRigidBody.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Nashorn version of the HelloRigidBody tutorial app."
+    description = "Runs the Nashorn port of the HelloRigidBody tutorial app."
 }
 tasks.register<JavaExec>("HelloSport") {
     args("nashorn",
          "scripts/sport/tutorial/HelloSport.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Nashorn version of the HelloSport tutorial app."
+    description = "Runs the Nashorn port of the HelloSport tutorial app."
 }
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")

@@ -15,17 +15,17 @@ application {
 
 // physics console apps (no graphics)
 tasks.register<JavaExec>("HelloJoltJni") {
-    description = "Runs the Groovy version of the HelloJoltJni console app."
+    description = "Runs the Groovy port of the HelloJoltJni console app."
     mainClass = "com.github.stephengold.sportjolt.groovy.console.HelloJoltJni"
 }
 
 // physics tutorial apps (very simple)
 tasks.register<JavaExec>("HelloRigidBody") {
-    description = "Runs the Groovy version of the HelloRigidBody tutorial app."
+    description = "Runs the Groovy port of the HelloRigidBody tutorial app."
     mainClass = "com.github.stephengold.sportjolt.groovy.tutorial.HelloRigidBody"
 }
 tasks.register<JavaExec>("HelloSport") {
-    description = "Runs the Groovy version of the HelloSport tutorial app."
+    description = "Runs the Groovy port of the HelloSport tutorial app."
     mainClass = "com.github.stephengold.sportjolt.groovy.tutorial.HelloSport"
 }
 

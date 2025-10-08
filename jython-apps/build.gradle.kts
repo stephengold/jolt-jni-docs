@@ -23,7 +23,7 @@ tasks.register<JavaExec>("HelloJoltJni") {
     args("jython", "scripts/console/hello_jolt_jni.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/snap-loader-classes.txt")
-    description = "Runs the Jython version of the HelloJoltJni console app."
+    description = "Runs the Jython port of the HelloJoltJni console app."
 }
 
 // physics tutorial apps (very simple)
@@ -31,37 +31,37 @@ tasks.register<JavaExec>("HelloContactResponse") {
     args("jython", "scripts/sport/tutorial/hello_contact_response.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Jython version of the HelloContactResponse tutorial app."
+    description = "Runs the Jython port of the HelloContactResponse tutorial app."
 }
 tasks.register<JavaExec>("HelloDamping") {
     args("jython", "scripts/sport/tutorial/hello_damping.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Jython version of the HelloDamping tutorial app."
+    description = "Runs the Jython port of the HelloDamping tutorial app."
 }
 tasks.register<JavaExec>("HelloKinematics") {
     args("jython", "scripts/sport/tutorial/hello_kinematics.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Jython version of the HelloKinematics tutorial app."
+    description = "Runs the Jython port of the HelloKinematics tutorial app."
 }
 tasks.register<JavaExec>("HelloRigidBody") {
     args("jython", "scripts/sport/tutorial/hello_rigid_body.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Jython version of the HelloRigidBody tutorial app."
+    description = "Runs the Jython port of the HelloRigidBody tutorial app."
 }
 tasks.register<JavaExec>("HelloSport") {
     args("jython", "scripts/sport/tutorial/hello_sport.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Jython version of the HelloSport tutorial app."
+    description = "Runs the Jython port of the HelloSport tutorial app."
 }
 tasks.register<JavaExec>("HelloStaticBody") {
     args("jython", "scripts/sport/tutorial/hello_static_body.py",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
-    description = "Runs the Jython version of the HelloStaticBody tutorial app."
+    description = "Runs the Jython port of the HelloStaticBody tutorial app."
 }
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")
