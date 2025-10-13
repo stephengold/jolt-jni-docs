@@ -165,8 +165,7 @@ final public class RunScript {
 
             case "luaj":
                 codeSnippet = String.format(
-                        "local %s = luajava.bindClass(\"%s\")",
-                        simpleName, fullName);
+                        "%s = luajava.bindClass(\"%s\")", simpleName, fullName);
                 break;
 
             case "nashorn":
