@@ -65,8 +65,7 @@ To run the Java version of the "HelloJoltJni" application:
 2. Edit "docs/playbook.yml" and replace "/home/sgold/NetBeansProjects/jolt-jni-docs"
   with an absolute path to your checkout directory (2 places).
 3. [Install Node.js](https://docs.antora.org/antora/latest/install-and-run-quickstart/#install-nodejs)
-4. Run the [Antora] site generator:
-  + `npx antora docs/playbook.yml`
+4. Run the [Antora] site generator: `npx antora docs/playbook.yml`
 
 ### Cleanup
 
