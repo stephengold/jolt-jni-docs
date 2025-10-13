@@ -21,6 +21,7 @@ jolt-jni-windows64avx2 = { module = "com.github.stephengold:jolt-jni-Windows64_a
 
 jsnaploader = "io.github.electrostat-lab:snaploader:1.1.1-stable"
 jython = "org.python:jython-slim:2.7.4"
+luaj-jse = "org.luaj:luaj-jse:3.0.1"
 
 lwjgl = { module = "org.lwjgl:lwjgl", version.ref = "lwjgl" }
 lwjgl-assimp = { module = "org.lwjgl:lwjgl-assimp", version.ref = "lwjgl" }
