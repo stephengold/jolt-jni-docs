@@ -195,13 +195,15 @@ final public class RunScript {
                 break;
 
             case "nashorn":
-                codeSnippet = String.format("var %s = Java.type('%s');",
-                        simpleName, fullName);
+                codeSnippet = String.format(
+                        "var %s = Java.type('%s');", simpleName, fullName);
                 break;
 
             default:
                 throw new IllegalStateException("factoryName = " + factoryName);
         }
+
+        //System.out.println(codeSnippet);
 
         try {
             scriptEngine.eval(codeSnippet);

@@ -34,7 +34,7 @@
  * author:  Stephen Gold sgold@sonic.net
  */
 
-// Import Java classes:
+// Import an additional Java class:
 var Runtime = Java.type('java.lang.Runtime');
 
 // number of object layers:

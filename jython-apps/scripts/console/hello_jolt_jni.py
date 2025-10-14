@@ -34,7 +34,7 @@
  * author:  Stephen Gold sgold@sonic.net
 """
 
-# Import Java classes:
+# Import an additional Java class:
 from java.lang import Runtime
 
 # number of object layers:
