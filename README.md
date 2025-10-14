@@ -2,7 +2,7 @@
 documentation and sample applications
 for [the Jolt-JNI physics library][joltjni].
 
-It contains 10 subprojects:
+It contains 11 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
@@ -10,10 +10,11 @@ It contains 10 subprojects:
 4. nashorn-apps: sample applications ported to [JavaScript]
 5. kotlin-apps: sample applications ported to [Kotlin]
 6. groovy-apps: sample applications ported to [Groovy]
-7. luaj-apps: sample applications ported to Luaj [Lua]
-8. luajava-apps: sample applications ported to Luajava [Lua]
-9. scala-apps: sample applications ported to [Scala]
-10. src/clojure: sample applications ported to [Clojure]
+7. jruby-apps: sample applications ported to [Ruby]
+8. luaj-apps: sample applications ported to Luaj [Lua]
+9. luajava-apps: sample applications ported to Luajava [Lua]
+10. scala-apps: sample applications ported to [Scala]
+11. src/clojure: sample applications ported to [Clojure]
 
 The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
@@ -92,5 +93,6 @@ You can restore the project to a pristine state:
 [lua]: https://en.wikipedia.org/wiki/Lua "Lua programming language"
 [project]: https://github.com/stephengold/jolt-jni-docs "jolt-jni-docs project"
 [python]: https://en.wikipedia.org/wiki/Python_(programming_language) "Python programming language"
+[ruby]: https://en.wikipedia.org/wiki/Ruby_(programming_language) "Ruby programming language"
 [scala]: https://en.wikipedia.org/wiki/Scala_(programming_language) "Scala programming language"
 [sportjolt]: https://github.com/stephengold/sport-jolt "Sport graphics engine for Jolt"

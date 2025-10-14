@@ -20,6 +20,7 @@ jolt-jni-macosxarm64 = { module = "com.github.stephengold:jolt-jni-MacOSX_ARM64"
 jolt-jni-windows64 = { module = "com.github.stephengold:jolt-jni-Windows64", version.ref = "joltjni" }
 jolt-jni-windows64avx2 = { module = "com.github.stephengold:jolt-jni-Windows64_avx2", version.ref = "joltjni" }
 
+jruby = "org.jruby:jruby-complete:9.4.14.0"
 jsnaploader = "io.github.electrostat-lab:snaploader:1.1.1-stable"
 jython = "org.python:jython-slim:2.7.4"
 luaj-jse = "org.luaj:luaj-jse:3.0.1"

@@ -17,6 +17,7 @@ dependencyResolutionManagement {
 include("docs")
 include("groovy-apps")
 include("java-apps")
+include("jruby-apps")
 include("jython-apps")
 include("kotlin-apps")
 include("luaj-apps")

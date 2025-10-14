@@ -35,6 +35,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineFactory;
@@ -142,6 +143,24 @@ final public class RunScript {
     }
 
     /**
+     * Convert the first character of the specified text to upper case.
+     *
+     * @param input the input text to convert (not null)
+     * @return the converted text (not null)
+     */
+    private static String firstToUpper(String input) {
+        String result = input;
+        if (!input.isEmpty()) {
+            String first = input.substring(0, 1);
+            first = first.toUpperCase(Locale.ROOT);
+            String rest = input.substring(1);
+            result = first + rest;
+        }
+
+        return result;
+    }
+
+    /**
      * Import the specified class into the script engine.
      *
      * @param fullName the full name of the class to import (not null)
@@ -154,6 +173,14 @@ final public class RunScript {
 
         String codeSnippet;
         switch (factoryName) {
+            case "jruby":
+                if (simpleName.equals("Mutex")) { // conflicting constant
+                    return;
+                }
+                codeSnippet = String.format(
+                        "java_import Java::%s", firstToUpper(fullName));
+                break;
+
             case "jython":
                 codeSnippet = String.format(
                         "from %s import %s", packageName, simpleName);
