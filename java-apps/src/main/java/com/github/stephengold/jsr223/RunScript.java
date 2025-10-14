@@ -83,7 +83,7 @@ final public class RunScript {
         int numArgs = arguments.length;
         if (numArgs < 2) {
             System.err.println(
-                    "Usage:  RunScript <engine> <script> <classList>...");
+                    "Usage:  RunScript <engine> <script> [ <classList> ... ]");
 
             System.out.println();
             printFactories();
