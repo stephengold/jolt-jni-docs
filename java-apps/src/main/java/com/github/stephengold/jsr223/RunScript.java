@@ -42,8 +42,9 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 /**
- * Evaluate the specified script using the specified script engine and optional
- * lists of Java classes to be imported.
+ * A console application to run the specified script using the specified JSR-223
+ * script engine, after importing all Java classes named in specified text
+ * files.
  *
  * @author Stephen Gold sgold@sonic.net
  */
@@ -56,7 +57,7 @@ final public class RunScript {
      */
     private static ScriptEngine scriptEngine;
     /**
-     * short name for the engine factory
+     * short name for the script-engine factory
      */
     private static String factoryName;
     // *************************************************************************
@@ -118,7 +119,7 @@ final public class RunScript {
     /**
      * Read and evaluate the script in the specified file.
      *
-     * @param scriptFilePath the name of the input file
+     * @param scriptFilePath path to the script file (not null)
      */
     private static void evaluateScriptFromFile(String scriptFilePath) {
         // Create a reader for the script file:
