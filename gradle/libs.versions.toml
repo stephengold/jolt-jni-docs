@@ -4,6 +4,7 @@
 
 checkstyle = "12.0.1"
 joltjni = "3.4.0"
+luajava = "4.0.2"
 lwjgl = "3.3.6"
 
 [libraries]
@@ -22,6 +23,11 @@ jolt-jni-windows64avx2 = { module = "com.github.stephengold:jolt-jni-Windows64_a
 jsnaploader = "io.github.electrostat-lab:snaploader:1.1.1-stable"
 jython = "org.python:jython-slim:2.7.4"
 luaj-jse = "org.luaj:luaj-jse:3.0.1"
+
+luajava-base = { module = "party.iroiro.luajava:luajava", version.ref = "luajava" }
+luajava-jsr223 = { module = "party.iroiro.luajava:jsr223", version.ref = "luajava" }
+luajava-lua54 = { module = "party.iroiro.luajava:lua54", version.ref = "luajava" }
+luajava-lua54-platform = { module = "party.iroiro.luajava:lua54-platform", version.ref = "luajava" }
 
 lwjgl = { module = "org.lwjgl:lwjgl", version.ref = "lwjgl" }
 lwjgl-assimp = { module = "org.lwjgl:lwjgl-assimp", version.ref = "lwjgl" }

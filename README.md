@@ -2,7 +2,7 @@
 documentation and sample applications
 for [the Jolt-JNI physics library][joltjni].
 
-It contains 9 subprojects:
+It contains 10 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
@@ -10,9 +10,10 @@ It contains 9 subprojects:
 4. nashorn-apps: sample applications ported to [JavaScript]
 5. kotlin-apps: sample applications ported to [Kotlin]
 6. groovy-apps: sample applications ported to [Groovy]
-7. luaj-apps: sample applications ported to [Lua]
-8. scala-apps: sample applications ported to [Scala]
-9. src/clojure: sample applications ported to [Clojure]
+7. luaj-apps: sample applications ported to Luaj [Lua]
+8. luajava-apps: sample applications ported to Luajava [Lua]
+9. scala-apps: sample applications ported to [Scala]
+10. src/clojure: sample applications ported to [Clojure]
 
 The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
