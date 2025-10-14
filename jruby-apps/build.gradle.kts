@@ -27,6 +27,12 @@ tasks.register<JavaExec>("HelloJoltJni") {
 }
 
 // physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloRigidBody") {
+    args("jruby", "scripts/sport/tutorial/HelloRigidBody.rb",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the JRuby port of the HelloRigidBody tutorial app."
+}
 tasks.register<JavaExec>("HelloSport") {
     args("jruby", "scripts/sport/tutorial/HelloSport.rb",
          "../class-lists/jolt-jni-classes.txt",
