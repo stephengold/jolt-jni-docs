@@ -174,7 +174,8 @@ final public class RunScript {
         String codeSnippet;
         switch (factoryName) {
             case "jruby":
-                if (simpleName.equals("Mutex")) { // conflicting constant
+                if (simpleName.equals("Geometry")
+                        || simpleName.equals("Mutex")) { // conflicting constant
                     return;
                 }
                 codeSnippet = String.format(

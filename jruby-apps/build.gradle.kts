@@ -26,6 +26,14 @@ tasks.register<JavaExec>("HelloJoltJni") {
     description = "Runs the Jruby port of the HelloJoltJni console app."
 }
 
+// physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloSport") {
+    args("jruby", "scripts/sport/tutorial/HelloSport.rb",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the JRuby port of the HelloSport tutorial app."
+}
+
 val assertions = providers.gradleProperty("assertions").get().equals("true")
 
 val os = DefaultNativePlatform.getCurrentOperatingSystem()
