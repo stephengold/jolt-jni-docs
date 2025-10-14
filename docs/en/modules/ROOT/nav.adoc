@@ -36,6 +36,7 @@
 ** https://github.com/stephengold/sport-jolt[Sport-Jolt]
 ** https://github.com/stephengold/kk-physics[KK Physics]
 ** https://github.com/xI-Mx-Ix/Velthoric[Velthoric]
+** https://github.com/emortaldev/BlockPhysics[BlockPhysics]
 * Other related projects
 ** https://jrouwe.github.io/JoltPhysics[Jolt Physics]
 ** https://stephengold.github.io/Libbulletjme[Libbulletjme]
