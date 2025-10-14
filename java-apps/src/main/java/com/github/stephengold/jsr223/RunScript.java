@@ -159,9 +159,7 @@ final public class RunScript {
                 break;
 
             case "lua54":
-                codeSnippet = String.format(
-                        "local %s = java.import(\"%s\")", simpleName, fullName);
-                break;
+                return;
 
             case "luaj":
                 codeSnippet = String.format(

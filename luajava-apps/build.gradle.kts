@@ -20,9 +20,7 @@ application {
 
 // physics console apps (no graphics)
 tasks.register<JavaExec>("HelloJoltJni") {
-    args("lua54", "scripts/console/HelloJoltJni.lua",
-         "../class-lists/jolt-jni-classes.txt",
-         "../class-lists/snap-loader-classes.txt")
+    args("lua54", "scripts/console/HelloJoltJni.lua")
     description = "Runs the LuaJava port of the HelloJoltJni console app."
 }
 
