@@ -23,7 +23,7 @@ tasks.register<JavaExec>("HelloJoltJni") {
     args("jruby", "scripts/console/HelloJoltJni.rb",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/snap-loader-classes.txt")
-    description = "Runs the Jruby port of the HelloJoltJni console app."
+    description = "Runs the JRuby port of the HelloJoltJni console app."
 }
 
 // physics tutorial apps (very simple)
