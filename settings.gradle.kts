@@ -16,6 +16,7 @@ dependencyResolutionManagement {
 // subprojects:
 include("docs")
 include("groovy-apps")
+include("groovy223-apps")
 include("java-apps")
 include("jruby-apps")
 include("jython-apps")
