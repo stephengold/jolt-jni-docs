@@ -144,7 +144,7 @@ final public class HelloCcd extends BasePhysicsApp {
         // Add an obstacle:
         ConstBody disc = addDisc();
 
-        // Visualize the shapes of all 3 bodies:
+        // Visualize the shapes of all 3 rigid bodies:
         visualizeShape(ccdBall);
         visualizeShape(controlBall);
         visualizeShape(disc).setProgram("Unshaded/Monochrome");

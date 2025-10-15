@@ -161,7 +161,7 @@ final public class RunScript {
     }
 
     /**
-     * Import the specified class into the script engine.
+     * Import the specified Java class into the script engine.
      *
      * @param fullName the full name of the class to import (not null)
      */
