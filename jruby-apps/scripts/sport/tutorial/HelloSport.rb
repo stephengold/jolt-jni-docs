@@ -116,7 +116,7 @@ application = Class.new(BasePhysicsApp) {
         $ball = bi.createBody(bcs)
         bi.addBody($ball, EActivation::Activate)
 
-        # Visualize the shapes of both bodies:
+        # Visualize the shapes of both rigid bodies:
         BasePhysicsApp.visualizeShape(floor)
         BasePhysicsApp.visualizeShape($ball)
     end

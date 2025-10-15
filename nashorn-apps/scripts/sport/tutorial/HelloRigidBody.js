@@ -94,7 +94,7 @@ var application = new HelloRigidBody() {
         // Apply an impulse to ball2 to put it on a collision course with ball1:
         ball2.addImpulse(-25, 0, 0);
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         BasePhysicsApp.visualizeShape(ball1);
         BasePhysicsApp.visualizeShape(ball2);
     },

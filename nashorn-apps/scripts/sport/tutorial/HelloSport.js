@@ -110,9 +110,10 @@ var application = new HelloSport() {
         ball = bi.createBody(bcs);
         bi.addBody(ball, EActivation.Activate);
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         BasePhysicsApp.visualizeShape(floor);
         BasePhysicsApp.visualizeShape(ball);
     }
 };
+
 application.start("HelloSport");

@@ -164,7 +164,7 @@ final public class HelloSport extends BasePhysicsApp {
         ball = bi.createBody(bcs)
         bi.addBody(ball, EActivation.Activate)
 
-        // Visualize the shapes of both bodies:
+        // Visualize the shapes of both rigid bodies:
         visualizeShape(floor)
         visualizeShape(ball)
     }
