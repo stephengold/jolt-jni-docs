@@ -42,9 +42,6 @@ import com.github.stephengold.joltjni.SphereShape
 import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
-import com.github.stephengold.joltjni.readonly.ConstBody
-import com.github.stephengold.joltjni.readonly.ConstPlane
-import com.github.stephengold.joltjni.readonly.ConstShape
 import com.github.stephengold.joltjni.readonly.Vec3Arg
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 import groovy.transform.CompileStatic
@@ -66,7 +63,7 @@ final public class HelloSport extends BasePhysicsApp {
     /**
      * falling rigid body
      */
-    private static ConstBody ball
+    private static Body ball
     // *************************************************************************
     // new methods exposed
 

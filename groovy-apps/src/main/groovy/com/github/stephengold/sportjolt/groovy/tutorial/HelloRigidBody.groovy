@@ -36,8 +36,6 @@ import com.github.stephengold.joltjni.RVec3
 import com.github.stephengold.joltjni.SphereShape
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
-import com.github.stephengold.joltjni.readonly.ConstBody
-import com.github.stephengold.joltjni.readonly.ConstShape
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 import groovy.transform.CompileStatic
 

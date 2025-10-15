@@ -49,11 +49,6 @@ import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.joltjni.enumerate.EPhysicsUpdateError
-import com.github.stephengold.joltjni.readonly.ConstBody
-import com.github.stephengold.joltjni.readonly.ConstPlane
-import com.github.stephengold.joltjni.readonly.ConstShape
-import com.github.stephengold.joltjni.readonly.RVec3Arg
-import com.github.stephengold.joltjni.readonly.Vec3Arg
 import electrostatic4j.snaploader.LibraryInfo
 import electrostatic4j.snaploader.LoadingCriterion
 import electrostatic4j.snaploader.NativeBinaryLoader
@@ -92,7 +87,7 @@ final public class HelloJoltJni {
     /**
      * falling rigid body
      */
-    private static ConstBody ball
+    private static Body ball
     /**
      * system to simulate
      */
