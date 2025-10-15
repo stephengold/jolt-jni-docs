@@ -80,9 +80,9 @@ final public class HelloRigidBody extends BasePhysicsApp {
     @Override
     protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
-        int maxBodies = 2
-        int numBpLayers = 1
-        PhysicsSystem result = createSystem(maxBodies, numBpLayers)
+        var maxBodies = 2
+        var numBpLayers = 1
+        var result = createSystem(maxBodies, numBpLayers)
 
         return result
     }
@@ -102,28 +102,28 @@ final public class HelloRigidBody extends BasePhysicsApp {
      */
     @Override
     protected void populateSystem() {
-        BodyInterface bi = physicsSystem.bodyInterface
+        var bi = physicsSystem.bodyInterface
 
         // Create a collision shape for balls:
-        float ballRadius = 1f
-        ConstShape ballShape = new SphereShape(ballRadius)
+        var ballRadius = 1f
+        var ballShape = new SphereShape(ballRadius)
 
-        BodyCreationSettings bcs = new BodyCreationSettings()
+        var bcs = new BodyCreationSettings()
         bcs.massPropertiesOverride.mass = 2f
         bcs.overrideMassProperties = EOverrideMassProperties.CalculateInertia
         bcs.shape = ballShape
 
         // Create 2 balls (dynamic rigid bodies) and add them to the system:
         bcs.position = new RVec3(1.0, 1.0, 0.0)
-        ConstBody ball1 = bi.createBody(bcs)
+        var ball1 = bi.createBody(bcs)
         bi.addBody(ball1, EActivation.Activate)
 
         bcs.position = new RVec3(5.0, 1.0, 0.0)
-        Body ball2 = bi.createBody(bcs)
+        var ball2 = bi.createBody(bcs)
         bi.addBody(ball2, EActivation.Activate)
 
         assert ball2.isDynamic()
-        float actualMass = (float)(1f / ball2.motionProperties.inverseMass)
+        var actualMass = (float)(1f / ball2.motionProperties.inverseMass)
         assert Math.abs(actualMass - 2f) < 1e-6f : "actualMass = " + actualMass
 
         // Apply an impulse to ball2 to put it on a collision course with ball1:

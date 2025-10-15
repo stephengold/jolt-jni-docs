@@ -106,8 +106,8 @@ final public class HelloJoltJni {
      * @param arguments array of command-line arguments (not null)
      */
     static void main(String[] arguments) {
-        LibraryInfo info = new LibraryInfo(null, 'joltjni', DirectoryPath.USER_DIR)
-        NativeBinaryLoader loader = new NativeBinaryLoader(info)
+        var info = new LibraryInfo(null, 'joltjni', DirectoryPath.USER_DIR)
+        var loader = new NativeBinaryLoader(info)
 
         NativeDynamicLibrary[] libraries = [
             new NativeDynamicLibrary('linux/aarch64/com/github/stephengold',
@@ -136,7 +136,7 @@ final public class HelloJoltJni {
         Jolt.registerDefaultAllocator() // tell Jolt Physics to use malloc/free
         Jolt.installDefaultAssertCallback()
         Jolt.installDefaultTraceCallback()
-        boolean success = Jolt.newFactory()
+        var success = Jolt.newFactory()
         assert success
         Jolt.registerTypes()
 
@@ -144,19 +144,19 @@ final public class HelloJoltJni {
         populateSystem()
         physicsSystem.optimizeBroadPhase()
 
-        TempAllocator tempAllocator = new TempAllocatorMalloc()
-        int numWorkerThreads = Runtime.runtime.availableProcessors()
-        JobSystem jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
+        var tempAllocator = new TempAllocatorMalloc()
+        var numWorkerThreads = Runtime.runtime.availableProcessors()
+        var jobSystem = new JobSystemThreadPool(Jolt.cMaxPhysicsJobs,
             Jolt.cMaxPhysicsBarriers, numWorkerThreads)
 
-        float timePerStep = 0.02f // in seconds
+        var timePerStep = 0.02f // in seconds
         for (int iteration = 0; iteration < 50; ++iteration) {
-            int collisionSteps = 1
-            int errors = physicsSystem.update(
+            var collisionSteps = 1
+            var errors = physicsSystem.update(
                 timePerStep, collisionSteps, tempAllocator, jobSystem)
             assert errors == EPhysicsUpdateError.None : errors
 
-            RVec3Arg location = ball.position
+            var location = ball.position
             System.out.println(location)
         }
     }
@@ -170,9 +170,9 @@ final public class HelloJoltJni {
      */
     private static PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
-        int numBpLayers = 1
+        var numBpLayers = 1
 
-        ObjectLayerPairFilterTable ovoFilter = new ObjectLayerPairFilterTable(NUM_OBJ_LAYERS)
+        var ovoFilter = new ObjectLayerPairFilterTable(NUM_OBJ_LAYERS)
         // Enable collisions between 2 moving bodies:
         ovoFilter.enableCollision(OBJ_LAYER_MOVING, OBJ_LAYER_MOVING)
         // Enable collisions between a moving body and a non-moving one:
@@ -181,21 +181,21 @@ final public class HelloJoltJni {
         ovoFilter.disableCollision(OBJ_LAYER_NONMOVING, OBJ_LAYER_NONMOVING)
 
         // Map both object layers to broadphase layer 0:
-        BroadPhaseLayerInterfaceTable layerMap = new BroadPhaseLayerInterfaceTable(NUM_OBJ_LAYERS, numBpLayers)
+        var layerMap = new BroadPhaseLayerInterfaceTable(NUM_OBJ_LAYERS, numBpLayers)
         layerMap.mapObjectToBroadPhaseLayer(OBJ_LAYER_MOVING, 0)
         layerMap.mapObjectToBroadPhaseLayer(OBJ_LAYER_NONMOVING, 0)
 
         // Rules for colliding object layers with broadphase layers:
-        ObjectVsBroadPhaseLayerFilter ovbFilter = new ObjectVsBroadPhaseLayerFilterTable(
+        var ovbFilter = new ObjectVsBroadPhaseLayerFilterTable(
             layerMap, numBpLayers, ovoFilter, NUM_OBJ_LAYERS)
 
-        PhysicsSystem result = new PhysicsSystem()
+        var result = new PhysicsSystem()
 
         // Set high limits, even though this sample app uses only 2 bodies:
-        int maxBodies = 5_000
-        int numBodyMutexes = 0 // 0 means "use the default number"
-        int maxBodyPairs = 65_536
-        int maxContacts = 20_480
+        var maxBodies = 5_000
+        var numBodyMutexes = 0 // 0 means "use the default number"
+        var maxBodyPairs = 65_536
+        var maxContacts = 20_480
         result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
             layerMap, ovbFilter, ovoFilter)
 
@@ -207,23 +207,23 @@ final public class HelloJoltJni {
      * initialization.
      */
     private static void populateSystem() {
-        BodyInterface bi = physicsSystem.bodyInterface
+        var bi = physicsSystem.bodyInterface
 
         // Add a static horizontal plane at y=-1:
-        float groundY = -1f
-        Vec3Arg normal = Vec3.sAxisY()
-        ConstPlane plane = new Plane(normal, -groundY)
-        ConstShape floorShape = new PlaneShape(plane)
-        BodyCreationSettings bcs = new BodyCreationSettings()
+        var groundY = -1f
+        var normal = Vec3.sAxisY()
+        var plane = new Plane(normal, -groundY)
+        var floorShape = new PlaneShape(plane)
+        var bcs = new BodyCreationSettings()
         bcs.motionType = EMotionType.Static
         bcs.objectLayer = OBJ_LAYER_NONMOVING
         bcs.shape = floorShape
-        Body floor = bi.createBody(bcs)
+        var floor = bi.createBody(bcs)
         bi.addBody(floor, EActivation.DontActivate)
 
         // Add a sphere-shaped, dynamic, rigid body at the origin:
-        float ballRadius = 0.3f
-        ConstShape ballShape = new SphereShape(ballRadius)
+        var ballRadius = 0.3f
+        var ballShape = new SphereShape(ballRadius)
         bcs.motionType = EMotionType.Dynamic
         bcs.objectLayer = OBJ_LAYER_MOVING
         bcs.shape = ballShape

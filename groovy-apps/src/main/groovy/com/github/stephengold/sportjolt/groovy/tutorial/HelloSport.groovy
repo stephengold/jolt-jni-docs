@@ -76,7 +76,7 @@ final public class HelloSport extends BasePhysicsApp {
      * @param arguments array of command-line arguments (not null)
      */
     static void main(String[] arguments) {
-        HelloSport application = new HelloSport()
+        var application = new HelloSport()
         application.start()
         /*
          * During initialization, BasePhysicsApp loads the native library
@@ -94,9 +94,9 @@ final public class HelloSport extends BasePhysicsApp {
     @Override
     protected PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
-        int numBpLayers = 1
+        var numBpLayers = 1
 
-        ObjectLayerPairFilterTable ovoFilter = new ObjectLayerPairFilterTable(numObjLayers)
+        var ovoFilter = new ObjectLayerPairFilterTable(numObjLayers)
         // Enable collisions between 2 moving bodies:
         ovoFilter.enableCollision(objLayerMoving, objLayerMoving)
         // Enable collisions between a moving body and a non-moving one:
@@ -105,21 +105,21 @@ final public class HelloSport extends BasePhysicsApp {
         ovoFilter.disableCollision(objLayerNonMoving, objLayerNonMoving)
 
         // Map both object layers to broadphase layer 0:
-        BroadPhaseLayerInterfaceTable layerMap = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
+        var layerMap = new BroadPhaseLayerInterfaceTable(numObjLayers, numBpLayers)
         layerMap.mapObjectToBroadPhaseLayer(objLayerMoving, 0)
         layerMap.mapObjectToBroadPhaseLayer(objLayerNonMoving, 0)
 
         // Rules for colliding object layers with broadphase layers:
-        ObjectVsBroadPhaseLayerFilter ovbFilter = new ObjectVsBroadPhaseLayerFilterTable(
+        var ovbFilter = new ObjectVsBroadPhaseLayerFilterTable(
             layerMap, numBpLayers, ovoFilter, numObjLayers)
 
-        PhysicsSystem result = new PhysicsSystem()
+        var result = new PhysicsSystem()
 
         // Set high limits, even though this sample app uses only 2 bodies:
-        int maxBodies = 5_000
-        int numBodyMutexes = 0 // 0 means "use the default number"
-        int maxBodyPairs = 65_536
-        int maxContacts = 20_480
+        var maxBodies = 5_000
+        var numBodyMutexes = 0 // 0 means "use the default number"
+        var maxBodyPairs = 65_536
+        var maxContacts = 20_480
         result.init(maxBodies, numBodyMutexes, maxBodyPairs, maxContacts,
             layerMap, ovbFilter, ovoFilter)
 
@@ -141,23 +141,23 @@ final public class HelloSport extends BasePhysicsApp {
      */
     @Override
     protected void populateSystem() {
-        BodyInterface bi = physicsSystem.bodyInterface
+        var bi = physicsSystem.bodyInterface
 
         // Add a static horizontal plane at y=-1:
-        float groundY = -1f
-        Vec3Arg normal = Vec3.sAxisY()
-        ConstPlane plane = new Plane(normal, -groundY)
-        ConstShape floorShape = new PlaneShape(plane)
-        BodyCreationSettings bcs = new BodyCreationSettings()
+        var groundY = -1f
+        var normal = Vec3.sAxisY()
+        var plane = new Plane(normal, -groundY)
+        var floorShape = new PlaneShape(plane)
+        var bcs = new BodyCreationSettings()
         bcs.motionType = EMotionType.Static
         bcs.objectLayer = objLayerNonMoving
         bcs.shape = floorShape
-        Body floor = bi.createBody(bcs)
+        var floor = bi.createBody(bcs)
         bi.addBody(floor, EActivation.DontActivate)
 
         // Add a sphere-shaped, dynamic, rigid body at the origin:
-        float ballRadius = 0.3f
-        ConstShape ballShape = new SphereShape(ballRadius)
+        var ballRadius = 0.3f
+        var ballShape = new SphereShape(ballRadius)
         bcs.motionType = EMotionType.Dynamic
         bcs.objectLayer = objLayerMoving
         bcs.shape = ballShape
