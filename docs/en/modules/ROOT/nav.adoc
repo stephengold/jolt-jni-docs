@@ -33,6 +33,7 @@
 ** https://jitpack.io/#stephengold/jolt-jni[JitPack (unofficial)]
 * Projects using Jolt JNI
 ** https://github.com/stephengold/jolt-jni-docs[jolt-jni-docs]
+** https://github.com/stephengold/jolt-jni-droid[jolt-jni-droid]
 ** https://github.com/stephengold/sport-jolt[Sport-Jolt]
 ** https://github.com/stephengold/kk-physics[KK Physics]
 ** https://github.com/xI-Mx-Ix/Velthoric[Velthoric]
