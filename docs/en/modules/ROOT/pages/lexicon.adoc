@@ -409,7 +409,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/readonly/ConstMotionProperties.html[ConstMotionProperties]
 
 |{url-jolt}motor_settings.html[JPH::MotorSettings]
-|{url-api}/MotorSettings.html[MotorSettings]
+|{url-api}/MotorSettings.html[MotorSettings] +
+ {url-api}/readonly/ConstMotorSettings.html[ConstMotorSettings]
 
 |{url-jolt}motorcycle_controller.html[JPH::MotorcycleController]
 |{url-api}/MotorcycleController.html[MotorcycleController]
