@@ -136,7 +136,7 @@ final public class HelloSensor
      * @return a new object
      */
     @Override
-    protected PhysicsSystem createSystem() {
+    public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int maxBodies = 3;
         int numBpLayers = 1;
@@ -304,13 +304,13 @@ final public class HelloSensor
     private void addContact(long body1Va, long body2Va) {
         long ghostVa = sensor.va();
         if (body1Va == ghostVa) {
-            ConstBody other = new Body(body2Va);
+            ConstBody other = new Body(body2Va); // TODO 2 args
             if (!other.isStatic()) {
                 hadContact = true;
             }
 
         } else if (body2Va == ghostVa) {
-            ConstBody other = new Body(body1Va);
+            ConstBody other = new Body(body1Va); // TODO 2 args
             if (!other.isStatic()) {
                 hadContact = true;
             }

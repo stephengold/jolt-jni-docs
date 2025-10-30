@@ -84,7 +84,7 @@ final public class HelloDamping extends BasePhysicsApp {
      * @return a new object
      */
     @Override
-    protected PhysicsSystem createSystem() {
+    public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int maxBodies = 4;
         int numBpLayers = 1;

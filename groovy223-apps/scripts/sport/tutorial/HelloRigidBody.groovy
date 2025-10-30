@@ -64,7 +64,7 @@ class HelloRigidBody extends BasePhysicsApp {
      * @return a new object
      */
     @Override
-    protected PhysicsSystem createSystem() {
+    public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         var maxBodies = 2
         var numBpLayers = 1

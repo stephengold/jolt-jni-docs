@@ -93,7 +93,7 @@ final public class HelloKinematics
      * @return a new object
      */
     @Override
-    protected PhysicsSystem createSystem() {
+    public PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         int maxBodies = 2;
         int numBpLayers = 1;
