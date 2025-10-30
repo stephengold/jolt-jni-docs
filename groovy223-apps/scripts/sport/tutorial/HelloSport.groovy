@@ -53,10 +53,10 @@ import groovy.transform.CompileStatic
  *
  * @author Stephen Gold sgold@sonic.net
  */
-application = new HelloSport()
+application = new App()
 application.start()
 
-class HelloSport extends BasePhysicsApp {
+class App extends BasePhysicsApp {
 
     // *************************************************************************
     // fields

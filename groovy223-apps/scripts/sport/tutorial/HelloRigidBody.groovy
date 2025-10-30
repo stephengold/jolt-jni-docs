@@ -51,10 +51,10 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp
  *
  * @author Stephen Gold sgold@sonic.net
  */
-application = new HelloRigidBody()
+application = new App()
 application.start()
 
-class HelloRigidBody extends BasePhysicsApp {
+class App extends BasePhysicsApp {
     // *************************************************************************
     // BasePhysicsApp methods
 
