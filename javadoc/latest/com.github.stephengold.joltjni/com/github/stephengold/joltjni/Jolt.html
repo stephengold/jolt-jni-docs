@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -852,7 +853,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="detLog(java.lang.String)">
 <h3>detLog</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">detLog</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
-<div class="block">Append a message to the determinism log.</div>
+<div class="block">Append a message to the determinism log. (native macro: JPH_DET_LOG)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>message</code> - (not null)</dd>
@@ -1078,17 +1079,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="installDefaultAssertCallback()">
-<h3>installDefaultAssertCallback</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installDefaultAssertCallback</span>()</div>
-<div class="block">Install the default assert callback.</div>
-</section>
-</li>
-<li>
 <section class="detail" id="installCerrTraceCallback()">
 <h3>installCerrTraceCallback</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installCerrTraceCallback</span>()</div>
 <div class="block">Install an alternative trace callback that uses <code>cerr</code>.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="installDefaultAssertCallback()">
+<h3>installDefaultAssertCallback</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installDefaultAssertCallback</span>()</div>
+<div class="block">Install the default assert callback.</div>
 </section>
 </li>
 <li>
@@ -1251,7 +1252,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="profileDump(java.lang.String)">
 <h3>profileDump</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">profileDump</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
-<div class="block">Dump profiler data.</div>
+<div class="block">Dump profiler data. (native macro: JPH_PROFILE_DUMP)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>message</code> - (not null)</dd>
@@ -1262,21 +1263,22 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="profileEnd()">
 <h3>profileEnd</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">profileEnd</span>()</div>
-<div class="block">Terminate the profiler.</div>
+<div class="block">Terminate the profiler. (native macro: JPH_PROFILE_END)</div>
 </section>
 </li>
 <li>
 <section class="detail" id="profileNextFrame()">
 <h3>profileNextFrame</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">profileNextFrame</span>()</div>
-<div class="block">Increment the profiler's frame counter.</div>
+<div class="block">Increment the profiler's frame counter. (native macro:
+ JPH_PROFILE_NEXTFRAME)</div>
 </section>
 </li>
 <li>
 <section class="detail" id="profileStart(java.lang.String)">
 <h3>profileStart</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">profileStart</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block">Start an instrumented code section.</div>
+<div class="block">Start an instrumented code section. (native macro: JPH_PROFILE_START)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - the section name (not null)</dd>
@@ -1560,7 +1562,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="sSetNextCharacterId(int)">
 <h3>sSetNextCharacterId</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sSetNextCharacterId</span><wbr><span class="parameters">(int&nbsp;nextValue)</span></div>
-<div class="block">Set the next available character ID to the specified value.</div>
+<div class="block">Set the next available character ID to the specified value. (native
+ function: <code>CharacterID::sSetNextCharacterID</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>nextValue</code> - the desired next ID</dd>

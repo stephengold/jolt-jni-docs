@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -221,13 +222,27 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the constraint's type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getWheelLocalBasis</a><wbr>(<a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a>&nbsp;wheel,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheel(int)" class="member-name-link">getWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the specified wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getWheelLocalBasis</a><wbr>(<a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a>&nbsp;wheel,
  <a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeForward,
  <a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeUp,
  <a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeRight)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the basis vectors for the specified wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelPositionAndRotation(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)" class="member-name-link">getWheelPositionAndRotation</a><wbr>(int&nbsp;wheelIndex,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;right,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storePosition,
+ <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeRotation)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the world transform of the specified wheel.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelWorldTransform(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getWheelWorldTransform</a><wbr>(int&nbsp;wheelIndex,
@@ -579,6 +594,21 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 </section>
 </li>
 <li>
+<section class="detail" id="getWheel(int)">
+<h3>getWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></span>&nbsp;<span class="element-name">getWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
+<div class="block">Access the specified wheel.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraint.html#getWheel(int)">getWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>wheelIndex</code> - the index of the wheel to access (&ge;0)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)">
 <h3>getWheelLocalBasis</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getWheelLocalBasis</span><wbr><span class="parameters">(<a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a>&nbsp;wheel,
@@ -594,6 +624,31 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dd><code>storeForward</code> - storage for the forward vector (not null, modified)</dd>
 <dd><code>storeUp</code> - storage for the up vector (not null, modified)</dd>
 <dd><code>storeRight</code> - storage for the right vector (not null, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWheelPositionAndRotation(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)">
+<h3>getWheelPositionAndRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getWheelPositionAndRotation</span><wbr><span class="parameters">(int&nbsp;wheelIndex,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;right,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storePosition,
+ <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeRotation)</span></div>
+<div class="block">Copy the world transform of the specified wheel. The constraint is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraint.html#getWheelPositionAndRotation(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)">getWheelPositionAndRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>wheelIndex</code> - the index of the wheel to query (&ge;0)</dd>
+<dd><code>right</code> - the wheel's axis of rotation (a unit vector in the wheel's
+ model space)</dd>
+<dd><code>up</code> - the "up" direction (a unit vector in the wheel's model space)</dd>
+<dd><code>storePosition</code> - storage for the translation component (not null,
+ modified)</dd>
+<dd><code>storeRotation</code> - storage for the rotation component (not null,
+ modified)</dd>
 </dl>
 </section>
 </li>

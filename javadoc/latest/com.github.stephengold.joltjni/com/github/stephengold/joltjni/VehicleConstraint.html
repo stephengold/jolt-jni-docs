@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -103,7 +104,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VehicleConstraint</span>
 <span class="extends-implements">extends <a href="Constraint.html" title="class in com.github.stephengold.joltjni">Constraint</a>
 implements <a href="readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></span></div>
-<div class="block">A special <code>Constraint</code> used in vehicle simulation.</div>
+<div class="block">A special single-body <code>Constraint</code> used in vehicle simulation.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -214,65 +215,74 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the basis vectors for the specified wheel.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelWorldTransform(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getWheelWorldTransform</a><wbr>(int&nbsp;wheelIndex,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelPositionAndRotation(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)" class="member-name-link">getWheelPositionAndRotation</a><wbr>(int&nbsp;wheelIndex,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;right,
- <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up)</code></div>
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storePosition,
+ <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeRotation)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the world transform of the specified wheel.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldUp()" class="member-name-link">getWorldUp</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWheelWorldTransform(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getWheelWorldTransform</a><wbr>(int&nbsp;wheelIndex,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;right,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the world transform of the specified wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldUp()" class="member-name-link">getWorldUp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the "up" direction based on gravity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isGravityOverridden()" class="member-name-link">isGravityOverridden</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isGravityOverridden()" class="member-name-link">isGravityOverridden</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether gravity is overridden.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#overrideGravity(float,float,float)" class="member-name-link">overrideGravity</a><wbr>(float&nbsp;ax,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#overrideGravity(float,float,float)" class="member-name-link">overrideGravity</a><wbr>(float&nbsp;ax,
  float&nbsp;ay,
  float&nbsp;az)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Override the vehicle's gravity vector.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#overrideGravity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">overrideGravity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;acceleration)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Override the vehicle's gravity vector.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetGravityOverride()" class="member-name-link">resetGravityOverride</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#overrideGravity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">overrideGravity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;acceleration)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Override the vehicle's gravity vector.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetGravityOverride()" class="member-name-link">resetGravityOverride</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Remove the gravity override, if any.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxPitchRollAngle(float)" class="member-name-link">setMaxPitchRollAngle</a><wbr>(float&nbsp;angle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxPitchRollAngle(float)" class="member-name-link">setMaxPitchRollAngle</a><wbr>(float&nbsp;angle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the vehicle's maximum pitch/roll angle.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumStepsBetweenCollisionTestActive(int)" class="member-name-link">setNumStepsBetweenCollisionTestActive</a><wbr>(int&nbsp;numSteps)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumStepsBetweenCollisionTestActive(int)" class="member-name-link">setNumStepsBetweenCollisionTestActive</a><wbr>(int&nbsp;numSteps)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the number of simulation steps between wheel-collision tests when
  the vehicle is active.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumStepsBetweenCollisionTestInactive(int)" class="member-name-link">setNumStepsBetweenCollisionTestInactive</a><wbr>(int&nbsp;numSteps)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumStepsBetweenCollisionTestInactive(int)" class="member-name-link">setNumStepsBetweenCollisionTestInactive</a><wbr>(int&nbsp;numSteps)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the number of simulation steps between wheel-collision tests when
  the vehicle is inactive.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVehicleCollisionTester(com.github.stephengold.joltjni.VehicleCollisionTester)" class="member-name-link">setVehicleCollisionTester</a><wbr>(<a href="VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a>&nbsp;tester)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVehicleCollisionTester(com.github.stephengold.joltjni.VehicleCollisionTester)" class="member-name-link">setVehicleCollisionTester</a><wbr>(<a href="VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a>&nbsp;tester)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Replace the collision tester.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleConstraintRef.html" title="class in com.github.stephengold.joltjni">VehicleConstraintRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the native <code>VehicleConstraint</code>.</div>
 </div>
 </div>
@@ -371,19 +381,6 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the pre-existing instance or <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getWheel(int)">
-<h3>getWheel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></span>&nbsp;<span class="element-name">getWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
-<div class="block">Access the specified wheel.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>wheelIndex</code> - the index of the wheel to access (&ge;0)</dd>
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
 </section>
 </li>
@@ -593,6 +590,21 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 </section>
 </li>
 <li>
+<section class="detail" id="getWheel(int)">
+<h3>getWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></span>&nbsp;<span class="element-name">getWheel</span><wbr><span class="parameters">(int&nbsp;wheelIndex)</span></div>
+<div class="block">Access the specified wheel.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraint.html#getWheel(int)">getWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>wheelIndex</code> - the index of the wheel to access (&ge;0)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)">
 <h3>getWheelLocalBasis</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getWheelLocalBasis</span><wbr><span class="parameters">(<a href="Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a>&nbsp;wheel,
@@ -608,6 +620,31 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dd><code>storeForward</code> - storage for the forward vector (not null, modified)</dd>
 <dd><code>storeUp</code> - storage for the up vector (not null, modified)</dd>
 <dd><code>storeRight</code> - storage for the right vector (not null, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWheelPositionAndRotation(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)">
+<h3>getWheelPositionAndRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getWheelPositionAndRotation</span><wbr><span class="parameters">(int&nbsp;wheelIndex,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;right,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storePosition,
+ <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeRotation)</span></div>
+<div class="block">Copy the world transform of the specified wheel. The constraint is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleConstraint.html#getWheelPositionAndRotation(int,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)">getWheelPositionAndRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>wheelIndex</code> - the index of the wheel to query (&ge;0)</dd>
+<dd><code>right</code> - the wheel's axis of rotation (a unit vector in the wheel's
+ model space)</dd>
+<dd><code>up</code> - the "up" direction (a unit vector in the wheel's model space)</dd>
+<dd><code>storePosition</code> - storage for the translation component (not null,
+ modified)</dd>
+<dd><code>storeRotation</code> - storage for the rotation component (not null,
+ modified)</dd>
 </dl>
 </section>
 </li>

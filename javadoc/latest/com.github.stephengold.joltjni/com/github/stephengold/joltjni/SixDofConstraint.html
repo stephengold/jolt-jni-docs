@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -416,7 +417,7 @@ loadScripts(document, 'script');</script>
 <h3>getTargetAngularVelocityCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getTargetAngularVelocityCs</span>()</div>
 <div class="block">Copy the target velocities of the angular motors. The constraint is
- unaffected. (native method: GetTargetAngularVelocityCS)</div>
+ unaffected. (native function: GetTargetAngularVelocityCS)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new angular velocity vector (radians per second in body 2
@@ -429,7 +430,7 @@ loadScripts(document, 'script');</script>
 <h3>getTargetPositionCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getTargetPositionCs</span>()</div>
 <div class="block">Copy the target position of the linear motors. The constraint is
- unaffected. (native method: GetTargetPositionCS)</div>
+ unaffected. (native function: GetTargetPositionCS)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new offset vector (meters in body 1 constraint space)</dd>
@@ -441,7 +442,7 @@ loadScripts(document, 'script');</script>
 <h3>getTargetOrientationCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></span>&nbsp;<span class="element-name">getTargetOrientationCs</span>()</div>
 <div class="block">Copy the target orientation of the angular motors. The constraint is
- unaffected. (native method: GetTargetOrientationCS)</div>
+ unaffected. (native function: GetTargetOrientationCS)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the target orientation (in constraint space)</dd>
@@ -453,7 +454,7 @@ loadScripts(document, 'script');</script>
 <h3>getTargetVelocityCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getTargetVelocityCs</span>()</div>
 <div class="block">Copy the target velocities of the linear motors. The constraint is
- unaffected. (native method: GetTargetVelocityCS)</div>
+ unaffected. (native function: GetTargetVelocityCS)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new linear velocity vector (meters per second in body 1
@@ -567,7 +568,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTargetVelocityCs(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setTargetVelocityCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTargetVelocityCs</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</span></div>
-<div class="block">Alter the target velocities of the linear motors. (native method:
+<div class="block">Alter the target velocities of the linear motors. (native function:
  SetTargetVelocityCS)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -580,7 +581,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTargetAngularVelocityCs(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setTargetAngularVelocityCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTargetAngularVelocityCs</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;omega)</span></div>
-<div class="block">Alter the target velocities of the angular motors. (native method:
+<div class="block">Alter the target velocities of the angular motors. (native function:
  SetTargetAngularVelocityCS)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -593,7 +594,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTargetPositionCs(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setTargetPositionCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTargetPositionCs</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offsets)</span></div>
-<div class="block">Alter the target position of the linear motors. (native method:
+<div class="block">Alter the target position of the linear motors. (native function:
  SetTargetPositionCS)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -606,7 +607,7 @@ loadScripts(document, 'script');</script>
 <h3>setTargetOrientationBs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTargetOrientationBs</span><wbr><span class="parameters">(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;orientation)</span></div>
 <div class="block">Alter the target orientation of the angular motors in body space. (native
- method: SetTargetOrientationBS)</div>
+ function: SetTargetOrientationBS)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>orientation</code> - the desired target orientation (not null, unaffected)</dd>
@@ -617,7 +618,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTargetOrientationCs(com.github.stephengold.joltjni.readonly.QuatArg)">
 <h3>setTargetOrientationCs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTargetOrientationCs</span><wbr><span class="parameters">(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;orientation)</span></div>
-<div class="block">Alter the target orientation of the angular motors. (native method:
+<div class="block">Alter the target orientation of the angular motors. (native function:
  SetTargetOrientationCS)</div>
 <dl class="notes">
 <dt>Parameters:</dt>

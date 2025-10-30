@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -278,67 +279,72 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the character's shape.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShapeOffset()" class="member-name-link">getShapeOffset</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape(com.github.stephengold.joltjni.ShapeRefC)" class="member-name-link">getShape</a><wbr>(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;storeRef)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Update the specified counted reference to refer to the character's shape.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShapeOffset()" class="member-name-link">getShapeOffset</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the local offset applied to the shape.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTransformedShape()" class="member-name-link">getTransformedShape</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TransformedShape.html" title="class in com.github.stephengold.joltjni">TransformedShape</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTransformedShape()" class="member-name-link">getTransformedShape</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Generate a TransformedShape that represents the volume occupied by the
  character.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUp()" class="member-name-link">getUp</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUp()" class="member-name-link">getUp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the character's "up" direction.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserData()" class="member-name-link">getUserData</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserData()" class="member-name-link">getUserData</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the character's user data: can be used for anything.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldTransform()" class="member-name-link">getWorldTransform</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldTransform()" class="member-name-link">getWorldTransform</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate the character's local-to-system coordinate transform.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCollidedWith(int)" class="member-name-link">hasCollidedWith</a><wbr>(int&nbsp;bodyId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCollidedWith(int)" class="member-name-link">hasCollidedWith</a><wbr>(int&nbsp;bodyId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the character is in contact with or collided with the
  specified body during the previous time step.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCollidedWith(com.github.stephengold.joltjni.readonly.ConstCharacterVirtual)" class="member-name-link">hasCollidedWith</a><wbr>(<a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a>&nbsp;otherCharacter)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCollidedWith(com.github.stephengold.joltjni.readonly.ConstCharacterVirtual)" class="member-name-link">hasCollidedWith</a><wbr>(<a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a>&nbsp;otherCharacter)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the character is in contact with or has collided with the
  specified character during the previous time step.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">isSlopeTooSteep</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;normal)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">isSlopeTooSteep</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;normal)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the specified normal direction is too steep.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSupported()" class="member-name-link">isSupported</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSupported()" class="member-name-link">isSupported</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the character is supported.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveState(com.github.stephengold.joltjni.StateRecorder)" class="member-name-link">saveState</a><wbr>(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveState(com.github.stephengold.joltjni.StateRecorder)" class="member-name-link">saveState</a><wbr>(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Save the character's state to the specified recorder.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the address of the native <code>CharacterVirtual</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterVirtualRefC.html" title="class in com.github.stephengold.joltjni">CharacterVirtualRefC</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterVirtualRefC.html" title="class in com.github.stephengold.joltjni">CharacterVirtualRefC</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create another counted reference to the native <code>CharacterVirtual</code>.</div>
 </div>
 </div>
@@ -388,8 +394,8 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterVirtual.html#cancelVelocityTowardsSteepSlopes(com.github.stephengold.joltjni.readonly.Vec3Arg)">cancelVelocityTowardsSteepSlopes</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new velocity vector (in system coordinates)</dd>
 </dl>
@@ -405,8 +411,8 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterVirtual.html#canWalkStairs(com.github.stephengold.joltjni.readonly.Vec3Arg)">canWalkStairs</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if too step to walk, otherwise <code>false</code></dd>
 </dl>
@@ -576,7 +582,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterBase.html#getGroundState()">getGroundState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -641,7 +647,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block">Return the character's ID. The character is unaffected. (native method:
+<div class="block">Return the character's ID. The character is unaffected. (native function:
  GetID)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -656,7 +662,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <h3>getInnerBodyId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getInnerBodyId</span>()</div>
 <div class="block">Return the ID of the inner body. The character is unaffected. (native
- method: GetInnerBodyID)</div>
+ function: GetInnerBodyID)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterVirtual.html#getInnerBodyId()">getInnerBodyId</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
@@ -770,9 +776,9 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dd><code><a href="readonly/ConstCharacterVirtual.html#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)">getPositionAndRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>storeLocation</code> - storage for the location (in system coordinates, not
- null, modified)</dd>
+ <code>null</code>, modified)</dd>
 <dd><code>storeOrientation</code> - storage for the orientation (in system
- coordinates, not null, modified)</dd>
+ coordinates, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -814,6 +820,20 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Returns:</dt>
 <dd>a new immutable JVM object with the pre-existing native object
  assigned, or <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getShape(com.github.stephengold.joltjni.ShapeRefC)">
+<h3>getShape</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getShape</span><wbr><span class="parameters">(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;storeRef)</span></div>
+<div class="block">Update the specified counted reference to refer to the character's shape.
+ The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getShape(com.github.stephengold.joltjni.ShapeRefC)">getShape</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeRef</code> - storage for the reference (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -913,7 +933,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterVirtual.html#hasCollidedWith(com.github.stephengold.joltjni.readonly.ConstCharacterVirtual)">hasCollidedWith</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>otherCharacter</code> - the character to test against (not null,
+<dd><code>otherCharacter</code> - the character to test against (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if contact or collision, otherwise <code>false</code></dd>
@@ -930,7 +950,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterBase.html#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)">isSlopeTooSteep</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>normal</code> - the surface normal to test (not null, unaffected)</dd>
+<dd><code>normal</code> - the surface normal to test (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if too steep, otherwise <code>false</code></dd>
 </dl>
@@ -959,7 +979,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterBase.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>recorder</code> - the recorder to save to (not null)</dd>
+<dd><code>recorder</code> - the recorder to save to (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
