@@ -91,7 +91,7 @@ final public class HelloPivot
     // new methods exposed
 
     /**
-     * Main entry point for the HelloConstraint application.
+     * Main entry point for the HelloPivot application.
      *
      * @param arguments array of command-line arguments (not null)
      */

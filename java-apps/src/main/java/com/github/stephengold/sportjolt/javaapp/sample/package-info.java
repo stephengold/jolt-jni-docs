@@ -27,6 +27,6 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 /**
- * Sport-Jolt sample applications in Java.
+ * Sport-Jolt sample applications in Java, based on BasePhysicsApp.
  */
 package com.github.stephengold.sportjolt.javaapp.sample;

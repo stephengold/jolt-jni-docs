@@ -87,7 +87,7 @@ final public class HelloServo extends BasePhysicsApp {
     // new methods exposed
 
     /**
-     * Main entry point for the HelloMotor application.
+     * Main entry point for the HelloServo application.
      *
      * @param arguments array of command-line arguments (not null)
      */
