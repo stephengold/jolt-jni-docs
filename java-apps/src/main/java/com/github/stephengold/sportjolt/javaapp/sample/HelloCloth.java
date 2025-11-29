@@ -177,8 +177,8 @@ final public class HelloCloth extends BasePhysicsApp {
     }
 
     /**
-     * Generate a shared-settings object using the positions and faces in a
-     * TriangleList mesh.
+     * Generate a shared-settings object using the positions and faces in the
+     * specified TriangleList mesh.
      *
      * @param mesh the mesh to use (not null, unaffected)
      * @return a new object
