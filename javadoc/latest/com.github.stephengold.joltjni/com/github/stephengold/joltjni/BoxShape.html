@@ -208,7 +208,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate a cubic shape with the specified half extents.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>halfExtent</code> - the desired half extents (&ge;0.05)</dd>
+<dd><code>halfExtent</code> - the desired half extents (&gt;0)</dd>
 </dl>
 </section>
 </li>
@@ -221,12 +221,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate a shape with the specified half extents.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>xHalfExtent</code> - the desired half extents on the local X axis
- (&ge;0.05)</dd>
-<dd><code>yHalfExtent</code> - the desired half extents on the local Y axis
- (&ge;0.05)</dd>
-<dd><code>zHalfExtent</code> - the desired half extents on the local Z axis
- (&ge;0.05)</dd>
+<dd><code>xHalfExtent</code> - the desired half extent on the local X axis (&gt;0)</dd>
+<dd><code>yHalfExtent</code> - the desired half extent on the local Y axis (&gt;0)</dd>
+<dd><code>zHalfExtent</code> - the desired half extent on the local Z axis (&gt;0)</dd>
 </dl>
 </section>
 </li>
@@ -238,7 +235,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>halfExtents</code> - the desired half extents on each local axis (not null,
- all components &ge;0.05, unaffected)</dd>
+ all components &gt;0, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -266,7 +263,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>halfExtents</code> - the desired half extents on each local axis (not null,
- all components &ge;convexRadius, unaffected)</dd>
+ all components &gt;0, unaffected)</dd>
 <dd><code>convexRadius</code> - the desired convex radius (default=0.05)</dd>
 <dd><code>material</code> - the desired material (default=null)</dd>
 </dl>
