@@ -3,7 +3,7 @@
 [versions]
 
 checkstyle = "12.3.0"
-joltjni = "3.5.0"
+joltjni = "3.5.1"
 luajava = "4.0.2"
 lwjgl = "3.3.6"
 
@@ -37,7 +37,7 @@ lwjgl-opengl = { module = "org.lwjgl:lwjgl-opengl", version.ref = "lwjgl" }
 
 nashorn-core = "org.openjdk.nashorn:nashorn-core:15.7"
 scala-library = "org.scala-lang:scala3-library_3:3.7.4"
-sport-jolt = "com.github.stephengold:sport-jolt:0.9.13"
+sport-jolt = "com.github.stephengold:sport-jolt:0.9.14"
 
 [bundles]
 
