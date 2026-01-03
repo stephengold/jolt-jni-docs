@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -28,25 +28,18 @@
  */
 
 /*
- * A simple example of 2 colliding balls, illustrating the 5 basic features of
- * responsive, dynamic, rigid bodies:
+ * A simple example combining static and dynamic rigid bodies.
  *
- * + rigidity (fixed shape),
- * + inertia (resistance to changes of motion),
- * + dynamics (motion determined by forces, torques, and impulses),
- * + gravity (continual downward force), and
- * + contact response (avoid intersecting with other bodies).
- *
- * Builds upon HelloSport.
+ * Builds upon HelloRigidBody.
  *
  * author:  Stephen Gold sgold@sonic.net
  */
-var HelloRigidBody = Java.extend(BasePhysicsApp);
-var application = new HelloRigidBody() {
+var HelloStaticBody = Java.extend(BasePhysicsApp);
+var application = new HelloStaticBody() {
     /*
      * Create the PhysicsSystem. Invoked once during initialization.
      *
-     * @return a new object
+     * return:  a new object
      */
     createSystem: function () {
         // For simplicity, use a single broadphase layer:
@@ -74,42 +67,30 @@ var application = new HelloRigidBody() {
         var bi = sup.getPhysicsSystem().getBodyInterface();
 
         // Create a collision shape for balls:
-        var ballRadius = 1;
+        var ballRadius = 1.;
         var ballShape = new SphereShape(ballRadius);
 
         var bcs = new BodyCreationSettings();
-        bcs.getMassPropertiesOverride().setMass(2);
+        bcs.getMassPropertiesOverride().setMass(2.);
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
         bcs.setShape(ballShape);
 
-        // Create 2 balls (dynamic rigid bodies) and add them to the system:
-        bcs.setPosition(1., 1., 0.);
-        var ball1 = bi.createBody(bcs);
-        bi.addBody(ball1, EActivation.Activate);
+        // Create a dynamic body and add it to the system:
+        bcs.setPosition(0., 4., 0.);
+        var dynaBall = bi.createBody(bcs);
+        bi.addBody(dynaBall, EActivation.Activate);
 
-        bcs.setPosition(5., 1., 0.);
-        var ball2 = bi.createBody(bcs);
-        bi.addBody(ball2, EActivation.Activate);
-
-        // Apply an impulse to ball2 to put it on a collision course with ball1:
-        ball2.addImpulse(-25, 0, 0);
+        // Create a static body and add it to the system:
+        bcs.setMotionType(EMotionType.Static); // default=Dynamic
+        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving); // default=0
+        bcs.setPosition(0.1, 0., 0.);
+        var statBall = bi.createBody(bcs);
+        bi.addBody(statBall, EActivation.DontActivate);
+        //assert statBall.isStatic();
 
         // Visualize the shapes of both rigid bodies:
-        BasePhysicsApp.visualizeShape(ball1);
-        BasePhysicsApp.visualizeShape(ball2);
-    },
-
-    /**
-     * Advance the physics simulation by the specified amount. Invoked during
-     * each update.
-     *
-     * @param wallClockSeconds the elapsed wall-clock time since the previous
-     * invocation of {@code updatePhysics} (in seconds, &ge;0)
-     */
-    updatePhysics: function (wallClockSeconds) {
-        // For clarity, simulate at 1/10th normal speed:
-        var simulateSeconds = 0.1 * wallClockSeconds;
-        Java.super(application).updatePhysics(simulateSeconds);
+        BasePhysicsApp.visualizeShape(dynaBall);
+        BasePhysicsApp.visualizeShape(statBall);
     }
 };
-application.start("HelloRigidBody");
+application.start("HelloStaticBody");
