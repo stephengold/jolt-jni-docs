@@ -29,7 +29,7 @@
 
 /*
  * A simple example illustrating the effect of damping on dynamic rigid bodies.
- * <p>
+ *
  * Builds upon HelloRigidBody.
  *
  * author:  Stephen Gold sgold@sonic.net
@@ -39,7 +39,7 @@ var application = new HelloDamping() {
     /*
      * Create the PhysicsSystem. Invoked once during initialization.
      *
-     * @return a new object
+     * return:  a new object
      */
     createSystem: function () {
         // For simplicity, use a single broadphase layer:
@@ -109,6 +109,8 @@ var application = new HelloDamping() {
         bcs.setPosition(4., -2., 0.);
         cube[3] = bi.createBody(bcs);
         bi.addBody(cube[3], EActivation.Activate);
+        //assert angDamping == 0. : "angDamping = " + angDamping;
+        //assert linDamping == 0.9 : "linDamping = " + linDamping;
         /*
          * Apply an off-center impulse to each cube,
          * causing it to drift and spin:

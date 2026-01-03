@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -46,7 +46,7 @@ var application = new HelloRigidBody() {
     /*
      * Create the PhysicsSystem. Invoked once during initialization.
      *
-     * @return a new object
+     * return:  a new object
      */
     createSystem: function () {
         // For simplicity, use a single broadphase layer:
@@ -102,9 +102,6 @@ var application = new HelloRigidBody() {
     /**
      * Advance the physics simulation by the specified amount. Invoked during
      * each update.
-     *
-     * @param wallClockSeconds the elapsed wall-clock time since the previous
-     * invocation of {@code updatePhysics} (in seconds, &ge;0)
      */
     updatePhysics: function (wallClockSeconds) {
         // For clarity, simulate at 1/10th normal speed:

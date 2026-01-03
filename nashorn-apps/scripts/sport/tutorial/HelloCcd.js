@@ -39,7 +39,7 @@ var application = new HelloCcd() {
     /*
      * Create the PhysicsSystem. Invoked once during initialization.
      *
-     * @return a new object
+     * return:  a new object
      */
     createSystem: function () {
         // For simplicity, use a single broadphase layer:
