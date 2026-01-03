@@ -90,7 +90,7 @@ var application = new HelloSport() {
         var bi = sup.getPhysicsSystem().getBodyInterface();
 
         // Add a static horizontal plane at y=-1:
-        var groundY = -1;
+        var groundY = -1.;
         var normal = Vec3.sAxisY();
         var plane = new Plane(normal, -groundY);
         var floorShape = new PlaneShape(plane);

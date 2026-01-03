@@ -74,11 +74,11 @@ var application = new HelloRigidBody() {
         var bi = sup.getPhysicsSystem().getBodyInterface();
 
         // Create a collision shape for balls:
-        var ballRadius = 1;
+        var ballRadius = 1.;
         var ballShape = new SphereShape(ballRadius);
 
         var bcs = new BodyCreationSettings();
-        bcs.getMassPropertiesOverride().setMass(2);
+        bcs.getMassPropertiesOverride().setMass(2.);
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
         bcs.setShape(ballShape);
 
@@ -92,7 +92,7 @@ var application = new HelloRigidBody() {
         bi.addBody(ball2, EActivation.Activate);
 
         // Apply an impulse to ball2 to put it on a collision course with ball1:
-        ball2.addImpulse(-25, 0, 0);
+        ball2.addImpulse(-25., 0., 0.);
 
         // Visualize the shapes of both rigid bodies:
         BasePhysicsApp.visualizeShape(ball1);
