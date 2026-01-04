@@ -40,6 +40,10 @@ tasks.register<JavaExec>("HelloSport") {
     description = "Runs the Scala port of the HelloSport tutorial app."
     mainClass = "com.github.stephengold.sportjolt.scala.tutorial.HelloSport"
 }
+tasks.register<JavaExec>("HelloStaticBody") {
+    description = "Runs the Scala port of the HelloStaticBody tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.scala.tutorial.HelloStaticBody"
+}
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")
 
