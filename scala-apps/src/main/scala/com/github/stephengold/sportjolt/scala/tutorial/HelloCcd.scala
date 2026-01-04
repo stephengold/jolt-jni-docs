@@ -38,8 +38,6 @@ import com.github.stephengold.joltjni.enumerate.EMotionQuality
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
 import com.github.stephengold.joltjni.readonly.ConstBody
-import com.github.stephengold.joltjni.readonly.ConstMotionProperties
-import com.github.stephengold.joltjni.readonly.ConstShape
 import com.github.stephengold.sportjolt.BaseApplication
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 
