@@ -81,7 +81,7 @@ class HelloRigidBody extends BasePhysicsApp {
         val numBpLayers = 1
         val result = createSystem(maxBodies, numBpLayers)
 
-        return result;
+        return result
     }
 
     /**
