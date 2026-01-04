@@ -153,7 +153,7 @@ class HelloCcd extends BasePhysicsApp {
      *
      * @return the new object
      */
-    def addDisc(): ConstBody = {
+    private def addDisc(): ConstBody = {
         val discRadius = 2f
         val discThickness = 0.05f
         val discConvexRadius = 0.02f
