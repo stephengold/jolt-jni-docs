@@ -4,7 +4,7 @@
 
 checkstyle = "12.3.1"
 joltjni = "3.5.1"
-luajava = "4.0.2"
+luajava = "4.1.0"
 lwjgl = "3.3.6"
 
 [libraries]
