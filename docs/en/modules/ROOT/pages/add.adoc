@@ -51,7 +51,7 @@ dependencies {
     implementation(
             group: "com.github.stephengold",
             name: "jolt-jni-Android",
-            version: "3.5.1",
+            version: "3.5.2",
             classifier: "SpDebug",
             ext: "aar"
     )
@@ -81,10 +81,10 @@ repositories {
 }
 dependencies {
     // JVM library:
-    implementation("com.github.stephengold:jolt-jni-Windows64:3.5.1")
+    implementation("com.github.stephengold:jolt-jni-Windows64:3.5.2")
 
     // native libraries:
-    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:3.5.1:DebugSp")
+    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:3.5.2:DebugSp")
         // Native libraries for other platforms also could be added.
 }
 ----
