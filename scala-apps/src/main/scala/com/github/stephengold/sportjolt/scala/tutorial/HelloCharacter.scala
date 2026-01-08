@@ -40,9 +40,6 @@ import com.github.stephengold.joltjni.RVec3
 import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
-import com.github.stephengold.joltjni.readonly.ConstBody
-import com.github.stephengold.joltjni.readonly.ConstShape
-import com.github.stephengold.joltjni.readonly.RVec3Arg
 import com.github.stephengold.sportjolt.BaseApplication
 import com.github.stephengold.sportjolt.Constants
 import com.github.stephengold.sportjolt.input.RotateMode
