@@ -9,7 +9,7 @@
     [com.github.stephengold/jolt-jni-MacOSX64 "3.5.2" :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-MacOSX_ARM64 "3.5.2" :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Windows64 "3.5.2" :classifier "DebugSp"]
-    [com.github.stephengold/sport-jolt "0.9.14"]
+    [com.github.stephengold/sport-jolt "0.9.15"]
     [io.github.electrostat-lab/snaploader "1.1.1-stable"]
     [org.clojure/clojure "1.12.4"]
   ]

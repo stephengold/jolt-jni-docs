@@ -48,7 +48,7 @@ The following demos are found in
 .. using https://git-scm.com[Git]:
 ... `git clone https://github.com/stephengold/sport-jolt.git`
 ... `cd sport-jolt`
-... `git checkout -b latest 0.9.14`
+... `git checkout -b latest 0.9.15`
 . Edit the "gradle.properties" file to configure the build.
   To run CPU-intensive demos like `Botany` and `ThousandCubes`,
   I recommend configuring "assertions=false" and "btf=ReleaseSp".
