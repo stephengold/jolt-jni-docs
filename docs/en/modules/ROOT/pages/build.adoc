@@ -25,7 +25,7 @@ Here's the recommended procedure for building desktop libraries:
 
 . Install build software:
 .. a https://adoptium.net/releases.html[Java Development Kit (JDK)],
-  version 17 or higher, and
+  version 21 or higher, and
 .. one of the supported {Cplusplus} compilers:
 ... for Linux:  https://gcc.gnu.org/[the GNU Compiler Collection] or https://www.llvm.org[Clang]
 ... for macOS:  https://developer.apple.com/xcode[Xcode]
@@ -33,10 +33,10 @@ Here's the recommended procedure for building desktop libraries:
 .. If you use GCC, you might also need to install the "g++-multilib" package:
 ... `sudo apt install g++-multilib`
 . Point the `JAVA_HOME` environment variable to your JDK installation:
-   (The path might look something like
-   "C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
-   or "/usr/lib/jvm/java-17-openjdk-amd64/" or
-   "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home".)
+   (The path might look similar to
+   "C:\Program Files\Eclipse Adoptium\jdk-21.0.3.7-hotspot"
+   or "/usr/lib/jvm/java-21-openjdk-amd64/" or
+   "/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home".)
 .. using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
 .. using https://fishshell.com/[Fish]: `set -g JAVA_HOME "` *path to installation* `"`
 .. using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
