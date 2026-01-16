@@ -19,6 +19,10 @@ tasks.named<Jar>("jar") {
     }
 }
 
+tasks.withType<ScalaCompile>().all { // Scala compile-time options:
+    scalaCompileOptions.additionalParameters = listOf("-Xtarget:17")
+}
+
 application {
     mainClass = "com.github.stephengold.sportjolt.scala.console.HelloJoltJni"
 }
