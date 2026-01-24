@@ -100,7 +100,7 @@ class HelloCharacter extends BasePhysicsApp, PhysicsTickListener {
         super.initialize
 
         BaseApplication.setVsync(true)
-        BaseApplication.getCameraInputProcessor().setRotationMode(RotateMode.DragLMB)
+        BaseApplication.getCameraInputProcessor.setRotationMode(RotateMode.DragLMB)
         BaseApplication.setBackgroundColor(Constants.SKY_BLUE)
     }
 
@@ -121,7 +121,7 @@ class HelloCharacter extends BasePhysicsApp, PhysicsTickListener {
         val userData = 0L
         HelloCharacter.character = new com.github.stephengold.joltjni.Character(
                 settings, startLocation, new Quat, userData, physicsSystem)
-        HelloCharacter.character.addToPhysicsSystem()
+        HelloCharacter.character.addToPhysicsSystem
 
         // Add a static square to represent the ground:
         val halfExtent = 4f
@@ -157,7 +157,7 @@ class HelloCharacter extends BasePhysicsApp, PhysicsTickListener {
      */
     override def prePhysicsTick(system: PhysicsSystem, timeStep: Float): Unit = {
         // If the character is supported, cause it to jump:
-        if (HelloCharacter.character.isSupported()) {
+        if (HelloCharacter.character.isSupported) {
             HelloCharacter.character.setLinearVelocity(new Vec3(0f, 8f, 0f))
         }
     }
@@ -182,7 +182,7 @@ class HelloCharacter extends BasePhysicsApp, PhysicsTickListener {
         bcs.setPosition(0.0, y - halfThickness, 0.0)
         bcs.setShape(shape)
 
-        val bi = physicsSystem.getBodyInterface()
+        val bi = physicsSystem.getBodyInterface
         val result = bi.createBody(bcs)
         bi.addBody(result, EActivation.DontActivate)
 

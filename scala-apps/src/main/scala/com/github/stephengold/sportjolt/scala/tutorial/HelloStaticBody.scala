@@ -96,7 +96,7 @@ class HelloStaticBody extends BasePhysicsApp {
         val ballShape = new SphereShape(ballRadius)
 
         val bcs = new BodyCreationSettings
-        bcs.getMassPropertiesOverride().setMass(2f)
+        bcs.getMassPropertiesOverride.setMass(2f)
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
         bcs.setShape(ballShape)
 
@@ -111,7 +111,7 @@ class HelloStaticBody extends BasePhysicsApp {
         bcs.setPosition(0.1, 0.0, 0.0)
         val statBall = bi.createBody(bcs)
         bi.addBody(statBall, EActivation.DontActivate)
-        assert(statBall.isStatic())
+        assert(statBall.isStatic)
 
         // Visualize the shapes of both rigid bodies:
         BasePhysicsApp.visualizeShape(dynaBall)

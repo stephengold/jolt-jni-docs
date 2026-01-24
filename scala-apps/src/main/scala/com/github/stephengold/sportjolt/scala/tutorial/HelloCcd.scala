@@ -101,7 +101,7 @@ class HelloCcd extends BasePhysicsApp {
         val ballShape = new SphereShape(ballRadius)
 
         val bcs = new BodyCreationSettings
-        bcs.getMassPropertiesOverride().setMass(2f)
+        bcs.getMassPropertiesOverride.setMass(2f)
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
         bcs.setShape(ballShape)
         /*
@@ -119,13 +119,13 @@ class HelloCcd extends BasePhysicsApp {
         bi.addBody(controlBall, EActivation.Activate)
 
         // Verify the motion quality of each ball:
-        val ccdProperties = ccdBall.getMotionProperties()
-        assert(ccdProperties.getMotionQuality() == EMotionQuality.LinearCast)
-        val controlProperties = controlBall.getMotionProperties()
-        assert(controlProperties.getMotionQuality() == EMotionQuality.Discrete)
+        val ccdProperties = ccdBall.getMotionProperties
+        assert(ccdProperties.getMotionQuality == EMotionQuality.LinearCast)
+        val controlProperties = controlBall.getMotionProperties
+        assert(controlProperties.getMotionQuality == EMotionQuality.Discrete)
 
         // Add an obstacle:
-        val disc = addDisc()
+        val disc = addDisc
 
         // Visualize the shapes of all 3 rigid bodies:
         BasePhysicsApp.visualizeShape(ccdBall)
@@ -153,19 +153,19 @@ class HelloCcd extends BasePhysicsApp {
      *
      * @return the new object
      */
-    private def addDisc(): ConstBody = {
+    private def addDisc: ConstBody = {
         val discRadius = 2f
         val discThickness = 0.05f
         val discConvexRadius = 0.02f
         val discShape = new CylinderShape(
                 discThickness / 2f, discRadius, discConvexRadius)
 
-        val bcs = new BodyCreationSettings()
+        val bcs = new BodyCreationSettings
         bcs.setMotionType(EMotionType.Static)
         bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
         bcs.setShape(discShape)
 
-        val bi = physicsSystem.getBodyInterface()
+        val bi = physicsSystem.getBodyInterface
         val result = bi.createBody(bcs)
         bi.addBody(result, EActivation.DontActivate)
 

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -102,7 +102,7 @@ class HelloRigidBody extends BasePhysicsApp {
         val ballShape = new SphereShape(ballRadius)
 
         val bcs = new BodyCreationSettings
-        bcs.getMassPropertiesOverride().setMass(2f)
+        bcs.getMassPropertiesOverride.setMass(2f)
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
         bcs.setShape(ballShape)
 
@@ -115,7 +115,7 @@ class HelloRigidBody extends BasePhysicsApp {
         val ball2 = bi.createBody(bcs)
         bi.addBody(ball2, EActivation.Activate)
 
-        assert(ball2.isDynamic())
+        assert(ball2.isDynamic)
         val actualMass = 1f / ball2.getMotionProperties.getInverseMass
         assert(Math.abs(actualMass - 2f) < 1e-6f, "actualMass = " + actualMass)
 
