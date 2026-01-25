@@ -37,9 +37,6 @@ import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
 import com.github.stephengold.joltjni.operator.Op
-import com.github.stephengold.joltjni.readonly.ConstShape
-import com.github.stephengold.joltjni.readonly.RVec3Arg
-import com.github.stephengold.joltjni.readonly.Vec3Arg
 import com.github.stephengold.sportjolt.BaseApplication
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 
