@@ -29,7 +29,6 @@
 package com.github.stephengold.sportjolt.scala.tutorial
 
 import com.github.stephengold.joltjni.BodyCreationSettings
-import com.github.stephengold.joltjni.BodyInterface
 import com.github.stephengold.joltjni.CylinderShape
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.SphereShape

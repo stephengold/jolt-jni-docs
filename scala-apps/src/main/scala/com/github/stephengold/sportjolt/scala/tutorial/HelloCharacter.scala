@@ -30,7 +30,6 @@ package com.github.stephengold.sportjolt.scala.tutorial
 
 import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
-import com.github.stephengold.joltjni.BodyInterface
 import com.github.stephengold.joltjni.BoxShape
 import com.github.stephengold.joltjni.CapsuleShape
 import com.github.stephengold.joltjni.CharacterSettings
