@@ -53,7 +53,7 @@ tasks.withType<JavaExec>().all { // JVM runtime options:
 val btf = providers.gradleProperty("btf").get()
 
 dependencies {
-    implementation(libs.groovy.all)
+    implementation(libs.groovy.jsr223)
     implementation(libs.sport.jolt)
 
     if (includeLinux) {
