@@ -9,7 +9,7 @@ lwjgl = "3.3.6"
 
 [libraries]
 
-groovy-all = "org.apache.groovy:groovy-jsr223:5.0.3"
+groovy-all = "org.apache.groovy:groovy-jsr223:5.0.4"
 
 jolt-jni-linux64 = { module = "com.github.stephengold:jolt-jni-Linux64", version.ref = "joltjni" }
 jolt-jni-linux64fma = { module = "com.github.stephengold:jolt-jni-Linux64_fma", version.ref = "joltjni" }
