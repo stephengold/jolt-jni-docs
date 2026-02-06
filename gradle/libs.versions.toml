@@ -2,7 +2,7 @@
 
 [versions]
 
-checkstyle = "13.1.0"
+checkstyle = "13.2.0"
 joltjni = "3.5.2"
 luajava = "4.1.0"
 lwjgl = "3.3.6"
