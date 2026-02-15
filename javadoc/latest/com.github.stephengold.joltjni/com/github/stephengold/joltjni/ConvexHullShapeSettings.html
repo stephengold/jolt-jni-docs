@@ -183,42 +183,63 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countPoints()" class="member-name-link">countPoints</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPoint(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">addPoint</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add the specified point to the hull.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyPoint(int)" class="member-name-link">copyPoint</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy one of the points to use when creating the hull.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyPoints()" class="member-name-link">copyPoints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the points to use when creating the hull.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countPoints()" class="member-name-link">countPoints</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the points to use when creating the hull.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHullTolerance()" class="member-name-link">getHullTolerance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHullTolerance()" class="member-name-link">getHullTolerance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the positional tolerance used when generating the hull.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxConvexRadius()" class="member-name-link">getMaxConvexRadius</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxConvexRadius()" class="member-name-link">getMaxConvexRadius</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the convex radius.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxErrorConvexRadius()" class="member-name-link">getMaxErrorConvexRadius</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxErrorConvexRadius()" class="member-name-link">getMaxErrorConvexRadius</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the maximum separation between the shrunk hull + convex radius and
  the actual hull.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHullTolerance(float)" class="member-name-link">setHullTolerance</a><wbr>(float&nbsp;tolerance)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHullTolerance(float)" class="member-name-link">setHullTolerance</a><wbr>(float&nbsp;tolerance)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the positional tolerance used when generating the hull.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxConvexRadius(float)" class="member-name-link">setMaxConvexRadius</a><wbr>(float&nbsp;radius)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxConvexRadius(float)" class="member-name-link">setMaxConvexRadius</a><wbr>(float&nbsp;radius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the convex radius.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxErrorConvexRadius(float)" class="member-name-link">setMaxErrorConvexRadius</a><wbr>(float&nbsp;maxError)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxErrorConvexRadius(float)" class="member-name-link">setMaxErrorConvexRadius</a><wbr>(float&nbsp;maxError)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the maximum separation between the shrunk hull plus convex radius
  and the actual hull.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoint(int,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPoint</a><wbr>(int&nbsp;index,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replace the specified point with new coordinates.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoints(com.github.stephengold.joltjni.readonly.Vec3Arg...)" class="member-name-link">setPoints</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>...&nbsp;points)</code></div>
@@ -273,7 +294,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified collection of points.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - a collection of point locations (not null, unaffected)</dd>
+<dd><code>points</code> - a collection of point locations (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -285,7 +307,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified parameters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - a collection of point locations (not null, unaffected)</dd>
+<dd><code>points</code> - a collection of point locations (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>maxConvexRadius</code> - the desired maximum convex radius (&ge;0,
  default=0.05)</dd>
 </dl>
@@ -300,11 +323,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified parameters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - a collection of point locations (not null, unaffected)</dd>
+<dd><code>points</code> - a collection of point locations (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>maxConvexRadius</code> - the desired maximum convex radius (&ge;0,
  default=0.05)</dd>
-<dd><code>material</code> - the desired surface properties (not null, unaffected) or
- <code>null</code> for default properties (default=null)</dd>
+<dd><code>material</code> - the desired surface properties (not <code>null</code>,
+ unaffected) or <code>null</code> for default properties (default=null)</dd>
 </dl>
 </section>
 </li>
@@ -328,8 +352,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numPoints</code> - the number of points (&ge;0)</dd>
-<dd><code>points</code> - a direct buffer containing point locations (not null,
- unaffected)</dd>
+<dd><code>points</code> - a direct buffer containing point locations (not
+ <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -343,8 +367,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numPoints</code> - the number of points (&ge;0)</dd>
-<dd><code>points</code> - a direct buffer containing point locations (not null,
- unaffected)</dd>
+<dd><code>points</code> - a direct buffer containing point locations (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>maxConvexRadius</code> - the desired maximum convex radius (&ge;0,
  default=0.05)</dd>
 </dl>
@@ -361,12 +385,12 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numPoints</code> - the number of points (&ge;0)</dd>
-<dd><code>points</code> - a direct buffer containing point locations (not null,
- unaffected)</dd>
+<dd><code>points</code> - a direct buffer containing point locations (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>maxConvexRadius</code> - the desired maximum convex radius (&ge;0,
  default=0.05)</dd>
-<dd><code>material</code> - the desired surface properties (not null, unaffected) or
- <code>null</code> for default properties (default=null)</dd>
+<dd><code>material</code> - the desired surface properties (not <code>null</code>,
+ unaffected) or <code>null</code> for default properties (default=null)</dd>
 </dl>
 </section>
 </li>
@@ -377,7 +401,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified points.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - the array of desired point locations (not null, unaffected)</dd>
+<dd><code>points</code> - the array of desired point locations (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -389,7 +414,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified parameters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - an array of point locations (not null, unaffected)</dd>
+<dd><code>points</code> - an array of point locations (not <code>null</code>, unaffected)</dd>
 <dd><code>maxConvexRadius</code> - the desired maximum convex radius (&ge;0,
  default=0.05)</dd>
 </dl>
@@ -404,11 +429,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified parameters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - an array of point locations (not null, unaffected)</dd>
+<dd><code>points</code> - an array of point locations (not <code>null</code>, unaffected)</dd>
 <dd><code>maxConvexRadius</code> - the desired maximum convex radius (&ge;0,
  default=0.05)</dd>
-<dd><code>material</code> - the desired surface properties (not null, unaffected) or
- <code>null</code> for default properties (default=null)</dd>
+<dd><code>material</code> - the desired surface properties (not <code>null</code>,
+ unaffected) or <code>null</code> for default properties (default=null)</dd>
 </dl>
 </section>
 </li>
@@ -420,6 +445,44 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="addPoint(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>addPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addPoint</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</span></div>
+<div class="block">Add the specified point to the hull.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>point</code> - the coordinates of the point to add (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="copyPoint(int)">
+<h3>copyPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">copyPoint</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block">Copy one of the points to use when creating the hull. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - the index of the point to copy (&ge;0)</dd>
+<dt>Returns:</dt>
+<dd>a new location vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="copyPoints()">
+<h3>copyPoints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>[]</span>&nbsp;<span class="element-name">copyPoints</span>()</div>
+<div class="block">Copy the points to use when creating the hull. The settings are
+ unaffected. (native attribute: mPoints)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new array of new vectors</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="countPoints()">
 <h3>countPoints</h3>
@@ -505,13 +568,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setPoint(int,com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPoint</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</span></div>
+<div class="block">Replace the specified point with new coordinates.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - which point to replace (&ge;0)</dd>
+<dd><code>point</code> - the desired coordinates (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setPoints(com.github.stephengold.joltjni.readonly.Vec3Arg...)">
 <h3>setPoints</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPoints</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>...&nbsp;points)</span></div>
-<div class="block">Replace any existing points with the specified ones.</div>
+<div class="block">Replace any existing points with the specified ones. (native attribute:
+ mPoints)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - the array of desired point locations (not null, unaffected)</dd>
+<dd><code>points</code> - the array of desired point locations (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>

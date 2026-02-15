@@ -132,13 +132,13 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a vector with the specified components.</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.Float3)" class="member-name-link">Vec3</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;float3)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">Vec3</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;float3)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Instantiate from a <code>Float3</code>.</div>
+<div class="block">Instantiate from the specified <code>ConstFloat3</code>.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">Vec3</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vec)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate from a location vector.</div>
+<div class="block">Instantiate from the specified location vector.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">Vec3</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec)</code></div>
 <div class="col-last even-row-color">
@@ -146,7 +146,12 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.nio.FloatBuffer)" class="member-name-link">Vec3</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.nio.FloatBuffer,int)" class="member-name-link">Vec3</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer,
+ int&nbsp;startPos)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate from the specified position in the specified buffer.</div>
 </div>
 </div>
 </section>
@@ -596,19 +601,19 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Instantiate from the specified array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>array</code> - the desired component values (not null, length&ge;3,
+<dd><code>array</code> - the desired component values (not <code>null</code>, length&ge;3,
  unaffected)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.Float3)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstFloat3)">
 <h3>Vec3</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Vec3</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;float3)</span></div>
-<div class="block">Instantiate from a <code>Float3</code>.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Vec3</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;float3)</span></div>
+<div class="block">Instantiate from the specified <code>ConstFloat3</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>float3</code> - the desired component values (not null, unaffected)</dd>
+<dd><code>float3</code> - the desired component values (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -616,11 +621,24 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="&lt;init&gt;(java.nio.FloatBuffer)">
 <h3>Vec3</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Vec3</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer)</span></div>
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, unaffected,
+<dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected,
  capacity&ge;3)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.nio.FloatBuffer,int)">
+<h3>Vec3</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Vec3</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer,
+ int&nbsp;startPos)</span></div>
+<div class="block">Instantiate from the specified position in the specified buffer.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected)</dd>
+<dd><code>startPos</code> - the starting position in the buffer (&ge;0)</dd>
 </dl>
 </section>
 </li>
@@ -628,10 +646,10 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.RVec3Arg)">
 <h3>Vec3</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Vec3</span><wbr><span class="parameters">(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vec)</span></div>
-<div class="block">Instantiate from a location vector.</div>
+<div class="block">Instantiate from the specified location vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vec</code> - the vector to convert (not null, unaffected)</dd>
+<dd><code>vec</code> - the vector to convert (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -642,7 +660,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Instantiate a copy of the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vec</code> - the vector to copy (not null, unaffected)</dd>
+<dd><code>vec</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -697,7 +715,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Rotate the current vector by the specified quaternion.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rotation</code> - the rotation to apply (not null, normalized, unaffected)</dd>
+<dd><code>rotation</code> - the rotation to apply (not <code>null</code>, normalized,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -709,8 +728,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Return the bitwise AND of the specified vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v1</code> - the first vector (not null, unaffected)</dd>
-<dd><code>v2</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>v1</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -797,7 +816,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Set all 3 components from the specified array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>array</code> - the desired component values (not null, length&ge;3,
+<dd><code>array</code> - the desired component values (not <code>null</code>, length&ge;3,
  unaffected)</dd>
 </dl>
 </section>
@@ -809,8 +828,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Set all 3 components from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, length&ge;3,
- unaffected)</dd>
+<dd><code>buffer</code> - the desired component values (not <code>null</code>,
+ length&ge;3, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -822,7 +841,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Set all 3 components from the specified position in the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, unaffected)</dd>
+<dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected)</dd>
 <dd><code>startPos</code> - the starting position in the buffer (&ge;0)</dd>
 </dl>
 </section>
@@ -834,7 +853,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Set all 3 components from the specified location vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>source</code> - the vector to copy (not null, unaffected)</dd>
+<dd><code>source</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -845,7 +864,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Set all 3 components from the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>source</code> - the vector to copy (not null, unaffected)</dd>
+<dd><code>source</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -896,8 +915,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Component-wise comparison of 2 vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v1</code> - the first vector (not null, unaffected)</dd>
-<dd><code>v2</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>v1</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector (each component 0 or -1)</dd>
 </dl>
@@ -911,8 +930,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Component-wise comparison of 2 vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v1</code> - the first vector (not null, unaffected)</dd>
-<dd><code>v2</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>v1</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector (each component 0 or -1)</dd>
 </dl>
@@ -926,8 +945,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Component-wise comparison of 2 vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v1</code> - the first vector (not null, unaffected)</dd>
-<dd><code>v2</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>v1</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector (each component 0 or -1)</dd>
 </dl>
@@ -941,8 +960,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Component-wise comparison of 2 vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v1</code> - the first vector (not null, unaffected)</dd>
-<dd><code>v2</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>v1</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector (each component 0 or -1)</dd>
 </dl>
@@ -989,7 +1008,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
  The results are not uniformly distributed over the unit sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>engine</code> - the generator to use (not null)</dd>
+<dd><code>engine</code> - the generator to use (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>a new unit vector</dd>
 </dl>
@@ -1017,11 +1036,11 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Component-wise selection between 2 specified vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>notSet</code> - components to select where the control is zero (not null,
- unaffected)</dd>
-<dd><code>set</code> - components to select where the control is non-zero (not null,
- unaffected)</dd>
-<dd><code>control</code> - to control the selection (not null, unaffected)</dd>
+<dd><code>notSet</code> - components to select where the control is zero (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>set</code> - components to select where the control is non-zero (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>control</code> - to control the selection (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -1041,7 +1060,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Return the component-wise sum of the specified vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vArray</code> - an array of input vectors (not null, unaffected)</dd>
+<dd><code>vArray</code> - an array of input vectors (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -1080,7 +1099,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Transform the current vector by the specified matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>matrix</code> - the transformation to apply (not null, unaffected)</dd>
+<dd><code>matrix</code> - the transformation to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1107,7 +1126,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#copyTo(java.nio.FloatBuffer)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeFloats</code> - the destination buffer (not null, capacity&ge;3)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>,
+ capacity&ge;3)</dd>
 </dl>
 </section>
 </li>
@@ -1121,7 +1141,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#copyTo(java.nio.FloatBuffer,int)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeFloats</code> - the destination buffer (not null,
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>,
  capacity&ge;startPos+3)</dd>
 <dd><code>startPos</code> - the starting position in the buffer (&ge;0)</dd>
 </dl>
@@ -1136,8 +1156,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#cross(com.github.stephengold.joltjni.readonly.Vec3Arg)">cross</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>rightFactor</code> - the vector to cross with the current one (not null,
- unaffected)</dd>
+<dd><code>rightFactor</code> - the vector to cross with the current one (not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new product vector</dd>
 </dl>
@@ -1152,7 +1172,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#dot(com.github.stephengold.joltjni.readonly.Vec3Arg)">dot</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>factor</code> - the vector to dot with the current one (not null,
+<dd><code>factor</code> - the vector to dot with the current one (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the dot product</dd>
@@ -1346,7 +1366,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#isClose(com.github.stephengold.joltjni.readonly.Vec3Arg,float)">isClose</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>v2</code> - the vector to compare with (not null, unaffected)</dd>
+<dd><code>v2</code> - the vector to compare with (not <code>null</code>, unaffected)</dd>
 <dd><code>maxDistSq</code> - the maximum allowed squared distance (&ge;0)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if within the squared distance, otherwise
@@ -1405,8 +1425,8 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#normalizedOr(com.github.stephengold.joltjni.readonly.Vec3Arg)">normalizedOr</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>zeroValue</code> - the value to return if the length is zero (not null,
- unaffected)</dd>
+<dd><code>zeroValue</code> - the value to return if the length is zero (not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -1422,7 +1442,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#put(java.nio.FloatBuffer)">put</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the destination buffer (not null)</dd>
+<dd><code>storeBuffer</code> - the destination buffer (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1474,7 +1494,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#storeFloat3(com.github.stephengold.joltjni.Float3)">storeFloat3</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>target</code> - the destination (not null, modified)</dd>
+<dd><code>target</code> - the destination (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -1586,7 +1606,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>the string representation (not null, not empty)</dd>
+<dd>the string representation (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>

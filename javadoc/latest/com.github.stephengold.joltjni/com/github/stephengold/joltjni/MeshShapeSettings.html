@@ -119,19 +119,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate the default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.Float3%5B%5D,com.github.stephengold.joltjni.IndexedTriangle...)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;vertexArray,
- <a href="IndexedTriangle.html" title="class in com.github.stephengold.joltjni">IndexedTriangle</a>...&nbsp;itArray)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Instantiate settings for the specified vertices and triangles.</div>
-</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.Float3%5B%5D,com.github.stephengold.joltjni.IndexedTriangleList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;vertices,
- <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Instantiate settings for the specified vertices and triangles.</div>
-</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.MeshShapeSettings)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3%5B%5D,com.github.stephengold.joltjni.IndexedTriangle...)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertexArray,
+ <a href="IndexedTriangle.html" title="class in com.github.stephengold.joltjni">IndexedTriangle</a>...&nbsp;itArray)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate settings for the specified vertices and triangles.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3%5B%5D,com.github.stephengold.joltjni.IndexedTriangleList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertices,
+ <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate settings for the specified vertices and triangles.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstTriangle...)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>...&nbsp;triangleArray)</code></div>
 <div class="col-last even-row-color">
@@ -160,7 +160,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate settings for the specified parameters.</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List,com.github.stephengold.joltjni.IndexedTriangleList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&gt;&nbsp;vertices,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List,com.github.stephengold.joltjni.IndexedTriangleList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&gt;&nbsp;vertices,
  <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate settings for the specified lists of vertices and triangles.</div>
@@ -187,7 +187,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Append the specified triangle to the internal array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTriangleVertex(com.github.stephengold.joltjni.Float3)" class="member-name-link">addTriangleVertex</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;vertex)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTriangleVertex(com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">addTriangleVertex</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;vertex)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Append the specified vertex to the internal array.</div>
 </div>
@@ -284,28 +284,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.Float3[],com.github.stephengold.joltjni.IndexedTriangleList)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstFloat3[],com.github.stephengold.joltjni.IndexedTriangleList)">
 <h3>MeshShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;vertices,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertices,
  <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</span></div>
 <div class="block">Instantiate settings for the specified vertices and triangles.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vertices</code> - the array of vertices (not null, unaffected)</dd>
-<dd><code>indices</code> - the list of triangles (not null, unaffected)</dd>
+<dd><code>vertices</code> - the array of vertices (not <code>null</code>, unaffected)</dd>
+<dd><code>indices</code> - the list of triangles (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.Float3[],com.github.stephengold.joltjni.IndexedTriangle...)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstFloat3[],com.github.stephengold.joltjni.IndexedTriangle...)">
 <h3>MeshShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;vertexArray,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertexArray,
  <a href="IndexedTriangle.html" title="class in com.github.stephengold.joltjni">IndexedTriangle</a>...&nbsp;itArray)</span></div>
 <div class="block">Instantiate settings for the specified vertices and triangles.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vertexArray</code> - the array of vertices (not null, unaffected)</dd>
-<dd><code>itArray</code> - the array of triangles (not null, unaffected)</dd>
+<dd><code>vertexArray</code> - the array of vertices (not <code>null</code>, unaffected)</dd>
+<dd><code>itArray</code> - the array of triangles (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -316,8 +316,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified vertices without indices.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>positionBuffer</code> - the vertex positions (not null, capacity a multiple
- of 9, unaffected)</dd>
+<dd><code>positionBuffer</code> - the vertex positions (not <code>null</code>, capacity a
+ multiple of 9, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -335,13 +335,13 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(java.util.List,com.github.stephengold.joltjni.IndexedTriangleList)">
 <h3>MeshShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&gt;&nbsp;vertices,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&gt;&nbsp;vertices,
  <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</span></div>
 <div class="block">Instantiate settings for the specified lists of vertices and triangles.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vertices</code> - the list of vertices (not null, unaffected)</dd>
-<dd><code>indices</code> - the list of triangles (not null, unaffected)</dd>
+<dd><code>vertices</code> - the list of vertices (not <code>null</code>, unaffected)</dd>
+<dd><code>indices</code> - the list of triangles (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -352,7 +352,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified list of triangles.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>triangleList</code> - the list of triangles (not null, unaffected)</dd>
+<dd><code>triangleList</code> - the list of triangles (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -364,8 +364,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified parameters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>triangleList</code> - the list of triangles (not null, unaffected)</dd>
-<dd><code>materials</code> - the desired surface properties (not null, unaffected)</dd>
+<dd><code>triangleList</code> - the list of triangles (not <code>null</code>, unaffected)</dd>
+<dd><code>materials</code> - the desired surface properties (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -377,8 +378,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified vertices and indices.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vertices</code> - list of vertex locations (not null, unaffected)</dd>
-<dd><code>indices</code> - list of triangles that use those vertices (not null)</dd>
+<dd><code>vertices</code> - list of vertex locations (not <code>null</code>, unaffected)</dd>
+<dd><code>indices</code> - list of triangles that use those vertices (not
+ <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -389,7 +391,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified array of triangles.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>triangleArray</code> - the array of triangles (not null, unaffected)</dd>
+<dd><code>triangleArray</code> - the array of triangles (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -401,8 +404,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate settings for the specified parameters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>triangleArray</code> - the array of triangles (not null, unaffected)</dd>
-<dd><code>materials</code> - the desired surface properties (not null, unaffected)</dd>
+<dd><code>triangleArray</code> - the array of triangles (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>materials</code> - the desired surface properties (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -430,13 +435,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="addTriangleVertex(com.github.stephengold.joltjni.Float3)">
+<section class="detail" id="addTriangleVertex(com.github.stephengold.joltjni.readonly.ConstFloat3)">
 <h3>addTriangleVertex</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addTriangleVertex</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;vertex)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addTriangleVertex</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;vertex)</span></div>
 <div class="block">Append the specified vertex to the internal array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vertex</code> - the location of the vertex to add (not null, unaffected)</dd>
+<dd><code>vertex</code> - the location of the vertex to add (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>

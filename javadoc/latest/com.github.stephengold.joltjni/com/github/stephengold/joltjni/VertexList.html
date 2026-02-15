@@ -145,14 +145,14 @@ implements <a href="readonly/ConstVertexList.html" title="interface in com.githu
 <div class="block">Copy the vertex at the specified index.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pushBack(com.github.stephengold.joltjni.Float3)" class="member-name-link">pushBack</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pushBack(com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">pushBack</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;location)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Append the specified vertex to the end.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resize(int)" class="member-name-link">resize</a><wbr>(int&nbsp;numVertices)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Expand or truncate the list, initializing any new vertices to (0,0,0).</div>
+<div class="block">Extend or truncate the list, initializing any new vertices to (0,0,0).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,float,float,float)" class="member-name-link">set</a><wbr>(int&nbsp;vertexIndex,
@@ -163,8 +163,8 @@ implements <a href="readonly/ConstVertexList.html" title="interface in com.githu
 <div class="block">Store the specified vertex location at the specified index.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.Float3)" class="member-name-link">set</a><wbr>(int&nbsp;vertexIndex,
- <a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">set</a><wbr>(int&nbsp;vertexIndex,
+ <a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;location)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Store the specified vertex location at the specified index.</div>
 </div>
@@ -217,13 +217,13 @@ implements <a href="readonly/ConstVertexList.html" title="interface in com.githu
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="pushBack(com.github.stephengold.joltjni.Float3)">
+<section class="detail" id="pushBack(com.github.stephengold.joltjni.readonly.ConstFloat3)">
 <h3>pushBack</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">pushBack</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">pushBack</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;location)</span></div>
 <div class="block">Append the specified vertex to the end.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the vertex to append (not null, unaffected)</dd>
+<dd><code>location</code> - the vertex to append (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -231,7 +231,7 @@ implements <a href="readonly/ConstVertexList.html" title="interface in com.githu
 <section class="detail" id="resize(int)">
 <h3>resize</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resize</span><wbr><span class="parameters">(int&nbsp;numVertices)</span></div>
-<div class="block">Expand or truncate the list, initializing any new vertices to (0,0,0).</div>
+<div class="block">Extend or truncate the list, initializing any new vertices to (0,0,0).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numVertices</code> - the desired size (number of vertices)</dd>
@@ -256,15 +256,15 @@ implements <a href="readonly/ConstVertexList.html" title="interface in com.githu
 </section>
 </li>
 <li>
-<section class="detail" id="set(int,com.github.stephengold.joltjni.Float3)">
+<section class="detail" id="set(int,com.github.stephengold.joltjni.readonly.ConstFloat3)">
 <h3>set</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(int&nbsp;vertexIndex,
- <a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;location)</span></div>
+ <a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;location)</span></div>
 <div class="block">Store the specified vertex location at the specified index.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>vertexIndex</code> - an index in the list (&ge;0, &lt;size)</dd>
-<dd><code>location</code> - the data to store (not null, unaffected)</dd>
+<dd><code>location</code> - the data to store (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -277,7 +277,7 @@ implements <a href="readonly/ConstVertexList.html" title="interface in com.githu
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>vertexIndex</code> - an index in the list (&ge;0, &lt;size)</dd>
-<dd><code>location</code> - the data to store (not null, unaffected)</dd>
+<dd><code>location</code> - the data to store (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

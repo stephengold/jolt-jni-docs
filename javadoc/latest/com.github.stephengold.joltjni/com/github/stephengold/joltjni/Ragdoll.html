@@ -119,6 +119,17 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">addLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg,boolean)" class="member-name-link">addLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV,
+ boolean&nbsp;lockBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addToPhysicsSystem(com.github.stephengold.joltjni.enumerate.EActivation)" class="member-name-link">addToPhysicsSystem</a><wbr>(<a href="enumerate/EActivation.html" title="enum class in com.github.stephengold.joltjni.enumerate">EActivation</a>&nbsp;activation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add bodies and constraints to the physics system and optionally activate
@@ -247,6 +258,32 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>addLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addLinearVelocity</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV)</span></div>
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deltaV</code> - the desired change in velocity (meters per second in system
+ coordinates, not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg,boolean)">
+<h3>addLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addLinearVelocity</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV,
+ boolean&nbsp;lockBodies)</span></div>
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deltaV</code> - the desired change in velocity (meters per second in system
+ coordinates, not <code>null</code>, unaffected)</dd>
+<dd><code>lockBodies</code> - (default=true)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="addToPhysicsSystem(com.github.stephengold.joltjni.enumerate.EActivation)">
 <h3>addToPhysicsSystem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToPhysicsSystem</span><wbr><span class="parameters">(<a href="enumerate/EActivation.html" title="enum class in com.github.stephengold.joltjni.enumerate">EActivation</a>&nbsp;activation)</span></div>
@@ -267,7 +304,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pose</code> - the desired pose</dd>
-<dd><code>time</code> - time to achieve the pose (in seconds)</dd>
+<dd><code>time</code> - the time interval for achieving the pose (in seconds)</dd>
 </dl>
 </section>
 </li>
@@ -281,7 +318,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pose</code> - the desired pose</dd>
-<dd><code>time</code> - time to achieve the pose (in seconds)</dd>
+<dd><code>time</code> - the time interval for achieving the pose (in seconds)</dd>
 <dd><code>lockBodies</code> - (default=true)</dd>
 </dl>
 </section>

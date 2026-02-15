@@ -343,8 +343,10 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Instantiate a box with the specified minimum and maximum coordinates.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>minimum</code> - the desired minimum coordinates (not null, unaffected)</dd>
-<dd><code>maximum</code> - the desired maximum coordinates (not null, unaffected)</dd>
+<dd><code>minimum</code> - the desired minimum coordinates (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>maximum</code> - the desired maximum coordinates (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -357,7 +359,8 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
  extent.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>center</code> - the desired center coordinates (not null, unaffected)</dd>
+<dd><code>center</code> - the desired center coordinates (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>halfExtent</code> - the desired half extent</dd>
 </dl>
 </section>
@@ -370,8 +373,10 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Instantiate a box with the specified minimum and maximum coordinates.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>minimum</code> - the desired minimum coordinates (not null, unaffected)</dd>
-<dd><code>maximum</code> - the desired maximum coordinates (not null, unaffected)</dd>
+<dd><code>minimum</code> - the desired minimum coordinates (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>maximum</code> - the desired maximum coordinates (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -390,7 +395,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Enlarge the current box to include the argument box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>includeBox</code> - the box to include (not null, unaffected)</dd>
+<dd><code>includeBox</code> - the box to include (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -401,7 +406,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Enlarge the box to include the specified triangle.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>triangle</code> - the triangle to include (not null, unaffected)</dd>
+<dd><code>triangle</code> - the triangle to include (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -412,7 +417,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Enlarge the box to include the specified location.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location to include (not null, unaffected)</dd>
+<dd><code>location</code> - the location to include (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -424,8 +429,8 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Enlarge the box to include the specified triangle.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vertices</code> - array of vertex locations (not null, unaffected)</dd>
-<dd><code>triangle</code> - the triangle to include (not null, unaffected)</dd>
+<dd><code>vertices</code> - array of vertex locations (not <code>null</code>, unaffected)</dd>
+<dd><code>triangle</code> - the triangle to include (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -477,8 +482,8 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Alter the maximum coordinates. (native member: mMax)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>max</code> - the desired maximum coordinate for each axis (not null,
- unaffected)</dd>
+<dd><code>max</code> - the desired maximum coordinate for each axis (not
+ <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -489,8 +494,8 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Alter the minimum coordinates. (native member: mMin)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>min</code> - the desired minimum coordinate for each axis (not null,
- unaffected)</dd>
+<dd><code>min</code> - the desired minimum coordinate for each axis (not
+ <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -501,7 +506,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <div class="block">Move by the specified offset.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>offset</code> - the amount to move (not null, unaffected)</dd>
+<dd><code>offset</code> - the amount to move (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -515,7 +520,8 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#contains(com.github.stephengold.joltjni.readonly.ConstAaBox)">contains</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>other</code> - the other box to check against (not null, unaffected)</dd>
+<dd><code>other</code> - the other box to check against (not <code>null</code>,
+ unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if contained, otherwise <code>false</code></dd>
 </dl>
@@ -530,7 +536,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#contains(com.github.stephengold.joltjni.readonly.Vec3Arg)">contains</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>point</code> - the point to test (not null, unaffected)</dd>
+<dd><code>point</code> - the point to test (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if contained, otherwise <code>false</code></dd>
 </dl>
@@ -559,7 +565,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#getClosestPoint(com.github.stephengold.joltjni.readonly.Vec3Arg)">getClosestPoint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>location</code> - the starting location (not null, unaffected)</dd>
+<dd><code>location</code> - the starting location (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -628,7 +634,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#getSqDistanceTo(com.github.stephengold.joltjni.readonly.Vec3Arg)">getSqDistanceTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>point</code> - the point to measure from (not null, unaffected)</dd>
+<dd><code>point</code> - the point to measure from (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the distance, or zero if <code>point</code> lies inside the box</dd>
 </dl>
@@ -697,7 +703,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#overlaps(com.github.stephengold.joltjni.readonly.ConstAaBox)">overlaps</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>other</code> - the other box to check</dd>
+<dd><code>other</code> - the other box to check (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if they overlap, otherwise <code>false</code></dd>
 </dl>
@@ -712,7 +718,8 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#overlaps(com.github.stephengold.joltjni.readonly.ConstPlane)">overlaps</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>plane</code> - the <code>Plane</code> object to be checked</dd>
+<dd><code>plane</code> - the <code>Plane</code> object to be checked (not <code>null</code>,
+ unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if they overlap, otherwise <code>false</code></dd>
 </dl>
@@ -727,7 +734,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#scaled(com.github.stephengold.joltjni.readonly.Vec3Arg)">scaled</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>factors</code> - the scale factors to apply (not null, unaffected)</dd>
+<dd><code>factors</code> - the scale factors to apply (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
 </dl>
@@ -742,7 +749,7 @@ implements <a href="readonly/ConstAaBox.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstAaBox.html#transformed(com.github.stephengold.joltjni.readonly.Mat44Arg)">transformed</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>matrix</code> - the transformation to apply (not null, unaffected)</dd>
+<dd><code>matrix</code> - the transformation to apply (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
 </dl>

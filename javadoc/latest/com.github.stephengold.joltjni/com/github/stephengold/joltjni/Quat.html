@@ -140,7 +140,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.nio.FloatBuffer)" class="member-name-link">Quat</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
 </div>
 </div>
 </section>
@@ -169,22 +169,22 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getW()" class="member-name-link">getW</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the real (W) component in single precision.</div>
+<div class="block">Return the real (W) component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getX()" class="member-name-link">getX</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the first imaginary (X) component in single precision.</div>
+<div class="block">Return the first imaginary (X) component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getY()" class="member-name-link">getY</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the 2nd imaginary (Y) component in single precision.</div>
+<div class="block">Return the 2nd imaginary (Y) component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getZ()" class="member-name-link">getZ</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the 3rd imaginary (Z) component in single precision.</div>
+<div class="block">Return the 3rd imaginary (Z) component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isFinite()" class="member-name-link">isFinite</a>()</code></div>
@@ -312,7 +312,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRotation(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">sRotation</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis,
  float&nbsp;angle)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Create a rotation quaternion from a normalized rotation axis.</div>
+<div class="block">Create a rotation quaternion from the specified normalized rotation axis.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -367,8 +367,8 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Instantiate a quaternion from the specified array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>array</code> - the desired component values (in XYZW order, not null,
- length&ge;4, unaffected)</dd>
+<dd><code>array</code> - the desired component values (in XYZW order, not
+ <code>null</code>, length&ge;4, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -376,10 +376,10 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <section class="detail" id="&lt;init&gt;(java.nio.FloatBuffer)">
 <h3>Quat</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Quat</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer)</span></div>
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, unaffected,
+<dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected,
  capacity&ge;4)</dd>
 </dl>
 </section>
@@ -391,7 +391,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Instantiate a copy of the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>original</code> - the quaternion to copy (not null, unaffected)</dd>
+<dd><code>original</code> - the quaternion to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -403,7 +403,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Instantiate a quaternion based on a <code>Vec3Arg</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v</code> - the desired XYZ components</dd>
+<dd><code>v</code> - the desired XYZ components (not <code>null</code>, unaffected)</dd>
 <dd><code>w</code> - the desired W component</dd>
 </dl>
 </section>
@@ -447,8 +447,8 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Set all 4 components from the specified array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>array</code> - the desired component values (in XYZW order, not null,
- length&ge;4, unaffected)</dd>
+<dd><code>array</code> - the desired component values (in XYZW order, not
+ <code>null</code>, length&ge;4, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -459,8 +459,8 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Set all 4 components from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, length&ge;4,
- unaffected)</dd>
+<dd><code>buffer</code> - the desired component values (not <code>null</code>,
+ length&ge;4, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -471,7 +471,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Copy all 4 components from the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>source</code> - the quaternion to copy (not null, unaffected)</dd>
+<dd><code>source</code> - the quaternion to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -504,7 +504,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>angles</code> - the desired rotation around each axis (in radians, not
- null, unaffected)</dd>
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new quaternion</dd>
 </dl>
@@ -518,8 +518,8 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Create a rotation quaternion that rotates <code>from</code> to <code>to</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>from</code> - the first direction vector (not null, unaffected)</dd>
-<dd><code>to</code> - the 2nd direction vector (not null, unaffected)</dd>
+<dd><code>from</code> - the first direction vector (not <code>null</code>, unaffected)</dd>
+<dd><code>to</code> - the 2nd direction vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new quaternion</dd>
 </dl>
@@ -543,7 +543,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <div class="block">Generate a pseudo-random unit quaternion.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>engine</code> - the generator to use (not null)</dd>
+<dd><code>engine</code> - the generator to use (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>a new unit quaternion</dd>
 </dl>
@@ -554,10 +554,11 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <h3>sRotation</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></span>&nbsp;<span class="element-name">sRotation</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis,
  float&nbsp;angle)</span></div>
-<div class="block">Create a rotation quaternion from a normalized rotation axis.</div>
+<div class="block">Create a rotation quaternion from the specified normalized rotation axis.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>axis</code> - the desired rotation axis (not null, normalized)</dd>
+<dd><code>axis</code> - the desired rotation axis (not <code>null</code>, normalized,
+ unaffected)</dd>
 <dd><code>angle</code> - the desired rotation angle (in radians)</dd>
 <dt>Returns:</dt>
 <dd>a new quaternion</dd>
@@ -574,7 +575,8 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/QuatArg.html#copyTo(java.nio.FloatBuffer)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeFloats</code> - the destination buffer (not null, capacity&ge;4)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>,
+ capacity&ge;4)</dd>
 </dl>
 </section>
 </li>
@@ -595,8 +597,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <section class="detail" id="getW()">
 <h3>getW</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getW</span>()</div>
-<div class="block">Return the real (W) component in single precision. The quaternion is
- unaffected.</div>
+<div class="block">Return the real (W) component. The quaternion is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/QuatArg.html#getW()">getW</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a></code></dd>
@@ -609,8 +610,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <section class="detail" id="getX()">
 <h3>getX</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getX</span>()</div>
-<div class="block">Return the first imaginary (X) component in single precision. The
- quaternion is unaffected.</div>
+<div class="block">Return the first imaginary (X) component. The quaternion is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/QuatArg.html#getX()">getX</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a></code></dd>
@@ -623,8 +623,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <section class="detail" id="getY()">
 <h3>getY</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getY</span>()</div>
-<div class="block">Return the 2nd imaginary (Y) component in single precision. The
- quaternion is unaffected.</div>
+<div class="block">Return the 2nd imaginary (Y) component. The quaternion is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/QuatArg.html#getY()">getY</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a></code></dd>
@@ -637,8 +636,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <section class="detail" id="getZ()">
 <h3>getZ</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getZ</span>()</div>
-<div class="block">Return the 3rd imaginary (Z) component in single precision. The
- quaternion is unaffected.</div>
+<div class="block">Return the 3rd imaginary (Z) component. The quaternion is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/QuatArg.html#getZ()">getZ</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a></code></dd>
@@ -770,7 +768,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/QuatArg.html#put(java.nio.FloatBuffer)">put</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the destination buffer (not null)</dd>
+<dd><code>storeBuffer</code> - the destination buffer (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -829,7 +827,7 @@ implements <a href="readonly/QuatArg.html" title="interface in com.github.stephe
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>the string representation (not null, not empty)</dd>
+<dd>the string representation (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>

@@ -113,8 +113,13 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">Geometry</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;bounds)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.Batch,com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">Geometry</a><wbr>(<a href="Batch.html" title="class in com.github.stephengold.joltjni">Batch</a>&nbsp;batch,
+ <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;bounds)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Instantiate a geometry with the specified batch and bounding box.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">Geometry</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;bounds)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Instantiate a geometry with the specified bounding box.</div>
 </div>
 </div>
@@ -168,7 +173,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Mark the native <code>Geometry</code> as embedded.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GeometryRef.html" title="class in com.github.stephengold.joltjni">GeometryRef</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the native <code>Geometry</code>.</div>
@@ -200,7 +205,20 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Instantiate a geometry with the specified bounding box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bounds</code> - the desired bounding box (not null, unaffected)</dd>
+<dd><code>bounds</code> - the desired bounding box (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.Batch,com.github.stephengold.joltjni.readonly.ConstAaBox)">
+<h3>Geometry</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Geometry</span><wbr><span class="parameters">(<a href="Batch.html" title="class in com.github.stephengold.joltjni">Batch</a>&nbsp;batch,
+ <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;bounds)</span></div>
+<div class="block">Instantiate a geometry with the specified batch and bounding box.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>batch</code> - the desired batch (not <code>null</code>)</dd>
+<dd><code>bounds</code> - the desired bounding box (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -260,9 +278,10 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
  geometry is unaffected. (native function: GetLOD)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>cameraPosition</code> - the location of the camera (not null, unaffected)</dd>
+<dd><code>cameraPosition</code> - the location of the camera (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>worldSpaceBounds</code> - bounds for this geometry (in system coordinates,
- not null, unaffected)</dd>
+ not <code>null</code>, unaffected)</dd>
 <dd><code>lodScaleSq</code> - the squared scale of the model matrix</dd>
 <dt>Returns:</dt>
 <dd>a pre-existing LOD</dd>
@@ -309,7 +328,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <li>
 <section class="detail" id="toRef()">
 <h3>toRef</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></span>&nbsp;<span class="element-name">toRef</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GeometryRef.html" title="class in com.github.stephengold.joltjni">GeometryRef</a></span>&nbsp;<span class="element-name">toRef</span>()</div>
 <div class="block">Create a counted reference to the native <code>Geometry</code>.</div>
 <dl class="notes">
 <dt>Specified by:</dt>

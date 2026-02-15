@@ -102,7 +102,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="../BodyVector.html" title="class in com.github.stephengold.joltjni">BodyVector</a></code>, <code><a href="../Constraints.html" title="class in com.github.stephengold.joltjni">Constraints</a></code>, <code><a href="../IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a></code>, <code><a href="../PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a></code>, <code><a href="../ShapeList.html" title="class in com.github.stephengold.joltjni">ShapeList</a></code></dd>
+<dd><code><a href="../BodyVector.html" title="class in com.github.stephengold.joltjni">BodyVector</a></code>, <code><a href="../Constraints.html" title="class in com.github.stephengold.joltjni">Constraints</a></code>, <code><a href="../IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a></code>, <code><a href="../PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a></code>, <code><a href="../ShapeList.html" title="class in com.github.stephengold.joltjni">ShapeList</a></code>, <code><a href="../SStrandList.html" title="class in com.github.stephengold.joltjni">SStrandList</a></code>, <code><a href="../SVertexList.html" title="class in com.github.stephengold.joltjni">SVertexList</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Array&lt;T extends <a href="../JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</span>
@@ -184,7 +184,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resize(int)" class="member-name-link">resize</a><wbr>(int&nbsp;numElements)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Expand or truncate the array.</div>
+<div class="block">Extend or truncate the array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#set(int,T)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
@@ -323,7 +323,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="resize(int)">
 <h3>resize</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resize</span><wbr><span class="parameters">(int&nbsp;numElements)</span></div>
-<div class="block">Expand or truncate the array.</div>
+<div class="block">Extend or truncate the array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numElements</code> - the desired size (number of elements, &ge;0)</dd>
@@ -337,7 +337,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Append the specified object to the end.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>object</code> - the object to append (not null)</dd>
+<dd><code>object</code> - the object to append (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -350,7 +350,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>elementIndex</code> - the index at which to put the object (&ge;0)</dd>
-<dd><code>object</code> - the object to put or duplicate (not null)</dd>
+<dd><code>object</code> - the object to put or duplicate (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>

@@ -381,10 +381,10 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <div class="block">Reposition the body, assuming it's kinematic.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>offset</code> - the desired offset (from the current location, not null,
- unaffected)</dd>
+<dd><code>offset</code> - the desired offset (from the current location, not
+ <code>null</code>, unaffected)</dd>
 <dd><code>rotation</code> - the desired rotation (relative to the current
- orientation, not null, unaffected)</dd>
+ orientation, not <code>null</code>, unaffected)</dd>
 <dd><code>deltaTime</code> - time until the desired position is reached (in seconds,
  &gt;0)</dd>
 </dl>
@@ -424,7 +424,7 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>omega</code> - the desired velocity (meters per second in system
- coordinates, not null, unaffected, default=(0,0,0))</dd>
+ coordinates, not <code>null</code>, unaffected, default=(0,0,0))</dd>
 </dl>
 </section>
 </li>
@@ -448,9 +448,10 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
  If inertia changes, mass should probably change as well.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>diagonal</code> - the desired diagonal elements (not null, unaffected)</dd>
-<dd><code>rotation</code> - the desired orientation of the principal axes (not null,
+<dd><code>diagonal</code> - the desired diagonal elements (not <code>null</code>,
  unaffected)</dd>
+<dd><code>rotation</code> - the desired orientation of the principal axes (not
+ <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -486,7 +487,7 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>velocity</code> - the desired velocity (meters per second in system
- coordinates, not null, unaffected, default=(0,0,0))</dd>
+ coordinates, not <code>null</code>, unaffected, default=(0,0,0))</dd>
 </dl>
 </section>
 </li>
@@ -500,7 +501,8 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <dt>Parameters:</dt>
 <dd><code>allowedDofs</code> - logical OR of values defined in <code>EAllowedDofs</code>
  (default=All)</dd>
-<dd><code>massProperties</code> - the desired mass properties (not null, unaffected)</dd>
+<dd><code>massProperties</code> - the desired mass properties (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -572,7 +574,7 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstMotionProperties.html#getAccumulatedTorque()">getAccumulatedTorque</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a></code></dd>
 <dt>Returns:</dt>
-<dd>a new torque vector (Newton.meters in system coordinates)</dd>
+<dd>a new torque vector (Newton meters in system coordinates)</dd>
 </dl>
 </section>
 </li>
@@ -786,7 +788,7 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstMotionProperties.html#getMotionQuality()">getMotionQuality</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a></code></dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>

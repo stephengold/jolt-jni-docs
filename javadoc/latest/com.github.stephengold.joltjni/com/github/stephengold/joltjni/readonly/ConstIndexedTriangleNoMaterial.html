@@ -123,6 +123,12 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the mesh-vertex index of the specified corner.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#put(java.nio.IntBuffer)" class="member-name-link">put</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write all 3 indices to the specified buffer and advance the buffer's
+ position by 3.</div>
+</div>
 </div>
 </div>
 </div>
@@ -152,7 +158,19 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dt>Parameters:</dt>
 <dd><code>cornerIndex</code> - which corner to access (0, 1, or 2)</dd>
 <dt>Returns:</dt>
-<dd>the mesh-vertex index</dd>
+<dd>the index of the vertex in the mesh</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="put(java.nio.IntBuffer)">
+<h3>put</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">put</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeBuffer)</span></div>
+<div class="block">Write all 3 indices to the specified buffer and advance the buffer's
+ position by 3. The triangle is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeBuffer</code> - the destination buffer (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>

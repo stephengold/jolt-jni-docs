@@ -610,10 +610,10 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <div class="block">Instantiate cooked settings for the specified shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the desired shape (not null)</dd>
-<dd><code>loc</code> - the desired location (not null, unaffected)</dd>
-<dd><code>orient</code> - the desired orientation (not null, unaffected)</dd>
-<dd><code>motionType</code> - the desired motion type (not null)</dd>
+<dd><code>shape</code> - the desired shape (not <code>null</code>)</dd>
+<dd><code>loc</code> - the desired location (not <code>null</code>, unaffected)</dd>
+<dd><code>orient</code> - the desired orientation (not <code>null</code>, unaffected)</dd>
+<dd><code>motionType</code> - the desired motion type (not <code>null</code>)</dd>
 <dd><code>objLayer</code> - the ID of the desired object layer (&ge;0)</dd>
 </dl>
 </section>
@@ -629,10 +629,10 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <div class="block">Instantiate uncooked settings for the specified shape settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeSettings</code> - the desired shape settings (not null)</dd>
-<dd><code>loc</code> - the desired location (not null, unaffected)</dd>
-<dd><code>orient</code> - the desired orientation (not null, unaffected)</dd>
-<dd><code>motionType</code> - the desired motion type (not null)</dd>
+<dd><code>shapeSettings</code> - the desired shape settings (not <code>null</code>)</dd>
+<dd><code>loc</code> - the desired location (not <code>null</code>, unaffected)</dd>
+<dd><code>orient</code> - the desired orientation (not <code>null</code>, unaffected)</dd>
+<dd><code>motionType</code> - the desired motion type (not <code>null</code>)</dd>
 <dd><code>objLayer</code> - the ID of the desired object layer</dd>
 </dl>
 </section>
@@ -648,10 +648,10 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <div class="block">Instantiate settings for the specified shape reference.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeRef</code> - a reference to the desired shape (not null)</dd>
-<dd><code>loc</code> - the desired location (not null, unaffected)</dd>
-<dd><code>orient</code> - the desired orientation (not null, unaffected)</dd>
-<dd><code>motionType</code> - the desired motion type (not null)</dd>
+<dd><code>shapeRef</code> - a reference to the desired shape (not <code>null</code>)</dd>
+<dd><code>loc</code> - the desired location (not <code>null</code>, unaffected)</dd>
+<dd><code>orient</code> - the desired orientation (not <code>null</code>, unaffected)</dd>
+<dd><code>motionType</code> - the desired motion type (not <code>null</code>)</dd>
 <dd><code>objLayer</code> - the ID of the desired object layer</dd>
 </dl>
 </section>
@@ -723,7 +723,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
  shape and group filter.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - where to read objects from (not null)</dd>
+<dd><code>stream</code> - where to read objects from (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -813,7 +813,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>omega</code> - the desired angular velocity (radians per second in system
- coordinates, not null, unaffected, default=(0,0,0))</dd>
+ coordinates, not <code>null</code>, unaffected, default=(0,0,0))</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -857,7 +857,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
  mCollisionGroup)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>group</code> - the desired group (not null, unaffected)</dd>
+<dd><code>group</code> - the desired group (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -974,7 +974,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>velocity</code> - the desired velocity (meters per second in system
- coordinates, not null, unaffected, default=(0,0,0))</dd>
+ coordinates, not <code>null</code>, unaffected, default=(0,0,0))</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -988,7 +988,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
  mMassPropertiesOverride)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>properties</code> - the desired properties (not null, unaffected)</dd>
+<dd><code>properties</code> - the desired properties (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -1029,7 +1029,8 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <div class="block">Alter the motion quality. (native member: mMotionQuality)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>motionQuality</code> - the desired quality (not null, default=Discrete)</dd>
+<dd><code>motionQuality</code> - the desired quality (not <code>null</code>,
+ default=Discrete)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -1042,7 +1043,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <div class="block">Alter the motion type. (native member: mMotionType)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>motionType</code> - the desired type (not null, default=Dynamic)</dd>
+<dd><code>motionType</code> - the desired type (not <code>null</code>, default=Dynamic)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -1100,7 +1101,8 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
  mOverrideMassProperties)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>setting</code> - an enum value (not null, default=CalculateMassAndInertia)</dd>
+<dd><code>setting</code> - an enum value (not <code>null</code>,
+ default=CalculateMassAndInertia)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -1132,8 +1134,8 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
  coincide with its center of mass). (native member: mPosition)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected, default=(0,0,0))</dd>
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected, default=(0,0,0))</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -1161,8 +1163,8 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
  mRotation)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>quat</code> - the desired rotation (relative to the system axes, not null,
- normalized, unaffected, default=(0,0,0,1))</dd>
+<dd><code>quat</code> - the desired rotation (relative to the system axes, not
+ <code>null</code>, normalized, unaffected, default=(0,0,0,1))</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -1190,7 +1192,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
  method, the body-creation settings will be in an "uncooked" state.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeSettings</code> - the desired shape settings (not null)</dd>
+<dd><code>shapeSettings</code> - the desired shape settings (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -1233,10 +1235,11 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <div class="block">Read a settings object from the specified binary stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - where to read objects (not null)</dd>
-<dd><code>shapeMap</code> - track multiple uses of shapes (not null)</dd>
-<dd><code>materialMap</code> - track multiple uses of physics materials (not null)</dd>
-<dd><code>filterMap</code> - track multiple uses of group filters (not null)</dd>
+<dd><code>stream</code> - where to read objects (not <code>null</code>)</dd>
+<dd><code>shapeMap</code> - track multiple uses of shapes (not <code>null</code>)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (not
+ <code>null</code>)</dd>
+<dd><code>filterMap</code> - track multiple uses of group filters (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
 </dl>
@@ -1519,7 +1522,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstBodyCreationSettings.html#getMotionQuality()">getMotionQuality</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a></code></dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1533,7 +1536,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstBodyCreationSettings.html#getMotionType()">getMotionType</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a></code></dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1591,7 +1594,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstBodyCreationSettings.html#getOverrideMassProperties()">getOverrideMassProperties</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a></code></dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1719,7 +1722,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstBodyCreationSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>stream</code> - where to write objects (not null)</dd>
+<dd><code>stream</code> - where to write objects (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1736,7 +1739,7 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstBodyCreationSettings.html#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.ShapeToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)">saveWithChildren</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>stream</code> - where to write objects (not null)</dd>
+<dd><code>stream</code> - where to write objects (not <code>null</code>)</dd>
 <dd><code>shapeMap</code> - track multiple uses of shapes (may be null)</dd>
 <dd><code>materialMap</code> - track multiple uses of physics materials (may be null)</dd>
 <dd><code>filterMap</code> - track multiple uses of group filters (may be null)</dd>

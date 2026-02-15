@@ -118,7 +118,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">RMat44</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;spMatrix)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate from a single-precision matrix.</div>
+<div class="block">Instantiate from the specified single-precision matrix.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.RMat44Arg)" class="member-name-link">RMat44</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;original)</code></div>
 <div class="col-last even-row-color">
@@ -397,10 +397,10 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.Mat44Arg)">
 <h3>RMat44</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RMat44</span><wbr><span class="parameters">(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;spMatrix)</span></div>
-<div class="block">Instantiate from a single-precision matrix.</div>
+<div class="block">Instantiate from the specified single-precision matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>spMatrix</code> - the matrix to copy (not null, unaffected)</dd>
+<dd><code>spMatrix</code> - the matrix to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -411,7 +411,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Instantiate a copy of the specified matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>original</code> - the matrix to duplicate (not null, unaffected)</dd>
+<dd><code>original</code> - the matrix to duplicate (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -425,10 +425,11 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Instantiate a matrix with the specified columns.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>c1</code> - the desired first/leftmost column (not null, unaffected)</dd>
-<dd><code>c2</code> - the desired 2nd column (not null, unaffected)</dd>
-<dd><code>c3</code> - the desired 3rd column (not null, unaffected)</dd>
-<dd><code>c4</code> - the desired 4th/rightmost column (not null, unaffected)</dd>
+<dd><code>c1</code> - the desired first/leftmost column (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>c2</code> - the desired 2nd column (not <code>null</code>, unaffected)</dd>
+<dd><code>c3</code> - the desired 3rd column (not <code>null</code>, unaffected)</dd>
+<dd><code>c4</code> - the desired 4th/rightmost column (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -447,7 +448,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Left-multiply the current matrix by the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>leftFactor</code> - the left factor (not null, unaffected)</dd>
+<dd><code>leftFactor</code> - the left factor (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -465,7 +466,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Return the product of the specified matrices.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>mArray</code> - an array of input matrices (not null, unaffected)</dd>
+<dd><code>mArray</code> - an array of input matrices (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -478,7 +479,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Right-multiply the current matrix by the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rightFactor</code> - the right factor (not null, unaffected)</dd>
+<dd><code>rightFactor</code> - the right factor (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -489,7 +490,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Copy all elements of the argument to the current matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>source</code> - the matrix to copy (not null, unaffected)</dd>
+<dd><code>source</code> - the matrix to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -500,7 +501,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Set the first column to the specified vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vec</code> - the vector to use (not null, unaffected)</dd>
+<dd><code>vec</code> - the vector to use (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -511,7 +512,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Set the 2nd column to the specified vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vec</code> - the vector to use (not null, unaffected)</dd>
+<dd><code>vec</code> - the vector to use (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -522,7 +523,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Set the 3rd column to the specified vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vec</code> - the vector to use (not null, unaffected)</dd>
+<dd><code>vec</code> - the vector to use (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -548,7 +549,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Alter the translation component.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>offset</code> - the desired translation (not null, unaffected)</dd>
+<dd><code>offset</code> - the desired translation (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -570,7 +571,8 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Create a rotation matrix from the specified quaternion.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rotation</code> - the rotation quaternion to use (not null, unaffected)</dd>
+<dd><code>rotation</code> - the rotation quaternion to use (not <code>null</code>,
+ unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
 </dl>
@@ -584,8 +586,8 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Create a translation-and-rotation matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rotation</code> - the amount to rotate (not null, unaffected)</dd>
-<dd><code>offset</code> - the amount to translate (not null, unaffected)</dd>
+<dd><code>rotation</code> - the amount to rotate (not <code>null</code>, unaffected)</dd>
+<dd><code>offset</code> - the amount to translate (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
 </dl>
@@ -611,7 +613,8 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Create a pure scaling matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>factors</code> - the amount to scale each axis (not null, unaffected)</dd>
+<dd><code>factors</code> - the amount to scale each axis (not <code>null</code>,
+ unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -624,7 +627,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Create a pure translation matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>offset</code> - the amount to translate (not null, unaffected)</dd>
+<dd><code>offset</code> - the amount to translate (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -775,7 +778,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#isEqual(com.github.stephengold.joltjni.readonly.RMat44Arg)">isEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>m2</code> - the 2nd matrix to test (not null, unaffected)</dd>
+<dd><code>m2</code> - the 2nd matrix to test (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if equal, <code>false</code> if unequal</dd>
 </dl>
@@ -805,7 +808,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#multiply(com.github.stephengold.joltjni.readonly.Mat44Arg)">multiply</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -821,7 +824,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#multiply(com.github.stephengold.joltjni.readonly.RMat44Arg)">multiply</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -837,7 +840,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#multiply3x3(com.github.stephengold.joltjni.readonly.Vec3Arg)">multiply3x3</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>vec3Arg</code> - the right factor (not null, unaffected)</dd>
+<dd><code>vec3Arg</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -853,7 +856,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#multiply3x3Transposed(com.github.stephengold.joltjni.readonly.Vec3Arg)">multiply3x3Transposed</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>rightVector</code> - the right factor (not null, unaffected)</dd>
+<dd><code>rightVector</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -870,7 +873,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#multiply3x4(com.github.stephengold.joltjni.readonly.RVec3Arg)">multiply3x4</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>rightVector</code> - the right factor (not null, unaffected)</dd>
+<dd><code>rightVector</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -887,7 +890,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#multiply3x4(com.github.stephengold.joltjni.readonly.Vec3Arg)">multiply3x4</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>vec3</code> - the right factor (not null, unaffected)</dd>
+<dd><code>vec3</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -919,7 +922,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#postTranslated(com.github.stephengold.joltjni.readonly.RVec3Arg)">postTranslated</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>leftVector</code> - the left factor (not null, unaffected)</dd>
+<dd><code>leftVector</code> - the left factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -935,7 +938,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)">postTranslated</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>vec3</code> - the left factor (not null, unaffected)</dd>
+<dd><code>vec3</code> - the left factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -952,7 +955,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#put3x3ColumnMajor(java.nio.FloatBuffer)">put3x3ColumnMajor</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeFloats</code> - the destination buffer (not null)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -967,7 +970,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#putColumnMajor(java.nio.FloatBuffer)">putColumnMajor</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeFloats</code> - the destination buffer (not null)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1003,7 +1006,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Overrides:</dt>
 <dd><code><a href="JoltPhysicsObject.html#toString()">toString</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
 <dt>Returns:</dt>
-<dd>the string representation (not null, not empty)</dd>
+<dd>the string representation (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>

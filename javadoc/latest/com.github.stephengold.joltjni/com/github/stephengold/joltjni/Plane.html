@@ -128,7 +128,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.nio.FloatBuffer)" class="member-name-link">Plane</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
 </div>
 </div>
 </section>
@@ -242,7 +242,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <div class="block">Instantiate a copy of the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>original</code> - the plane to copy (not null, unaffected)</dd>
+<dd><code>original</code> - the plane to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -267,10 +267,10 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <section class="detail" id="&lt;init&gt;(java.nio.FloatBuffer)">
 <h3>Plane</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Plane</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer)</span></div>
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, unaffected,
+<dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected,
  capacity&ge;4)</dd>
 </dl>
 </section>
@@ -283,7 +283,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <div class="block">Instantiate a plane with specified components.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>normal</code> - the desired normal direction (not null, unaffected)</dd>
+<dd><code>normal</code> - the desired normal direction (not <code>null</code>, unaffected)</dd>
 <dd><code>c</code> - the desired constant</dd>
 </dl>
 </section>
@@ -303,7 +303,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <div class="block">Set all 4 components from the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>source</code> - the plane to copy (not null, unaffected)</dd>
+<dd><code>source</code> - the plane to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -331,8 +331,8 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <div class="block">Set all 4 components from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, length&ge;4,
- unaffected)</dd>
+<dd><code>buffer</code> - the desired component values (not <code>null</code>,
+ length&ge;4, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -354,7 +354,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <div class="block">Alter the normal direction.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>normal</code> - the desired direction (not null, unaffected)</dd>
+<dd><code>normal</code> - the desired direction (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -368,7 +368,8 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstPlane.html#copyTo(java.nio.FloatBuffer)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeFloats</code> - the destination buffer (not null, capacity&ge;4)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>,
+ capacity&ge;4)</dd>
 </dl>
 </section>
 </li>
@@ -450,7 +451,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstPlane.html#put(java.nio.FloatBuffer)">put</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the destination buffer (not null)</dd>
+<dd><code>storeBuffer</code> - the destination buffer (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -463,7 +464,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstPlane.html#signedDistance(com.github.stephengold.joltjni.readonly.Vec3Arg)">signedDistance</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>point</code> - the point to measure (not null, unaffected)</dd>
+<dd><code>point</code> - the point to measure (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the signed distance</dd>
 </dl>
@@ -482,7 +483,7 @@ implements <a href="readonly/ConstPlane.html" title="interface in com.github.ste
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>the string representation (not null, not empty)</dd>
+<dd>the string representation (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>

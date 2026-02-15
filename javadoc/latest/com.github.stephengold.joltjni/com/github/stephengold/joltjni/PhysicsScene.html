@@ -158,7 +158,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Correct any incorrectly scaled shapes in the scene.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fromPhysicsSystem(com.github.stephengold.joltjni.PhysicsSystem)" class="member-name-link">fromPhysicsSystem</a><wbr>(<a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a>&nbsp;system)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fromPhysicsSystem(com.github.stephengold.joltjni.readonly.ConstPhysicsSystem)" class="member-name-link">fromPhysicsSystem</a><wbr>(<a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a>&nbsp;system)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Load the current state of the specified physics system.</div>
 </div>
@@ -192,7 +192,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PhysicsSceneResult.html" title="class in com.github.stephengold.joltjni">PhysicsSceneResult</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreFromBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">sRestoreFromBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Attempt to de-serialize a saved scene from a stream.</div>
+<div class="block">Attempt to de-serialize a saved scene from the specified stream.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsSceneRef.html" title="class in com.github.stephengold.joltjni">PhysicsSceneRef</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
@@ -241,7 +241,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Add the specified body to the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>body</code> - the body settings (not null, unaffected)</dd>
+<dd><code>body</code> - the body settings (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -254,7 +254,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Add the specified constraint to the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>constraint</code> - the constraint settings (not null, unaffected)</dd>
+<dd><code>constraint</code> - the constraint settings (not <code>null</code>, unaffected)</dd>
 <dd><code>body1</code> - the index of the first body in the bodies list</dd>
 <dd><code>body2</code> - the index of the 2nd body in the bodies list</dd>
 </dl>
@@ -267,7 +267,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Add the specified soft body to the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>softBody</code> - the soft-body settings (not null, unaffected)</dd>
+<dd><code>softBody</code> - the soft-body settings (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -278,7 +278,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Instantiate the bodies in the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>system</code> - where to add the bodies (not null, modified)</dd>
+<dd><code>system</code> - where to add the bodies (not <code>null</code>, modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
 </dl>
@@ -296,13 +296,14 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 </section>
 </li>
 <li>
-<section class="detail" id="fromPhysicsSystem(com.github.stephengold.joltjni.PhysicsSystem)">
+<section class="detail" id="fromPhysicsSystem(com.github.stephengold.joltjni.readonly.ConstPhysicsSystem)">
 <h3>fromPhysicsSystem</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">fromPhysicsSystem</span><wbr><span class="parameters">(<a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a>&nbsp;system)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">fromPhysicsSystem</span><wbr><span class="parameters">(<a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a>&nbsp;system)</span></div>
 <div class="block">Load the current state of the specified physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>system</code> - the physics system to load from (not null, unaffected)</dd>
+<dd><code>system</code> - the physics system to load from (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -339,7 +340,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Save the scene to the specified binary stream. The scene is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to write to (not null)</dd>
+<dd><code>stream</code> - the stream to write to (not <code>null</code>)</dd>
 <dd><code>saveShapes</code> - if true, save the shapes</dd>
 <dd><code>saveGroupFilter</code> - if true, save the group filter</dd>
 </dl>
@@ -349,10 +350,10 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <section class="detail" id="sRestoreFromBinaryState(com.github.stephengold.joltjni.StreamIn)">
 <h3>sRestoreFromBinaryState</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PhysicsSceneResult.html" title="class in com.github.stephengold.joltjni">PhysicsSceneResult</a></span>&nbsp;<span class="element-name">sRestoreFromBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
-<div class="block">Attempt to de-serialize a saved scene from a stream.</div>
+<div class="block">Attempt to de-serialize a saved scene from the specified stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to read (not null)</dd>
+<dd><code>stream</code> - the stream to read (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
 </dl>

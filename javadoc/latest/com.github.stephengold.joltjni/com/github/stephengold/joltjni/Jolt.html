@@ -217,7 +217,8 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#destroyFactory()" class="member-name-link">destroyFactory</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Destroy the factory for deserialization of saved data.</div>
+<div class="block">Destroy the factory used for collision dispatch and object-stream
+ serialization.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#detLog(java.lang.String)" class="member-name-link">detLog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
@@ -260,83 +261,131 @@ loadScripts(document, 'script');</script>
 <div class="block">Estimate the contact impulses and body velocity changes resulting from a
  collision.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getConfigurationString()" class="member-name-link">getConfigurationString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getAssertCallback()" class="member-name-link">getAssertCallback</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return a string containing important configuration settings.</div>
+<div class="block">Return the installed assert callback.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(long,int)" class="member-name-link">hashBytes</a><wbr>(long&nbsp;dataVa,
- int&nbsp;inSize)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getConfigurationString()" class="member-name-link">getConfigurationString</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Return a string describing some important configuration settings of the
+ native library.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(long,int)" class="member-name-link">hashBytes</a><wbr>(long&nbsp;dataVa,
+ int&nbsp;inSize)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return a hash code for the specified data bytes.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.QuatArg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;quaternion,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.QuatArg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;quaternion,
  long&nbsp;oldHash)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified quaternion with the specified hash code.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.RVec3Arg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vector,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashBytes(com.github.stephengold.joltjni.readonly.RVec3Arg,long)" class="member-name-link">hashBytes</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vector,
  long&nbsp;oldHash)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified vector with the specified hash code.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,int)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,int)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
  int&nbsp;iValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified 32-bit integer with the specified hash code.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,long)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,long)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
  long&nbsp;lValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified 64-bit integer with the specified hash code.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vector)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified location vector with the specified hash code.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hashCombine(long,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">hashCombine</a><wbr>(long&nbsp;oldHash,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vector)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Combine the specified vector with the specified hash code.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsComputeCpu()" class="member-name-link">implementsComputeCpu</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Test whether the native library implements CPU-based compute systems,
+ which are intended mainly for debugging.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDebugRendering()" class="member-name-link">implementsDebugRendering</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsComputeDx12()" class="member-name-link">implementsComputeDx12</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Test whether the native library implements debug rendering.</div>
+<div class="block">Test whether the native library implements compute systems based on
+ Microsoft's DirectX 12 API.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDeterminismLog()" class="member-name-link">implementsDeterminismLog</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsComputeMtl()" class="member-name-link">implementsComputeMtl</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Test whether the native library implements compute systems based on
+ Apple's Metal API.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsComputeVk()" class="member-name-link">implementsComputeVk</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Test whether the native library implements compute systems based on
+ Khronos's Vulkan API.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDebugRendering()" class="member-name-link">implementsDebugRendering</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Test whether the native library implements debug rendering.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#implementsDeterminismLog()" class="member-name-link">implementsDeterminismLog</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Test whether the native library implements extra logging to help debug
  determinism issues.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installAssertCallback(long)" class="member-name-link">installAssertCallback</a><wbr>(long&nbsp;callbackVa)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Install the specified assert callback.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installCerrTraceCallback()" class="member-name-link">installCerrTraceCallback</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Install an alternative trace callback that uses <code>cerr</code>.</div>
+<div class="block">Install an alternative trace callback that writes to <code>cerr</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installCrashAssertCallback()" class="member-name-link">installCrashAssertCallback</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Install the default assert callback.</div>
+<div class="block">Install an alternative assert callback that crashes the JVM with an
+ EXCEPTION_ACCESS_VIOLATION or SIGILL.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Install the default trace callback, which uses <code>cout</code>.</div>
+<div class="block">Install the default assert callback, which writes to <code>cout</code> and
+ triggers a native breakpoint.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Install the default trace callback, which writes to <code>cout</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installIgnoreAssertCallback()" class="member-name-link">installIgnoreAssertCallback</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Install an alternative assert callback that silently ignores assertions.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#installJavaTraceCallback(java.io.PrintStream)" class="member-name-link">installJavaTraceCallback</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;stream)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Install a trace callback that uses a <code>PrintStream</code>.</div>
+<div class="block">Install an alternative trace callback that writes to the specified
+ <code>PrintStream</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isDoublePrecision()" class="member-name-link">isDoublePrecision</a>()</code></div>
@@ -349,26 +398,38 @@ loadScripts(document, 'script');</script>
 <div class="block">List all classes in the specified Jolt-JNI package.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectByteBuffer(int)" class="member-name-link">newDirectByteBuffer</a><wbr>(int&nbsp;numBytes)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loadResourceAsBytes(java.lang.String)" class="member-name-link">loadResourceAsBytes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resourceName)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Create a direct <code>ByteBuffer</code> with the specified capacity.</div>
+<div class="block">Load raw bytes from the named classpath resource.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectDoubleBuffer(int)" class="member-name-link">newDirectDoubleBuffer</a><wbr>(int&nbsp;numDoubles)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectByteBuffer(int)" class="member-name-link">newDirectByteBuffer</a><wbr>(int&nbsp;numBytes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Create a direct <code>ByteBuffer</code> with native byte order and the
+ specified capacity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectDoubleBuffer(int)" class="member-name-link">newDirectDoubleBuffer</a><wbr>(int&nbsp;numDoubles)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>DoubleBuffer</code> with native byte order and the
  specified capacity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectFloatBuffer(int)" class="member-name-link">newDirectFloatBuffer</a><wbr>(int&nbsp;numFloats)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectFloatBuffer(int)" class="member-name-link">newDirectFloatBuffer</a><wbr>(int&nbsp;numFloats)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>FloatBuffer</code> with native byte order and the
  specified capacity.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectIntBuffer(int)" class="member-name-link">newDirectIntBuffer</a><wbr>(int&nbsp;numInts)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectIntBuffer(int)" class="member-name-link">newDirectIntBuffer</a><wbr>(int&nbsp;numInts)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a direct <code>IntBuffer</code> with native byte order and the
+ specified capacity.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/LongBuffer.html" title="class or interface in java.nio" class="external-link">LongBuffer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newDirectLongBuffer(int)" class="member-name-link">newDirectLongBuffer</a><wbr>(int&nbsp;numLongs)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Create a direct <code>LongBuffer</code> with native byte order and the
  specified capacity.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ShortBuffer.html" title="class or interface in java.nio" class="external-link">ShortBuffer</a></code></div>
@@ -380,7 +441,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newFactory()" class="member-name-link">newFactory</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Create a factory for deserialization of saved data.</div>
+<div class="block">Create a factory for collision dispatch and object-stream serialization.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#perlinNoise3(float,float,float,int,int,int)" class="member-name-link">perlinNoise3</a><wbr>(float&nbsp;x,
@@ -488,69 +549,74 @@ loadScripts(document, 'script');</script>
 <div class="block">Register the allocation hook to use malloc/free.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#registerTypes()" class="member-name-link">registerTypes</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#registerHair()" class="member-name-link">registerHair</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Register all physics types with the factory and install their collision
- handlers.</div>
+<div class="block">Register <code>HairSettings</code> with the factory.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setTraceAllocations(boolean)" class="member-name-link">setTraceAllocations</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#registerTypes()" class="member-name-link">registerTypes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Register all physics types except <code>HairSettings</code> with the factory
+ and install their collision handlers.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setTraceAllocations(boolean)" class="member-name-link">setTraceAllocations</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Enable or disable allocation tracing in Debug native libraries.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sign(float)" class="member-name-link">sign</a><wbr>(float&nbsp;input)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sign(float)" class="member-name-link">sign</a><wbr>(float&nbsp;input)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the (binary) sign of the specified single-precision value.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sin(float)" class="member-name-link">sin</a><wbr>(float&nbsp;angle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sin(float)" class="member-name-link">sin</a><wbr>(float&nbsp;angle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the sine of the specified single-precision angle.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(float)" class="member-name-link">square</a><wbr>(float&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(float)" class="member-name-link">square</a><wbr>(float&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the square of the specified single-precision value.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(int)" class="member-name-link">square</a><wbr>(int&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(int)" class="member-name-link">square</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the square of the specified integer value.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sSetNextCharacterId()" class="member-name-link">sSetNextCharacterId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sSetNextCharacterId()" class="member-name-link">sSetNextCharacterId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Set the next available character ID to 1.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sSetNextCharacterId(int)" class="member-name-link">sSetNextCharacterId</a><wbr>(int&nbsp;nextValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sSetNextCharacterId(int)" class="member-name-link">sSetNextCharacterId</a><wbr>(int&nbsp;nextValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Set the next available character ID to the specified value.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#supportsObjectStream()" class="member-name-link">supportsObjectStream</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#supportsObjectStream()" class="member-name-link">supportsObjectStream</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Test whether the native library supports the ObjectStream format.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tan(float)" class="member-name-link">tan</a><wbr>(float&nbsp;angle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tan(float)" class="member-name-link">tan</a><wbr>(float&nbsp;angle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the tangent ratio of the specified single-precision angle.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#test000(java.lang.String...)" class="member-name-link">test000</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#test000(java.lang.String...)" class="member-name-link">test000</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Execute a test written in native code.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#unregisterTypes()" class="member-name-link">unregisterTypes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#unregisterTypes()" class="member-name-link">unregisterTypes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Unregister all physics types with the factory.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#versionString()" class="member-name-link">versionString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#versionString()" class="member-name-link">versionString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the Jolt-JNI version string that's hard-coded into the native
  library.</div>
 </div>
@@ -735,7 +801,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="aCos(float)">
 <h3>aCos</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">aCos</span><wbr><span class="parameters">(float&nbsp;ratio)</span></div>
-<div class="block">Return the inverse cosine of the specified single-precision ratio.</div>
+<div class="block">Return the inverse cosine of the specified single-precision ratio. (see
+ Jolt/Math/Trigonometry.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>ratio</code> - the input cosine ratio (&ge;-1, &le;1)</dd>
@@ -748,7 +815,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="aTan(float)">
 <h3>aTan</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">aTan</span><wbr><span class="parameters">(float&nbsp;ratio)</span></div>
-<div class="block">Return the inverse tangent of the specified single-precision ratio.</div>
+<div class="block">Return the inverse tangent of the specified single-precision ratio. (see
+ Jolt/Math/Trigonometry.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>ratio</code> - the input tangent ratio</dd>
@@ -762,7 +830,8 @@ loadScripts(document, 'script');</script>
 <h3>aTan2</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">aTan2</span><wbr><span class="parameters">(float&nbsp;opposite,
  float&nbsp;adjacent)</span></div>
-<div class="block">Return the angle of the specified single-precision right triangle.</div>
+<div class="block">Return the angle of the specified single-precision right triangle. (see
+ Jolt/Math/Trigonometry.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>opposite</code> - the signed length of the opposite side</dd>
@@ -788,7 +857,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="cos(float)">
 <h3>cos</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">cos</span><wbr><span class="parameters">(float&nbsp;angle)</span></div>
-<div class="block">Return the cosine of the specified single-precision angle.</div>
+<div class="block">Return the cosine of the specified single-precision angle. (see
+ Jolt/Math/Trigonometry.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>angle</code> - the input angle (in radians)</dd>
@@ -838,7 +908,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="destroyFactory()">
 <h3>destroyFactory</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyFactory</span>()</div>
-<div class="block">Destroy the factory for deserialization of saved data.</div>
+<div class="block">Destroy the factory used for collision dispatch and object-stream
+ serialization.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -856,7 +927,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Append a message to the determinism log. (native macro: JPH_DET_LOG)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>message</code> - (not null)</dd>
+<dd><code>message</code> - (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -870,13 +941,13 @@ loadScripts(document, 'script');</script>
  float&nbsp;combinedFriction,
  float&nbsp;combinedRestitution)</span></div>
 <div class="block">Estimate the contact impulses and body velocity changes resulting from a
- collision.</div>
+ collision. (see Physics/Collision/EstimateCollisionResponse.cpp)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>body1</code> - the first colliding body (not null, unaffected)</dd>
-<dd><code>body2</code> - the 2nd colliding body (not null, unaffected)</dd>
-<dd><code>manifold</code> - the collision manifold (not null, unaffected)</dd>
-<dd><code>storeResult</code> - storage for impulses and velocities (not null,
+<dd><code>body1</code> - the first colliding body (not <code>null</code>, unaffected)</dd>
+<dd><code>body2</code> - the 2nd colliding body (not <code>null</code>, unaffected)</dd>
+<dd><code>manifold</code> - the collision manifold (not <code>null</code>, unaffected)</dd>
+<dd><code>storeResult</code> - storage for impulses and velocities (not <code>null</code>,
  modified)</dd>
 <dd><code>combinedFriction</code> - the combined friction of the 2 bodies</dd>
 <dd><code>combinedRestitution</code> - the combined restitution of the 2 bodies</dd>
@@ -894,13 +965,13 @@ loadScripts(document, 'script');</script>
  float&nbsp;combinedRestitution,
  float&nbsp;minVelocity)</span></div>
 <div class="block">Estimate the contact impulses and body velocity changes resulting from a
- collision.</div>
+ collision. (see Physics/Collision/EstimateCollisionResponse.cpp)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>body1</code> - the first colliding body (not null, unaffected)</dd>
-<dd><code>body2</code> - the 2nd colliding body (not null, unaffected)</dd>
-<dd><code>manifold</code> - the collision manifold (not null, unaffected)</dd>
-<dd><code>storeResult</code> - storage for impulses and velocities (not null,
+<dd><code>body1</code> - the first colliding body (not <code>null</code>, unaffected)</dd>
+<dd><code>body2</code> - the 2nd colliding body (not <code>null</code>, unaffected)</dd>
+<dd><code>manifold</code> - the collision manifold (not <code>null</code>, unaffected)</dd>
+<dd><code>storeResult</code> - storage for impulses and velocities (not <code>null</code>,
  modified)</dd>
 <dd><code>combinedFriction</code> - the combined friction of the 2 bodies</dd>
 <dd><code>combinedRestitution</code> - the combined restitution of the 2 bodies</dd>
@@ -921,13 +992,13 @@ loadScripts(document, 'script');</script>
  float&nbsp;minVelocity,
  int&nbsp;numIterations)</span></div>
 <div class="block">Estimate the contact impulses and body velocity changes resulting from a
- collision.</div>
+ collision. (see Physics/Collision/EstimateCollisionResponse.cpp)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>body1</code> - the first colliding body (not null, unaffected)</dd>
-<dd><code>body2</code> - the 2nd colliding body (not null, unaffected)</dd>
-<dd><code>manifold</code> - the collision manifold (not null, unaffected)</dd>
-<dd><code>storeResult</code> - storage for impulses and velocities (not null,
+<dd><code>body1</code> - the first colliding body (not <code>null</code>, unaffected)</dd>
+<dd><code>body2</code> - the 2nd colliding body (not <code>null</code>, unaffected)</dd>
+<dd><code>manifold</code> - the collision manifold (not <code>null</code>, unaffected)</dd>
+<dd><code>storeResult</code> - storage for impulses and velocities (not <code>null</code>,
  modified)</dd>
 <dd><code>combinedFriction</code> - the combined friction of the 2 bodies</dd>
 <dd><code>combinedRestitution</code> - the combined restitution of the 2 bodies</dd>
@@ -939,10 +1010,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getAssertCallback()">
+<h3>getAssertCallback</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getAssertCallback</span>()</div>
+<div class="block">Return the installed assert callback.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the virtual address of the callback, or zero if none</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="#installAssertCallback(long)"><code>installAssertCallback(long)</code></a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getConfigurationString()">
 <h3>getConfigurationString</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getConfigurationString</span>()</div>
-<div class="block">Return a string containing important configuration settings.</div>
+<div class="block">Return a string describing some important configuration settings of the
+ native library. (see Jolt/ConfigurationString.h)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the string value</dd>
@@ -954,7 +1043,8 @@ loadScripts(document, 'script');</script>
 <h3>hashBytes</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">hashBytes</span><wbr><span class="parameters">(long&nbsp;dataVa,
  int&nbsp;inSize)</span></div>
-<div class="block">Return a hash code for the specified data bytes.</div>
+<div class="block">Return a hash code for the specified data bytes. (see
+ Jolt/Core/HashCombine.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>dataVa</code> - the virtual address of the data, or 0 for no data</dd>
@@ -972,7 +1062,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Combine the specified quaternion with the specified hash code.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>quaternion</code> - the quaternion to combine (not null, unaffected)</dd>
+<dd><code>quaternion</code> - the quaternion to combine (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>oldHash</code> - the old hash code</dd>
 <dt>Returns:</dt>
 <dd>the new hash code</dd>
@@ -987,7 +1078,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Combine the specified vector with the specified hash code.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vector</code> - the vector to combine (not null, unaffected)</dd>
+<dd><code>vector</code> - the vector to combine (not <code>null</code>, unaffected)</dd>
 <dd><code>oldHash</code> - the old hash code</dd>
 <dt>Returns:</dt>
 <dd>the new hash code</dd>
@@ -999,7 +1090,8 @@ loadScripts(document, 'script');</script>
 <h3>hashCombine</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">hashCombine</span><wbr><span class="parameters">(long&nbsp;oldHash,
  int&nbsp;iValue)</span></div>
-<div class="block">Combine the specified 32-bit integer with the specified hash code.</div>
+<div class="block">Combine the specified 32-bit integer with the specified hash code. (see
+ Jolt/Core/HashCombine.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>oldHash</code> - the old hash code</dd>
@@ -1033,7 +1125,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>oldHash</code> - the old hash code</dd>
-<dd><code>vector</code> - the vector to combine (not null, unaffected)</dd>
+<dd><code>vector</code> - the vector to combine (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the new hash code</dd>
 </dl>
@@ -1048,9 +1140,58 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>oldHash</code> - the old hash code</dd>
-<dd><code>vector</code> - the vector to combine (not null, unaffected)</dd>
+<dd><code>vector</code> - the vector to combine (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the new hash code</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="implementsComputeCpu()">
+<h3>implementsComputeCpu</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">implementsComputeCpu</span>()</div>
+<div class="block">Test whether the native library implements CPU-based compute systems,
+ which are intended mainly for debugging. (native macro:
+ JPH_USE_CPU_COMPUTE)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if implemented, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="implementsComputeDx12()">
+<h3>implementsComputeDx12</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">implementsComputeDx12</span>()</div>
+<div class="block">Test whether the native library implements compute systems based on
+ Microsoft's DirectX 12 API. (native macro: JPH_USE_DX12)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if implemented, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="implementsComputeMtl()">
+<h3>implementsComputeMtl</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">implementsComputeMtl</span>()</div>
+<div class="block">Test whether the native library implements compute systems based on
+ Apple's Metal API. (native macro: JPH_USE_MTL)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if implemented, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="implementsComputeVk()">
+<h3>implementsComputeVk</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">implementsComputeVk</span>()</div>
+<div class="block">Test whether the native library implements compute systems based on
+ Khronos's Vulkan API. (native macro: JPH_USE_VK)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if implemented, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>
@@ -1071,7 +1212,7 @@ loadScripts(document, 'script');</script>
 <h3>implementsDeterminismLog</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">implementsDeterminismLog</span>()</div>
 <div class="block">Test whether the native library implements extra logging to help debug
- determinism issues. (native macro: JPH_DET_LOG)</div>
+ determinism issues. (native macro: JPH_ENABLE_DETERMINISM_LOG)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if implemented, otherwise <code>false</code></dd>
@@ -1079,34 +1220,68 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="installAssertCallback(long)">
+<h3>installAssertCallback</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installAssertCallback</span><wbr><span class="parameters">(long&nbsp;callbackVa)</span></div>
+<div class="block">Install the specified assert callback.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>callbackVa</code> - the virtual address of the desired callback</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="#getAssertCallback()"><code>getAssertCallback()</code></a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="installCerrTraceCallback()">
 <h3>installCerrTraceCallback</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installCerrTraceCallback</span>()</div>
-<div class="block">Install an alternative trace callback that uses <code>cerr</code>.</div>
+<div class="block">Install an alternative trace callback that writes to <code>cerr</code>.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="installCrashAssertCallback()">
+<h3>installCrashAssertCallback</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installCrashAssertCallback</span>()</div>
+<div class="block">Install an alternative assert callback that crashes the JVM with an
+ EXCEPTION_ACCESS_VIOLATION or SIGILL. Intended for testing only!</div>
 </section>
 </li>
 <li>
 <section class="detail" id="installDefaultAssertCallback()">
 <h3>installDefaultAssertCallback</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installDefaultAssertCallback</span>()</div>
-<div class="block">Install the default assert callback.</div>
+<div class="block">Install the default assert callback, which writes to <code>cout</code> and
+ triggers a native breakpoint.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="installDefaultTraceCallback()">
 <h3>installDefaultTraceCallback</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installDefaultTraceCallback</span>()</div>
-<div class="block">Install the default trace callback, which uses <code>cout</code>.</div>
+<div class="block">Install the default trace callback, which writes to <code>cout</code>.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="installIgnoreAssertCallback()">
+<h3>installIgnoreAssertCallback</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installIgnoreAssertCallback</span>()</div>
+<div class="block">Install an alternative assert callback that silently ignores assertions.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="installJavaTraceCallback(java.io.PrintStream)">
 <h3>installJavaTraceCallback</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">installJavaTraceCallback</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;stream)</span></div>
-<div class="block">Install a trace callback that uses a <code>PrintStream</code>.</div>
+<div class="block">Install an alternative trace callback that writes to the specified
+ <code>PrintStream</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - where to send trace output (not null)</dd>
+<dd><code>stream</code> - where to send trace output (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1137,10 +1312,24 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="loadResourceAsBytes(java.lang.String)">
+<h3>loadResourceAsBytes</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a></span>&nbsp;<span class="element-name">loadResourceAsBytes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resourceName)</span></div>
+<div class="block">Load raw bytes from the named classpath resource.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>resourceName</code> - the name of the resource (not <code>null</code>)</dd>
+<dt>Returns:</dt>
+<dd>a new direct buffer</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="newDirectByteBuffer(int)">
 <h3>newDirectByteBuffer</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a></span>&nbsp;<span class="element-name">newDirectByteBuffer</span><wbr><span class="parameters">(int&nbsp;numBytes)</span></div>
-<div class="block">Create a direct <code>ByteBuffer</code> with the specified capacity.</div>
+<div class="block">Create a direct <code>ByteBuffer</code> with native byte order and the
+ specified capacity.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numBytes</code> - the desired capacity (in bytes)</dd>
@@ -1192,6 +1381,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="newDirectLongBuffer(int)">
+<h3>newDirectLongBuffer</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/LongBuffer.html" title="class or interface in java.nio" class="external-link">LongBuffer</a></span>&nbsp;<span class="element-name">newDirectLongBuffer</span><wbr><span class="parameters">(int&nbsp;numLongs)</span></div>
+<div class="block">Create a direct <code>LongBuffer</code> with native byte order and the
+ specified capacity.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>numLongs</code> - the desired capacity (in longs)</dd>
+<dt>Returns:</dt>
+<dd>a new direct buffer, zeroed and rewound but not flipped</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="newDirectShortBuffer(int)">
 <h3>newDirectShortBuffer</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ShortBuffer.html" title="class or interface in java.nio" class="external-link">ShortBuffer</a></span>&nbsp;<span class="element-name">newDirectShortBuffer</span><wbr><span class="parameters">(int&nbsp;numShorts)</span></div>
@@ -1199,7 +1402,7 @@ loadScripts(document, 'script');</script>
  specified capacity.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>numShorts</code> - the desired capacity (in ints)</dd>
+<dd><code>numShorts</code> - the desired capacity (in shorts)</dd>
 <dt>Returns:</dt>
 <dd>a new direct buffer, zeroed and rewound but not flipped</dd>
 </dl>
@@ -1209,7 +1412,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="newFactory()">
 <h3>newFactory</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">newFactory</span>()</div>
-<div class="block">Create a factory for deserialization of saved data.</div>
+<div class="block">Create a factory for collision dispatch and object-stream serialization.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
@@ -1231,7 +1434,7 @@ loadScripts(document, 'script');</script>
  int&nbsp;xWrap,
  int&nbsp;yWrap,
  int&nbsp;zWrap)</span></div>
-<div class="block">Generate 3-D Perlin noise.</div>
+<div class="block">Generate 3-D Perlin noise. (see TestFramework/External/Perlin.cpp)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>x</code> - the X coordinate</dd>
@@ -1255,7 +1458,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Dump profiler data. (native macro: JPH_PROFILE_DUMP)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>message</code> - (not null)</dd>
+<dd><code>message</code> - (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1281,7 +1484,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Start an instrumented code section. (native macro: JPH_PROFILE_START)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>name</code> - the section name (not null)</dd>
+<dd><code>name</code> - the section name (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1305,14 +1508,17 @@ loadScripts(document, 'script');</script>
  <a href="RayInvDirection.html" title="class in com.github.stephengold.joltjni">RayInvDirection</a>&nbsp;invDirection,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;minimum,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;maximum)</span></div>
-<div class="block">Intersect the specified axis-aligned box with the specified ray.</div>
+<div class="block">Intersect the specified axis-aligned box with the specified ray. (see
+ Jolt/Geometry/RayAABox.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
-<dd><code>invDirection</code> - the inverse direction of the ray (not null,
+<dd><code>rayOrigin</code> - the origin of the ray (not <code>null</code>, unaffected)</dd>
+<dd><code>invDirection</code> - the inverse direction of the ray (not <code>null</code>,
  unaffected)</dd>
-<dd><code>minimum</code> - the minimum coordinates of the box (not null, unaffected)</dd>
-<dd><code>maximum</code> - the maximum coordinates of the box (not null, unaffected)</dd>
+<dd><code>minimum</code> - the minimum coordinates of the box (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>maximum</code> - the maximum coordinates of the box (not <code>null</code>,
+ unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
  misses the box</dd>
@@ -1326,15 +1532,18 @@ loadScripts(document, 'script');</script>
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;minimum,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;maximum)</span></div>
-<div class="block">Intersect the specified axis-aligned box with the specified ray.</div>
+<div class="block">Intersect the specified axis-aligned box with the specified ray. (see
+ Jolt/Geometry/RayAABox.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>startLocation</code> - the desired start location of the ray (not null,
+<dd><code>startLocation</code> - the desired start location of the ray (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>offset</code> - the desired end offset from the start location (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>minimum</code> - the minimum coordinates of the box (not <code>null</code>,
  unaffected)</dd>
-<dd><code>offset</code> - the desired end offset from the start location (not null,
+<dd><code>maximum</code> - the maximum coordinates of the box (not <code>null</code>,
  unaffected)</dd>
-<dd><code>minimum</code> - the minimum coordinates of the box (not null, unaffected)</dd>
-<dd><code>maximum</code> - the maximum coordinates of the box (not null, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if there is a hit, otherwise <code>false</code></dd>
 </dl>
@@ -1347,11 +1556,13 @@ loadScripts(document, 'script');</script>
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
  float&nbsp;capsuleHalfHeight,
  float&nbsp;capsuleRadius)</span></div>
-<div class="block">Intersect the specified capsule with the specified ray.</div>
+<div class="block">Intersect the specified capsule with the specified ray. (see
+ Jolt/Geometry/RayCapsule.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
-<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>rayOrigin</code> - the origin of the ray (not <code>null</code>, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>capsuleHalfHeight</code> - half the height of the capsule</dd>
 <dd><code>capsuleRadius</code> - the radius of the capsule</dd>
 <dt>Returns:</dt>
@@ -1366,11 +1577,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">rayCylinder</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayOrigin,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
  float&nbsp;cylinderRadius)</span></div>
-<div class="block">Intersect the specified infinite cylinder with the specified ray.</div>
+<div class="block">Intersect the specified infinite cylinder with the specified ray. (see
+ Jolt/Geometry/RayCylinder.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
-<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>rayOrigin</code> - the origin of the ray (not <code>null</code>, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>cylinderRadius</code> - the radius of the cylinder</dd>
 <dt>Returns:</dt>
 <dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
@@ -1385,11 +1598,13 @@ loadScripts(document, 'script');</script>
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
  float&nbsp;cylinderHalfHeight,
  float&nbsp;cylinderRadius)</span></div>
-<div class="block">Intersect the specified finite cylinder with the specified ray.</div>
+<div class="block">Intersect the specified finite cylinder with the specified ray. (see
+ Jolt/Geometry/RayCylinder.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
-<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
+<dd><code>rayOrigin</code> - the origin of the ray (not <code>null</code>, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>cylinderHalfHeight</code> - half of the height of the cylinder</dd>
 <dd><code>cylinderRadius</code> - the radius of the cylinder</dd>
 <dt>Returns:</dt>
@@ -1405,12 +1620,15 @@ loadScripts(document, 'script');</script>
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rayDirection,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;sphereCenter,
  float&nbsp;sphereRadius)</span></div>
-<div class="block">Intersect the specified sphere with the specified ray.</div>
+<div class="block">Intersect the specified sphere with the specified ray. (see
+ Jolt/Geometry/RaySphere.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
-<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
-<dd><code>sphereCenter</code> - the center of the sphere (not null, unaffected)</dd>
+<dd><code>rayOrigin</code> - the origin of the ray (not <code>null</code>, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>sphereCenter</code> - the center of the sphere (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>sphereRadius</code> - the radius of the sphere</dd>
 <dt>Returns:</dt>
 <dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
@@ -1426,14 +1644,16 @@ loadScripts(document, 'script');</script>
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v0,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v1,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;v2)</span></div>
-<div class="block">Intersect the specified triangle with the specified ray.</div>
+<div class="block">Intersect the specified triangle with the specified ray. (see
+ Jolt/Geometry/RayTriangle.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rayOrigin</code> - the origin of the ray (not null, unaffected)</dd>
-<dd><code>rayDirection</code> - the direction of the ray (not null, unaffected)</dd>
-<dd><code>v0</code> - the first vertex of the triangle (not null, unaffected)</dd>
-<dd><code>v1</code> - the 2nd vertex of the triangle (not null, unaffected)</dd>
-<dd><code>v2</code> - the 3rd vertex of the triangle (not null, unaffected)</dd>
+<dd><code>rayOrigin</code> - the origin of the ray (not <code>null</code>, unaffected)</dd>
+<dd><code>rayDirection</code> - the direction of the ray (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>v0</code> - the first vertex of the triangle (not <code>null</code>, unaffected)</dd>
+<dd><code>v1</code> - the 2nd vertex of the triangle (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the 3rd vertex of the triangle (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the minimum distance along ray, or <code>FLT_MAX</code> if the ray
  misses the triangle</dd>
@@ -1468,19 +1688,36 @@ loadScripts(document, 'script');</script>
 <h3>registerDefaultAllocator</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">registerDefaultAllocator</span>()</div>
 <div class="block">Register the allocation hook to use malloc/free. This must be done before
- any other Jolt function is called.</div>
+ any other Jolt function is called. (see Jolt/Core/Memory.cpp)</div>
+</section>
+</li>
+<li>
+<section class="detail" id="registerHair()">
+<h3>registerHair</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">registerHair</span>()</div>
+<div class="block">Register <code>HairSettings</code> with the factory. (see
+ Jolt/RegisterTypes.h)</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="#unregisterTypes()"><code>unregisterTypes()</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="registerTypes()">
 <h3>registerTypes</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">registerTypes</span>()</div>
-<div class="block">Register all physics types with the factory and install their collision
- handlers.</div>
+<div class="block">Register all physics types except <code>HairSettings</code> with the factory
+ and install their collision handlers. (see Jolt/RegisterTypes.h)</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
+<li><a href="#registerHair()"><code>registerHair()</code></a></li>
 <li><a href="#unregisterTypes()"><code>unregisterTypes()</code></a></li>
 </ul>
 </dd>
@@ -1503,7 +1740,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="sign(float)">
 <h3>sign</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">sign</span><wbr><span class="parameters">(float&nbsp;input)</span></div>
-<div class="block">Return the (binary) sign of the specified single-precision value.</div>
+<div class="block">Return the (binary) sign of the specified single-precision value. (see
+ Jolt/Math/Math.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>input</code> - the input value</dd>
@@ -1516,7 +1754,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="sin(float)">
 <h3>sin</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">sin</span><wbr><span class="parameters">(float&nbsp;angle)</span></div>
-<div class="block">Return the sine of the specified single-precision angle.</div>
+<div class="block">Return the sine of the specified single-precision angle. (see
+ Jolt/Math/Trigonometry.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>angle</code> - the input angle (in radians)</dd>
@@ -1555,7 +1794,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="sSetNextCharacterId()">
 <h3>sSetNextCharacterId</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sSetNextCharacterId</span>()</div>
-<div class="block">Set the next available character ID to 1.</div>
+<div class="block">Set the next available character ID to 1. (see
+ Jolt/Physics/Character/CharacterID.h)</div>
 </section>
 </li>
 <li>
@@ -1586,7 +1826,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="tan(float)">
 <h3>tan</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">tan</span><wbr><span class="parameters">(float&nbsp;angle)</span></div>
-<div class="block">Return the tangent ratio of the specified single-precision angle.</div>
+<div class="block">Return the tangent ratio of the specified single-precision angle. (see
+ Jolt/Math/Trigonometry.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>angle</code> - the input angle (in radians)</dd>
@@ -1610,7 +1851,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="unregisterTypes()">
 <h3>unregisterTypes</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">unregisterTypes</span>()</div>
-<div class="block">Unregister all physics types with the factory.</div>
+<div class="block">Unregister all physics types with the factory. (see Jolt/RegisterTypes.h)</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -1629,7 +1870,7 @@ loadScripts(document, 'script');</script>
  library.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the version string (not null, not empty)</dd>
+<dd>the version string (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>

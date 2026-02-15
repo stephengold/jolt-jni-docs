@@ -96,11 +96,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PhysicsSystem</span>
-<span class="extends-implements">extends <a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">NonCopyable</a></span></div>
+<span class="extends-implements">extends <a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">NonCopyable</a>
+implements <a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></span></div>
 <div class="block">Perform simulation on a collection of physics objects. Bodies are added by
  way of a separate interface.</div>
 </section>
@@ -462,6 +463,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -495,7 +502,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Add the specified constraint to the system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>constraint</code> - the constraint to add (not null)</dd>
+<dd><code>constraint</code> - the constraint to add (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -532,7 +539,7 @@ loadScripts(document, 'script');</script>
  Step listeners are limited in what actions they can perform.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>listener</code> - the listener to add (not null, alias created)</dd>
+<dd><code>listener</code> - the listener to add (not <code>null</code>, alias created)</dd>
 </dl>
 </section>
 </li>
@@ -555,8 +562,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Render the bodies in the system, for debugging purposes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the settings to use (not null)</dd>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
+<dd><code>settings</code> - the settings to use (not <code>null</code>)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -567,7 +574,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Render all constraints in the system, for debugging purposes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -579,7 +586,7 @@ loadScripts(document, 'script');</script>
  purposes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -591,21 +598,7 @@ loadScripts(document, 'script');</script>
  debugging purposes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="containsConstraint(com.github.stephengold.joltjni.readonly.ConstConstraint)">
-<h3>containsConstraint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">containsConstraint</span><wbr><span class="parameters">(<a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a>&nbsp;constraint)</span></div>
-<div class="block">Test whether the system contains the specified constraint. The system is
- unaffected.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>constraint</code> - the constraint to search for (not null, unaffected)</dd>
-<dt>Returns:</dt>
-<dd><code>true</code> if found, otherwise <code>false</code></dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -644,50 +637,13 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getActiveBodies(com.github.stephengold.joltjni.enumerate.EBodyType,com.github.stephengold.joltjni.BodyIdVector)">
-<h3>getActiveBodies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getActiveBodies</span><wbr><span class="parameters">(<a href="enumerate/EBodyType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBodyType</a>&nbsp;bodyType,
- <a href="BodyIdVector.html" title="class in com.github.stephengold.joltjni">BodyIdVector</a>&nbsp;storeResult)</span></div>
-<div class="block">Enumerate all bodies of the specified type to the specified vector.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>bodyType</code> - (not null)</dd>
-<dd><code>storeResult</code> - storage for the result (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getBodies(com.github.stephengold.joltjni.BodyIdVector)">
-<h3>getBodies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getBodies</span><wbr><span class="parameters">(<a href="BodyIdVector.html" title="class in com.github.stephengold.joltjni">BodyIdVector</a>&nbsp;storeResult)</span></div>
-<div class="block">Enumerate all bodies to the specified variable-length vector. The system
- is unaffected.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>storeResult</code> - storage for the result (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getBodyActivationListener()">
-<h3>getBodyActivationListener</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BodyActivationListener.html" title="class in com.github.stephengold.joltjni">BodyActivationListener</a></span>&nbsp;<span class="element-name">getBodyActivationListener</span>()</div>
-<div class="block">Access the system's <code>BodyActivationListener</code>.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned, or
- <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getBodyInterface()">
 <h3>getBodyInterface</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></span>&nbsp;<span class="element-name">getBodyInterface</span>()</div>
 <div class="block">Access the system's <code>BodyInterface</code>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the pre-existing JVM object (not null)</dd>
+<dd>the pre-existing JVM object (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -704,257 +660,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getBodyLockInterface()">
-<h3>getBodyLockInterface</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstBodyLockInterfaceLocking.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterfaceLocking</a></span>&nbsp;<span class="element-name">getBodyLockInterface</span>()</div>
-<div class="block">Access the system's <code>BodyLockInterfaceLocking</code>.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getBodyLockInterfaceNoLock()">
-<h3>getBodyLockInterfaceNoLock</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstBodyLockInterfaceNoLock.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterfaceNoLock</a></span>&nbsp;<span class="element-name">getBodyLockInterfaceNoLock</span>()</div>
-<div class="block">Access the system's <code>BodyLockInterfaceNoLock</code>.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getBounds()">
-<h3>getBounds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></span>&nbsp;<span class="element-name">getBounds</span>()</div>
-<div class="block">Generate a bounding box that contains all the bodies in the system. The
- system is unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new box</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getBroadPhaseLayerInterface()">
 <h3>getBroadPhaseLayerInterface</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstBroadPhaseLayerInterface.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseLayerInterface</a></span>&nbsp;<span class="element-name">getBroadPhaseLayerInterface</span>()</div>
 <div class="block">Access the (application-provided) interface for mapping object layers to
  broadphase layers.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing instance, or <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getBroadPhaseQuery()">
-<h3>getBroadPhaseQuery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstBroadPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseQuery</a></span>&nbsp;<span class="element-name">getBroadPhaseQuery</span>()</div>
-<div class="block">Access the system's interface for coarse collision queries.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing JVM object, or <code>null</code> if the system hasn't
- been initialized yet</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCombineFriction()">
-<h3>getCombineFriction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CombineFunction.html" title="class in com.github.stephengold.joltjni">CombineFunction</a></span>&nbsp;<span class="element-name">getCombineFriction</span>()</div>
-<div class="block">Access the combining function for friction.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCombineRestitution()">
-<h3>getCombineRestitution</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CombineFunction.html" title="class in com.github.stephengold.joltjni">CombineFunction</a></span>&nbsp;<span class="element-name">getCombineRestitution</span>()</div>
-<div class="block">Access the combining function for restitutions.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getConstraints()">
-<h3>getConstraints</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Constraints.html" title="class in com.github.stephengold.joltjni">Constraints</a></span>&nbsp;<span class="element-name">getConstraints</span>()</div>
-<div class="block">Enumerate all constraints in the system. The system is unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getContactListener()">
-<h3>getContactListener</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ContactListener.html" title="class in com.github.stephengold.joltjni">ContactListener</a></span>&nbsp;<span class="element-name">getContactListener</span>()</div>
-<div class="block">Access the (application-provided) contact listener.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing instance, or <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getDefaultBroadPhaseLayerFilter(int)">
-<h3>getDefaultBroadPhaseLayerFilter</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DefaultBroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">DefaultBroadPhaseLayerFilter</a></span>&nbsp;<span class="element-name">getDefaultBroadPhaseLayerFilter</span><wbr><span class="parameters">(int&nbsp;objectLayer)</span></div>
-<div class="block">Generate a broad-phase layer filter using the current pair filter and the
- specified layer index.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>objectLayer</code> - the index of the object layer to use</dd>
-<dt>Returns:</dt>
-<dd>a new filter</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getDefaultLayerFilter(int)">
-<h3>getDefaultLayerFilter</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DefaultObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">DefaultObjectLayerFilter</a></span>&nbsp;<span class="element-name">getDefaultLayerFilter</span><wbr><span class="parameters">(int&nbsp;objectLayer)</span></div>
-<div class="block">Generate an object layer filter using the current pair filter and the
- specified layer index.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>objectLayer</code> - the index of the object layer to use</dd>
-<dt>Returns:</dt>
-<dd>a new filter</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getGravity()">
-<h3>getGravity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getGravity</span>()</div>
-<div class="block">Copy the gravity vector. The system is unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new acceleration vector (meters per second squared in system
- coordinates)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMaxBodies()">
-<h3>getMaxBodies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaxBodies</span>()</div>
-<div class="block">Return the maximum number of bodies the system supports. The system is
- unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNarrowPhaseQuery()">
-<h3>getNarrowPhaseQuery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstNarrowPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstNarrowPhaseQuery</a></span>&nbsp;<span class="element-name">getNarrowPhaseQuery</span>()</div>
-<div class="block">Access the system's interface for fine collision queries.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing JVM object (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNarrowPhaseQueryNoLock()">
-<h3>getNarrowPhaseQueryNoLock</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstNarrowPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstNarrowPhaseQuery</a></span>&nbsp;<span class="element-name">getNarrowPhaseQueryNoLock</span>()</div>
-<div class="block">Access a version of the system's <code>NarrowPhaseQuery</code> that does not
- lock the bodies.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing JVM object (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNumActiveBodies(com.github.stephengold.joltjni.enumerate.EBodyType)">
-<h3>getNumActiveBodies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumActiveBodies</span><wbr><span class="parameters">(<a href="enumerate/EBodyType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBodyType</a>&nbsp;bodyType)</span></div>
-<div class="block">Count how many active bodies of the specified type there are in the body
- manager. The system is unaffected.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>bodyType</code> - which type of body to count (not null)</dd>
-<dt>Returns:</dt>
-<dd>the count (&ge;0, &le;maxBodies)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNumBodies()">
-<h3>getNumBodies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumBodies</span>()</div>
-<div class="block">Count how many bodies there are in the body manager. The system is
- unaffected.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the count (&ge;0, &le;maxBodies)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getObjectLayerPairFilter()">
-<h3>getObjectLayerPairFilter</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstObjectLayerPairFilter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstObjectLayerPairFilter</a></span>&nbsp;<span class="element-name">getObjectLayerPairFilter</span>()</div>
-<div class="block">Access the (application-provided) interface for testing whether 2 objects
- can collide, based on their object layers.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing instance, or <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getObjectVsBroadPhaseLayerFilter()">
-<h3>getObjectVsBroadPhaseLayerFilter</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstObjectVsBroadPhaseLayerFilter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstObjectVsBroadPhaseLayerFilter</a></span>&nbsp;<span class="element-name">getObjectVsBroadPhaseLayerFilter</span>()</div>
-<div class="block">Access the (application-provided) interface for testing whether an object
- can collide with a broad-phase layer.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pre-existing instance, or <code>null</code> if none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPhysicsSettings()">
-<h3>getPhysicsSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></span>&nbsp;<span class="element-name">getPhysicsSettings</span>()</div>
-<div class="block">Copy the system's settings. The system is unaffected.
- <p>
- Different semantics from the native <code>GetPhysicsSettings()</code>, which
- returns a const reference, not a copy.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with a new native object assigned</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list-long">
-<li><a href="#setPhysicsSettings(com.github.stephengold.joltjni.readonly.ConstPhysicsSettings)"><code>setPhysicsSettings(com.github.stephengold.joltjni.ConstPhysicsSettings)</code></a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSoftBodyContactListener()">
-<h3>getSoftBodyContactListener</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SoftBodyContactListener.html" title="class in com.github.stephengold.joltjni">SoftBodyContactListener</a></span>&nbsp;<span class="element-name">getSoftBodyContactListener</span>()</div>
-<div class="block">Access the (application-provided) soft-body contact listener.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the pre-existing instance, or <code>null</code> if none</dd>
@@ -982,9 +692,9 @@ loadScripts(document, 'script');</script>
  queued at a time (&ge;3)</dd>
 <dd><code>maxContactConstraints</code> - the desired capacity of the
  contact-constraint buffer</dd>
-<dd><code>map</code> - (not null, alias created)</dd>
-<dd><code>ovbFilter</code> - (not null, alias created)</dd>
-<dd><code>ovoFilter</code> - (not null, alias created)</dd>
+<dd><code>map</code> - (not <code>null</code>, alias created)</dd>
+<dd><code>ovbFilter</code> - (not <code>null</code>, alias created)</dd>
+<dd><code>ovoFilter</code> - (not <code>null</code>, alias created)</dd>
 <dt>Returns:</dt>
 <dd>the current system (for chaining)</dd>
 </dl>
@@ -1032,7 +742,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Remove the specified constraint from the system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>constraint</code> - the constraint to remove (not null)</dd>
+<dd><code>constraint</code> - the constraint to remove (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1043,7 +753,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Remove the specified step listener from the system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>listener</code> - the listener to remove (not null)</dd>
+<dd><code>listener</code> - the listener to remove (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1054,48 +764,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Restore the system's state from the specified recorder, for replay.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>recorder</code> - where to read the state from (not null)</dd>
+<dd><code>recorder</code> - where to read the state from (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="saveState(com.github.stephengold.joltjni.StateRecorder)">
-<h3>saveState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveState</span><wbr><span class="parameters">(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder)</span></div>
-<div class="block">Save the system's state to be replayed later.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>recorder</code> - where to save the state (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="saveState(com.github.stephengold.joltjni.StateRecorder,int)">
-<h3>saveState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveState</span><wbr><span class="parameters">(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder,
- int&nbsp;bitmask)</span></div>
-<div class="block">Save the aspects of the system's state to be replayed later.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>recorder</code> - where to save the state (not null)</dd>
-<dd><code>bitmask</code> - which aspects of the simulation to save</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="saveState(com.github.stephengold.joltjni.StateRecorder,int,com.github.stephengold.joltjni.StateRecorderFilter)">
-<h3>saveState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveState</span><wbr><span class="parameters">(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder,
- int&nbsp;bitmask,
- <a href="StateRecorderFilter.html" title="class in com.github.stephengold.joltjni">StateRecorderFilter</a>&nbsp;filter)</span></div>
-<div class="block">Save aspects of the system's state to be replayed later.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>recorder</code> - where to save the state (not null)</dd>
-<dd><code>bitmask</code> - which aspects of the simulation to save</dd>
-<dd><code>filter</code> - select which parts to save (unaffected) or <code>null</code></dd>
 </dl>
 </section>
 </li>
@@ -1117,7 +788,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Replace the combining function for friction.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>function</code> - the desired function (not null, default=geometricMean)</dd>
+<dd><code>function</code> - the desired function (not <code>null</code>,
+ default=geometricMean)</dd>
 </dl>
 </section>
 </li>
@@ -1246,6 +918,397 @@ loadScripts(document, 'script');</script>
 <li><a href="enumerate/EPhysicsUpdateError.html" title="class in com.github.stephengold.joltjni.enumerate"><code>EPhysicsUpdateError</code></a></li>
 </ul>
 </dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="containsConstraint(com.github.stephengold.joltjni.readonly.ConstConstraint)">
+<h3>containsConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">containsConstraint</span><wbr><span class="parameters">(<a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a>&nbsp;constraint)</span></div>
+<div class="block">Test whether the system contains the specified constraint. The system is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#containsConstraint(com.github.stephengold.joltjni.readonly.ConstConstraint)">containsConstraint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>constraint</code> - the constraint to search for (not <code>null</code>,
+ unaffected)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if found, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getActiveBodies(com.github.stephengold.joltjni.enumerate.EBodyType,com.github.stephengold.joltjni.BodyIdVector)">
+<h3>getActiveBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getActiveBodies</span><wbr><span class="parameters">(<a href="enumerate/EBodyType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBodyType</a>&nbsp;bodyType,
+ <a href="BodyIdVector.html" title="class in com.github.stephengold.joltjni">BodyIdVector</a>&nbsp;storeResult)</span></div>
+<div class="block">Enumerate all bodies of the specified type to the specified vector.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getActiveBodies(com.github.stephengold.joltjni.enumerate.EBodyType,com.github.stephengold.joltjni.BodyIdVector)">getActiveBodies</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>bodyType</code> - (not <code>null</code>)</dd>
+<dd><code>storeResult</code> - storage for the result (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBodies(com.github.stephengold.joltjni.BodyIdVector)">
+<h3>getBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getBodies</span><wbr><span class="parameters">(<a href="BodyIdVector.html" title="class in com.github.stephengold.joltjni">BodyIdVector</a>&nbsp;storeResult)</span></div>
+<div class="block">Enumerate all bodies to the specified variable-length vector. The system
+ is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getBodies(com.github.stephengold.joltjni.BodyIdVector)">getBodies</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the result (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBodyActivationListener()">
+<h3>getBodyActivationListener</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BodyActivationListener.html" title="class in com.github.stephengold.joltjni">BodyActivationListener</a></span>&nbsp;<span class="element-name">getBodyActivationListener</span>()</div>
+<div class="block">Access the system's <code>BodyActivationListener</code>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getBodyActivationListener()">getBodyActivationListener</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBodyLockInterface()">
+<h3>getBodyLockInterface</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstBodyLockInterfaceLocking.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterfaceLocking</a></span>&nbsp;<span class="element-name">getBodyLockInterface</span>()</div>
+<div class="block">Access the system's <code>BodyLockInterfaceLocking</code>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getBodyLockInterface()">getBodyLockInterface</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBodyLockInterfaceNoLock()">
+<h3>getBodyLockInterfaceNoLock</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstBodyLockInterfaceNoLock.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterfaceNoLock</a></span>&nbsp;<span class="element-name">getBodyLockInterfaceNoLock</span>()</div>
+<div class="block">Access the system's <code>BodyLockInterfaceNoLock</code>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getBodyLockInterfaceNoLock()">getBodyLockInterfaceNoLock</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBounds()">
+<h3>getBounds</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></span>&nbsp;<span class="element-name">getBounds</span>()</div>
+<div class="block">Generate a bounding box that contains all the bodies in the system. The
+ system is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getBounds()">getBounds</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new box</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBroadPhaseQuery()">
+<h3>getBroadPhaseQuery</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstBroadPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseQuery</a></span>&nbsp;<span class="element-name">getBroadPhaseQuery</span>()</div>
+<div class="block">Access the system's interface for coarse collision queries.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getBroadPhaseQuery()">getBroadPhaseQuery</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing JVM object, or <code>null</code> if the system hasn't
+ been initialized yet</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCombineFriction()">
+<h3>getCombineFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CombineFunction.html" title="class in com.github.stephengold.joltjni">CombineFunction</a></span>&nbsp;<span class="element-name">getCombineFriction</span>()</div>
+<div class="block">Access the combining function for friction.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getCombineFriction()">getCombineFriction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCombineRestitution()">
+<h3>getCombineRestitution</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CombineFunction.html" title="class in com.github.stephengold.joltjni">CombineFunction</a></span>&nbsp;<span class="element-name">getCombineRestitution</span>()</div>
+<div class="block">Access the combining function for restitutions.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getCombineRestitution()">getCombineRestitution</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConstraints()">
+<h3>getConstraints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Constraints.html" title="class in com.github.stephengold.joltjni">Constraints</a></span>&nbsp;<span class="element-name">getConstraints</span>()</div>
+<div class="block">Enumerate all constraints in the system. The system is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getConstraints()">getConstraints</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactListener()">
+<h3>getContactListener</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ContactListener.html" title="class in com.github.stephengold.joltjni">ContactListener</a></span>&nbsp;<span class="element-name">getContactListener</span>()</div>
+<div class="block">Access the (application-provided) contact listener.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getContactListener()">getContactListener</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing instance, or <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDefaultBroadPhaseLayerFilter(int)">
+<h3>getDefaultBroadPhaseLayerFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DefaultBroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">DefaultBroadPhaseLayerFilter</a></span>&nbsp;<span class="element-name">getDefaultBroadPhaseLayerFilter</span><wbr><span class="parameters">(int&nbsp;objectLayer)</span></div>
+<div class="block">Generate a broad-phase layer filter using the current pair filter and the
+ specified layer index.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getDefaultBroadPhaseLayerFilter(int)">getDefaultBroadPhaseLayerFilter</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>objectLayer</code> - the index of the object layer to use</dd>
+<dt>Returns:</dt>
+<dd>a new filter</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDefaultLayerFilter(int)">
+<h3>getDefaultLayerFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DefaultObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">DefaultObjectLayerFilter</a></span>&nbsp;<span class="element-name">getDefaultLayerFilter</span><wbr><span class="parameters">(int&nbsp;objectLayer)</span></div>
+<div class="block">Generate an object layer filter using the current pair filter and the
+ specified layer index.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getDefaultLayerFilter(int)">getDefaultLayerFilter</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>objectLayer</code> - the index of the object layer to use</dd>
+<dt>Returns:</dt>
+<dd>a new filter</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getGravity()">
+<h3>getGravity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getGravity</span>()</div>
+<div class="block">Copy the gravity vector. The system is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getGravity()">getGravity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new acceleration vector (meters per second squared in system
+ coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxBodies()">
+<h3>getMaxBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaxBodies</span>()</div>
+<div class="block">Return the maximum number of bodies the system supports. The system is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getMaxBodies()">getMaxBodies</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNarrowPhaseQuery()">
+<h3>getNarrowPhaseQuery</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstNarrowPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstNarrowPhaseQuery</a></span>&nbsp;<span class="element-name">getNarrowPhaseQuery</span>()</div>
+<div class="block">Access the system's interface for fine collision queries.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getNarrowPhaseQuery()">getNarrowPhaseQuery</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing JVM object (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNarrowPhaseQueryNoLock()">
+<h3>getNarrowPhaseQueryNoLock</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstNarrowPhaseQuery.html" title="interface in com.github.stephengold.joltjni.readonly">ConstNarrowPhaseQuery</a></span>&nbsp;<span class="element-name">getNarrowPhaseQueryNoLock</span>()</div>
+<div class="block">Access a version of the system's <code>NarrowPhaseQuery</code> that does not
+ lock the bodies.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getNarrowPhaseQueryNoLock()">getNarrowPhaseQueryNoLock</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing JVM object (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumActiveBodies(com.github.stephengold.joltjni.enumerate.EBodyType)">
+<h3>getNumActiveBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumActiveBodies</span><wbr><span class="parameters">(<a href="enumerate/EBodyType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBodyType</a>&nbsp;bodyType)</span></div>
+<div class="block">Count how many active bodies of the specified type there are in the body
+ manager. The system is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getNumActiveBodies(com.github.stephengold.joltjni.enumerate.EBodyType)">getNumActiveBodies</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>bodyType</code> - which type of body to count (not <code>null</code>)</dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0, &le;maxBodies)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumBodies()">
+<h3>getNumBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumBodies</span>()</div>
+<div class="block">Count how many bodies there are in the body manager. The system is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getNumBodies()">getNumBodies</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0, &le;maxBodies)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getObjectLayerPairFilter()">
+<h3>getObjectLayerPairFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstObjectLayerPairFilter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstObjectLayerPairFilter</a></span>&nbsp;<span class="element-name">getObjectLayerPairFilter</span>()</div>
+<div class="block">Access the (application-provided) interface for testing whether 2 objects
+ can collide, based on their object layers.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getObjectLayerPairFilter()">getObjectLayerPairFilter</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing instance, or <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getObjectVsBroadPhaseLayerFilter()">
+<h3>getObjectVsBroadPhaseLayerFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstObjectVsBroadPhaseLayerFilter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstObjectVsBroadPhaseLayerFilter</a></span>&nbsp;<span class="element-name">getObjectVsBroadPhaseLayerFilter</span>()</div>
+<div class="block">Access the (application-provided) interface for testing whether an object
+ can collide with a broad-phase layer.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getObjectVsBroadPhaseLayerFilter()">getObjectVsBroadPhaseLayerFilter</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing instance, or <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPhysicsSettings()">
+<h3>getPhysicsSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></span>&nbsp;<span class="element-name">getPhysicsSettings</span>()</div>
+<div class="block">Copy the system's settings. The system is unaffected.
+ <p>
+ Different semantics from the native <code>GetPhysicsSettings()</code>, which
+ returns a const reference, not a copy.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getPhysicsSettings()">getPhysicsSettings</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with a new native object assigned</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="#setPhysicsSettings(com.github.stephengold.joltjni.readonly.ConstPhysicsSettings)"><code>setPhysicsSettings(com.github.stephengold.joltjni.readonly.ConstPhysicsSettings)</code></a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSoftBodyContactListener()">
+<h3>getSoftBodyContactListener</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SoftBodyContactListener.html" title="class in com.github.stephengold.joltjni">SoftBodyContactListener</a></span>&nbsp;<span class="element-name">getSoftBodyContactListener</span>()</div>
+<div class="block">Access the (application-provided) soft-body contact listener.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#getSoftBodyContactListener()">getSoftBodyContactListener</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Returns:</dt>
+<dd>the pre-existing instance, or <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveState(com.github.stephengold.joltjni.StateRecorder)">
+<h3>saveState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveState</span><wbr><span class="parameters">(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder)</span></div>
+<div class="block">Save the system's state to be replayed later.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>recorder</code> - where to save the state (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveState(com.github.stephengold.joltjni.StateRecorder,int)">
+<h3>saveState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveState</span><wbr><span class="parameters">(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder,
+ int&nbsp;bitmask)</span></div>
+<div class="block">Save the aspects of the system's state to be replayed later.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#saveState(com.github.stephengold.joltjni.StateRecorder,int)">saveState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>recorder</code> - where to save the state (not <code>null</code>)</dd>
+<dd><code>bitmask</code> - which aspects of the simulation to save</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveState(com.github.stephengold.joltjni.StateRecorder,int,com.github.stephengold.joltjni.StateRecorderFilter)">
+<h3>saveState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveState</span><wbr><span class="parameters">(<a href="StateRecorder.html" title="class in com.github.stephengold.joltjni">StateRecorder</a>&nbsp;recorder,
+ int&nbsp;bitmask,
+ <a href="StateRecorderFilter.html" title="class in com.github.stephengold.joltjni">StateRecorderFilter</a>&nbsp;filter)</span></div>
+<div class="block">Save aspects of the system's state to be replayed later.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstPhysicsSystem.html#saveState(com.github.stephengold.joltjni.StateRecorder,int,com.github.stephengold.joltjni.StateRecorderFilter)">saveState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>recorder</code> - where to save the state (not <code>null</code>)</dd>
+<dd><code>bitmask</code> - which aspects of the simulation to save</dd>
+<dd><code>filter</code> - select which parts to save (unaffected) or <code>null</code></dd>
 </dl>
 </section>
 </li>

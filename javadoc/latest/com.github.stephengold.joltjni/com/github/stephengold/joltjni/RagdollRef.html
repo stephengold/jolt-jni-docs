@@ -132,6 +132,17 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">addLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg,boolean)" class="member-name-link">addLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV,
+ boolean&nbsp;lockBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addToPhysicsSystem(com.github.stephengold.joltjni.enumerate.EActivation)" class="member-name-link">addToPhysicsSystem</a><wbr>(<a href="enumerate/EActivation.html" title="enum class in com.github.stephengold.joltjni.enumerate">EActivation</a>&nbsp;activation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add bodies and constraints to the physics system and optionally activate
@@ -275,6 +286,32 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>addLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addLinearVelocity</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV)</span></div>
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deltaV</code> - the desired change in velocity (meters per second in system
+ coordinates, not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg,boolean)">
+<h3>addLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addLinearVelocity</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;deltaV,
+ boolean&nbsp;lockBodies)</span></div>
+<div class="block">Add to the linear velocity of all bodies in the ragdoll.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deltaV</code> - the desired change in velocity (meters per second in system
+ coordinates, not <code>null</code>, unaffected)</dd>
+<dd><code>lockBodies</code> - (default=true)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="addToPhysicsSystem(com.github.stephengold.joltjni.enumerate.EActivation)">
 <h3>addToPhysicsSystem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToPhysicsSystem</span><wbr><span class="parameters">(<a href="enumerate/EActivation.html" title="enum class in com.github.stephengold.joltjni.enumerate">EActivation</a>&nbsp;activation)</span></div>
@@ -295,7 +332,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pose</code> - the desired pose</dd>
-<dd><code>time</code> - time to achieve the pose (in seconds)</dd>
+<dd><code>time</code> - the time interval for achieving the pose (in seconds)</dd>
 </dl>
 </section>
 </li>
@@ -309,7 +346,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pose</code> - the desired pose</dd>
-<dd><code>time</code> - time to achieve the pose (in seconds)</dd>
+<dd><code>time</code> - the time interval for achieving the pose (in seconds)</dd>
 <dd><code>lockBodies</code> - (default=true)</dd>
 </dl>
 </section>
@@ -367,9 +404,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the low-level pose using a locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeRootOffset</code> - storage for the root offset (not null, modified)</dd>
-<dd><code>storeJointMatrices</code> - storage for the joint matrices (not null,
+<dd><code>storeRootOffset</code> - storage for the root offset (not <code>null</code>,
  modified)</dd>
+<dd><code>storeJointMatrices</code> - storage for the joint matrices (not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -382,9 +420,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the low-level pose.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeRootOffset</code> - storage for the root offset (not null, modified)</dd>
-<dd><code>storeJointMatrices</code> - storage for the joint matrices (not null,
+<dd><code>storeRootOffset</code> - storage for the root offset (not <code>null</code>,
  modified)</dd>
+<dd><code>storeJointMatrices</code> - storage for the joint matrices (not
+ <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -397,7 +436,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the ragdoll's pose using the locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storePose</code> - storage for the pose (not null, modified)</dd>
+<dd><code>storePose</code> - storage for the pose (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -409,7 +448,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the ragdoll's pose.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storePose</code> - storage for the pose (not null, modified)</dd>
+<dd><code>storePose</code> - storage for the pose (not <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - true&rarr;use the locking body interface,
  false&rarr;use the non-locking body interface</dd>
 </dl>
@@ -424,9 +463,10 @@ loadScripts(document, 'script');</script>
  interface. The ragdoll is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeLocation</code> - storage for the root location (not null, modified)</dd>
-<dd><code>storeOrientation</code> - storage for the root orientation (not null,
+<dd><code>storeLocation</code> - storage for the root location (not <code>null</code>,
  modified)</dd>
+<dd><code>storeOrientation</code> - storage for the root orientation (not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -439,9 +479,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the transform of the ragdoll's root. The ragdoll is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeLocation</code> - storage for the root location (not null, modified)</dd>
-<dd><code>storeOrientation</code> - storage for the root orientation (not null,
+<dd><code>storeLocation</code> - storage for the root location (not <code>null</code>,
  modified)</dd>
+<dd><code>storeOrientation</code> - storage for the root orientation (not
+ <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -461,7 +502,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Alter the ragdoll's pose using the locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pose</code> - the desired pose (not null, unaffected)</dd>
+<dd><code>pose</code> - the desired pose (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -473,7 +514,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Alter the ragdoll's pose.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pose</code> - the desired pose (not null, unaffected)</dd>
+<dd><code>pose</code> - the desired pose (not <code>null</code>, unaffected)</dd>
 <dd><code>lockBodies</code> - true&rarr;use the locking body interface,
  false&rarr;use the non-locking body interface</dd>
 </dl>

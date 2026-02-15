@@ -120,126 +120,132 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawArrow(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawArrow</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;from,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Batch.html" title="class in com.github.stephengold.joltjni">Batch</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createTriangleBatch(java.nio.FloatBuffer,com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial%5B%5D)" class="member-name-link">createTriangleBatch</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;vertexBuffer,
+ <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>[]&nbsp;triangles)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Construct a batch of triangles that can be rendered efficiently.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawArrow(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawArrow</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;from,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;to,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  float&nbsp;size)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D arrow.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw the specified axis-aligned 3-D box.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified axis-aligned 3-D box.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
- <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
+ <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified axis-aligned 3-D box.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
- <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw the specified 3-D box.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
- <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw the specified 3-D box.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
- <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw the specified axis-aligned 3-D box.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+ <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw the specified 3-D box.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+ <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
+ <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D box.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCapsule(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawCapsule</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+ <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
+ <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
+ <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw the specified 3-D box.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCapsule(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawCapsule</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;halfHeight,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw the specified capsule.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCapsule(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawCapsule</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
- float&nbsp;halfHeight,
- float&nbsp;radius,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified capsule.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCapsule(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawCapsule</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCapsule(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawCapsule</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+ float&nbsp;halfHeight,
+ float&nbsp;radius,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
+ <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw the specified capsule.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCapsule(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawCapsule</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;halfHeight,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified capsule.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCoordinateSystem(com.github.stephengold.joltjni.readonly.RMat44Arg)" class="member-name-link">drawCoordinateSystem</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCoordinateSystem(com.github.stephengold.joltjni.readonly.RMat44Arg)" class="member-name-link">drawCoordinateSystem</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D coordinate axes.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCoordinateSystem(com.github.stephengold.joltjni.readonly.RMat44Arg,float)" class="member-name-link">drawCoordinateSystem</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCoordinateSystem(com.github.stephengold.joltjni.readonly.RMat44Arg,float)" class="member-name-link">drawCoordinateSystem</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;size)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D coordinate axes.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;halfHeight,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified cylinder.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;halfHeight,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified cylinder.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;halfHeight,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified cylinder.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawGeometry(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.GeometryRef,com.github.stephengold.joltjni.enumerate.ECullMode,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawGeometry</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawGeometry(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.GeometryRef,com.github.stephengold.joltjni.enumerate.ECullMode,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawGeometry</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;worldSpaceBounds,
  float&nbsp;lodScaleSq,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;modelColor,
@@ -247,35 +253,35 @@ loadScripts(document, 'script');</script>
  <a href="enumerate/ECullMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECullMode</a>&nbsp;cullMode,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified geometry with the specified bounds and scaling.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawGeometry(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.GeometryRef,com.github.stephengold.joltjni.enumerate.ECullMode,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawGeometry</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawGeometry(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.GeometryRef,com.github.stephengold.joltjni.enumerate.ECullMode,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawGeometry</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;modelColor,
  <a href="GeometryRef.html" title="class in com.github.stephengold.joltjni">GeometryRef</a>&nbsp;geometry,
  <a href="enumerate/ECullMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECullMode</a>&nbsp;cullMode,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified geometry.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawLine(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawLine</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;from,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawLine(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawLine</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;from,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;to,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D line.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawMarker(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawMarker</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawMarker(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawMarker</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  float&nbsp;size)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw a marker at the specified location.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawOpenCone(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawOpenCone</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;top,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawOpenCone(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawOpenCone</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;top,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;perpendicular,
  float&nbsp;halfAngle,
@@ -283,11 +289,11 @@ loadScripts(document, 'script');</script>
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified open cone.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawPie(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawPie</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;center,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawPie(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawPie</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;center,
  float&nbsp;radius,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;normal,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis,
@@ -295,54 +301,54 @@ loadScripts(document, 'script');</script>
  float&nbsp;maxAngle,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified sector of a circle.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawPlane(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawPlane</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawPlane(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawPlane</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;normal,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  float&nbsp;size)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified plane.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw the specified sphere.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+ float&nbsp;radius,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
+ <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified sphere.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow)" class="member-name-link">drawSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
- float&nbsp;radius,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw the specified sphere.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified sphere.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSwingConeLimits(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawSwingConeLimits</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSwingConeLimits(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawSwingConeLimits</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;swingYHalfAngle,
  float&nbsp;swingZHalfAngle,
  float&nbsp;edgeLength,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the rotation-limits cone of a <code>SwingTwistConstraintPart</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSwingPyramidLimits(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,float,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawSwingPyramidLimits</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawSwingPyramidLimits(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,float,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawSwingPyramidLimits</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;minSwingYAngle,
  float&nbsp;maxSwingYAngle,
  float&nbsp;minSwingZAngle,
@@ -351,11 +357,11 @@ loadScripts(document, 'script');</script>
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the rotation-limits pyramid of a <code>SwingTwistConstraintPart</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawTaperedCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawTaperedCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawTaperedCylinder(com.github.stephengold.joltjni.readonly.RMat44Arg,float,float,float,float,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawTaperedCylinder</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  float&nbsp;top,
  float&nbsp;bottom,
  float&nbsp;topRadius,
@@ -363,125 +369,125 @@ loadScripts(document, 'script');</script>
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified tapered cylinder.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawText3D(com.github.stephengold.joltjni.readonly.RVec3Arg,java.lang.String)" class="member-name-link">drawText3D</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawText3D(com.github.stephengold.joltjni.readonly.RVec3Arg,java.lang.String)" class="member-name-link">drawText3D</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw the specified 3-D text.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawText3D(com.github.stephengold.joltjni.readonly.RVec3Arg,java.lang.String,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawText3D</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D text.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawText3D(com.github.stephengold.joltjni.readonly.RVec3Arg,java.lang.String,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawText3D</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw the specified 3-D text.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawText3D(com.github.stephengold.joltjni.readonly.RVec3Arg,java.lang.String,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawText3D</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawText3D(com.github.stephengold.joltjni.readonly.RVec3Arg,java.lang.String,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawText3D</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  float&nbsp;height)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D text.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawTriangle(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawTriangle</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v1,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawTriangle(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawTriangle</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v1,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v2,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v3,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified 3-D triangle.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawUnitSphere(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawUnitSphere</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawUnitSphere(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor,com.github.stephengold.joltjni.enumerate.ECastShadow,com.github.stephengold.joltjni.enumerate.EDrawMode)" class="member-name-link">drawUnitSphere</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  <a href="enumerate/ECastShadow.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECastShadow</a>&nbsp;castShadow,
  <a href="enumerate/EDrawMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EDrawMode</a>&nbsp;drawMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the specified unit sphere.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw a wire-frame of the specified axis-aligned box.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireBox(com.github.stephengold.joltjni.readonly.ConstOrientedBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireBox</a><wbr>(<a href="readonly/ConstOrientedBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstOrientedBox</a>&nbsp;box,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw a wire-frame of the specified 3-D box.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
- <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireBox(com.github.stephengold.joltjni.readonly.ConstOrientedBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireBox</a><wbr>(<a href="readonly/ConstOrientedBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstOrientedBox</a>&nbsp;box,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw a wire frame of the specified 3-D box.</div>
+<div class="block">Draw a wire-frame of the specified 3-D box.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWirePolygon(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.VertexArray,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWirePolygon</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
- <a href="VertexArray.html" title="class in com.github.stephengold.joltjni">VertexArray</a>&nbsp;face,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireBox(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireBox</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+ <a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw the outline of the specified polygon.</div>
+<div class="block">Draw a wire frame of the specified 3-D box.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWirePolygon(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.VertexArray,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawWirePolygon</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWirePolygon(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.VertexArray,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWirePolygon</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+ <a href="VertexArray.html" title="class in com.github.stephengold.joltjni">VertexArray</a>&nbsp;face,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw the outline of the specified polygon.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWirePolygon(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.VertexArray,com.github.stephengold.joltjni.readonly.ConstColor,float)" class="member-name-link">drawWirePolygon</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  <a href="VertexArray.html" title="class in com.github.stephengold.joltjni">VertexArray</a>&nbsp;face,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
  float&nbsp;arrowSize)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw the outline of the specified polygon.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
  float&nbsp;radius,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw a wire frame of the specified sphere.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor,int)" class="member-name-link">drawWireSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+ float&nbsp;radius,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
+ int&nbsp;level)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw a wire frame of the specified sphere.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireSphere(com.github.stephengold.joltjni.readonly.RVec3Arg,float,com.github.stephengold.joltjni.readonly.ConstColor,int)" class="member-name-link">drawWireSphere</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
- float&nbsp;radius,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- int&nbsp;level)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw a wire frame of the specified sphere.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireTriangle(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireTriangle</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v1,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireTriangle(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireTriangle</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v1,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v2,
  <a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;v3,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw a wire frame of the specified 3-D triangle.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireUnitSphere(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireUnitSphere</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireUnitSphere(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">drawWireUnitSphere</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
  <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draw a wire frame of the specified unit sphere.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireUnitSphere(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor,int)" class="member-name-link">drawWireUnitSphere</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
+ int&nbsp;level)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draw a wire frame of the specified unit sphere.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWireUnitSphere(com.github.stephengold.joltjni.readonly.RMat44Arg,com.github.stephengold.joltjni.readonly.ConstColor,int)" class="member-name-link">drawWireUnitSphere</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- int&nbsp;level)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextFrame()" class="member-name-link">nextFrame</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draw a wire frame of the specified unit sphere.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextFrame()" class="member-name-link">nextFrame</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Notify that the current frame is complete.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DebugRenderer.html" title="class in com.github.stephengold.joltjni">DebugRenderer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sInstance()" class="member-name-link">sInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Access the instance from a static context.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DebugRenderer.html" title="class in com.github.stephengold.joltjni">DebugRenderer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sInstance()" class="member-name-link">sInstance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Access the instance from static contexts.</div>
 </div>
 </div>
 </div>
@@ -504,6 +510,22 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="createTriangleBatch(java.nio.FloatBuffer,com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial[])">
+<h3>createTriangleBatch</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Batch.html" title="class in com.github.stephengold.joltjni">Batch</a></span>&nbsp;<span class="element-name">createTriangleBatch</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;vertexBuffer,
+ <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>[]&nbsp;triangles)</span></div>
+<div class="block">Construct a batch of triangles that can be rendered efficiently.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>vertexBuffer</code> - the vertex positions (not <code>null</code>, unaffected)</dd>
+<dd><code>triangles</code> - the vertex indices of each triangle (not <code>null</code>,
+ unaffected)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with a new native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="drawArrow(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)">
 <h3>drawArrow</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drawArrow</span><wbr><span class="parameters">(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;from,
@@ -513,9 +535,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D arrow.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>from</code> - the desired starting point (not null, unaffected)</dd>
-<dd><code>to</code> - the desired ending point (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>from</code> - the desired starting point (not <code>null</code>, unaffected)</dd>
+<dd><code>to</code> - the desired ending point (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 <dd><code>size</code> - the desired size</dd>
 </dl>
 </section>
@@ -528,8 +550,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified axis-aligned 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -542,9 +565,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified axis-aligned 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
 </dl>
 </section>
 </li>
@@ -558,10 +582,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified axis-aligned 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -574,9 +599,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -590,10 +617,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
 </dl>
 </section>
 </li>
@@ -608,11 +637,13 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -626,10 +657,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified capsule.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>halfHeight</code> - half the desired height of the cylindrical portion</dd>
 <dd><code>radius</code> - the desired radius of the capsule</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -644,11 +676,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified capsule.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>halfHeight</code> - half the desired height of the cylindrical portion</dd>
 <dd><code>radius</code> - the desired radius of the capsule</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
 </dl>
 </section>
 </li>
@@ -664,12 +697,13 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified capsule.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>halfHeight</code> - half the desired height of the cylindrical portion</dd>
 <dd><code>radius</code> - the desired radius of the capsule</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -680,7 +714,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D coordinate axes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -692,7 +727,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D coordinate axes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>size</code> - the desired size (default=1)</dd>
 </dl>
 </section>
@@ -707,10 +743,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified cylinder.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>halfHeight</code> - half of the desired height</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -725,11 +762,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified cylinder.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>halfHeight</code> - half of the desired height</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
 </dl>
 </section>
 </li>
@@ -745,12 +783,13 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified cylinder.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>halfHeight</code> - half of the desired height</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -766,13 +805,13 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified geometry.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - to transform the geometry to world space (not null,
- unaffected)</dd>
-<dd><code>modelColor</code> - the desired color (not null, unaffected)</dd>
-<dd><code>geometry</code> - the geometry to draw (not null, unaffected)</dd>
-<dd><code>cullMode</code> - the desired culling mode for polygons (not null)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>transform</code> - to transform the geometry to world space (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>modelColor</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>geometry</code> - the geometry to draw (not <code>null</code>, unaffected)</dd>
+<dd><code>cullMode</code> - the desired culling mode for polygons (not <code>null</code>)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -790,16 +829,16 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified geometry with the specified bounds and scaling.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - to transform the geometry to world space (not null,
- unaffected)</dd>
-<dd><code>worldSpaceBounds</code> - the bounds of the region to render (not null,
- unaffected)</dd>
+<dd><code>transform</code> - to transform the geometry to world space (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>worldSpaceBounds</code> - the bounds of the region to render (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>lodScaleSq</code> - the square of the level-of-detail scale</dd>
-<dd><code>modelColor</code> - the desired color (not null, unaffected)</dd>
-<dd><code>geometry</code> - the geometry to draw (not null, unaffected)</dd>
-<dd><code>cullMode</code> - the desired culling mode for polygons (not null)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>modelColor</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>geometry</code> - the geometry to draw (not <code>null</code>, unaffected)</dd>
+<dd><code>cullMode</code> - the desired culling mode for polygons (not <code>null</code>)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -812,9 +851,24 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D line.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>from</code> - the desired first endpoint (not null, unaffected)</dd>
-<dd><code>to</code> - the desired 2nd endpoint (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>from</code> - the desired first endpoint (not <code>null</code>, unaffected)</dd>
+<dd><code>to</code> - the desired 2nd endpoint (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="drawMarker(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)">
+<h3>drawMarker</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drawMarker</span><wbr><span class="parameters">(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
+ <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
+ float&nbsp;size)</span></div>
+<div class="block">Draw a marker at the specified location.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>location</code> - the desired location (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>size</code> - the desired size</dd>
 </dl>
 </section>
 </li>
@@ -832,33 +886,18 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified open cone.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>top</code> - the desired location of the cone's vertex (not null,
+<dd><code>top</code> - the desired location of the cone's vertex (not <code>null</code>,
  unaffected)</dd>
 <dd><code>axis</code> - the desired offset of the center of the base, relative to the
- vertex (not null, unaffected)</dd>
-<dd><code>perpendicular</code> - a vector perpendicular to <code>axis</code> (not null,
- unaffected)</dd>
+ vertex (not <code>null</code>, unaffected)</dd>
+<dd><code>perpendicular</code> - a vector perpendicular to <code>axis</code> (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>halfAngle</code> - the desired angle between the axis and the surface of
  the code (in radians)</dd>
 <dd><code>length</code> - the desired length of the cone (in meters)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="drawMarker(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstColor,float)">
-<h3>drawMarker</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drawMarker</span><wbr><span class="parameters">(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location,
- <a href="readonly/ConstColor.html" title="interface in com.github.stephengold.joltjni.readonly">ConstColor</a>&nbsp;color,
- float&nbsp;size)</span></div>
-<div class="block">Draw a marker at the specified location.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>size</code> - the desired size</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -876,16 +915,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified sector of a circle.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>center</code> - the desired location of the circle's center (not null,
- unaffected)</dd>
+<dd><code>center</code> - the desired location of the circle's center (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>radius</code> - the desired radius of the circle (in meters)</dd>
 <dd><code>normal</code> - a normal to the plane that contains the desired circle (not
  null, unaffected)</dd>
-<dd><code>axis</code> - the desired zero-angle direction (not null, unaffected)</dd>
+<dd><code>axis</code> - the desired zero-angle direction (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>minAngle</code> - the desired angle where the sector begins (in radians)</dd>
 <dd><code>maxAngle</code> - the desired angle where the sector ends (in radians)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
 </dl>
 </section>
 </li>
@@ -900,10 +940,10 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>location</code> - the location of a point through which the plane passes
- (not null, unaffected)</dd>
-<dd><code>normal</code> - a direction normal to the plane's surface (not null,
- unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+ (not <code>null</code>, unaffected)</dd>
+<dd><code>normal</code> - a direction normal to the plane's surface (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 <dd><code>size</code> - the desired size</dd>
 </dl>
 </section>
@@ -917,10 +957,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the sphere's center (not null,
+<dd><code>location</code> - the location of the sphere's center (not <code>null</code>,
  unaffected)</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -934,11 +974,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the sphere's center (not null,
+<dd><code>location</code> - the location of the sphere's center (not <code>null</code>,
  unaffected)</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
 </dl>
 </section>
 </li>
@@ -953,12 +993,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the sphere's center (not null,
+<dd><code>location</code> - the location of the sphere's center (not <code>null</code>,
  unaffected)</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -976,15 +1016,15 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>transform</code> - the desired transform from constraint coordinates to
- system coordinates (not null, unaffected)</dd>
+ system coordinates (not <code>null</code>, unaffected)</dd>
 <dd><code>swingYHalfAngle</code> - half the desired Y-axis swing-angle limit (in
  radians)</dd>
 <dd><code>swingZHalfAngle</code> - half the desired Z-axis swing-angle limit (in
  radians)</dd>
 <dd><code>edgeLength</code> - the desired length of the edges of the cone</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -1004,7 +1044,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>transform</code> - the desired transform from constraint coordinates to
- system coordinates (not null, unaffected)</dd>
+ system coordinates (not <code>null</code>, unaffected)</dd>
 <dd><code>minSwingYAngle</code> - the desired Y-axis swing-angle lower limit (in
  radians)</dd>
 <dd><code>maxSwingYAngle</code> - the desired Y-axis swing-angle upper limit (in
@@ -1014,9 +1054,9 @@ loadScripts(document, 'script');</script>
 <dd><code>maxSwingZAngle</code> - the desired Z-axis swing-angle upper limit (in
  radians)</dd>
 <dd><code>edgeLength</code> - the desired length of the edges of the pyramid</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -1035,14 +1075,14 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>transform</code> - the desired transform from local coordinates to system
- coordinates (not null, unaffected)</dd>
+ coordinates (not <code>null</code>, unaffected)</dd>
 <dd><code>top</code> - the local Y coordinate of the center of the top</dd>
 <dd><code>bottom</code> - the local Y coordinate of the center of the bottom</dd>
 <dd><code>topRadius</code> - the radius of the top</dd>
 <dd><code>bottomRadius</code> - the radius of the bottom</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -1054,8 +1094,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D text. (native function: DrawText3D)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the text (not null, unaffected)</dd>
-<dd><code>text</code> - the text to display (not null)</dd>
+<dd><code>location</code> - the location of the text (not <code>null</code>, unaffected)</dd>
+<dd><code>text</code> - the text to display (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1068,9 +1108,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D text. (native function: DrawText3D)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the text (not null, unaffected)</dd>
-<dd><code>text</code> - the text to display (not null)</dd>
-<dd><code>color</code> - the desired text color (not null, unaffected,
+<dd><code>location</code> - the location of the text (not <code>null</code>, unaffected)</dd>
+<dd><code>text</code> - the text to display (not <code>null</code>)</dd>
+<dd><code>color</code> - the desired text color (not <code>null</code>, unaffected,
  default=sWhite)</dd>
 </dl>
 </section>
@@ -1085,9 +1125,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D text. (native function: DrawText3D)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the text (not null, unaffected)</dd>
-<dd><code>text</code> - the text to display (not null)</dd>
-<dd><code>color</code> - the desired text color (not null, unaffected,
+<dd><code>location</code> - the location of the text (not <code>null</code>, unaffected)</dd>
+<dd><code>text</code> - the text to display (not <code>null</code>)</dd>
+<dd><code>color</code> - the desired text color (not <code>null</code>, unaffected,
  default=sWhite)</dd>
 <dd><code>height</code> - the desired text height (default=0.5)</dd>
 </dl>
@@ -1103,10 +1143,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the specified 3-D triangle.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v1</code> - the location of the first vertex (not null, unaffected)</dd>
-<dd><code>v2</code> - the location of the 2nd vertex (not null, unaffected)</dd>
-<dd><code>v3</code> - the location of the 3rd vertex (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>v1</code> - the location of the first vertex (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the location of the 2nd vertex (not <code>null</code>, unaffected)</dd>
+<dd><code>v3</code> - the location of the 3rd vertex (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1121,10 +1161,10 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>transform</code> - the desired transform from local to system coordinates
- (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
-<dd><code>castShadow</code> - the desired shadow mode (not null, default=On)</dd>
-<dd><code>drawMode</code> - the desired draw mode (not null, default=Solid)</dd>
+ (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
+<dd><code>castShadow</code> - the desired shadow mode (not <code>null</code>, default=On)</dd>
+<dd><code>drawMode</code> - the desired draw mode (not <code>null</code>, default=Solid)</dd>
 </dl>
 </section>
 </li>
@@ -1136,8 +1176,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire-frame of the specified axis-aligned box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1149,8 +1190,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire-frame of the specified 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1163,9 +1205,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire frame of the specified 3-D box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>box</code> - the desired geometric properties (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>box</code> - the desired geometric properties (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1178,9 +1222,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the outline of the specified polygon.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>face</code> - the vertex coordinates (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>face</code> - the vertex coordinates (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1194,9 +1239,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw the outline of the specified polygon.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>face</code> - the vertex coordinates (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>face</code> - the vertex coordinates (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 <dd><code>arrowSize</code> - the desired size for arrows (default=0)</dd>
 </dl>
 </section>
@@ -1210,10 +1256,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire frame of the specified sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the sphere's center (not null,
+<dd><code>location</code> - the location of the sphere's center (not <code>null</code>,
  unaffected)</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1227,10 +1273,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire frame of the specified sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the location of the sphere's center (not null,
+<dd><code>location</code> - the location of the sphere's center (not <code>null</code>,
  unaffected)</dd>
 <dd><code>radius</code> - the desired radius</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 <dd><code>level</code> - the desired level of detail (default=3)</dd>
 </dl>
 </section>
@@ -1245,10 +1291,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire frame of the specified 3-D triangle.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>v1</code> - the location of the first vertex (not null, unaffected)</dd>
-<dd><code>v2</code> - the location of the 2nd vertex (not null, unaffected)</dd>
-<dd><code>v3</code> - the location of the 3rd vertex (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>v1</code> - the location of the first vertex (not <code>null</code>, unaffected)</dd>
+<dd><code>v2</code> - the location of the 2nd vertex (not <code>null</code>, unaffected)</dd>
+<dd><code>v3</code> - the location of the 3rd vertex (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1260,8 +1306,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire frame of the specified unit sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1274,8 +1321,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Draw a wire frame of the specified unit sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>transform</code> - the desired coordinate transform (not null, unaffected)</dd>
-<dd><code>color</code> - the desired color (not null, unaffected)</dd>
+<dd><code>transform</code> - the desired coordinate transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>color</code> - the desired color (not <code>null</code>, unaffected)</dd>
 <dd><code>level</code> - the desired level of detail (default=3)</dd>
 </dl>
 </section>
@@ -1291,7 +1339,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="sInstance()">
 <h3>sInstance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DebugRenderer.html" title="class in com.github.stephengold.joltjni">DebugRenderer</a></span>&nbsp;<span class="element-name">sInstance</span>()</div>
-<div class="block">Access the instance from a static context.</div>
+<div class="block">Access the instance from static contexts.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the pre-existing instance</dd>

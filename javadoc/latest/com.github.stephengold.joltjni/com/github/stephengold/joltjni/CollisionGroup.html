@@ -121,7 +121,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#cInvalidSubGroup" class="member-name-link">cInvalidSubGroup</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">invalid sub-group</div>
+<div class="block">invalid subgroup</div>
 </div>
 </div>
 </section>
@@ -177,7 +177,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubGroupId()" class="member-name-link">getSubGroupId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the sub-group ID.</div>
+<div class="block">Return the subgroup ID.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGroupFilter(com.github.stephengold.joltjni.GroupFilter)" class="member-name-link">setGroupFilter</a><wbr>(<a href="GroupFilter.html" title="class in com.github.stephengold.joltjni">GroupFilter</a>&nbsp;filter)</code></div>
@@ -192,7 +192,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSubGroupId(int)" class="member-name-link">setSubGroupId</a><wbr>(int&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the sub-group ID.</div>
+<div class="block">Alter the subgroup ID.</div>
 </div>
 </div>
 </div>
@@ -239,7 +239,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <section class="detail" id="cInvalidSubGroup">
 <h3>cInvalidSubGroup</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">cInvalidSubGroup</span></div>
-<div class="block">invalid sub-group</div>
+<div class="block">invalid subgroup</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -274,7 +274,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <div class="block">Instantiate a group with the specified filter and IDs.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>filter</code> - the collision-group filter (not null)</dd>
+<dd><code>filter</code> - the collision-group filter (not <code>null</code>)</dd>
 <dd><code>groupId</code> - the main group ID</dd>
 <dd><code>subGroupId</code> - the ID of the subgroup to which the body belongs</dd>
 </dl>
@@ -290,7 +290,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>filterRef</code> - a counted reference to the desired collision-group
- filter (not null)</dd>
+ filter (not <code>null</code>)</dd>
 <dd><code>groupId</code> - the main group ID</dd>
 <dd><code>subGroupId</code> - the ID of the subgroup to which the body belongs</dd>
 </dl>
@@ -311,7 +311,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <div class="block">Replace the group filter.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>filter</code> - the desired filter (not null, alias created)</dd>
+<dd><code>filter</code> - the desired filter (not <code>null</code>, alias created)</dd>
 </dl>
 </section>
 </li>
@@ -330,7 +330,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <section class="detail" id="setSubGroupId(int)">
 <h3>setSubGroupId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSubGroupId</span><wbr><span class="parameters">(int&nbsp;id)</span></div>
-<div class="block">Alter the sub-group ID. (native function: SetSubGroupID)</div>
+<div class="block">Alter the subgroup ID. (native function: SetSubGroupID)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - the desired ID (default=cInvalidSubGroup)</dd>
@@ -369,7 +369,7 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <section class="detail" id="getSubGroupId()">
 <h3>getSubGroupId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSubGroupId</span>()</div>
-<div class="block">Return the sub-group ID. The group is unaffected. (native function:
+<div class="block">Return the subgroup ID. The group is unaffected. (native function:
  GetSubGroupID)</div>
 <dl class="notes">
 <dt>Specified by:</dt>

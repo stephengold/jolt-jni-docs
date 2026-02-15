@@ -191,8 +191,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Test whether the specified colors are unequal.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plus(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.Float3)" class="member-name-link">plus</a><wbr>(<a href="../readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;left,
- <a href="../Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;right)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plus(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">plus</a><wbr>(<a href="../readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;left,
+ <a href="../readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;right)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the component-wise sum of the specified vectors.</div>
 </div>
@@ -388,8 +388,8 @@ loadScripts(document, 'script');</script>
  <code>=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the matrix to modify (not null)</dd>
-<dd><code>right</code> - the value to assign (not null, unaffected)</dd>
+<dd><code>left</code> - the matrix to modify (not <code>null</code>)</dd>
+<dd><code>right</code> - the value to assign (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the assigned value, for chaining</dd>
 </dl>
@@ -404,8 +404,8 @@ loadScripts(document, 'script');</script>
  <code>=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the matrix to modify (not null)</dd>
-<dd><code>right</code> - the value to assign (not null, unaffected)</dd>
+<dd><code>left</code> - the matrix to modify (not <code>null</code>)</dd>
+<dd><code>right</code> - the value to assign (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the assigned value, for chaining</dd>
 </dl>
@@ -420,8 +420,8 @@ loadScripts(document, 'script');</script>
  <code>=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the matrix to modify (not null)</dd>
-<dd><code>right</code> - the value to assign (not null, unaffected)</dd>
+<dd><code>left</code> - the matrix to modify (not <code>null</code>)</dd>
+<dd><code>right</code> - the value to assign (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the assigned value, for chaining</dd>
 </dl>
@@ -436,8 +436,8 @@ loadScripts(document, 'script');</script>
  <code>=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the vector to modify (not null)</dd>
-<dd><code>right</code> - the value to assign (not null, unaffected)</dd>
+<dd><code>left</code> - the vector to modify (not <code>null</code>)</dd>
+<dd><code>right</code> - the value to assign (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the assigned value, for chaining</dd>
 </dl>
@@ -452,8 +452,8 @@ loadScripts(document, 'script');</script>
  <code>=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the vector to modify (not null)</dd>
-<dd><code>right</code> - the value to assign (not null, unaffected)</dd>
+<dd><code>left</code> - the vector to modify (not <code>null</code>)</dd>
+<dd><code>right</code> - the value to assign (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the assigned value, for chaining</dd>
 </dl>
@@ -468,8 +468,8 @@ loadScripts(document, 'script');</script>
  <code>==</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first color to test (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd color to test (not null, unaffected)</dd>
+<dd><code>left</code> - the first color to test (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd color to test (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if equal, <code>false</code> if unequal</dd>
 </dl>
@@ -484,8 +484,8 @@ loadScripts(document, 'script');</script>
  <code>==</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first matrix (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd matrix (not null, unaffected)</dd>
+<dd><code>left</code> - the first matrix (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd matrix (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if equal, otherwise <code>false</code></dd>
 </dl>
@@ -499,7 +499,7 @@ loadScripts(document, 'script');</script>
  <code>-</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>right</code> - the input vector (not null, unaffected)</dd>
+<dd><code>right</code> - the input vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -514,8 +514,8 @@ loadScripts(document, 'script');</script>
  operator: binary <code>-</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the base vector (not null, unaffected)</dd>
-<dd><code>right</code> - the offset to subtract (not null, unaffected)</dd>
+<dd><code>left</code> - the base vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the offset to subtract (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -530,8 +530,8 @@ loadScripts(document, 'script');</script>
  operator: binary <code>-</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the base vector (not null, unaffected)</dd>
-<dd><code>right</code> - the offset to subtract (not null, unaffected)</dd>
+<dd><code>left</code> - the base vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the offset to subtract (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -545,7 +545,7 @@ loadScripts(document, 'script');</script>
  <code>-</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>right</code> - the input vector (not null, unaffected)</dd>
+<dd><code>right</code> - the input vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -560,8 +560,8 @@ loadScripts(document, 'script');</script>
  operator: binary <code>-</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first vector (not null, unaffected)</dd>
-<dd><code>right</code> - the vector to subtract (not null, unaffected)</dd>
+<dd><code>left</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the vector to subtract (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -576,8 +576,8 @@ loadScripts(document, 'script');</script>
  binary <code>-=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the vector to subtract (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the vector to subtract (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -590,24 +590,24 @@ loadScripts(document, 'script');</script>
  <code>!=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first color to test (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd color to test (not null, unaffected)</dd>
+<dd><code>left</code> - the first color to test (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd color to test (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>false</code> if equal, <code>true</code> if unequal</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="plus(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.Float3)">
+<section class="detail" id="plus(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.ConstFloat3)">
 <h3>plus</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">plus</span><wbr><span class="parameters">(<a href="../readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;left,
- <a href="../Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;right)</span></div>
+ <a href="../readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;right)</span></div>
 <div class="block">Return the component-wise sum of the specified vectors. (native operator:
  binary <code>+</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first vector (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>left</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -622,8 +622,8 @@ loadScripts(document, 'script');</script>
  binary <code>+</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first vector (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>left</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -638,8 +638,8 @@ loadScripts(document, 'script');</script>
  binary <code>+</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the base vector (not null, unaffected)</dd>
-<dd><code>right</code> - the offset to add (not null, unaffected)</dd>
+<dd><code>left</code> - the base vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the offset to add (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -654,8 +654,8 @@ loadScripts(document, 'script');</script>
  binary <code>+</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first vector (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>left</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -670,8 +670,8 @@ loadScripts(document, 'script');</script>
  binary <code>+</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first vector (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>left</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -686,8 +686,8 @@ loadScripts(document, 'script');</script>
  <code>+=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the vector to add (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the vector to add (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -700,8 +700,8 @@ loadScripts(document, 'script');</script>
  <code>+=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the vector to add (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the vector to add (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -714,8 +714,8 @@ loadScripts(document, 'script');</script>
  <code>+=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the vector to add (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the vector to add (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -728,8 +728,8 @@ loadScripts(document, 'script');</script>
  <code>+=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the vector to add (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the vector to add (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -742,7 +742,7 @@ loadScripts(document, 'script');</script>
  <code>/</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the input vector (not null, unaffected)</dd>
+<dd><code>left</code> - the input vector (not <code>null</code>, unaffected)</dd>
 <dd><code>right</code> - the inverse scale to apply</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
@@ -758,7 +758,7 @@ loadScripts(document, 'script');</script>
  <code>/</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the input vector (not null, unaffected)</dd>
+<dd><code>left</code> - the input vector (not <code>null</code>, unaffected)</dd>
 <dd><code>right</code> - the inverse scale to apply</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
@@ -774,8 +774,8 @@ loadScripts(document, 'script');</script>
  <code>/=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the denominator (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the denominator (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -788,8 +788,8 @@ loadScripts(document, 'script');</script>
  <code>/=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the denominator (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the denominator (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -803,7 +803,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>left</code> - the scale to apply</dd>
-<dd><code>right</code> - the input vector (not null, unaffected)</dd>
+<dd><code>right</code> - the input vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -819,7 +819,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>left</code> - the scale to apply</dd>
-<dd><code>right</code> - the input quaternion (not null, unaffected)</dd>
+<dd><code>right</code> - the input quaternion (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new quaternion</dd>
 </dl>
@@ -835,7 +835,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>left</code> - the scale to apply</dd>
-<dd><code>right</code> - the input vector (not null, unaffected)</dd>
+<dd><code>right</code> - the input vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -851,8 +851,8 @@ loadScripts(document, 'script');</script>
  operator: binary <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the left factor (not null, unaffected)</dd>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>left</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -867,8 +867,8 @@ loadScripts(document, 'script');</script>
  <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the left factor (not null, unaffected)</dd>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>left</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -883,8 +883,8 @@ loadScripts(document, 'script');</script>
  <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the left factor (not null, unaffected)</dd>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>left</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new quaternion</dd>
 </dl>
@@ -899,8 +899,9 @@ loadScripts(document, 'script');</script>
  operator: binary <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the rotation to apply (not null, normalized, unaffected)</dd>
-<dd><code>right</code> - the vector to apply it to (not null, unaffected)</dd>
+<dd><code>left</code> - the rotation to apply (not <code>null</code>, normalized,
+ unaffected)</dd>
+<dd><code>right</code> - the vector to apply it to (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -915,8 +916,8 @@ loadScripts(document, 'script');</script>
  <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the left factor (not null, unaffected)</dd>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>left</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>
@@ -931,8 +932,8 @@ loadScripts(document, 'script');</script>
  <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the left factor (not null, unaffected)</dd>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>left</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -948,8 +949,8 @@ loadScripts(document, 'script');</script>
  operator: binary <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the left factor (not null, unaffected)</dd>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>left</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -965,8 +966,8 @@ loadScripts(document, 'script');</script>
  operator: binary <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the left factor (not null, unaffected)</dd>
-<dd><code>right</code> - the right factor (not null, unaffected)</dd>
+<dd><code>left</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -981,7 +982,7 @@ loadScripts(document, 'script');</script>
  <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the input vector (not null, unaffected)</dd>
+<dd><code>left</code> - the input vector (not <code>null</code>, unaffected)</dd>
 <dd><code>right</code> - the scale to apply</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
@@ -997,8 +998,8 @@ loadScripts(document, 'script');</script>
  quaternion. (native operator: binary <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the input vector (not null, unaffected)</dd>
-<dd><code>right</code> - the conjugate of the rotation to apply (not null,
+<dd><code>left</code> - the input vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the conjugate of the rotation to apply (not <code>null</code>,
  normalized, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
@@ -1014,8 +1015,8 @@ loadScripts(document, 'script');</script>
  operator: binary <code>*</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the first vector (not null, unaffected)</dd>
-<dd><code>right</code> - the 2nd vector (not null, unaffected)</dd>
+<dd><code>left</code> - the first vector (not <code>null</code>, unaffected)</dd>
+<dd><code>right</code> - the 2nd vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -1030,8 +1031,8 @@ loadScripts(document, 'script');</script>
  <code>*=</code>)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>left</code> - the accumulating vector (not null, modified)</dd>
-<dd><code>right</code> - the scale factor to apply (not null, unaffected)</dd>
+<dd><code>left</code> - the accumulating vector (not <code>null</code>, modified)</dd>
+<dd><code>right</code> - the scale factor to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

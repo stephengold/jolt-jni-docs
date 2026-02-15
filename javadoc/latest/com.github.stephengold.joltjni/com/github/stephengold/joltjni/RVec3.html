@@ -125,9 +125,9 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="col-last even-row-color">
 <div class="block">Instantiate a vector with the specified components.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.Float3)" class="member-name-link">RVec3</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;float3)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">RVec3</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;float3)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate from a <code>Float3</code>.</div>
+<div class="block">Instantiate from the specified <code>ConstFloat3</code>.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">RVec3</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;vec)</code></div>
 <div class="col-last even-row-color">
@@ -135,11 +135,11 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">RVec3</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate from a single-precision vector.</div>
+<div class="block">Instantiate from the specified single-precision vector.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.nio.DoubleBuffer)" class="member-name-link">RVec3</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a>&nbsp;buffer)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
 </div>
 </div>
 </section>
@@ -450,7 +450,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Instantiate from the specified array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>array</code> - the desired component values (not null, length&ge;3,
+<dd><code>array</code> - the desired component values (not <code>null</code>, length&ge;3,
  unaffected)</dd>
 </dl>
 </section>
@@ -459,22 +459,22 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <section class="detail" id="&lt;init&gt;(java.nio.DoubleBuffer)">
 <h3>RVec3</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RVec3</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/DoubleBuffer.html" title="class or interface in java.nio" class="external-link">DoubleBuffer</a>&nbsp;buffer)</span></div>
-<div class="block">Instantiate from a buffer.</div>
+<div class="block">Instantiate from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, unaffected,
+<dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected,
  capacity&ge;3)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.Float3)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstFloat3)">
 <h3>RVec3</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RVec3</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;float3)</span></div>
-<div class="block">Instantiate from a <code>Float3</code>.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RVec3</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;float3)</span></div>
+<div class="block">Instantiate from the specified <code>ConstFloat3</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>float3</code> - the desired component values (not null, unaffected)</dd>
+<dd><code>float3</code> - the desired component values (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -485,7 +485,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Instantiate a copy of the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vec</code> - the vector to copy (not null, unaffected)</dd>
+<dd><code>vec</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -493,10 +493,10 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>RVec3</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RVec3</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec)</span></div>
-<div class="block">Instantiate from a single-precision vector.</div>
+<div class="block">Instantiate from the specified single-precision vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vec</code> - the vector to convert (not null, unaffected)</dd>
+<dd><code>vec</code> - the vector to convert (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -551,7 +551,8 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Rotate the current vector by the specified quaternion.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rotation</code> - the rotation to apply (not null, normalized, unaffected)</dd>
+<dd><code>rotation</code> - the rotation to apply (not <code>null</code>, normalized,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -636,7 +637,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Set all 3 components from the specified array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>array</code> - the desired component values (not null, length&ge;3,
+<dd><code>array</code> - the desired component values (not <code>null</code>, length&ge;3,
  unaffected)</dd>
 </dl>
 </section>
@@ -648,8 +649,8 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Set all 3 components from the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not null, length&ge;3,
- unaffected)</dd>
+<dd><code>buffer</code> - the desired component values (not <code>null</code>,
+ length&ge;3, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -660,7 +661,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Set all 3 components from the argument.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>source</code> - the vector to copy (not null, unaffected)</dd>
+<dd><code>source</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -671,7 +672,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Set all 3 components from the specified single-precision vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>source</code> - the vector to copy (not null, unaffected)</dd>
+<dd><code>source</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -734,7 +735,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Return the component-wise sum of the specified vectors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vArray</code> - an array of input vectors (not null, unaffected)</dd>
+<dd><code>vArray</code> - an array of input vectors (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -758,7 +759,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <div class="block">Transform the current vector by the specified matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>matrix</code> - the transformation to apply (not null, unaffected)</dd>
+<dd><code>matrix</code> - the transformation to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -772,7 +773,8 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RVec3Arg.html#copyTo(java.nio.DoubleBuffer)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeDoubles</code> - the destination buffer (not null, capacity&ge;3)</dd>
+<dd><code>storeDoubles</code> - the destination buffer (not <code>null</code>,
+ capacity&ge;3)</dd>
 </dl>
 </section>
 </li>
@@ -785,8 +787,8 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RVec3Arg.html#cross(com.github.stephengold.joltjni.readonly.RVec3Arg)">cross</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>rightFactor</code> - the vector to cross with the current one (not null,
- unaffected)</dd>
+<dd><code>rightFactor</code> - the vector to cross with the current one (not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new product vector</dd>
 </dl>
@@ -801,7 +803,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RVec3Arg.html#dot(com.github.stephengold.joltjni.readonly.RVec3Arg)">dot</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>factor</code> - the vector to dot with the current one (not null,
+<dd><code>factor</code> - the vector to dot with the current one (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the dot product</dd>
@@ -1134,7 +1136,7 @@ implements <a href="readonly/RVec3Arg.html" title="interface in com.github.steph
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>the string representation (not null, not empty)</dd>
+<dd>the string representation (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>
