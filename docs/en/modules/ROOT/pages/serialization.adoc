@@ -24,7 +24,9 @@ Many {ProjectAdj} classes implement the `saveBinaryState(StreamOut)` method:
 
 * `BodyCreationSettings` (cooked, with `Shape`)
 * `ConstraintSettings`
+* `Gradient`
 * `GroupFilter`
+* `HairSettings`
 * `PathConstraintPath`
 * `PhysicsMaterial`
 * `PhysicsScene`
@@ -64,6 +66,7 @@ physics objects of many types, including:
 * `BodyCreationSettings` (uncooked, with `ShapeSettings`)
 * `ConstraintSettings`
 * `GroupFilter`
+* `HairSettings` (but only if `Jolt.registerHair()` has been invoked)
 * `PathConstraintPath`
 * `PhysicsMaterial`
 * `PhysicsScene`
