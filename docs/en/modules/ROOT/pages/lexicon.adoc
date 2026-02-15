@@ -239,6 +239,14 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}compound_shape_settings.html[JPH::CompoundShapeSettings]
 |{url-api}/CompoundShapeSettings.html[CompoundShapeSettings]
 
+|{url-jolt}compute_queue.html[JPH::ComputeQueue]
+|{url-api}/ComputeQueue.html[ComputeQueue] +
+ {url-api}/ComputeQueueRef.html[ComputeQueueRef]
+
+|{url-jolt}compute_system.html[JPH::ComputeSystem]
+|{url-api}/ComputeSystem.html[ComputeSystem] +
+ {url-api}/ComputeSystemRef.html[ComputeSystemRef]
+
 |{url-jolt}cone_constraint.html[JPH::ConeConstraint]
 |{url-api}/ConeConstraint.html[ConeConstraint]
 
@@ -335,7 +343,12 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/Float2.html[Float2]
 
 |{url-jolt}float3.html[JPH::Float3]
-|{url-api}/Float3.html[Float3]
+|{url-api}/Float3.html[Float3] +
+ {url-api}/readonly/ConstFloat3.html[ConstFloat3]
+
+|{url-jolt}float4.html[JPH::Float4]
+|{url-api}/Float4.html[Float4] +
+ {url-api}/readonly/ConstFloat4.html[ConstFloat4]
 
 |{url-jolt}gear_constraint.html[JPH::GearConstraint]
 |{url-api}/GearConstraint.html[GearConstraint]
@@ -351,6 +364,18 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}group_filter_table.html[JPH::GroupFilterTable]
 |{url-api}/GroupFilterTable.html[GroupFilterTable] +
  {url-api}/GroupFilterTableRef.html[GroupFilterTableRef]
+
+|{url-jolt}hair.html[JPH::Hair]
+|{url-api}/Hair.html[Hair]
+
+|{url-jolt}hair_settings.html[JPH::HairSettings]
+|{url-api}/HairSettings.html[HairSettings] +
+ {url-api}/readonly/ConstHairSettings.html[ConstHairSettings] +
+ {url-api}/HairSettingsRef.html[HairSettingsRef]
+
+|{url-jolt}hair_shaders.html[JPH::HairShaders]
+|{url-api}/HairShaders.html[HairShaders] +
+ {url-api}/HairShadersRef.html[HairShadersRef]
 
 |{url-jolt}height_field_shape.html[JPH::HeightFieldShape]
 |{url-api}/HeightFieldShape.html[HeightFieldShape]
@@ -505,7 +530,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/PhysicsStepListenerContext.html[PhysicsStepListenerContext]
 
 |{url-jolt}physics_system.html[JPH::PhysicsSystem]
-|{url-api}/PhysicsSystem.html[PhysicsSystem]
+|{url-api}/PhysicsSystem.html[PhysicsSystem] +
+ {url-api}/readonly/ConstPhysicsSystem.html[ConstPhysicsSystem]
 
 |{url-jolt}plane.html[JPH::Plane]
 |{url-api}/Plane.html[Plane] +
