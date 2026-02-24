@@ -13,6 +13,8 @@ com.github.stephengold.joltjni.AllHitTransformedShapeCollector
 com.github.stephengold.joltjni.AnyHitCastRayCollector
 com.github.stephengold.joltjni.AnyHitCastShapeCollector
 com.github.stephengold.joltjni.AnyHitCollideShapeCollector
+com.github.stephengold.joltjni.Batch
+com.github.stephengold.joltjni.BatchBodyInterface
 com.github.stephengold.joltjni.BcsResult
 com.github.stephengold.joltjni.Body
 com.github.stephengold.joltjni.BodyActivationListener
@@ -83,6 +85,12 @@ com.github.stephengold.joltjni.Color
 com.github.stephengold.joltjni.CombineFunction
 com.github.stephengold.joltjni.CompoundShape
 com.github.stephengold.joltjni.CompoundShapeSettings
+com.github.stephengold.joltjni.ComputeQueue
+com.github.stephengold.joltjni.ComputeQueueRef
+com.github.stephengold.joltjni.ComputeQueueResult
+com.github.stephengold.joltjni.ComputeSystem
+com.github.stephengold.joltjni.ComputeSystemRef
+com.github.stephengold.joltjni.ComputeSystemResult
 com.github.stephengold.joltjni.ConeConstraint
 com.github.stephengold.joltjni.ConeConstraintSettings
 com.github.stephengold.joltjni.Constraint
@@ -112,6 +120,7 @@ com.github.stephengold.joltjni.CustomCollideShapeBodyCollector
 com.github.stephengold.joltjni.CustomCollideShapeCollector
 com.github.stephengold.joltjni.CustomContactListener
 com.github.stephengold.joltjni.CustomDebugRendererSimple
+com.github.stephengold.joltjni.CustomLoader
 com.github.stephengold.joltjni.CustomPhysicsStepListener
 com.github.stephengold.joltjni.CustomRayCastBodyCollector
 com.github.stephengold.joltjni.CustomSoftBodyContactListener
@@ -126,6 +135,7 @@ com.github.stephengold.joltjni.DefaultBroadPhaseLayerFilter
 com.github.stephengold.joltjni.DefaultObjectLayerFilter
 com.github.stephengold.joltjni.DistanceConstraint
 com.github.stephengold.joltjni.DistanceConstraintSettings
+com.github.stephengold.joltjni.DrawSettings
 com.github.stephengold.joltjni.Edge
 com.github.stephengold.joltjni.EmptyShape
 com.github.stephengold.joltjni.EmptyShapeSettings
@@ -137,16 +147,25 @@ com.github.stephengold.joltjni.FixedConstraint
 com.github.stephengold.joltjni.FixedConstraintSettings
 com.github.stephengold.joltjni.Float2
 com.github.stephengold.joltjni.Float3
+com.github.stephengold.joltjni.Float4
 com.github.stephengold.joltjni.GearConstraint
 com.github.stephengold.joltjni.GearConstraintSettings
 com.github.stephengold.joltjni.Geometry
 com.github.stephengold.joltjni.GeometryRef
 com.github.stephengold.joltjni.GetTrianglesContext
+com.github.stephengold.joltjni.Gradient
 com.github.stephengold.joltjni.GroupFilter
 com.github.stephengold.joltjni.GroupFilterRef
 com.github.stephengold.joltjni.GroupFilterResult
 com.github.stephengold.joltjni.GroupFilterTable
 com.github.stephengold.joltjni.GroupFilterTableRef
+com.github.stephengold.joltjni.Hair
+com.github.stephengold.joltjni.HairMaterial
+com.github.stephengold.joltjni.HairSettings
+com.github.stephengold.joltjni.HairSettingsRef
+com.github.stephengold.joltjni.HairShaders
+com.github.stephengold.joltjni.HairShadersRef
+com.github.stephengold.joltjni.HairSkinWeight
 com.github.stephengold.joltjni.HeightFieldShape
 com.github.stephengold.joltjni.HeightFieldShapeConstants
 com.github.stephengold.joltjni.HeightFieldShapeSettings
@@ -166,6 +185,7 @@ com.github.stephengold.joltjni.Joint
 com.github.stephengold.joltjni.JointState
 com.github.stephengold.joltjni.Jolt
 com.github.stephengold.joltjni.JoltPhysicsObject
+com.github.stephengold.joltjni.Loader
 com.github.stephengold.joltjni.Lod
 com.github.stephengold.joltjni.MassProperties
 com.github.stephengold.joltjni.Mat44
@@ -224,8 +244,10 @@ com.github.stephengold.joltjni.PulleyConstraint
 com.github.stephengold.joltjni.PulleyConstraintSettings
 com.github.stephengold.joltjni.Quat
 com.github.stephengold.joltjni.RMat44
+com.github.stephengold.joltjni.RMat44Array
 com.github.stephengold.joltjni.RRayCast
 com.github.stephengold.joltjni.RShapeCast
+com.github.stephengold.joltjni.RStrand
 com.github.stephengold.joltjni.RVec3
 com.github.stephengold.joltjni.RackAndPinionConstraint
 com.github.stephengold.joltjni.RackAndPinionConstraintSettings
@@ -244,6 +266,10 @@ com.github.stephengold.joltjni.RodStretchShear
 com.github.stephengold.joltjni.RotatedTranslatedShape
 com.github.stephengold.joltjni.RotatedTranslatedShapeSettings
 com.github.stephengold.joltjni.Rtti
+com.github.stephengold.joltjni.SStrand
+com.github.stephengold.joltjni.SStrandList
+com.github.stephengold.joltjni.SVertex
+com.github.stephengold.joltjni.SVertexList
 com.github.stephengold.joltjni.SbcsResult
 com.github.stephengold.joltjni.ScaleHelpers
 com.github.stephengold.joltjni.ScaledShape
@@ -257,6 +283,7 @@ com.github.stephengold.joltjni.ShapeFilter
 com.github.stephengold.joltjni.ShapeList
 com.github.stephengold.joltjni.ShapeRef
 com.github.stephengold.joltjni.ShapeRefC
+com.github.stephengold.joltjni.ShapeRefCArray
 com.github.stephengold.joltjni.ShapeResult
 com.github.stephengold.joltjni.ShapeSettings
 com.github.stephengold.joltjni.ShapeSettingsRef
@@ -325,6 +352,7 @@ com.github.stephengold.joltjni.TrackedVehicleControllerSettings
 com.github.stephengold.joltjni.TransformedAaBox
 com.github.stephengold.joltjni.TransformedConvexObject
 com.github.stephengold.joltjni.TransformedShape
+com.github.stephengold.joltjni.TransformedShapeArray
 com.github.stephengold.joltjni.TransformedShapeCollector
 com.github.stephengold.joltjni.TransformedSphere
 com.github.stephengold.joltjni.Triangle
@@ -399,6 +427,7 @@ com.github.stephengold.joltjni.enumerate.EMotorState
 com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
 com.github.stephengold.joltjni.enumerate.EPathRotationConstraintType
 com.github.stephengold.joltjni.enumerate.EPhysicsUpdateError
+com.github.stephengold.joltjni.enumerate.ERenderStrandColor
 com.github.stephengold.joltjni.enumerate.EResult
 com.github.stephengold.joltjni.enumerate.EShapeSubType
 com.github.stephengold.joltjni.enumerate.EShapeType
