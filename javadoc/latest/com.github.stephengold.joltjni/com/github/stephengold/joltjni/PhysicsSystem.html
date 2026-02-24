@@ -212,16 +212,16 @@ implements <a href="readonly/ConstPhysicsSystem.html" title="interface in com.gi
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the system's <code>BodyActivationListener</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BatchBodyInterface.html" title="class in com.github.stephengold.joltjni">BatchBodyInterface</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyInterface()" class="member-name-link">getBodyInterface</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the system's <code>BodyInterface</code>.</div>
+<div class="block">Access the system's <code>BatchBodyInterface</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BatchBodyInterface.html" title="class in com.github.stephengold.joltjni">BatchBodyInterface</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyInterfaceNoLock()" class="member-name-link">getBodyInterfaceNoLock</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access a version of the system's <code>BodyInterface</code> that does not use
- locks.</div>
+<div class="block">Access a version of the system's <code>BatchBodyInterface</code> that does not
+ use locks.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstBodyLockInterfaceLocking.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyLockInterfaceLocking</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyLockInterface()" class="member-name-link">getBodyLockInterface</a>()</code></div>
@@ -639,8 +639,8 @@ implements <a href="readonly/ConstPhysicsSystem.html" title="interface in com.gi
 <li>
 <section class="detail" id="getBodyInterface()">
 <h3>getBodyInterface</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></span>&nbsp;<span class="element-name">getBodyInterface</span>()</div>
-<div class="block">Access the system's <code>BodyInterface</code>.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BatchBodyInterface.html" title="class in com.github.stephengold.joltjni">BatchBodyInterface</a></span>&nbsp;<span class="element-name">getBodyInterface</span>()</div>
+<div class="block">Access the system's <code>BatchBodyInterface</code>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the pre-existing JVM object (not <code>null</code>)</dd>
@@ -650,9 +650,9 @@ implements <a href="readonly/ConstPhysicsSystem.html" title="interface in com.gi
 <li>
 <section class="detail" id="getBodyInterfaceNoLock()">
 <h3>getBodyInterfaceNoLock</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></span>&nbsp;<span class="element-name">getBodyInterfaceNoLock</span>()</div>
-<div class="block">Access a version of the system's <code>BodyInterface</code> that does not use
- locks.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BatchBodyInterface.html" title="class in com.github.stephengold.joltjni">BatchBodyInterface</a></span>&nbsp;<span class="element-name">getBodyInterfaceNoLock</span>()</div>
+<div class="block">Access a version of the system's <code>BatchBodyInterface</code> that does not
+ use locks.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>

@@ -135,10 +135,15 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the matrix at the specified index.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
- <a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;matrix)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#length()" class="member-name-link">length</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the length of the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
+ <a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;matrix)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Store the specified matrix at the specified index.</div>
 </div>
 </div>
@@ -168,7 +173,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate an array with the specified length.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>length</code> - the desired number of matrices (&ge;0)</dd>
+<dd><code>length</code> - the desired number of matrices (&gt;0)</dd>
 </dl>
 </section>
 </li>
@@ -187,9 +192,20 @@ loadScripts(document, 'script');</script>
 <div class="block">Access the matrix at the specified index.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>elementIndex</code> - the index (&ge;0)</dd>
+<dd><code>elementIndex</code> - the index (&ge;0, &lt;length)</dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="length()">
+<h3>length</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">length</span>()</div>
+<div class="block">Return the length of the array.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the length (in matrices, &gt;0)</dd>
 </dl>
 </section>
 </li>
@@ -201,8 +217,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Store the specified matrix at the specified index.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>elementIndex</code> - the index at which to store the matrix (&ge;0)</dd>
-<dd><code>matrix</code> - the matrix to store (not null, unaffected)</dd>
+<dd><code>elementIndex</code> - the index at which to store the matrix (&ge;0,
+ &lt;length)</dd>
+<dd><code>matrix</code> - the matrix to store (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
