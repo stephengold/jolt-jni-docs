@@ -6,18 +6,19 @@ It contains 12 subprojects:
 
 1. docs: [Antora] documentation for Jolt JNI, including a tutorial
 2. java-apps: sample applications referred to in the tutorial, written in [Java]
-3. jython-apps: sample applications ported to [Python]
+3. jython-apps: sample applications ported to Jython [Python]
 4. nashorn-apps: sample applications ported to Nashorn [JavaScript]
 5. kotlin-apps: sample applications ported to [Kotlin]
 6. groovy-apps: sample applications ported to statically-compiled [Groovy]
 7. groovy223-apps: sample applications ported to scripted [Groovy]
-8. jruby-apps: sample applications ported to [Ruby]
+8. jruby-apps: sample applications ported to JRuby [Ruby]
 9. luaj-apps: sample applications ported to Luaj [Lua]
 10. luajava-apps: sample applications ported to Luajava [Lua]
 11. scala-apps: sample applications ported to [Scala]
 12. src/clojure: sample applications ported to [Clojure]
 
-The sample applications utilize [the SPORT graphics engine for Jolt][sportjolt],
+For visualization, many of the sample applications utilize
+[the SPORT graphics engine for Jolt][sportjolt],
 which is a separate open-source project at [GitHub].
 
 Complete source code is provided under
