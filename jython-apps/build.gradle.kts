@@ -72,7 +72,7 @@ val includeMacOsX = os.isMacOsX
 val includeWindows = os.isWindows
 val enableNativeAccess = JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)
 
-tasks.withType<JavaExec>().all { // JVM runtime options:
+tasks.withType<JavaExec>().configureEach { // JVM runtime options:
     if (os.isMacOsX) {
         jvmArgs("-XstartOnFirstThread") // required for GLFW on macOS
     }

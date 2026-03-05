@@ -16,7 +16,7 @@ java {
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-tasks.withType<JavaCompile>().all { // Java compile-time options:
+tasks.withType<JavaCompile>().configureEach { // Java compile-time options:
     options.compilerArgs.add("-Xdiags:verbose")
     options.compilerArgs.add("-Xlint:unchecked")
     options.encoding = "UTF-8"
@@ -150,7 +150,7 @@ val includeMacOsX = os.isMacOsX
 val includeWindows = os.isWindows
 val enableNativeAccess = JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)
 
-tasks.withType<JavaExec>().all { // JVM runtime options:
+tasks.withType<JavaExec>().configureEach { // JVM runtime options:
     if (os.isMacOsX) {
         jvmArgs("-XstartOnFirstThread") // required for GLFW on macOS
     }
