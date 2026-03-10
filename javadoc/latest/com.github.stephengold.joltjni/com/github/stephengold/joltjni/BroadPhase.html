@@ -227,8 +227,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Abort adding bodies to the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
 </dl>
 </section>
@@ -242,8 +242,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Abort adding bodies to the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>numBodies</code> - the number of bodies to be added (&ge;0)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
 </dl>
@@ -257,8 +257,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Finish adding bodies to the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
 </dl>
 </section>
@@ -272,8 +272,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Finish adding bodies to the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>numBodies</code> - the number of bodies to be added (&ge;0)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
 </dl>
@@ -286,8 +286,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Prepare to add a batch of bodies to the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, possibly
- shuffled)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ possibly shuffled)</dd>
 <dt>Returns:</dt>
 <dd>a handle to be passed to <code>addBodiesFinalize()</code> or
  <code>addBodiesAbort()</code></dd>
@@ -302,8 +302,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Prepare to add a batch of bodies to the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, possibly
- shuffled)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ possibly shuffled)</dd>
 <dd><code>numBodies</code> - the number of bodies to be added (&ge;0)</dd>
 <dt>Returns:</dt>
 <dd>a handle to be passed to <code>addBodiesFinalize()</code> or
@@ -319,9 +319,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Initialize the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>manager</code> - the manager to use (not null)</dd>
+<dd><code>manager</code> - the manager to use (not <code>null</code>)</dd>
 <dd><code>map</code> - the desired map from object layers to broad-phase layers (not
- null, alias created)</dd>
+ <code>null</code>, alias created)</dd>
 </dl>
 </section>
 </li>
@@ -340,7 +340,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Invoke whenever the bounding boxes of some bodies change.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be notified (not null)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be notified (not <code>null</code>)</dd>
 <dd><code>numBodies</code> - the number of bodies to be notified (&ge;0)</dd>
 </dl>
 </section>
@@ -354,7 +354,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Invoke whenever the bounding boxes of some bodies change.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be notified (not null)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be notified (not <code>null</code>)</dd>
 <dd><code>numBodies</code> - the number of bodies to be notified (&ge;0)</dd>
 <dd><code>takeLock</code> - <code>true</code> to acquire a lock, otherwise <code>false</code></dd>
 </dl>
@@ -368,8 +368,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Remove multiple bodies from the phase.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be removed (not null, possibly
- shuffled)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be removed (not <code>null</code>,
+ possibly shuffled)</dd>
 <dd><code>numBodies</code> - the number of bodies to be removed (&ge;0)</dd>
 </dl>
 </section>

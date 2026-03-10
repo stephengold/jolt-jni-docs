@@ -122,6 +122,17 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#activateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray)" class="member-name-link">activateBodies</a><wbr>(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Activate the specified bodies.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#activateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray,int)" class="member-name-link">activateBodies</a><wbr>(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Activate the specified bodies.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#activateBodiesInAaBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)" class="member-name-link">activateBodiesInAaBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
  <a href="BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter,
  <a href="ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter)</code></div>
@@ -260,17 +271,28 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a soft body using the specified settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deactivateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray)" class="member-name-link">deactivateBodies</a><wbr>(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Deactivate the specified bodies.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deactivateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray,int)" class="member-name-link">deactivateBodies</a><wbr>(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Deactivate the specified bodies.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deactivateBody(int)" class="member-name-link">deactivateBody</a><wbr>(int&nbsp;bodyId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Deactivate the specified body.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destroyBodies(com.github.stephengold.joltjni.BodyIdArray)" class="member-name-link">destroyBodies</a><wbr>(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destroyBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray)" class="member-name-link">destroyBodies</a><wbr>(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Destroy the specified bodies.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destroyBodies(com.github.stephengold.joltjni.BodyIdArray,int)" class="member-name-link">destroyBodies</a><wbr>(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destroyBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray,int)" class="member-name-link">destroyBodies</a><wbr>(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds,
  int&nbsp;numBodies)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Destroy the specified bodies.</div>
@@ -575,6 +597,32 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="activateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray)">
+<h3>activateBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">activateBodies</span><wbr><span class="parameters">(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds)</span></div>
+<div class="block">Activate the specified bodies.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to activate (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="activateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray,int)">
+<h3>activateBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">activateBodies</span><wbr><span class="parameters">(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</span></div>
+<div class="block">Activate the specified bodies.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to activate (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>numBodies</code> - the number of bodies to activate (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="activateBodiesInAaBox(com.github.stephengold.joltjni.readonly.ConstAaBox,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)">
 <h3>activateBodiesInAaBox</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">activateBodiesInAaBox</span><wbr><span class="parameters">(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box,
@@ -584,10 +632,11 @@ loadScripts(document, 'script');</script>
  filters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the bounds to use (not null, unaffected)</dd>
-<dd><code>bplFilter</code> - the broadphase layer filter to apply (not null,
+<dd><code>box</code> - the bounds to use (not <code>null</code>, unaffected)</dd>
+<dd><code>bplFilter</code> - the broadphase layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -609,7 +658,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Activate all non-static bodies attached to the specified constraint.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>constraint</code> - the constraint to activate (not null)</dd>
+<dd><code>constraint</code> - the constraint to activate (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -622,7 +671,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body</dd>
-<dd><code>angularImpulse</code> - the impulse vector (not null, unaffected)</dd>
+<dd><code>angularImpulse</code> - the impulse vector (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -634,8 +683,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Abort adding bodies to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
 </dl>
 </section>
@@ -649,8 +698,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Abort adding bodies to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>numBodies</code> - the number of bodies to be added (&ge;0)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
 </dl>
@@ -665,10 +714,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Finish adding bodies to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
-<dd><code>activation</code> - whether to activate the bodies (not null)</dd>
+<dd><code>activation</code> - whether to activate the bodies (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -682,11 +731,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Finish adding bodies to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, unmodified
- since the handle was created)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ unmodified since the handle was created)</dd>
 <dd><code>numBodies</code> - the number of bodies to be added (&ge;0)</dd>
 <dd><code>addState</code> - the handle returned by <code>addBodiesPrepare()</code></dd>
-<dd><code>activation</code> - whether to activate the bodies (not null)</dd>
+<dd><code>activation</code> - whether to activate the bodies (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -697,8 +746,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Prepare to add a batch of bodies to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, possibly
- shuffled)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ possibly shuffled)</dd>
 <dt>Returns:</dt>
 <dd>a handle to be passed to <code>addBodiesFinalize()</code> or
  <code>addBodiesAbort()</code></dd>
@@ -713,8 +762,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Prepare to add a batch of bodies to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to be added (not null, possibly
- shuffled)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to be added (not <code>null</code>,
+ possibly shuffled)</dd>
 <dd><code>numBodies</code> - the number of bodies to be added (&ge;0)</dd>
 <dt>Returns:</dt>
 <dd>a handle to be passed to <code>addBodiesFinalize()</code> or
@@ -733,8 +782,8 @@ loadScripts(document, 'script');</script>
  <code>addBodiesFinalize()</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>body</code> - the body to add (not null)</dd>
-<dd><code>activation</code> - whether to activate the body (not null)</dd>
+<dd><code>body</code> - the body to add (not <code>null</code>)</dd>
+<dd><code>activation</code> - whether to activate the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -747,7 +796,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to add</dd>
-<dd><code>activation</code> - whether to activate the body (not null)</dd>
+<dd><code>activation</code> - whether to activate the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -760,7 +809,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body</dd>
-<dd><code>force</code> - the force vector (not null, unaffected)</dd>
+<dd><code>force</code> - the force vector (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -775,8 +824,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body</dd>
-<dd><code>force</code> - the force vector (not null, unaffected)</dd>
-<dd><code>location</code> - where to apply the force (not null, unaffected)</dd>
+<dd><code>force</code> - the force vector (not <code>null</code>, unaffected)</dd>
+<dd><code>location</code> - where to apply the force (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -789,7 +838,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body</dd>
-<dd><code>impulse</code> - the impulse vector (not null, unaffected)</dd>
+<dd><code>impulse</code> - the impulse vector (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -804,8 +853,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body</dd>
-<dd><code>impulse</code> - the impulse vector (not null, unaffected)</dd>
-<dd><code>location</code> - where to apply the impulse (not null, unaffected)</dd>
+<dd><code>impulse</code> - the impulse vector (not <code>null</code>, unaffected)</dd>
+<dd><code>location</code> - where to apply the impulse (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -818,7 +867,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body</dd>
-<dd><code>torque</code> - the torque vector (not null, unaffected)</dd>
+<dd><code>torque</code> - the torque vector (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -830,8 +879,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a rigid body and add it to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the settings to use (not null, unaffected)</dd>
-<dd><code>activationMode</code> - whether to activate the body (not null)</dd>
+<dd><code>settings</code> - the settings to use (not <code>null</code>, unaffected)</dd>
+<dd><code>activationMode</code> - whether to activate the body (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>the ID of the created body, or an invalid ID when out of bodies</dd>
 </dl>
@@ -845,8 +894,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a soft body and add it to the physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the settings to use (not null, unaffected)</dd>
-<dd><code>activationMode</code> - whether to activate the body (not null)</dd>
+<dd><code>settings</code> - the settings to use (not <code>null</code>, unaffected)</dd>
+<dd><code>activationMode</code> - whether to activate the body (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>the ID of the created body, or an invalid ID when out of bodies</dd>
 </dl>
@@ -859,7 +908,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a rigid body using the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the settings to use (not null, unaffected)</dd>
+<dd><code>settings</code> - the settings to use (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the new body</dd>
 </dl>
@@ -874,7 +923,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a two-body constraint using the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the settings to use (not null, unaffected)</dd>
+<dd><code>settings</code> - the settings to use (not <code>null</code>, unaffected)</dd>
 <dd><code>rigidBody1Id</code> - the ID of the first rigid body</dd>
 <dd><code>rigidBody2Id</code> - the ID of the 2nd rigid body</dd>
 <dt>Returns:</dt>
@@ -889,9 +938,33 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a soft body using the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the settings to use (not null, unaffected)</dd>
+<dd><code>settings</code> - the settings to use (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the new body</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="deactivateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray)">
+<h3>deactivateBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deactivateBodies</span><wbr><span class="parameters">(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds)</span></div>
+<div class="block">Deactivate the specified bodies.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to deactivate (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="deactivateBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray,int)">
+<h3>deactivateBodies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deactivateBodies</span><wbr><span class="parameters">(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds,
+ int&nbsp;numBodies)</span></div>
+<div class="block">Deactivate the specified bodies.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bodyIds</code> - the IDs of the bodies to deactivate (not <code>null</code>)</dd>
+<dd><code>numBodies</code> - the number of bodies to deactivate (&ge;0)</dd>
 </dl>
 </section>
 </li>
@@ -907,27 +980,29 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="destroyBodies(com.github.stephengold.joltjni.BodyIdArray)">
+<section class="detail" id="destroyBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray)">
 <h3>destroyBodies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyBodies</span><wbr><span class="parameters">(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyBodies</span><wbr><span class="parameters">(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds)</span></div>
 <div class="block">Destroy the specified bodies. Don't use this on bodies that have been
  added but not removed yet!</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to destroy (not null)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to destroy (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="destroyBodies(com.github.stephengold.joltjni.BodyIdArray,int)">
+<section class="detail" id="destroyBodies(com.github.stephengold.joltjni.readonly.ConstBodyIdArray,int)">
 <h3>destroyBodies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyBodies</span><wbr><span class="parameters">(<a href="BodyIdArray.html" title="class in com.github.stephengold.joltjni">BodyIdArray</a>&nbsp;bodyIds,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">destroyBodies</span><wbr><span class="parameters">(<a href="readonly/ConstBodyIdArray.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyIdArray</a>&nbsp;bodyIds,
  int&nbsp;numBodies)</span></div>
 <div class="block">Destroy the specified bodies. Don't use this on bodies that have been
  added but not removed yet!</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to destroy (not null)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to destroy (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>numBodies</code> - the number of bodies to destroy (&ge;0)</dd>
 </dl>
 </section>
@@ -980,7 +1055,7 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to query</dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1085,7 +1160,7 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to query</dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1098,7 +1173,7 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to query</dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1152,8 +1227,10 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to locate</dd>
-<dd><code>storeLocation</code> - storage for the location (not null, modified)</dd>
-<dd><code>storeOrientation</code> - storage for the orientation (not null, modified)</dd>
+<dd><code>storeLocation</code> - storage for the location (not <code>null</code>,
+ modified)</dd>
+<dd><code>storeOrientation</code> - storage for the orientation (not <code>null</code>,
+ modified)</dd>
 </dl>
 </section>
 </li>
@@ -1310,10 +1387,10 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to reposition</dd>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dd><code>orientation</code> - the desired orientation (relative to the system axes,
- not null, unaffected)</dd>
+ not <code>null</code>, unaffected)</dd>
 <dd><code>deltaTime</code> - time until the desired position is reached (in seconds,
  &gt;0)</dd>
 </dl>
@@ -1330,9 +1407,10 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the affected body</dd>
-<dd><code>prevCom</code> - center of mass prior to the change (not null, unaffected)</dd>
+<dd><code>prevCom</code> - center of mass prior to the change (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>updateMassProperties</code> - <code>true</code> to recalculate mass and inertia</dd>
-<dd><code>activation</code> - whether to activate the body (not null)</dd>
+<dd><code>activation</code> - whether to activate the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1344,7 +1422,8 @@ loadScripts(document, 'script');</script>
  them.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to remove (not null)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to remove (not <code>null</code>,
+ possibly shuffled)</dd>
 </dl>
 </section>
 </li>
@@ -1357,7 +1436,7 @@ loadScripts(document, 'script');</script>
  them.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>bodyIds</code> - the IDs of the bodies to remove (not null)</dd>
+<dd><code>bodyIds</code> - the IDs of the bodies to remove (not <code>null</code>)</dd>
 <dd><code>numBodies</code> - the number of bodies to remove (&ge;0)</dd>
 </dl>
 </section>
@@ -1383,7 +1462,7 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to modify</dd>
 <dd><code>omega</code> - the desired rates (radians per second in system coordiantes,
- not null, unaffected)</dd>
+ not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1439,8 +1518,8 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to modify</dd>
 <dd><code>linearVelocity</code> - the desired linear velocity of the body's center of
- mass (not null, unaffected)</dd>
-<dd><code>angularVelocity</code> - the desired angular velocity (not null,
+ mass (not <code>null</code>, unaffected)</dd>
+<dd><code>angularVelocity</code> - the desired angular velocity (not <code>null</code>,
  unaffected)</dd>
 </dl>
 </section>
@@ -1475,7 +1554,7 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to modify</dd>
 <dd><code>velocity</code> - the desired velocity (meters per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1488,7 +1567,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to modify</dd>
-<dd><code>quality</code> - the desired level of quality (not null)</dd>
+<dd><code>quality</code> - the desired level of quality (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1502,8 +1581,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to modify</dd>
-<dd><code>motionType</code> - the desired motion type (not null)</dd>
-<dd><code>activationMode</code> - whether to activate the body (not null)</dd>
+<dd><code>motionType</code> - the desired motion type (not <code>null</code>)</dd>
+<dd><code>activationMode</code> - whether to activate the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1531,8 +1610,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to relocate</dd>
-<dd><code>location</code> - the desired location (not null, unaffected)</dd>
-<dd><code>activationMode</code> - whether to activate the body (not null)</dd>
+<dd><code>location</code> - the desired location (not <code>null</code>, unaffected)</dd>
+<dd><code>activationMode</code> - whether to activate the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1547,9 +1626,9 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to modify</dd>
-<dd><code>location</code> - the desired location (not null, unaffected)</dd>
-<dd><code>orientation</code> - the desired orientation (not null, unaffected)</dd>
-<dd><code>activationMode</code> - whether to activate the body (not null)</dd>
+<dd><code>location</code> - the desired location (not <code>null</code>, unaffected)</dd>
+<dd><code>orientation</code> - the desired orientation (not <code>null</code>, unaffected)</dd>
+<dd><code>activationMode</code> - whether to activate the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -1578,10 +1657,10 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>bodyId</code> - the ID of the body to reshape</dd>
-<dd><code>shape</code> - the desired shape to apply (not null)</dd>
+<dd><code>shape</code> - the desired shape to apply (not <code>null</code>)</dd>
 <dd><code>updateMassProperties</code> - if <code>true</code>, recalculate the body's mass
  and inertia, otherwise don't recalculate</dd>
-<dd><code>activation</code> - whether to activate the body (not null)</dd>
+<dd><code>activation</code> - whether to activate the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>

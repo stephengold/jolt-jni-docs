@@ -491,13 +491,13 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Instantiate a character with the specified properties.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the settings to use (not null, unaffected)</dd>
+<dd><code>settings</code> - the settings to use (not <code>null</code>, unaffected)</dd>
 <dd><code>location</code> - the desired initial location (in system coordinates, not
- null, unaffected)</dd>
+ <code>null</code>, unaffected)</dd>
 <dd><code>orientation</code> - the desired initial orientation (in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 <dd><code>userData</code> - the desired user-data value</dd>
-<dd><code>system</code> - where to add the body (not null)</dd>
+<dd><code>system</code> - where to add the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -537,7 +537,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>impulse</code> - the impulse vector (kilogram.meters per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -550,7 +550,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>impulse</code> - the impulse vector (kilogram.meters per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -564,7 +564,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deltaV</code> - the change in velocity (meters per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -577,7 +577,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deltaV</code> - the change in velocity (meters per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -599,7 +599,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
  interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 </dl>
 </section>
@@ -612,7 +612,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Add the character to its <code>PhysicsSystem</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
@@ -700,9 +700,9 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>linearVelocity</code> - the desired linear velocity (meters per second in
- system coordinates, not null, unaffected)</dd>
+ system coordinates, not <code>null</code>, unaffected)</dd>
 <dd><code>omega</code> - the desired angular velocity (radians per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -716,9 +716,9 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>linearVelocity</code> - the desired linear velocity (meters per second in
- system coordinates, not null, unaffected)</dd>
+ system coordinates, not <code>null</code>, unaffected)</dd>
 <dd><code>omega</code> - the desired angular velocity (radians per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -771,7 +771,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>velocity</code> - the desired velocity (meters per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -784,7 +784,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>velocity</code> - the desired velocity (meters per second in system
- coordinates, not null, unaffected)</dd>
+ coordinates, not <code>null</code>, unaffected)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -797,8 +797,8 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Relocate and activate the character using the locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -811,9 +811,9 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
  interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected)</dd>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 </dl>
 </section>
@@ -827,9 +827,9 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Relocate the character, optionally activating it.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected)</dd>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
@@ -844,10 +844,10 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Reposition and activate the character using the locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dd><code>orientation</code> - the desired orientation (in system coordinates, not
- null, unaffected)</dd>
+ <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -860,11 +860,11 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Reposition the character, optionally activating it.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dd><code>orientation</code> - the desired orientation (in system coordinates, not
  null, unaffected)</dd>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 </dl>
 </section>
@@ -879,11 +879,11 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Reposition the character, optionally activating it.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dd><code>orientation</code> - the desired orientation (in system coordinates, not
  null, unaffected)</dd>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
@@ -912,7 +912,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dt>Parameters:</dt>
 <dd><code>orientation</code> - the desired orientation (in system coordinates, not
  null, unaffected)</dd>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 </dl>
 </section>
@@ -928,7 +928,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dt>Parameters:</dt>
 <dd><code>orientation</code> - the desired orientation (in system coordinates, not
  null, unaffected)</dd>
-<dd><code>activation</code> - whether to activate the character (not null,
+<dd><code>activation</code> - whether to activate the character (not <code>null</code>,
  default=Activate)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
@@ -944,7 +944,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
  interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the desired shape (not null, unaffected)</dd>
+<dd><code>shape</code> - the desired shape (not <code>null</code>, unaffected)</dd>
 <dd><code>maxPenetrationDepth</code> - the maximum penetration to allow, or MAX_VALUE
  to skip the penetration check</dd>
 <dt>Returns:</dt>
@@ -962,7 +962,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Attempt to replace the character's shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the desired shape (not null, unaffected)</dd>
+<dd><code>shape</code> - the desired shape (not <code>null</code>, unaffected)</dd>
 <dd><code>maxPenetrationDepth</code> - the maximum penetration to allow, or MAX_VALUE
  to skip the penetration check</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
@@ -1165,7 +1165,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dd><code>storeLocation</code> - storage for the location (in system coordinates, not
  null, modified)</dd>
 <dd><code>storeOrientation</code> - storage for the orientation (in system
- coordinates, not null, modified)</dd>
+ coordinates, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -1183,7 +1183,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dd><code>storeLocation</code> - storage for the location (in system coordinates, not
  null, modified)</dd>
 <dd><code>storeOrientation</code> - storage for the orientation (in system
- coordinates, not null, modified)</dd>
+ coordinates, not <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
