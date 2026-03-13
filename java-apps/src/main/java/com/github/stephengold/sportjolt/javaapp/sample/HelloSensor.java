@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -142,7 +142,7 @@ final public class HelloSensor
         int numBpLayers = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
         /*
-         * To enable the callbacks, register this app as a tick listener
+         * To enable the callbacks, register the application as a tick listener
          * and set a simple contact listener:
          */
         addTickListener(this);

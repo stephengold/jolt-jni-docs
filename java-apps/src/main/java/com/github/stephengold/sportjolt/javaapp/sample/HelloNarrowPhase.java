@@ -171,7 +171,7 @@ final public class HelloNarrowPhase
         int numBpLayers = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
-        // To enable the callbacks, register this app as a tick listener:
+        // To enable the callbacks, register the application as a tick listener:
         addTickListener(this);
 
         return result;

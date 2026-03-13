@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -103,7 +103,7 @@ final public class HelloDeactivation
         int numBpLayers = 1;
         PhysicsSystem result = createSystem(maxBodies, numBpLayers);
 
-        // To enable the callbacks, register the application as a tick listener.
+        // To enable the callbacks, register the application as a tick listener:
         addTickListener(this);
 
         return result;
@@ -159,7 +159,7 @@ final public class HelloDeactivation
         ConstBody bottomBody = bi.createBody(bcs);
         bi.addBody(bottomBody, EActivation.DontActivate);
 
-        // Visualize all 3 bodies:
+        // Visualize the shapes of all 3 bodies:
         visualizeShape(dynamicCube);
         visualizeShape(supportCube);
         visualizeShape(bottomBody);

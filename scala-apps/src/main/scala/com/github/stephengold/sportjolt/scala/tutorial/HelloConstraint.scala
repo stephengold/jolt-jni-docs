@@ -94,13 +94,13 @@ class HelloConstraint extends BasePhysicsApp with PhysicsTickListener {
         val numBpLayers = 1
         val result = createSystem(maxBodies, numBpLayers)
 
-        // To enable the callbacks, register this app as a tick listener:
+        // To enable the callbacks, register the application as a tick listener:
         addTickListener(this)
 
         // Reduce the time step for better accuracy:
         this.timePerStep = 0.005f // seconds
 
-         return result
+        return result
     }
 
     /**

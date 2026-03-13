@@ -1,5 +1,5 @@
 """
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -50,7 +50,7 @@ class HelloKinematics(BasePhysicsApp, PhysicsTickListener):
         num_bp_layers = 1
         result = self.super__createSystem(max_bodies, num_bp_layers)
 
-        # To enable the callbacks, register this app as a tick listener:
+        # To enable the callbacks, register the application as a tick listener:
         self.addTickListener(self)
 
         return result
