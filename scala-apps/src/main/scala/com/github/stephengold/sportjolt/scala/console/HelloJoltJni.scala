@@ -115,7 +115,7 @@ object HelloJoltJni {
         try
             loader.loadLibrary(LoadingCriterion.CLEAN_EXTRACTION)
         catch {
-            case exception: Exception =>
+            case _: Exception =>
                 throw new IllegalStateException(
                     "Failed to load a Jolt-JNI native library!")
         }
@@ -139,7 +139,7 @@ object HelloJoltJni {
                 Jolt.cMaxPhysicsBarriers, numWorkerThreads)
 
         val timePerStep = 0.02f // in seconds
-        for (iteration <- 0 to 49) {
+        for (_ <- 0 to 49) {
             val collisionSteps = 1
             val errors = physicsSystem.update(
                     timePerStep, collisionSteps, tempAllocator, jobSystem)
