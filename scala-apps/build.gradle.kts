@@ -56,6 +56,10 @@ tasks.register<JavaExec>("HelloCloth") {
     description = "Runs the Scala port of the HelloCloth tutorial app."
     mainClass = "com.github.stephengold.sportjolt.scala.tutorial.HelloCloth"
 }
+tasks.register<JavaExec>("HelloConstraint") {
+    description = "Runs the Scala port of the HelloConstraint tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.scala.tutorial.HelloConstraint"
+}
 tasks.register<JavaExec>("HelloContactResponse") {
     description = "Runs the Scala port of the HelloContactResponse tutorial app."
     mainClass = "com.github.stephengold.sportjolt.scala.tutorial.HelloContactResponse"
