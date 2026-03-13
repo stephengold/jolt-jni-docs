@@ -121,7 +121,7 @@ class HelloContactResponse extends BasePhysicsApp {
         var ballRadius = 1f
         var ballShape = new SphereShape(ballRadius)
         var bcs2 = new BodyCreationSettings
-        bcs2.getMassPropertiesOverride().setMass(2f)
+        bcs2.getMassPropertiesOverride.setMass(2f)
         bcs2.setAllowSleeping(false); // Disable sleeping for clarity.
         bcs2.setOverrideMassProperties(
                 EOverrideMassProperties.CalculateInertia)
