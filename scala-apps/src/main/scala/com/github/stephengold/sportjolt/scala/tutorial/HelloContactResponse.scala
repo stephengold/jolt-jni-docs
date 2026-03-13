@@ -107,20 +107,20 @@ class HelloContactResponse extends BasePhysicsApp {
         val bi = physicsSystem.getBodyInterface
 
         // Add a static box to the system, to serve as a horizontal platform:
-        var boxHalfExtent = 3f
-        var boxShape = new BoxShape(boxHalfExtent)
-        var bcs1 = new BodyCreationSettings
+        val boxHalfExtent = 3f
+        val boxShape = new BoxShape(boxHalfExtent)
+        val bcs1 = new BodyCreationSettings
         bcs1.setMotionType(EMotionType.Static)
         bcs1.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
         bcs1.setPosition(0.0, -4.0, 0.0)
         bcs1.setShape(boxShape)
-        var box = bi.createBody(bcs1)
+        val box = bi.createBody(bcs1)
         bi.addBody(box, EActivation.DontActivate)
 
         // Add a dynamic ball to the system:
-        var ballRadius = 1f
-        var ballShape = new SphereShape(ballRadius)
-        var bcs2 = new BodyCreationSettings
+        val ballRadius = 1f
+        val ballShape = new SphereShape(ballRadius)
+        val bcs2 = new BodyCreationSettings
         bcs2.getMassPropertiesOverride.setMass(2f)
         bcs2.setAllowSleeping(false); // Disable sleeping for clarity.
         bcs2.setOverrideMassProperties(

@@ -164,12 +164,12 @@ class HelloBroadPhase extends BasePhysicsApp, PhysicsTickListener {
                 = new SpecifiedObjectLayerFilter(BasePhysicsApp.objLayerMoving)
 
         // Create a ghost box:
-        var center = new Vec3(15f, 0f, -13f)
-        var radius = 10f
+        val center = new Vec3(15f, 0f, -13f)
+        val radius = 10f
         HelloBroadPhase.ghost = new AaBox(center, radius)
 
         // Visualize the ghost box:
-        var boxMesh = BoxMesh.getMesh
+        val boxMesh = BoxMesh.getMesh
         HelloBroadPhase.ghostGeometry = new Geometry(boxMesh)
         HelloBroadPhase.ghostGeometry.setLocation(center)
         HelloBroadPhase.ghostGeometry.setScale(radius)
