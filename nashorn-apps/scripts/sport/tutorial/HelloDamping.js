@@ -109,6 +109,7 @@ var application = new HelloDamping() {
         bcs.setPosition(4., -2., 0.);
         cube[3] = bi.createBody(bcs);
         bi.addBody(cube[3], EActivation.Activate);
+
         //assert angDamping == 0. : "angDamping = " + angDamping;
         //assert linDamping == 0.9 : "linDamping = " + linDamping;
         /*

@@ -104,8 +104,7 @@ class HelloCharacter extends BasePhysicsApp, PhysicsTickListener {
     }
 
     /**
-     * Populate the PhysicsSystem with bodies. Invoked once during
-     * initialization.
+     * Populate the PhysicsSystem. Invoked once during initialization.
      */
     override def populateSystem: Unit = {
         // Create a character with a capsule shape and add it to the system:
