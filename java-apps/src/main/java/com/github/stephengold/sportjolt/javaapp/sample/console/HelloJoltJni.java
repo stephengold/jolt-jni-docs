@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -109,7 +109,7 @@ final public class HelloJoltJni {
     /**
      * Main entry point for the HelloJoltJni application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         LibraryInfo info
@@ -143,6 +143,8 @@ final public class HelloJoltJni {
         Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free
         Jolt.installDefaultAssertCallback();
         Jolt.installDefaultTraceCallback();
+
+        // Create and configure the factory:
         boolean success = Jolt.newFactory();
         assert success;
         Jolt.registerTypes();
