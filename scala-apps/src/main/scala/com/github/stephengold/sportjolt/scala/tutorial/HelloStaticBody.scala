@@ -28,7 +28,6 @@
  */
 package com.github.stephengold.sportjolt.scala.tutorial
 
-import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.SphereShape

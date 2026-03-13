@@ -28,7 +28,6 @@
  */
 package com.github.stephengold.sportjolt.scala.tutorial
 
-import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
 import com.github.stephengold.joltjni.BoxShape
 import com.github.stephengold.joltjni.Face
@@ -37,14 +36,12 @@ import com.github.stephengold.joltjni.Quat
 import com.github.stephengold.joltjni.RVec3
 import com.github.stephengold.joltjni.SoftBodyCreationSettings
 import com.github.stephengold.joltjni.SoftBodySharedSettings
-import com.github.stephengold.joltjni.SphereShape
 import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.Vertex
 import com.github.stephengold.joltjni.VertexAttributes
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EBendType
 import com.github.stephengold.joltjni.enumerate.EMotionType
-import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
 import com.github.stephengold.joltjni.readonly.ConstVertexAttributes
 import com.github.stephengold.sportjolt.BaseApplication
 import com.github.stephengold.sportjolt.Mesh

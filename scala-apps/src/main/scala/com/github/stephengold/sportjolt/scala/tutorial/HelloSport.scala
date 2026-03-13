@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -28,7 +28,6 @@
  */
 package com.github.stephengold.sportjolt.scala.tutorial
 
-import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
 import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable
 import com.github.stephengold.joltjni.ObjectLayerPairFilterTable
