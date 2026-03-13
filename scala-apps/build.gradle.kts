@@ -20,7 +20,7 @@ tasks.named<Jar>("jar") {
 }
 
 tasks.withType<ScalaCompile>().configureEach { // Scala compile-time options:
-    scalaCompileOptions.additionalParameters = listOf("-Xtarget:17")
+    scalaCompileOptions.additionalParameters = listOf("-Wunused:all", "-Xtarget:17")
 }
 
 application {
