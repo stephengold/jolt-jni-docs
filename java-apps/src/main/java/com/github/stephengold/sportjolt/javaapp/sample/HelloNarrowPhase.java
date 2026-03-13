@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -29,7 +29,6 @@
 package com.github.stephengold.sportjolt.javaapp.sample;
 
 import com.github.stephengold.joltjni.AllHitCollideShapeCollector;
-import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BroadPhaseLayerFilter;
@@ -49,6 +48,7 @@ import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.operator.Op;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstNarrowPhaseQuery;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
@@ -332,7 +332,7 @@ final public class HelloNarrowPhase
         bcs.setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-        Body body = bi.createBody(bcs);
+        ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
         // Visualize the body:
