@@ -65,11 +65,11 @@ object HelloWalk {
     /**
      * true when the space bar is pressed, otherwise false
      */
-    private var jumpRequested: Boolean = false
+    private var jumpRequested = false
     /**
      * true when the W key is pressed, otherwise false
      */
-    private var walkRequested: Boolean = false
+    private var walkRequested = false
     /**
      * character being tested
      */

@@ -77,23 +77,23 @@ object HelloBroadPhase {
     /**
      * true when the space bar is pressed, otherwise false
      */
-    @volatile private var jumpRequested: Boolean = false
+    @volatile private var jumpRequested = false
     /**
      * true when the DOWN key is pressed, otherwise false
      */
-    @volatile private var walkBackward: Boolean = false
+    @volatile private var walkBackward = false
     /**
      * true when the UP key is pressed, otherwise false
      */
-    @volatile private var walkForward: Boolean = false
+    @volatile private var walkForward = false
     /**
      * true when the LEFT key is pressed, otherwise false
      */
-    @volatile private var walkLeft: Boolean = false
+    @volatile private var walkLeft = false
     /**
      * true when the RIGHT key is pressed, otherwise false
      */
-    @volatile private var walkRight: Boolean = false
+    @volatile private var walkRight = false
     /**
      * broadphase-layer filter that has no effect
      */
