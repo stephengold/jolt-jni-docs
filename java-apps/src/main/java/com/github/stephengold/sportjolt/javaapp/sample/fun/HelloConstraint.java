@@ -178,7 +178,7 @@ final public class HelloConstraint {
     // private methods
 
     /**
-     * Create a dynamic rigid body with a box shape and add it to the  system.
+     * Create a dynamic rigid body with a box shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
      * @return the new body

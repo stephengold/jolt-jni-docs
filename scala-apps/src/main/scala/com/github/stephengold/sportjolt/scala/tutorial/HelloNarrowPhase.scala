@@ -315,8 +315,7 @@ class HelloNarrowPhase extends BasePhysicsApp, PhysicsTickListener {
         // Visualize the body:
         val resourceName = "/Textures/greenTile.png"
         val maxAniso = 16f
-        val textureKey
-                = new TextureKey("classpath://" + resourceName, maxAniso)
+        val textureKey = new TextureKey("classpath://" + resourceName, maxAniso)
         BasePhysicsApp.visualizeShape(body, 0.1f)
                 .setSpecularColor(Constants.DARK_GRAY)
                 .setTexture(textureKey)
@@ -326,7 +325,8 @@ class HelloNarrowPhase extends BasePhysicsApp, PhysicsTickListener {
      * Configure the camera, projection, and CIP during initialization.
      */
     private def configureCamera: Unit = {
-        BaseApplication.getCameraInputProcessor.setRotationMode(RotateMode.DragLMB)
+        BaseApplication.getCameraInputProcessor
+                .setRotationMode(RotateMode.DragLMB)
         BaseApplication.cam.setAzimuth(-1.9f)
                 .setLocation(35f, 35f, 60f)
                 .setUpAngle(-0.5f)

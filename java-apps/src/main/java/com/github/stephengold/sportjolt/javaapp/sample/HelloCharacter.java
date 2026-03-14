@@ -189,7 +189,7 @@ final public class HelloCharacter
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's upper top face (in system
      * coordinates)
-     * @return the new body (not null)
+     * @return the new body (not {@code null})
      */
     private ConstBody addSquare(float halfExtent, float y) {
         // Create a static rigid body with a square shape:

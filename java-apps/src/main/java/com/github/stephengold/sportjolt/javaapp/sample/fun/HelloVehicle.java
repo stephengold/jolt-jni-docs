@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -104,7 +104,8 @@ final public class HelloVehicle {
 
             BaseApplication.getCameraInputProcessor()
                     .setRotationMode(RotateMode.DragLMB);
-            BaseApplication.getCamera().setLocation(-4.2f, 6.8f, 36f)
+            BaseApplication.getCamera()
+                    .setLocation(-4.2f, 6.8f, 36f)
                     .setLookDirection(new Vector3f(0.49f, -0.36f, -0.8f));
 
             BaseApplication.setBackgroundColor(Constants.SKY_BLUE);
