@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -156,8 +156,8 @@ final public class HelloVehicle extends BasePhysicsApp {
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.getMassPropertiesOverride().setMass(200f);
-        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
-        bcs.setShape(wedgeShape);
+        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
+                .setShape(wedgeShape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body body = bi.createBody(bcs);

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2021-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2021-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -171,11 +171,11 @@ final public class HelloServo extends BasePhysicsApp {
     private Body addDoor() {
         BoxShape shape = new BoxShape(0.8f, 0.8f, 0.1f);
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setAllowSleeping(false); // Disable sleep (deactivation).
         bcs.getMassPropertiesOverride().setMass(0.2f);
-        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
-        bcs.setShape(shape);
+        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body result = bi.createBody(bcs);

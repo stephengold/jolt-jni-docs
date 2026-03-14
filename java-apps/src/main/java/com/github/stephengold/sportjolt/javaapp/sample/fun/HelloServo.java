@@ -52,7 +52,6 @@ import com.github.stephengold.joltjni.readonly.QuatArg;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.BaseApplication;
 import com.github.stephengold.sportjolt.Constants;
-import com.github.stephengold.sportjolt.input.CameraInputProcessor;
 import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -194,11 +193,11 @@ final public class HelloServo {
         frameSettings.addShape(-1f, 0f, 0f, yShape);
         ShapeRefC frameShape = frameSettings.create().get();
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setAllowSleeping(false); // Disable sleep (deactivation).
         bcs.getMassPropertiesOverride().setMass(1f);
-        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
-        bcs.setShape(frameShape);
+        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
+                .setShape(frameShape);
 
         Body result = bi.createBody(bcs);
         bi.addBody(result, EActivation.Activate);
@@ -212,9 +211,9 @@ final public class HelloServo {
      * Configure the Camera and CIP during initialization.
      */
     private static void configureCamera() {
-        CameraInputProcessor cip = BasePhysicsApp.getCameraInputProcessor();
-        cip.setRotationMode(RotateMode.DragLMB);
-        cip.setMoveSpeed(5f);
+        BasePhysicsApp.getCameraInputProcessor()
+                .setMoveSpeed(5f)
+                .setRotationMode(RotateMode.DragLMB);
 
         BasePhysicsApp.getCamera()
                 .setAzimuth(-1.56f)
