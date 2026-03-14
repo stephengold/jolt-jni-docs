@@ -145,7 +145,7 @@ class HelloPivot extends BasePhysicsApp with PhysicsTickListener {
         physicsSystem.addConstraint(constraint)
 
         // Visualize the constraint:
-        new ConstraintGeometry(constraint, 2); // ballBody is its 2nd end
+        new ConstraintGeometry(constraint, 2) // ballBody is its 2nd end
     }
 
     /**
