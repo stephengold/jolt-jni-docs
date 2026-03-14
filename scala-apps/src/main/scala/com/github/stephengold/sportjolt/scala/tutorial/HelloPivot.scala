@@ -46,7 +46,6 @@ import com.github.stephengold.sportjolt.Utils
 import com.github.stephengold.sportjolt.input.RotateMode
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 import com.github.stephengold.sportjolt.physics.ConstraintGeometry
-import com.github.stephengold.sportjolt.physics.LocalAxisGeometry
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener
 import org.joml.Vector3f
 
