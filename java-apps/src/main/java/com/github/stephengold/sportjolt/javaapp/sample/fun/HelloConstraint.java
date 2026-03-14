@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -230,9 +230,9 @@ final public class HelloConstraint {
         BasePhysicsApp.getCameraInputProcessor()
                 .setRotationMode(RotateMode.None);
 
-        Camera cam = BasePhysicsApp.getCamera();
-        cam.setLocation(0f, 5f, 10f);
-        cam.setUpAngle(-0.6f);
-        cam.setAzimuth(-1.6f);
+        BaseApplication.getCamera()
+                .setAzimuth(-1.6f)
+                .setLocation(0f, 5f, 10f)
+                .setUpAngle(-0.6f);
     }
 }

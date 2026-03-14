@@ -49,7 +49,6 @@ import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.QuatArg;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Constants;
-import com.github.stephengold.sportjolt.input.CameraInputProcessor;
 import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -226,13 +225,13 @@ final public class HelloServo extends BasePhysicsApp {
      * Configure the Camera and CIP during initialization.
      */
     private static void configureCamera() {
-        CameraInputProcessor cip = getCameraInputProcessor();
-        cip.setRotationMode(RotateMode.DragLMB);
-        cip.setMoveSpeed(5f);
+        getCameraInputProcessor()
+                .setMoveSpeed(5f)
+                .setRotationMode(RotateMode.DragLMB);
 
-        cam.setLocation(0f, 1.5f, 4f);
-        cam.setAzimuth(-1.56f);
-        cam.setUpAngle(-0.45f);
+        cam.setAzimuth(-1.56f)
+                .setLocation(0f, 1.5f, 4f)
+                .setUpAngle(-0.45f);
     }
 
     /**

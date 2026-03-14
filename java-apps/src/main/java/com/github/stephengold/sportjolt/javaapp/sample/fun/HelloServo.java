@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2021-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2021-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -51,7 +51,6 @@ import com.github.stephengold.joltjni.readonly.ConstShapeSettings;
 import com.github.stephengold.joltjni.readonly.QuatArg;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.BaseApplication;
-import com.github.stephengold.sportjolt.Camera;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.input.CameraInputProcessor;
 import com.github.stephengold.sportjolt.input.InputProcessor;
@@ -217,10 +216,10 @@ final public class HelloServo {
         cip.setRotationMode(RotateMode.DragLMB);
         cip.setMoveSpeed(5f);
 
-        Camera cam = BasePhysicsApp.getCamera();
-        cam.setLocation(0f, 1.5f, 4f);
-        cam.setAzimuth(-1.56f);
-        cam.setUpAngle(-0.45f);
+        BasePhysicsApp.getCamera()
+                .setAzimuth(-1.56f)
+                .setLocation(0f, 1.5f, 4f)
+                .setUpAngle(-0.45f);
     }
 
     /**
