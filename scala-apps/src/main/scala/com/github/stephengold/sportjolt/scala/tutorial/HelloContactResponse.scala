@@ -122,7 +122,7 @@ class HelloContactResponse extends BasePhysicsApp {
         val ballShape = new SphereShape(ballRadius)
         val bcs2 = new BodyCreationSettings
         bcs2.getMassPropertiesOverride.setMass(2f)
-        bcs2.setAllowSleeping(false); // Disable sleeping for clarity.
+        bcs2.setAllowSleeping(false) // Disable sleeping for clarity.
         bcs2.setOverrideMassProperties(
                 EOverrideMassProperties.CalculateInertia)
         bcs2.setPosition(0.0, 4.0, 0.0)

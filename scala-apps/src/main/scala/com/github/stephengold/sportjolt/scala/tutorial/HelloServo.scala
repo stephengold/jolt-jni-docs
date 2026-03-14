@@ -239,7 +239,7 @@ class HelloServo extends BasePhysicsApp {
                             val target = Quat.sEulerAngles(0f, 0.8f, 0f)
                             HelloServo.constraint.setTargetOrientationCs(target)
                         }
-                        return;
+                        return
 
                     case GLFW.GLFW_KEY_3 =>
                     case GLFW.GLFW_KEY_F3 =>
@@ -248,7 +248,7 @@ class HelloServo extends BasePhysicsApp {
                             val target = Quat.sEulerAngles(0f, 0.4f, 0f)
                             HelloServo.constraint.setTargetOrientationCs(target)
                         }
-                        return;
+                        return
 
                     case GLFW.GLFW_KEY_4 =>
                     case GLFW.GLFW_KEY_F4 =>
@@ -257,7 +257,7 @@ class HelloServo extends BasePhysicsApp {
                             val target = new Quat
                             HelloServo.constraint.setTargetOrientationCs(target)
                         }
-                        return;
+                        return
 
                     case _ =>
                 }
