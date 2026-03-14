@@ -138,11 +138,13 @@ class HelloMotor extends BasePhysicsApp {
         settings.setPosition2(pivotLocation)
         settings.setSwingType(ESwingType.Pyramid) // default=Cone
         // ESwingType.Cone would result in symmetrical rotation limits!
-        HelloMotor.constraint = settings.create(doorBody, frameBody).asInstanceOf[SixDofConstraint]
+        HelloMotor.constraint = settings.create(doorBody, frameBody)
+                .asInstanceOf[SixDofConstraint]
         physicsSystem.addConstraint(HelloMotor.constraint)
 
         // Enable the motor for Y rotation and drive it to a target velocity:
-        HelloMotor.constraint.setMotorState(EAxis.RotationY, EMotorState.Velocity)
+        HelloMotor.constraint
+                .setMotorState(EAxis.RotationY, EMotorState.Velocity)
 
         new ConstraintGeometry(HelloMotor.constraint, 1).setDepthTest(false)
         new ConstraintGeometry(HelloMotor.constraint, 2).setDepthTest(false)
@@ -227,14 +229,15 @@ class HelloMotor extends BasePhysicsApp {
             override def onKeyboard(glfwKeyId: Int, isPressed: Boolean): Unit = {
                 if (glfwKeyId == GLFW.GLFW_KEY_SPACE) {
                     if (isPressed) { // Reverse the motor's direction:
-                        var targetVelocity
-                                = HelloMotor.constraint.getTargetAngularVelocityCs
+                        var targetVelocity = HelloMotor.constraint
+                                .getTargetAngularVelocityCs
                         if (targetVelocity.length < 0.1f) { // not moving
                             targetVelocity = new Vec3(0f, 1f, 0f)
                         } else {
                             targetVelocity = Op.minus(targetVelocity)
                         }
-                        HelloMotor.constraint.setTargetAngularVelocityCs(targetVelocity)
+                        HelloMotor.constraint
+                                .setTargetAngularVelocityCs(targetVelocity)
                     }
                     return
                 }
