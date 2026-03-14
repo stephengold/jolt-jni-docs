@@ -212,13 +212,13 @@ class HelloMotor extends BasePhysicsApp {
      * Configure the Camera and CIP during initialization.
      */
     private def configureCamera: Unit = {
-        val cip = BaseApplication.getCameraInputProcessor
-        cip.setRotationMode(RotateMode.DragLMB)
-        cip.setMoveSpeed(5f)
+        BaseApplication.getCameraInputProcessor
+                .setMoveSpeed(5f)
+                .setRotationMode(RotateMode.DragLMB)
 
-        BaseApplication.cam.setLocation(0f, 1.5f, 4f)
         BaseApplication.cam.setAzimuth(-1.56f)
-        BaseApplication.cam.setUpAngle(-0.45f)
+                .setLocation(0f, 1.5f, 4f)
+                .setUpAngle(-0.45f)
     }
 
     /**

@@ -253,8 +253,8 @@ class HelloConstraint extends BasePhysicsApp with PhysicsTickListener {
     private def configureCamera: Unit = {
         BaseApplication.getCameraInputProcessor.setRotationMode(RotateMode.None)
 
-        BaseApplication.cam.setLocation(0f, 5f, 10f)
-        BaseApplication.cam.setUpAngle(-0.6f)
         BaseApplication.cam.setAzimuth(-1.6f)
+                .setLocation(0f, 5f, 10f)
+                .setUpAngle(-0.6f)
     }
 }

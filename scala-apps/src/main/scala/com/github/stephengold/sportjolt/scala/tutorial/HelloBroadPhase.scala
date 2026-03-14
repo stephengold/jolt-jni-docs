@@ -171,8 +171,8 @@ class HelloBroadPhase extends BasePhysicsApp, PhysicsTickListener {
         // Visualize the ghost box:
         val boxMesh = BoxMesh.getMesh
         HelloBroadPhase.ghostGeometry = new Geometry(boxMesh)
-        HelloBroadPhase.ghostGeometry.setLocation(center)
-        HelloBroadPhase.ghostGeometry.setScale(radius)
+                .setLocation(center)
+                .setScale(radius)
     }
 
     /**
