@@ -218,8 +218,8 @@ final public class HelloMotor {
      */
     private static void configureCamera() {
         BasePhysicsApp.getCameraInputProcessor()
-                .setRotationMode(RotateMode.DragLMB)
-                .setMoveSpeed(5f);
+                .setMoveSpeed(5f)
+                .setRotationMode(RotateMode.DragLMB);
 
         BasePhysicsApp.getCamera()
                 .setAzimuth(-1.56f)
