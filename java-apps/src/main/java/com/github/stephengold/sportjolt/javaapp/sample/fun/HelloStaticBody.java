@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -100,9 +100,9 @@ final public class HelloStaticBody {
             bi.addBody(dynaBall, EActivation.Activate);
 
             // Create a static body and add it to the system:
-            bcs.setMotionType(EMotionType.Static); // default=Dynamic
-            bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving); // default=0
-            bcs.setPosition(0.1, 0., 0.);
+            bcs.setMotionType(EMotionType.Static) // default=Dynamic
+                    .setObjectLayer(BasePhysicsApp.objLayerNonMoving) // deflt=0
+                    .setPosition(0.1, 0., 0.);
             Body statBall = bi.createBody(bcs);
             bi.addBody(statBall, EActivation.DontActivate);
             assert statBall.isStatic();

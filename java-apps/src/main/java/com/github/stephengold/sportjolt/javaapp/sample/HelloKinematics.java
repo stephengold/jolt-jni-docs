@@ -137,8 +137,8 @@ final public class HelloKinematics
         bi.addBody(dynaBall, EActivation.Activate);
 
         // Create a kinematic body and add it to the system:
-        bcs.setMotionType(EMotionType.Kinematic);
-        bcs.setPosition(0., 0., 0.);
+        bcs.setMotionType(EMotionType.Kinematic)
+                .setPosition(0., 0., 0.);
         kineBall = bi.createBody(bcs);
         bi.addBody(kineBall, EActivation.Activate);
         assert kineBall.isKinematic();

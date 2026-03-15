@@ -178,10 +178,10 @@ final public class HelloCcd extends BasePhysicsApp {
         ConstShape discShape = new CylinderShape(
                 discThickness / 2f, discRadius, discConvexRadius);
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setShape(discShape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setShape(discShape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         ConstBody result = bi.createBody(bcs);

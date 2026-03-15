@@ -281,10 +281,10 @@ final public class HelloDoubleEnded
     private Body addBox() {
         ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
-        bcs.setMotionType(EMotionType.Kinematic); // default=Dynamic
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setAllowSleeping(false) // Disable sleep (deactivation).
+                .setMotionType(EMotionType.Kinematic) // default=Dynamic
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body result = bi.createBody(bcs);
@@ -303,10 +303,10 @@ final public class HelloDoubleEnded
     private void addPlane(float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
         ConstShape shape = new PlaneShape(plane);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body body = bi.createBody(bcs);

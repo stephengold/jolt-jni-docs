@@ -144,10 +144,10 @@ final public class HelloDeactivation
          */
         float cubeHalfExtent = 1f;
         ConstShape largeCubeShape = new BoxShape(cubeHalfExtent);
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setPosition(0., 0., 0.);
-        bcs.setShape(largeCubeShape);
+        bcs.setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setPosition(0., 0., 0.)
+                .setShape(largeCubeShape);
         supportCube = bi.createBody(bcs);
         bi.addBody(supportCube, EActivation.DontActivate);
 

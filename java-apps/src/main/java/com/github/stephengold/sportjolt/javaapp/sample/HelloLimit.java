@@ -273,10 +273,10 @@ final public class HelloLimit
     private Body addBox() {
         ConstShape shape = new BoxShape(0.2f, paddleHalfHeight, 0.2f);
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
-        bcs.setMotionType(EMotionType.Kinematic); // default=Dynamic
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setAllowSleeping(false) // Disable sleep (deactivation).
+                .setMotionType(EMotionType.Kinematic) // default=Dynamic
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body result = bi.createBody(bcs);
@@ -298,11 +298,11 @@ final public class HelloLimit
     private Body addSquare(float halfExtent, float y) {
         float halfThickness = 0.1f;
         ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setPosition(0., y - halfThickness, 0.);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setPosition(0., y - halfThickness, 0.)
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body result = bi.createBody(bcs);

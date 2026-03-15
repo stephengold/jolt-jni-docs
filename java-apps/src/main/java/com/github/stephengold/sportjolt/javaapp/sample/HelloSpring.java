@@ -37,7 +37,6 @@ import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
 import com.github.stephengold.joltjni.SixDofConstraintSettings;
 import com.github.stephengold.joltjni.SphereShape;
-import com.github.stephengold.joltjni.SpringSettings;
 import com.github.stephengold.joltjni.TwoBodyConstraint;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
@@ -171,14 +170,12 @@ final public class HelloSpring
         settings.makeFixedAxis(EAxis.TranslationY);
         settings.makeFixedAxis(EAxis.TranslationZ);
         // Configure 2 springs to soften the horizontal limits:
-        SpringSettings xSpring
-                = settings.getLimitsSpringSettings(EAxis.TranslationX);
-        xSpring.setDamping(0.2f);
-        xSpring.setFrequency(2f); // in Hertz
-        SpringSettings zSpring
-                = settings.getLimitsSpringSettings(EAxis.TranslationZ);
-        zSpring.setDamping(0.2f);
-        zSpring.setFrequency(2f); // in Hertz
+        settings.getLimitsSpringSettings(EAxis.TranslationX)
+                .setDamping(0.2f)
+                .setFrequency(2f); // in Hertz
+        settings.getLimitsSpringSettings(EAxis.TranslationZ)
+                .setDamping(0.2f)
+                .setFrequency(2f); // in Hertz
         Body fixedToWorld = Body.sFixedToWorld();
         TwoBodyConstraint constraint = settings.create(fixedToWorld, ballBody);
         physicsSystem.addConstraint(constraint);
@@ -285,8 +282,8 @@ final public class HelloSpring
 
         BodyCreationSettings bcs = new BodyCreationSettings();
         bcs.setAllowSleeping(false); // Disable sleep (deactivation).
-        bcs.setMotionType(EMotionType.Kinematic); // default=Dynamic
-        bcs.setShape(shape);
+        bcs.setMotionType(EMotionType.Kinematic) // default=Dynamic
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body result = bi.createBody(bcs);

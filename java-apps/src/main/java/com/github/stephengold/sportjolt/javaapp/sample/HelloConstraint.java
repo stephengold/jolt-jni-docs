@@ -257,10 +257,10 @@ final public class HelloConstraint
         float ballRadius = 1f;
         ConstShape shape = new SphereShape(ballRadius);
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
-        bcs.setMotionType(EMotionType.Kinematic); // default=Dynamic
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setAllowSleeping(false) // Disable sleep (deactivation).
+                .setMotionType(EMotionType.Kinematic) // default=Dynamic
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body result = bi.createBody(bcs);

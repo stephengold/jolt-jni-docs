@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -126,11 +126,11 @@ final public class HelloContactResponse extends BasePhysicsApp {
         // Add a static box to the system, to serve as a horizontal platform:
         float boxHalfExtent = 3f;
         ConstShape boxShape = new BoxShape(boxHalfExtent);
-        BodyCreationSettings bcs1 = new BodyCreationSettings();
-        bcs1.setMotionType(EMotionType.Static);
-        bcs1.setObjectLayer(objLayerNonMoving);
-        bcs1.setPosition(0., -4., 0.);
-        bcs1.setShape(boxShape);
+        BodyCreationSettings bcs1 = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setPosition(0., -4., 0.)
+                .setShape(boxShape);
         ConstBody box = bi.createBody(bcs1);
         bi.addBody(box, EActivation.DontActivate);
 

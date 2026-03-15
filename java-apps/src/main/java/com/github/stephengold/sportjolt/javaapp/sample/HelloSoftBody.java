@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -184,11 +184,11 @@ final public class HelloSoftBody extends BasePhysicsApp {
     private void addBox() {
         float halfExtent = 3f;
         ConstShape shape = new BoxShape(halfExtent);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setPosition(0., -halfExtent, 0.);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setPosition(0., -halfExtent, 0.)
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         ConstBody body = bi.createBody(bcs);

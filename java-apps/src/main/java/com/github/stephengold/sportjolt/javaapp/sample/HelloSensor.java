@@ -325,10 +325,10 @@ final public class HelloSensor
     private void addPlane(float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
         ConstShape shape = new PlaneShape(plane);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         Body body = bi.createBody(bcs);

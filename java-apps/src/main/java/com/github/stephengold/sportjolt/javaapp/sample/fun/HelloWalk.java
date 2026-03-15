@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -215,10 +215,10 @@ final public class HelloWalk {
                 heightBuffer, offset, scale, sampleCount);
 
         ShapeRefC shapeRef = ss.create().get();
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving);
-        bcs.setShape(shapeRef);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+                .setShape(shapeRef);
 
         ConstBody result = bi.createBody(bcs);
         bi.addBody(result, EActivation.DontActivate);

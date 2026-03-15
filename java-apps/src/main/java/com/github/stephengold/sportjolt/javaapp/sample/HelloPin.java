@@ -171,10 +171,10 @@ final public class HelloPin extends BasePhysicsApp {
     private void addBall() {
         float radius = 1f;
         SphereShape shape = new SphereShape(radius);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         ConstBody body = bi.createBody(bcs);

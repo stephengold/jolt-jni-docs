@@ -164,10 +164,10 @@ final public class HelloCloth extends BasePhysicsApp {
     private void addBall() {
         float radius = 1f;
         ConstShape shape = new SphereShape(radius);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         ConstBody body = bi.createBody(bcs);
