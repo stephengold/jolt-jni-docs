@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2019-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2019-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -118,8 +118,8 @@ final public class HelloSoftRope {
             RVec3Arg startLocation = new RVec3(0., 0., 0.);
             SoftBodyCreationSettings sbcs = new SoftBodyCreationSettings(sbss,
                     startLocation, new Quat(), BasePhysicsApp.objLayerMoving);
-            BodyInterface bi = app.getPhysicsSystem().getBodyInterface();
 
+            BodyInterface bi = app.getPhysicsSystem().getBodyInterface();
             ConstBody rope = bi.createSoftBody(sbcs);
             bi.addBody(rope, EActivation.Activate);
 
