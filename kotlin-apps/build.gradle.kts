@@ -29,6 +29,10 @@ tasks.register<JavaExec>("HelloJoltJni") {
 }
 
 // physics tutorial apps (very simple)
+tasks.register<JavaExec>("HelloCcd") {
+    description = "Runs the Kotlin port of the HelloCcd tutorial app."
+    mainClass = "com.github.stephengold.sportjolt.ktapps.tutorial.HelloCcdKt"
+}
 tasks.register<JavaExec>("HelloCharacter") {
     description = "Runs the Kotlin port of the HelloCharacter tutorial app."
     mainClass = "com.github.stephengold.sportjolt.ktapps.tutorial.HelloCharacterKt"
