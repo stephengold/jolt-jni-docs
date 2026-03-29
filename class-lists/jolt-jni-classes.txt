@@ -124,6 +124,7 @@ com.github.stephengold.joltjni.CustomLoader
 com.github.stephengold.joltjni.CustomPhysicsStepListener
 com.github.stephengold.joltjni.CustomRayCastBodyCollector
 com.github.stephengold.joltjni.CustomSoftBodyContactListener
+com.github.stephengold.joltjni.CustomTireMaxImpulseCallback
 com.github.stephengold.joltjni.CylinderShape
 com.github.stephengold.joltjni.CylinderShapeSettings
 com.github.stephengold.joltjni.DebugRenderer
@@ -347,6 +348,7 @@ com.github.stephengold.joltjni.TempAllocator
 com.github.stephengold.joltjni.TempAllocatorImpl
 com.github.stephengold.joltjni.TempAllocatorImplWithMallocFallback
 com.github.stephengold.joltjni.TempAllocatorMalloc
+com.github.stephengold.joltjni.TireMaxImpulseCallback
 com.github.stephengold.joltjni.TrackedVehicleController
 com.github.stephengold.joltjni.TrackedVehicleControllerSettings
 com.github.stephengold.joltjni.TransformedAaBox
