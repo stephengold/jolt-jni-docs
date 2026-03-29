@@ -361,7 +361,7 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <div class="block">Override the vehicle's gravity vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>acceleration</code> - the desired acceleration vector (not null,
+<dd><code>acceleration</code> - the desired acceleration vector (not <code>null</code>,
  unaffected)</dd>
 </dl>
 </section>
@@ -576,7 +576,7 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstConstraint.html#getSubType()">getSubType</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a></code></dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -589,7 +589,7 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstConstraint.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a></code></dd>
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -620,10 +620,12 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstVehicleConstraint.html#getWheelLocalBasis(com.github.stephengold.joltjni.Wheel,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.Vec3)">getWheelLocalBasis</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleConstraint</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>wheel</code> - which wheel to query (not null)</dd>
-<dd><code>storeForward</code> - storage for the forward vector (not null, modified)</dd>
-<dd><code>storeUp</code> - storage for the up vector (not null, modified)</dd>
-<dd><code>storeRight</code> - storage for the right vector (not null, modified)</dd>
+<dd><code>wheel</code> - which wheel to query (not <code>null</code>)</dd>
+<dd><code>storeForward</code> - storage for the forward vector (not <code>null</code>,
+ modified)</dd>
+<dd><code>storeUp</code> - storage for the up vector (not <code>null</code>, modified)</dd>
+<dd><code>storeRight</code> - storage for the right vector (not <code>null</code>,
+ modified)</dd>
 </dl>
 </section>
 </li>
@@ -645,10 +647,10 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dd><code>right</code> - the wheel's axis of rotation (a unit vector in the wheel's
  model space)</dd>
 <dd><code>up</code> - the "up" direction (a unit vector in the wheel's model space)</dd>
-<dd><code>storePosition</code> - storage for the translation component (not null,
- modified)</dd>
-<dd><code>storeRotation</code> - storage for the rotation component (not null,
- modified)</dd>
+<dd><code>storePosition</code> - storage for the translation component (not
+ <code>null</code>, modified)</dd>
+<dd><code>storeRotation</code> - storage for the rotation component (not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -722,7 +724,7 @@ implements <a href="readonly/ConstVehicleConstraint.html" title="interface in co
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstConstraint.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConstraint.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConstraint</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>recorder</code> - the recorder to write to (not null)</dd>
+<dd><code>recorder</code> - the recorder to write to (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>

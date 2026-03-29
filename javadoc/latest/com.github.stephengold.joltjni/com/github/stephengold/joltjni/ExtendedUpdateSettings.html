@@ -94,11 +94,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ExtendedUpdateSettings</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a></span></div>
 <div class="block">Settings for extended update of a virtual character. (native type:
  <code>CharacterVirtual::ExtendedUpdateSettings</code>)</div>
 </section>
@@ -116,7 +117,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.ExtendedUpdateSettings)" class="member-name-link">ExtendedUpdateSettings</a><wbr>(<a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstExtendedUpdateSettings)" class="member-name-link">ExtendedUpdateSettings</a><wbr>(<a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -160,28 +161,28 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the StickToFloor inStepUp parameter.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStickToFloorStepDown(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setStickToFloorStepDown</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the StickToFloor inStepDown parameter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWalkStairsCosAngleForwardContact(float)" class="member-name-link">setWalkStairsCosAngleForwardContact</a><wbr>(float&nbsp;cosine)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the cosine of the maximum angle between the ground normal and the
  horizontal for adjusting the step-forward test.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWalkStairsMinStepForward(float)" class="member-name-link">setWalkStairsMinStepForward</a><wbr>(float&nbsp;distance)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the StickToFloor inStepForward parameter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWalkStairsStepForwardTest(float)" class="member-name-link">setWalkStairsStepForwardTest</a><wbr>(float&nbsp;distance)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the StickToFloor inStepForwardTest parameter.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWalkStairsStepUp(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setWalkStairsStepUp</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the StickToFloor inStepUp parameter.</div>
@@ -195,6 +196,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -214,9 +221,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.ExtendedUpdateSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstExtendedUpdateSettings)">
 <h3>ExtendedUpdateSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ExtendedUpdateSettings</span><wbr><span class="parameters">(<a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ExtendedUpdateSettings</span><wbr><span class="parameters">(<a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -233,12 +240,87 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="setStickToFloorStepDown(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setStickToFloorStepDown</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></span>&nbsp;<span class="element-name">setStickToFloorStepDown</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</span></div>
+<div class="block">Alter the StickToFloor inStepDown parameter. (native attribute:
+ mStickToFloorStepDown)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>offset</code> - the desired offset (not <code>null</code>, unaffected, zero=off,
+ default=(0, -0.5, 0))</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWalkStairsCosAngleForwardContact(float)">
+<h3>setWalkStairsCosAngleForwardContact</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></span>&nbsp;<span class="element-name">setWalkStairsCosAngleForwardContact</span><wbr><span class="parameters">(float&nbsp;cosine)</span></div>
+<div class="block">Alter the cosine of the maximum angle between the ground normal and the
+ horizontal for adjusting the step-forward test. (native attribute:
+ mWalkStairsCosAngleForwardContact)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cosine</code> - the cosine of the maximum angle (default=cos(75 degrees))</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWalkStairsMinStepForward(float)">
+<h3>setWalkStairsMinStepForward</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></span>&nbsp;<span class="element-name">setWalkStairsMinStepForward</span><wbr><span class="parameters">(float&nbsp;distance)</span></div>
+<div class="block">Alter the StickToFloor inStepForward parameter. (native attribute:
+ mWalkStairsMinStepForward)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>distance</code> - the desired distance (default=0.02f)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWalkStairsStepForwardTest(float)">
+<h3>setWalkStairsStepForwardTest</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></span>&nbsp;<span class="element-name">setWalkStairsStepForwardTest</span><wbr><span class="parameters">(float&nbsp;distance)</span></div>
+<div class="block">Alter the StickToFloor inStepForwardTest parameter. (native attribute:
+ mWalkStairsStepForwardTest)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>distance</code> - the desired distance (default=0.15f)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWalkStairsStepUp(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setWalkStairsStepUp</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></span>&nbsp;<span class="element-name">setWalkStairsStepUp</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</span></div>
+<div class="block">Alter the StickToFloor inStepUp parameter. (native attribute:
+ mWalkStairsStepUp)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>offset</code> - the desired offset (not <code>null</code>, unaffected, zero=off,
+ default=(0, 0.4, 0))</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getStickToFloorStepDown()">
 <h3>getStickToFloorStepDown</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getStickToFloorStepDown</span>()</div>
 <div class="block">Copy the StickToFloor inStepDown parameter. The settings are unaffected.
  (native attribute: mStickToFloorStepDown)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstExtendedUpdateSettings.html#getStickToFloorStepDown()">getStickToFloorStepDown</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new offset vector</dd>
 </dl>
@@ -252,6 +334,8 @@ loadScripts(document, 'script');</script>
  horizontal for adjusting the step-forward test. The settings are
  unaffected. (native attribute: mWalkStairsCosAngleForwardContact)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstExtendedUpdateSettings.html#getWalkStairsCosAngleForwardContact()">getWalkStairsCosAngleForwardContact</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>the cosine of the maximum angle</dd>
 </dl>
@@ -264,6 +348,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the StickToFloor inStepForward parameter. The settings are
  unaffected. (native attribute: mWalkStairsMinStepForward)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstExtendedUpdateSettings.html#getWalkStairsMinStepForward()">getWalkStairsMinStepForward</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>the distance</dd>
 </dl>
@@ -276,6 +362,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the StickToFloor inStepForwardTest parameter. The settings are
  unaffected. (native attribute: mWalkStairsStepForwardTest)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstExtendedUpdateSettings.html#getWalkStairsStepForwardTest()">getWalkStairsStepForwardTest</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>the distance</dd>
 </dl>
@@ -288,71 +376,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the StickToFloor inStepUp parameter. The settings are unaffected.
  (native attribute: mWalkStairsStepUp)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstExtendedUpdateSettings.html#getWalkStairsStepUp()">getWalkStairsStepUp</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new offset vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setStickToFloorStepDown(com.github.stephengold.joltjni.readonly.Vec3Arg)">
-<h3>setStickToFloorStepDown</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setStickToFloorStepDown</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</span></div>
-<div class="block">Alter the StickToFloor inStepDown parameter. (native attribute:
- mStickToFloorStepDown)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>offset</code> - the desired offset (not null, unaffected, zero=off,
- default=(0, -0.5, 0))</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setWalkStairsCosAngleForwardContact(float)">
-<h3>setWalkStairsCosAngleForwardContact</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setWalkStairsCosAngleForwardContact</span><wbr><span class="parameters">(float&nbsp;cosine)</span></div>
-<div class="block">Alter the cosine of the maximum angle between the ground normal and the
- horizontal for adjusting the step-forward test. (native attribute:
- mWalkStairsCosAngleForwardContact)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>cosine</code> - the cosine of the maximum angle (default=cos(75 degrees))</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setWalkStairsMinStepForward(float)">
-<h3>setWalkStairsMinStepForward</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setWalkStairsMinStepForward</span><wbr><span class="parameters">(float&nbsp;distance)</span></div>
-<div class="block">Alter the StickToFloor inStepForward parameter. (native attribute:
- mWalkStairsMinStepForward)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>distance</code> - the desired distance (default=0.02f)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setWalkStairsStepForwardTest(float)">
-<h3>setWalkStairsStepForwardTest</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setWalkStairsStepForwardTest</span><wbr><span class="parameters">(float&nbsp;distance)</span></div>
-<div class="block">Alter the StickToFloor inStepForwardTest parameter. (native attribute:
- mWalkStairsStepForwardTest)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>distance</code> - the desired distance (default=0.15f)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setWalkStairsStepUp(com.github.stephengold.joltjni.readonly.Vec3Arg)">
-<h3>setWalkStairsStepUp</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setWalkStairsStepUp</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</span></div>
-<div class="block">Alter the StickToFloor inStepUp parameter. (native attribute:
- mWalkStairsStepUp)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>offset</code> - the desired offset (not null, unaffected, zero=off,
- default=(0, 0.4, 0))</dd>
 </dl>
 </section>
 </li>

@@ -154,9 +154,9 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <div class="block">Test whether the character has moved onto a steep slope.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extendedUpdate(float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.ExtendedUpdateSettings,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter,com.github.stephengold.joltjni.BodyFilter,com.github.stephengold.joltjni.ShapeFilter,com.github.stephengold.joltjni.TempAllocator)" class="member-name-link">extendedUpdate</a><wbr>(float&nbsp;deltaTime,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extendedUpdate(float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstExtendedUpdateSettings,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter,com.github.stephengold.joltjni.BodyFilter,com.github.stephengold.joltjni.ShapeFilter,com.github.stephengold.joltjni.TempAllocator)" class="member-name-link">extendedUpdate</a><wbr>(float&nbsp;deltaTime,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;gravity,
- <a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a>&nbsp;settings,
+ <a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a>&nbsp;settings,
  <a href="BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bpFilter,
  <a href="ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter,
  <a href="BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a>&nbsp;bodyFilter,
@@ -481,11 +481,11 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="extendedUpdate(float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.ExtendedUpdateSettings,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter,com.github.stephengold.joltjni.BodyFilter,com.github.stephengold.joltjni.ShapeFilter,com.github.stephengold.joltjni.TempAllocator)">
+<section class="detail" id="extendedUpdate(float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstExtendedUpdateSettings,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter,com.github.stephengold.joltjni.BodyFilter,com.github.stephengold.joltjni.ShapeFilter,com.github.stephengold.joltjni.TempAllocator)">
 <h3>extendedUpdate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">extendedUpdate</span><wbr><span class="parameters">(float&nbsp;deltaTime,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;gravity,
- <a href="ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a>&nbsp;settings,
+ <a href="readonly/ConstExtendedUpdateSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstExtendedUpdateSettings</a>&nbsp;settings,
  <a href="BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bpFilter,
  <a href="ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter,
  <a href="BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a>&nbsp;bodyFilter,
@@ -503,7 +503,7 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dd><code>olFilter</code> - to test whether the character collides with an object
  layer (not <code>null</code>, unaffected)</dd>
 <dd><code>bodyFilter</code> - to test whether the character collides with a body (not
- null, unaffected)</dd>
+ <code>null</code>, unaffected)</dd>
 <dd><code>shapeFilter</code> - to test whether the character collides with a shape
  (not <code>null</code>, unaffected)</dd>
 <dd><code>allocator</code> - for temporary allocations (not <code>null</code>)</dd>
@@ -702,17 +702,18 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <div class="block">Alter the character's shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the desired shape (not null)</dd>
+<dd><code>shape</code> - the desired shape (not <code>null</code>)</dd>
 <dd><code>maxPenetrationDepth</code> - the maximum acceptable penetration after the
  alteration, or <code>Float.MAX_VALUE</code> to skip the check</dd>
 <dd><code>broadPhaseLayerFilter</code> - the broadphase filter used to test for
- collisions (not null)</dd>
+ collisions (not <code>null</code>)</dd>
 <dd><code>objectLayerFilter</code> - the object-layer filter used to test for
- collisions (not null)</dd>
-<dd><code>bodyFilter</code> - the body filter used to test for collisions (not null)</dd>
+ collisions (not <code>null</code>)</dd>
+<dd><code>bodyFilter</code> - the body filter used to test for collisions (not
+ <code>null</code>)</dd>
 <dd><code>shapeFilter</code> - the shape filter used to test for collisions (not
- null)</dd>
-<dd><code>allocator</code> - the desired allocator (not null)</dd>
+ <code>null</code>)</dd>
+<dd><code>allocator</code> - the desired allocator (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
 </dl>
@@ -770,8 +771,8 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterVirtual.html#cancelVelocityTowardsSteepSlopes(com.github.stephengold.joltjni.readonly.Vec3Arg)">cancelVelocityTowardsSteepSlopes</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new velocity vector (in system coordinates)</dd>
 </dl>
@@ -787,8 +788,8 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterVirtual.html#canWalkStairs(com.github.stephengold.joltjni.readonly.Vec3Arg)">canWalkStairs</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not null,
- unaffected)</dd>
+<dd><code>desiredVelocity</code> - velocity vector (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if too step to walk, otherwise <code>false</code></dd>
 </dl>
@@ -1025,9 +1026,9 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <dd><code><a href="readonly/ConstCharacterVirtual.html#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)">getPositionAndRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>storeLocation</code> - storage for the location (in system coordinates, not
- null, modified)</dd>
+ <code>null</code>, modified)</dd>
 <dd><code>storeOrientation</code> - storage for the orientation (in system
- coordinates, not null, modified)</dd>
+ coordinates, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
