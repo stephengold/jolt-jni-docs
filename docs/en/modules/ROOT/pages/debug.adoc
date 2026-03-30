@@ -48,7 +48,7 @@ For instance, if you neglect to add a body to the physics system,
 When visualizing a collision shape,
 {Sport} uses colors to distinguish different types of physics objects:
 
-* yellow for rigid body
+* yellow for a rigid body
   (without contact response) such as a sensor,
 * magenta for a rigid body
   (with contact response) that's dynamic, responsive, and active,
