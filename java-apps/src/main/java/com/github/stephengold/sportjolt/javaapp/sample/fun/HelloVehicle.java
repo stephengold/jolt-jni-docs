@@ -61,7 +61,6 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.FunctionalPhysicsApp;
 import java.util.ArrayList;
 import java.util.List;
-import org.joml.Vector3f;
 
 /**
  * A simple example of vehicle physics.
@@ -106,7 +105,7 @@ final public class HelloVehicle {
                     .setRotationMode(RotateMode.DragLMB);
             BaseApplication.getCamera()
                     .setLocation(-4.2f, 6.8f, 36f)
-                    .setLookDirection(new Vector3f(0.49f, -0.36f, -0.8f));
+                    .setLookDirection(0.49f, -0.36f, -0.8f);
 
             BaseApplication.setBackgroundColor(Constants.SKY_BLUE);
         });

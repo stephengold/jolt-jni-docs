@@ -50,7 +50,6 @@ import com.github.stephengold.sportjolt.Constants
 import com.github.stephengold.sportjolt.TextureKey
 import com.github.stephengold.sportjolt.input.RotateMode
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
-import org.joml.Vector3f
 
 /**
  * A simple example of vehicle physics.
@@ -99,7 +98,7 @@ class HelloVehicle extends BasePhysicsApp {
         BaseApplication.getCameraInputProcessor
                 .setRotationMode(RotateMode.DragLMB)
         BaseApplication.cam.setLocation(-4.2f, 6.8f, 36f)
-                .setLookDirection(new Vector3f(0.49f, -0.36f, -0.8f)) // TODO
+                .setLookDirection(0.49f, -0.36f, -0.8f)
 
         BaseApplication.setBackgroundColor(Constants.SKY_BLUE)
     }
