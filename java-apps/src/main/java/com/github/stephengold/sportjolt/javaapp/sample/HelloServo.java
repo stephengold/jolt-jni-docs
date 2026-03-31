@@ -46,6 +46,7 @@ import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotorState;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstShapeSettings;
 import com.github.stephengold.joltjni.readonly.QuatArg;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Constants;
@@ -194,16 +195,15 @@ final public class HelloServo extends BasePhysicsApp {
     private Body addFrame() {
         float halfLength = 1f;
         float radius = 0.1f;
-        CapsuleShapeSettings yShape
+        ConstShapeSettings yShape
                 = new CapsuleShapeSettings(halfLength, radius);
 
         QuatArg y2x = Quat.sEulerAngles(0f, 0f, Jolt.JPH_PI / 2f);
-        StaticCompoundShapeSettings frameSettings
-                = new StaticCompoundShapeSettings();
-        frameSettings.addShape(new Vec3(0f, +1f, 0f), y2x, yShape);
-        frameSettings.addShape(new Vec3(0f, -1f, 0f), y2x, yShape);
-        frameSettings.addShape(+1f, 0f, 0f, yShape);
-        frameSettings.addShape(-1f, 0f, 0f, yShape);
+        ConstShapeSettings frameSettings = new StaticCompoundShapeSettings()
+                .addShape(new Vec3(0f, +1f, 0f), y2x, yShape)
+                .addShape(new Vec3(0f, -1f, 0f), y2x, yShape)
+                .addShape(+1f, 0f, 0f, yShape)
+                .addShape(-1f, 0f, 0f, yShape);
         ShapeRefC frameShape = frameSettings.create().get();
 
         BodyCreationSettings bcs = new BodyCreationSettings();

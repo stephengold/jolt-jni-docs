@@ -191,12 +191,11 @@ final public class HelloMotor {
                 = new CapsuleShapeSettings(halfLength, radius);
 
         QuatArg y2x = Quat.sEulerAngles(0f, 0f, Jolt.JPH_PI / 2f);
-        StaticCompoundShapeSettings frameSettings
-                = new StaticCompoundShapeSettings();
-        frameSettings.addShape(new Vec3(0f, +1f, 0f), y2x, yShape);
-        frameSettings.addShape(new Vec3(0f, -1f, 0f), y2x, yShape);
-        frameSettings.addShape(+1f, 0f, 0f, yShape);
-        frameSettings.addShape(-1f, 0f, 0f, yShape);
+        ConstShapeSettings frameSettings = new StaticCompoundShapeSettings()
+                .addShape(new Vec3(0f, +1f, 0f), y2x, yShape)
+                .addShape(new Vec3(0f, -1f, 0f), y2x, yShape)
+                .addShape(+1f, 0f, 0f, yShape)
+                .addShape(-1f, 0f, 0f, yShape);
         ShapeRefC frameShape = frameSettings.create().get();
 
         BodyCreationSettings bcs = new BodyCreationSettings();

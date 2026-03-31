@@ -158,11 +158,11 @@ final public class HelloServo {
     private static Body addDoor(BodyInterface bi) {
         ConstShape shape = new BoxShape(0.8f, 0.8f, 0.1f);
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setAllowSleeping(false); // Disable sleep (deactivation).
         bcs.getMassPropertiesOverride().setMass(0.2f);
-        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
-        bcs.setShape(shape);
+        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
+                .setShape(shape);
 
         Body result = bi.createBody(bcs);
         bi.addBody(result, EActivation.Activate);
@@ -185,19 +185,18 @@ final public class HelloServo {
                 = new CapsuleShapeSettings(halfLength, radius);
 
         QuatArg y2x = Quat.sEulerAngles(0f, 0f, Jolt.JPH_PI / 2f);
-        StaticCompoundShapeSettings frameSettings
-                = new StaticCompoundShapeSettings();
-        frameSettings.addShape(new Vec3(0f, +1f, 0f), y2x, yShape);
-        frameSettings.addShape(new Vec3(0f, -1f, 0f), y2x, yShape);
-        frameSettings.addShape(+1f, 0f, 0f, yShape);
-        frameSettings.addShape(-1f, 0f, 0f, yShape);
+        ConstShapeSettings frameSettings = new StaticCompoundShapeSettings()
+                .addShape(new Vec3(0f, +1f, 0f), y2x, yShape)
+                .addShape(new Vec3(0f, -1f, 0f), y2x, yShape)
+                .addShape(+1f, 0f, 0f, yShape)
+                .addShape(-1f, 0f, 0f, yShape);
         ShapeRefC frameShape = frameSettings.create().get();
 
-        BodyCreationSettings bcs = new BodyCreationSettings()
-                .setAllowSleeping(false); // Disable sleep (deactivation).
+        BodyCreationSettings bcs = new BodyCreationSettings();
+        bcs.setAllowSleeping(false); // Disable sleep (deactivation).
         bcs.getMassPropertiesOverride().setMass(1f);
-        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
-                .setShape(frameShape);
+        bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia);
+        bcs.setShape(frameShape);
 
         Body result = bi.createBody(bcs);
         bi.addBody(result, EActivation.Activate);
