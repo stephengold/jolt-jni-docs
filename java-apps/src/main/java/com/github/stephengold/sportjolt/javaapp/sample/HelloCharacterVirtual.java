@@ -140,9 +140,9 @@ final public class HelloCharacterVirtual
         getCameraInputProcessor().setRotationMode(RotateMode.DragLMB);
         setBackgroundColor(Constants.SKY_BLUE);
 
-        updateSettings = new ExtendedUpdateSettings();
-        updateSettings.setStickToFloorStepDown(Vec3.sZero());
-        updateSettings.setWalkStairsStepUp(Vec3.sZero());
+        updateSettings = new ExtendedUpdateSettings()
+                .setStickToFloorStepDown(Vec3.sZero())
+                .setWalkStairsStepUp(Vec3.sZero());
 
         allBodies = new BodyFilter();
         allShapes = new ShapeFilter();
