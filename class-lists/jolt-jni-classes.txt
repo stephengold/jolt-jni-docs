@@ -186,6 +186,8 @@ com.github.stephengold.joltjni.Joint
 com.github.stephengold.joltjni.JointState
 com.github.stephengold.joltjni.Jolt
 com.github.stephengold.joltjni.JoltPhysicsObject
+com.github.stephengold.joltjni.JphMath
+com.github.stephengold.joltjni.LinearCurve
 com.github.stephengold.joltjni.Loader
 com.github.stephengold.joltjni.Lod
 com.github.stephengold.joltjni.MassProperties
@@ -193,6 +195,7 @@ com.github.stephengold.joltjni.Mat44
 com.github.stephengold.joltjni.Mat44Array
 com.github.stephengold.joltjni.MeshShape
 com.github.stephengold.joltjni.MeshShapeSettings
+com.github.stephengold.joltjni.MiscUtil
 com.github.stephengold.joltjni.MotionProperties
 com.github.stephengold.joltjni.MotorSettings
 com.github.stephengold.joltjni.MotorcycleController
@@ -293,6 +296,7 @@ com.github.stephengold.joltjni.SharedMutex
 com.github.stephengold.joltjni.SharedMutexBase
 com.github.stephengold.joltjni.SimCollideBodyVsBody
 com.github.stephengold.joltjni.SimShapeFilter
+com.github.stephengold.joltjni.SimpleTireMaxImpulseCallback
 com.github.stephengold.joltjni.SixDofConstraint
 com.github.stephengold.joltjni.SixDofConstraintSettings
 com.github.stephengold.joltjni.SkeletalAnimation
