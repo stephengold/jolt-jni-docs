@@ -39,7 +39,7 @@ loadScripts(document, 'script');</script>
 <p>Summary:</p>
 <ul>
 <li>Nested</li>
-<li>Field</li>
+<li><a href="#field-summary">Field</a></li>
 <li><a href="#constructor-summary">Constr</a></li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
@@ -107,6 +107,15 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.github.stephengold.joltjni.template.Ref">Fields inherited from class&nbsp;com.github.stephengold.joltjni.template.<a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></h3>
+<code><a href="template/Ref.html#ptr">ptr</a></code></div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -138,6 +147,16 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determine where to apply tire forces.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LinearCurve.html" title="class in com.github.stephengold.joltjni">LinearCurve</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLateralFriction()" class="member-name-link">getLateralFriction</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the lateral friction as a function of the slip angle (in degrees).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LinearCurve.html" title="class in com.github.stephengold.joltjni">LinearCurve</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLongitudinalFriction()" class="member-name-link">getLongitudinalFriction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the longitudinal friction as a function of slip ratio.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxBrakeTorque()" class="member-name-link">getMaxBrakeTorque</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -161,7 +180,7 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsWv.html" title="class in com.github.stephengold.joltjni">WheelSettingsWv</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Temporarily access the referenced <code>WheelSettingsWv</code>.</div>
+<div class="block">Access the targeted settings, if any.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRadius()" class="member-name-link">getRadius</a>()</code></div>
@@ -233,6 +252,16 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnableSuspensionForcePoint(boolean)" class="member-name-link">setEnableSuspensionForcePoint</a><wbr>(boolean&nbsp;enable)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter where to apply tire forces.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLateralFriction(com.github.stephengold.joltjni.readonly.ConstLinearCurve)" class="member-name-link">setLateralFriction</a><wbr>(<a href="readonly/ConstLinearCurve.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLinearCurve</a>&nbsp;curve)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the specified curve to the lateral-friction curve.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLongitudinalFriction(com.github.stephengold.joltjni.readonly.ConstLinearCurve)" class="member-name-link">setLongitudinalFriction</a><wbr>(<a href="readonly/ConstLinearCurve.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLinearCurve</a>&nbsp;curve)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the specified curve to the longitudinal-friction curve.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsWvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxBrakeTorque(float)" class="member-name-link">setMaxBrakeTorque</a><wbr>(float&nbsp;torque)</code></div>
@@ -313,7 +342,7 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsWvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create another counted reference to the native <code>WheelSettingsWV</code>.</div>
+<div class="block">Create an additional counted reference to the targeted settings.</div>
 </div>
 </div>
 </div>
@@ -369,6 +398,30 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
  (default=false)</dd>
 <dt>Returns:</dt>
 <dd>the current reference, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLateralFriction(com.github.stephengold.joltjni.readonly.ConstLinearCurve)">
+<h3>setLateralFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLateralFriction</span><wbr><span class="parameters">(<a href="readonly/ConstLinearCurve.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLinearCurve</a>&nbsp;curve)</span></div>
+<div class="block">Copy the specified curve to the lateral-friction curve. (native
+ attribute: mLateralFriction)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>curve</code> - the curve to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLongitudinalFriction(com.github.stephengold.joltjni.readonly.ConstLinearCurve)">
+<h3>setLongitudinalFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLongitudinalFriction</span><wbr><span class="parameters">(<a href="readonly/ConstLinearCurve.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLinearCurve</a>&nbsp;curve)</span></div>
+<div class="block">Copy the specified curve to the longitudinal-friction curve. (native
+ attribute: mLongitudinalFriction)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>curve</code> - the curve to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -583,6 +636,34 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <dt>Returns:</dt>
 <dd><code>true</code> if applied at the configured suspension-force point,
  <code>false</code> if applied at the wheel's point of contact</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLateralFriction()">
+<h3>getLateralFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LinearCurve.html" title="class in com.github.stephengold.joltjni">LinearCurve</a></span>&nbsp;<span class="element-name">getLateralFriction</span>()</div>
+<div class="block">Access the lateral friction as a function of the slip angle (in degrees).
+ (native attribute: mLateralFriction)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsWv.html#getLateralFriction()">getLateralFriction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLongitudinalFriction()">
+<h3>getLongitudinalFriction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LinearCurve.html" title="class in com.github.stephengold.joltjni">LinearCurve</a></span>&nbsp;<span class="element-name">getLongitudinalFriction</span>()</div>
+<div class="block">Access the longitudinal friction as a function of slip ratio. (native
+ attribute: mLongitudinalFriction)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsWv.html#getLongitudinalFriction()">getLongitudinalFriction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
 </section>
 </li>
@@ -828,12 +909,13 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <section class="detail" id="getPtr()">
 <h3>getPtr</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsWv.html" title="class in com.github.stephengold.joltjni">WheelSettingsWv</a></span>&nbsp;<span class="element-name">getPtr</span>()</div>
-<div class="block">Temporarily access the referenced <code>WheelSettingsWv</code>.</div>
+<div class="block">Access the targeted settings, if any.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/Ref.html#getPtr()">getPtr</a></code>&nbsp;in class&nbsp;<code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></dd>
 <dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
+<dd>the pre-existing object, or <code>null</code> if the reference is
+ empty</dd>
 </dl>
 </section>
 </li>
@@ -849,7 +931,7 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <dt>Overrides:</dt>
 <dd><code><a href="JoltPhysicsObject.html#targetVa()">targetVa</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
 <dt>Returns:</dt>
-<dd>a virtual address (not zero)</dd>
+<dd>the virtual address, or zero if the reference is empty</dd>
 </dl>
 </section>
 </li>
@@ -857,7 +939,7 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <section class="detail" id="toRef()">
 <h3>toRef</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsWvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsWvRef</a></span>&nbsp;<span class="element-name">toRef</span>()</div>
-<div class="block">Create another counted reference to the native <code>WheelSettingsWV</code>.</div>
+<div class="block">Create an additional counted reference to the targeted settings.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/Ref.html#toRef()">toRef</a></code>&nbsp;in class&nbsp;<code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></dd>

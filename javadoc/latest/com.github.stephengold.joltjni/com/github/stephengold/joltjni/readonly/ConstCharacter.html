@@ -221,7 +221,7 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CharacterRefC.html" title="class in com.github.stephengold.joltjni">CharacterRefC</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a counted reference to the native <code>Character</code>.</div>
+<div class="block">Create a read-only counted reference to the current character.</div>
 </div>
 </div>
 </div>
@@ -231,7 +231,7 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstCharacterBase">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></h3>
-<code><a href="ConstCharacterBase.html#getCosMaxSlopeAngle()">getCosMaxSlopeAngle</a>, <a href="ConstCharacterBase.html#getGroundBodyId()">getGroundBodyId</a>, <a href="ConstCharacterBase.html#getGroundMaterial()">getGroundMaterial</a>, <a href="ConstCharacterBase.html#getGroundNormal()">getGroundNormal</a>, <a href="ConstCharacterBase.html#getGroundPosition()">getGroundPosition</a>, <a href="ConstCharacterBase.html#getGroundState()">getGroundState</a>, <a href="ConstCharacterBase.html#getGroundSubShapeId()">getGroundSubShapeId</a>, <a href="ConstCharacterBase.html#getGroundUserData()">getGroundUserData</a>, <a href="ConstCharacterBase.html#getGroundVelocity()">getGroundVelocity</a>, <a href="ConstCharacterBase.html#getRefCount()">getRefCount</a>, <a href="ConstCharacterBase.html#getShape()">getShape</a>, <a href="ConstCharacterBase.html#getShape(com.github.stephengold.joltjni.ShapeRefC)">getShape</a>, <a href="ConstCharacterBase.html#getUp()">getUp</a>, <a href="ConstCharacterBase.html#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)">isSlopeTooSteep</a>, <a href="ConstCharacterBase.html#isSupported()">isSupported</a>, <a href="ConstCharacterBase.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code></div>
+<code><a href="ConstCharacterBase.html#getCosMaxSlopeAngle()">getCosMaxSlopeAngle</a>, <a href="ConstCharacterBase.html#getGroundBodyId()">getGroundBodyId</a>, <a href="ConstCharacterBase.html#getGroundMaterial()">getGroundMaterial</a>, <a href="ConstCharacterBase.html#getGroundNormal()">getGroundNormal</a>, <a href="ConstCharacterBase.html#getGroundPosition()">getGroundPosition</a>, <a href="ConstCharacterBase.html#getGroundState()">getGroundState</a>, <a href="ConstCharacterBase.html#getGroundSubShapeId()">getGroundSubShapeId</a>, <a href="ConstCharacterBase.html#getGroundUserData()">getGroundUserData</a>, <a href="ConstCharacterBase.html#getGroundVelocity()">getGroundVelocity</a>, <a href="ConstCharacterBase.html#getPhysicsSystem()">getPhysicsSystem</a>, <a href="ConstCharacterBase.html#getRefCount()">getRefCount</a>, <a href="ConstCharacterBase.html#getShape()">getShape</a>, <a href="ConstCharacterBase.html#getShape(com.github.stephengold.joltjni.ShapeRefC)">getShape</a>, <a href="ConstCharacterBase.html#getUp()">getUp</a>, <a href="ConstCharacterBase.html#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)">isSlopeTooSteep</a>, <a href="ConstCharacterBase.html#isSupported()">isSupported</a>, <a href="ConstCharacterBase.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="ConstJoltPhysicsObject.html#close()">close</a>, <a href="ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
@@ -399,9 +399,9 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storeLocation</code> - storage for the location (in system coordinates, not
- null, modified)</dd>
+ <code>null</code>, modified)</dd>
 <dd><code>storeOrientation</code> - storage for the orientation (in system
- coordinates, not null, modified)</dd>
+ coordinates, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -415,9 +415,9 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storeLocation</code> - storage for the location (in system coordinates, not
- null, modified)</dd>
+ <code>null</code>, modified)</dd>
 <dd><code>storeOrientation</code> - storage for the orientation (in system
- coordinates, not null, modified)</dd>
+ coordinates, not <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 </dl>
@@ -507,7 +507,7 @@ extends <a href="ConstCharacterBase.html" title="interface in com.github.stephen
 <section class="detail" id="toRefC()">
 <h3>toRefC</h3>
 <div class="member-signature"><span class="return-type"><a href="../CharacterRefC.html" title="class in com.github.stephengold.joltjni">CharacterRefC</a></span>&nbsp;<span class="element-name">toRefC</span>()</div>
-<div class="block">Create a counted reference to the native <code>Character</code>.</div>
+<div class="block">Create a read-only counted reference to the current character.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with a new native object assigned</dd>

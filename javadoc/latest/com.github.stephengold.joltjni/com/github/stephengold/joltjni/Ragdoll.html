@@ -168,74 +168,79 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count how many constraints are in the ragdoll, which is unaffected.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Mat44Array)" class="member-name-link">getPose</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeRootOffset,
- <a href="Mat44Array.html" title="class in com.github.stephengold.joltjni">Mat44Array</a>&nbsp;storeJointMatrices)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicsSystem()" class="member-name-link">getPhysicsSystem</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the system to which the ragdoll's bodies and constraints belong.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Mat44Array)" class="member-name-link">getPose</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeRootOffset,
+ <a href="Mat44Array.html" title="class in com.github.stephengold.joltjni">Mat44Array</a>&nbsp;storeJointMatrices)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the low-level pose using a locking body interface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Mat44Array,boolean)" class="member-name-link">getPose</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeRootOffset,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Mat44Array,boolean)" class="member-name-link">getPose</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeRootOffset,
  <a href="Mat44Array.html" title="class in com.github.stephengold.joltjni">Mat44Array</a>&nbsp;storeJointMatrices,
  boolean&nbsp;lockBodies)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the low-level pose.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">getPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">getPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the ragdoll's pose using the locking body interface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.SkeletonPose,boolean)" class="member-name-link">getPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPose(com.github.stephengold.joltjni.SkeletonPose,boolean)" class="member-name-link">getPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;storePose,
  boolean&nbsp;lockBodies)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the ragdoll's pose.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the active references to the native <code>Ragdoll</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRootTransform(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)" class="member-name-link">getRootTransform</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRootTransform(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)" class="member-name-link">getRootTransform</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
  <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeOrientation)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the transform of the ragdoll's root, using the locking body
  interface.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRootTransform(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat,boolean)" class="member-name-link">getRootTransform</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRootTransform(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat,boolean)" class="member-name-link">getRootTransform</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
  <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeOrientation,
  boolean&nbsp;lockBodies)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the transform of the ragdoll's root.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFromPhysicsSystem()" class="member-name-link">removeFromPhysicsSystem</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFromPhysicsSystem()" class="member-name-link">removeFromPhysicsSystem</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Remove bodies and constraints from the physics system.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Mark the native <code>Ragdoll</code> as embedded.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">setPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">setPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the ragdoll's pose using the locking body interface.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.SkeletonPose,boolean)" class="member-name-link">setPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.SkeletonPose,boolean)" class="member-name-link">setPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
  boolean&nbsp;lockBodies)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the ragdoll's pose.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RagdollRef.html" title="class in com.github.stephengold.joltjni">RagdollRef</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a counted reference to the native <code>Ragdoll</code>.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RagdollRef.html" title="class in com.github.stephengold.joltjni">RagdollRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a counted reference to the current ragdoll.</div>
 </div>
 </div>
 </div>
@@ -365,6 +370,17 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPhysicsSystem()">
+<h3>getPhysicsSystem</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></span>&nbsp;<span class="element-name">getPhysicsSystem</span>()</div>
+<div class="block">Access the system to which the ragdoll's bodies and constraints belong.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the pre-existing object (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -521,7 +537,7 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <section class="detail" id="toRef()">
 <h3>toRef</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RagdollRef.html" title="class in com.github.stephengold.joltjni">RagdollRef</a></span>&nbsp;<span class="element-name">toRef</span>()</div>
-<div class="block">Create a counted reference to the native <code>Ragdoll</code>.</div>
+<div class="block">Create a counted reference to the current ragdoll.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/RefTarget.html#toRef()">toRef</a></code>&nbsp;in interface&nbsp;<code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code></dd>

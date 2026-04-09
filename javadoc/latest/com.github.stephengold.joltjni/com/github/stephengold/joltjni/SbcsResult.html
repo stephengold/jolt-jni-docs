@@ -88,7 +88,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
-<div class="inheritance"><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">com.github.stephengold.joltjni.template.Result</a>&lt;<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&gt;
+<div class="inheritance"><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">com.github.stephengold.joltjni.template.Result</a>&lt;<a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a>&gt;
 <div class="inheritance">com.github.stephengold.joltjni.SbcsResult</div>
 </div>
 </div>
@@ -100,7 +100,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">SbcsResult</span>
-<span class="extends-implements">extends <a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a>&gt;</span></div>
 <div class="block">Either an error or a <code>SoftBodyCreationSettings</code>. (native type:
  <code>Result&lt;SoftBodyCreationSettings&gt;</code>)</div>
 </section>
@@ -117,7 +117,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get()" class="member-name-link">get</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the settings object.</div>
@@ -163,11 +163,11 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="get()">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a></span>&nbsp;<span class="element-name">get</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></span>&nbsp;<span class="element-name">get</span>()</div>
 <div class="block">Return the settings object.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Result.html#get()">get</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&gt;</code></dd>
+<dd><code><a href="template/Result.html#get()">get</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with a new native object assigned</dd>
 </dl>
@@ -181,7 +181,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the error message.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Result.html#getError(long)">getError</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&gt;</code></dd>
+<dd><code><a href="template/Result.html#getError(long)">getError</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resultVa</code> - the virtual address of the result (not zero)</dd>
 <dt>Returns:</dt>
@@ -197,7 +197,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Test whether an error occurred.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Result.html#hasError(long)">hasError</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&gt;</code></dd>
+<dd><code><a href="template/Result.html#hasError(long)">hasError</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resultVa</code> - the virtual address of the result (not zero)</dd>
 <dt>Returns:</dt>
@@ -213,7 +213,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Test whether the value returned by <code>get()</code> is valid.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Result.html#isValid(long)">isValid</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&gt;</code></dd>
+<dd><code><a href="template/Result.html#isValid(long)">isValid</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resultVa</code> - the virtual address of the result (not zero)</dd>
 <dt>Returns:</dt>

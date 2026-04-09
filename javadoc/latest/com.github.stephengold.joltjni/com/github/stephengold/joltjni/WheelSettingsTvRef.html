@@ -39,7 +39,7 @@ loadScripts(document, 'script');</script>
 <p>Summary:</p>
 <ul>
 <li>Nested</li>
-<li>Field</li>
+<li><a href="#field-summary">Field</a></li>
 <li><a href="#constructor-summary">Constr</a></li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
@@ -107,6 +107,15 @@ implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.github.stephengold.joltjni.template.Ref">Fields inherited from class&nbsp;com.github.stephengold.joltjni.template.<a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></h3>
+<code><a href="template/Ref.html#ptr">ptr</a></code></div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -156,7 +165,7 @@ implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Temporarily access the referenced <code>WheelSettingsTv</code>.</div>
+<div class="block">Access the targeted settings, if any.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRadius()" class="member-name-link">getRadius</a>()</code></div>
@@ -303,7 +312,7 @@ implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create another counted reference to the native <code>WheelSettingsTV</code>.</div>
+<div class="block">Create another counted reference to the targeted settings.</div>
 </div>
 </div>
 </div>
@@ -790,12 +799,13 @@ implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.
 <section class="detail" id="getPtr()">
 <h3>getPtr</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a></span>&nbsp;<span class="element-name">getPtr</span>()</div>
-<div class="block">Temporarily access the referenced <code>WheelSettingsTv</code>.</div>
+<div class="block">Access the targeted settings, if any.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/Ref.html#getPtr()">getPtr</a></code>&nbsp;in class&nbsp;<code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></dd>
 <dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
+<dd>the pre-existing object, or <code>null</code> if the reference is
+ empty</dd>
 </dl>
 </section>
 </li>
@@ -811,7 +821,7 @@ implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.
 <dt>Overrides:</dt>
 <dd><code><a href="JoltPhysicsObject.html#targetVa()">targetVa</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
 <dt>Returns:</dt>
-<dd>a virtual address (not zero)</dd>
+<dd>the virtual address, or zero if the reference is empty</dd>
 </dl>
 </section>
 </li>
@@ -819,7 +829,7 @@ implements <a href="readonly/ConstWheelSettingsTv.html" title="interface in com.
 <section class="detail" id="toRef()">
 <h3>toRef</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="WheelSettingsTvRef.html" title="class in com.github.stephengold.joltjni">WheelSettingsTvRef</a></span>&nbsp;<span class="element-name">toRef</span>()</div>
-<div class="block">Create another counted reference to the native <code>WheelSettingsTV</code>.</div>
+<div class="block">Create another counted reference to the targeted settings.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/Ref.html#toRef()">toRef</a></code>&nbsp;in class&nbsp;<code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></dd>

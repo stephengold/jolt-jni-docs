@@ -151,7 +151,7 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addMaterial(com.github.stephengold.joltjni.readonly.ConstHairMaterial)" class="member-name-link">addMaterial</a><wbr>(<a href="readonly/ConstHairMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHairMaterial</a>&nbsp;material)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Append the specified material.</div>
@@ -251,17 +251,17 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the simulation bounds.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#init(float%5B%5D)" class="member-name-link">init</a><wbr>(float[]&nbsp;maxDistSqHairToScalp)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate simulation bounds and vertex properties.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initCompute(com.github.stephengold.joltjni.ComputeSystem)" class="member-name-link">initCompute</a><wbr>(<a href="ComputeSystem.html" title="class in com.github.stephengold.joltjni">ComputeSystem</a>&nbsp;system)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Further initialization to set up compute buffers.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initRenderAndSimulationStrands(com.github.stephengold.joltjni.SVertexList,com.github.stephengold.joltjni.SStrandList)" class="member-name-link">initRenderAndSimulationStrands</a><wbr>(<a href="SVertexList.html" title="class in com.github.stephengold.joltjni">SVertexList</a>&nbsp;vertices,
  <a href="SStrandList.html" title="class in com.github.stephengold.joltjni">SStrandList</a>&nbsp;strands)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -336,7 +336,7 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettingsRef.html" title="class in com.github.stephengold.joltjni">HairSettingsRef</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a counted reference to the native <code>HairSettings</code>.</div>
+<div class="block">Create a counted reference to the current settings.</div>
 </div>
 </div>
 </div>
@@ -416,11 +416,13 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <li>
 <section class="detail" id="addMaterial(com.github.stephengold.joltjni.readonly.ConstHairMaterial)">
 <h3>addMaterial</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addMaterial</span><wbr><span class="parameters">(<a href="readonly/ConstHairMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHairMaterial</a>&nbsp;material)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></span>&nbsp;<span class="element-name">addMaterial</span><wbr><span class="parameters">(<a href="readonly/ConstHairMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHairMaterial</a>&nbsp;material)</span></div>
 <div class="block">Append the specified material. (native member: mMaterial)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>material</code> - the material to add (not <code>null</code>)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
 </dl>
 </section>
 </li>
@@ -464,31 +466,35 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <li>
 <section class="detail" id="init(float[])">
 <h3>init</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">init</span><wbr><span class="parameters">(float[]&nbsp;maxDistSqHairToScalp)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></span>&nbsp;<span class="element-name">init</span><wbr><span class="parameters">(float[]&nbsp;maxDistSqHairToScalp)</span></div>
 <div class="block">Calculate simulation bounds and vertex properties.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>maxDistSqHairToScalp</code> - storage for the maximum squared distance of a
  root vertex from the scalp (not <code>null</code>, length&gt;0)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="initCompute(com.github.stephengold.joltjni.ComputeSystem)">
 <h3>initCompute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initCompute</span><wbr><span class="parameters">(<a href="ComputeSystem.html" title="class in com.github.stephengold.joltjni">ComputeSystem</a>&nbsp;system)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></span>&nbsp;<span class="element-name">initCompute</span><wbr><span class="parameters">(<a href="ComputeSystem.html" title="class in com.github.stephengold.joltjni">ComputeSystem</a>&nbsp;system)</span></div>
 <div class="block">Further initialization to set up compute buffers. Invoke after
  <code>init()</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>system</code> - the compute system to use (not <code>null</code>)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="initRenderAndSimulationStrands(com.github.stephengold.joltjni.SVertexList,com.github.stephengold.joltjni.SStrandList)">
 <h3>initRenderAndSimulationStrands</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initRenderAndSimulationStrands</span><wbr><span class="parameters">(<a href="SVertexList.html" title="class in com.github.stephengold.joltjni">SVertexList</a>&nbsp;vertices,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></span>&nbsp;<span class="element-name">initRenderAndSimulationStrands</span><wbr><span class="parameters">(<a href="SVertexList.html" title="class in com.github.stephengold.joltjni">SVertexList</a>&nbsp;vertices,
  <a href="SStrandList.html" title="class in com.github.stephengold.joltjni">SStrandList</a>&nbsp;strands)</span></div>
 <div class="block">Split the supplied strands into render and simulation strands and
  calculate connections between them.</div>
@@ -496,6 +502,8 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <dt>Parameters:</dt>
 <dd><code>vertices</code> - the vertices to be used in strands (not <code>null</code>)</dd>
 <dd><code>strands</code> - the strands to use (not <code>null</code>)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
 </dl>
 </section>
 </li>
@@ -899,7 +907,7 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <section class="detail" id="toRef()">
 <h3>toRef</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HairSettingsRef.html" title="class in com.github.stephengold.joltjni">HairSettingsRef</a></span>&nbsp;<span class="element-name">toRef</span>()</div>
-<div class="block">Create a counted reference to the native <code>HairSettings</code>.</div>
+<div class="block">Create a counted reference to the current settings.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/RefTarget.html#toRef()">toRef</a></code>&nbsp;in interface&nbsp;<code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code></dd>

@@ -171,14 +171,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the mode bit for a stream that supports output operations.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readBytes(com.github.stephengold.joltjni.Float3%5B%5D)" class="member-name-link">readBytes</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;storeFloats)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readFloat3(com.github.stephengold.joltjni.Float3)" class="member-name-link">readFloat3</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;storeFloats)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Read groups of 3 floats from the stream.</div>
+<div class="block">Read 3 floats from the stream.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readFloat3(com.github.stephengold.joltjni.Float3)" class="member-name-link">readFloat3</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;storeFloats)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readFloat3Array(com.github.stephengold.joltjni.Float3%5B%5D)" class="member-name-link">readFloat3Array</a><wbr>(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;storeFloats)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Read 3 floats from the stream.</div>
+<div class="block">Read groups of 3 floats from the stream.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readHairSkinWeights(com.github.stephengold.joltjni.HairSkinWeight%5B%5D)" class="member-name-link">readHairSkinWeights</a><wbr>(<a href="HairSkinWeight.html" title="class in com.github.stephengold.joltjni">HairSkinWeight</a>[]&nbsp;storeResult)</code></div>
@@ -328,10 +328,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="readBytes(com.github.stephengold.joltjni.Float3[])">
-<h3>readBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">readBytes</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;storeFloats)</span></div>
-<div class="block">Read groups of 3 floats from the stream. TODO rename</div>
+<section class="detail" id="readFloat3(com.github.stephengold.joltjni.Float3)">
+<h3>readFloat3</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">readFloat3</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;storeFloats)</span></div>
+<div class="block">Read 3 floats from the stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storeFloats</code> - storage for the values that will be read (not
@@ -340,10 +340,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="readFloat3(com.github.stephengold.joltjni.Float3)">
-<h3>readFloat3</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">readFloat3</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>&nbsp;storeFloats)</span></div>
-<div class="block">Read 3 floats from the stream.</div>
+<section class="detail" id="readFloat3Array(com.github.stephengold.joltjni.Float3[])">
+<h3>readFloat3Array</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">readFloat3Array</span><wbr><span class="parameters">(<a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a>[]&nbsp;storeFloats)</span></div>
+<div class="block">Read groups of 3 floats from the stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storeFloats</code> - storage for the values that will be read (not

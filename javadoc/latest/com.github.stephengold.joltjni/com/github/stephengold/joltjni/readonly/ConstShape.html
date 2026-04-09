@@ -251,7 +251,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a counted reference to the native <code>Shape</code>.</div>
+<div class="block">Create a read-only counted reference to the current shape.</div>
 </div>
 </div>
 </div>
@@ -281,8 +281,8 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
  buffer. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the buffer to fill with vertex coordinates (not null,
- modified)</dd>
+<dd><code>storeBuffer</code> - the buffer to fill with vertex coordinates (not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -309,12 +309,12 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Draw the shape using the specified renderer. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
 <dd><code>comTransform</code> - the coordinate transform from the shape's center of
- mass to system coordinates (not null, unaffected)</dd>
-<dd><code>scale</code> - the desired scaling (not null, unaffected)</dd>
+ mass to system coordinates (not <code>null</code>, unaffected)</dd>
+<dd><code>scale</code> - the desired scaling (not <code>null</code>, unaffected)</dd>
 <dd><code>color</code> - the desired color if <code>useMaterialColors</code> is false (not
- null, unaffected)</dd>
+ <code>null</code>, unaffected)</dd>
 <dd><code>useMaterialColors</code> - <code>true</code> to use the color in the shape's
  material</dd>
 <dd><code>wireframe</code> - <code>true</code> to draw a wire frame, <code>false</code> for
@@ -334,10 +334,10 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
  is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
-<dd><code>comTransform</code> - transform to apply (not null, unaffected)</dd>
-<dd><code>scale</code> - scaling to apply (not null, unaffected)</dd>
-<dd><code>color</code> - the color using for drawing (not null, unaffected)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
+<dd><code>comTransform</code> - transform to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>scale</code> - scaling to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>color</code> - the color using for drawing (not <code>null</code>, unaffected)</dd>
 <dd><code>drawSupportDirection</code> - the direction to draw</dd>
 </dl>
 </section>
@@ -374,9 +374,9 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subShapeId</code> - an ID that indicates the path to the desired leaf shape
- (not null, unaffected)</dd>
+ (not <code>null</code>, unaffected)</dd>
 <dd><code>storeRemainderId</code> - storage for the remainder of the sub-shape ID
- after removing the path to the leaf shape (not null, length&gt;0,
+ after removing the path to the leaf shape (not <code>null</code>, length&gt;0,
  modified)</dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned, or
@@ -474,7 +474,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Return the shape's subtype. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -485,7 +485,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Return the shape's type. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
+<dd>an enum value (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -498,8 +498,8 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>comTransform</code> - the center-of-mass transform to apply to the shape
- (not null, unaffected)</dd>
-<dd><code>scale</code> - the scale factors to apply to the shape (not null,
+ (not <code>null</code>, unaffected)</dd>
+<dd><code>scale</code> - the scale factors to apply to the shape (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new, mutable box (in system coordinates)</dd>
@@ -515,8 +515,8 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>comTransform</code> - the center-of-mass transform to apply to the shape
- (not null, unaffected)</dd>
-<dd><code>scale</code> - the scale factors to apply to the shape (not null,
+ (not <code>null</code>, unaffected)</dd>
+<dd><code>scale</code> - the scale factors to apply to the shape (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new, mutable box (in system coordinates)</dd>
@@ -531,7 +531,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
  shape in a <code>ScaledShape</code>. The current shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>scale</code> - the proposed scale vector (not null, unaffected)</dd>
+<dd><code>scale</code> - the proposed scale vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if valid, otherwise <code>false</code></dd>
 </dl>
@@ -546,7 +546,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
  unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>scale</code> - the proposed scale vector (not null, unaffected)</dd>
+<dd><code>scale</code> - the proposed scale vector (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new scale vector</dd>
 </dl>
@@ -571,7 +571,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Save the shape to the specified binary stream. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to write to (not null)</dd>
+<dd><code>stream</code> - the stream to write to (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -582,7 +582,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Scale the current shape, which is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>scaleFactors</code> - the desired scaling on each axis (not null,
+<dd><code>scaleFactors</code> - the desired scaling on each axis (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with a new native object assigned</dd>
@@ -593,7 +593,7 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <section class="detail" id="toRefC()">
 <h3>toRefC</h3>
 <div class="member-signature"><span class="return-type"><a href="../ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></span>&nbsp;<span class="element-name">toRefC</span>()</div>
-<div class="block">Create a counted reference to the native <code>Shape</code>.</div>
+<div class="block">Create a read-only counted reference to the current shape.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with a new native object assigned</dd>

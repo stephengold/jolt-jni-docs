@@ -133,7 +133,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(int)" class="member-name-link">get</a><wbr>(int&nbsp;elementIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the reference at the specified index.</div>
+<div class="block">Copy the reference at the specified index.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#length()" class="member-name-link">length</a>()</code></div>
@@ -189,12 +189,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="get(int)">
 <h3>get</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;elementIndex)</span></div>
-<div class="block">Access the reference at the specified index.</div>
+<div class="block">Copy the reference at the specified index.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>elementIndex</code> - the index (&ge;0, &lt;length)</dd>
 <dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
+<dd>a new JVM object with a new native object assigned</dd>
 </dl>
 </section>
 </li>

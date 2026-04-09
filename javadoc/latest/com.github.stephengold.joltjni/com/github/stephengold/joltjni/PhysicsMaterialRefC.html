@@ -118,7 +118,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Temporarily access the referenced <code>ConstPhysicsMaterial</code>.</div>
+<div class="block">Access the targeted material, if any.</div>
 </div>
 </div>
 </div>
@@ -144,10 +144,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPtr()">
 <h3>getPtr</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a></span>&nbsp;<span class="element-name">getPtr</span>()</div>
-<div class="block">Temporarily access the referenced <code>ConstPhysicsMaterial</code>.</div>
+<div class="block">Access the targeted material, if any.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
+<dd>the pre-existing object, or <code>null</code> if the reference is
+ empty</dd>
 </dl>
 </section>
 </li>

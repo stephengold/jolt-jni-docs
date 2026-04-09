@@ -195,7 +195,7 @@ implements <a href="readonly/ConstShape.html" title="interface in com.github.ste
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Temporarily access the referenced <code>ConstShape</code>.</div>
+<div class="block">Access the target shape, if any.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
@@ -275,7 +275,7 @@ implements <a href="readonly/ConstShape.html" title="interface in com.github.ste
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create another counted reference to the native <code>Shape</code>.</div>
+<div class="block">Create an additional read-only counted reference to the targeted shape.</div>
 </div>
 </div>
 </div>
@@ -322,10 +322,11 @@ implements <a href="readonly/ConstShape.html" title="interface in com.github.ste
 <section class="detail" id="getPtr()">
 <h3>getPtr</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></span>&nbsp;<span class="element-name">getPtr</span>()</div>
-<div class="block">Temporarily access the referenced <code>ConstShape</code>.</div>
+<div class="block">Access the target shape, if any.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
+<dd>the pre-existing object, or <code>null</code> if the reference is
+ empty</dd>
 </dl>
 </section>
 </li>
@@ -702,7 +703,7 @@ implements <a href="readonly/ConstShape.html" title="interface in com.github.ste
 <dt>Overrides:</dt>
 <dd><code><a href="JoltPhysicsObject.html#targetVa()">targetVa</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
 <dt>Returns:</dt>
-<dd>a virtual address (not zero)</dd>
+<dd>the virtual address, or zero if the reference is empty</dd>
 </dl>
 </section>
 </li>
@@ -710,7 +711,7 @@ implements <a href="readonly/ConstShape.html" title="interface in com.github.ste
 <section class="detail" id="toRefC()">
 <h3>toRefC</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></span>&nbsp;<span class="element-name">toRefC</span>()</div>
-<div class="block">Create another counted reference to the native <code>Shape</code>.</div>
+<div class="block">Create an additional read-only counted reference to the targeted shape.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstShape.html#toRefC()">toRefC</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code></dd>

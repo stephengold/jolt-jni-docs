@@ -407,9 +407,9 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and obtain the nearest hit, if any.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>hitResult</code> - storage for information about the hit, if any (not null,
- may be modified)</dd>
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>hitResult</code> - storage for information about the hit, if any (not
+ <code>null</code>, may be modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if a hit was found, otherwise <code>false</code></dd>
 </dl>
@@ -424,10 +424,10 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and obtain the nearest hit, if any.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>hitResult</code> - storage for information about the hit, if any (not null,
- may be modified)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>hitResult</code> - storage for information about the hit, if any (not
+ <code>null</code>, may be modified)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if a hit was found, otherwise <code>false</code></dd>
@@ -444,12 +444,13 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and obtain the nearest hit, if any.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>hitResult</code> - storage for information about the hit, if any (not null,
- may be modified)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>hitResult</code> - storage for information about the hit, if any (not
+ <code>null</code>, may be modified)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if a hit was found, otherwise <code>false</code></dd>
 </dl>
@@ -466,13 +467,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and obtain the nearest hit, if any.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>hitResult</code> - storage for information about the hit, if any (not null,
- may be modified)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>hitResult</code> - storage for information about the hit, if any (not
+ <code>null</code>, may be modified)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if a hit was found, otherwise <code>false</code></dd>
 </dl>
@@ -487,10 +489,10 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>settings</code> - the raycast configuration options to use (not null,
- unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the raycast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -504,11 +506,11 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>settings</code> - the raycast configuration options to use (not null,
- unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the raycast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
 </dl>
 </section>
@@ -524,13 +526,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>settings</code> - the raycast configuration options to use (not null,
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the raycast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -546,14 +549,15 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>settings</code> - the raycast configuration options to use (not null,
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the raycast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -570,15 +574,17 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the desired ray (not null, unaffected)</dd>
-<dd><code>settings</code> - the raycast configuration options to use (not null,
+<dd><code>raycast</code> - the desired ray (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the raycast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -592,12 +598,12 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a shape and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeCast</code> - the desired shape cast (not null, unaffected)</dd>
-<dd><code>settings</code> - the shape-cast configuration options to use (not null,
- unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
+<dd><code>shapeCast</code> - the desired shape cast (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the shape-cast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -612,13 +618,13 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a shape and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeCast</code> - the desired shape cast (not null, unaffected)</dd>
-<dd><code>settings</code> - the shape-cast configuration options to use (not null,
- unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>shapeCast</code> - the desired shape cast (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the shape-cast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
 </dl>
 </section>
@@ -635,15 +641,16 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a shape and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeCast</code> - the desired shape cast (not null, unaffected)</dd>
-<dd><code>settings</code> - the shape-cast configuration options to use (not null,
+<dd><code>shapeCast</code> - the desired shape cast (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the shape-cast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -660,16 +667,17 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a shape and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeCast</code> - the desired shape cast (not null, unaffected)</dd>
-<dd><code>settings</code> - the shape-cast configuration options to use (not null,
+<dd><code>shapeCast</code> - the desired shape cast (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the shape-cast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -687,17 +695,19 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a shape and collect the resulting hits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeCast</code> - the desired shape cast (not null, unaffected)</dd>
-<dd><code>settings</code> - the shape-cast configuration options to use (not null,
+<dd><code>shapeCast</code> - the desired shape cast (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the shape-cast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -709,8 +719,9 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect leaf shapes that lie within the specified bounds.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the bounds (in system coordinates, not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
+<dd><code>box</code> - the bounds (in system coordinates, not <code>null</code>,
+ unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -723,9 +734,10 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect leaf shapes that lie within the specified bounds.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the bounds (in system coordinates, not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>box</code> - the bounds (in system coordinates, not <code>null</code>,
+ unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
 </dl>
 </section>
@@ -740,11 +752,13 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect leaf shapes that lie within the specified bounds.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the bounds (in system coordinates, not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>box</code> - the bounds (in system coordinates, not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -759,12 +773,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect leaf shapes that lie within the specified bounds.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the bounds (in system coordinates, not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>box</code> - the bounds (in system coordinates, not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -780,13 +796,16 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect leaf shapes that lie within the specified bounds.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>box</code> - the bounds (in system coordinates, not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>box</code> - the bounds (in system coordinates, not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -798,8 +817,9 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - the location of the point to test (not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
+<dd><code>point</code> - the location of the point to test (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -812,9 +832,10 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - the location of the point to test (not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>point</code> - the location of the point to test (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
 </dl>
 </section>
@@ -829,11 +850,13 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - the location of the point to test (not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>point</code> - the location of the point to test (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -848,12 +871,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - the location of the point to test (not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>point</code> - the location of the point to test (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -869,13 +894,16 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - the location of the point to test (not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>point</code> - the location of the point to test (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -891,14 +919,16 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the shape to test (not null, unaffected)</dd>
-<dd><code>shapeScale</code> - the scaling vector for the shape (not null, unaffected)</dd>
+<dd><code>shape</code> - the shape to test (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeScale</code> - the scaling vector for the shape (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>comTransform</code> - the coordinate transform to apply to the shape's
- center of mass (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
+ center of mass (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -915,15 +945,17 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the shape to test (not null, unaffected)</dd>
-<dd><code>shapeScale</code> - the scaling vector for the shape (not null, unaffected)</dd>
+<dd><code>shape</code> - the shape to test (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeScale</code> - the scaling vector for the shape (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>comTransform</code> - the coordinate transform to apply to the shape's
- center of mass (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+ center of mass (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>
 </dl>
 </section>
@@ -942,17 +974,20 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the shape to test (not null, unaffected)</dd>
-<dd><code>shapeScale</code> - the scaling vector for the shape (not null, unaffected)</dd>
-<dd><code>comTransform</code> - the coordinate transform to apply to the shape's
- center of mass (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>shape</code> - the shape to test (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeScale</code> - the scaling vector for the shape (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
+<dd><code>comTransform</code> - the coordinate transform to apply to the shape's
+ center of mass (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -971,18 +1006,21 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the shape to test (not null, unaffected)</dd>
-<dd><code>shapeScale</code> - the scaling vector for the shape (not null, unaffected)</dd>
-<dd><code>comTransform</code> - the coordinate transform to apply to the shape's
- center of mass (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>shape</code> - the shape to test (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeScale</code> - the scaling vector for the shape (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
+<dd><code>comTransform</code> - the coordinate transform to apply to the shape's
+ center of mass (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -1002,19 +1040,23 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shape</code> - the shape to test (not null, unaffected)</dd>
-<dd><code>shapeScale</code> - the scaling vector for the shape (not null, unaffected)</dd>
-<dd><code>comTransform</code> - the coordinate transform to apply to the shape's
- center of mass (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not null,
+<dd><code>shape</code> - the shape to test (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeScale</code> - the scaling vector for the shape (not <code>null</code>,
  unaffected)</dd>
-<dd><code>olFilter</code> - the object-layer filter to apply (not null, unaffected)</dd>
-<dd><code>bodyFilter</code> - the body filter to apply (not null, unaffected)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>comTransform</code> - the coordinate transform to apply to the shape's
+ center of mass (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bodyFilter</code> - the body filter to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>

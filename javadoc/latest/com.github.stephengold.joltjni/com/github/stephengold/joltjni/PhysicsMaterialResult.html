@@ -102,7 +102,10 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">PhysicsMaterialResult</span>
 <span class="extends-implements">extends <a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</span></div>
 <div class="block">Either an error or a <code>PhysicsMaterialRefC</code>. (native type:
- <code>Result&lt;Ref&lt;PhysicsMaterial&gt;&gt;</code>)</div>
+ <code>Result&lt;RefConst&lt;PhysicsMaterial&gt;&gt;</code>)
+ <p>
+ Note: Jolt Physics defines
+ <code>PhysicsMaterialResult = Result&lt;Ref&lt;PhysicsMaterial&gt;&gt;</code>.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -120,7 +123,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get()" class="member-name-link">get</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the <code>PhysicsMaterialRef</code>.</div>
+<div class="block">Return a counted reference to the resulting material.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError(long)" class="member-name-link">getError</a><wbr>(long&nbsp;resultVa)</code></div>
@@ -164,7 +167,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="get()">
 <h3>get</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></span>&nbsp;<span class="element-name">get</span>()</div>
-<div class="block">Return the <code>PhysicsMaterialRef</code>.</div>
+<div class="block">Return a counted reference to the resulting material.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/Result.html#get()">get</a></code>&nbsp;in class&nbsp;<code><a href="template/Result.html" title="class in com.github.stephengold.joltjni.template">Result</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</code></dd>

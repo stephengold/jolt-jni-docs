@@ -132,7 +132,7 @@ extends <a href="ConstSerializableObject.html" title="interface in com.github.st
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a counted reference to the native <code>PhysicsMaterial</code>.</div>
+<div class="block">Create a read-only counted reference to the current material.</div>
 </div>
 </div>
 </div>
@@ -187,7 +187,7 @@ extends <a href="ConstSerializableObject.html" title="interface in com.github.st
  unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to write to (not null)</dd>
+<dd><code>stream</code> - the stream to write to (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -195,7 +195,7 @@ extends <a href="ConstSerializableObject.html" title="interface in com.github.st
 <section class="detail" id="toRefC()">
 <h3>toRefC</h3>
 <div class="member-signature"><span class="return-type"><a href="../PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></span>&nbsp;<span class="element-name">toRefC</span>()</div>
-<div class="block">Create a counted reference to the native <code>PhysicsMaterial</code>.</div>
+<div class="block">Create a read-only counted reference to the current material.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with a new native object assigned</dd>

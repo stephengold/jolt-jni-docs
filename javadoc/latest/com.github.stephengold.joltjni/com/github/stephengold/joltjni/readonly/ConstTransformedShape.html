@@ -266,8 +266,8 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a ray and find the closest hit. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the test ray (not null, unaffected)</dd>
-<dd><code>storeResult</code> - storage for the result (not null, modified)</dd>
+<dd><code>raycast</code> - the test ray (not <code>null</code>, unaffected)</dd>
+<dd><code>storeResult</code> - storage for the result (not <code>null</code>, modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if a hit was found, otherwise <code>false</code></dd>
 </dl>
@@ -283,11 +283,12 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a narrow-phase ray and collect any hits. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>raycast</code> - the test ray (not null, unaffected)</dd>
-<dd><code>settings</code> - the raycast configuration options to use (not null,
+<dd><code>raycast</code> - the test ray (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the raycast configuration options to use (not
+ <code>null</code>, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
  unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -302,12 +303,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Cast a narrow-phase shape and collect any hits. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeCast</code> - the desired shape cast (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>shapeCast</code> - the desired shape cast (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -322,8 +325,9 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>box</code> - the region of interest (in system coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -336,9 +340,11 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified point. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - the location of the point to test (not null, unaffected)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+<dd><code>point</code> - the location of the point to test (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -354,15 +360,16 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified shape. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>testShape</code> - the shape to test (not null, unaffected)</dd>
-<dd><code>shapeScale</code> - the scaling vector for the test shape (not null,
- unaffected)</dd>
+<dd><code>testShape</code> - the shape to test (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeScale</code> - the scaling vector for the test shape (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>comTransform</code> - the coordinate transform to apply to the test shape's
- center of mass (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
+ center of mass (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -379,16 +386,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect collisions with the specified shape. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>testShape</code> - the shape to test (not null, unaffected)</dd>
-<dd><code>shapeScale</code> - the scaling vector for the test shape (not null,
- unaffected)</dd>
+<dd><code>testShape</code> - the shape to test (not <code>null</code>, unaffected)</dd>
+<dd><code>shapeScale</code> - the scaling vector for the test shape (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>comTransform</code> - the coordinate transform to apply to the test shape's
- center of mass (not null, unaffected)</dd>
-<dd><code>settings</code> - the collision settings to use (not null, unaffected)</dd>
-<dd><code>base</code> - the base location for reporting hits (not null, unaffected,
- (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>collector</code> - the hit collector to use (not null)</dd>
-<dd><code>shapeFilter</code> - the shape filter to apply (not null, unaffected)</dd>
+ center of mass (not <code>null</code>, unaffected)</dd>
+<dd><code>settings</code> - the collision settings to use (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>base</code> - the base location for reporting hits (not <code>null</code>,
+ unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>shapeFilter</code> - the shape filter to apply (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -400,8 +409,8 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
  buffer. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the buffer to fill with vertex coordinates (not null,
- modified)</dd>
+<dd><code>storeBuffer</code> - the buffer to fill with vertex coordinates (not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -484,11 +493,11 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subShapeId</code> - which sub-shape to use</dd>
-<dd><code>direction</code> - the test direction (in world coordinates, not null,
- unaffected)</dd>
-<dd><code>base</code> - the base location for reporting face vertices (not null,
- unaffected, (0,0,0)&rarr;world coordinates)</dd>
-<dd><code>storeFace</code> - storage for face vertices (not null)</dd>
+<dd><code>direction</code> - the test direction (in world coordinates, not
+ <code>null</code>, unaffected)</dd>
+<dd><code>base</code> - the base location for reporting face vertices (not
+ <code>null</code>, unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>storeFace</code> - storage for face vertices (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -523,10 +532,10 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dt>Parameters:</dt>
 <dd><code>storeContext</code> - storage for communication with
  <code>getTrianglesNext()</code></dd>
-<dd><code>box</code> - the region of interest (in system coordinates, not null,
- unaffected)</dd>
-<dd><code>base</code> - the base location for reporting triangle vertices (not null,
- unaffected, (0,0,0)&rarr;world coordinates)</dd>
+<dd><code>box</code> - the region of interest (in system coordinates, not
+ <code>null</code>, unaffected)</dd>
+<dd><code>base</code> - the base location for reporting triangle vertices (not
+ <code>null</code>, unaffected, (0,0,0)&rarr;world coordinates)</dd>
 </dl>
 </section>
 </li>

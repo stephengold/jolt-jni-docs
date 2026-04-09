@@ -150,7 +150,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(int)" class="member-name-link">get</a><wbr>(int&nbsp;elementIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the shape at the specified index.</div>
+<div class="block">Copy the reference at the specified index.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resize(int)" class="member-name-link">resize</a><wbr>(int&nbsp;numElements)</code></div>
@@ -251,14 +251,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="get(int)">
 <h3>get</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;elementIndex)</span></div>
-<div class="block">Access the shape at the specified index.</div>
+<div class="block">Copy the reference at the specified index.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/Array.html#get(int)">get</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>elementIndex</code> - the index from which to get the shape (&ge;0)</dd>
+<dd><code>elementIndex</code> - the index from which to get the reference (&ge;0)</dd>
 <dt>Returns:</dt>
-<dd>a new reference</dd>
+<dd>a new counted reference to the same shape</dd>
 </dl>
 </section>
 </li>

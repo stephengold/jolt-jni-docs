@@ -183,9 +183,10 @@ extends <a href="ConstShape.html" title="interface in com.github.stephengold.jol
 <div class="block">Calculate the shape's volume, submerged volume, and center of buoyancy.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>comTransform</code> - the local-to-system transform (not null, unaffected)</dd>
-<dd><code>scale</code> - the scale vector (not null, unaffected)</dd>
-<dd><code>surface</code> - the boundary of the submerged region (not null,
+<dd><code>comTransform</code> - the local-to-system transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>scale</code> - the scale vector (not <code>null</code>, unaffected)</dd>
+<dd><code>surface</code> - the boundary of the submerged region (not <code>null</code>,
  unaffected)</dd>
 <dd><code>storeTotalVolume</code> - storage for the total volume, or <code>null</code></dd>
 <dd><code>storeSubmergedVolume</code> - storage for the submerged volume, or
@@ -206,10 +207,10 @@ extends <a href="ConstShape.html" title="interface in com.github.stephengold.jol
 <div class="block">Generate a support function for the shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>supportMode</code> - how to handle convex radius (not null)</dd>
-<dd><code>buffer</code> - buffer storage (not null)</dd>
-<dd><code>scale</code> - scale factors to apply (in local coordinates, not null,
- unaffected)</dd>
+<dd><code>supportMode</code> - how to handle convex radius (not <code>null</code>)</dd>
+<dd><code>buffer</code> - buffer storage (not <code>null</code>)</dd>
+<dd><code>scale</code> - scale factors to apply (in local coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
