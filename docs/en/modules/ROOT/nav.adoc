@@ -25,6 +25,7 @@
 ** https://github.com/stephengold/jolt-jni/commits/master[Recent commits]
 ** https://github.com/stephengold/jolt-jni/issues[Issue tracker]
 ** https://github.com/stephengold/jolt-jni/issues/new[Report an issue]
+** https://github.com/stephengold/jolt-jni/blob/master/SECURITY.md[Security policies]
 * Library APIs (javadoc)
 ** https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html[latest release]
 * Jolt JNI at other sites
