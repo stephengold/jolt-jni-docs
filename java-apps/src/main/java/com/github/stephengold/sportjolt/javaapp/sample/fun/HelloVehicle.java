@@ -32,7 +32,7 @@ import com.github.stephengold.joltjni.Body;
 import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.ConvexHullShapeSettings;
-import com.github.stephengold.joltjni.Jolt;
+import com.github.stephengold.joltjni.JphMath;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
@@ -188,7 +188,7 @@ final public class HelloVehicle {
             BasePhysicsApp.visualizeWheels(vehicle);
 
             // Apply a steering angle of 4 degrees left (to both front wheels):
-            float right = -Jolt.degreesToRadians(4f);
+            float right = -JphMath.degreesToRadians(4f);
 
             // Apply a constant forward acceleration:
             float forward = 1f;

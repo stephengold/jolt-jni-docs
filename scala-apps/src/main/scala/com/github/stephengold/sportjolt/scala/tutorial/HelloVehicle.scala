@@ -30,7 +30,7 @@ package com.github.stephengold.sportjolt.scala.tutorial
 
 import com.github.stephengold.joltjni.BodyCreationSettings
 import com.github.stephengold.joltjni.ConvexHullShapeSettings
-import com.github.stephengold.joltjni.Jolt
+import com.github.stephengold.joltjni.JphMath
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.Plane
 import com.github.stephengold.joltjni.PlaneShape
@@ -180,7 +180,7 @@ class HelloVehicle extends BasePhysicsApp {
         BasePhysicsApp.visualizeWheels(vehicle)
 
         // Apply a steering angle of 4 degrees left (to both front wheels):
-        val right = -Jolt.degreesToRadians(4f)
+        val right = -JphMath.degreesToRadians(4f)
 
         // Apply a constant forward acceleration:
         val forward = 1f

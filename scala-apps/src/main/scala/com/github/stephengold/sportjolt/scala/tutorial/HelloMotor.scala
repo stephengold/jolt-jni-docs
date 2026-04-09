@@ -32,7 +32,7 @@ import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
 import com.github.stephengold.joltjni.BoxShape
 import com.github.stephengold.joltjni.CapsuleShapeSettings
-import com.github.stephengold.joltjni.Jolt
+import com.github.stephengold.joltjni.JphMath
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.Quat
 import com.github.stephengold.joltjni.RVec3
@@ -185,7 +185,7 @@ class HelloMotor extends BasePhysicsApp {
         val radius = 0.1f
         val yShape = new CapsuleShapeSettings(halfLength, radius)
 
-        val y2x = Quat.sEulerAngles(0f, 0f, Jolt.JPH_PI / 2f)
+        val y2x = Quat.sEulerAngles(0f, 0f, JphMath.JPH_PI / 2f)
         val frameSettings = new StaticCompoundShapeSettings
         frameSettings.addShape(new Vec3(0f, +1f, 0f), y2x, yShape)
         frameSettings.addShape(new Vec3(0f, -1f, 0f), y2x, yShape)

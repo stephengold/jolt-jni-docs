@@ -33,7 +33,7 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.BoxShape;
 import com.github.stephengold.joltjni.CapsuleShapeSettings;
-import com.github.stephengold.joltjni.Jolt;
+import com.github.stephengold.joltjni.JphMath;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
@@ -198,7 +198,7 @@ final public class HelloServo extends BasePhysicsApp {
         ConstShapeSettings yShape
                 = new CapsuleShapeSettings(halfLength, radius);
 
-        QuatArg y2x = Quat.sEulerAngles(0f, 0f, Jolt.JPH_PI / 2f);
+        QuatArg y2x = Quat.sEulerAngles(0f, 0f, JphMath.JPH_PI / 2f);
         ConstShapeSettings frameSettings = new StaticCompoundShapeSettings()
                 .addShape(new Vec3(0f, +1f, 0f), y2x, yShape)
                 .addShape(new Vec3(0f, -1f, 0f), y2x, yShape)
