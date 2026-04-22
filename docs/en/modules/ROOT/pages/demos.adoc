@@ -13,6 +13,9 @@ The following demos are found in
 * {url-examples}/Botany.java[`Botany`]
   demonstrates Cosserat rods +
   image:botany.png[height=50]
+* {url-examples}/HairDemo.java[`HairDemo`]
+  demonstrates hair simulation +
+  image:hairDemo.png[height=50]
 * {url-examples}/MarbleGame.java[`MarbleGame`]
   demonstrates compound shapes and sensor bodies +
   image:marbleGame.png[height=50]
@@ -78,7 +81,8 @@ Camera rotation:
 
 * `Botany` and `ThousandCubes` use `Immediate` rotation mode.
    Any mouse motion rotates the camera.
-* `NewtonsCradle`, `Pachinko`, and `Windlass` use `DragLMB` rotation mode.
+* `HairDemo`, `NewtonsCradle`, `Pachinko`, and `Windlass`
+   use `DragLMB` rotation mode.
    You can rotate the camera
    by dragging the mouse with its left button depressed.
 
