@@ -415,6 +415,10 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}job_system_with_barrier.html[JPH::JobSystemWithBarrier]
 |{url-api}/JobSystemWithBarrier.html[JobSystemWithBarrier]
 
+|{url-jolt}linear_curve.html[JPH::LinearCurve]
+|{url-api}/LinearCurve.html[LinearCurve] +
+ {url-api}/readonly/ConstLinearCurve.html[ConstLinearCurve]
+
 |{url-jolt}mass_properties.html[JPH::MassProperties]
 |{url-api}/MassProperties.html[MassProperties] +
  {url-api}/readonly/ConstMassProperties.html[ConstMassProperties]
@@ -881,7 +885,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/VehicleEngine.html[VehicleEngine]
 
 |{url-jolt}vehicle_engine_settings.html[JPH::VehicleEngineSettings]
-|{url-api}/VehicleEngineSettings.html[VehicleEngineSettings]
+|{url-api}/VehicleEngineSettings.html[VehicleEngineSettings] +
+ {url-api}/readonly/ConstVehicleEngineSettings.html[ConstVehicleEngineSettings]
 
 |{url-jolt}vehicle_track_settings.html[JPH::VehicleTrackSettings]
 |{url-api}/VehicleTrackSettings.html[VehicleTrackSettings]
