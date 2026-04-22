@@ -148,7 +148,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRenderPositions()" class="member-name-link">getRenderPositions</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the render positions of all strands.</div>
+<div class="block">Copy the locations of all render vertices.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScalpVertices()" class="member-name-link">getScalpVertices</a>()</code></div>
@@ -171,35 +171,41 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Lock the data buffers.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readBackGpuState(com.github.stephengold.joltjni.ComputeQueue)" class="member-name-link">readBackGpuState</a><wbr>(<a href="ComputeQueue.html" title="class in com.github.stephengold.joltjni">ComputeQueue</a>&nbsp;queue)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putRenderPositionsWorld(java.nio.FloatBuffer)" class="member-name-link">putRenderPositionsWorld</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the (system) locations of all render vertices to the specified
+ buffer.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readBackGpuState(com.github.stephengold.joltjni.ComputeQueue)" class="member-name-link">readBackGpuState</a><wbr>(<a href="ComputeQueue.html" title="class in com.github.stephengold.joltjni">ComputeQueue</a>&nbsp;queue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Read back GPU state for debugging purposes.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Relocate the hair.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;orientation)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;orientation)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reorient the hair.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unlockReadBackBuffers()" class="member-name-link">unlockReadBackBuffers</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unlockReadBackBuffers()" class="member-name-link">unlockReadBackBuffers</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unlock the data buffers.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(float,com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.Mat44Array,com.github.stephengold.joltjni.readonly.ConstPhysicsSystem,com.github.stephengold.joltjni.HairShaders,com.github.stephengold.joltjni.ComputeSystem,com.github.stephengold.joltjni.ComputeQueue)" class="member-name-link">update</a><wbr>(float&nbsp;deltaTime,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hair.html" title="class in com.github.stephengold.joltjni">Hair</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(float,com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.Mat44Array,com.github.stephengold.joltjni.readonly.ConstPhysicsSystem,com.github.stephengold.joltjni.HairShaders,com.github.stephengold.joltjni.ComputeSystem,com.github.stephengold.joltjni.ComputeQueue)" class="member-name-link">update</a><wbr>(float&nbsp;deltaTime,
  <a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;jointToHair,
  <a href="Mat44Array.html" title="class in com.github.stephengold.joltjni">Mat44Array</a>&nbsp;jointMatrices,
  <a href="readonly/ConstPhysicsSystem.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSystem</a>&nbsp;physicsSystem,
  <a href="HairShaders.html" title="class in com.github.stephengold.joltjni">HairShaders</a>&nbsp;shaders,
  <a href="ComputeSystem.html" title="class in com.github.stephengold.joltjni">ComputeSystem</a>&nbsp;computeSystem,
  <a href="ComputeQueue.html" title="class in com.github.stephengold.joltjni">ComputeQueue</a>&nbsp;queue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Step the hair simulation forward.</div>
 </div>
 </div>
@@ -275,7 +281,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getRenderPositions()">
 <h3>getRenderPositions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></span>&nbsp;<span class="element-name">getRenderPositions</span>()</div>
-<div class="block">Copy the render positions of all strands.</div>
+<div class="block">Copy the locations of all render vertices.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new direct buffer</dd>
@@ -339,6 +345,18 @@ loadScripts(document, 'script');</script>
 <dd><code>queue</code> - the queue to use (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>the modified simulation, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="putRenderPositionsWorld(java.nio.FloatBuffer)">
+<h3>putRenderPositionsWorld</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">putRenderPositionsWorld</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</span></div>
+<div class="block">Copy the (system) locations of all render vertices to the specified
+ buffer.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

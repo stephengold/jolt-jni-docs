@@ -269,73 +269,79 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
  calculate connections between them.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;streamIn)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putEdgeIndices(java.nio.IntBuffer)" class="member-name-link">putEdgeIndices</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeIndices)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Write the vertex indices of all render-strand edges to the specified
+ buffer and advance the buffer's position.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;streamIn)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Read the state of this object from the specified stream, excluding the
  shape and group filter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;streamOut)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;streamOut)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write the state of this object to the specified stream, excluding the
  compute buffers.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Mark the native <code>HairSettings</code> as embedded.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInitialGravity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setInitialGravity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;gravity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInitialGravity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setInitialGravity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;gravity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the initial gravity vector.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumIterationsPerSecond(int)" class="member-name-link">setNumIterationsPerSecond</a><wbr>(int&nbsp;numIterations)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumIterationsPerSecond(int)" class="member-name-link">setNumIterationsPerSecond</a><wbr>(int&nbsp;numIterations)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the iteration rate.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpInverseBindPose(com.github.stephengold.joltjni.readonly.Mat44Arg...)" class="member-name-link">setScalpInverseBindPose</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>...&nbsp;pose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpInverseBindPose(com.github.stephengold.joltjni.readonly.Mat44Arg...)" class="member-name-link">setScalpInverseBindPose</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>...&nbsp;pose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the scalp mesh-vertex locations in bind pose.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpNumSkinWeightsPerVertex(int)" class="member-name-link">setScalpNumSkinWeightsPerVertex</a><wbr>(int&nbsp;numWeights)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpNumSkinWeightsPerVertex(int)" class="member-name-link">setScalpNumSkinWeightsPerVertex</a><wbr>(int&nbsp;numWeights)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the number of skinning weights per vertex.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpSkinWeights(com.github.stephengold.joltjni.HairSkinWeight...)" class="member-name-link">setScalpSkinWeights</a><wbr>(<a href="HairSkinWeight.html" title="class in com.github.stephengold.joltjni">HairSkinWeight</a>...&nbsp;weights)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpSkinWeights(com.github.stephengold.joltjni.HairSkinWeight...)" class="member-name-link">setScalpSkinWeights</a><wbr>(<a href="HairSkinWeight.html" title="class in com.github.stephengold.joltjni">HairSkinWeight</a>...&nbsp;weights)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the scalp skinning weights.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpTriangles(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial...)" class="member-name-link">setScalpTriangles</a><wbr>(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>...&nbsp;triangles)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpTriangles(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial...)" class="member-name-link">setScalpTriangles</a><wbr>(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>...&nbsp;triangles)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the scalp mesh-triangle indices.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpVertices(com.github.stephengold.joltjni.readonly.ConstFloat3...)" class="member-name-link">setScalpVertices</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>...&nbsp;vertices)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScalpVertices(com.github.stephengold.joltjni.readonly.ConstFloat3...)" class="member-name-link">setScalpVertices</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>...&nbsp;vertices)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the scalp mesh-vertex locations.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSimulationBoundsPadding(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setSimulationBoundsPadding</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;padding)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSimulationBoundsPadding(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setSimulationBoundsPadding</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;padding)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter how much padding to add on all sides of the neutral pose when
  determining the bounds of the simulation grid.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sResample(com.github.stephengold.joltjni.SVertexList,com.github.stephengold.joltjni.SStrandList,int)" class="member-name-link">sResample</a><wbr>(<a href="SVertexList.html" title="class in com.github.stephengold.joltjni">SVertexList</a>&nbsp;vertices,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sResample(com.github.stephengold.joltjni.SVertexList,com.github.stephengold.joltjni.SStrandList,int)" class="member-name-link">sResample</a><wbr>(<a href="SVertexList.html" title="class in com.github.stephengold.joltjni">SVertexList</a>&nbsp;vertices,
  <a href="SStrandList.html" title="class in com.github.stephengold.joltjni">SStrandList</a>&nbsp;strands,
  int&nbsp;numVerticesPerStrand)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Resample the hairs to the specified number of vertices per strand.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettingsRef.html" title="class in com.github.stephengold.joltjni">HairSettingsRef</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HairSettingsRef.html" title="class in com.github.stephengold.joltjni">HairSettingsRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRef()" class="member-name-link">toRef</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a counted reference to the current settings.</div>
 </div>
 </div>
@@ -861,6 +867,20 @@ implements <a href="readonly/ConstHairSettings.html" title="interface in com.git
 <dd><code><a href="readonly/ConstHairSettings.html#getSimulationBounds()">getSimulationBounds</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHairSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHairSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="putEdgeIndices(java.nio.IntBuffer)">
+<h3>putEdgeIndices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">putEdgeIndices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeIndices)</span></div>
+<div class="block">Write the vertex indices of all render-strand edges to the specified
+ buffer and advance the buffer's position. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHairSettings.html#putEdgeIndices(java.nio.IntBuffer)">putEdgeIndices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHairSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHairSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeIndices</code> - the destination buffer (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

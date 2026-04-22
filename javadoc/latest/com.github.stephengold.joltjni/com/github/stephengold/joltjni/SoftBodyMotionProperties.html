@@ -276,8 +276,8 @@ implements <a href="readonly/ConstSoftBodyMotionProperties.html" title="interfac
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deltaTime</code> - the total time to advance (in seconds)</dd>
-<dd><code>softBody</code> - the body to update (not null)</dd>
-<dd><code>system</code> - the system that contains the body (not null)</dd>
+<dd><code>softBody</code> - the body to update (not <code>null</code>)</dd>
+<dd><code>system</code> - the system that contains the body (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -326,14 +326,14 @@ implements <a href="readonly/ConstSoftBodyMotionProperties.html" title="interfac
 <div class="block">Skin vertices to the specified joints.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>comTransform</code> - the body's center-of-mass transform (not null,
- unaffected)</dd>
+<dd><code>comTransform</code> - the body's center-of-mass transform (not
+ <code>null</code>, unaffected)</dd>
 <dd><code>jointMatrices</code> - the joint matrices (relative to the center-of-mass
- transform, not null, length&ge;numJoints, unaffected)</dd>
+ transform, not <code>null</code>, length&ge;numJoints, unaffected)</dd>
 <dd><code>numJoints</code> - the number of joints (&ge;0)</dd>
 <dd><code>hardSkinAll</code> - <code>true</code> to reposition all vertices to their
  skinned locations</dd>
-<dd><code>allocator</code> - for temporary allocations (not null)</dd>
+<dd><code>allocator</code> - for temporary allocations (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -460,8 +460,9 @@ implements <a href="readonly/ConstSoftBodyMotionProperties.html" title="interfac
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSoftBodyMotionProperties.html#putPinLocations(com.github.stephengold.joltjni.readonly.RVec3Arg,java.nio.FloatBuffer)">putPinLocations</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyMotionProperties</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>comLocation</code> - the location of the body's center of mass (not null)</dd>
-<dd><code>storeFloats</code> - the destination buffer (not null, modified)</dd>
+<dd><code>comLocation</code> - the location of the body's center of mass (not
+ <code>null</code>)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -476,8 +477,9 @@ implements <a href="readonly/ConstSoftBodyMotionProperties.html" title="interfac
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstSoftBodyMotionProperties.html#putVertexLocations(com.github.stephengold.joltjni.readonly.RVec3Arg,java.nio.FloatBuffer)">putVertexLocations</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyMotionProperties</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>comLocation</code> - the location of the body's center of mass (not null)</dd>
-<dd><code>storeFloats</code> - the destination buffer (not null, modified)</dd>
+<dd><code>comLocation</code> - the location of the body's center of mass (not
+ <code>null</code>)</dd>
+<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

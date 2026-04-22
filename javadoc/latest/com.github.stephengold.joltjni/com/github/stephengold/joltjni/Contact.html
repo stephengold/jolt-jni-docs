@@ -88,17 +88,19 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
+<div class="inheritance"><a href="ContactKey.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.ContactKey</a>
 <div class="inheritance">com.github.stephengold.joltjni.Contact</div>
+</div>
 </div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstContact.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContact</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstContact.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContact</a></code>, <code><a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Contact</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+<span class="extends-implements">extends <a href="ContactKey.html" title="class in com.github.stephengold.joltjni">ContactKey</a>
 implements <a href="readonly/ConstContact.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContact</a></span></div>
 <div class="block">Describe a contact between a <code>Character</code> and a body or another
  character. (native type: <code>CharacterVirtual::Contact</code>)</div>
@@ -116,65 +118,55 @@ implements <a href="readonly/ConstContact.html" title="interface in com.github.s
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyB()" class="member-name-link">getBodyB</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCanPushCharacter()" class="member-name-link">getCanPushCharacter</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the ID of the colliding body.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCanPushCharacter()" class="member-name-link">getCanPushCharacter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the velocity of the contact point can push the character.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCharacterB()" class="member-name-link">getCharacterB</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstCharacterVirtual.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterVirtual</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCharacterB()" class="member-name-link">getCharacterB</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the colliding character.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactNormal()" class="member-name-link">getContactNormal</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactNormal()" class="member-name-link">getContactNormal</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the contact normal.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDistance()" class="member-name-link">getDistance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDistance()" class="member-name-link">getDistance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the contact separation.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFraction()" class="member-name-link">getFraction</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFraction()" class="member-name-link">getFraction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the fraction along the path where the contact takes place.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHadCollision()" class="member-name-link">getHadCollision</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHadCollision()" class="member-name-link">getHadCollision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the character has actually collided.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsSensorB()" class="member-name-link">getIsSensorB</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsSensorB()" class="member-name-link">getIsSensorB</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the colliding object is a sensor.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity()" class="member-name-link">getLinearVelocity</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity()" class="member-name-link">getLinearVelocity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the velocity of the contact point.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="enumerate/EMotionType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EMotionType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMotionTypeB()" class="member-name-link">getMotionTypeB</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="enumerate/EMotionType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EMotionType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMotionTypeB()" class="member-name-link">getMotionTypeB</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the motion type of the colliding object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the location where the contact occurs.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubShapeIdB()" class="member-name-link">getSubShapeIdB</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the sub-shape ID of the colliding body.</div>
+<div class="block">Copy the location where the contact occurs.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSurfaceNormal()" class="member-name-link">getSurfaceNormal</a>()</code></div>
@@ -195,6 +187,9 @@ implements <a href="readonly/ConstContact.html" title="interface in com.github.s
 </div>
 </div>
 <div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.ContactKey">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="ContactKey.html" title="class in com.github.stephengold.joltjni">ContactKey</a></h3>
+<code><a href="ContactKey.html#getBodyB()">getBodyB</a>, <a href="ContactKey.html#getCharacterIdB()">getCharacterIdB</a>, <a href="ContactKey.html#getSubShapeIdB()">getSubShapeIdB</a>, <a href="ContactKey.html#isEqual(com.github.stephengold.joltjni.readonly.ConstContactKey)">isEqual</a>, <a href="ContactKey.html#isNotEqual(com.github.stephengold.joltjni.readonly.ConstContactKey)">isNotEqual</a>, <a href="ContactKey.html#restoreState(com.github.stephengold.joltjni.StateRecorder)">restoreState</a>, <a href="ContactKey.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code></div>
+<div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#isCleanerStarted()">isCleanerStarted</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
 <div class="inherited-list">
@@ -203,6 +198,9 @@ implements <a href="readonly/ConstContact.html" title="interface in com.github.s
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstContactKey">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a></h3>
+<code><a href="readonly/ConstContactKey.html#getBodyB()">getBodyB</a>, <a href="readonly/ConstContactKey.html#getCharacterIdB()">getCharacterIdB</a>, <a href="readonly/ConstContactKey.html#getSubShapeIdB()">getSubShapeIdB</a>, <a href="readonly/ConstContactKey.html#isEqual(com.github.stephengold.joltjni.readonly.ConstContactKey)">isEqual</a>, <a href="readonly/ConstContactKey.html#isNotEqual(com.github.stephengold.joltjni.readonly.ConstContactKey)">isNotEqual</a>, <a href="readonly/ConstContactKey.html#saveState(com.github.stephengold.joltjni.StateRecorder)">saveState</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
 <code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
@@ -217,20 +215,6 @@ implements <a href="readonly/ConstContact.html" title="interface in com.github.s
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="getBodyB()">
-<h3>getBodyB</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getBodyB</span>()</div>
-<div class="block">Return the ID of the colliding body. The contact is unaffected. (native
- attribute: mBodyB)</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="readonly/ConstContact.html#getBodyB()">getBodyB</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstContact.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContact</a></code></dd>
-<dt>Returns:</dt>
-<dd>the <code>BodyID</code> value</dd>
-</dl>
-</section>
-</li>
 <li>
 <section class="detail" id="getCanPushCharacter()">
 <h3>getCanPushCharacter</h3>
@@ -371,20 +355,6 @@ implements <a href="readonly/ConstContact.html" title="interface in com.github.s
 <dd><code><a href="readonly/ConstContact.html#getPosition()">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstContact.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContact</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new vector (in system coordinates)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSubShapeIdB()">
-<h3>getSubShapeIdB</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSubShapeIdB</span>()</div>
-<div class="block">Return the sub-shape ID of the colliding body. The contact is unaffected.
- (native attribute: mSubShapeIDB)</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="readonly/ConstContact.html#getSubShapeIdB()">getSubShapeIdB</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstContact.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContact</a></code></dd>
-<dt>Returns:</dt>
-<dd>a <code>SubShapeID</code> value (typically negative)</dd>
 </dl>
 </section>
 </li>

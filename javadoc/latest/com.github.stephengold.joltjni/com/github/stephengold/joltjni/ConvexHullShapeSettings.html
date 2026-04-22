@@ -246,6 +246,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Replace any existing points with the specified ones.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ConvexHullShapeSettings.html" title="class in com.github.stephengold.joltjni">ConvexHullShapeSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#transformPoints(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">transformPoints</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;matrix)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Apply the specified linear transform to all points.</div>
+</div>
 </div>
 </div>
 </div>
@@ -600,6 +605,19 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>points</code> - the array of desired point locations (not <code>null</code>,
  unaffected)</dd>
+<dt>Returns:</dt>
+<dd>the modified settings, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="transformPoints(com.github.stephengold.joltjni.readonly.Mat44Arg)">
+<h3>transformPoints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ConvexHullShapeSettings.html" title="class in com.github.stephengold.joltjni">ConvexHullShapeSettings</a></span>&nbsp;<span class="element-name">transformPoints</span><wbr><span class="parameters">(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;matrix)</span></div>
+<div class="block">Apply the specified linear transform to all points.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>matrix</code> - the tranform to apply (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
