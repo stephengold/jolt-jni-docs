@@ -179,10 +179,10 @@ class HelloVehicle extends BasePhysicsApp {
         BasePhysicsApp.visualizeShape(vehicle)
         BasePhysicsApp.visualizeWheels(vehicle)
 
-        // Apply a steering angle of 4 degrees left (to both front wheels):
-        val right = -JphMath.degreesToRadians(4f)
+        // Apply a steering angle of 6 degrees left (to both front wheels):
+        val right = -JphMath.degreesToRadians(6f)
 
-        // Apply a constant forward acceleration:
+        // Apply the maximum forward acceleration:
         val forward = 1f
         val brake = 0f
         val handBrake = 0f

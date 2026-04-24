@@ -204,10 +204,10 @@ final public class HelloVehicle extends BasePhysicsApp {
         visualizeShape(vehicle);
         visualizeWheels(vehicle);
 
-        // Apply a steering angle of 4 degrees left (to both front wheels):
-        float right = -JphMath.degreesToRadians(4f);
+        // Apply a steering angle of 6 degrees left (to both front wheels):
+        float right = -JphMath.degreesToRadians(6f);
 
-        // Apply a constant forward acceleration:
+        // Apply the maximum forward acceleration:
         float forward = 1f;
         float brake = 0f;
         float handBrake = 0f;
