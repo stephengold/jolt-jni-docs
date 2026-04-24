@@ -40,7 +40,7 @@ import com.github.stephengold.joltjni.ShapeRefC;
 import com.github.stephengold.joltjni.ShapeSettings;
 import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.VehicleCollisionTester;
-import com.github.stephengold.joltjni.VehicleCollisionTesterRay;
+import com.github.stephengold.joltjni.VehicleCollisionTesterCastCylinder;
 import com.github.stephengold.joltjni.VehicleConstraint;
 import com.github.stephengold.joltjni.VehicleConstraintSettings;
 import com.github.stephengold.joltjni.VehicleDifferentialSettings;
@@ -195,7 +195,7 @@ final public class HelloVehicle extends BasePhysicsApp {
         VehicleConstraint vehicle = new VehicleConstraint(body, vcs);
         int objectLayer = body.getObjectLayer();
         VehicleCollisionTester tester
-                = new VehicleCollisionTesterRay(objectLayer);
+                = new VehicleCollisionTesterCastCylinder(objectLayer);
         vehicle.setVehicleCollisionTester(tester);
         physicsSystem.addConstraint(vehicle);
         physicsSystem.addStepListener(vehicle.getStepListener());

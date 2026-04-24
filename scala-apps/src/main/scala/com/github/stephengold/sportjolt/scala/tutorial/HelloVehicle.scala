@@ -35,7 +35,7 @@ import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.Plane
 import com.github.stephengold.joltjni.PlaneShape
 import com.github.stephengold.joltjni.Vec3
-import com.github.stephengold.joltjni.VehicleCollisionTesterRay
+import com.github.stephengold.joltjni.VehicleCollisionTesterCastCylinder
 import com.github.stephengold.joltjni.VehicleConstraint
 import com.github.stephengold.joltjni.VehicleConstraintSettings
 import com.github.stephengold.joltjni.WheelSettingsWv
@@ -170,7 +170,7 @@ class HelloVehicle extends BasePhysicsApp {
         vcs.setController(wvcs)
         val vehicle = new VehicleConstraint(body, vcs)
         val objectLayer = body.getObjectLayer
-        val tester = new VehicleCollisionTesterRay(objectLayer)
+        val tester = new VehicleCollisionTesterCastCylinder(objectLayer)
         vehicle.setVehicleCollisionTester(tester)
         physicsSystem.addConstraint(vehicle)
         physicsSystem.addStepListener(vehicle.getStepListener)
