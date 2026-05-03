@@ -114,6 +114,16 @@ extends <a href="ConstWheelSettings.html" title="interface in com.github.stephen
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAngularDamping()" class="member-name-link">getAngularDamping</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the angular damping coefficient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInertia()" class="member-name-link">getInertia</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the moment of inertia around the wheel's rolling axis.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ConstLinearCurve.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLinearCurve</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLateralFriction()" class="member-name-link">getLateralFriction</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -165,6 +175,29 @@ extends <a href="ConstWheelSettings.html" title="interface in com.github.stephen
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getAngularDamping()">
+<h3>getAngularDamping</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getAngularDamping</span>()</div>
+<div class="block">Return the angular damping coefficient. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the coefficient (in units of per second, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInertia()">
+<h3>getInertia</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getInertia</span>()</div>
+<div class="block">Return the moment of inertia around the wheel's rolling axis. The
+ settings are unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the moment of inertia (in kilogram.meters squared, &ge;0)</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getLateralFriction()">
 <h3>getLateralFriction</h3>

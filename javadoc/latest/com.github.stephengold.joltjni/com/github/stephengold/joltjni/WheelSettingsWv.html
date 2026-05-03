@@ -138,6 +138,16 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAngularDamping()" class="member-name-link">getAngularDamping</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the angular damping coefficient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInertia()" class="member-name-link">getInertia</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the moment of inertia around the wheel's rolling axis.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LinearCurve.html" title="class in com.github.stephengold.joltjni">LinearCurve</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLateralFriction()" class="member-name-link">getLateralFriction</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -169,9 +179,19 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <div class="block">Count the active references to the native <code>WheelSettingsWv</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularDamping(float)" class="member-name-link">setAngularDamping</a><wbr>(float&nbsp;damping)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the angular damping coefficient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Mark the native <code>WheelSettingsWV</code> as embedded.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertia(float)" class="member-name-link">setInertia</a><wbr>(float&nbsp;moment)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the moment of inertia around the wheel's rolling axis.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLateralFriction(com.github.stephengold.joltjni.readonly.ConstLinearCurve)" class="member-name-link">setLateralFriction</a><wbr>(<a href="readonly/ConstLinearCurve.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLinearCurve</a>&nbsp;curve)</code></div>
@@ -268,6 +288,32 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="setAngularDamping(float)">
+<h3>setAngularDamping</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setAngularDamping</span><wbr><span class="parameters">(float&nbsp;damping)</span></div>
+<div class="block">Return the angular damping coefficient. (native attribute:
+ mAngularDamping)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>damping</code> - the desired coefficient (in units of per second, &ge;0,
+ default=0.2)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setInertia(float)">
+<h3>setInertia</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInertia</span><wbr><span class="parameters">(float&nbsp;moment)</span></div>
+<div class="block">Alter the moment of inertia around the wheel's rolling axis. (native
+ attribute: mInertia)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>moment</code> - the desired moment of inertia (in kilogram.meters squared,
+ default=0.9)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setLateralFriction(com.github.stephengold.joltjni.readonly.ConstLinearCurve)">
 <h3>setLateralFriction</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLateralFriction</span><wbr><span class="parameters">(<a href="readonly/ConstLinearCurve.html" title="interface in com.github.stephengold.joltjni.readonly">ConstLinearCurve</a>&nbsp;curve)</span></div>
@@ -324,6 +370,34 @@ implements <a href="readonly/ConstWheelSettingsWv.html" title="interface in com.
 <dt>Parameters:</dt>
 <dd><code>angle</code> - the desired maximum steering angle (in radians,
  default=7*Pi/18)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAngularDamping()">
+<h3>getAngularDamping</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getAngularDamping</span>()</div>
+<div class="block">Return the angular damping coefficient. The settings are unaffected.
+ (native attribute: mAngularDamping)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsWv.html#getAngularDamping()">getAngularDamping</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a></code></dd>
+<dt>Returns:</dt>
+<dd>the coefficient (in units of per second, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInertia()">
+<h3>getInertia</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getInertia</span>()</div>
+<div class="block">Return the moment of inertia around the wheel's rolling axis. The
+ settings are unaffected. (native attribute: mInertia)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheelSettingsWv.html#getInertia()">getInertia</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a></code></dd>
+<dt>Returns:</dt>
+<dd>the moment of inertia (in kilogram.meters squared, &ge;0)</dd>
 </dl>
 </section>
 </li>
