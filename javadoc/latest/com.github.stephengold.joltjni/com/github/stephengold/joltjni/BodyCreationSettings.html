@@ -349,210 +349,215 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether mass properties are required.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.ConstBodyCreationSettings)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a>&nbsp;other)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether this object is equal to the argument.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Read the state of this object from the specified stream, excluding the
  shape and group filter.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write the state of this object to the specified stream, excluding the
  shape, materials, and group filter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.ShapeToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)" class="member-name-link">saveWithChildren</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.ShapeToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)" class="member-name-link">saveWithChildren</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream,
  <a href="streamutils/ShapeToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">ShapeToIdMap</a>&nbsp;shapeMap,
  <a href="streamutils/MaterialToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">MaterialToIdMap</a>&nbsp;materialMap,
  <a href="streamutils/GroupFilterToIdMap.html" title="class in com.github.stephengold.joltjni.streamutils">GroupFilterToIdMap</a>&nbsp;filterMap)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write the state of this object to the specified stream.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAllowDynamicOrKinematic(boolean)" class="member-name-link">setAllowDynamicOrKinematic</a><wbr>(boolean&nbsp;setting)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAllowDynamicOrKinematic(boolean)" class="member-name-link">setAllowDynamicOrKinematic</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether a static body can be converted to kinematic or dynamic.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAllowedDofs(int)" class="member-name-link">setAllowedDofs</a><wbr>(int&nbsp;bitmask)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAllowedDofs(int)" class="member-name-link">setAllowedDofs</a><wbr>(int&nbsp;bitmask)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the body's degrees of freedom.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAllowSleeping(boolean)" class="member-name-link">setAllowSleeping</a><wbr>(boolean&nbsp;allow)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAllowSleeping(boolean)" class="member-name-link">setAllowSleeping</a><wbr>(boolean&nbsp;allow)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether the created body will be allowed to fall asleep.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularDamping(float)" class="member-name-link">setAngularDamping</a><wbr>(float&nbsp;damping)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularDamping(float)" class="member-name-link">setAngularDamping</a><wbr>(float&nbsp;damping)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the angular damping constant.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(float,float,float)" class="member-name-link">setAngularVelocity</a><wbr>(float&nbsp;wx,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(float,float,float)" class="member-name-link">setAngularVelocity</a><wbr>(float&nbsp;wx,
  float&nbsp;wy,
  float&nbsp;wz)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the (initial) angular velocity.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setAngularVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;omega)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the (initial) angular velocity.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setApplyGyroscopicForce(boolean)" class="member-name-link">setApplyGyroscopicForce</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setAngularVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;omega)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the (initial) angular velocity.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setApplyGyroscopicForce(boolean)" class="member-name-link">setApplyGyroscopicForce</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether gyroscopic force will be applied.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollideKinematicVsNonDynamic(boolean)" class="member-name-link">setCollideKinematicVsNonDynamic</a><wbr>(boolean&nbsp;setting)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollideKinematicVsNonDynamic(boolean)" class="member-name-link">setCollideKinematicVsNonDynamic</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether a kinematic body will collide with kinematic/static bodies.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollisionGroup(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">setCollisionGroup</a><wbr>(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;group)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollisionGroup(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">setCollisionGroup</a><wbr>(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;group)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the collision group to which the body will belong.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnhancedInternalEdgeRemoval(boolean)" class="member-name-link">setEnhancedInternalEdgeRemoval</a><wbr>(boolean&nbsp;enhance)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnhancedInternalEdgeRemoval(boolean)" class="member-name-link">setEnhancedInternalEdgeRemoval</a><wbr>(boolean&nbsp;enhance)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether extra effort should be made to remove ghost contacts.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFriction(float)" class="member-name-link">setFriction</a><wbr>(float&nbsp;friction)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFriction(float)" class="member-name-link">setFriction</a><wbr>(float&nbsp;friction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the friction ratio.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGravityFactor(float)" class="member-name-link">setGravityFactor</a><wbr>(float&nbsp;factor)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGravityFactor(float)" class="member-name-link">setGravityFactor</a><wbr>(float&nbsp;factor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the gravity multiplier.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertiaMultiplier(float)" class="member-name-link">setInertiaMultiplier</a><wbr>(float&nbsp;factor)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertiaMultiplier(float)" class="member-name-link">setInertiaMultiplier</a><wbr>(float&nbsp;factor)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the inertia multiplier.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIsSensor(boolean)" class="member-name-link">setIsSensor</a><wbr>(boolean&nbsp;setting)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIsSensor(boolean)" class="member-name-link">setIsSensor</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether the body will be a sensor.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearDamping(float)" class="member-name-link">setLinearDamping</a><wbr>(float&nbsp;damping)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearDamping(float)" class="member-name-link">setLinearDamping</a><wbr>(float&nbsp;damping)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the linear damping constant.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity</a><wbr>(float&nbsp;vx,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity</a><wbr>(float&nbsp;vx,
  float&nbsp;vy,
  float&nbsp;vz)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the (initial) linear velocity.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the (initial) linear velocity.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassPropertiesOverride(com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">setMassPropertiesOverride</a><wbr>(<a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;properties)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the (initial) linear velocity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassPropertiesOverride(com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">setMassPropertiesOverride</a><wbr>(<a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;properties)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the mass-properties override.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAngularVelocity(float)" class="member-name-link">setMaxAngularVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAngularVelocity(float)" class="member-name-link">setMaxAngularVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the maximum angular speed.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxLinearVelocity(float)" class="member-name-link">setMaxLinearVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxLinearVelocity(float)" class="member-name-link">setMaxLinearVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the maximum linear speed.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMotionQuality(com.github.stephengold.joltjni.enumerate.EMotionQuality)" class="member-name-link">setMotionQuality</a><wbr>(<a href="enumerate/EMotionQuality.html" title="enum class in com.github.stephengold.joltjni.enumerate">EMotionQuality</a>&nbsp;motionQuality)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMotionQuality(com.github.stephengold.joltjni.enumerate.EMotionQuality)" class="member-name-link">setMotionQuality</a><wbr>(<a href="enumerate/EMotionQuality.html" title="enum class in com.github.stephengold.joltjni.enumerate">EMotionQuality</a>&nbsp;motionQuality)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the motion quality.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMotionType(com.github.stephengold.joltjni.enumerate.EMotionType)" class="member-name-link">setMotionType</a><wbr>(<a href="enumerate/EMotionType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EMotionType</a>&nbsp;motionType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMotionType(com.github.stephengold.joltjni.enumerate.EMotionType)" class="member-name-link">setMotionType</a><wbr>(<a href="enumerate/EMotionType.html" title="enum class in com.github.stephengold.joltjni.enumerate">EMotionType</a>&nbsp;motionType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the motion type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumPositionStepsOverride(int)" class="member-name-link">setNumPositionStepsOverride</a><wbr>(int&nbsp;numSteps)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumPositionStepsOverride(int)" class="member-name-link">setNumPositionStepsOverride</a><wbr>(int&nbsp;numSteps)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Override the number position iterations in the solver.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumVelocityStepsOverride(int)" class="member-name-link">setNumVelocityStepsOverride</a><wbr>(int&nbsp;numSteps)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumVelocityStepsOverride(int)" class="member-name-link">setNumVelocityStepsOverride</a><wbr>(int&nbsp;numSteps)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Override the number velocity iterations in the solver.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setObjectLayer(int)" class="member-name-link">setObjectLayer</a><wbr>(int&nbsp;objLayer)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setObjectLayer(int)" class="member-name-link">setObjectLayer</a><wbr>(int&nbsp;objLayer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the object layer.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOverrideMassProperties(com.github.stephengold.joltjni.enumerate.EOverrideMassProperties)" class="member-name-link">setOverrideMassProperties</a><wbr>(<a href="enumerate/EOverrideMassProperties.html" title="enum class in com.github.stephengold.joltjni.enumerate">EOverrideMassProperties</a>&nbsp;setting)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOverrideMassProperties(com.github.stephengold.joltjni.enumerate.EOverrideMassProperties)" class="member-name-link">setOverrideMassProperties</a><wbr>(<a href="enumerate/EOverrideMassProperties.html" title="enum class in com.github.stephengold.joltjni.enumerate">EOverrideMassProperties</a>&nbsp;setting)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter how the mass-properties override will be used.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(double,double,double)" class="member-name-link">setPosition</a><wbr>(double&nbsp;xx,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(double,double,double)" class="member-name-link">setPosition</a><wbr>(double&nbsp;xx,
  double&nbsp;yy,
  double&nbsp;zz)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the (initial) location of the body's origin (which might not
- coincide with its center of mass).</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the (initial) location of the body's origin (which might not
  coincide with its center of mass).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRestitution(float)" class="member-name-link">setRestitution</a><wbr>(float&nbsp;restitution)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;location)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the (initial) location of the body's origin (which might not
+ coincide with its center of mass).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRestitution(float)" class="member-name-link">setRestitution</a><wbr>(float&nbsp;restitution)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the restitution ratio for collisions.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;quat)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;quat)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the (initial) orientation of the body's axes.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShape(com.github.stephengold.joltjni.readonly.ConstShape)" class="member-name-link">setShape</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;shape)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShape(com.github.stephengold.joltjni.readonly.ConstShape)" class="member-name-link">setShape</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;shape)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Replace the shape and null out the shape settings.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShapeSettings(com.github.stephengold.joltjni.readonly.ConstShapeSettings)" class="member-name-link">setShapeSettings</a><wbr>(<a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a>&nbsp;shapeSettings)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShapeSettings(com.github.stephengold.joltjni.readonly.ConstShapeSettings)" class="member-name-link">setShapeSettings</a><wbr>(<a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a>&nbsp;shapeSettings)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Replace the shape settings and null out the shape.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUseManifoldReduction(boolean)" class="member-name-link">setUseManifoldReduction</a><wbr>(boolean&nbsp;setting)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUseManifoldReduction(boolean)" class="member-name-link">setUseManifoldReduction</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether manifold reduction will be enabled.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserData(long)" class="member-name-link">setUserData</a><wbr>(long&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserData(long)" class="member-name-link">setUserData</a><wbr>(long&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the body's user data.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BcsResult.html" title="class in com.github.stephengold.joltjni">BcsResult</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreWithChildren(com.github.stephengold.joltjni.StreamIn,com.github.stephengold.joltjni.streamutils.IdToShapeMap,com.github.stephengold.joltjni.streamutils.IdToMaterialMap,com.github.stephengold.joltjni.streamutils.IdToGroupFilterMap)" class="member-name-link">sRestoreWithChildren</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BcsResult.html" title="class in com.github.stephengold.joltjni">BcsResult</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sRestoreWithChildren(com.github.stephengold.joltjni.StreamIn,com.github.stephengold.joltjni.streamutils.IdToShapeMap,com.github.stephengold.joltjni.streamutils.IdToMaterialMap,com.github.stephengold.joltjni.streamutils.IdToGroupFilterMap)" class="member-name-link">sRestoreWithChildren</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream,
  <a href="streamutils/IdToShapeMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToShapeMap</a>&nbsp;shapeMap,
  <a href="streamutils/IdToMaterialMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToMaterialMap</a>&nbsp;materialMap,
  <a href="streamutils/IdToGroupFilterMap.html" title="class in com.github.stephengold.joltjni.streamutils">IdToGroupFilterMap</a>&nbsp;filterMap)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Read a settings object from the specified binary stream.</div>
 </div>
 </div>
@@ -1713,6 +1718,22 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 </section>
 </li>
 <li>
+<section class="detail" id="isEqual(com.github.stephengold.joltjni.readonly.ConstBodyCreationSettings)">
+<h3>isEqual</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a>&nbsp;other)</span></div>
+<div class="block">Test whether this object is equal to the argument. Both objects are
+ unaffected. (native operator: binary <code>==</code>)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstBodyCreationSettings.html#isEqual(com.github.stephengold.joltjni.readonly.ConstBodyCreationSettings)">isEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>other</code> - the settings to compare with (not <code>null</code>, unaffected)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if equal, <code>false</code> if unequal</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
 <h3>saveBinaryState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
@@ -1740,9 +1761,11 @@ implements <a href="readonly/ConstBodyCreationSettings.html" title="interface in
 <dd><code><a href="readonly/ConstBodyCreationSettings.html#saveWithChildren(com.github.stephengold.joltjni.StreamOut,com.github.stephengold.joltjni.streamutils.ShapeToIdMap,com.github.stephengold.joltjni.streamutils.MaterialToIdMap,com.github.stephengold.joltjni.streamutils.GroupFilterToIdMap)">saveWithChildren</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>stream</code> - where to write objects (not <code>null</code>)</dd>
-<dd><code>shapeMap</code> - track multiple uses of shapes (may be null)</dd>
-<dd><code>materialMap</code> - track multiple uses of physics materials (may be null)</dd>
-<dd><code>filterMap</code> - track multiple uses of group filters (may be null)</dd>
+<dd><code>shapeMap</code> - track multiple uses of shapes (may be <code>null</code>)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (may be
+ <code>null</code>)</dd>
+<dd><code>filterMap</code> - track multiple uses of group filters (may be
+ <code>null</code>)</dd>
 </dl>
 </section>
 </li>

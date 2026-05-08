@@ -94,11 +94,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">JointState</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a></span></div>
 <div class="block">The local-space coordinate transform of an animation joint relative to its
  parent joint. (native type: <code>SkeletonPose::JointState</code>)</div>
 </section>
@@ -126,14 +127,19 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the translation offset.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstJointState)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the rotation.</div>
+<div class="block">Copy both components from the argument.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTranslation(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setTranslation</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the translation offset.</div>
+<div class="block">Alter the rotation component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTranslation(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setTranslation</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the translation offset component.</div>
 </div>
 </div>
 </div>
@@ -144,6 +150,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -156,11 +168,48 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstJointState)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a>&nbsp;source)</span></div>
+<div class="block">Copy both components from the argument.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the state to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRotation(com.github.stephengold.joltjni.readonly.QuatArg)">
+<h3>setRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRotation</span><wbr><span class="parameters">(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</span></div>
+<div class="block">Alter the rotation component. (native attribute: mRotation)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rotation</code> - the desired rotation (not <code>null</code>, unaffected,
+ default=(0,0,0,1))</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTranslation(com.github.stephengold.joltjni.readonly.Vec3Arg)">
+<h3>setTranslation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTranslation</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</span></div>
+<div class="block">Alter the translation offset component. (native attribute: mTranslation)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>offset</code> - the desired offset (not <code>null</code>, unaffected,
+ default=(0,0,0))</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getRotation()">
 <h3>getRotation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></span>&nbsp;<span class="element-name">getRotation</span>()</div>
 <div class="block">Copy the rotation. The state is unaffected. (native attribute: mRotation)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstJointState.html#getRotation()">getRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new rotation quaternion</dd>
 </dl>
@@ -173,30 +222,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the translation offset. The state is unaffected. (native attribute:
  mTranslation)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstJointState.html#getTranslation()">getTranslation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new offset vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setRotation(com.github.stephengold.joltjni.readonly.QuatArg)">
-<h3>setRotation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRotation</span><wbr><span class="parameters">(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</span></div>
-<div class="block">Alter the rotation. (native attribute: mRotation)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>rotation</code> - the desired rotation (not null, unaffected)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setTranslation(com.github.stephengold.joltjni.readonly.Vec3Arg)">
-<h3>setTranslation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTranslation</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</span></div>
-<div class="block">Alter the translation offset. (native attribute: mTranslation)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>offset</code> - the desired offset (not null, unaffected)</dd>
 </dl>
 </section>
 </li>

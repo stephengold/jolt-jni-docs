@@ -167,18 +167,24 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the sine of the specified single-precision angle.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(float)" class="member-name-link">square</a><wbr>(float&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sqrt(float)" class="member-name-link">sqrt</a><wbr>(float&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Return the square root of the specified single-precision value but don't
+ set <code>errno</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(float)" class="member-name-link">square</a><wbr>(float&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the square of the specified single-precision value.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(int)" class="member-name-link">square</a><wbr>(int&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#square(int)" class="member-name-link">square</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the square of the specified integer value.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tan(float)" class="member-name-link">tan</a><wbr>(float&nbsp;angle)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tan(float)" class="member-name-link">tan</a><wbr>(float&nbsp;angle)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return the tangent ratio of the specified single-precision angle.</div>
 </div>
 </div>
@@ -283,7 +289,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="degreesToRadians(float)">
 <h3>degreesToRadians</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">degreesToRadians</span><wbr><span class="parameters">(float&nbsp;degrees)</span></div>
-<div class="block">Convert the specified angle from degrees to radians.</div>
+<div class="block">Convert the specified angle from degrees to radians. (see
+ Jolt/Math/Math.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>degrees</code> - the angle to convert (in degrees)</dd>
@@ -296,7 +303,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="radiansToDegrees(float)">
 <h3>radiansToDegrees</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">radiansToDegrees</span><wbr><span class="parameters">(float&nbsp;radians)</span></div>
-<div class="block">Convert the specified angle from radians to degrees.</div>
+<div class="block">Convert the specified angle from radians to degrees. (see
+ Jolt/Math/Math.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>radians</code> - the angle to convert (in radians)</dd>
@@ -334,6 +342,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="sqrt(float)">
+<h3>sqrt</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">sqrt</span><wbr><span class="parameters">(float&nbsp;value)</span></div>
+<div class="block">Return the square root of the specified single-precision value but don't
+ set <code>errno</code>. (see Jolt/Math/Math.h)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - the input value</dd>
+<dt>Returns:</dt>
+<dd>the square root</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="square(float)">
 <h3>square</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">square</span><wbr><span class="parameters">(float&nbsp;value)</span></div>
@@ -350,7 +372,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="square(int)">
 <h3>square</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">square</span><wbr><span class="parameters">(int&nbsp;value)</span></div>
-<div class="block">Return the square of the specified integer value.</div>
+<div class="block">Return the square of the specified integer value. (see Jolt/Math/Math.h)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - the input value</dd>

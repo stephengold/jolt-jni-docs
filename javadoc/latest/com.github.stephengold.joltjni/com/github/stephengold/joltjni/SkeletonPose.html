@@ -94,11 +94,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">SkeletonPose</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></span></div>
 <div class="block">A skeleton with joint transforms specifying a pose.</div>
 </section>
 <section class="summary">
@@ -115,7 +116,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate a default pose.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">SkeletonPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)" class="member-name-link">SkeletonPose</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a clone of the specified pose.</div>
 </div>
@@ -210,6 +211,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -229,9 +236,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.SkeletonPose)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)">
 <h3>SkeletonPose</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SkeletonPose</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SkeletonPose</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a clone of the specified pose.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -262,111 +269,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="calculateLocalSpaceJointMatrices(com.github.stephengold.joltjni.Mat44Array)">
-<h3>calculateLocalSpaceJointMatrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">calculateLocalSpaceJointMatrices</span><wbr><span class="parameters">(<a href="Mat44Array.html" title="class in com.github.stephengold.joltjni">Mat44Array</a>&nbsp;storeMatrices)</span></div>
-<div class="block">Calculate the joint matrices in local space.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>storeMatrices</code> - storage for the matrices (not null, modified)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="draw(com.github.stephengold.joltjni.SkeletonPoseDrawSettings,com.github.stephengold.joltjni.DebugRenderer)">
-<h3>draw</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">draw</span><wbr><span class="parameters">(<a href="SkeletonPoseDrawSettings.html" title="class in com.github.stephengold.joltjni">SkeletonPoseDrawSettings</a>&nbsp;settings,
- <a href="DebugRenderer.html" title="class in com.github.stephengold.joltjni">DebugRenderer</a>&nbsp;renderer)</span></div>
-<div class="block">Draw the current pose using the specified settings and renderer. The pose
- is unaffected.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>settings</code> - the desired settings (not null, unaffected)</dd>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="draw(com.github.stephengold.joltjni.SkeletonPoseDrawSettings,com.github.stephengold.joltjni.DebugRenderer,com.github.stephengold.joltjni.readonly.RMat44Arg)">
-<h3>draw</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">draw</span><wbr><span class="parameters">(<a href="SkeletonPoseDrawSettings.html" title="class in com.github.stephengold.joltjni">SkeletonPoseDrawSettings</a>&nbsp;settings,
- <a href="DebugRenderer.html" title="class in com.github.stephengold.joltjni">DebugRenderer</a>&nbsp;renderer,
- <a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform)</span></div>
-<div class="block">Draw the current pose using the specified settings and renderer. The pose
- is unaffected.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>settings</code> - the desired settings (not null, unaffected)</dd>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
-<dd><code>transform</code> - the transform to apply (not null, unaffected,
- default=Identity)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getJoint(int)">
-<h3>getJoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="JointState.html" title="class in com.github.stephengold.joltjni">JointState</a></span>&nbsp;<span class="element-name">getJoint</span><wbr><span class="parameters">(int&nbsp;jointIndex)</span></div>
-<div class="block">Access the transforms of the specified joint.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>jointIndex</code> - the index of the joint to access</dd>
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getJointCount()">
-<h3>getJointCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getJointCount</span>()</div>
-<div class="block">Count how many joints are in the pose.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getJointMatrix(int)">
-<h3>getJointMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></span>&nbsp;<span class="element-name">getJointMatrix</span><wbr><span class="parameters">(int&nbsp;jointIndex)</span></div>
-<div class="block">Access the transform matrix for the specified joint.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>jointIndex</code> - which joint (&ge;0)</dd>
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getJointMatrices()">
 <h3>getJointMatrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Mat44Array.html" title="class in com.github.stephengold.joltjni">Mat44Array</a></span>&nbsp;<span class="element-name">getJointMatrices</span>()</div>
 <div class="block">Access the joint matrices.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getRootOffset()">
-<h3>getRootOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">getRootOffset</span>()</div>
-<div class="block">Copy the root offset.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSkeleton()">
-<h3>getSkeleton</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstSkeleton.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeleton</a></span>&nbsp;<span class="element-name">getSkeleton</span>()</div>
-<div class="block">Access the skeleton that underlies this pose.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
@@ -380,7 +286,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Alter the root offset.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>offset</code> - the desired offset (not null, unaffected)</dd>
+<dd><code>offset</code> - the desired offset (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -391,7 +297,126 @@ loadScripts(document, 'script');</script>
 <div class="block">Replace the skeleton.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>skeleton</code> - the desired skeleton (not null)</dd>
+<dd><code>skeleton</code> - the desired skeleton (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="calculateLocalSpaceJointMatrices(com.github.stephengold.joltjni.Mat44Array)">
+<h3>calculateLocalSpaceJointMatrices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">calculateLocalSpaceJointMatrices</span><wbr><span class="parameters">(<a href="Mat44Array.html" title="class in com.github.stephengold.joltjni">Mat44Array</a>&nbsp;storeMatrices)</span></div>
+<div class="block">Calculate the joint matrices in local space. The pose is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#calculateLocalSpaceJointMatrices(com.github.stephengold.joltjni.Mat44Array)">calculateLocalSpaceJointMatrices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeMatrices</code> - storage for the matrices (not <code>null</code>,
+ modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="draw(com.github.stephengold.joltjni.SkeletonPoseDrawSettings,com.github.stephengold.joltjni.DebugRenderer)">
+<h3>draw</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">draw</span><wbr><span class="parameters">(<a href="SkeletonPoseDrawSettings.html" title="class in com.github.stephengold.joltjni">SkeletonPoseDrawSettings</a>&nbsp;settings,
+ <a href="DebugRenderer.html" title="class in com.github.stephengold.joltjni">DebugRenderer</a>&nbsp;renderer)</span></div>
+<div class="block">Draw the current pose using the specified settings and renderer. The pose
+ is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#draw(com.github.stephengold.joltjni.SkeletonPoseDrawSettings,com.github.stephengold.joltjni.DebugRenderer)">draw</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>settings</code> - the desired settings (not <code>null</code>, unaffected)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="draw(com.github.stephengold.joltjni.SkeletonPoseDrawSettings,com.github.stephengold.joltjni.DebugRenderer,com.github.stephengold.joltjni.readonly.RMat44Arg)">
+<h3>draw</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">draw</span><wbr><span class="parameters">(<a href="SkeletonPoseDrawSettings.html" title="class in com.github.stephengold.joltjni">SkeletonPoseDrawSettings</a>&nbsp;settings,
+ <a href="DebugRenderer.html" title="class in com.github.stephengold.joltjni">DebugRenderer</a>&nbsp;renderer,
+ <a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;transform)</span></div>
+<div class="block">Draw the current pose using the specified settings and renderer. The pose
+ is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#draw(com.github.stephengold.joltjni.SkeletonPoseDrawSettings,com.github.stephengold.joltjni.DebugRenderer,com.github.stephengold.joltjni.readonly.RMat44Arg)">draw</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>settings</code> - the desired settings (not <code>null</code>, unaffected)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
+<dd><code>transform</code> - the transform to apply (not <code>null</code>, unaffected,
+ default=Identity)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getJoint(int)">
+<h3>getJoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="JointState.html" title="class in com.github.stephengold.joltjni">JointState</a></span>&nbsp;<span class="element-name">getJoint</span><wbr><span class="parameters">(int&nbsp;jointIndex)</span></div>
+<div class="block">Access the transforms of the specified joint. The pose is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#getJoint(int)">getJoint</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>jointIndex</code> - the index of the joint to access</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getJointCount()">
+<h3>getJointCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getJointCount</span>()</div>
+<div class="block">Count how many joints are in the pose. The pose is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#getJointCount()">getJointCount</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getJointMatrix(int)">
+<h3>getJointMatrix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></span>&nbsp;<span class="element-name">getJointMatrix</span><wbr><span class="parameters">(int&nbsp;jointIndex)</span></div>
+<div class="block">Access the transform matrix for the specified joint. The pose is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#getJointMatrix(int)">getJointMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>jointIndex</code> - which joint (&ge;0)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRootOffset()">
+<h3>getRootOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">getRootOffset</span>()</div>
+<div class="block">Copy the root offset. The pose is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#getRootOffset()">getRootOffset</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSkeleton()">
+<h3>getSkeleton</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstSkeleton.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeleton</a></span>&nbsp;<span class="element-name">getSkeleton</span>()</div>
+<div class="block">Access the skeleton that underlies this pose. The pose is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSkeletonPose.html#getSkeleton()">getSkeleton</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
 </section>
 </li>

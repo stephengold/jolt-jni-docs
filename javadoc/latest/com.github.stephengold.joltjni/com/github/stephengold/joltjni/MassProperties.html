@@ -100,8 +100,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">MassProperties</span>
 <span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
 implements <a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a></span></div>
-<div class="block">The mass and inertial tensor of a <code>Body</code>. Used only during
- construction.</div>
+<div class="block">The mass and inertia tensor of a <code>Body</code>. Used only during construction.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -152,47 +151,52 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the mass.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rotate(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">rotate</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;rotation)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;other)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether this object is equal to the argument.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rotate(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">rotate</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;rotation)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Rotate the inertia by the specified 3x3 matrix.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">scale</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scaleFactors)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">scale</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scaleFactors)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Scale the mass and inertia by the specified factors.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scaleToMass(float)" class="member-name-link">scaleToMass</a><wbr>(float&nbsp;mass)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scaleToMass(float)" class="member-name-link">scaleToMass</a><wbr>(float&nbsp;mass)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set the mass and scale the inertia tensor to match.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertia(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">setInertia</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;inertia)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertia(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">setInertia</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;inertia)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the inertia tensor.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMass(float)" class="member-name-link">setMass</a><wbr>(float&nbsp;mass)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMass(float)" class="member-name-link">setMass</a><wbr>(float&nbsp;mass)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the mass.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassAndInertiaOfSolidBox(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">setMassAndInertiaOfSolidBox</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;boxSize,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassAndInertiaOfSolidBox(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">setMassAndInertiaOfSolidBox</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;boxSize,
  float&nbsp;density)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the mass and inertia to that of a box with the specified dimensions
  and uniform density.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return a string representation of the properties object, which is
  unaffected.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translate(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">translate</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translate(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">translate</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Translate the inertia by the specified offset.</div>
 </div>
 </div>
@@ -254,7 +258,7 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <div class="block">Rotate the inertia by the specified 3x3 matrix.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rotation</code> - the rotation to apply (not null, unaffected)</dd>
+<dd><code>rotation</code> - the rotation to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -266,7 +270,7 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
  can be &lt;0 to flip the shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>scaleFactors</code> - the desired scaling (not null unaffected)</dd>
+<dd><code>scaleFactors</code> - the desired scaling (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -288,7 +292,8 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <div class="block">Alter the inertia tensor. (native attribute: mInertia)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>inertia</code> - the desired value (not null, unaffected, default=zero)</dd>
+<dd><code>inertia</code> - the desired value (not <code>null</code>, unaffected,
+ default=zero)</dd>
 <dt>Returns:</dt>
 <dd>the modified properties, for chaining</dd>
 </dl>
@@ -316,7 +321,7 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
  and uniform density.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>boxSize</code> - the edge lengths of the box (not null, unaffected)</dd>
+<dd><code>boxSize</code> - the edge lengths of the box (not <code>null</code>, unaffected)</dd>
 <dd><code>density</code> - the density to use</dd>
 </dl>
 </section>
@@ -328,7 +333,7 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <div class="block">Translate the inertia by the specified offset.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>offset</code> - the amount of translation (not null, unaffected)</dd>
+<dd><code>offset</code> - the amount of translation (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -343,8 +348,10 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstMassProperties.html#decomposePrincipalMomentsOfInertia(com.github.stephengold.joltjni.Mat44,com.github.stephengold.joltjni.Vec3)">decomposePrincipalMomentsOfInertia</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeRotation</code> - storage for the rotation matrix (not null, modified)</dd>
-<dd><code>storeDiagonal</code> - storage for the diagonal matrix (not null, modified)</dd>
+<dd><code>storeRotation</code> - storage for the rotation matrix (not <code>null</code>,
+ modified)</dd>
+<dd><code>storeDiagonal</code> - storage for the diagonal matrix (not <code>null</code>,
+ modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
 </dl>
@@ -360,7 +367,7 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstMassProperties.html#getInertia()">getInertia</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a></code></dd>
 <dt>Returns:</dt>
-<dd>a new matrix (in kilogram.meters squared)</dd>
+<dd>a new matrix (in kilogram.meters^2)</dd>
 </dl>
 </section>
 </li>
@@ -378,6 +385,23 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 </section>
 </li>
 <li>
+<section class="detail" id="isEqual(com.github.stephengold.joltjni.readonly.ConstMassProperties)">
+<h3>isEqual</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;other)</span></div>
+<div class="block">Test whether this object is equal to the argument. Both objects are
+ unaffected. (native operator: binary <code>==</code>)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMassProperties.html#isEqual(com.github.stephengold.joltjni.readonly.ConstMassProperties)">isEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>other</code> - the properties to compare with (not <code>null</code>,
+ unaffected)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if equal, <code>false</code> if unequal</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
@@ -387,7 +411,7 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <dt>Overrides:</dt>
 <dd><code><a href="JoltPhysicsObject.html#toString()">toString</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
 <dt>Returns:</dt>
-<dd>the string representation (not null, not empty)</dd>
+<dd>the string representation (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>

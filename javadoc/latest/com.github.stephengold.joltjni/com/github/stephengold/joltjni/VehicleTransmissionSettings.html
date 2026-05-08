@@ -94,7 +94,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -102,7 +102,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VehicleTransmissionSettings</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></span></div>
 <div class="block">Settings used to configure the transmission (gearbox) of a
  <code>WheeledVehicleController</code>.</div>
 </section>
@@ -120,7 +121,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.VehicleTransmissionSettings)" class="member-name-link">VehicleTransmissionSettings</a><wbr>(<a href="VehicleTransmissionSettings.html" title="class in com.github.stephengold.joltjni">VehicleTransmissionSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstVehicleTransmissionSettings)" class="member-name-link">VehicleTransmissionSettings</a><wbr>(<a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -186,6 +187,16 @@ loadScripts(document, 'script');</script>
 <div class="block">Return how long it takes to shift gears in <code>Auto</code> mode.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)" class="member-name-link">restoreBinaryState</a><wbr>(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Load the settings from the specified binary stream.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveBinaryState(com.github.stephengold.joltjni.StreamOut)" class="member-name-link">saveBinaryState</a><wbr>(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Save the settings to the specified binary stream.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setClutchReleaseTime(float)" class="member-name-link">setClutchReleaseTime</a><wbr>(float&nbsp;latency)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter how long it takes to release the clutch in <code>Auto</code> mode.</div>
@@ -241,6 +252,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -260,9 +277,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.VehicleTransmissionSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstVehicleTransmissionSettings)">
 <h3>VehicleTransmissionSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleTransmissionSettings</span><wbr><span class="parameters">(<a href="VehicleTransmissionSettings.html" title="class in com.github.stephengold.joltjni">VehicleTransmissionSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleTransmissionSettings</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -279,112 +296,13 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getClutchReleaseTime()">
-<h3>getClutchReleaseTime</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getClutchReleaseTime</span>()</div>
-<div class="block">Return how long it takes to release the clutch in <code>Auto</code> mode. The
- settings are unaffected. (native attribute: mClutchReleaseTime)</div>
+<section class="detail" id="restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">
+<h3>restoreBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreBinaryState</span><wbr><span class="parameters">(<a href="StreamIn.html" title="class in com.github.stephengold.joltjni">StreamIn</a>&nbsp;stream)</span></div>
+<div class="block">Load the settings from the specified binary stream.</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>the latency (in seconds)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getClutchStrength()">
-<h3>getClutchStrength</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getClutchStrength</span>()</div>
-<div class="block">Return the total torque applied by the clutch when fully engaged. The
- settings are unaffected. (native attribute: mClutchStrength)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the strength</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getGearRatios()">
-<h3>getGearRatios</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float[]</span>&nbsp;<span class="element-name">getGearRatios</span>()</div>
-<div class="block">Return the number of engine rotations per gearbox rotation for each
- forward gear. The first element is for 1st gear. The settings are
- unaffected. (native attribute: mGearRatios)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new array</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMode()">
-<h3>getMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enumerate/ETransmissionMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ETransmissionMode</a></span>&nbsp;<span class="element-name">getMode</span>()</div>
-<div class="block">Return the type of transmission. The settings are unaffected. (native
- attribute: mMode)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>an enum value (not null)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getReverseGearRatios()">
-<h3>getReverseGearRatios</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float[]</span>&nbsp;<span class="element-name">getReverseGearRatios</span>()</div>
-<div class="block">Return the number of engine rotations per gearbox rotation for each
- reverse gear. The settings are unaffected. (native attribute:
- mReverseGearRatios)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new array</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getShiftDownRpm()">
-<h3>getShiftDownRpm</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getShiftDownRpm</span>()</div>
-<div class="block">Return the maximum engine RPMs for downshifting in <code>Auto</code> mode. The
- settings are unaffected. (native attribute: mShiftDownRPM)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the threshold rate (in revolutions per minute)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getShiftUpRpm()">
-<h3>getShiftUpRpm</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getShiftUpRpm</span>()</div>
-<div class="block">Return the minimum engine RPMs for upshifting in <code>Auto</code> mode. The
- settings are unaffected. (native attribute: mShiftUpRPM)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the threshold rate (in revolutions per minute)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSwitchLatency()">
-<h3>getSwitchLatency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSwitchLatency</span>()</div>
-<div class="block">Return the minimum time between shifts in <code>Auto</code> mode. The settings
- are unaffected. (native attribute: mSwitchLatency)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the latency (in seconds)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSwitchTime()">
-<h3>getSwitchTime</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSwitchTime</span>()</div>
-<div class="block">Return how long it takes to shift gears in <code>Auto</code> mode. The
- settings are unaffected. (native attribute: mSwitchTime)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the latency (in seconds)</dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to read from (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -493,6 +411,148 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>latency</code> - the desired latency (in seconds)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getClutchReleaseTime()">
+<h3>getClutchReleaseTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getClutchReleaseTime</span>()</div>
+<div class="block">Return how long it takes to release the clutch in <code>Auto</code> mode. The
+ settings are unaffected. (native attribute: mClutchReleaseTime)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getClutchReleaseTime()">getClutchReleaseTime</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the latency (in seconds)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getClutchStrength()">
+<h3>getClutchStrength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getClutchStrength</span>()</div>
+<div class="block">Return the total torque applied by the clutch when fully engaged. The
+ settings are unaffected. (native attribute: mClutchStrength)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getClutchStrength()">getClutchStrength</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the strength</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getGearRatios()">
+<h3>getGearRatios</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float[]</span>&nbsp;<span class="element-name">getGearRatios</span>()</div>
+<div class="block">Return the number of engine rotations per gearbox rotation for each
+ forward gear. The first element is for 1st gear. The settings are
+ unaffected. (native attribute: mGearRatios)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getGearRatios()">getGearRatios</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new array</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMode()">
+<h3>getMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enumerate/ETransmissionMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ETransmissionMode</a></span>&nbsp;<span class="element-name">getMode</span>()</div>
+<div class="block">Return the type of transmission. The settings are unaffected. (native
+ attribute: mMode)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getMode()">getMode</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>an enum value (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReverseGearRatios()">
+<h3>getReverseGearRatios</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float[]</span>&nbsp;<span class="element-name">getReverseGearRatios</span>()</div>
+<div class="block">Return the number of engine rotations per gearbox rotation for each
+ reverse gear. The settings are unaffected. (native attribute:
+ mReverseGearRatios)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getReverseGearRatios()">getReverseGearRatios</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new array</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getShiftDownRpm()">
+<h3>getShiftDownRpm</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getShiftDownRpm</span>()</div>
+<div class="block">Return the maximum engine RPMs for downshifting in <code>Auto</code> mode. The
+ settings are unaffected. (native attribute: mShiftDownRPM)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getShiftDownRpm()">getShiftDownRpm</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the threshold rate (in revolutions per minute)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getShiftUpRpm()">
+<h3>getShiftUpRpm</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getShiftUpRpm</span>()</div>
+<div class="block">Return the minimum engine RPMs for upshifting in <code>Auto</code> mode. The
+ settings are unaffected. (native attribute: mShiftUpRPM)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getShiftUpRpm()">getShiftUpRpm</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the threshold rate (in revolutions per minute)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSwitchLatency()">
+<h3>getSwitchLatency</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSwitchLatency</span>()</div>
+<div class="block">Return the minimum time between shifts in <code>Auto</code> mode. The settings
+ are unaffected. (native attribute: mSwitchLatency)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getSwitchLatency()">getSwitchLatency</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the latency (in seconds)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSwitchTime()">
+<h3>getSwitchTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getSwitchTime</span>()</div>
+<div class="block">Return how long it takes to shift gears in <code>Auto</code> mode. The
+ settings are unaffected. (native attribute: mSwitchTime)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#getSwitchTime()">getSwitchTime</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the latency (in seconds)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="saveBinaryState(com.github.stephengold.joltjni.StreamOut)">
+<h3>saveBinaryState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveBinaryState</span><wbr><span class="parameters">(<a href="StreamOut.html" title="class in com.github.stephengold.joltjni">StreamOut</a>&nbsp;stream)</span></div>
+<div class="block">Save the settings to the specified binary stream. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTransmissionSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTransmissionSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>stream</code> - the stream to write to (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>

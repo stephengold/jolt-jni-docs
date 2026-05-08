@@ -195,7 +195,8 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sqrt(float)" class="member-name-link">sqrt</a><wbr>(float&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return the square root of the specified single-precision value.</div>
+<div class="block">Return the square root of the specified single-precision value and set
+ <code>errno</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#strcmp(java.lang.String,java.lang.String)" class="member-name-link">strcmp</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lhs,
@@ -399,8 +400,9 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="sqrt(float)">
 <h3>sqrt</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">sqrt</span><wbr><span class="parameters">(float&nbsp;value)</span></div>
-<div class="block">Return the square root of the specified single-precision value. There's
- evidence this is slower than <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Math.html#sqrt(double)" title="class or interface in java.lang" class="external-link"><code>Math.sqrt(double)</code></a>.</div>
+<div class="block">Return the square root of the specified single-precision value and set
+ <code>errno</code>. There's evidence this is slower than
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Math.html#sqrt(double)" title="class or interface in java.lang" class="external-link"><code>Math.sqrt(double)</code></a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - the input value</dd>

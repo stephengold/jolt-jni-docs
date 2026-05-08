@@ -149,7 +149,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Instantiate from the specified buffer.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.nio.FloatBuffer,int)" class="member-name-link">Vec3</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer,
- int&nbsp;startPos)</code></div>
+ int&nbsp;startPosition)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate from the specified position in the specified buffer.</div>
 </div>
@@ -180,13 +180,24 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="block">Add the specified offsets.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyTo(java.nio.FloatBuffer)" class="member-name-link">copyTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyTo(float%5B%5D)" class="member-name-link">copyTo</a><wbr>(float[]&nbsp;storeArray)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy all 3 components to the specified array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyTo(float%5B%5D,int)" class="member-name-link">copyTo</a><wbr>(float[]&nbsp;storeArray,
+ int&nbsp;startPosition)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy all 3 components to the specified position in the specified array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyTo(java.nio.FloatBuffer)" class="member-name-link">copyTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write all 3 components to the start of the specified buffer.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyTo(java.nio.FloatBuffer,int)" class="member-name-link">copyTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats,
- int&nbsp;startPos)</code></div>
+ int&nbsp;startPosition)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write all 3 components to the specified position in the specified buffer.</div>
 </div>
@@ -402,7 +413,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(java.nio.FloatBuffer,int)" class="member-name-link">set</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer,
- int&nbsp;startPos)</code></div>
+ int&nbsp;startPosition)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set all 3 components from the specified position in the specified buffer.</div>
 </div>
@@ -525,17 +536,17 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float[]</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toArray()" class="member-name-link">toArray</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the components to an array.</div>
+<div class="block">Copy all 3 components to a new array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toBuffer()" class="member-name-link">toBuffer</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the components to a direct buffer.</div>
+<div class="block">Copy all 3 components to a new direct buffer.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRVec3()" class="member-name-link">toRVec3</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the components to a new location vector.</div>
+<div class="block">Copy all 3 components to a new location vector.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -640,12 +651,12 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="&lt;init&gt;(java.nio.FloatBuffer,int)">
 <h3>Vec3</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Vec3</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer,
- int&nbsp;startPos)</span></div>
+ int&nbsp;startPosition)</span></div>
 <div class="block">Instantiate from the specified position in the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected)</dd>
-<dd><code>startPos</code> - the starting position in the buffer (&ge;0)</dd>
+<dd><code>startPosition</code> - the starting position in the buffer (&ge;0)</dd>
 </dl>
 </section>
 </li>
@@ -836,7 +847,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>buffer</code> - the desired component values (not <code>null</code>,
- length&ge;3, unaffected)</dd>
+ capacity&ge;3, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -844,12 +855,13 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="set(java.nio.FloatBuffer,int)">
 <h3>set</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;buffer,
- int&nbsp;startPos)</span></div>
+ int&nbsp;startPosition)</span></div>
 <div class="block">Set all 3 components from the specified position in the specified buffer.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>buffer</code> - the desired component values (not <code>null</code>, unaffected)</dd>
-<dd><code>startPos</code> - the starting position in the buffer (&ge;0)</dd>
+<dd><code>buffer</code> - the desired component values (not <code>null</code>,
+ capacity&ge;startPosition+3, unaffected)</dd>
+<dd><code>startPosition</code> - the starting position in the buffer (&ge;0)</dd>
 </dl>
 </section>
 </li>
@@ -1142,16 +1154,46 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 </section>
 </li>
 <li>
+<section class="detail" id="copyTo(float[])">
+<h3>copyTo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">copyTo</span><wbr><span class="parameters">(float[]&nbsp;storeArray)</span></div>
+<div class="block">Copy all 3 components to the specified array. The vector is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/Vec3Arg.html#copyTo(float%5B%5D)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeArray</code> - the destination array (not <code>null</code>, length&ge;3)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="copyTo(float[],int)">
+<h3>copyTo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">copyTo</span><wbr><span class="parameters">(float[]&nbsp;storeArray,
+ int&nbsp;startPosition)</span></div>
+<div class="block">Copy all 3 components to the specified position in the specified array.
+ The vector is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/Vec3Arg.html#copyTo(float%5B%5D,int)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeArray</code> - the destination array (not <code>null</code>,
+ length&ge;startPosition+3)</dd>
+<dd><code>startPosition</code> - the starting position in the array (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="copyTo(java.nio.FloatBuffer)">
 <h3>copyTo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">copyTo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">copyTo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeBuffer)</span></div>
 <div class="block">Write all 3 components to the start of the specified buffer. The vector
  is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#copyTo(java.nio.FloatBuffer)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>storeFloats</code> - the destination buffer (not <code>null</code>,
+<dd><code>storeBuffer</code> - the destination buffer (not <code>null</code>,
  capacity&ge;3)</dd>
 </dl>
 </section>
@@ -1160,15 +1202,16 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="copyTo(java.nio.FloatBuffer,int)">
 <h3>copyTo</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">copyTo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;storeFloats,
- int&nbsp;startPos)</span></div>
-<div class="block">Write all 3 components to the specified position in the specified buffer.</div>
+ int&nbsp;startPosition)</span></div>
+<div class="block">Write all 3 components to the specified position in the specified buffer.
+ The vector is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#copyTo(java.nio.FloatBuffer,int)">copyTo</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>storeFloats</code> - the destination buffer (not <code>null</code>,
- capacity&ge;startPos+3)</dd>
-<dd><code>startPos</code> - the starting position in the buffer (&ge;0)</dd>
+ capacity&ge;startPosition+3)</dd>
+<dd><code>startPosition</code> - the starting position in the buffer (&ge;0)</dd>
 </dl>
 </section>
 </li>
@@ -1550,7 +1593,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="toArray()">
 <h3>toArray</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float[]</span>&nbsp;<span class="element-name">toArray</span>()</div>
-<div class="block">Copy the components to an array. The vector is unaffected.</div>
+<div class="block">Copy all 3 components to a new array. The vector is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#toArray()">toArray</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
@@ -1563,7 +1606,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="toBuffer()">
 <h3>toBuffer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a></span>&nbsp;<span class="element-name">toBuffer</span>()</div>
-<div class="block">Copy the components to a direct buffer. The vector is unaffected.</div>
+<div class="block">Copy all 3 components to a new direct buffer. The vector is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Vec3Arg.html#toBuffer()">toBuffer</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a></code></dd>
@@ -1576,7 +1619,7 @@ implements <a href="readonly/Vec3Arg.html" title="interface in com.github.stephe
 <section class="detail" id="toRVec3()">
 <h3>toRVec3</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">toRVec3</span>()</div>
-<div class="block">Copy the components to a new location vector. The current vector is
+<div class="block">Copy all 3 components to a new location vector. The current vector is
  unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>

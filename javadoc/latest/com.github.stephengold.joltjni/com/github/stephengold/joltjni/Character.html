@@ -240,7 +240,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicsSystem()" class="member-name-link">getPhysicsSystem</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the system to which the character's body belongs.</div>
+<div class="block">Access the physics system to which the character's body belongs.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
@@ -1130,7 +1130,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <section class="detail" id="getPhysicsSystem()">
 <h3>getPhysicsSystem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></span>&nbsp;<span class="element-name">getPhysicsSystem</span>()</div>
-<div class="block">Access the system to which the character's body belongs.</div>
+<div class="block">Access the physics system to which the character's body belongs.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterBase.html#getPhysicsSystem()">getPhysicsSystem</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
@@ -1199,7 +1199,7 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dd><code><a href="readonly/ConstCharacter.html#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat,boolean)">getPositionAndRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>storeLocation</code> - storage for the location (in system coordinates, not
- null, modified)</dd>
+ <code>null</code>, modified)</dd>
 <dd><code>storeOrientation</code> - storage for the orientation (in system
  coordinates, not <code>null</code>, modified)</dd>
 <dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,

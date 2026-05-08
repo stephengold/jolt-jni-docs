@@ -136,32 +136,44 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
  the bodies.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPoseUsingKinematics(com.github.stephengold.joltjni.SkeletonPose,float)" class="member-name-link">driveToPoseUsingKinematics</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPoseUsingKinematics(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,float)" class="member-name-link">driveToPoseUsingKinematics</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
  float&nbsp;time)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Drive the ragdoll to the specified pose by setting velocities.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPoseUsingKinematics(com.github.stephengold.joltjni.SkeletonPose,float,boolean)" class="member-name-link">driveToPoseUsingKinematics</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPoseUsingKinematics(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,float,boolean)" class="member-name-link">driveToPoseUsingKinematics</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
  float&nbsp;time,
  boolean&nbsp;lockBodies)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Drive the ragdoll to the specified pose by setting velocities.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPoseUsingMotors(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">driveToPoseUsingMotors</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPoseUsingMotors(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)" class="member-name-link">driveToPoseUsingMotors</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Drive the ragdoll to the specified pose using motors.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyCount()" class="member-name-link">getBodyCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPoseUsingMotors(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,com.github.stephengold.joltjni.readonly.ConstSkeletonPose,float)" class="member-name-link">driveToPoseUsingMotors</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;prevPose,
+ <a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
+ float&nbsp;deltaTime)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Drive the ragdoll to the specified pose using motors.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyCount()" class="member-name-link">getBodyCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count how many bodies are in the ragdoll, which is unaffected</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int[]</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyIds()" class="member-name-link">getBodyIds</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyIds()" class="member-name-link">getBodyIds</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Enumerate all bodies in the ragdoll, which is unaffected.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TwoBodyConstraint.html" title="class in com.github.stephengold.joltjni">TwoBodyConstraint</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConstraint(int)" class="member-name-link">getConstraint</a><wbr>(int&nbsp;constraintIndex)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the specified constraint.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConstraintCount()" class="member-name-link">getConstraintCount</a>()</code></div>
@@ -227,12 +239,12 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <div class="block">Mark the native <code>Ragdoll</code> as embedded.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.SkeletonPose)" class="member-name-link">setPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)" class="member-name-link">setPose</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the ragdoll's pose using the locking body interface.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.SkeletonPose,boolean)" class="member-name-link">setPose</a><wbr>(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPose(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,boolean)" class="member-name-link">setPose</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
  boolean&nbsp;lockBodies)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the ragdoll's pose.</div>
@@ -301,9 +313,9 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 </section>
 </li>
 <li>
-<section class="detail" id="driveToPoseUsingKinematics(com.github.stephengold.joltjni.SkeletonPose,float)">
+<section class="detail" id="driveToPoseUsingKinematics(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,float)">
 <h3>driveToPoseUsingKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">driveToPoseUsingKinematics</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">driveToPoseUsingKinematics</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
  float&nbsp;time)</span></div>
 <div class="block">Drive the ragdoll to the specified pose by setting velocities.</div>
 <dl class="notes">
@@ -314,9 +326,9 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 </section>
 </li>
 <li>
-<section class="detail" id="driveToPoseUsingKinematics(com.github.stephengold.joltjni.SkeletonPose,float,boolean)">
+<section class="detail" id="driveToPoseUsingKinematics(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,float,boolean)">
 <h3>driveToPoseUsingKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">driveToPoseUsingKinematics</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">driveToPoseUsingKinematics</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
  float&nbsp;time,
  boolean&nbsp;lockBodies)</span></div>
 <div class="block">Drive the ragdoll to the specified pose by setting velocities.</div>
@@ -329,13 +341,30 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 </section>
 </li>
 <li>
-<section class="detail" id="driveToPoseUsingMotors(com.github.stephengold.joltjni.SkeletonPose)">
+<section class="detail" id="driveToPoseUsingMotors(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)">
 <h3>driveToPoseUsingMotors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">driveToPoseUsingMotors</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">driveToPoseUsingMotors</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose)</span></div>
 <div class="block">Drive the ragdoll to the specified pose using motors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pose</code> - the desired pose (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="driveToPoseUsingMotors(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,com.github.stephengold.joltjni.readonly.ConstSkeletonPose,float)">
+<h3>driveToPoseUsingMotors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">driveToPoseUsingMotors</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;prevPose,
+ <a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
+ float&nbsp;deltaTime)</span></div>
+<div class="block">Drive the ragdoll to the specified pose using motors. Drives to both
+ target position and target velocity.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>prevPose</code> - the previous desired pose, used to calculate the target
+ velocity of each motor (not <code>null</code>, unaffected)</dd>
+<dd><code>pose</code> - the desired pose (not <code>null</code>, unaffected)</dd>
+<dd><code>deltaTime</code> - the time interval between poses (in seconds)</dd>
 </dl>
 </section>
 </li>
@@ -359,6 +388,19 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new array of body IDs</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConstraint(int)">
+<h3>getConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TwoBodyConstraint.html" title="class in com.github.stephengold.joltjni">TwoBodyConstraint</a></span>&nbsp;<span class="element-name">getConstraint</span><wbr><span class="parameters">(int&nbsp;constraintIndex)</span></div>
+<div class="block">Access the specified constraint.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>constraintIndex</code> - which constraint to access (&ge;0)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
 </section>
 </li>
@@ -484,9 +526,9 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 </section>
 </li>
 <li>
-<section class="detail" id="setPose(com.github.stephengold.joltjni.SkeletonPose)">
+<section class="detail" id="setPose(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)">
 <h3>setPose</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPose</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPose</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose)</span></div>
 <div class="block">Alter the ragdoll's pose using the locking body interface.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -495,9 +537,9 @@ implements <a href="template/RefTarget.html" title="interface in com.github.step
 </section>
 </li>
 <li>
-<section class="detail" id="setPose(com.github.stephengold.joltjni.SkeletonPose,boolean)">
+<section class="detail" id="setPose(com.github.stephengold.joltjni.readonly.ConstSkeletonPose,boolean)">
 <h3>setPose</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPose</span><wbr><span class="parameters">(<a href="SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a>&nbsp;pose,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPose</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;pose,
  boolean&nbsp;lockBodies)</span></div>
 <div class="block">Alter the ragdoll's pose.</div>
 <dl class="notes">

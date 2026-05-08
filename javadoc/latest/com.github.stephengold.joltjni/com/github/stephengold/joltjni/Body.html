@@ -178,8 +178,15 @@ implements <a href="readonly/ConstBody.html" title="interface in com.github.step
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Apply the specified torque to the body.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyBuoyancyImpulse(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float,float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">applyBuoyancyImpulse</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;surfacePosition,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyBodyCreationSettings(com.github.stephengold.joltjni.readonly.ConstBodyCreationSettings,com.github.stephengold.joltjni.readonly.ConstBroadPhaseLayerInterface)" class="member-name-link">applyBodyCreationSettings</a><wbr>(<a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a>&nbsp;bcs,
+ <a href="readonly/ConstBroadPhaseLayerInterface.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseLayerInterface</a>&nbsp;bpli)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Overwrite the state of the current rigid body with the specified creation
+ settings.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyBuoyancyImpulse(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float,float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">applyBuoyancyImpulse</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;surfacePosition,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;surfaceNormal,
  float&nbsp;buoyancy,
  float&nbsp;linearDrag,
@@ -187,8 +194,15 @@ implements <a href="readonly/ConstBody.html" title="interface in com.github.step
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;fluidVelocity,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;gravity,
  float&nbsp;deltaTime)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Apply an impulse that simulates buoyancy and drag.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applySoftBodyCreationSettings(com.github.stephengold.joltjni.readonly.ConstSoftBodyCreationSettings,com.github.stephengold.joltjni.readonly.ConstBroadPhaseLayerInterface)" class="member-name-link">applySoftBodyCreationSettings</a><wbr>(<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&nbsp;sbcs,
+ <a href="readonly/ConstBroadPhaseLayerInterface.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseLayerInterface</a>&nbsp;bpli)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Overwrite the state of the current soft body with the specified creation
+ settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canBeKinematicOrDynamic()" class="member-name-link">canBeKinematicOrDynamic</a>()</code></div>
@@ -673,6 +687,21 @@ implements <a href="readonly/ConstBody.html" title="interface in com.github.step
 </section>
 </li>
 <li>
+<section class="detail" id="applyBodyCreationSettings(com.github.stephengold.joltjni.readonly.ConstBodyCreationSettings,com.github.stephengold.joltjni.readonly.ConstBroadPhaseLayerInterface)">
+<h3>applyBodyCreationSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyBodyCreationSettings</span><wbr><span class="parameters">(<a href="readonly/ConstBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBodyCreationSettings</a>&nbsp;bcs,
+ <a href="readonly/ConstBroadPhaseLayerInterface.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseLayerInterface</a>&nbsp;bpli)</span></div>
+<div class="block">Overwrite the state of the current rigid body with the specified creation
+ settings. Not allowed when the body is in the physics system. Cannot add
+ MotionProperties if the body was created without one.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bcs</code> - the settings to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>bpli</code> - the layer interface to use (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="applyBuoyancyImpulse(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float,float,float,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,float)">
 <h3>applyBuoyancyImpulse</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">applyBuoyancyImpulse</span><wbr><span class="parameters">(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;surfacePosition,
@@ -702,6 +731,20 @@ implements <a href="readonly/ConstBody.html" title="interface in com.github.step
 <dt>Returns:</dt>
 <dd><code>true</code> if an impulse was applied, <code>false</code> if not in
  the fluid</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="applySoftBodyCreationSettings(com.github.stephengold.joltjni.readonly.ConstSoftBodyCreationSettings,com.github.stephengold.joltjni.readonly.ConstBroadPhaseLayerInterface)">
+<h3>applySoftBodyCreationSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applySoftBodyCreationSettings</span><wbr><span class="parameters">(<a href="readonly/ConstSoftBodyCreationSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyCreationSettings</a>&nbsp;sbcs,
+ <a href="readonly/ConstBroadPhaseLayerInterface.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBroadPhaseLayerInterface</a>&nbsp;bpli)</span></div>
+<div class="block">Overwrite the state of the current soft body with the specified creation
+ settings. Not allowed when the body is in the physics system.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>sbcs</code> - the settings to apply (not <code>null</code>, unaffected)</dd>
+<dd><code>bpli</code> - the layer interface to use (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
