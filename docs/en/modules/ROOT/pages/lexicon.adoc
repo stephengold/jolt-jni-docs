@@ -667,7 +667,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/SkeletonMapperRef.html[SkeletonMapperRef]
 
 |{url-jolt}skeleton_pose.html[JPH::SkeletonPose]
-|{url-api}/SkeletonPose.html[SkeletonPose]
+|{url-api}/SkeletonPose.html[SkeletonPose] +
+ {url-api}/readonly/ConstSkeletonPose.html[ConstSkeletonPose]
 
 |{url-jolt}slider_constraint.html[JPH::SliderConstraint]
 |{url-api}/SliderConstraint.html[SliderConstraint]
@@ -895,7 +896,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/VehicleTransmission.html[VehicleTransmission]
 
 |{url-jolt}vehicle_transmission_settings.html[JPH::VehicleTransmissionSettings]
-|{url-api}/VehicleTransmissionSettings.html[VehicleTransmissionSettings]
+|{url-api}/VehicleTransmissionSettings.html[VehicleTransmissionSettings] +
+ {url-api}/readonly/ConstVehicleTransmissionSettings.html[ConstVehicleTransmissionSettings]
 
 |{url-jolt}wheel.html[JPH::Wheel]
 |{url-api}/Wheel.html[Wheel] +

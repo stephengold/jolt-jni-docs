@@ -104,6 +104,7 @@ com.github.stephengold.joltjni.ContactKey
 com.github.stephengold.joltjni.ContactListener
 com.github.stephengold.joltjni.ContactListenerList
 com.github.stephengold.joltjni.ContactManifold
+com.github.stephengold.joltjni.ContactSet
 com.github.stephengold.joltjni.ContactSettings
 com.github.stephengold.joltjni.ConvexHullBuilder
 com.github.stephengold.joltjni.ConvexHullShape
