@@ -2,14 +2,14 @@
 
 (defproject jolt-jni-clojure "0.1.0-SNAPSHOT"
   :dependencies [
-    [com.github.stephengold/jolt-jni-Linux64 "4.2.0"]
-    [com.github.stephengold/jolt-jni-Linux64 "4.2.0" :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Linux_ARM32hf "4.2.0" :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Linux_ARM64 "4.2.0" :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-MacOSX64 "4.2.0" :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-MacOSX_ARM64 "4.2.0" :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Windows64 "4.2.0" :classifier "DebugSp"]
-    [com.github.stephengold/sport-jolt "1.4.0"]
+    [com.github.stephengold/jolt-jni-Linux64 "4.3.0"]
+    [com.github.stephengold/jolt-jni-Linux64 "4.3.0" :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-Linux_ARM32hf "4.3.0" :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-Linux_ARM64 "4.3.0" :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-MacOSX64 "4.3.0" :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-MacOSX_ARM64 "4.3.0" :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-Windows64 "4.3.0" :classifier "DebugSp"]
+    [com.github.stephengold/sport-jolt "1.4.1"]
     [io.github.electrostat-lab/snaploader "1.1.1-stable"]
     [org.clojure/clojure "1.12.4"]
   ]
