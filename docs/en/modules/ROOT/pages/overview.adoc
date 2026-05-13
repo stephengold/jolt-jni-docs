@@ -62,7 +62,8 @@ to the relevant article in the English Wikipedia.
 {Project} requires a Java runtime, version 11 or higher.
 To build {Project} from source, I recommend a Java Development Kit,
 version 21 or higher.
-To simulate hair, I recommend a computer with a GPU and a compatible API:
+To simulate hair, I recommend a computer
+with a {url-enwiki}/Graphics_processing_unit[GPU] and a compatible API:
 Metal (on macOS) or Vulkan (on Android/Linux/Windows).
 
 https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE[The project's open-source license]
