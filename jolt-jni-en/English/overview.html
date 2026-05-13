@@ -269,7 +269,7 @@ for <a href="https://en.wikipedia.org/wiki/List_of_JVM_languages">JVM languages<
 such as <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>,
 <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>,
 <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>,
-<a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)">Kotlin</a>,
+<a href="https://en.wikipedia.org/wiki/Kotlin">Kotlin</a>,
 <a href="https://en.wikipedia.org/wiki/Apache_Groovy">Groovy</a>, and
 <a href="https://en.wikipedia.org/wiki/Scala_(programming_language)">Scala</a>.</p>
 </div>
@@ -291,7 +291,7 @@ such as <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java
 <p>simulate characters and buildings collapsing in real time, and</p>
 </li>
 <li>
-<p>simulate cloth, rope, and deformable volumes,
+<p>simulate cloth, hair, rope, and deformable volumes,
 including their interactions with rigid bodies.</p>
 </li>
 </ul>
@@ -329,10 +329,10 @@ For 2-D physics, consider using <a href="http://www.dyn4j.org/">dyn4j</a> instea
 </div>
 <div class="paragraph">
 <p>Jolt JNI and its documentation
-assume a certain level of proficiency with
+assume a degree of proficiency with
 <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">the Java programming language</a>.
 The project isn&#8217;t aimed at non-programmers,
-nor developers without prior Java experience.
+nor developers without Java experience.
 Similarly, it assumes familiarity with vector math and 3-D computer graphics.</p>
 </div>
 <div class="paragraph">
@@ -343,7 +343,9 @@ to the relevant article in the English Wikipedia.</p>
 <div class="paragraph">
 <p>Jolt JNI requires a Java runtime, version 11 or higher.
 To build Jolt JNI from source, I recommend a Java Development Kit,
-version 21 or higher.</p>
+version 21 or higher.
+To simulate hair, I recommend a computer with a GPU and a compatible API:
+Metal (on macOS) or Vulkan (on Android/Linux/Windows).</p>
 </div>
 <div class="paragraph">
 <p><a href="https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE">The project&#8217;s open-source license</a>
