@@ -109,8 +109,10 @@ Thus, the taxonomy:
 *** static
 * constraints (`Constraint` abstract class)
 
-Each rigid body references a _collision shape_
+Each rigid body refers to a _collision shape_
 that describes the shape of its surface.
+Each soft body refers to a shared-settings object
+that decomposes it into vertices, edges, faces, and constraints.
 
 
 == Coordinate systems and units
