@@ -11,7 +11,7 @@ for {url-enwiki}/List_of_JVM_languages[JVM languages]
 such as {url-enwiki}/Java_(programming_language)[Java],
 {url-enwiki}/Python_(programming_language)[Python],
 {url-enwiki}/JavaScript[JavaScript],
-{url-enwiki}/Kotlin_(programming_language)[Kotlin],
+{url-enwiki}/Kotlin[Kotlin],
 {url-enwiki}/Apache_Groovy[Groovy], and
 {url-enwiki}/Scala_(programming_language)[Scala].
 
@@ -21,7 +21,7 @@ Use it to:
 * detect collisions between complex shapes,
 * perform contact, ray, and sweep tests,
 * simulate characters and buildings collapsing in real time, and
-* simulate cloth, rope, and deformable volumes,
+* simulate cloth, hair, rope, and deformable volumes,
   including their interactions with rigid bodies.
 
 Tutorials and sample apps are provided to help you get started.
@@ -49,10 +49,10 @@ nor for scientific research.
 For 2-D physics, consider using http://www.dyn4j.org/[dyn4j] instead.
 
 {Project} and its documentation
-assume a certain level of proficiency with
+assume a degree of proficiency with
 {url-enwiki}/Java_(programming_language)[the Java programming language].
 The project isn't aimed at non-programmers,
-nor developers without prior Java experience.
+nor developers without Java experience.
 Similarly, it assumes familiarity with vector math and 3-D computer graphics.
 
 While an understanding of classical mechanics is assumed,
@@ -62,6 +62,8 @@ to the relevant article in the English Wikipedia.
 {Project} requires a Java runtime, version 11 or higher.
 To build {Project} from source, I recommend a Java Development Kit,
 version 21 or higher.
+To simulate hair, I recommend a computer with a GPU and a compatible API:
+Metal (on macOS) or Vulkan (on Android/Linux/Windows).
 
 https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE[The project's open-source license]
 disclaims liability for defects.
@@ -104,7 +106,7 @@ xref:add.adoc[the tutorials],
 https://stephengold.github.io/jolt-jni-docs/javadoc/latest/com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html[the javadoc], and
 https://github.com/stephengold/jolt-jni/tree/master/src[the source code].
 
-For further reading there is also
+Further guidance can be found in
 https://jrouwe.github.io/JoltPhysics/index.html[the official {JPHAdj} documentation].
 
 For issues that are best handled privately, contact me by e-mail.
