@@ -503,7 +503,10 @@ are quantified using <em>local coordinates</em>.</p>
 <h2 id="_discrete_time_and_collision_detection"><a class="anchor" href="#_discrete_time_and_collision_detection"></a>Discrete time and collision detection</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Physics simulation occurs in discrete steps of short duration.</p>
+<p>Bodies are simulated in discrete steps of short duration,
+typically 1/60 of a second.
+Hair simulations run separately from body simulations,
+typically at 360 iterations per second.</p>
 </div>
 <div class="paragraph">
 <p>For fast-moving rigid bodies,
@@ -528,8 +531,11 @@ owned by Java objects that have been garbage collected.</p>
 </div>
 <div class="paragraph">
 <p>Multi-threaded simulation is built into Jolt JNI.
-The number of worker threads is configured into a <code>JobSystem</code>
-that&#8217;s typically created during initialization.</p>
+The number of worker threads for simulating bodies
+is configured in a <code>JobSystem</code>
+that&#8217;s typically created during initialization.
+Hair simulation typically runs on a GPU,
+which is represented as a <code>ComputeSystem</code>.</p>
 </div>
 </div>
 </div>
