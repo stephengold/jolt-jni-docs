@@ -61,7 +61,7 @@ to the relevant article in the English Wikipedia.
 
 {Project} requires a Java runtime, version 11 or higher.
 To build {Project} from source, I recommend a Java Development Kit,
-version 17 or higher.
+version 21 or higher.
 
 https://raw.githubusercontent.com/stephengold/jolt-jni/master/LICENSE[The project's open-source license]
 disclaims liability for defects.
