@@ -147,7 +147,10 @@ are quantified using _local coordinates_.
 
 == Discrete time and collision detection
 
-Physics simulation occurs in discrete steps of short duration.
+Bodies are simulated in discrete steps of short duration,
+typically 1/60 of a second.
+Hair simulations run separately from body simulations,
+typically at 360 iterations per second.
 
 For fast-moving rigid bodies,
 {Project} offers optional continuous collision detection (CCD)
@@ -166,8 +169,11 @@ The thread's purpose is to free any native objects
 owned by Java objects that have been garbage collected.
 
 Multi-threaded simulation is built into {Project}.
-The number of worker threads is configured into a `JobSystem`
+The number of worker threads for simulating bodies
+is configured in a `JobSystem`
 that's typically created during initialization.
+Hair simulation typically runs on a GPU,
+which is represented as a `ComputeSystem`.
 
 
 == Next steps
