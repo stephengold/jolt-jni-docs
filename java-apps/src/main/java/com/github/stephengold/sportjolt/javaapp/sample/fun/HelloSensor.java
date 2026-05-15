@@ -126,9 +126,8 @@ final public class HelloSensor {
             int maxBodies = 3;
             int numBpLayers = 1;
             PhysicsSystem result = app.createSystem(maxBodies, numBpLayers);
-            /*
-             * To enable the callbacks, set a simple contact listener:
-             */
+
+            // To enable callbacks, set a simple contact listener:
             result.setContactListener(new CustomContactListener() {
                 /**
                  * Callback invoked (by native code) each time a new contact
