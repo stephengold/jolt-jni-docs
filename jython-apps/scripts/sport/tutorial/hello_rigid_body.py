@@ -1,5 +1,5 @@
 """
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -95,7 +95,7 @@ class HelloRigidBody(BasePhysicsApp):
         BasePhysicsApp.visualizeShape(ball2)
 
     def updatePhysics(self, wall_clock_seconds):
-        "Populate the PhysicsSystem with bodies. Invoked once during initialization."
+        "Advance the physics simulation by the specified amount. Invoked during each update."
 
         # For clarity, simulate at 1/10th normal speed:
         simulate_seconds = 0.1 * wall_clock_seconds
