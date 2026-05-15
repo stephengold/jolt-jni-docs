@@ -110,7 +110,8 @@ class HelloCcd(BasePhysicsApp):
         disc_thickness = 0.05
         disc_convex_radius = 0.02
         disc_shape = CylinderShape(
-                disc_thickness / 2.0, disc_radius, disc_convex_radius)
+            disc_thickness / 2.0, disc_radius, disc_convex_radius
+        )
 
         bcs = BodyCreationSettings()
         bcs.setMotionType(EMotionType.Static)

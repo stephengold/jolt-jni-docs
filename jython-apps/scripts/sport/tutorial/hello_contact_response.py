@@ -27,6 +27,7 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
+
 class HelloContactResponse(BasePhysicsApp):
     """
     A simple demonstration of contact response.
@@ -80,7 +81,7 @@ class HelloContactResponse(BasePhysicsApp):
         bcs2.getMassPropertiesOverride().setMass(2.0)
         bcs2.setAllowSleeping(False)
         bcs2.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
-        bcs2.setPosition(0.0, 4.0, 0.0);
+        bcs2.setPosition(0.0, 4.0, 0.0)
         bcs2.setShape(ball_shape)
         global BALL
         BALL = bi.createBody(bcs2)
