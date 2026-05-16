@@ -94,7 +94,7 @@ application = Class.new(BasePhysicsApp) {
         BasePhysicsApp.visualizeShape(ball2)
     end
 
-    # Populate the PhysicsSystem with bodies. Invoked once during initialization.
+    # Advance the physics simulation by the specified amount. Invoked during each update.
     def updatePhysics(wall_clock_seconds)
         # For clarity, simulate at 1/10th normal speed:
         simulate_seconds = 0.1 * wall_clock_seconds
