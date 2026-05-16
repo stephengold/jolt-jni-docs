@@ -69,9 +69,10 @@ class HelloCcd(BasePhysicsApp):
         bcs.getMassPropertiesOverride().setMass(2.0)
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
         bcs.setShape(ball_shape)
-
-        # Create 2 dynamic balls, one with LinearCast CCD and one without,
-        # and add them to the system:
+        """
+        Create 2 dynamic balls, one with LinearCast CCD and one without,
+        and add them to the system:
+        """
         bcs.setMotionQuality(EMotionQuality.LinearCast)
         bcs.setPosition(-1.0, 4.0, 0.0)
         ccd_ball = bi.createBody(bcs)
