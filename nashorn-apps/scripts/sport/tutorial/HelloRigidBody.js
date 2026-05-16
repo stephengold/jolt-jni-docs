@@ -99,7 +99,7 @@ var application = new HelloRigidBody() {
         BasePhysicsApp.visualizeShape(ball2);
     },
 
-    /**
+    /*
      * Advance the physics simulation by the specified amount. Invoked during
      * each update.
      */
