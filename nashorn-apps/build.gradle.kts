@@ -35,6 +35,13 @@ tasks.register<JavaExec>("HelloCcd") {
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloCcd tutorial app."
 }
+tasks.register<JavaExec>("HelloCharacter") {
+    args("nashorn",
+         "scripts/sport/tutorial/HelloCharacter.js",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the Nashorn port of the HelloCharacter tutorial app."
+}
 tasks.register<JavaExec>("HelloDamping") {
     args("nashorn",
          "scripts/sport/tutorial/HelloDamping.js",
