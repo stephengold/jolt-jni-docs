@@ -39,6 +39,12 @@ tasks.register<JavaExec>("HelloSport") {
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the JRuby port of the HelloSport tutorial app."
 }
+tasks.register<JavaExec>("HelloStaticBody") {
+    args("jruby", "scripts/sport/tutorial/HelloStaticBody.rb",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the JRuby port of the HelloStaticBody tutorial app."
+}
 
 val assertions = providers.gradleProperty("assertions").get().equals("true")
 
