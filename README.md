@@ -4,18 +4,18 @@ for [the Jolt-JNI physics library][joltjni].
 
 It contains 12 subprojects:
 
-1. docs: [Antora] documentation for Jolt JNI, including a tutorial
-2. java-apps: sample applications referred to in the tutorial, written in [Java]
-3. jython-apps: sample applications ported to Jython [Python]
-4. nashorn-apps: sample applications ported to Nashorn [JavaScript]
-5. kotlin-apps: sample applications ported to [Kotlin]
-6. groovy-apps: sample applications ported to statically-compiled [Groovy]
-7. groovy223-apps: sample applications ported to scripted [Groovy]
-8. jruby-apps: sample applications ported to JRuby [Ruby]
-9. luaj-apps: sample applications ported to Luaj [Lua]
-10. luajava-apps: sample applications ported to Luajava [Lua]
-11. scala-apps: sample applications ported to [Scala]
-12. src/clojure: sample applications ported to [Clojure]
+1. docs: [Antora] external documentation for Jolt JNI, including a tutorial
+2. java-apps: all 27 sample applications mentioned in the tutorial, in [Java]
+3. jython-apps: 10 sample applications ported to Jython [Python]
+4. nashorn-apps: 8 sample applications ported to Nashorn [JavaScript]
+5. kotlin-apps: 7 sample applications ported to [Kotlin]
+6. groovy-apps: 3 sample applications ported to statically-compiled [Groovy]
+7. groovy223-apps: 3 sample applications ported to scripted [Groovy]
+8. jruby-apps: 4 sample applications ported to JRuby [Ruby]
+9. luaj-apps: a sample application ported to Luaj [Lua]
+10. luajava-apps: a sample application ported to Luajava [Lua]
+11. scala-apps: all 27 sample applications, ported to [Scala]
+12. src/clojure: a sample application ported to [Clojure]
 
 For visualization, many of the sample applications utilize
 [the SPORT graphics engine for Jolt][sportjolt],
