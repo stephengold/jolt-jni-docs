@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -100,7 +99,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ContactSet</span>
 <span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
 <div class="block">A variable-length array of contact keys. (native type:
- <code>Array&lt;CharacterVirtual::ContactKey&gt;</code>)</div>
+ <code>Array&lt;CharacterContactKey&gt;</code>)</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -156,17 +155,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Remove all keys in the specified range of indices.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#find(com.github.stephengold.joltjni.readonly.ConstContactKey)" class="member-name-link">find</a><wbr>(<a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a>&nbsp;key)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#find(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)" class="member-name-link">find</a><wbr>(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Find the element index of the first matching key, if any.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ContactKey.html" title="class in com.github.stephengold.joltjni">ContactKey</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(int)" class="member-name-link">get</a><wbr>(int&nbsp;elementIndex)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the key at the specified index.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pushBack(com.github.stephengold.joltjni.readonly.ConstContactKey)" class="member-name-link">pushBack</a><wbr>(<a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a>&nbsp;key)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pushBack(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)" class="member-name-link">pushBack</a><wbr>(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Append a copy of the specified key to the end.</div>
 </div>
@@ -176,8 +175,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Extend or truncate the set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.readonly.ConstContactKey)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
- <a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a>&nbsp;key)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
+ <a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Store a copy of the specified key at the specified index.</div>
 </div>
@@ -186,7 +185,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count how many keys are in the set.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="ContactKey.html" title="class in com.github.stephengold.joltjni">ContactKey</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toList()" class="member-name-link">toList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy all the keys (in order) to a Java list.</div>
@@ -285,9 +284,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="find(com.github.stephengold.joltjni.readonly.ConstContactKey)">
+<section class="detail" id="find(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)">
 <h3>find</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(<a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;key)</span></div>
 <div class="block">Find the element index of the first matching key, if any.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -300,7 +299,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="get(int)">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ContactKey.html" title="class in com.github.stephengold.joltjni">ContactKey</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;elementIndex)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;elementIndex)</span></div>
 <div class="block">Copy the key at the specified index.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -311,9 +310,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="pushBack(com.github.stephengold.joltjni.readonly.ConstContactKey)">
+<section class="detail" id="pushBack(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)">
 <h3>pushBack</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">pushBack</span><wbr><span class="parameters">(<a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">pushBack</span><wbr><span class="parameters">(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;key)</span></div>
 <div class="block">Append a copy of the specified key to the end.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -333,10 +332,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="set(int,com.github.stephengold.joltjni.readonly.ConstContactKey)">
+<section class="detail" id="set(int,com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)">
 <h3>set</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(int&nbsp;elementIndex,
- <a href="readonly/ConstContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstContactKey</a>&nbsp;key)</span></div>
+ <a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;key)</span></div>
 <div class="block">Store a copy of the specified key at the specified index.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -359,7 +358,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="toList()">
 <h3>toList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ContactKey.html" title="class in com.github.stephengold.joltjni">ContactKey</a>&gt;</span>&nbsp;<span class="element-name">toList</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a>&gt;</span>&nbsp;<span class="element-name">toList</span>()</div>
 <div class="block">Copy all the keys (in order) to a Java list.</div>
 <dl class="notes">
 <dt>Returns:</dt>
