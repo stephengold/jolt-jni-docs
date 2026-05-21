@@ -52,6 +52,8 @@ com.github.stephengold.joltjni.CastShapeCollector
 com.github.stephengold.joltjni.Character
 com.github.stephengold.joltjni.CharacterBase
 com.github.stephengold.joltjni.CharacterBaseSettings
+com.github.stephengold.joltjni.CharacterContact
+com.github.stephengold.joltjni.CharacterContactKey
 com.github.stephengold.joltjni.CharacterContactListener
 com.github.stephengold.joltjni.CharacterContactSettings
 com.github.stephengold.joltjni.CharacterRef
@@ -99,8 +101,6 @@ com.github.stephengold.joltjni.ConstraintResult
 com.github.stephengold.joltjni.ConstraintSettings
 com.github.stephengold.joltjni.ConstraintSettingsRef
 com.github.stephengold.joltjni.Constraints
-com.github.stephengold.joltjni.Contact
-com.github.stephengold.joltjni.ContactKey
 com.github.stephengold.joltjni.ContactListener
 com.github.stephengold.joltjni.ContactListenerList
 com.github.stephengold.joltjni.ContactManifold
@@ -207,6 +207,7 @@ com.github.stephengold.joltjni.MutableCompoundShapeSettings
 com.github.stephengold.joltjni.Mutex
 com.github.stephengold.joltjni.NarrowPhaseQuery
 com.github.stephengold.joltjni.NarrowPhaseStat
+com.github.stephengold.joltjni.NativeLibraryLoader
 com.github.stephengold.joltjni.NonCopyable
 com.github.stephengold.joltjni.ObjVsBpFilter
 com.github.stephengold.joltjni.ObjVsObjFilter

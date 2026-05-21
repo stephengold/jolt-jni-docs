@@ -175,6 +175,14 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/CharacterBaseSettings.html[CharacterBaseSettings] +
  {url-api}/readonly/ConstCharacterBaseSettings.html[ConstCharacterBaseSettings]
 
+|{url-jolt}character_contact.html[JPH::CharacterContact]
+|{url-api}/CharacterContact.html[CharacterContact] +
+ {url-api}/readonly/ConstCharacterContact.html[ConstCharacterContact]
+
+|{url-jolt}character_contact_key.html[JPH::CharacterContactKey]
+|{url-api}/CharacterContactKey.html[CharacterContactKey] +
+ {url-api}/readonly/ConstCharacterContactKey.html[ConstCharacterContactKey]
+
 |{url-jolt}character_contact_listener.html[JPH::CharacterContactListener]
 |{url-api}/CharacterContactListener.html[CharacterContactListener]
 
