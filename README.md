@@ -7,7 +7,7 @@ It contains 12 subprojects:
 1. docs: [Antora] external documentation for Jolt JNI, including a tutorial
 2. java-apps: all 27 sample applications mentioned in the tutorial, in [Java]
 3. scala-apps: all 27 sample applications, ported to [Scala]
-4. jython-apps: 11 sample applications ported to Jython [Python]
+4. jython-apps: 12 sample applications ported to Jython [Python]
 5. nashorn-apps: 8 sample applications ported to Nashorn [JavaScript]
 6. kotlin-apps: 7 sample applications ported to [Kotlin]
 7. jruby-apps: 4 sample applications ported to JRuby [Ruby]
