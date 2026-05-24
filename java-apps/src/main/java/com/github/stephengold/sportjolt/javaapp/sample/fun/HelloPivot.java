@@ -141,7 +141,7 @@ final public class HelloPivot {
             physicsSystem.addConstraint(constraint);
 
             // Visualize the constraint:
-            new ConstraintGeometry(constraint, 2); // ballBody is its 2nd end
+            new ConstraintGeometry(constraint, 2); // rotor is its 2nd end
         });
 
         fpa.setPrePhysicsTick((app, system, timeStep) -> {
