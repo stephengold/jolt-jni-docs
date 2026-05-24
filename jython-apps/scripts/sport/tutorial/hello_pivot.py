@@ -97,8 +97,8 @@ class HelloPivot(BasePhysicsApp, PhysicsTickListener):
         self.physicsSystem.addConstraint(constraint)
 
         # Visualize the constraint:
-        ConstraintGeometry(constraint, 2) # rotor is its 2nd end
- 
+        ConstraintGeometry(constraint, 2)  # rotor is its 2nd end
+
     def render(self):
         "Callback invoked during each iteration of the render loop."
 
