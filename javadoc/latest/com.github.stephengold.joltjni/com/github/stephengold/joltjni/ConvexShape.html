@@ -221,9 +221,10 @@ implements <a href="readonly/ConstConvexShape.html" title="interface in com.gith
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstConvexShape.html#getSubmergedVolume(com.github.stephengold.joltjni.readonly.Mat44Arg,com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.ConstPlane,float%5B%5D,float%5B%5D,com.github.stephengold.joltjni.Vec3,com.github.stephengold.joltjni.readonly.RVec3Arg)">getSubmergedVolume</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>comTransform</code> - the local-to-system transform (not null, unaffected)</dd>
-<dd><code>scale</code> - the scale vector (not null, unaffected)</dd>
-<dd><code>surface</code> - the boundary of the submerged region (not null,
+<dd><code>comTransform</code> - the local-to-system transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>scale</code> - the scale vector (not <code>null</code>, unaffected)</dd>
+<dd><code>surface</code> - the boundary of the submerged region (not <code>null</code>,
  unaffected)</dd>
 <dd><code>storeTotalVolume</code> - storage for the total volume, or <code>null</code></dd>
 <dd><code>storeSubmergedVolume</code> - storage for the submerged volume, or
@@ -246,10 +247,10 @@ implements <a href="readonly/ConstConvexShape.html" title="interface in com.gith
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstConvexShape.html#getSupportFunction(com.github.stephengold.joltjni.enumerate.ESupportMode,com.github.stephengold.joltjni.SupportBuffer,com.github.stephengold.joltjni.readonly.Vec3Arg)">getSupportFunction</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstConvexShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstConvexShape</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>supportMode</code> - how to handle convex radius (not null)</dd>
-<dd><code>buffer</code> - buffer storage (not null)</dd>
-<dd><code>scale</code> - scale factors to apply (in local coordinates, not null,
- unaffected)</dd>
+<dd><code>supportMode</code> - how to handle convex radius (not <code>null</code>)</dd>
+<dd><code>buffer</code> - buffer storage (not <code>null</code>)</dd>
+<dd><code>scale</code> - scale factors to apply (in local coordinates, not
+ <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>

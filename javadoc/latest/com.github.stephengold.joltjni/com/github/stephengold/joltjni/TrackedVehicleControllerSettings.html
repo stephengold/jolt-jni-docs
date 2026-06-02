@@ -97,11 +97,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></code>, <code><a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">TrackedVehicleControllerSettings</span>
-<span class="extends-implements">extends <a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a></span></div>
+<span class="extends-implements">extends <a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a>
+implements <a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></span></div>
 <div class="block">Settings used to construct a <code>TrackedVehicleController</code>.</div>
 </section>
 <section class="summary">
@@ -118,7 +119,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.TrackedVehicleControllerSettings)" class="member-name-link">TrackedVehicleControllerSettings</a><wbr>(<a href="TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstTrackedVehicleControllerSettings)" class="member-name-link">TrackedVehicleControllerSettings</a><wbr>(<a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -136,15 +137,30 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNumTracks()" class="member-name-link">getNumTracks</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleEngineSettings.html" title="class in com.github.stephengold.joltjni">VehicleEngineSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEngine()" class="member-name-link">getEngine</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the engine settings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNumTracks()" class="member-name-link">getNumTracks</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count how many tracks the vehicle will have.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTrack(int)" class="member-name-link">getTrack</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTrack(int)" class="member-name-link">getTrack</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the settings for the specified track.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleTransmissionSettings.html" title="class in com.github.stephengold.joltjni">VehicleTransmissionSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTransmission()" class="member-name-link">getTransmission</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the transmission (gearbox) settings.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstTrackedVehicleControllerSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
 </div>
 </div>
 </div>
@@ -170,6 +186,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
 <code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstVehicleControllerSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></h3>
+<code><a href="readonly/ConstVehicleControllerSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code></div>
 </section>
 </li>
 </ul>
@@ -189,9 +208,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.TrackedVehicleControllerSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstTrackedVehicleControllerSettings)">
 <h3>TrackedVehicleControllerSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TrackedVehicleControllerSettings</span><wbr><span class="parameters">(<a href="TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TrackedVehicleControllerSettings</span><wbr><span class="parameters">(<a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -208,14 +227,40 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstTrackedVehicleControllerSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEngine()">
+<h3>getEngine</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleEngineSettings.html" title="class in com.github.stephengold.joltjni">VehicleEngineSettings</a></span>&nbsp;<span class="element-name">getEngine</span>()</div>
+<div class="block">Access the engine settings. (native field: mEngine)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstTrackedVehicleControllerSettings.html#getEngine()">getEngine</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getNumTracks()">
 <h3>getNumTracks</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumTracks</span>()</div>
 <div class="block">Count how many tracks the vehicle will have. The settings are unaffected.
  (native attribute: mTracks)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstTrackedVehicleControllerSettings.html#getNumTracks()">getNumTracks</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></code></dd>
 <dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
+<dd>the count (2)</dd>
 </dl>
 </section>
 </li>
@@ -225,8 +270,24 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></span>&nbsp;<span class="element-name">getTrack</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block">Access the settings for the specified track. (native field: mTracks)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstTrackedVehicleControllerSettings.html#getTrack(int)">getTrack</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>index</code> - the index of the track to access (&ge;0)</dd>
+<dd><code>index</code> - the index of the track to access (&ge;0, &le;1)</dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTransmission()">
+<h3>getTransmission</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleTransmissionSettings.html" title="class in com.github.stephengold.joltjni">VehicleTransmissionSettings</a></span>&nbsp;<span class="element-name">getTransmission</span>()</div>
+<div class="block">Access the transmission (gearbox) settings. (native attribute:
+ mTransmission)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstTrackedVehicleControllerSettings.html#getTransmission()">getTransmission</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>

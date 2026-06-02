@@ -118,6 +118,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the name of the C++ identifier.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.Rtti)" class="member-name-link">isEqual</a><wbr>(<a href="Rtti.html" title="class in com.github.stephengold.joltjni">Rtti</a>&nbsp;other)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether the current type information is equivalent to the argument.</div>
+</div>
 </div>
 </div>
 </div>
@@ -147,6 +152,21 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the name (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isEqual(com.github.stephengold.joltjni.Rtti)">
+<h3>isEqual</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="Rtti.html" title="class in com.github.stephengold.joltjni">Rtti</a>&nbsp;other)</span></div>
+<div class="block">Test whether the current type information is equivalent to the argument.
+ Both objects are unaffected. (native operator: binary <code>==</code>)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>other</code> - the type information to compare with (not <code>null</code>,
+ unaffected)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if equal, <code>false</code> if unequal</dd>
 </dl>
 </section>
 </li>

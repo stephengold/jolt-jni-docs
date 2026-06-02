@@ -217,9 +217,10 @@ loadScripts(document, 'script');</script>
  radius. The shape is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>renderer</code> - the renderer to use (not null)</dd>
-<dd><code>comTransform</code> - the center-of-mass transform (not null, unaffected)</dd>
-<dd><code>scale</code> - the scaling to apply (not null, unaffected)</dd>
+<dd><code>renderer</code> - the renderer to use (not <code>null</code>)</dd>
+<dd><code>comTransform</code> - the center-of-mass transform (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>scale</code> - the scaling to apply (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -243,7 +244,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>faceIndex</code> - the index of the face to query (&ge;0, &lt;numFaces)</dd>
-<dd><code>storeIndices</code> - storage for the result (not null, modified)</dd>
+<dd><code>storeIndices</code> - storage for the result (not <code>null</code>, modified)</dd>
 <dt>Returns:</dt>
 <dd>the number of vertices in the face</dd>
 </dl>
@@ -261,7 +262,7 @@ loadScripts(document, 'script');</script>
 <dd><code>faceIndex</code> - the index of the face to query (&ge;0, &lt;numFaces)</dd>
 <dd><code>maxVertices</code> - the maximum number of vertices to return (&ge;0,
  default=storeIndices.length)</dd>
-<dd><code>storeIndices</code> - storage for the result (not null,
+<dd><code>storeIndices</code> - storage for the result (not <code>null</code>,
  length&ge;maxVertices, modified)</dd>
 <dt>Returns:</dt>
 <dd>the number of vertices in the face (&ge;0)</dd>

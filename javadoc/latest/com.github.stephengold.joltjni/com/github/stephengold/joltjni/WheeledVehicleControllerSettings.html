@@ -97,7 +97,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></code>, <code><a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -105,7 +105,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">WheeledVehicleControllerSettings</span>
-<span class="extends-implements">extends <a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a></span></div>
+<span class="extends-implements">extends <a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a>
+implements <a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></span></div>
 <div class="block">Settings used to construct a <code>WheeledVehicleController</code>.</div>
 </section>
 <section class="summary">
@@ -122,7 +123,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.WheeledVehicleControllerSettings)" class="member-name-link">WheeledVehicleControllerSettings</a><wbr>(<a href="WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings)" class="member-name-link">WheeledVehicleControllerSettings</a><wbr>(<a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -145,24 +146,40 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the settings for the specified differential.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleEngineSettings.html" title="class in com.github.stephengold.joltjni">VehicleEngineSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEngine()" class="member-name-link">getEngine</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDifferentialLimitedSlipRatio()" class="member-name-link">getDifferentialLimitedSlipRatio</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the ratio of the max/min average wheel speed for each
+ differential.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleEngineSettings.html" title="class in com.github.stephengold.joltjni">VehicleEngineSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEngine()" class="member-name-link">getEngine</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the engine settings.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNumDifferentials()" class="member-name-link">getNumDifferentials</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNumDifferentials()" class="member-name-link">getNumDifferentials</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count how many differentials the vehicle will have.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleTransmissionSettings.html" title="class in com.github.stephengold.joltjni">VehicleTransmissionSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTransmission()" class="member-name-link">getTransmission</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleTransmissionSettings.html" title="class in com.github.stephengold.joltjni">VehicleTransmissionSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTransmission()" class="member-name-link">getTransmission</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the transmission (gearbox) settings.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a>&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumDifferentials(int)" class="member-name-link">setNumDifferentials</a><wbr>(int&nbsp;count)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDifferentialLimitedSlipRatio(float)" class="member-name-link">setDifferentialLimitedSlipRatio</a><wbr>(float&nbsp;ratio)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the ratio of the max/min average wheel speed for each differential.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumDifferentials(int)" class="member-name-link">setNumDifferentials</a><wbr>(int&nbsp;count)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the number of differentials.</div>
 </div>
 </div>
@@ -189,6 +206,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
 <code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstVehicleControllerSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></h3>
+<code><a href="readonly/ConstVehicleControllerSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code></div>
 </section>
 </li>
 </ul>
@@ -208,9 +228,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.WheeledVehicleControllerSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings)">
 <h3>WheeledVehicleControllerSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">WheeledVehicleControllerSettings</span><wbr><span class="parameters">(<a href="WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">WheeledVehicleControllerSettings</span><wbr><span class="parameters">(<a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -227,16 +247,67 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDifferentialLimitedSlipRatio(float)">
+<h3>setDifferentialLimitedSlipRatio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDifferentialLimitedSlipRatio</span><wbr><span class="parameters">(float&nbsp;ratio)</span></div>
+<div class="block">Alter the ratio of the max/min average wheel speed for each differential.
+ (native field: mDifferentialLimitedSlipRatio)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>ratio</code> - the desired ratio (&gt;1, default=1.4)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setNumDifferentials(int)">
+<h3>setNumDifferentials</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setNumDifferentials</span><wbr><span class="parameters">(int&nbsp;count)</span></div>
+<div class="block">Alter the number of differentials. (native attribute: mDifferentials)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>count</code> - the desired number (&ge;0, default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getDifferential(int)">
 <h3>getDifferential</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></span>&nbsp;<span class="element-name">getDifferential</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block">Access the settings for the specified differential. (native field:
  mDifferentials)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheeledVehicleControllerSettings.html#getDifferential(int)">getDifferential</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index of the differential to access (&ge;0)</dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDifferentialLimitedSlipRatio()">
+<h3>getDifferentialLimitedSlipRatio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDifferentialLimitedSlipRatio</span>()</div>
+<div class="block">Return the ratio of the max/min average wheel speed for each
+ differential. The settings are unaffected. (native field:
+ mDifferentialLimitedSlipRatio)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheeledVehicleControllerSettings.html#getDifferentialLimitedSlipRatio()">getDifferentialLimitedSlipRatio</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the ratio</dd>
 </dl>
 </section>
 </li>
@@ -246,6 +317,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleEngineSettings.html" title="class in com.github.stephengold.joltjni">VehicleEngineSettings</a></span>&nbsp;<span class="element-name">getEngine</span>()</div>
 <div class="block">Access the engine settings. (native field: mEngine)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheeledVehicleControllerSettings.html#getEngine()">getEngine</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
@@ -258,6 +331,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Count how many differentials the vehicle will have. The settings are
  unaffected. (native attribute: mDifferentials)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheeledVehicleControllerSettings.html#getNumDifferentials()">getNumDifferentials</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>the count (&ge;0)</dd>
 </dl>
@@ -270,19 +345,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Access the transmission (gearbox) settings. (native attribute:
  mTransmission)</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheeledVehicleControllerSettings.html#getTransmission()">getTransmission</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setNumDifferentials(int)">
-<h3>setNumDifferentials</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setNumDifferentials</span><wbr><span class="parameters">(int&nbsp;count)</span></div>
-<div class="block">Alter the number of differentials. (native attribute: mDifferentials)</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>count</code> - the desired number (&ge;0, default=0)</dd>
 </dl>
 </section>
 </li>

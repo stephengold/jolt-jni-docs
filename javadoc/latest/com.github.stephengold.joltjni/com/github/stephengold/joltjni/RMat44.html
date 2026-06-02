@@ -192,7 +192,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
  consists entirely of rotation and translation.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.RMat44Arg)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;m2)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.RMat44Arg)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;other)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the current matrix is equal to the argument.</div>
 </div>
@@ -244,7 +244,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
  component of the right factor implied to be one.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x4InPlace(com.github.stephengold.joltjni.RVec3)" class="member-name-link">multiply3x4InPlace</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;doubleBuffer)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x4InPlace(com.github.stephengold.joltjni.RVec3)" class="member-name-link">multiply3x4InPlace</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeVec)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
  component of the right factor implied to be one.</div>
@@ -255,7 +255,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <div class="block">Post multiply by the specified translation vector.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;leftVector)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Post multiply by the specified translation vector.</div>
 </div>
@@ -575,7 +575,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dd><code>rotation</code> - the rotation quaternion to use (not <code>null</code>,
  unaffected)</dd>
 <dt>Returns:</dt>
-<dd>a new object</dd>
+<dd>a new matrix</dd>
 </dl>
 </section>
 </li>
@@ -590,7 +590,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dd><code>rotation</code> - the amount to rotate (not <code>null</code>, unaffected)</dd>
 <dd><code>offset</code> - the amount to translate (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
-<dd>a new object</dd>
+<dd>a new matrix</dd>
 </dl>
 </section>
 </li>
@@ -772,14 +772,14 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <li>
 <section class="detail" id="isEqual(com.github.stephengold.joltjni.readonly.RMat44Arg)">
 <h3>isEqual</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;m2)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a>&nbsp;other)</span></div>
 <div class="block">Test whether the current matrix is equal to the argument. The current
  matrix is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#isEqual(com.github.stephengold.joltjni.readonly.RMat44Arg)">isEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>m2</code> - the 2nd matrix to test (not <code>null</code>, unaffected)</dd>
+<dd><code>other</code> - the other matrix to test (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if equal, <code>false</code> if unequal</dd>
 </dl>
@@ -900,7 +900,7 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <li>
 <section class="detail" id="multiply3x4InPlace(com.github.stephengold.joltjni.RVec3)">
 <h3>multiply3x4InPlace</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">multiply3x4InPlace</span><wbr><span class="parameters">(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;doubleBuffer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">multiply3x4InPlace</span><wbr><span class="parameters">(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeVec)</span></div>
 <div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
  component of the right factor implied to be one. Store the result in the
  argument vector. The matrix is unaffected.</div>
@@ -908,8 +908,8 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#multiply3x4InPlace(com.github.stephengold.joltjni.RVec3)">multiply3x4InPlace</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>doubleBuffer</code> - the right factor and storage for the result (not
- null)</dd>
+<dd><code>storeVec</code> - the right factor and storage for the result (not
+ <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -932,14 +932,14 @@ implements <a href="readonly/RMat44Arg.html" title="interface in com.github.step
 <li>
 <section class="detail" id="postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>postTranslated</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></span>&nbsp;<span class="element-name">postTranslated</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></span>&nbsp;<span class="element-name">postTranslated</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;leftVector)</span></div>
 <div class="block">Post multiply by the specified translation vector. The current matrix is
  unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/RMat44Arg.html#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)">postTranslated</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/RMat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RMat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>vec3</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>leftVector</code> - the left factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>

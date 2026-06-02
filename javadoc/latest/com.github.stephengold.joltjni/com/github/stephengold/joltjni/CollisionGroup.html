@@ -149,6 +149,10 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <div class="col-last even-row-color">
 <div class="block">Instantiate a group with the specified filter and IDs.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">CollisionGroup</a><wbr>(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified group.</div>
+</div>
 </div>
 </section>
 </li>
@@ -181,21 +185,26 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;other)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Test whether this object is equal to the argument.</div>
+<div class="block">Test whether this group is equivalent to the argument.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGroupFilter(com.github.stephengold.joltjni.GroupFilter)" class="member-name-link">setGroupFilter</a><wbr>(<a href="GroupFilter.html" title="class in com.github.stephengold.joltjni">GroupFilter</a>&nbsp;filter)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Replace the group filter.</div>
+<div class="block">Copy the argument to the current group.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGroupId(int)" class="member-name-link">setGroupId</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGroupFilter(com.github.stephengold.joltjni.GroupFilter)" class="member-name-link">setGroupFilter</a><wbr>(<a href="GroupFilter.html" title="class in com.github.stephengold.joltjni">GroupFilter</a>&nbsp;filter)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the main group ID.</div>
+<div class="block">Replace the group filter.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSubGroupId(int)" class="member-name-link">setSubGroupId</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGroupId(int)" class="member-name-link">setGroupId</a><wbr>(int&nbsp;id)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the main group ID.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSubGroupId(int)" class="member-name-link">setSubGroupId</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the subgroup ID.</div>
 </div>
 </div>
@@ -270,6 +279,17 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)">
+<h3>CollisionGroup</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CollisionGroup</span><wbr><span class="parameters">(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified group.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the group to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.GroupFilter,int,int)">
 <h3>CollisionGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CollisionGroup</span><wbr><span class="parameters">(<a href="GroupFilter.html" title="class in com.github.stephengold.joltjni">GroupFilter</a>&nbsp;filter,
@@ -308,6 +328,17 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current group.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the group to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="setGroupFilter(com.github.stephengold.joltjni.GroupFilter)">
 <h3>setGroupFilter</h3>
@@ -387,14 +418,13 @@ implements <a href="readonly/ConstCollisionGroup.html" title="interface in com.g
 <section class="detail" id="isEqual(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)">
 <h3>isEqual</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a>&nbsp;other)</span></div>
-<div class="block">Test whether this object is equal to the argument. Both objects are
+<div class="block">Test whether this group is equivalent to the argument. Both groups are
  unaffected. (native operator: binary <code>==</code>)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCollisionGroup.html#isEqual(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)">isEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>other</code> - the properties to compare with (not <code>null</code>,
- unaffected)</dd>
+<dd><code>other</code> - the group to compare with (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if equal, <code>false</code> if unequal</dd>
 </dl>

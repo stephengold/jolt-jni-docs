@@ -179,23 +179,28 @@ implements <a href="readonly/ConstSpringSettings.html" title="interface in com.g
 <div class="block">Save the settings to the specified binary stream.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDamping(float)" class="member-name-link">setDamping</a><wbr>(float&nbsp;damping)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstSpringSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDamping(float)" class="member-name-link">setDamping</a><wbr>(float&nbsp;damping)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the spring's damping.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrequency(float)" class="member-name-link">setFrequency</a><wbr>(float&nbsp;frequency)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrequency(float)" class="member-name-link">setFrequency</a><wbr>(float&nbsp;frequency)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the spring's frequency.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMode(com.github.stephengold.joltjni.enumerate.ESpringMode)" class="member-name-link">setMode</a><wbr>(<a href="enumerate/ESpringMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ESpringMode</a>&nbsp;mode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMode(com.github.stephengold.joltjni.enumerate.ESpringMode)" class="member-name-link">setMode</a><wbr>(<a href="enumerate/ESpringMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ESpringMode</a>&nbsp;mode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter how the spring is specified.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStiffness(float)" class="member-name-link">setStiffness</a><wbr>(float&nbsp;stiffness)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStiffness(float)" class="member-name-link">setStiffness</a><wbr>(float&nbsp;stiffness)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the stiffness of the spring.</div>
 </div>
 </div>
@@ -258,6 +263,19 @@ implements <a href="readonly/ConstSpringSettings.html" title="interface in com.g
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stream</code> - the stream to read from (not null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstSpringSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstSpringSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSpringSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+<dt>Returns:</dt>
+<dd>the modified current settings, for chaining</dd>
 </dl>
 </section>
 </li>

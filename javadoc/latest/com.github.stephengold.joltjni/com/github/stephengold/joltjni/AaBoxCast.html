@@ -144,13 +144,18 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the length and direction of the cast.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBox(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">setBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.AaBoxCast)" class="member-name-link">set</a><wbr>(<a href="AaBoxCast.html" title="class in com.github.stephengold.joltjni">AaBoxCast</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the box and its starting location.</div>
+<div class="block">Copy the argument to the current cast.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setDirection</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBox(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">setBox</a><wbr>(<a href="readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;box)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the box and its starting location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setDirection</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the length and direction of the cast.</div>
 </div>
 </div>
@@ -219,6 +224,17 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.AaBoxCast)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="AaBoxCast.html" title="class in com.github.stephengold.joltjni">AaBoxCast</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current cast.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the cast to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

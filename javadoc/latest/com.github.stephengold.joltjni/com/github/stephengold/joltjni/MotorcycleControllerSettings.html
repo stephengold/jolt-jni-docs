@@ -48,7 +48,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li>Field</li>
 <li><a href="#constructor-detail">Constr</a></li>
-<li>Method</li>
+<li><a href="#method-detail">Method</a></li>
 </ul>
 </li>
 </ul>
@@ -66,7 +66,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method-detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><a href="../../../../../search.html">SEARCH</a>
@@ -99,11 +99,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></code>, <code><a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MotorcycleControllerSettings</span>
-<span class="extends-implements">extends <a href="WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></span></div>
+<span class="extends-implements">extends <a href="WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a>
+implements <a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></span></div>
 <div class="block">Settings used to construct a <code>MotorcycleController</code>.</div>
 </section>
 <section class="summary">
@@ -120,7 +121,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.MotorcycleControllerSettings)" class="member-name-link">MotorcycleControllerSettings</a><wbr>(<a href="MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstMotorcycleControllerSettings)" class="member-name-link">MotorcycleControllerSettings</a><wbr>(<a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -131,9 +132,86 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeanSmoothingFactor()" class="member-name-link">getLeanSmoothingFactor</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the lean smoothing factor.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeanSpringConstant()" class="member-name-link">getLeanSpringConstant</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the spring constant for the lean spring.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeanSpringDamping()" class="member-name-link">getLeanSpringDamping</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the damping constant for the lean spring.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeanSpringIntegrationCoefficient()" class="member-name-link">getLeanSpringIntegrationCoefficient</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the coefficient of additional force to control the lean angle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeanSpringIntegrationCoefficientDecay()" class="member-name-link">getLeanSpringIntegrationCoefficientDecay</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the rate of decay of the angle integral when the wheels are
+ unsupported.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxLeanAngle()" class="member-name-link">getMaxLeanAngle</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the maximum lean angle (during turns).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstMotorcycleControllerSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeanSmoothingFactor(float)" class="member-name-link">setLeanSmoothingFactor</a><wbr>(float&nbsp;factor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the lean smoothing factor.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeanSpringConstant(float)" class="member-name-link">setLeanSpringConstant</a><wbr>(float&nbsp;k)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the spring constant for the lean spring.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeanSpringDamping(float)" class="member-name-link">setLeanSpringDamping</a><wbr>(float&nbsp;damping)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the damping constant for the lean spring.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeanSpringIntegrationCoefficient(float)" class="member-name-link">setLeanSpringIntegrationCoefficient</a><wbr>(float&nbsp;coefficient)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the coefficient of additional force to control the lean angle.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeanSpringIntegrationCoefficientDecay(float)" class="member-name-link">setLeanSpringIntegrationCoefficientDecay</a><wbr>(float&nbsp;decay)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the rate of decay of the angle integral when the wheels are
+ unsupported.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxLeanAngle(float)" class="member-name-link">setMaxLeanAngle</a><wbr>(float&nbsp;angle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the maximum lean angle (during turns).</div>
+</div>
+</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.WheeledVehicleControllerSettings">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></h3>
-<code><a href="WheeledVehicleControllerSettings.html#getDifferential(int)">getDifferential</a>, <a href="WheeledVehicleControllerSettings.html#getEngine()">getEngine</a>, <a href="WheeledVehicleControllerSettings.html#getNumDifferentials()">getNumDifferentials</a>, <a href="WheeledVehicleControllerSettings.html#getTransmission()">getTransmission</a>, <a href="WheeledVehicleControllerSettings.html#setNumDifferentials(int)">setNumDifferentials</a></code></div>
+<code><a href="WheeledVehicleControllerSettings.html#getDifferential(int)">getDifferential</a>, <a href="WheeledVehicleControllerSettings.html#getDifferentialLimitedSlipRatio()">getDifferentialLimitedSlipRatio</a>, <a href="WheeledVehicleControllerSettings.html#getEngine()">getEngine</a>, <a href="WheeledVehicleControllerSettings.html#getNumDifferentials()">getNumDifferentials</a>, <a href="WheeledVehicleControllerSettings.html#getTransmission()">getTransmission</a>, <a href="WheeledVehicleControllerSettings.html#set(com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings)">set</a>, <a href="WheeledVehicleControllerSettings.html#setDifferentialLimitedSlipRatio(float)">setDifferentialLimitedSlipRatio</a>, <a href="WheeledVehicleControllerSettings.html#setNumDifferentials(int)">setNumDifferentials</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.VehicleControllerSettings">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="VehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">VehicleControllerSettings</a></h3>
 <code><a href="VehicleControllerSettings.html#getRefCount()">getRefCount</a>, <a href="VehicleControllerSettings.html#restoreBinaryState(com.github.stephengold.joltjni.StreamIn)">restoreBinaryState</a>, <a href="VehicleControllerSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a>, <a href="VehicleControllerSettings.html#setEmbedded()">setEmbedded</a>, <a href="VehicleControllerSettings.html#setVirtualAddressAsCoOwner(long)">setVirtualAddressAsCoOwner</a>, <a href="VehicleControllerSettings.html#toRef()">toRef</a></code></div>
@@ -155,6 +233,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
 <code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstVehicleControllerSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleControllerSettings</a></h3>
+<code><a href="readonly/ConstVehicleControllerSettings.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></h3>
+<code><a href="readonly/ConstWheeledVehicleControllerSettings.html#getDifferential(int)">getDifferential</a>, <a href="readonly/ConstWheeledVehicleControllerSettings.html#getDifferentialLimitedSlipRatio()">getDifferentialLimitedSlipRatio</a>, <a href="readonly/ConstWheeledVehicleControllerSettings.html#getEngine()">getEngine</a>, <a href="readonly/ConstWheeledVehicleControllerSettings.html#getNumDifferentials()">getNumDifferentials</a>, <a href="readonly/ConstWheeledVehicleControllerSettings.html#getTransmission()">getTransmission</a></code></div>
 </section>
 </li>
 </ul>
@@ -174,13 +258,189 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.MotorcycleControllerSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstMotorcycleControllerSettings)">
 <h3>MotorcycleControllerSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorcycleControllerSettings</span><wbr><span class="parameters">(<a href="MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorcycleControllerSettings</span><wbr><span class="parameters">(<a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstMotorcycleControllerSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLeanSmoothingFactor(float)">
+<h3>setLeanSmoothingFactor</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeanSmoothingFactor</span><wbr><span class="parameters">(float&nbsp;factor)</span></div>
+<div class="block">Alter the lean smoothing factor. (native attribute: mLeanSmoothingFactor)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>factor</code> - the desired factor (default=0.8)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLeanSpringConstant(float)">
+<h3>setLeanSpringConstant</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeanSpringConstant</span><wbr><span class="parameters">(float&nbsp;k)</span></div>
+<div class="block">Alter the spring constant for the lean spring. (native attribute:
+ mLeanSpringConstant)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>k</code> - the desired spring constant (default=5000)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLeanSpringDamping(float)">
+<h3>setLeanSpringDamping</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeanSpringDamping</span><wbr><span class="parameters">(float&nbsp;damping)</span></div>
+<div class="block">Alter the damping constant for the lean spring. (native attribute:
+ mLeanSpringDamping)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>damping</code> - the desired damping constant (default=1000)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLeanSpringIntegrationCoefficient(float)">
+<h3>setLeanSpringIntegrationCoefficient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeanSpringIntegrationCoefficient</span><wbr><span class="parameters">(float&nbsp;coefficient)</span></div>
+<div class="block">Alter the coefficient of additional force to control the lean angle.
+ (native attribute: mLeanSpringIntegrationCoefficient)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>coefficient</code> - the desired integration coefficient (default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLeanSpringIntegrationCoefficientDecay(float)">
+<h3>setLeanSpringIntegrationCoefficientDecay</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeanSpringIntegrationCoefficientDecay</span><wbr><span class="parameters">(float&nbsp;decay)</span></div>
+<div class="block">Alter the rate of decay of the angle integral when the wheels are
+ unsupported. (native attribute: mLeanSpringIntegrationCoefficientDecay)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>decay</code> - the desired rate of decay (per second, default=4)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaxLeanAngle(float)">
+<h3>setMaxLeanAngle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaxLeanAngle</span><wbr><span class="parameters">(float&nbsp;angle)</span></div>
+<div class="block">Alter the maximum lean angle (during turns). (native attribute:
+ mMaxLeanAngle)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>angle</code> - the desired angle (in radians, default=Pi/4)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLeanSmoothingFactor()">
+<h3>getLeanSmoothingFactor</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLeanSmoothingFactor</span>()</div>
+<div class="block">Return the lean smoothing factor. The settings are unaffected. (native
+ attribute: mLeanSmoothingFactor)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMotorcycleControllerSettings.html#getLeanSmoothingFactor()">getLeanSmoothingFactor</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the factor</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLeanSpringConstant()">
+<h3>getLeanSpringConstant</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLeanSpringConstant</span>()</div>
+<div class="block">Return the spring constant for the lean spring. The settings are
+ unaffected. (native attribute: mLeanSpringConstant)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMotorcycleControllerSettings.html#getLeanSpringConstant()">getLeanSpringConstant</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the spring constant</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLeanSpringDamping()">
+<h3>getLeanSpringDamping</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLeanSpringDamping</span>()</div>
+<div class="block">Return the damping constant for the lean spring. The settings are
+ unaffected. (native attribute: mLeanSpringDamping)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMotorcycleControllerSettings.html#getLeanSpringDamping()">getLeanSpringDamping</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the damping constant</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLeanSpringIntegrationCoefficient()">
+<h3>getLeanSpringIntegrationCoefficient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLeanSpringIntegrationCoefficient</span>()</div>
+<div class="block">Return the coefficient of additional force to control the lean angle. The
+ settings are unaffected. (native attribute:
+ mLeanSpringIntegrationCoefficient)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMotorcycleControllerSettings.html#getLeanSpringIntegrationCoefficient()">getLeanSpringIntegrationCoefficient</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the integration coefficient</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLeanSpringIntegrationCoefficientDecay()">
+<h3>getLeanSpringIntegrationCoefficientDecay</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLeanSpringIntegrationCoefficientDecay</span>()</div>
+<div class="block">Return the rate of decay of the angle integral when the wheels are
+ unsupported. The settings are unaffected. (native attribute:
+ mLeanSpringIntegrationCoefficientDecay)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMotorcycleControllerSettings.html#getLeanSpringIntegrationCoefficientDecay()">getLeanSpringIntegrationCoefficientDecay</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the rate of decay (per second)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxLeanAngle()">
+<h3>getMaxLeanAngle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getMaxLeanAngle</span>()</div>
+<div class="block">Return the maximum lean angle (during turns). The settings are
+ unaffected. (native attribute: mMaxLeanAngle)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMotorcycleControllerSettings.html#getMaxLeanAngle()">getMaxLeanAngle</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the angle (in radians)</dd>
 </dl>
 </section>
 </li>

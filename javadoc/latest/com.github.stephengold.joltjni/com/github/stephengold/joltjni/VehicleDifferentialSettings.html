@@ -93,11 +93,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VehicleDifferentialSettings</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></span></div>
 <div class="block">Settings used to configure the differential of a
  <code>WheeledVehicleController</code>.</div>
 </section>
@@ -115,7 +116,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.VehicleDifferentialSettings)" class="member-name-link">VehicleDifferentialSettings</a><wbr>(<a href="VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstVehicleDifferentialSettings)" class="member-name-link">VehicleDifferentialSettings</a><wbr>(<a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -144,20 +145,31 @@ loadScripts(document, 'script');</script>
 <div class="block">Return the fraction of the engine's torque that is applied to this
  differential.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeftWheel()" class="member-name-link">getLeftWheel</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeftRightSplit()" class="member-name-link">getLeftRightSplit</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the fraction of the engine's torque that is applied to the right
+ wheel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeftWheel()" class="member-name-link">getLeftWheel</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the index of the left wheel.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLimitedSlipRatio()" class="member-name-link">getLimitedSlipRatio</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLimitedSlipRatio()" class="member-name-link">getLimitedSlipRatio</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the ratio of maximum wheel speed to minimum wheel speed.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRightWheel()" class="member-name-link">getRightWheel</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRightWheel()" class="member-name-link">getRightWheel</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the index of the right wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstVehicleDifferentialSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDifferentialRatio(float)" class="member-name-link">setDifferentialRatio</a><wbr>(float&nbsp;ratio)</code></div>
@@ -171,18 +183,24 @@ loadScripts(document, 'script');</script>
  differential.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeftWheel(int)" class="member-name-link">setLeftWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeftRightSplit(float)" class="member-name-link">setLeftRightSplit</a><wbr>(float&nbsp;rightFraction)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter which left wheel is assigned to the differential.</div>
+<div class="block">Alter the fraction of the engine's torque that is applied to the right
+ wheel.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLimitedSlipRatio(float)" class="member-name-link">setLimitedSlipRatio</a><wbr>(float&nbsp;ratio)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeftWheel(int)" class="member-name-link">setLeftWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the ratio of maximum wheel speed to minimum wheel speed.</div>
+<div class="block">Alter which left wheel is assigned to the differential.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRightWheel(int)" class="member-name-link">setRightWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLimitedSlipRatio(float)" class="member-name-link">setLimitedSlipRatio</a><wbr>(float&nbsp;ratio)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the ratio of maximum wheel speed to minimum wheel speed.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRightWheel(int)" class="member-name-link">setRightWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter which right wheel is assigned to the differential.</div>
 </div>
 </div>
@@ -194,6 +212,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -213,9 +237,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.VehicleDifferentialSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstVehicleDifferentialSettings)">
 <h3>VehicleDifferentialSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleDifferentialSettings</span><wbr><span class="parameters">(<a href="VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleDifferentialSettings</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -232,63 +256,13 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getDifferentialRatio()">
-<h3>getDifferentialRatio</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDifferentialRatio</span>()</div>
-<div class="block">Return the number of gearbox rotations per wheel rotation. The settings
- are unaffected. (native attribute: mDifferentialRatio)</div>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstVehicleDifferentialSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>the ratio</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getEngineTorqueRatio()">
-<h3>getEngineTorqueRatio</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getEngineTorqueRatio</span>()</div>
-<div class="block">Return the fraction of the engine's torque that is applied to this
- differential. The settings are unaffected. (native attribute:
- mEngineTorqueRatio)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the fraction</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getLeftWheel()">
-<h3>getLeftWheel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getLeftWheel</span>()</div>
-<div class="block">Return the index of the left wheel. The settings are unaffected. (native
- attribute: mLeftWheel)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the index of the wheel (&ge;0) or -1 for none</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getLimitedSlipRatio()">
-<h3>getLimitedSlipRatio</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLimitedSlipRatio</span>()</div>
-<div class="block">Return the ratio of maximum wheel speed to minimum wheel speed. The
- settings are unaffected. (native member: mLimitedSlipRatio)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the ratio (&gt;1, <code>FLT_MAX</code> for an open differential)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getRightWheel()">
-<h3>getRightWheel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getRightWheel</span>()</div>
-<div class="block">Return the index of the right wheel. The settings are unaffected. (native
- attribute: mRightWheel)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the index of the wheel (&ge;0) or -1 for none</dd>
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -314,7 +288,20 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>fraction</code> - the desired ratio (default=1)</dd>
 <dt>Returns:</dt>
-<dd>the fraction, for chaining</dd>
+<dd>the fraction, for chaining TODO return void</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLeftRightSplit(float)">
+<h3>setLeftRightSplit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeftRightSplit</span><wbr><span class="parameters">(float&nbsp;rightFraction)</span></div>
+<div class="block">Alter the fraction of the engine's torque that is applied to the right
+ wheel. (native attribute: mLeftRightSplit)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rightFraction</code> - the desired fraction (all left=0, all right=1,
+ default=0.5)</dd>
 </dl>
 </section>
 </li>
@@ -355,6 +342,91 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>wheelIndex</code> - the index of the wheel (&ge;0) or -1 for none
  (default=-1)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDifferentialRatio()">
+<h3>getDifferentialRatio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDifferentialRatio</span>()</div>
+<div class="block">Return the number of gearbox rotations per wheel rotation. The settings
+ are unaffected. (native attribute: mDifferentialRatio)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleDifferentialSettings.html#getDifferentialRatio()">getDifferentialRatio</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the ratio</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEngineTorqueRatio()">
+<h3>getEngineTorqueRatio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getEngineTorqueRatio</span>()</div>
+<div class="block">Return the fraction of the engine's torque that is applied to this
+ differential. The settings are unaffected. (native attribute:
+ mEngineTorqueRatio)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleDifferentialSettings.html#getEngineTorqueRatio()">getEngineTorqueRatio</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the fraction</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLeftRightSplit()">
+<h3>getLeftRightSplit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLeftRightSplit</span>()</div>
+<div class="block">Return the fraction of the engine's torque that is applied to the right
+ wheel. The settings are unaffected. (native attribute: mLeftRightSplit)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleDifferentialSettings.html#getLeftRightSplit()">getLeftRightSplit</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the desired fraction (all left=0, all right=1)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLeftWheel()">
+<h3>getLeftWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getLeftWheel</span>()</div>
+<div class="block">Return the index of the left wheel. The settings are unaffected. (native
+ attribute: mLeftWheel)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleDifferentialSettings.html#getLeftWheel()">getLeftWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the index of the wheel (&ge;0) or -1 for none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLimitedSlipRatio()">
+<h3>getLimitedSlipRatio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getLimitedSlipRatio</span>()</div>
+<div class="block">Return the ratio of maximum wheel speed to minimum wheel speed. The
+ settings are unaffected. (native member: mLimitedSlipRatio)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleDifferentialSettings.html#getLimitedSlipRatio()">getLimitedSlipRatio</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the ratio (&gt;1, <code>FLT_MAX</code> for an open differential)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRightWheel()">
+<h3>getRightWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getRightWheel</span>()</div>
+<div class="block">Return the index of the right wheel. The settings are unaffected. (native
+ attribute: mRightWheel)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleDifferentialSettings.html#getRightWheel()">getRightWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the index of the wheel (&ge;0) or -1 for none</dd>
 </dl>
 </section>
 </li>

@@ -202,7 +202,7 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
  consists entirely of rotation and translation.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;m2)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;other)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the current matrix is equal to the argument.</div>
 </div>
@@ -237,18 +237,18 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <div class="block">Multiply the 3x3 matrix by the specified column vector.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x3Transposed(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">multiply3x3Transposed</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3Arg)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x3Transposed(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">multiply3x3Transposed</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rightVector)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Multiply the transpose of the 3x3 matrix by the specified column vector.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x4(com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">multiply3x4</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;float3)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x4(com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">multiply3x4</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;rightVector)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
  component of the right factor implied to be one.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x4(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">multiply3x4</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3Arg)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiply3x4(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">multiply3x4</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
  component of the right factor implied to be one.</div>
@@ -260,7 +260,7 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
  component of the right factor implied to be one.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">postTranslated</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;leftVector)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Post multiply by the specified translation vector.</div>
 </div>
@@ -897,14 +897,14 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <li>
 <section class="detail" id="isEqual(com.github.stephengold.joltjni.readonly.Mat44Arg)">
 <h3>isEqual</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;m2)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;other)</span></div>
 <div class="block">Test whether the current matrix is equal to the argument. The current
  matrix is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Mat44Arg.html#isEqual(com.github.stephengold.joltjni.readonly.Mat44Arg)">isEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>m2</code> - the 2nd matrix to test (not <code>null</code>, unaffected)</dd>
+<dd><code>other</code> - the other matrix to test (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if equal, <code>false</code> if unequal</dd>
 </dl>
@@ -975,14 +975,14 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <li>
 <section class="detail" id="multiply3x3Transposed(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>multiply3x3Transposed</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">multiply3x3Transposed</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3Arg)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">multiply3x3Transposed</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;rightVector)</span></div>
 <div class="block">Multiply the transpose of the 3x3 matrix by the specified column vector.
  The matrix is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Mat44Arg.html#multiply3x3Transposed(com.github.stephengold.joltjni.readonly.Vec3Arg)">multiply3x3Transposed</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>vec3Arg</code> - the right factor (not <code>null</code>, unaffected)</dd>
+<dd><code>rightVector</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -991,7 +991,7 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <li>
 <section class="detail" id="multiply3x4(com.github.stephengold.joltjni.readonly.ConstFloat3)">
 <h3>multiply3x4</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">multiply3x4</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;float3)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">multiply3x4</span><wbr><span class="parameters">(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;rightVector)</span></div>
 <div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
  component of the right factor implied to be one. The matrix is
  unaffected.</div>
@@ -999,7 +999,7 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Mat44Arg.html#multiply3x4(com.github.stephengold.joltjni.readonly.ConstFloat3)">multiply3x4</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>float3</code> - the right factor (not <code>null</code>, unaffected)</dd>
+<dd><code>rightVector</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -1008,7 +1008,7 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <li>
 <section class="detail" id="multiply3x4(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>multiply3x4</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">multiply3x4</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3Arg)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">multiply3x4</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</span></div>
 <div class="block">Multiply the 3x4 matrix by the specified column vector, with the 4th
  component of the right factor implied to be one. The matrix is
  unaffected.</div>
@@ -1016,7 +1016,7 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Mat44Arg.html#multiply3x4(com.github.stephengold.joltjni.readonly.Vec3Arg)">multiply3x4</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>vec3Arg</code> - the right factor (not <code>null</code>, unaffected)</dd>
+<dd><code>vec3</code> - the right factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new vector</dd>
 </dl>
@@ -1041,14 +1041,14 @@ implements <a href="readonly/Mat44Arg.html" title="interface in com.github.steph
 <li>
 <section class="detail" id="postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>postTranslated</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></span>&nbsp;<span class="element-name">postTranslated</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;vec3)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></span>&nbsp;<span class="element-name">postTranslated</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;leftVector)</span></div>
 <div class="block">Post multiply by the specified translation vector. The current matrix is
  unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/Mat44Arg.html#postTranslated(com.github.stephengold.joltjni.readonly.Vec3Arg)">postTranslated</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>vec3</code> - the left factor (not <code>null</code>, unaffected)</dd>
+<dd><code>leftVector</code> - the left factor (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new matrix</dd>
 </dl>

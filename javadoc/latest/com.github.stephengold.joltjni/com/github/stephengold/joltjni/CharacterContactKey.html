@@ -126,7 +126,7 @@ implements <a href="readonly/ConstCharacterContactKey.html" title="interface in 
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a key with the specified parameters.</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.CharacterContactKey)" class="member-name-link">CharacterContactKey</a><wbr>(<a href="CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a>&nbsp;original)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)" class="member-name-link">CharacterContactKey</a><wbr>(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;original)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate a copy of the specified key.</div>
 </div>
@@ -179,9 +179,14 @@ implements <a href="readonly/ConstCharacterContactKey.html" title="interface in 
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Save the key to the specified recorder.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current key.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return a string representation of the properties object, which is
  unaffected.</div>
 </div>
@@ -235,13 +240,13 @@ implements <a href="readonly/ConstCharacterContactKey.html" title="interface in 
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.CharacterContactKey)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)">
 <h3>CharacterContactKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CharacterContactKey</span><wbr><span class="parameters">(<a href="CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CharacterContactKey</span><wbr><span class="parameters">(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified key.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+<dd><code>original</code> - the key to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -261,6 +266,17 @@ implements <a href="readonly/ConstCharacterContactKey.html" title="interface in 
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>recorder</code> - the recorder to restore from (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current key.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the key to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -326,8 +342,8 @@ implements <a href="readonly/ConstCharacterContactKey.html" title="interface in 
 <section class="detail" id="isNotEqual(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)">
 <h3>isNotEqual</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isNotEqual</span><wbr><span class="parameters">(<a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a>&nbsp;other)</span></div>
-<div class="block">Test for content equivalence with another key. The key is
- unaffected.(native operator: binary <code>!=</code>)</div>
+<div class="block">Test for content equivalence with another key. The key is unaffected.
+ (native operator: binary <code>!=</code>)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstCharacterContactKey.html#isNotEqual(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)">isNotEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterContactKey.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterContactKey</a></code></dd>

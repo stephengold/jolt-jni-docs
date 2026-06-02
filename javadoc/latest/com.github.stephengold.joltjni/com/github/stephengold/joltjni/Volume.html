@@ -150,19 +150,24 @@ implements <a href="readonly/ConstVolume.html" title="interface in com.github.st
 <div class="block">Return the mesh vertex at the specified corner.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCompliance(float)" class="member-name-link">setCompliance</a><wbr>(float&nbsp;compliance)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstVolume)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the stiffness of the volume.</div>
+<div class="block">Copy the argument to the current volume.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSixRestVolume(float)" class="member-name-link">setSixRestVolume</a><wbr>(float&nbsp;sixVolume)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCompliance(float)" class="member-name-link">setCompliance</a><wbr>(float&nbsp;compliance)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the rest size of the volume.</div>
+<div class="block">Alter the stiffness of the volume.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVertex(int,int)" class="member-name-link">setVertex</a><wbr>(int&nbsp;indexInVolume,
- int&nbsp;indexInMesh)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSixRestVolume(float)" class="member-name-link">setSixRestVolume</a><wbr>(float&nbsp;sixVolume)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the rest size of the volume.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVertex(int,int)" class="member-name-link">setVertex</a><wbr>(int&nbsp;indexInVolume,
+ int&nbsp;indexInMesh)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Assign the specified mesh vertex to the volume.</div>
 </div>
 </div>
@@ -217,6 +222,17 @@ implements <a href="readonly/ConstVolume.html" title="interface in com.github.st
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstVolume)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstVolume.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVolume</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current volume.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the volume to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="setCompliance(float)">
 <h3>setCompliance</h3>

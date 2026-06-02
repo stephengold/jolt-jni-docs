@@ -192,13 +192,18 @@ implements <a href="readonly/ConstTriangle.html" title="interface in com.github.
  buffer's position by 9.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterialIndex(int)" class="member-name-link">setMaterialIndex</a><wbr>(int&nbsp;materialIndex)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstTriangle)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the triangle's material index.</div>
+<div class="block">Copy the argument to the current triangle.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserData(int)" class="member-name-link">setUserData</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterialIndex(int)" class="member-name-link">setMaterialIndex</a><wbr>(int&nbsp;materialIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the triangle's material index.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserData(int)" class="member-name-link">setUserData</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the triangle's user data.</div>
 </div>
 </div>
@@ -373,6 +378,17 @@ implements <a href="readonly/ConstTriangle.html" title="interface in com.github.
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstTriangle)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current triangle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the triangle to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="setMaterialIndex(int)">
 <h3>setMaterialIndex</h3>

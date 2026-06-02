@@ -182,24 +182,29 @@ implements <a href="readonly/ConstGradient.html" title="interface in com.github.
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write the state of this gradient to the specified stream.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMax(float)" class="member-name-link">setMax</a><wbr>(float&nbsp;max)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstGradient)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstGradient.html" title="interface in com.github.stephengold.joltjni.readonly">ConstGradient</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current gradient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMax(float)" class="member-name-link">setMax</a><wbr>(float&nbsp;max)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the parameter value when the fraction is <code>maxFraction</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxFraction(float)" class="member-name-link">setMaxFraction</a><wbr>(float&nbsp;fraction)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxFraction(float)" class="member-name-link">setMaxFraction</a><wbr>(float&nbsp;fraction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the fraction at which the parameter value reaches <code>max</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMin(float)" class="member-name-link">setMin</a><wbr>(float&nbsp;min)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMin(float)" class="member-name-link">setMin</a><wbr>(float&nbsp;min)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the parameter value when the fraction is <code>minFraction</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMinFraction(float)" class="member-name-link">setMinFraction</a><wbr>(float&nbsp;fraction)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMinFraction(float)" class="member-name-link">setMinFraction</a><wbr>(float&nbsp;fraction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the fraction at which the parameter value is <code>min</code>.</div>
 </div>
 </div>
@@ -313,6 +318,17 @@ implements <a href="readonly/ConstGradient.html" title="interface in com.github.
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stream</code> - where to read from (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstGradient)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstGradient.html" title="interface in com.github.stephengold.joltjni.readonly">ConstGradient</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current gradient.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the gradient to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

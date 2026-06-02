@@ -125,6 +125,10 @@ implements <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interfa
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a triangle with the specified indices.</div>
 </div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)" class="member-name-link">IndexedTriangleNoMaterial</a><wbr>(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>&nbsp;original)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a copy of the specified triangle.</div>
+</div>
 </div>
 </section>
 </li>
@@ -144,11 +148,21 @@ implements <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interfa
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the mesh-vertex index of the specified corner.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#put(java.nio.IntBuffer)" class="member-name-link">put</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)" class="member-name-link">isEqual</a><wbr>(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>&nbsp;other)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether the current triangle is equivalent to the argument.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#put(java.nio.IntBuffer)" class="member-name-link">put</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/IntBuffer.html" title="class or interface in java.nio" class="external-link">IntBuffer</a>&nbsp;storeBuffer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write all 3 indices to the specified buffer and advance the buffer's
  position by 3.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current triangle.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIdx(int,int)" class="member-name-link">setIdx</a><wbr>(int&nbsp;cornerIndex,
@@ -190,6 +204,17 @@ implements <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interfa
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)">
+<h3>IndexedTriangleNoMaterial</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">IndexedTriangleNoMaterial</span><wbr><span class="parameters">(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified triangle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the triangle to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(int,int,int)">
 <h3>IndexedTriangleNoMaterial</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">IndexedTriangleNoMaterial</span><wbr><span class="parameters">(int&nbsp;vi0,
@@ -213,6 +238,17 @@ implements <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interfa
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current triangle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the triangle to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setIdx(int,int)">
 <h3>setIdx</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setIdx</span><wbr><span class="parameters">(int&nbsp;cornerIndex,
@@ -229,7 +265,8 @@ implements <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interfa
 <section class="detail" id="getIdx(int)">
 <h3>getIdx</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getIdx</span><wbr><span class="parameters">(int&nbsp;cornerIndex)</span></div>
-<div class="block">Return the mesh-vertex index of the specified corner.</div>
+<div class="block">Return the mesh-vertex index of the specified corner. The triangle is
+ unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstIndexedTriangleNoMaterial.html#getIdx(int)">getIdx</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a></code></dd>
@@ -237,6 +274,22 @@ implements <a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interfa
 <dd><code>cornerIndex</code> - which corner to access (0, 1, or 2)</dd>
 <dt>Returns:</dt>
 <dd>the index of the vertex in the mesh</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isEqual(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)">
+<h3>isEqual</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEqual</span><wbr><span class="parameters">(<a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a>&nbsp;other)</span></div>
+<div class="block">Test whether the current triangle is equivalent to the argument. Both
+ triangles are unaffected. (native operator: binary <code>==</code>)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstIndexedTriangleNoMaterial.html#isEqual(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)">isEqual</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>other</code> - the triangle to compare with (not <code>null</code>, unaffected)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if equal, <code>false</code> if unequal</dd>
 </dl>
 </section>
 </li>

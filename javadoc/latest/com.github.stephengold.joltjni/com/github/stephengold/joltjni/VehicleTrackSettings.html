@@ -93,11 +93,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VehicleTrackSettings</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></span></div>
+<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+implements <a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></span></div>
 <div class="block">Settings to configure one track in a <code>TrackedVehicleController</code>.</div>
 </section>
 <section class="summary">
@@ -114,7 +115,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.VehicleTrackSettings)" class="member-name-link">VehicleTrackSettings</a><wbr>(<a href="VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstVehicleTrackSettings)" class="member-name-link">VehicleTrackSettings</a><wbr>(<a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -164,9 +165,30 @@ loadScripts(document, 'script');</script>
 <div class="block">Count the track's wheels.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDrivenWheel(int)" class="member-name-link">setDrivenWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstVehicleTrackSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularDamping(float)" class="member-name-link">setAngularDamping</a><wbr>(float&nbsp;factor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the angular damping factor.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDifferentialRatio(float)" class="member-name-link">setDifferentialRatio</a><wbr>(float&nbsp;ratio)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the number of gearbox rotations per driven-wheel rotation.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDrivenWheel(int)" class="member-name-link">setDrivenWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter which wheel is powered by the engine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertia(float)" class="member-name-link">setInertia</a><wbr>(float&nbsp;inertia)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the moment of inertia of the track and its wheels as seen on the
+ driven wheel.</div>
 </div>
 </div>
 </div>
@@ -177,6 +199,12 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Comparable">Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstJoltPhysicsObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></h3>
+<code><a href="readonly/ConstJoltPhysicsObject.html#close()">close</a>, <a href="readonly/ConstJoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code></div>
 </section>
 </li>
 </ul>
@@ -196,9 +224,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.VehicleTrackSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstVehicleTrackSettings)">
 <h3>VehicleTrackSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleTrackSettings</span><wbr><span class="parameters">(<a href="VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VehicleTrackSettings</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -227,62 +255,36 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getAngularDamping()">
-<h3>getAngularDamping</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getAngularDamping</span>()</div>
-<div class="block">Return the angular damping factor. The settings are unaffected. (native
- attribute: mAngularDamping)</div>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstVehicleTrackSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>the damping factor (per second)</dd>
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getDifferentialRatio()">
-<h3>getDifferentialRatio</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDifferentialRatio</span>()</div>
-<div class="block">Return the number of gearbox rotations per driven-wheel rotation. The
- settings are unaffected. (native attribute: mDifferentialRatio)</div>
+<section class="detail" id="setAngularDamping(float)">
+<h3>setAngularDamping</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setAngularDamping</span><wbr><span class="parameters">(float&nbsp;factor)</span></div>
+<div class="block">Alter the angular damping factor. (native attribute: mAngularDamping)</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>the ratio</dd>
+<dt>Parameters:</dt>
+<dd><code>factor</code> - the desired damping factor (per second, default=0.5)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getDrivenWheel()">
-<h3>getDrivenWheel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDrivenWheel</span>()</div>
-<div class="block">Return the index of the wheel powered by the engine. The settings are
- unaffected. (native attribute: mDrivenWheel)</div>
+<section class="detail" id="setDifferentialRatio(float)">
+<h3>setDifferentialRatio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDifferentialRatio</span><wbr><span class="parameters">(float&nbsp;ratio)</span></div>
+<div class="block">Alter the number of gearbox rotations per driven-wheel rotation. (native
+ attribute: mDifferentialRatio)</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>the index of the driven wheel (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getInertia()">
-<h3>getInertia</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getInertia</span>()</div>
-<div class="block">Return the moment of inertia of the track and its wheels as seen on the
- driven wheel. The settings are unaffected. (native attribute: mInertia)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the moment (in kilogram.meter^2)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNumWheels()">
-<h3>getNumWheels</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumWheels</span>()</div>
-<div class="block">Count the track's wheels. The settings are unaffected. (native attribute:
- mWheels)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
+<dt>Parameters:</dt>
+<dd><code>ratio</code> - the desired ratio (default=6)</dd>
 </dl>
 </section>
 </li>
@@ -295,6 +297,88 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>wheelIndex</code> - the index of the desired wheel (&ge;0, default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setInertia(float)">
+<h3>setInertia</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInertia</span><wbr><span class="parameters">(float&nbsp;inertia)</span></div>
+<div class="block">Alter the moment of inertia of the track and its wheels as seen on the
+ driven wheel. (native attribute: mInertia)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>inertia</code> - the moment (in kilogram.meter^2, default=10)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAngularDamping()">
+<h3>getAngularDamping</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getAngularDamping</span>()</div>
+<div class="block">Return the angular damping factor. The settings are unaffected. (native
+ attribute: mAngularDamping)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTrackSettings.html#getAngularDamping()">getAngularDamping</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the damping factor (per second)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDifferentialRatio()">
+<h3>getDifferentialRatio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getDifferentialRatio</span>()</div>
+<div class="block">Return the number of gearbox rotations per driven-wheel rotation. The
+ settings are unaffected. (native attribute: mDifferentialRatio)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTrackSettings.html#getDifferentialRatio()">getDifferentialRatio</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the ratio</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDrivenWheel()">
+<h3>getDrivenWheel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDrivenWheel</span>()</div>
+<div class="block">Return the index of the wheel powered by the engine. The settings are
+ unaffected. (native attribute: mDrivenWheel)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTrackSettings.html#getDrivenWheel()">getDrivenWheel</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the index of the driven wheel (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInertia()">
+<h3>getInertia</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getInertia</span>()</div>
+<div class="block">Return the moment of inertia of the track and its wheels as seen on the
+ driven wheel. The settings are unaffected. (native attribute: mInertia)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTrackSettings.html#getInertia()">getInertia</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the moment (in kilogram.meter^2)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumWheels()">
+<h3>getNumWheels</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNumWheels</span>()</div>
+<div class="block">Count the track's wheels. The settings are unaffected. (native attribute:
+ mWheels)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleTrackSettings.html#getNumWheels()">getNumWheels</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
 </dl>
 </section>
 </li>

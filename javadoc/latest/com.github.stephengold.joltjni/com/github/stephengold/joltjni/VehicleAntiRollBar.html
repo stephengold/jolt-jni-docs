@@ -159,18 +159,23 @@ implements <a href="readonly/ConstVehicleAntiRollBar.html" title="interface in c
 <div class="block">Save the bar to the specified binary stream.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeftWheel(int)" class="member-name-link">setLeftWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstVehicleAntiRollBar)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the index of the left wheel.</div>
+<div class="block">Copy the argument to the current bar.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRightWheel(int)" class="member-name-link">setRightWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeftWheel(int)" class="member-name-link">setLeftWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the index of the right wheel.</div>
+<div class="block">Alter the index of the left wheel.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStiffness(float)" class="member-name-link">setStiffness</a><wbr>(float&nbsp;stiffness)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRightWheel(int)" class="member-name-link">setRightWheel</a><wbr>(int&nbsp;wheelIndex)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the index of the right wheel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStiffness(float)" class="member-name-link">setStiffness</a><wbr>(float&nbsp;stiffness)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the stiffness of the bar.</div>
 </div>
 </div>
@@ -232,7 +237,20 @@ implements <a href="readonly/ConstVehicleAntiRollBar.html" title="interface in c
 <div class="block">Load settings from the specified binary stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to read from (not null)</dd>
+<dd><code>stream</code> - the stream to read from (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstVehicleAntiRollBar)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current bar.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the bar to copy (not <code>null</code>, unaffected)</dd>
+<dt>Returns:</dt>
+<dd>the modified current bar, for chaining</dd>
 </dl>
 </section>
 </li>
@@ -327,7 +345,7 @@ implements <a href="readonly/ConstVehicleAntiRollBar.html" title="interface in c
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstVehicleAntiRollBar.html#saveBinaryState(com.github.stephengold.joltjni.StreamOut)">saveBinaryState</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to write to (not null)</dd>
+<dd><code>stream</code> - the stream to write to (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>

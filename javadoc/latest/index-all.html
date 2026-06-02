@@ -144,7 +144,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#activateBody(int)" class="member-name-link">activateBody(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
-<div class="block">Activate the specified body.</div>
+<div class="block">Activate the specified body, which must be added to a physics system.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#activateConstraint(com.github.stephengold.joltjni.readonly.ConstTwoBodyConstraint)" class="member-name-link">activateConstraint(ConstTwoBodyConstraint)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
@@ -1556,6 +1556,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Collect results from a narrow-phase shape-cast query.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#cBroadPhaseLayerInvalid" class="member-name-link">cBroadPhaseLayerInvalid</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">invalid broad-phase layer</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#cDefaultConvexRadius" class="member-name-link">cDefaultConvexRadius</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
 <div class="block">default rounding of corners in convex shapes (in meters)</div>
@@ -1615,7 +1619,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Instantiate a key with the specified parameters.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactKey.html#%3Cinit%3E(com.github.stephengold.joltjni.CharacterContactKey)" class="member-name-link">CharacterContactKey(CharacterContactKey)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactKey.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)" class="member-name-link">CharacterContactKey(ConstCharacterContactKey)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a></dt>
 <dd>
 <div class="block">Instantiate a copy of the specified key.</div>
 </dd>
@@ -1852,6 +1856,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html#cNumBitsXY" class="member-name-link">cNumBitsXY</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeConstants</a></dt>
 <dd>
 <div class="block">maximum number of bits in an X or Y coordinate</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#cObjectLayerInvalid" class="member-name-link">cObjectLayerInvalid</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">invalid object layer</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/ECollectFacesMode.html#CollectFaces" class="member-name-link">CollectFaces</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/ECollectFacesMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECollectFacesMode</a></dt>
 <dd>
@@ -2198,6 +2206,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Instantiate a group with the specified filter and IDs.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionGroup.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">CollisionGroup(ConstCollisionGroup)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionGroup.html" title="class in com.github.stephengold.joltjni">CollisionGroup</a></dt>
+<dd>
+<div class="block">Instantiate a copy of the specified group.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html" class="type-name-link" title="class in com.github.stephengold.joltjni">Color</a> - Class in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/package-summary.html">com.github.stephengold.joltjni</a></dt>
 <dd>
 <div class="block">An RGBA color with 8-bit components.</div>
@@ -2538,6 +2550,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Read-only access to a <code>MotionProperties</code> object.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to a <code>MotorcycleControllerSettings</code> object.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
 <div class="block">Read-only access to a <code>MotorSettings</code> object.</div>
@@ -2716,6 +2732,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Read-only access to an <code>SVertex</code>.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to a <code>TrackedVehicleControllerSettings</code> object.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTransformedConvexObject.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstTransformedConvexObject</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
 <div class="block">Read-only access to a <code>TransformedConvexObject</code>.</div>
@@ -2756,9 +2776,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Read-only access to a <code>VehicleControllerSettings</code> object.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to a <code>VehicleDifferentialSettings</code> object.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleEngineSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleEngineSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
 <div class="block">Read-only access to a <code>VehicleEngineSettings</code> object.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to a <code>VehicleTrackSettings</code> object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTransmissionSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTransmissionSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -2783,6 +2811,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheel.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
 <div class="block">Read-only access to <code>Wheel</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
+<dd>
+<div class="block">Read-only access to a <code>WheeledVehicleControllerSettings</code> object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettings.html" class="type-name-link" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a> - Interface in <a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/package-summary.html">com.github.stephengold.joltjni.readonly</a></dt>
 <dd>
@@ -4402,11 +4434,23 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Error conditions reported by <code>PhysicsSystem.update()</code>.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html" title="class in com.github.stephengold.joltjni">Color</a></dt>
+<dd>
+<div class="block">Tests for exact equality with the argument.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></dt>
 <dd>
 <div class="block">Test for type and virtual-address equality with another object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Plane.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Plane.html" title="class in com.github.stephengold.joltjni">Plane</a></dt>
+<dd>
+<div class="block">Tests for exact equality with the argument, distinguishing -0 from 0.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Quat.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></dt>
+<dd>
+<div class="block">Tests for exact equality with the argument, distinguishing -0 from 0.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RVec3.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></dt>
 <dd>
 <div class="block">Tests for exact equality with the argument, distinguishing -0 from 0.</div>
 </dd>
@@ -4648,7 +4692,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html#%3Cinit%3E()" class="member-name-link">Float2()</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html" title="class in com.github.stephengold.joltjni">Float2</a></dt>
 <dd>
-<div class="block">Instantiate an all-zero vector (0,0,0).</div>
+<div class="block">Instantiate an all-zero vector (0,0).</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html#%3Cinit%3E(float,float)" class="member-name-link">Float2(float, float)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html" title="class in com.github.stephengold.joltjni">Float2</a></dt>
 <dd>
@@ -5175,6 +5219,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the angular damping factor.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html#getAngularDamping()" class="member-name-link">getAngularDamping()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Return the angular damping factor.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettingsWv.html#getAngularDamping()" class="member-name-link">getAngularDamping()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a></dt>
 <dd>
 <div class="block">Return the angular damping coefficient.</div>
@@ -5671,6 +5719,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Access the body filter.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html#getBodyFilter()" class="member-name-link">getBodyFilter()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Access the body filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#getBodyFilter()" class="member-name-link">getBodyFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Access the body filter.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getBodyFilterMode()" class="member-name-link">getBodyFilterMode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
 <div class="block">Return the body-filter mode.</div>
@@ -5843,6 +5899,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getBroadPhaseLayerFilter()" class="member-name-link">getBroadPhaseLayerFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
 <div class="block">Access the broadphase-layer filter</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html#getBroadPhaseLayerFilter()" class="member-name-link">getBroadPhaseLayerFilter()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Access the broadphase-layer filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#getBroadPhaseLayerFilter()" class="member-name-link">getBroadPhaseLayerFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Access the broadphase-layer filter.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getBroadPhaseLayerFilterMode()" class="member-name-link">getBroadPhaseLayerFilterMode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
@@ -6879,9 +6943,31 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the diagonal elements to a <code>Vec3</code>.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html#getDifferential(int)" class="member-name-link">getDifferential(int)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the settings for the specified differential.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#getDifferential(int)" class="member-name-link">getDifferential(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
 <dd>
 <div class="block">Access the settings for the specified differential.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html#getDifferentialLimitedSlipRatio()" class="member-name-link">getDifferentialLimitedSlipRatio()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the ratio of the max/min average wheel speed for each
+ differential.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#getDifferentialLimitedSlipRatio()" class="member-name-link">getDifferentialLimitedSlipRatio()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the ratio of the max/min average wheel speed for each
+ differential.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html#getDifferentialRatio()" class="member-name-link">getDifferentialRatio()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Return the number of gearbox rotations per wheel rotation.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html#getDifferentialRatio()" class="member-name-link">getDifferentialRatio()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Return the number of gearbox rotations per driven-wheel rotation.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#getDifferentialRatio()" class="member-name-link">getDifferentialRatio()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
 <dd>
@@ -7029,6 +7115,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether to visualize vertex velocities.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html#getDrivenWheel()" class="member-name-link">getDrivenWheel()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Return the index of the wheel powered by the engine.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html#getDrivenWheel()" class="member-name-link">getDrivenWheel()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></dt>
 <dd>
 <div class="block">Return the index of the wheel powered by the engine.</div>
@@ -7169,9 +7259,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the index of the ending vertex.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html#getEngine()" class="member-name-link">getEngine()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the engine settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html#getEngine()" class="member-name-link">getEngine()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the engine settings.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleController.html#getEngine()" class="member-name-link">getEngine()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleController.html" title="class in com.github.stephengold.joltjni">TrackedVehicleController</a></dt>
 <dd>
 <div class="block">Access the vehicle's engine.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html#getEngine()" class="member-name-link">getEngine()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the engine settings.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleController.html#getEngine()" class="member-name-link">getEngine()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleController.html" title="class in com.github.stephengold.joltjni">WheeledVehicleController</a></dt>
 <dd>
@@ -7180,6 +7282,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#getEngine()" class="member-name-link">getEngine()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
 <dd>
 <div class="block">Access the engine settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html#getEngineTorqueRatio()" class="member-name-link">getEngineTorqueRatio()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Return the fraction of the engine's torque that is applied to this
+ differential.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#getEngineTorqueRatio()" class="member-name-link">getEngineTorqueRatio()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
 <dd>
@@ -8030,6 +8137,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the engine's rotational inertia.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html#getInertia()" class="member-name-link">getInertia()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Return the moment of inertia of the track and its wheels as seen on the
+ driven wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettingsWv.html#getInertia()" class="member-name-link">getInertia()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheelSettingsWv.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettingsWv</a></dt>
 <dd>
 <div class="block">Return the moment of inertia around the wheel's rolling axis.</div>
@@ -8531,26 +8643,82 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the smoothing factor for the lean angle.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#getLeanSmoothingFactor()" class="member-name-link">getLeanSmoothingFactor()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the lean smoothing factor.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html#getLeanSmoothingFactor()" class="member-name-link">getLeanSmoothingFactor()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the lean smoothing factor.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#getLeanSpringConstant()" class="member-name-link">getLeanSpringConstant()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Return the stiffness of the lean spring.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#getLeanSpringConstant()" class="member-name-link">getLeanSpringConstant()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the spring constant for the lean spring.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html#getLeanSpringConstant()" class="member-name-link">getLeanSpringConstant()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the spring constant for the lean spring.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#getLeanSpringDamping()" class="member-name-link">getLeanSpringDamping()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Return the damping constant of the lean spring.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#getLeanSpringDamping()" class="member-name-link">getLeanSpringDamping()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the damping constant for the lean spring.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html#getLeanSpringDamping()" class="member-name-link">getLeanSpringDamping()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the damping constant for the lean spring.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#getLeanSpringIntegrationCoefficient()" class="member-name-link">getLeanSpringIntegrationCoefficient()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Return the coefficient of the integral term.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#getLeanSpringIntegrationCoefficient()" class="member-name-link">getLeanSpringIntegrationCoefficient()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the coefficient of additional force to control the lean angle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html#getLeanSpringIntegrationCoefficient()" class="member-name-link">getLeanSpringIntegrationCoefficient()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the coefficient of additional force to control the lean angle.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#getLeanSpringIntegrationCoefficientDecay()" class="member-name-link">getLeanSpringIntegrationCoefficientDecay()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Return the decay rate of the integral term when the motorcycle is
  unsupported.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#getLeanSpringIntegrationCoefficientDecay()" class="member-name-link">getLeanSpringIntegrationCoefficientDecay()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the rate of decay of the angle integral when the wheels are
+ unsupported.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html#getLeanSpringIntegrationCoefficientDecay()" class="member-name-link">getLeanSpringIntegrationCoefficientDecay()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the rate of decay of the angle integral when the wheels are
+ unsupported.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html#getLeftRightSplit()" class="member-name-link">getLeftRightSplit()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Return the fraction of the engine's torque that is applied to the right
+ wheel.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#getLeftRightSplit()" class="member-name-link">getLeftRightSplit()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Return the fraction of the engine's torque that is applied to the right
+ wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleAntiRollBar.html#getLeftWheel()" class="member-name-link">getLeftWheel()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleAntiRollBar.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleAntiRollBar</a></dt>
 <dd>
 <div class="block">Identify the left wheel of the bar.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html#getLeftWheel()" class="member-name-link">getLeftWheel()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Return the index of the left wheel.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html#getLeftWheel()" class="member-name-link">getLeftWheel()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></dt>
 <dd>
@@ -8577,6 +8745,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the initial distance between this vertex from the next one in the
  unloaded strand, computed by <code>init()</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html#getLimitedSlipRatio()" class="member-name-link">getLimitedSlipRatio()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Return the ratio of maximum wheel speed to minimum wheel speed.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#getLimitedSlipRatio()" class="member-name-link">getLimitedSlipRatio()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
 <dd>
@@ -9337,6 +9509,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the maximum number of in-flight body pairs.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#getMaxLeanAngle()" class="member-name-link">getMaxLeanAngle()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the maximum lean angle (during turns).</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html#getMaxLeanAngle()" class="member-name-link">getMaxLeanAngle()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMotorcycleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Return the maximum lean angle (during turns).</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PulleyConstraintSettings.html#getMaxLength()" class="member-name-link">getMaxLength()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PulleyConstraintSettings.html" title="class in com.github.stephengold.joltjni">PulleyConstraintSettings</a></dt>
 <dd>
 <div class="block">Return the maximum length of the line segments.</div>
@@ -9934,6 +10114,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count how many broad-phase layers there are.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html#getNumDifferentials()" class="member-name-link">getNumDifferentials()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Count how many differentials the vehicle will have.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#getNumDifferentials()" class="member-name-link">getNumDifferentials()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
 <dd>
 <div class="block">Count how many differentials the vehicle will have.</div>
@@ -10080,6 +10264,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count the sub-shapes.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html#getNumTracks()" class="member-name-link">getNumTracks()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Count how many tracks the vehicle will have.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html#getNumTracks()" class="member-name-link">getNumTracks()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a></dt>
 <dd>
 <div class="block">Count how many tracks the vehicle will have.</div>
@@ -10160,6 +10348,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Count the wheels.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html#getNumWheels()" class="member-name-link">getNumWheels()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleTrackSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Count the track's wheels.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettings.html#getNumWheels()" class="member-name-link">getNumWheels()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettings.html" title="class in com.github.stephengold.joltjni">VehicleConstraintSettings</a></dt>
 <dd>
 <div class="block">Count the wheels.</div>
@@ -10209,6 +10401,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#getObjectLayer(int)" class="member-name-link">getObjectLayer(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
 <div class="block">Return the object layer of the specified body.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html#getObjectLayerFilter()" class="member-name-link">getObjectLayerFilter()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Access the object-layer filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#getObjectLayerFilter()" class="member-name-link">getObjectLayerFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Access the object-layer filter.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#getObjectLayerPairFilter()" class="member-name-link">getObjectLayerPairFilter()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
@@ -11466,6 +11666,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Identify the right wheel of the bar.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html#getRightWheel()" class="member-name-link">getRightWheel()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstVehicleDifferentialSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Return the index of the right wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html#getRightWheel()" class="member-name-link">getRightWheel()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></dt>
 <dd>
 <div class="block">Return the index of the right wheel.</div>
@@ -11643,6 +11847,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html#getRotationAngle()" class="member-name-link">getRotationAngle()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Wheel.html" title="class in com.github.stephengold.joltjni">Wheel</a></dt>
 <dd>
 <div class="block">Return the wheel's rotation angle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Quat.html#getRotationAngle(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getRotationAngle(Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></dt>
+<dd>
+<div class="block">Return the rotation angle around the specified axis.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/QuatArg.html#getRotationAngle(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getRotationAngle(Vec3Arg)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a></dt>
+<dd>
+<div class="block">Return the rotation angle around the specified axis.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintSettings.html#getRotationConstraintType()" class="member-name-link">getRotationConstraintType()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintSettings.html" title="class in com.github.stephengold.joltjni">PathConstraintSettings</a></dt>
 <dd>
@@ -12869,6 +13081,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Copy the total lambda of rotation.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html#getTrack(int)" class="member-name-link">getTrack(int)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the settings for the specified track.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html#getTrack(int)" class="member-name-link">getTrack(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a></dt>
 <dd>
 <div class="block">Access the settings for the specified track.</div>
@@ -12992,6 +13208,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SixDofConstraint.html#getTranslationLimitsMin()" class="member-name-link">getTranslationLimitsMin()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SixDofConstraint.html" title="class in com.github.stephengold.joltjni">SixDofConstraint</a></dt>
 <dd>
 <div class="block">Copy the translation lower limits.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html#getTransmission()" class="member-name-link">getTransmission()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstTrackedVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTrackedVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the transmission (gearbox) settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html#getTransmission()" class="member-name-link">getTransmission()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstWheeledVehicleControllerSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the transmission (gearbox) settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html#getTransmission()" class="member-name-link">getTransmission()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Access the transmission (gearbox) settings.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleController.html#getTransmission()" class="member-name-link">getTransmission()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleController.html" title="class in com.github.stephengold.joltjni">WheeledVehicleController</a></dt>
 <dd>
@@ -14209,11 +14437,23 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Combine the specified vector with the specified hash code.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html" title="class in com.github.stephengold.joltjni">Color</a></dt>
+<dd>
+<div class="block">Return a hash code.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></dt>
 <dd>
 <div class="block">Return the hash code of the physics object.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Plane.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Plane.html" title="class in com.github.stephengold.joltjni">Plane</a></dt>
+<dd>
+<div class="block">Return a hash code.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Quat.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></dt>
+<dd>
+<div class="block">Return a hash code.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RVec3.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></dt>
 <dd>
 <div class="block">Return a hash code.</div>
 </dd>
@@ -14502,6 +14742,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Instantiate a triangle with the specified indices.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleNoMaterial.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)" class="member-name-link">IndexedTriangleNoMaterial(ConstIndexedTriangleNoMaterial)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleNoMaterial.html" title="class in com.github.stephengold.joltjni">IndexedTriangleNoMaterial</a></dt>
+<dd>
+<div class="block">Instantiate a copy of the specified triangle.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSettings.html#init(float%5B%5D)" class="member-name-link">init(float[])</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></dt>
 <dd>
 <div class="block">Calculate simulation bounds and vertex properties.</div>
@@ -14742,6 +14986,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether the stream has reached its end.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyIdVector.html#isEqual(com.github.stephengold.joltjni.BodyIdVector)" class="member-name-link">isEqual(BodyIdVector)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyIdVector.html" title="class in com.github.stephengold.joltjni">BodyIdVector</a></dt>
+<dd>
+<div class="block">Test whether the current vector is equivalent to the argument.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBox.html#isEqual(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">isEqual(ConstAaBox)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></dt>
+<dd>
+<div class="block">Test whether the current box is equivalent to the argument.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstAaBox.html#isEqual(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">isEqual(ConstAaBox)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a></dt>
+<dd>
+<div class="block">Test whether the current box is equivalent to the argument.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyCreationSettings.html#isEqual(com.github.stephengold.joltjni.readonly.ConstBodyCreationSettings)" class="member-name-link">isEqual(ConstBodyCreationSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></dt>
 <dd>
 <div class="block">Test whether this object is equal to the argument.</div>
@@ -14760,7 +15016,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionGroup.html#isEqual(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">isEqual(ConstCollisionGroup)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionGroup.html" title="class in com.github.stephengold.joltjni">CollisionGroup</a></dt>
 <dd>
-<div class="block">Test whether this object is equal to the argument.</div>
+<div class="block">Test whether this group is equivalent to the argument.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCollisionGroup.html#isEqual(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">isEqual(ConstCollisionGroup)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCollisionGroup.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollisionGroup</a></dt>
 <dd>
@@ -14770,6 +15026,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Test whether the specified colors are equal.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleNoMaterial.html#isEqual(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)" class="member-name-link">isEqual(ConstIndexedTriangleNoMaterial)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleNoMaterial.html" title="class in com.github.stephengold.joltjni">IndexedTriangleNoMaterial</a></dt>
+<dd>
+<div class="block">Test whether the current triangle is equivalent to the argument.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstIndexedTriangleNoMaterial.html#isEqual(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)" class="member-name-link">isEqual(ConstIndexedTriangleNoMaterial)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstIndexedTriangleNoMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangleNoMaterial</a></dt>
+<dd>
+<div class="block">Test whether the current triangle is equivalent to the argument.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MassProperties.html#isEqual(com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">isEqual(ConstMassProperties)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></dt>
 <dd>
 <div class="block">Test whether this object is equal to the argument.</div>
@@ -14777,6 +15041,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMassProperties.html#isEqual(com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">isEqual(ConstMassProperties)</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a></dt>
 <dd>
 <div class="block">Test whether this object is equal to the argument.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SubShapeIdPair.html#isEqual(com.github.stephengold.joltjni.readonly.ConstSubShapeIdPair)" class="member-name-link">isEqual(ConstSubShapeIdPair)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SubShapeIdPair.html" title="class in com.github.stephengold.joltjni">SubShapeIdPair</a></dt>
+<dd>
+<div class="block">Test whether the current pair is equivalent to the argument.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html#isEqual(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">isEqual(Mat44Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></dt>
 <dd>
@@ -14797,6 +15065,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RMat44.html#isEqual(com.github.stephengold.joltjni.readonly.RMat44Arg)" class="member-name-link">isEqual(RMat44Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></dt>
 <dd>
 <div class="block">Test whether the current matrix is equal to the argument.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Rtti.html#isEqual(com.github.stephengold.joltjni.Rtti)" class="member-name-link">isEqual(Rtti)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Rtti.html" title="class in com.github.stephengold.joltjni">Rtti</a></dt>
+<dd>
+<div class="block">Test whether the current type information is equivalent to the argument.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ChbFace.html#isFacing(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">isFacing(Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ChbFace.html" title="class in com.github.stephengold.joltjni">ChbFace</a></dt>
 <dd>
@@ -15753,7 +16025,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Instantiate default settings.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.MotorcycleControllerSettings)" class="member-name-link">MotorcycleControllerSettings(MotorcycleControllerSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstMotorcycleControllerSettings)" class="member-name-link">MotorcycleControllerSettings(ConstMotorcycleControllerSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
 <dd>
 <div class="block">Instantiate a copy of the specified settings.</div>
 </dd>
@@ -18836,17 +19108,297 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Put or duplicate the specified object at the specified index.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBoxCast.html#set(com.github.stephengold.joltjni.AaBoxCast)" class="member-name-link">set(AaBoxCast)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBoxCast.html" title="class in com.github.stephengold.joltjni">AaBoxCast</a></dt>
+<dd>
+<div class="block">Copy the argument to the current cast.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CapsuleShapeSettings.html#set(com.github.stephengold.joltjni.CapsuleShapeSettings)" class="member-name-link">set(CapsuleShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CapsuleShapeSettings.html" title="class in com.github.stephengold.joltjni">CapsuleShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollideShapeSettings.html#set(com.github.stephengold.joltjni.CollideShapeSettings)" class="member-name-link">set(CollideShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollideShapeSettings.html" title="class in com.github.stephengold.joltjni">CollideShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConeConstraintSettings.html#set(com.github.stephengold.joltjni.ConeConstraintSettings)" class="member-name-link">set(ConeConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConeConstraintSettings.html" title="class in com.github.stephengold.joltjni">ConeConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexHullShapeSettings.html#set(com.github.stephengold.joltjni.ConvexHullShapeSettings)" class="member-name-link">set(ConvexHullShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexHullShapeSettings.html" title="class in com.github.stephengold.joltjni">ConvexHullShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CylinderShapeSettings.html#set(com.github.stephengold.joltjni.CylinderShapeSettings)" class="member-name-link">set(CylinderShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CylinderShapeSettings.html" title="class in com.github.stephengold.joltjni">CylinderShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/DistanceConstraintSettings.html#set(com.github.stephengold.joltjni.DistanceConstraintSettings)" class="member-name-link">set(DistanceConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/DistanceConstraintSettings.html" title="class in com.github.stephengold.joltjni">DistanceConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FixedConstraintSettings.html#set(com.github.stephengold.joltjni.FixedConstraintSettings)" class="member-name-link">set(FixedConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FixedConstraintSettings.html" title="class in com.github.stephengold.joltjni">FixedConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html#set(com.github.stephengold.joltjni.Float2)" class="member-name-link">set(Float2)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float2.html" title="class in com.github.stephengold.joltjni">Float2</a></dt>
+<dd>
+<div class="block">Copy the argument to the current vector.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/GearConstraintSettings.html#set(com.github.stephengold.joltjni.GearConstraintSettings)" class="member-name-link">set(GearConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/GearConstraintSettings.html" title="class in com.github.stephengold.joltjni">GearConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/GroupFilterTable.html#set(com.github.stephengold.joltjni.GroupFilterTable)" class="member-name-link">set(GroupFilterTable)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/GroupFilterTable.html" title="class in com.github.stephengold.joltjni">GroupFilterTable</a></dt>
+<dd>
+<div class="block">Copy the argument to the current filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSkinWeight.html#set(com.github.stephengold.joltjni.HairSkinWeight)" class="member-name-link">set(HairSkinWeight)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSkinWeight.html" title="class in com.github.stephengold.joltjni">HairSkinWeight</a></dt>
+<dd>
+<div class="block">Copy the argument to the current weight.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeSettings.html#set(com.github.stephengold.joltjni.HeightFieldShapeSettings)" class="member-name-link">set(HeightFieldShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeSettings.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HingeConstraintSettings.html#set(com.github.stephengold.joltjni.HingeConstraintSettings)" class="member-name-link">set(HingeConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HingeConstraintSettings.html" title="class in com.github.stephengold.joltjni">HingeConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MeshShapeSettings.html#set(com.github.stephengold.joltjni.MeshShapeSettings)" class="member-name-link">set(MeshShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MutableCompoundShapeSettings.html#set(com.github.stephengold.joltjni.MutableCompoundShapeSettings)" class="member-name-link">set(MutableCompoundShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MutableCompoundShapeSettings.html" title="class in com.github.stephengold.joltjni">MutableCompoundShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/OffsetCenterOfMassShapeSettings.html#set(com.github.stephengold.joltjni.OffsetCenterOfMassShapeSettings)" class="member-name-link">set(OffsetCenterOfMassShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/OffsetCenterOfMassShapeSettings.html" title="class in com.github.stephengold.joltjni">OffsetCenterOfMassShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintSettings.html#set(com.github.stephengold.joltjni.PathConstraintSettings)" class="member-name-link">set(PathConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PathConstraintSettings.html" title="class in com.github.stephengold.joltjni">PathConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsMaterialSimple.html#set(com.github.stephengold.joltjni.PhysicsMaterialSimple)" class="member-name-link">set(PhysicsMaterialSimple)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsMaterialSimple.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialSimple</a></dt>
+<dd>
+<div class="block">Copy the argument to the current material.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PlaneShapeSettings.html#set(com.github.stephengold.joltjni.PlaneShapeSettings)" class="member-name-link">set(PlaneShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PlaneShapeSettings.html" title="class in com.github.stephengold.joltjni">PlaneShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PointConstraintSettings.html#set(com.github.stephengold.joltjni.PointConstraintSettings)" class="member-name-link">set(PointConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PointConstraintSettings.html" title="class in com.github.stephengold.joltjni">PointConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PulleyConstraintSettings.html#set(com.github.stephengold.joltjni.PulleyConstraintSettings)" class="member-name-link">set(PulleyConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PulleyConstraintSettings.html" title="class in com.github.stephengold.joltjni">PulleyConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RackAndPinionConstraintSettings.html#set(com.github.stephengold.joltjni.RackAndPinionConstraintSettings)" class="member-name-link">set(RackAndPinionConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RackAndPinionConstraintSettings.html" title="class in com.github.stephengold.joltjni">RackAndPinionConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RagdollSettings.html#set(com.github.stephengold.joltjni.RagdollSettings)" class="member-name-link">set(RagdollSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RagdollSettings.html" title="class in com.github.stephengold.joltjni">RagdollSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RayCastSettings.html#set(com.github.stephengold.joltjni.RayCastSettings)" class="member-name-link">set(RayCastSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RayCastSettings.html" title="class in com.github.stephengold.joltjni">RayCastSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBox.html#set(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">set(ConstAaBox)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></dt>
+<dd>
+<div class="block">Copy the argument to the current box.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyCreationSettings.html#set(com.github.stephengold.joltjni.readonly.ConstBodyCreationSettings)" class="member-name-link">set(ConstBodyCreationSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyCreationSettings.html" title="class in com.github.stephengold.joltjni">BodyCreationSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BoxShapeSettings.html#set(com.github.stephengold.joltjni.readonly.ConstBoxShapeSettings)" class="member-name-link">set(ConstBoxShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BoxShapeSettings.html" title="class in com.github.stephengold.joltjni">BoxShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactKey.html#set(com.github.stephengold.joltjni.readonly.ConstCharacterContactKey)" class="member-name-link">set(ConstCharacterContactKey)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterContactKey.html" title="class in com.github.stephengold.joltjni">CharacterContactKey</a></dt>
+<dd>
+<div class="block">Copy the argument to the current key.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterSettings.html#set(com.github.stephengold.joltjni.readonly.ConstCharacterSettings)" class="member-name-link">set(ConstCharacterSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettings.html#set(com.github.stephengold.joltjni.readonly.ConstCharacterVirtualSettings)" class="member-name-link">set(ConstCharacterVirtualSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettings.html" title="class in com.github.stephengold.joltjni">CharacterVirtualSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionGroup.html#set(com.github.stephengold.joltjni.readonly.ConstCollisionGroup)" class="member-name-link">set(ConstCollisionGroup)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollisionGroup.html" title="class in com.github.stephengold.joltjni">CollisionGroup</a></dt>
+<dd>
+<div class="block">Copy the argument to the current group.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html#set(com.github.stephengold.joltjni.readonly.ConstColor)" class="member-name-link">set(ConstColor)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html" title="class in com.github.stephengold.joltjni">Color</a></dt>
 <dd>
 <div class="block">Copy all components of the argument to the current object.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/DrawSettings.html#set(com.github.stephengold.joltjni.readonly.ConstDrawSettings)" class="member-name-link">set(ConstDrawSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/DrawSettings.html" title="class in com.github.stephengold.joltjni">DrawSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Edge.html#set(com.github.stephengold.joltjni.readonly.ConstEdge)" class="member-name-link">set(ConstEdge)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Edge.html" title="class in com.github.stephengold.joltjni">Edge</a></dt>
+<dd>
+<div class="block">Copy the argument to the current edge.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ExtendedUpdateSettings.html#set(com.github.stephengold.joltjni.readonly.ConstExtendedUpdateSettings)" class="member-name-link">set(ConstExtendedUpdateSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ExtendedUpdateSettings.html" title="class in com.github.stephengold.joltjni">ExtendedUpdateSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Face.html#set(com.github.stephengold.joltjni.readonly.ConstFace)" class="member-name-link">set(ConstFace)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Face.html" title="class in com.github.stephengold.joltjni">Face</a></dt>
+<dd>
+<div class="block">Copy the argument to the current face.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float3.html#set(com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">set(ConstFloat3)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float3.html" title="class in com.github.stephengold.joltjni">Float3</a></dt>
+<dd>
+<div class="block">Copy the argument to the current vector.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float4.html#set(com.github.stephengold.joltjni.readonly.ConstFloat4)" class="member-name-link">set(ConstFloat4)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Float4.html" title="class in com.github.stephengold.joltjni">Float4</a></dt>
+<dd>
+<div class="block">Copy the argument to the current vector.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Gradient.html#set(com.github.stephengold.joltjni.readonly.ConstGradient)" class="member-name-link">set(ConstGradient)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Gradient.html" title="class in com.github.stephengold.joltjni">Gradient</a></dt>
+<dd>
+<div class="block">Copy the argument to the current gradient.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairMaterial.html#set(com.github.stephengold.joltjni.readonly.ConstHairMaterial)" class="member-name-link">set(ConstHairMaterial)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairMaterial.html" title="class in com.github.stephengold.joltjni">HairMaterial</a></dt>
+<dd>
+<div class="block">Copy the argument to the current material.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSettings.html#set(com.github.stephengold.joltjni.readonly.ConstHairSettings)" class="member-name-link">set(ConstHairSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleNoMaterial.html#set(com.github.stephengold.joltjni.readonly.ConstIndexedTriangleNoMaterial)" class="member-name-link">set(ConstIndexedTriangleNoMaterial)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/IndexedTriangleNoMaterial.html" title="class in com.github.stephengold.joltjni">IndexedTriangleNoMaterial</a></dt>
+<dd>
+<div class="block">Copy the argument to the current triangle.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JointState.html#set(com.github.stephengold.joltjni.readonly.ConstJointState)" class="member-name-link">set(ConstJointState)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/JointState.html" title="class in com.github.stephengold.joltjni">JointState</a></dt>
 <dd>
 <div class="block">Copy both components from the argument.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/LinearCurve.html#set(com.github.stephengold.joltjni.readonly.ConstLinearCurve)" class="member-name-link">set(ConstLinearCurve)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/LinearCurve.html" title="class in com.github.stephengold.joltjni">LinearCurve</a></dt>
+<dd>
+<div class="block">Copy the argument to the current curve.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MassProperties.html#set(com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">set(ConstMassProperties)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></dt>
+<dd>
+<div class="block">Copy the argument to the current properties.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotionProperties.html#set(com.github.stephengold.joltjni.readonly.ConstMotionProperties)" class="member-name-link">set(ConstMotionProperties)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotionProperties.html" title="class in com.github.stephengold.joltjni">MotionProperties</a></dt>
+<dd>
+<div class="block">Copy the argument to the current properties.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#set(com.github.stephengold.joltjni.readonly.ConstMotorcycleControllerSettings)" class="member-name-link">set(ConstMotorcycleControllerSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorSettings.html#set(com.github.stephengold.joltjni.readonly.ConstMotorSettings)" class="member-name-link">set(ConstMotorSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorSettings.html" title="class in com.github.stephengold.joltjni">MotorSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/OrientedBox.html#set(com.github.stephengold.joltjni.readonly.ConstOrientedBox)" class="member-name-link">set(ConstOrientedBox)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/OrientedBox.html" title="class in com.github.stephengold.joltjni">OrientedBox</a></dt>
+<dd>
+<div class="block">Copy the argument to the current box.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#set(com.github.stephengold.joltjni.readonly.ConstPhysicsSettings)" class="member-name-link">set(ConstPhysicsSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Plane.html#set(com.github.stephengold.joltjni.readonly.ConstPlane)" class="member-name-link">set(ConstPlane)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Plane.html" title="class in com.github.stephengold.joltjni">Plane</a></dt>
 <dd>
 <div class="block">Set all 4 components from the argument.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SkeletonPose.html#set(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)" class="member-name-link">set(ConstSkeletonPose)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SkeletonPose.html" title="class in com.github.stephengold.joltjni">SkeletonPose</a></dt>
+<dd>
+<div class="block">Copy the argument to the current pose.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyContactSettings.html#set(com.github.stephengold.joltjni.readonly.ConstSoftBodyContactSettings)" class="member-name-link">set(ConstSoftBodyContactSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyContactSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyContactSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html#set(com.github.stephengold.joltjni.readonly.ConstSoftBodyCreationSettings)" class="member-name-link">set(ConstSoftBodyCreationSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodySharedSettings.html#set(com.github.stephengold.joltjni.readonly.ConstSoftBodySharedSettings)" class="member-name-link">set(ConstSoftBodySharedSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodySharedSettings.html" title="class in com.github.stephengold.joltjni">SoftBodySharedSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyVertex.html#set(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)" class="member-name-link">set(ConstSoftBodyVertex)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SoftBodyVertex.html" title="class in com.github.stephengold.joltjni">SoftBodyVertex</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html#set(com.github.stephengold.joltjni.readonly.ConstSphere)" class="member-name-link">set(ConstSphere)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Sphere.html" title="class in com.github.stephengold.joltjni">Sphere</a></dt>
+<dd>
+<div class="block">Copy the argument to the current sphere.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SpringSettings.html#set(com.github.stephengold.joltjni.readonly.ConstSpringSettings)" class="member-name-link">set(ConstSpringSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SpringSettings.html" title="class in com.github.stephengold.joltjni">SpringSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html#set(com.github.stephengold.joltjni.readonly.ConstTrackedVehicleControllerSettings)" class="member-name-link">set(ConstTrackedVehicleControllerSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Triangle.html#set(com.github.stephengold.joltjni.readonly.ConstTriangle)" class="member-name-link">set(ConstTriangle)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Triangle.html" title="class in com.github.stephengold.joltjni">Triangle</a></dt>
+<dd>
+<div class="block">Copy the argument to the current triangle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html#set(com.github.stephengold.joltjni.readonly.ConstVehicleAntiRollBar)" class="member-name-link">set(ConstVehicleAntiRollBar)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></dt>
+<dd>
+<div class="block">Copy the argument to the current bar.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettings.html#set(com.github.stephengold.joltjni.readonly.ConstVehicleConstraintSettings)" class="member-name-link">set(ConstVehicleConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleConstraintSettings.html" title="class in com.github.stephengold.joltjni">VehicleConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#set(com.github.stephengold.joltjni.readonly.ConstVehicleDifferentialSettings)" class="member-name-link">set(ConstVehicleDifferentialSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleEngineSettings.html#set(com.github.stephengold.joltjni.readonly.ConstVehicleEngineSettings)" class="member-name-link">set(ConstVehicleEngineSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleEngineSettings.html" title="class in com.github.stephengold.joltjni">VehicleEngineSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html#set(com.github.stephengold.joltjni.readonly.ConstVehicleTrackSettings)" class="member-name-link">set(ConstVehicleTrackSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTransmissionSettings.html#set(com.github.stephengold.joltjni.readonly.ConstVehicleTransmissionSettings)" class="member-name-link">set(ConstVehicleTransmissionSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTransmissionSettings.html" title="class in com.github.stephengold.joltjni">VehicleTransmissionSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vertex.html#set(com.github.stephengold.joltjni.readonly.ConstVertex)" class="member-name-link">set(ConstVertex)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vertex.html" title="class in com.github.stephengold.joltjni">Vertex</a></dt>
+<dd>
+<div class="block">Copy the argument to the current vertex.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VertexAttributes.html#set(com.github.stephengold.joltjni.readonly.ConstVertexAttributes)" class="member-name-link">set(ConstVertexAttributes)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VertexAttributes.html" title="class in com.github.stephengold.joltjni">VertexAttributes</a></dt>
+<dd>
+<div class="block">Copy the argument to the current attributes.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Volume.html#set(com.github.stephengold.joltjni.readonly.ConstVolume)" class="member-name-link">set(ConstVolume)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Volume.html" title="class in com.github.stephengold.joltjni">Volume</a></dt>
+<dd>
+<div class="block">Copy the argument to the current volume.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#set(com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings)" class="member-name-link">set(ConstWheeledVehicleControllerSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsTv.html#set(com.github.stephengold.joltjni.readonly.ConstWheelSettingsTv)" class="member-name-link">set(ConstWheelSettingsTv)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsTv.html" title="class in com.github.stephengold.joltjni">WheelSettingsTv</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWv.html#set(com.github.stephengold.joltjni.readonly.ConstWheelSettingsWv)" class="member-name-link">set(ConstWheelSettingsWv)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWv.html" title="class in com.github.stephengold.joltjni">WheelSettingsWv</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html#set(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">set(Mat44Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></dt>
 <dd>
@@ -18883,6 +19435,58 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vec4.html#set(com.github.stephengold.joltjni.readonly.Vec4Arg)" class="member-name-link">set(Vec4Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Vec4.html" title="class in com.github.stephengold.joltjni">Vec4</a></dt>
 <dd>
 <div class="block">Set all 4 components from the argument.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RotatedTranslatedShapeSettings.html#set(com.github.stephengold.joltjni.RotatedTranslatedShapeSettings)" class="member-name-link">set(RotatedTranslatedShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RotatedTranslatedShapeSettings.html" title="class in com.github.stephengold.joltjni">RotatedTranslatedShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ScaledShapeSettings.html#set(com.github.stephengold.joltjni.ScaledShapeSettings)" class="member-name-link">set(ScaledShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ScaledShapeSettings.html" title="class in com.github.stephengold.joltjni">ScaledShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeCastSettings.html#set(com.github.stephengold.joltjni.ShapeCastSettings)" class="member-name-link">set(ShapeCastSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ShapeCastSettings.html" title="class in com.github.stephengold.joltjni">ShapeCastSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SixDofConstraintSettings.html#set(com.github.stephengold.joltjni.SixDofConstraintSettings)" class="member-name-link">set(SixDofConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SixDofConstraintSettings.html" title="class in com.github.stephengold.joltjni">SixDofConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SkinWeight.html#set(com.github.stephengold.joltjni.SkinWeight)" class="member-name-link">set(SkinWeight)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SkinWeight.html" title="class in com.github.stephengold.joltjni">SkinWeight</a></dt>
+<dd>
+<div class="block">Copy the argument to the current weight.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SliderConstraintSettings.html#set(com.github.stephengold.joltjni.SliderConstraintSettings)" class="member-name-link">set(SliderConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SliderConstraintSettings.html" title="class in com.github.stephengold.joltjni">SliderConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SphereShapeSettings.html#set(com.github.stephengold.joltjni.SphereShapeSettings)" class="member-name-link">set(SphereShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SphereShapeSettings.html" title="class in com.github.stephengold.joltjni">SphereShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/StaticCompoundShapeSettings.html#set(com.github.stephengold.joltjni.StaticCompoundShapeSettings)" class="member-name-link">set(StaticCompoundShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/StaticCompoundShapeSettings.html" title="class in com.github.stephengold.joltjni">StaticCompoundShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SwingTwistConstraintSettings.html#set(com.github.stephengold.joltjni.SwingTwistConstraintSettings)" class="member-name-link">set(SwingTwistConstraintSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/SwingTwistConstraintSettings.html" title="class in com.github.stephengold.joltjni">SwingTwistConstraintSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TaperedCapsuleShapeSettings.html#set(com.github.stephengold.joltjni.TaperedCapsuleShapeSettings)" class="member-name-link">set(TaperedCapsuleShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TaperedCapsuleShapeSettings.html" title="class in com.github.stephengold.joltjni">TaperedCapsuleShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TaperedCylinderShapeSettings.html#set(com.github.stephengold.joltjni.TaperedCylinderShapeSettings)" class="member-name-link">set(TaperedCylinderShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TaperedCylinderShapeSettings.html" title="class in com.github.stephengold.joltjni">TaperedCylinderShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TriangleConvexSupport.html#set(com.github.stephengold.joltjni.TriangleConvexSupport)" class="member-name-link">set(TriangleConvexSupport)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TriangleConvexSupport.html" title="class in com.github.stephengold.joltjni">TriangleConvexSupport</a></dt>
+<dd>
+<div class="block">Copy the argument to the current triangle.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TriangleShapeSettings.html#set(com.github.stephengold.joltjni.TriangleShapeSettings)" class="member-name-link">set(TriangleShapeSettings)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TriangleShapeSettings.html" title="class in com.github.stephengold.joltjni">TriangleShapeSettings</a></dt>
+<dd>
+<div class="block">Copy the argument to the current settings.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RVec3.html#set(java.nio.DoubleBuffer)" class="member-name-link">set(DoubleBuffer)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></dt>
 <dd>
@@ -18969,6 +19573,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Alter the angular damping.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleEngineSettings.html#setAngularDamping(float)" class="member-name-link">setAngularDamping(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleEngineSettings.html" title="class in com.github.stephengold.joltjni">VehicleEngineSettings</a></dt>
+<dd>
+<div class="block">Alter the angular damping factor.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html#setAngularDamping(float)" class="member-name-link">setAngularDamping(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></dt>
 <dd>
 <div class="block">Alter the angular damping factor.</div>
 </dd>
@@ -19156,6 +19764,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Replace the listener's body filter.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#setBodyFilter(com.github.stephengold.joltjni.BodyFilter)" class="member-name-link">setBodyFilter(BodyFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Replace the body filter.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setBodyFilterMode(com.github.stephengold.joltjni.enumerate.EFilterMode)" class="member-name-link">setBodyFilterMode(EFilterMode)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
 <div class="block">Alter the body-filter mode.</div>
@@ -19197,6 +19809,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setBroadPhaseLayerFilter(com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">setBroadPhaseLayerFilter(BroadPhaseLayerFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
 <div class="block">Replace the listener's broadphase-layer filter.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#setBroadPhaseLayerFilter(com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">setBroadPhaseLayerFilter(BroadPhaseLayerFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Replace the broadphase-layer filter.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setBroadPhaseLayerFilterMode(com.github.stephengold.joltjni.enumerate.EFilterMode)" class="member-name-link">setBroadPhaseLayerFilterMode(EFilterMode)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
@@ -19403,9 +20019,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the wheel-speed ratio of each differential, measured at the clutch.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#setDifferentialLimitedSlipRatio(float)" class="member-name-link">setDifferentialLimitedSlipRatio(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
+<dd>
+<div class="block">Alter the ratio of the max/min average wheel speed for each differential.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#setDifferentialRatio(float)" class="member-name-link">setDifferentialRatio(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
 <dd>
 <div class="block">Alter the number of gearbox rotations per wheel rotation.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html#setDifferentialRatio(float)" class="member-name-link">setDifferentialRatio(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Alter the number of gearbox rotations per driven-wheel rotation.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBoxCast.html#setDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setDirection(Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/AaBoxCast.html" title="class in com.github.stephengold.joltjni">AaBoxCast</a></dt>
 <dd>
@@ -19935,6 +20559,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the engine's rotational inertia.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html#setInertia(float)" class="member-name-link">setInertia(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></dt>
+<dd>
+<div class="block">Alter the moment of inertia of the track and its wheels as seen on the
+ driven wheel.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWv.html#setInertia(float)" class="member-name-link">setInertia(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheelSettingsWv.html" title="class in com.github.stephengold.joltjni">WheelSettingsWv</a></dt>
 <dd>
 <div class="block">Alter the moment of inertia around the wheel's rolling axis.</div>
@@ -20113,22 +20742,48 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the smoothing factor for the lean angle.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#setLeanSmoothingFactor(float)" class="member-name-link">setLeanSmoothingFactor(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Alter the lean smoothing factor.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#setLeanSpringConstant(float)" class="member-name-link">setLeanSpringConstant(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Alter the stiffness of the lean spring.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#setLeanSpringConstant(float)" class="member-name-link">setLeanSpringConstant(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Alter the spring constant for the lean spring.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#setLeanSpringDamping(float)" class="member-name-link">setLeanSpringDamping(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Alter the damping constant of the lean spring.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#setLeanSpringDamping(float)" class="member-name-link">setLeanSpringDamping(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Alter the damping constant for the lean spring.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#setLeanSpringIntegrationCoefficient(float)" class="member-name-link">setLeanSpringIntegrationCoefficient(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Return the coefficient of the integral term.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#setLeanSpringIntegrationCoefficient(float)" class="member-name-link">setLeanSpringIntegrationCoefficient(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Alter the coefficient of additional force to control the lean angle.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html#setLeanSpringIntegrationCoefficientDecay(float)" class="member-name-link">setLeanSpringIntegrationCoefficientDecay(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleController.html" title="class in com.github.stephengold.joltjni">MotorcycleController</a></dt>
 <dd>
 <div class="block">Alter the decay rate of the integral term when the motorcycle is
  unsupported.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#setLeanSpringIntegrationCoefficientDecay(float)" class="member-name-link">setLeanSpringIntegrationCoefficientDecay(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Alter the rate of decay of the angle integral when the wheels are
+ unsupported.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#setLeftRightSplit(float)" class="member-name-link">setLeftRightSplit(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
+<dd>
+<div class="block">Alter the fraction of the engine's torque that is applied to the right
+ wheel.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html#setLeftWheel(int)" class="member-name-link">setLeftWheel(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleAntiRollBar.html" title="class in com.github.stephengold.joltjni">VehicleAntiRollBar</a></dt>
 <dd>
@@ -20544,6 +21199,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the capacity of the in-flight body pairs array.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html#setMaxLeanAngle(float)" class="member-name-link">setMaxLeanAngle(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/MotorcycleControllerSettings.html" title="class in com.github.stephengold.joltjni">MotorcycleControllerSettings</a></dt>
+<dd>
+<div class="block">Alter the maximum lean angle (during turns).</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PulleyConstraintSettings.html#setMaxLength(float)" class="member-name-link">setMaxLength(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PulleyConstraintSettings.html" title="class in com.github.stephengold.joltjni">PulleyConstraintSettings</a></dt>
 <dd>
 <div class="block">Alter the maximum length of the line segments.</div>
@@ -20893,12 +21552,16 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#setObjectLayer(int)" class="member-name-link">setObjectLayer(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
 <dd>
-<div class="block">Alter the object layer used for collision detection when no filters are
+<div class="block">Replace the object layer used for collision detection when no filters are
  overridden.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html#setObjectLayer(int,int)" class="member-name-link">setObjectLayer(int, int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/BodyInterface.html" title="class in com.github.stephengold.joltjni">BodyInterface</a></dt>
 <dd>
 <div class="block">Alter the object layer of the specified body.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html#setObjectLayerFilter(com.github.stephengold.joltjni.ObjectLayerFilter)" class="member-name-link">setObjectLayerFilter(ObjectLayerFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleCollisionTester.html" title="class in com.github.stephengold.joltjni">VehicleCollisionTester</a></dt>
+<dd>
+<div class="block">Replace the object-layer filter.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html#setObjectLayerPairFilter(com.github.stephengold.joltjni.ObjectLayerPairFilter)" class="member-name-link">setObjectLayerPairFilter(ObjectLayerPairFilter)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/FilteredContactListener.html" title="class in com.github.stephengold.joltjni">FilteredContactListener</a></dt>
 <dd>
@@ -24429,6 +25092,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Return a string representation of the properties object, which is
  unaffected.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html#toString()" class="member-name-link">toString()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Color.html" title="class in com.github.stephengold.joltjni">Color</a></dt>
+<dd>
+<div class="block">Return a string representation of the color, which is unaffected.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Face.html#toString()" class="member-name-link">toString()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Face.html" title="class in com.github.stephengold.joltjni">Face</a></dt>
 <dd>
 <div class="block">Return a string representation of the face, which is unaffected.</div>
@@ -24514,7 +25181,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Instantiate default settings.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.TrackedVehicleControllerSettings)" class="member-name-link">TrackedVehicleControllerSettings(TrackedVehicleControllerSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstTrackedVehicleControllerSettings)" class="member-name-link">TrackedVehicleControllerSettings(ConstTrackedVehicleControllerSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/TrackedVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">TrackedVehicleControllerSettings</a></dt>
 <dd>
 <div class="block">Instantiate a copy of the specified settings.</div>
 </dd>
@@ -25500,7 +26167,7 @@ the order they are declared.</div>
 <dd>
 <div class="block">Instantiate default settings.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.VehicleDifferentialSettings)" class="member-name-link">VehicleDifferentialSettings(VehicleDifferentialSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstVehicleDifferentialSettings)" class="member-name-link">VehicleDifferentialSettings(ConstVehicleDifferentialSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleDifferentialSettings.html" title="class in com.github.stephengold.joltjni">VehicleDifferentialSettings</a></dt>
 <dd>
 <div class="block">Instantiate a copy of the specified settings.</div>
 </dd>
@@ -25532,7 +26199,7 @@ the order they are declared.</div>
 <dd>
 <div class="block">Instantiate default settings.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.VehicleTrackSettings)" class="member-name-link">VehicleTrackSettings(VehicleTrackSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstVehicleTrackSettings)" class="member-name-link">VehicleTrackSettings(ConstVehicleTrackSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/VehicleTrackSettings.html" title="class in com.github.stephengold.joltjni">VehicleTrackSettings</a></dt>
 <dd>
 <div class="block">Instantiate a copy of the specified settings.</div>
 </dd>
@@ -25662,7 +26329,7 @@ the order they are declared.</div>
 <dd>
 <div class="block">Instantiate default settings.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.WheeledVehicleControllerSettings)" class="member-name-link">WheeledVehicleControllerSettings(WheeledVehicleControllerSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstWheeledVehicleControllerSettings)" class="member-name-link">WheeledVehicleControllerSettings(ConstWheeledVehicleControllerSettings)</a> - Constructor for class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/WheeledVehicleControllerSettings.html" title="class in com.github.stephengold.joltjni">WheeledVehicleControllerSettings</a></dt>
 <dd>
 <div class="block">Instantiate a copy of the specified settings.</div>
 </dd>

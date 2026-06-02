@@ -128,7 +128,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Float2</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">Instantiate an all-zero vector (0,0,0).</div>
+<div class="block">Instantiate an all-zero vector (0,0).</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float,float)" class="member-name-link">Float2</a><wbr>(float&nbsp;x,
  float&nbsp;y)</code></div>
@@ -175,9 +175,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set both components to specified values.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.Float2)" class="member-name-link">set</a><wbr>(<a href="Float2.html" title="class in com.github.stephengold.joltjni">Float2</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current vector.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return a string representation of the vector, which is unaffected.</div>
 </div>
 </div>
@@ -223,7 +228,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Float2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Float2</span>()</div>
-<div class="block">Instantiate an all-zero vector (0,0,0).</div>
+<div class="block">Instantiate an all-zero vector (0,0).</div>
 </section>
 </li>
 <li>
@@ -246,7 +251,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate a copy of the specified vector.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rhs</code> - the vector to copy (not null, unaffected)</dd>
+<dd><code>rhs</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -281,7 +286,7 @@ loadScripts(document, 'script');</script>
  position by 2. The vector is unaffected.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>storeBuffer</code> - the destination buffer (not null)</dd>
+<dd><code>storeBuffer</code> - the destination buffer (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -305,8 +310,19 @@ loadScripts(document, 'script');</script>
 <div class="block">Set both components from the specified array.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>array</code> - the desired component values (not null, length&ge;2,
+<dd><code>array</code> - the desired component values (not <code>null</code>, length&ge;2,
  unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.Float2)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="Float2.html" title="class in com.github.stephengold.joltjni">Float2</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current vector.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the vector to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -323,7 +339,7 @@ loadScripts(document, 'script');</script>
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>the string representation (not null, not empty)</dd>
+<dd>the string representation (not <code>null</code>, not empty)</dd>
 </dl>
 </section>
 </li>

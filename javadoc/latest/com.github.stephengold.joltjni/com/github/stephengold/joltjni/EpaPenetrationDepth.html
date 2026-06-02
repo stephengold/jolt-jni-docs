@@ -257,17 +257,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Perform the GJK and EPA steps on a pair of points.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>aExcluding</code> - point A without convex radius (not null, unaffected)</dd>
-<dd><code>aIncluding</code> - point A with convex radius (not null, unaffected)</dd>
+<dd><code>aExcluding</code> - point A without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>aIncluding</code> - point A with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusA</code> - the convex radius of point A</dd>
-<dd><code>bExcluding</code> - point B without convex radius (not null, unaffected)</dd>
-<dd><code>bIncluding</code> - point B with convex radius (not null, unaffected)</dd>
+<dd><code>bExcluding</code> - point B without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bIncluding</code> - point B with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusB</code> - the convex radius of point B</dd>
 <dd><code>collisionToleranceSq</code> - the square of the collision tolerance</dd>
 <dd><code>penetrationTolerance</code> - the penetration tolerance</dd>
-<dd><code>iov</code> - the direction vector (not null, modified)</dd>
-<dd><code>storePointA</code> - storage for the point on point A (not null, modified)</dd>
-<dd><code>storePointB</code> - storage for the point on point B (not null, modified)</dd>
+<dd><code>iov</code> - the direction vector (not <code>null</code>, modified)</dd>
+<dd><code>storePointA</code> - storage for the point on point A (not <code>null</code>,
+ modified)</dd>
+<dd><code>storePointB</code> - storage for the point on point B (not <code>null</code>,
+ modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if the points intersect, otherwise <code>false</code></dd>
 </dl>
@@ -290,19 +296,26 @@ loadScripts(document, 'script');</script>
 <div class="block">Perform the GJK and EPA steps on a pair of spheres.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>aExcluding</code> - sphere A without convex radius (not null, unaffected)</dd>
-<dd><code>aIncluding</code> - sphere A with convex radius (not null, unaffected)</dd>
+<dd><code>aExcluding</code> - sphere A without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>aIncluding</code> - sphere A with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusA</code> - the convex radius of sphere A</dd>
-<dd><code>bExcluding</code> - sphere B without convex radius (not null, unaffected)</dd>
-<dd><code>bIncluding</code> - sphere B with convex radius (not null, unaffected)</dd>
+<dd><code>bExcluding</code> - sphere B without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bIncluding</code> - sphere B with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusB</code> - the convex radius of sphere B</dd>
 <dd><code>collisionToleranceSq</code> - the square of the collision tolerance</dd>
 <dd><code>penetrationTolerance</code> - the penetration tolerance</dd>
-<dd><code>iov</code> - the direction vector (not null, modified)</dd>
-<dd><code>storePointA</code> - storage for the point on sphere A (not null, modified)</dd>
-<dd><code>storePointB</code> - storage for the point on sphere B (not null, modified)</dd>
+<dd><code>iov</code> - the direction vector (not <code>null</code>, modified)</dd>
+<dd><code>storePointA</code> - storage for the point on sphere A (not <code>null</code>,
+ modified)</dd>
+<dd><code>storePointB</code> - storage for the point on sphere B (not <code>null</code>,
+ modified)</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if the spheres intersect, otherwise <code>false</code></dd>
+<dd><code>{@code null}</code> if the spheres intersect, otherwise
+ <code>false</code></dd>
 </dl>
 </section>
 </li>
@@ -323,18 +336,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Perform the GJK and EPA steps on a sphere and a transformed box.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>aExcluding</code> - the sphere without convex radius (not null, unaffected)</dd>
-<dd><code>aIncluding</code> - the sphere with convex radius (not null, unaffected)</dd>
+<dd><code>aExcluding</code> - the sphere without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>aIncluding</code> - the sphere with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusA</code> - the convex radius of the sphere</dd>
-<dd><code>bExcluding</code> - the box without convex radius (not null, unaffected)</dd>
-<dd><code>bIncluding</code> - the box with convex radius (not null, unaffected)</dd>
+<dd><code>bExcluding</code> - the box without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bIncluding</code> - the box with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusB</code> - the convex radius of the box</dd>
 <dd><code>collisionToleranceSq</code> - the square of the collision tolerance</dd>
 <dd><code>penetrationTolerance</code> - the penetration tolerance</dd>
-<dd><code>iov</code> - the direction vector (not null, modified)</dd>
-<dd><code>storePointA</code> - storage for the point on the sphere (not null,
+<dd><code>iov</code> - the direction vector (not <code>null</code>, modified)</dd>
+<dd><code>storePointA</code> - storage for the point on the sphere (not <code>null</code>,
  modified)</dd>
-<dd><code>storePointB</code> - storage for the point on the box (not null, modified)</dd>
+<dd><code>storePointB</code> - storage for the point on the box (not <code>null</code>,
+ modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if the box and sphere intersect, otherwise
  <code>false</code></dd>
@@ -358,17 +376,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Perform the GJK and EPA steps on a pair of transformed boxes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>aExcluding</code> - box A without convex radius (not null, unaffected)</dd>
-<dd><code>aIncluding</code> - box A with convex radius (not null, unaffected)</dd>
+<dd><code>aExcluding</code> - box A without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>aIncluding</code> - box A with convex radius (not <code>null</code>, unaffected)</dd>
 <dd><code>convexRadiusA</code> - the convex radius of box A</dd>
-<dd><code>bExcluding</code> - box B without convex radius (not null, unaffected)</dd>
-<dd><code>bIncluding</code> - box B with convex radius (not null, unaffected)</dd>
+<dd><code>bExcluding</code> - box B without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bIncluding</code> - box B with convex radius (not <code>null</code>, unaffected)</dd>
 <dd><code>convexRadiusB</code> - the convex radius of box B</dd>
 <dd><code>collisionToleranceSq</code> - the square of the collision tolerance</dd>
 <dd><code>penetrationTolerance</code> - the penetration tolerance</dd>
-<dd><code>iov</code> - the direction vector (not null, modified)</dd>
-<dd><code>storePointA</code> - storage for the point on box A (not null, modified)</dd>
-<dd><code>storePointB</code> - storage for the point on box B (not null, modified)</dd>
+<dd><code>iov</code> - the direction vector (not <code>null</code>, modified)</dd>
+<dd><code>storePointA</code> - storage for the point on box A (not <code>null</code>,
+ modified)</dd>
+<dd><code>storePointB</code> - storage for the point on box B (not <code>null</code>,
+ modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if the boxes intersect, otherwise <code>false</code></dd>
 </dl>
@@ -392,17 +414,22 @@ loadScripts(document, 'script');</script>
  sphere.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>aExcluding</code> - the box without convex radius (not null, unaffected)</dd>
-<dd><code>aIncluding</code> - the box with convex radius (not null, unaffected)</dd>
+<dd><code>aExcluding</code> - the box without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>aIncluding</code> - the box with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusA</code> - the convex radius of the box</dd>
-<dd><code>bExcluding</code> - the sphere without convex radius (not null, unaffected)</dd>
-<dd><code>bIncluding</code> - the sphere with convex radius (not null, unaffected)</dd>
+<dd><code>bExcluding</code> - the sphere without convex radius (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>bIncluding</code> - the sphere with convex radius (not <code>null</code>,
+ unaffected)</dd>
 <dd><code>convexRadiusB</code> - the convex radius of the sphere</dd>
 <dd><code>collisionToleranceSq</code> - the square of the collision tolerance</dd>
 <dd><code>penetrationTolerance</code> - the penetration tolerance</dd>
-<dd><code>iov</code> - the direction vector (not null, modified)</dd>
-<dd><code>storePointA</code> - storage for the point on the box (not null, modified)</dd>
-<dd><code>storePointB</code> - storage for the point on the sphere (not null,
+<dd><code>iov</code> - the direction vector (not <code>null</code>, modified)</dd>
+<dd><code>storePointA</code> - storage for the point on the box (not <code>null</code>,
+ modified)</dd>
+<dd><code>storePointB</code> - storage for the point on the sphere (not <code>null</code>,
  modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if the box and sphere intersect, otherwise

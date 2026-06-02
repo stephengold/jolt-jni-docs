@@ -120,27 +120,57 @@ implements <a href="readonly/ConstVehicleCollisionTester.html" title="interface 
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBodyFilter()" class="member-name-link">getBodyFilter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the body filter.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBroadPhaseLayerFilter()" class="member-name-link">getBroadPhaseLayerFilter</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the broadphase-layer filter.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectLayer()" class="member-name-link">getObjectLayer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the object layer used for collision detection when no filters are
  overridden.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectLayerFilter()" class="member-name-link">getObjectLayerFilter</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the object-layer filter.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the active references to the native <code>VehicleCollisionTester</code>.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBodyFilter(com.github.stephengold.joltjni.BodyFilter)" class="member-name-link">setBodyFilter</a><wbr>(<a href="BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a>&nbsp;filter)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replace the body filter.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBroadPhaseLayerFilter(com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">setBroadPhaseLayerFilter</a><wbr>(<a href="BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;filter)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Mark the native <code>VehicleCollisionTester</code> as embedded.</div>
+<div class="block">Replace the broadphase-layer filter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setObjectLayer(int)" class="member-name-link">setObjectLayer</a><wbr>(int&nbsp;objectLayer)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmbedded()" class="member-name-link">setEmbedded</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the object layer used for collision detection when no filters are
+<div class="block">Mark the native <code>VehicleCollisionTester</code> as embedded.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setObjectLayer(int)" class="member-name-link">setObjectLayer</a><wbr>(int&nbsp;objectLayer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replace the object layer used for collision detection when no filters are
  overridden.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setObjectLayerFilter(com.github.stephengold.joltjni.ObjectLayerFilter)" class="member-name-link">setObjectLayerFilter</a><wbr>(<a href="ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;filter)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replace the object-layer filter.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVirtualAddressAsCoOwner(long)" class="member-name-link">setVirtualAddressAsCoOwner</a><wbr>(long&nbsp;testerVa)</code></div>
@@ -180,14 +210,47 @@ implements <a href="readonly/ConstVehicleCollisionTester.html" title="interface 
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="setBodyFilter(com.github.stephengold.joltjni.BodyFilter)">
+<h3>setBodyFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBodyFilter</span><wbr><span class="parameters">(<a href="BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a>&nbsp;filter)</span></div>
+<div class="block">Replace the body filter.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>filter</code> - the desired filter, or <code>null</code> for none (default=null)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setBroadPhaseLayerFilter(com.github.stephengold.joltjni.BroadPhaseLayerFilter)">
+<h3>setBroadPhaseLayerFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBroadPhaseLayerFilter</span><wbr><span class="parameters">(<a href="BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;filter)</span></div>
+<div class="block">Replace the broadphase-layer filter.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>filter</code> - the desired filter, or <code>null</code> for none (default=null)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setObjectLayer(int)">
 <h3>setObjectLayer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setObjectLayer</span><wbr><span class="parameters">(int&nbsp;objectLayer)</span></div>
-<div class="block">Alter the object layer used for collision detection when no filters are
+<div class="block">Replace the object layer used for collision detection when no filters are
  overridden.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>objectLayer</code> - the index of the desired layer</dd>
+<dd><code>objectLayer</code> - the index of the desired layer (default=-1)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setObjectLayerFilter(com.github.stephengold.joltjni.ObjectLayerFilter)">
+<h3>setObjectLayerFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setObjectLayerFilter</span><wbr><span class="parameters">(<a href="ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;filter)</span></div>
+<div class="block">Replace the object-layer filter.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>filter</code> - the desired filter, or <code>null</code> for none (default=null)</dd>
 </dl>
 </section>
 </li>
@@ -205,16 +268,58 @@ implements <a href="readonly/ConstVehicleCollisionTester.html" title="interface 
 </section>
 </li>
 <li>
+<section class="detail" id="getBodyFilter()">
+<h3>getBodyFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a></span>&nbsp;<span class="element-name">getBodyFilter</span>()</div>
+<div class="block">Access the body filter. The tester is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleCollisionTester.html#getBodyFilter()">getBodyFilter</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBroadPhaseLayerFilter()">
+<h3>getBroadPhaseLayerFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a></span>&nbsp;<span class="element-name">getBroadPhaseLayerFilter</span>()</div>
+<div class="block">Access the broadphase-layer filter. The tester is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleCollisionTester.html#getBroadPhaseLayerFilter()">getBroadPhaseLayerFilter</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getObjectLayer()">
 <h3>getObjectLayer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getObjectLayer</span>()</div>
 <div class="block">Return the object layer used for collision detection when no filters are
- overridden.</div>
+ overridden. The tester is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstVehicleCollisionTester.html#getObjectLayer()">getObjectLayer</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></code></dd>
 <dt>Returns:</dt>
 <dd>the index of the layer</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getObjectLayerFilter()">
+<h3>getObjectLayerFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a></span>&nbsp;<span class="element-name">getObjectLayerFilter</span>()</div>
+<div class="block">Access the object-layer filter. The tester is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstVehicleCollisionTester.html#getObjectLayerFilter()">getObjectLayerFilter</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstVehicleCollisionTester.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVehicleCollisionTester</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
 </dl>
 </section>
 </li>

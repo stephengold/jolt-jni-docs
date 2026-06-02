@@ -236,7 +236,7 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>subShapeId</code> - which sub-shape to use</dd>
 <dd><code>localLocation</code> - the location relative to the shape's center of mass
- (not null, unaffected)</dd>
+ (not <code>null</code>, unaffected)</dd>
 <dt>Returns:</dt>
 <dd>a new direction vector</dd>
 </dl>
@@ -269,10 +269,11 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>localLocation</code> - the location relative to the shape's center of mass
- (not null, unaffected)</dd>
-<dd><code>storeSurfaceLocation</code> - storage for the surface location (not null,
+ (not <code>null</code>, unaffected)</dd>
+<dd><code>storeSurfaceLocation</code> - storage for the surface location (not
+ <code>null</code>, modified)</dd>
+<dd><code>storeSubShapeId</code> - storage for the sub-shape ID (not <code>null</code>,
  modified)</dd>
-<dd><code>storeSubShapeId</code> - storage for the sub-shape ID (not null, modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if a valid surface location was found, otherwise
  <code>false</code></dd>
@@ -303,7 +304,7 @@ loadScripts(document, 'script');</script>
 <dd><code>heights</code> - the height values to set</dd>
 <dd><code>stride</code> - stride between consecutive rows in <code>heights</code> (in
  floats)</dd>
-<dd><code>allocator</code> - for temporary allocations (not null)</dd>
+<dd><code>allocator</code> - for temporary allocations (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -332,7 +333,7 @@ loadScripts(document, 'script');</script>
 <dd><code>heights</code> - the height values to set</dd>
 <dd><code>stride</code> - stride between consecutive rows in <code>heights</code> (in
  floats)</dd>
-<dd><code>allocator</code> - for temporary allocations (not null)</dd>
+<dd><code>allocator</code> - for temporary allocations (not <code>null</code>)</dd>
 <dd><code>cosThresholdAngle</code> - cosine of the threshold angle (default=0.996195)</dd>
 </dl>
 </section>

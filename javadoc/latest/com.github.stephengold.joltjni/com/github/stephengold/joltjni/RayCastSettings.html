@@ -148,18 +148,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Test whether convex shapes should be treated as solid.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBackFaceModeConvex(com.github.stephengold.joltjni.enumerate.EBackFaceMode)" class="member-name-link">setBackFaceModeConvex</a><wbr>(<a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a>&nbsp;mode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.RayCastSettings)" class="member-name-link">set</a><wbr>(<a href="RayCastSettings.html" title="class in com.github.stephengold.joltjni">RayCastSettings</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the policy for back-facing triangles in convex shapes.</div>
+<div class="block">Copy the argument to the current settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBackFaceModeTriangles(com.github.stephengold.joltjni.enumerate.EBackFaceMode)" class="member-name-link">setBackFaceModeTriangles</a><wbr>(<a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a>&nbsp;mode)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBackFaceModeConvex(com.github.stephengold.joltjni.enumerate.EBackFaceMode)" class="member-name-link">setBackFaceModeConvex</a><wbr>(<a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a>&nbsp;mode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the policy for back-facing triangles in triangle-based shapes.</div>
+<div class="block">Alter the policy for back-facing triangles in convex shapes.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTreatConvexAsSolid(boolean)" class="member-name-link">setTreatConvexAsSolid</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBackFaceModeTriangles(com.github.stephengold.joltjni.enumerate.EBackFaceMode)" class="member-name-link">setBackFaceModeTriangles</a><wbr>(<a href="enumerate/EBackFaceMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBackFaceMode</a>&nbsp;mode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the policy for back-facing triangles in triangle-based shapes.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTreatConvexAsSolid(boolean)" class="member-name-link">setTreatConvexAsSolid</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether convex shapes should be treated as solid.</div>
 </div>
 </div>
@@ -241,6 +246,17 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if treated as solid, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.RayCastSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="RayCastSettings.html" title="class in com.github.stephengold.joltjni">RayCastSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

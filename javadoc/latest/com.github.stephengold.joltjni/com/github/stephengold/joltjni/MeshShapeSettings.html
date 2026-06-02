@@ -226,18 +226,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Reserve storage for the specified number of vertices.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setActiveEdgeCosThresholdAngle(float)" class="member-name-link">setActiveEdgeCosThresholdAngle</a><wbr>(float&nbsp;cosine)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.MeshShapeSettings)" class="member-name-link">set</a><wbr>(<a href="MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the active-edge threshold angle.</div>
+<div class="block">Copy the argument to the current settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxTrianglesPerLeaf(int)" class="member-name-link">setMaxTrianglesPerLeaf</a><wbr>(int&nbsp;numTriangles)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setActiveEdgeCosThresholdAngle(float)" class="member-name-link">setActiveEdgeCosThresholdAngle</a><wbr>(float&nbsp;cosine)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the maximum number of triangles per leaf.</div>
+<div class="block">Alter the active-edge threshold angle.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPerTriangleUserData(boolean)" class="member-name-link">setPerTriangleUserData</a><wbr>(boolean&nbsp;include)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxTrianglesPerLeaf(int)" class="member-name-link">setMaxTrianglesPerLeaf</a><wbr>(int&nbsp;numTriangles)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the maximum number of triangles per leaf.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPerTriangleUserData(boolean)" class="member-name-link">setPerTriangleUserData</a><wbr>(boolean&nbsp;include)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter whether each triangle will include user data.</div>
 </div>
 </div>
@@ -523,6 +528,17 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>numVertices</code> - the desired capacity</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.MeshShapeSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

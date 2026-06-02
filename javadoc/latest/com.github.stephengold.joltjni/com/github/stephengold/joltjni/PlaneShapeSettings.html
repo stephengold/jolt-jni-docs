@@ -184,18 +184,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the surface equation.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHalfExtent(float)" class="member-name-link">setHalfExtent</a><wbr>(float&nbsp;halfExtent)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.PlaneShapeSettings)" class="member-name-link">set</a><wbr>(<a href="PlaneShapeSettings.html" title="class in com.github.stephengold.joltjni">PlaneShapeSettings</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the plane's extent.</div>
+<div class="block">Copy the argument to the current settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterial(com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)" class="member-name-link">setMaterial</a><wbr>(<a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a>&nbsp;material)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHalfExtent(float)" class="member-name-link">setHalfExtent</a><wbr>(float&nbsp;halfExtent)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Replace the material.</div>
+<div class="block">Alter the plane's extent.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPlane(com.github.stephengold.joltjni.readonly.ConstPlane)" class="member-name-link">setPlane</a><wbr>(<a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a>&nbsp;plane)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterial(com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)" class="member-name-link">setMaterial</a><wbr>(<a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a>&nbsp;material)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replace the material.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPlane(com.github.stephengold.joltjni.readonly.ConstPlane)" class="member-name-link">setPlane</a><wbr>(<a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a>&nbsp;plane)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the surface equation.</div>
 </div>
 </div>
@@ -358,6 +363,17 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new <code>Plane</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.PlaneShapeSettings)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="PlaneShapeSettings.html" title="class in com.github.stephengold.joltjni">PlaneShapeSettings</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>

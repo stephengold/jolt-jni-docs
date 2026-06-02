@@ -171,31 +171,36 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <div class="block">Set the mass and scale the inertia tensor to match.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertia(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">setInertia</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;inertia)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the inertia tensor.</div>
+<div class="block">Copy the argument to the current properties.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMass(float)" class="member-name-link">setMass</a><wbr>(float&nbsp;mass)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInertia(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">setInertia</a><wbr>(<a href="readonly/Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;inertia)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the inertia tensor.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMass(float)" class="member-name-link">setMass</a><wbr>(float&nbsp;mass)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the mass.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassAndInertiaOfSolidBox(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">setMassAndInertiaOfSolidBox</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;boxSize,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassAndInertiaOfSolidBox(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">setMassAndInertiaOfSolidBox</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;boxSize,
  float&nbsp;density)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the mass and inertia to that of a box with the specified dimensions
  and uniform density.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return a string representation of the properties object, which is
  unaffected.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translate(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">translate</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translate(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">translate</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Translate the inertia by the specified offset.</div>
 </div>
 </div>
@@ -281,6 +286,19 @@ implements <a href="readonly/ConstMassProperties.html" title="interface in com.g
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>mass</code> - the desired mass (in kilograms, &ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstMassProperties)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MassProperties.html" title="class in com.github.stephengold.joltjni">MassProperties</a></span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current properties.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the properties to copy (not <code>null</code>, unaffected)</dd>
+<dt>Returns:</dt>
+<dd>the modified properties, for chaining</dd>
 </dl>
 </section>
 </li>

@@ -113,11 +113,26 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBodyFilter()" class="member-name-link">getBodyFilter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Access the body filter.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBroadPhaseLayerFilter()" class="member-name-link">getBroadPhaseLayerFilter</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Access the broadphase-layer filter.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getObjectLayer()" class="member-name-link">getObjectLayer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the object layer used for collision detection when no filters are
  overridden.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getObjectLayerFilter()" class="member-name-link">getObjectLayerFilter</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Access the object-layer filter.</div>
 </div>
 </div>
 </div>
@@ -140,14 +155,50 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getBodyFilter()">
+<h3>getBodyFilter</h3>
+<div class="member-signature"><span class="return-type"><a href="../BodyFilter.html" title="class in com.github.stephengold.joltjni">BodyFilter</a></span>&nbsp;<span class="element-name">getBodyFilter</span>()</div>
+<div class="block">Access the body filter. The tester is unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBroadPhaseLayerFilter()">
+<h3>getBroadPhaseLayerFilter</h3>
+<div class="member-signature"><span class="return-type"><a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a></span>&nbsp;<span class="element-name">getBroadPhaseLayerFilter</span>()</div>
+<div class="block">Access the broadphase-layer filter. The tester is unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getObjectLayer()">
 <h3>getObjectLayer</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getObjectLayer</span>()</div>
 <div class="block">Return the object layer used for collision detection when no filters are
- overridden.</div>
+ overridden. The tester is unaffected.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the index of the layer</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getObjectLayerFilter()">
+<h3>getObjectLayerFilter</h3>
+<div class="member-signature"><span class="return-type"><a href="../ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a></span>&nbsp;<span class="element-name">getObjectLayerFilter</span>()</div>
+<div class="block">Access the object-layer filter. The tester is unaffected.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new JVM object with the pre-existing native object assigned, or
+ <code>null</code> if none</dd>
 </dl>
 </section>
 </li>

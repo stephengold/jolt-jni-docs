@@ -192,13 +192,18 @@ implements <a href="readonly/ConstSkeletonPose.html" title="interface in com.git
 <div class="block">Access the skeleton that underlies this pose.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRootOffset(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setRootOffset</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the root offset.</div>
+<div class="block">Copy the argument to the current pose.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSkeleton(com.github.stephengold.joltjni.readonly.ConstSkeleton)" class="member-name-link">setSkeleton</a><wbr>(<a href="readonly/ConstSkeleton.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeleton</a>&nbsp;skeleton)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRootOffset(com.github.stephengold.joltjni.readonly.RVec3Arg)" class="member-name-link">setRootOffset</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;offset)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the root offset.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSkeleton(com.github.stephengold.joltjni.readonly.ConstSkeleton)" class="member-name-link">setSkeleton</a><wbr>(<a href="readonly/ConstSkeleton.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeleton</a>&nbsp;skeleton)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Replace the skeleton.</div>
 </div>
 </div>
@@ -275,6 +280,17 @@ implements <a href="readonly/ConstSkeletonPose.html" title="interface in com.git
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new JVM object with the pre-existing native object assigned</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstSkeletonPose)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstSkeletonPose.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSkeletonPose</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current pose.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the pose to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
