@@ -326,7 +326,7 @@ final public class HelloDoubleEnded
      * Configure the Camera and CIP during initialization.
      */
     private static void configureCamera() {
-        getCameraInputProcessor().setRotationMode(RotateMode.None);
+        getCameraInputProcessor().setRotationMode(RotateMode.Off);
 
         cam.setAzimuth(-1.6f)
                 .setLocation(0f, 5f, 10f)

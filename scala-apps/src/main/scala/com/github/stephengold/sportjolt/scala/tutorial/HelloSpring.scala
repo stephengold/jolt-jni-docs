@@ -300,7 +300,7 @@ class HelloSpring extends BasePhysicsApp with PhysicsTickListener {
      * Configure the Camera and CIP during initialization.
      */
     private def configureCamera: Unit = {
-        BaseApplication.getCameraInputProcessor.setRotationMode(RotateMode.None)
+        BaseApplication.getCameraInputProcessor.setRotationMode(RotateMode.Off)
 
         BaseApplication.cam.setAzimuth(-1.6f)
                 .setLocation(0f, 5f, 10f)

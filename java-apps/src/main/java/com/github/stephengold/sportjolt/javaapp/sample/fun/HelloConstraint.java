@@ -228,7 +228,7 @@ final public class HelloConstraint {
      */
     private static void configureCamera() {
         BasePhysicsApp.getCameraInputProcessor()
-                .setRotationMode(RotateMode.None);
+                .setRotationMode(RotateMode.Off);
 
         BaseApplication.getCamera()
                 .setAzimuth(-1.6f)

@@ -229,7 +229,7 @@ final public class HelloPivot {
      */
     private static void configureCamera() {
         BasePhysicsApp.getCameraInputProcessor()
-                .setRotationMode(RotateMode.None);
+                .setRotationMode(RotateMode.Off);
 
         BasePhysicsApp.getCamera()
                 .setAzimuth(-1.6f)

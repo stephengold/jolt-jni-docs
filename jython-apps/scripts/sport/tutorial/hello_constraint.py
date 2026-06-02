@@ -171,7 +171,7 @@ class HelloConstraint(BasePhysicsApp, PhysicsTickListener):
         "Configure the Camera and CIP during initialization."
 
         cip = self.getCameraInputProcessor()
-        cip.setRotationMode(RotateMode.None)
+        cip.setRotationMode(RotateMode.Off)
 
         cam = self.getCamera()
         cam.setAzimuth(-1.6)

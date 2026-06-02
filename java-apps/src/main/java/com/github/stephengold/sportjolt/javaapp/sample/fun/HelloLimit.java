@@ -273,7 +273,7 @@ final public class HelloLimit {
      */
     private static void configureCamera() {
         BasePhysicsApp.getCameraInputProcessor()
-                .setRotationMode(RotateMode.None);
+                .setRotationMode(RotateMode.Off);
 
         BasePhysicsApp.getCamera()
                 .setAzimuth(-1.6f)
