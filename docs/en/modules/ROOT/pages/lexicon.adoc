@@ -453,7 +453,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/MotorcycleController.html[MotorcycleController]
 
 |{url-jolt}motorcycle_controller_settings.html[JPH::MotorcycleControllerSettings]
-|{url-api}/MotorcycleControllerSettings.html[MotorcycleControllerSettings]
+|{url-api}/MotorcycleControllerSettings.html[MotorcycleControllerSettings] +
+ {url-api}/readonly/ConstMotorcycleControllerSettings.html[ConstMotorcycleControllerSettings]
 
 |{url-jolt}mutable_compound_shape.html[JPH::MutableCompoundShape]
 |{url-api}/MutableCompoundShape.html[MutableCompoundShape]
@@ -803,7 +804,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/TrackedVehicleController.html[TrackedVehicleController]
 
 |{url-jolt}tracked_vehicle_controller_settings.html[JPH::TrackedVehicleControllerSettings]
-|{url-api}/TrackedVehicleControllerSettings.html[TrackedVehicleControllerSettings]
+|{url-api}/TrackedVehicleControllerSettings.html[TrackedVehicleControllerSettings] +
+ {url-api}/readonly/ConstTrackedVehicleControllerSettings.html[ConstTrackedVehicleControllerSettings]
 
 |{url-jolt-struct}transformed_convex_object.html[JPH::TransformedConvexObject]
 |{url-api}/TransformedConvexObject.html[TransformedConvexObject] +
@@ -888,7 +890,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/VehicleControllerSettingsRef.html[VehicleControllerSettingsRef]
 
 |{url-jolt}vehicle_differential_settings.html[JPH::VehicleDifferentialSettings]
-|{url-api}/VehicleDifferentialSettings.html[VehicleDifferentialSettings]
+|{url-api}/VehicleDifferentialSettings.html[VehicleDifferentialSettings] +
+ {url-api}/readonly/ConstVehicleDifferentialSettings.html[ConstVehicleDifferentialSettings]
 
 |{url-jolt}vehicle_engine.html[JPH::VehicleEngine]
 |{url-api}/VehicleEngine.html[VehicleEngine]
@@ -898,7 +901,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
  {url-api}/readonly/ConstVehicleEngineSettings.html[ConstVehicleEngineSettings]
 
 |{url-jolt}vehicle_track_settings.html[JPH::VehicleTrackSettings]
-|{url-api}/VehicleTrackSettings.html[VehicleTrackSettings]
+|{url-api}/VehicleTrackSettings.html[VehicleTrackSettings] +
+ {url-api}/readonly/ConstVehicleTrackSettings.html[ConstVehicleTrackSettings]
 
 |{url-jolt}vehicle_transmission.html[JPH::VehicleTransmission]
 |{url-api}/VehicleTransmission.html[VehicleTransmission]
@@ -935,6 +939,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/WheeledVehicleController.html[WheeledVehicleController]
 
 |{url-jolt}wheeled_vehicle_controller_settings.html[JPH::WheeledVehicleControllerSettings]
-|{url-api}/WheeledVehicleControllerSettings.html[WheeledVehicleControllerSettings]
+|{url-api}/WheeledVehicleControllerSettings.html[WheeledVehicleControllerSettings] +
+ {url-api}/readonly/ConstWheeledVehicleControllerSettings.html[ConstWheeledVehicleControllerSettings]
 
 |===
