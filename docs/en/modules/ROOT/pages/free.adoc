@@ -45,7 +45,7 @@ How does the native object's memory get freed?
 {Project} provides several mechanisms
 to reclaim native objects and free their memory.
 
-{Cplusplus} convention dictates that when a class allocates memory,
+Native coding conventions dictate that when a class allocates memory,
 it assumes responsibility for freeing that memory.
 For native objects, this convention carries over into {Project}:
 an app is solely responsible for all objects it creates explicitly.
