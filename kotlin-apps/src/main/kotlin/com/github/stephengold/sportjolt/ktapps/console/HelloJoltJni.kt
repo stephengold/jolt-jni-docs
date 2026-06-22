@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -167,7 +167,7 @@ private fun populateSystem() {
 
     // Add a static horizontal plane at y=-1:
     val normal = Vec3.sAxisY()
-    val plane = Plane(normal, GROUND_Y)
+    val plane = Plane(normal, -GROUND_Y)
     val floorShape = PlaneShape(plane)
     val bcs = BodyCreationSettings()
     bcs.setMotionType(EMotionType.Static)
