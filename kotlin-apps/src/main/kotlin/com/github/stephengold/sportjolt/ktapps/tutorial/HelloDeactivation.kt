@@ -76,7 +76,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
      */
     var supportCube: ConstBody? = null
 
-    /*
+    /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
     override fun createSystem(): PhysicsSystem {
@@ -88,7 +88,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
         return result
     }
 
-    /*
+    /**
      * Initialize the application. Invoked once.
      */
     override fun initialize() {
@@ -98,7 +98,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
         configureInput()
     }
 
-    /*
+    /**
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
@@ -142,7 +142,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
     // *************************************************************************
     // PhysicsTickListener methods
 
-    /*
+    /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      */
@@ -158,7 +158,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
         }
     }
 
-    /*
+    /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      */
@@ -168,7 +168,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
     // *************************************************************************
     // private methods
 
-    /*
+    /**
      * Configure keyboard input during initialization.
      */
     private fun configureInput() {

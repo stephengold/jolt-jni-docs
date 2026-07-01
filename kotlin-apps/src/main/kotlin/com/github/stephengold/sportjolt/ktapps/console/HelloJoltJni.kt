@@ -79,7 +79,7 @@ private const val TIME_PER_STEP = 0.02f  // seconds
 private var ball: Body? = null
 private var physicsSystem: PhysicsSystem? = null
 
-/*
+/**
  * Main entry point for the HelloJoltJniKt application.
  */
 fun main() {
@@ -129,7 +129,7 @@ fun main() {
     }
 }
 
-/*
+/**
  * Create the PhysicsSystem. Invoked once during initialization.
  */
 private fun createSystem(): PhysicsSystem {
@@ -159,7 +159,7 @@ private fun createSystem(): PhysicsSystem {
     return result
 }
 
-/*
+/**
  * Populate the PhysicsSystem with bodies. Invoked once during initialization.
  */
 private fun populateSystem() {

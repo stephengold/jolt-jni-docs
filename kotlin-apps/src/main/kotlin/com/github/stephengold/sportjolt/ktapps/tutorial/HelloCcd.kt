@@ -65,7 +65,7 @@ private const val RELATIVE_SPEED = 0.1f
  * A simple example of 2 colliding balls.
  */
 class HelloCcd : BasePhysicsApp() {
-    /*
+    /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
     override fun createSystem(): PhysicsSystem {
@@ -77,7 +77,7 @@ class HelloCcd : BasePhysicsApp() {
         return result
     }
 
-    /*
+    /**
      * Initialize the application. Invoked once.
      */
     override fun initialize() {
@@ -85,7 +85,7 @@ class HelloCcd : BasePhysicsApp() {
         setVsync(true)
     }
 
-    /*
+    /**
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */

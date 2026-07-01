@@ -63,7 +63,7 @@ private const val NUM_BP_LAYERS = 1
  * A simple example of 2 colliding balls.
  */
 class HelloRigidBody : BasePhysicsApp() {
-    /*
+    /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
     override fun createSystem(): PhysicsSystem {
@@ -72,7 +72,7 @@ class HelloRigidBody : BasePhysicsApp() {
         return result
     }
 
-    /*
+    /**
      * Initialize the application. Invoked once.
      */
     override fun initialize() {
@@ -80,7 +80,7 @@ class HelloRigidBody : BasePhysicsApp() {
         setVsync(true)
     }
 
-    /*
+    /**
      * Populate the PhysicsSystem with bodies. Invoked once during initialization.
      */
     override fun populateSystem() {
@@ -115,7 +115,7 @@ class HelloRigidBody : BasePhysicsApp() {
         visualizeShape(ball2)
     }
 
-    /*
+    /**
      * Advance the physics simulation by the specified amount. Invoked during
      * each update.
      */

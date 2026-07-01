@@ -73,7 +73,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
      */
     private var kineBall: Body? = null
 
-    /*
+    /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
     override fun createSystem(): PhysicsSystem {
@@ -85,7 +85,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
         return result
     }
 
-    /*
+    /**
      * Initialize the application. Invoked once.
      */
     override fun initialize() {
@@ -93,7 +93,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
         setVsync(true)
     }
 
-    /*
+    /**
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
@@ -127,7 +127,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
     // *************************************************************************
     // PhysicsTickListener methods
 
-    /*
+    /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      */
@@ -135,7 +135,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
         // do nothing
     }
 
-    /*
+    /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      */

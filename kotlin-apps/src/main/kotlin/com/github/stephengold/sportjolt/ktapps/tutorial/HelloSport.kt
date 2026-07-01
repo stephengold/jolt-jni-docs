@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -69,7 +69,7 @@ private var ball: Body? = null
  * Drop a dynamic sphere onto a horizontal surface.
  */
 class HelloSport : BasePhysicsApp() {
-    /*
+    /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
     override fun createSystem(): PhysicsSystem {
@@ -99,7 +99,7 @@ class HelloSport : BasePhysicsApp() {
         return result
     }
 
-    /*
+    /**
      * Initialize the application. Invoked once.
      */
     override fun initialize() {
@@ -107,7 +107,7 @@ class HelloSport : BasePhysicsApp() {
         setVsync(true)
     }
 
-    /*
+    /**
      * Populate the PhysicsSystem with bodies. Invoked once during initialization.
      */
     override fun populateSystem() {

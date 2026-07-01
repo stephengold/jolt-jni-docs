@@ -71,7 +71,7 @@ private const val START_Z = 0.0
 private const val USER_DATA = 0L
 
 /**
- * A simple example of 2 colliding balls.
+ * A simple example of a jumping character.
  */
 class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
     // *************************************************************************
@@ -82,7 +82,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
      */
     private var character: com.github.stephengold.joltjni.Character? = null
 
-    /*
+    /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
     override fun createSystem(): PhysicsSystem {
@@ -94,7 +94,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
         return result
     }
 
-    /*
+    /**
      * Initialize the application. Invoked once.
      */
     override fun initialize() {
@@ -105,7 +105,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
         setBackgroundColor(Constants.SKY_BLUE)
     }
 
-    /*
+    /**
      * Populate the PhysicsSystem. Invoked once during initialization.
      */
     override fun populateSystem() {
@@ -130,7 +130,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
     // *************************************************************************
     // PhysicsTickListener methods
 
-    /*
+    /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
@@ -142,7 +142,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
         character!!.postSimulation(MAX_SEPARATION)
     }
 
-    /*
+    /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
