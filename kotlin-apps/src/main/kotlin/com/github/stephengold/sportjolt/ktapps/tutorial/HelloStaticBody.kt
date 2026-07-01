@@ -56,6 +56,9 @@ private const val NUM_BP_LAYERS = 1
  * A simple example of 2 colliding balls.
  */
 class HelloStaticBody : BasePhysicsApp() {
+    // *************************************************************************
+    // BasePhysicsApp methods
+
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */

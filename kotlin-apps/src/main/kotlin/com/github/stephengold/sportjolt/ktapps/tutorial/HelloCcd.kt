@@ -65,6 +65,9 @@ private const val RELATIVE_SPEED = 0.1f
  * A simple example of 2 colliding balls.
  */
 class HelloCcd : BasePhysicsApp() {
+    // *************************************************************************
+    // BasePhysicsApp methods
+
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */
@@ -140,6 +143,8 @@ class HelloCcd : BasePhysicsApp() {
         val simulateSeconds = RELATIVE_SPEED * wallClockSeconds
         super.updatePhysics(simulateSeconds)
     }
+    // *************************************************************************
+    // private methods
 
     /**
      * Add a thin static disc to serve as an obstacle.

@@ -60,6 +60,9 @@ import electrostatic4j.snaploader.platform.util.PlatformPredicate
  * author:  Stephen Gold sgold@sonic.net
  */
 
+// *************************************************************************
+// constants
+
 private const val BALL_RADIUS = 0.3f
 private const val GROUND_Y = -1f
 
@@ -128,6 +131,8 @@ fun main() {
         println(location)
     }
 }
+// *************************************************************************
+// private methods
 
 /**
  * Create the PhysicsSystem. Invoked once during initialization.

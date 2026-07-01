@@ -151,7 +151,7 @@
   enabled: true
   configuration:
     # number of lines
-    maxSize: '228'
+    maxSize: '232'
 # Checks that file does not contain commented out code
 - name: COMMENTED_OUT_CODE
   enabled: true

@@ -99,6 +99,8 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
      * shape filter for character collisions
      */
     private var allShapes: ShapeFilter? = null
+    // *************************************************************************
+    // BasePhysicsApp methods
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.

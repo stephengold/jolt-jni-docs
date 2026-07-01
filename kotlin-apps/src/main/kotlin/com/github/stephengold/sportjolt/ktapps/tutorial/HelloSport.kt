@@ -69,6 +69,9 @@ private var ball: Body? = null
  * Drop a dynamic sphere onto a horizontal surface.
  */
 class HelloSport : BasePhysicsApp() {
+    // *************************************************************************
+    // BasePhysicsApp methods
+
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
      */

@@ -75,6 +75,8 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
      * large, static rigid body
      */
     var supportCube: ConstBody? = null
+    // *************************************************************************
+    // BasePhysicsApp methods
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.

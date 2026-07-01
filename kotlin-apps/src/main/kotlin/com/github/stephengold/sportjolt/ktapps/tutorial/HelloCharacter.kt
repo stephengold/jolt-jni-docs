@@ -81,6 +81,8 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
      * character being tested
      */
     private var character: com.github.stephengold.joltjni.Character? = null
+    // *************************************************************************
+    // BasePhysicsApp methods
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.

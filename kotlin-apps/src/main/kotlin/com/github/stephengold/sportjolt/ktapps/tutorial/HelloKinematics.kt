@@ -72,6 +72,8 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
      * kinematic ball, orbiting the origin
      */
     private var kineBall: Body? = null
+    // *************************************************************************
+    // BasePhysicsApp methods
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
