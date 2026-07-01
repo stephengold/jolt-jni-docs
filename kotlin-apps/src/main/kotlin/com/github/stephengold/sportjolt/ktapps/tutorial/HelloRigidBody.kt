@@ -68,6 +68,8 @@ class HelloRigidBody : BasePhysicsApp() {
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
+     *
+     * @return a new object
      */
     override fun createSystem(): PhysicsSystem {
         val result = createSystem(MAX_BODIES, NUM_BP_LAYERS)
@@ -84,7 +86,8 @@ class HelloRigidBody : BasePhysicsApp() {
     }
 
     /**
-     * Populate the PhysicsSystem with bodies. Invoked once during initialization.
+     * Populate the PhysicsSystem with bodies. Invoked once during
+     * initialization.
      */
     override fun populateSystem() {
         val bi = physicsSystem.getBodyInterface()
@@ -121,6 +124,9 @@ class HelloRigidBody : BasePhysicsApp() {
     /**
      * Advance the physics simulation by the specified amount. Invoked during
      * each update.
+     *
+     * @param wallClockSeconds the elapsed wall-clock time since the previous
+     * invocation of {@code updatePhysics} (in seconds, &ge;0)
      */
     override fun updatePhysics(wallClockSeconds: Float) {
         // For clarity, simulate at 1/10th normal speed:

@@ -77,6 +77,8 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
+     *
+     * @return a new object
      */
     override fun createSystem(): PhysicsSystem {
         val result = createSystem(MAX_BODIES, NUM_BP_LAYERS)
@@ -132,6 +134,9 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
     /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
+     *
+     * @param system the system that was just stepped (not {@code null})
+     * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     override fun physicsTick(system: PhysicsSystem, timeStep: Float) {
         // do nothing
@@ -140,6 +145,9 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
     /**
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
+     *
+     * @param system the system that's about to be stepped (not {@code null})
+     * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float) {
         // Make the kinematic ball orbit the origin:

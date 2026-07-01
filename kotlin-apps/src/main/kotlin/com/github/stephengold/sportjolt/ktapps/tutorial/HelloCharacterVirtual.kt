@@ -104,6 +104,8 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
+     *
+     * @return a new object
      */
     override fun createSystem(): PhysicsSystem {
         val result = createSystem(MAX_BODIES, NUM_BP_LAYERS)
@@ -160,7 +162,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
-     * @param system the system that was just stepped (not null)
+     * @param system the system that was just stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     override fun physicsTick(system: PhysicsSystem, timeStep: Float) {
@@ -177,7 +179,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to be stepped (not null)
+     * @param system the system that's about to be stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float) {
@@ -201,7 +203,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's upper top face (in system
      * coordinates)
-     * @return the new body (not null)
+     * @return the new body (not {@code null})
      */
     private fun addSquare(halfExtent: Float, y: Float): Body {
         // Create a static rigid body with a square shape:

@@ -74,6 +74,8 @@ class HelloSport : BasePhysicsApp() {
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
+     *
+     * @return a new object
      */
     override fun createSystem(): PhysicsSystem {
         val ovoFilter = ObjectLayerPairFilterTable(numObjLayers)
@@ -111,7 +113,8 @@ class HelloSport : BasePhysicsApp() {
     }
 
     /**
-     * Populate the PhysicsSystem with bodies. Invoked once during initialization.
+     * Populate the PhysicsSystem with bodies. Invoked once during
+     * initialization.
      */
     override fun populateSystem() {
         val bi = physicsSystem.getBodyInterface()

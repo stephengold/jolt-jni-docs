@@ -61,6 +61,8 @@ class HelloStaticBody : BasePhysicsApp() {
 
     /**
      * Create the PhysicsSystem. Invoked once during initialization.
+     *
+     * @return a new object
      */
     override fun createSystem(): PhysicsSystem {
         val result = createSystem(MAX_BODIES, NUM_BP_LAYERS)

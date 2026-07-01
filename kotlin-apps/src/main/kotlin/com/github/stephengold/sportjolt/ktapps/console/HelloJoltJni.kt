@@ -136,6 +136,8 @@ fun main() {
 
 /**
  * Create the PhysicsSystem. Invoked once during initialization.
+ *
+ * @return a new object
  */
 private fun createSystem(): PhysicsSystem {
     val ovoFilter = ObjectLayerPairFilterTable(NUM_OBJECT_LAYERS)
