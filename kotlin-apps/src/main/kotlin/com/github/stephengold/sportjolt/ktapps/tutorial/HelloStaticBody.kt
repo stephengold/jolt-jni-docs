@@ -68,7 +68,7 @@ class HelloStaticBody : BasePhysicsApp() {
     /**
      * Initialize the application. Invoked once.
      */
-    override fun initialize(): Unit {
+    override fun initialize() {
         super.initialize()
         setVsync(true)
     }
@@ -77,7 +77,7 @@ class HelloStaticBody : BasePhysicsApp() {
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
-    override fun populateSystem(): Unit {
+    override fun populateSystem() {
         val bi = physicsSystem.getBodyInterface()
 
         // Create a collision shape for balls:
