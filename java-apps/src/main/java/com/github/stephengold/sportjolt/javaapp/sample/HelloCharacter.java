@@ -36,7 +36,6 @@ import com.github.stephengold.joltjni.CharacterSettings;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Quat;
 import com.github.stephengold.joltjni.RVec3;
-import com.github.stephengold.joltjni.Vec3;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.readonly.ConstBody;
@@ -177,7 +176,7 @@ final public class HelloCharacter
     public void prePhysicsTick(PhysicsSystem system, float timeStep) {
         // If the character is supported, cause it to jump:
         if (character.isSupported()) {
-            character.setLinearVelocity(new Vec3(0f, 8f, 0f));
+            character.setLinearVelocity(0f, 8f, 0f);
         }
     }
     // *************************************************************************

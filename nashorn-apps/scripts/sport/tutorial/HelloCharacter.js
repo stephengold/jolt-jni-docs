@@ -114,7 +114,7 @@ var application = new HelloCharacter() {
     prePhysicsTick: function (system, timeStep) {
         // If the character is supported, cause it to jump:
         if (character.isSupported()) {
-            character.setLinearVelocity(new Vec3(0., 8., 0.));
+            character.setLinearVelocity(0., 8., 0.);
         }
     },
 

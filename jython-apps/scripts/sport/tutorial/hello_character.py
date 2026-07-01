@@ -98,7 +98,7 @@ class HelloCharacter(BasePhysicsApp, PhysicsTickListener):
 
         # If the character is supported, cause it to jump:
         if CHARACTER.isSupported():
-            CHARACTER.setLinearVelocity(Vec3(0.0, 8.0, 0.0))
+            CHARACTER.setLinearVelocity(0.0, 8.0, 0.0)
 
     def add_square(self, half_extent, y):
         "Add a static horizontal-square rigid body to the system."

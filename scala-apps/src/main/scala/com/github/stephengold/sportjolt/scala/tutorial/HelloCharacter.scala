@@ -36,7 +36,6 @@ import com.github.stephengold.joltjni.CharacterSettings
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.Quat
 import com.github.stephengold.joltjni.RVec3
-import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.sportjolt.BaseApplication
@@ -156,7 +155,7 @@ class HelloCharacter extends BasePhysicsApp, PhysicsTickListener {
     override def prePhysicsTick(system: PhysicsSystem, timeStep: Float): Unit = {
         // If the character is supported, cause it to jump:
         if (HelloCharacter.character.isSupported) {
-            HelloCharacter.character.setLinearVelocity(new Vec3(0f, 8f, 0f))
+            HelloCharacter.character.setLinearVelocity(0f, 8f, 0f)
         }
     }
     // *************************************************************************
