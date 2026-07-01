@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -75,7 +75,7 @@ class HelloRigidBody : BasePhysicsApp() {
     /*
      * Initialize the application. Invoked once.
      */
-    override fun initialize(): Unit {
+    override fun initialize() {
         super.initialize()
         setVsync(true)
     }
@@ -83,7 +83,7 @@ class HelloRigidBody : BasePhysicsApp() {
     /*
      * Populate the PhysicsSystem with bodies. Invoked once during initialization.
      */
-    override fun populateSystem(): Unit {
+    override fun populateSystem() {
         val bi = physicsSystem.getBodyInterface()
 
         // Create a collision shape for balls:
@@ -119,7 +119,7 @@ class HelloRigidBody : BasePhysicsApp() {
      * Advance the physics simulation by the specified amount. Invoked during
      * each update.
      */
-    override fun updatePhysics(wallClockSeconds: Float): Unit {
+    override fun updatePhysics(wallClockSeconds: Float) {
         // For clarity, simulate at 1/10th normal speed:
         val simulateSeconds = SIMULATION_SPEED * wallClockSeconds
         super.updatePhysics(simulateSeconds)

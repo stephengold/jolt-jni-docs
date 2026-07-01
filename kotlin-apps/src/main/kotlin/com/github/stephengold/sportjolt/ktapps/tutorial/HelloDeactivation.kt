@@ -91,7 +91,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
     /*
      * Initialize the application. Invoked once.
      */
-    override fun initialize(): Unit {
+    override fun initialize() {
         super.initialize()
 
         setVsync(true)
@@ -102,7 +102,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
-    override fun populateSystem(): Unit {
+    override fun populateSystem() {
         val bi = physicsSystem.getBodyInterface()
 
         // Create a dynamic cube and add it to the system:
@@ -146,7 +146,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      */
-    override fun physicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun physicsTick(system: PhysicsSystem, timeStep: Float) {
         /*
          * Once the dynamic cube gets deactivated,
          * remove the support cube from the system:
@@ -162,7 +162,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      */
-    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float) {
         // do nothing
     }
     // *************************************************************************
@@ -171,9 +171,9 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
     /*
      * Configure keyboard input during initialization.
      */
-    private fun configureInput(): Unit {
+    private fun configureInput() {
         getInputManager().add(object : InputProcessor() {
-            override fun onKeyboard(glfwKeyId: Int, isPressed: Boolean): Unit {
+            override fun onKeyboard(glfwKeyId: Int, isPressed: Boolean) {
                 when (glfwKeyId) {
                     GLFW.GLFW_KEY_E -> {
                         if (isPressed) {

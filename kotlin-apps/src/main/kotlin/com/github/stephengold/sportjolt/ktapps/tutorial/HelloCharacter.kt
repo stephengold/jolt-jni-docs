@@ -97,7 +97,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
     /*
      * Initialize the application. Invoked once.
      */
-    override fun initialize(): Unit {
+    override fun initialize() {
         super.initialize()
 
         setVsync(true)
@@ -108,7 +108,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
     /*
      * Populate the PhysicsSystem. Invoked once during initialization.
      */
-    override fun populateSystem(): Unit {
+    override fun populateSystem() {
         // Create a character with a capsule shape and add it to the system:
         val shape = CapsuleShape(CAPSULE_HALF_HEIGHT, CAPSULE_RADIUS)
 
@@ -137,7 +137,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
      * @param system the system that was just stepped (not null)
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
-    override fun physicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun physicsTick(system: PhysicsSystem, timeStep: Float) {
         // Update the character:
         character!!.postSimulation(MAX_SEPARATION)
     }
@@ -149,7 +149,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
      * @param system the system that's about to be stepped (not null)
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
-    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float) {
         // If the character is supported, cause it to jump:
         if (character!!.isSupported) {
             character!!.setLinearVelocity(Vec3(0f, 8f, 0f))

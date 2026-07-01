@@ -88,7 +88,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
     /*
      * Initialize the application. Invoked once.
      */
-    override fun initialize(): Unit {
+    override fun initialize() {
         super.initialize()
         setVsync(true)
     }
@@ -97,7 +97,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
-    override fun populateSystem(): Unit {
+    override fun populateSystem() {
         val bi = physicsSystem.getBodyInterface()
 
         // Create a collision shape for balls:
@@ -131,7 +131,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      */
-    override fun physicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun physicsTick(system: PhysicsSystem, timeStep: Float) {
         // do nothing
     }
 
@@ -139,7 +139,7 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      */
-    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float) {
         // Make the kinematic ball orbit the origin:
         val phaseAngle = totalSimulatedTime() * TWO_PI / ORBITAL_PERIOD
 

@@ -80,7 +80,7 @@ class HelloCcd : BasePhysicsApp() {
     /*
      * Initialize the application. Invoked once.
      */
-    override fun initialize(): Unit {
+    override fun initialize() {
         super.initialize()
         setVsync(true)
     }
@@ -89,7 +89,7 @@ class HelloCcd : BasePhysicsApp() {
      * Populate the PhysicsSystem with bodies. Invoked once during
      * initialization.
      */
-    override fun populateSystem(): Unit {
+    override fun populateSystem() {
         val bi = physicsSystem.getBodyInterface()
 
         // Create a collision shape for balls:
@@ -135,7 +135,7 @@ class HelloCcd : BasePhysicsApp() {
      * @param wallClockSeconds the elapsed wall-clock time since the previous
      * invocation of {@code updatePhysics} (in seconds, &ge;0)
      */
-    override fun updatePhysics(wallClockSeconds: Float): Unit {
+    override fun updatePhysics(wallClockSeconds: Float) {
         // For clarity, simulate at 1/10th normal speed:
         val simulateSeconds = RELATIVE_SPEED * wallClockSeconds
         super.updatePhysics(simulateSeconds)

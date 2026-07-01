@@ -115,7 +115,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
     /**
      * Initialize the application. Invoked once.
      */
-    override fun initialize(): Unit {
+    override fun initialize() {
         super.initialize()
 
         setVsync(true)
@@ -133,7 +133,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
     /**
      * Populate the PhysicsSystem. Invoked once during initialization.
      */
-    override fun populateSystem(): Unit {
+    override fun populateSystem() {
         // Create a character with a capsule shape and add it to the system:
         val shape = CapsuleShape(CAPSULE_HALF_HEIGHT, CAPSULE_RADIUS)
 
@@ -161,7 +161,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
      * @param system the system that was just stepped (not null)
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
-    override fun physicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun physicsTick(system: PhysicsSystem, timeStep: Float) {
         // Update the character:
         val gravity = system.getGravity()
         val bplFilter = system.getDefaultBroadPhaseLayerFilter(objLayerMoving)
@@ -178,7 +178,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
      * @param system the system that's about to be stepped (not null)
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
-    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float): Unit {
+    override fun prePhysicsTick(system: PhysicsSystem, timeStep: Float) {
         val velocity = character!!.getLinearVelocity()
 
         // Apply gravity:
