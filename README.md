@@ -9,7 +9,7 @@ It contains 12 subprojects:
 3. scala-apps: all 27 sample applications, ported to [Scala]
 4. jython-apps: 13 sample applications ported to Jython [Python]
 5. nashorn-apps: 8 sample applications ported to Nashorn [JavaScript]
-6. kotlin-apps: 7 sample applications ported to [Kotlin]
+6. kotlin-apps: 8 sample applications ported to [Kotlin]
 7. jruby-apps: 4 sample applications ported to JRuby [Ruby]
 8. groovy-apps: 3 sample applications ported to statically-compiled [Groovy]
 9. groovy223-apps: 3 sample applications ported to scripted [Groovy]
