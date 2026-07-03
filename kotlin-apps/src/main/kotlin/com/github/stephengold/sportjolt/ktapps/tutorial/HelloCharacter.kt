@@ -173,10 +173,10 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
         // Create a static rigid body with a square shape:
         val shape = BoxShape(halfExtent, HALF_THICKNESS, halfExtent)
         val bcs = BodyCreationSettings()
-        bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(objLayerNonMoving)
-        bcs.setPosition(0.0, (y - HALF_THICKNESS).toDouble(), 0.0)
-        bcs.setShape(shape)
+            .setMotionType(EMotionType.Static)
+            .setObjectLayer(objLayerNonMoving)
+            .setPosition(0.0, (y - HALF_THICKNESS).toDouble(), 0.0)
+            .setShape(shape)
 
         val bi = physicsSystem.getBodyInterface()
         val result = bi.createBody(bcs)

@@ -209,7 +209,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
         // Create a static rigid body with a square shape:
         val shape = BoxShape(halfExtent, HALF_THICKNESS, halfExtent)
         val bcs = BodyCreationSettings()
-        bcs.setMotionType(EMotionType.Static)
+            .setMotionType(EMotionType.Static)
             .setObjectLayer(objLayerNonMoving)
             .setPosition(0.0, (y - HALF_THICKNESS).toDouble(), 0.0)
             .setShape(shape)
