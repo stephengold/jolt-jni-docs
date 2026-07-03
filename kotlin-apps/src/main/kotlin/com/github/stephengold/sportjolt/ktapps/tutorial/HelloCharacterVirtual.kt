@@ -59,9 +59,9 @@ import com.github.stephengold.sportjolt.physics.PhysicsTickListener
 
 private const val CAPSULE_RADIUS = 0.5f  // meters
 private const val CAPSULE_HALF_HEIGHT = 0.5f  // meters
-private const val GROUND_HALF_EXTENT = 4f
+private const val GROUND_HALF_EXTENT = 4f  // meters
 private const val GROUND_Y = -2f
-private const val HALF_THICKNESS = 0.1f
+private const val HALF_THICKNESS = 0.1f  // meters
 
 private const val MAX_BODIES = 1
 
@@ -187,6 +187,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
 
         // Apply gravity:
         velocity.setY(velocity.getY() - 9.81f * timeStep)
+
         // If the character is supported, cause it to jump:
         if (character!!.isSupported) {
             velocity.set(0f, 8f, 0f)

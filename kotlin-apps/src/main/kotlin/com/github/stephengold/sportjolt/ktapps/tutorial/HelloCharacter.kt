@@ -54,9 +54,9 @@ import com.github.stephengold.sportjolt.physics.PhysicsTickListener
 
 private const val CAPSULE_RADIUS = 0.5f  // meters
 private const val CAPSULE_HALF_HEIGHT = 0.5f  // meters
-private const val GROUND_HALF_EXTENT = 4f
+private const val GROUND_HALF_EXTENT = 4f  // meters
 private const val GROUND_Y = -2f
-private const val HALF_THICKNESS = 0.1f
+private const val HALF_THICKNESS = 0.1f  // meters
 
 private const val MAX_BODIES = 2
 private const val MAX_SEPARATION = 0.1f  // meters above the floor
