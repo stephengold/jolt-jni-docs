@@ -175,7 +175,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
         val bcs = BodyCreationSettings()
             .setMotionType(EMotionType.Static)
             .setObjectLayer(objLayerNonMoving)
-            .setPosition(0.0, (y - HALF_THICKNESS).toDouble(), 0.0)
+            .setPosition(START_X, (y - HALF_THICKNESS).toDouble(), START_Z)
             .setShape(shape)
 
         val bi = physicsSystem.getBodyInterface()
