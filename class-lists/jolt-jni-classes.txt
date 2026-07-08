@@ -175,7 +175,6 @@ com.github.stephengold.joltjni.HeightFieldShapeSettings
 com.github.stephengold.joltjni.HingeConstraint
 com.github.stephengold.joltjni.HingeConstraintSettings
 com.github.stephengold.joltjni.IgnoreMultipleBodiesFilter
-com.github.stephengold.joltjni.Impulse
 com.github.stephengold.joltjni.IndexedTriangle
 com.github.stephengold.joltjni.IndexedTriangleList
 com.github.stephengold.joltjni.IndexedTriangleNoMaterial

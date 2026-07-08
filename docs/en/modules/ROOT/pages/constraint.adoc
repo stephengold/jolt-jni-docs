@@ -131,7 +131,7 @@ that simulates a single-ended hinge constraint.
 
 Things to notice while running the app:
 
-. The gray ball is kinematic, moved by the mouse.
+. The dark-gray ball is kinematic, moved by the mouse.
 . A magenta rotor rotates around its Y axis, indicated by the green arrow.
 . By striking the rotor with the ball, you can influence its motion.
 . Because the ball's motion is irresistible,
@@ -162,7 +162,7 @@ simulating a point constraint.
 
 Things to notice while running the app:
 
-. The gray paddle is kinematic, moved by the mouse.
+. The dark-gray paddle is kinematic, moved by the mouse.
 . The magenta ball is dynamic.
 . The constraint (indicated by red and green arrows)
   links the ball to paddle,

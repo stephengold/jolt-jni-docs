@@ -11,7 +11,7 @@ During development, Java assertions should be enabled using:
 
 Similarly, native-code assertions should be enabled during development.
 You do this by loading a native library with the "Debug" buildtype,
-such as "com.github.stephengold:jolt-jni-Windows64:5.1.0:DebugSp".
+such as "com.github.stephengold:jolt-jni-Windows64:5.2.0:DebugSp".
 
 [NOTE]
 ====
@@ -51,9 +51,11 @@ When visualizing a collision shape,
 * yellow for a rigid body
   (without contact response) such as a sensor,
 * magenta for a rigid body
-  (with contact response) that's dynamic, responsive, and active,
-* gray for a rigid body
-  (with contact response) that's static, kinematic, or deactivated,
+  (with contact response) that's dynamic and active,
+* dark gray for rigid body
+  (with contact response) that's kinematic and active,
+* light gray for a rigid body
+  (with contact response) that's static or deactivated,
 * brown for a character that's supported, and
 * pink for a character that isn't supported.
 
