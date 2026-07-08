@@ -124,7 +124,6 @@ class HelloDoubleEnded extends BasePhysicsApp with PhysicsTickListener {
      */
     override def initialize: Unit = {
         super.initialize
-        BaseApplication.setVsync(true)
 
         configureCamera
         BaseApplication.setLightDirection(7f, 3f, 5f)
