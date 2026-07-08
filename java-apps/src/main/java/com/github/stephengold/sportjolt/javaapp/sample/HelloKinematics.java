@@ -40,6 +40,7 @@ import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
+import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener;
 
@@ -111,6 +112,7 @@ final public class HelloKinematics
     @Override
     protected void initialize() {
         super.initialize();
+        setBackgroundColor(Constants.SKY_BLUE);
         setVsync(true);
     }
 

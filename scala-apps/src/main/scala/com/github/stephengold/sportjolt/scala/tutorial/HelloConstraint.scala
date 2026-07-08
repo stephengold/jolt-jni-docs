@@ -40,6 +40,7 @@ import com.github.stephengold.joltjni.enumerate.EAxis
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
 import com.github.stephengold.sportjolt.BaseApplication
+import com.github.stephengold.sportjolt.Constants
 import com.github.stephengold.sportjolt.Projection
 import com.github.stephengold.sportjolt.Utils
 import com.github.stephengold.sportjolt.input.RotateMode
@@ -110,6 +111,7 @@ class HelloConstraint extends BasePhysicsApp with PhysicsTickListener {
         super.initialize
 
         configureCamera
+        BaseApplication.setBackgroundColor(Constants.SKY_BLUE)
         BaseApplication.setLightDirection(7f, 3f, 5f)
 
         // Disable VSync for more frequent mouse-position updates:

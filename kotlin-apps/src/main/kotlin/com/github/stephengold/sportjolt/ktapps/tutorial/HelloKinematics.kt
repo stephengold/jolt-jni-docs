@@ -38,6 +38,7 @@ import com.github.stephengold.joltjni.SphereShape
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
+import com.github.stephengold.sportjolt.Constants
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener
 
@@ -94,6 +95,8 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
      */
     override fun initialize() {
         super.initialize()
+
+        setBackgroundColor(Constants.SKY_BLUE)
         setVsync(true)
     }
 

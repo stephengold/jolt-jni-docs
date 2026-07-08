@@ -43,6 +43,7 @@ import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
+import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.Projection;
 import com.github.stephengold.sportjolt.Utils;
 import com.github.stephengold.sportjolt.input.RotateMode;
@@ -131,6 +132,7 @@ final public class HelloConstraint
         super.initialize();
 
         configureCamera();
+        setBackgroundColor(Constants.SKY_BLUE);
         setLightDirection(7f, 3f, 5f);
 
         // Disable VSync for more frequent mouse-position updates:

@@ -59,6 +59,7 @@ class HelloKinematics(BasePhysicsApp, PhysicsTickListener):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
+        self.setBackgroundColor(Constants.SKY_BLUE)
         self.setVsync(True)
 
     def populateSystem(self):

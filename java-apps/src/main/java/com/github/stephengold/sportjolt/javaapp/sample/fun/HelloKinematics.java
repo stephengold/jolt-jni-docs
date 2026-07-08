@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -41,6 +41,7 @@ import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.BaseApplication;
+import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.FunctionalPhysicsApp;
 
@@ -88,6 +89,7 @@ final public class HelloKinematics {
         });
 
         fpa.setInitialize((app) -> {
+            BaseApplication.setBackgroundColor(Constants.SKY_BLUE);
             BaseApplication.setVsync(true);
         });
 

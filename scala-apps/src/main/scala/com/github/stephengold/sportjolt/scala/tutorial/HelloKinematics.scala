@@ -38,6 +38,7 @@ import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties
 import com.github.stephengold.sportjolt.BaseApplication
+import com.github.stephengold.sportjolt.Constants
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
 import com.github.stephengold.sportjolt.physics.PhysicsTickListener
 
@@ -93,6 +94,7 @@ class HelloKinematics extends BasePhysicsApp with PhysicsTickListener {
      */
     override def initialize: Unit = {
         super.initialize
+        BaseApplication.setBackgroundColor(Constants.SKY_BLUE);
         BaseApplication.setVsync(true)
     }
 

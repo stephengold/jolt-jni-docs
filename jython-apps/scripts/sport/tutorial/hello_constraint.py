@@ -65,6 +65,7 @@ class HelloConstraint(BasePhysicsApp, PhysicsTickListener):
         self.super__initialize()
 
         self.configure_camera()
+        self.setBackgroundColor(Constants.SKY_BLUE)
         self.setLightDirection(7.0, 3.0, 5.0)
 
         # Disable VSync for more frequent mouse-position updates:
