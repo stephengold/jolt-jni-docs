@@ -218,14 +218,16 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/CollidePointResult.html[CollidePointResult]
 
 |{url-jolt}collide_settings_base.html[JPH::CollideSettingsBase]
-|{url-api}/CollideSettingsBase.html[CollideSettingsBase]
+|{url-api}/CollideSettingsBase.html[CollideSettingsBase] +
+ {url-api}/readonly/ConstCollideSettingsBase.html[ConstCollideSettingsBase]
 
 |{url-jolt}collide_shape_result.html[JPH::CollideShapeResult]
 |{url-api}/CollideShapeResult.html[CollideShapeResult] +
  {url-api}/readonly/ConstCollideShapeResult.html[ConstCollideShapeResult]
 
 |{url-jolt}collide_shape_settings.html[JPH::CollideShapeSettings]
-|{url-api}/CollideShapeSettings.html[CollideShapeSettings]
+|{url-api}/CollideShapeSettings.html[CollideShapeSettings] +
+ {url-api}/readonly/ConstCollideShapeSettings.html[ConstCollideShapeSettings]
 
 |{url-jolt}collision_dispatch.html[JPH::CollisionDispatch]
 |{url-api}/CollisionDispatch.html[CollisionDispatch]
@@ -602,7 +604,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/RayCastResult.html[RayCastResult]
 
 |{url-jolt}ray_cast_settings.html[JPH::RayCastSettings]
-|{url-api}/RayCastSettings.html[RayCastSettings]
+|{url-api}/RayCastSettings.html[RayCastSettings] +
+ {url-api}/readonly/ConstRayCastSettings.html[ConstRayCastSettings]
 
 |{url-jolt}ray_inv_direction.html[JPH::RayInvDirection]
 |{url-api}/RayInvDirection.html[RayInvDirection]
@@ -639,7 +642,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/ShapeCastResult.html[ShapeCastResult]
 
 |{url-jolt}shape_cast_settings.html[JPH::ShapeCastSettings]
-|{url-api}/ShapeCastSettings.html[ShapeCastSettings]
+|{url-api}/ShapeCastSettings.html[ShapeCastSettings] +
+ {url-api}/readonly/ConstShapeCastSettings.html[ConstShapeCastSettings]
 
 |{url-jolt}shape_filter.html[JPH::ShapeFilter]
 |{url-api}/ShapeFilter.html[ShapeFilter]
