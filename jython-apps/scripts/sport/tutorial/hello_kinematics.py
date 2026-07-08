@@ -59,7 +59,7 @@ class HelloKinematics(BasePhysicsApp, PhysicsTickListener):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
 
     def populateSystem(self):
         "Populate the PhysicsSystem with bodies. Invoked once during initialization."
@@ -90,8 +90,8 @@ class HelloKinematics(BasePhysicsApp, PhysicsTickListener):
         assert KINE_BALL.isKinematic()
 
         # Visualize the shapes of both rigid bodies:
-        BasePhysicsApp.visualizeShape(dyna_ball)
-        BasePhysicsApp.visualizeShape(KINE_BALL)
+        self.visualizeShape(dyna_ball)
+        self.visualizeShape(KINE_BALL)
 
     def physicsTick(self, system, time_step):
         "Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system has been stepped."

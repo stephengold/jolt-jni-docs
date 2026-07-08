@@ -1,5 +1,5 @@
 """
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -51,7 +51,7 @@ class HelloStaticBody(BasePhysicsApp):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
 
     def populateSystem(self):
         "Populate the PhysicsSystem with bodies. Invoked once during initialization."
@@ -74,7 +74,7 @@ class HelloStaticBody(BasePhysicsApp):
 
         # Create a static body and add it to the system:
         bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+        bcs.setObjectLayer(self.objLayerNonMoving)
         bcs.setPosition(0.1, 0.0, 0.0)
         stat_ball = bi.createBody(bcs)
         bi.addBody(stat_ball, EActivation.DontActivate)
@@ -82,8 +82,8 @@ class HelloStaticBody(BasePhysicsApp):
         assert stat_ball.isStatic()
 
         # Visualize the shapes of both rigid bodies:
-        BasePhysicsApp.visualizeShape(dyna_ball)
-        BasePhysicsApp.visualizeShape(stat_ball)
+        self.visualizeShape(dyna_ball)
+        self.visualizeShape(stat_ball)
 
 
 application = HelloStaticBody()

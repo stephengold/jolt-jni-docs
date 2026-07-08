@@ -54,9 +54,9 @@ class HelloCharacter(BasePhysicsApp, PhysicsTickListener):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
-        BaseApplication.getCameraInputProcessor().setRotationMode(RotateMode.DragLMB)
-        BaseApplication.setBackgroundColor(Constants.SKY_BLUE)
+        self.setVsync(True)
+        self.getCameraInputProcessor().setRotationMode(RotateMode.DragLMB)
+        self.setBackgroundColor(Constants.SKY_BLUE)
 
     def populateSystem(self):
         "Populate the PhysicsSystem with bodies. Invoked once during initialization."
@@ -83,8 +83,8 @@ class HelloCharacter(BasePhysicsApp, PhysicsTickListener):
         ground = self.add_square(half_extent, y)
 
         # Visualize the shapes of both physics objects:
-        BasePhysicsApp.visualizeShape(CHARACTER)
-        BasePhysicsApp.visualizeShape(ground)
+        self.visualizeShape(CHARACTER)
+        self.visualizeShape(ground)
 
     def physicsTick(self, system, time_step):
         "Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system has been stepped."
@@ -108,7 +108,7 @@ class HelloCharacter(BasePhysicsApp, PhysicsTickListener):
         shape = BoxShape(half_extent, half_thickness, half_extent)
         bcs = BodyCreationSettings()
         bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+        bcs.setObjectLayer(self.objLayerNonMoving)
         bcs.setPosition(0.0, y - half_thickness, 0.0)
         bcs.setShape(shape)
 

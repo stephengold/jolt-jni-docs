@@ -1,5 +1,5 @@
 """
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -54,7 +54,7 @@ class HelloDamping(BasePhysicsApp):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
 
     def populateSystem(self):
         "Populate the PhysicsSystem with bodies. Invoked once during initialization."
@@ -71,7 +71,7 @@ class HelloDamping(BasePhysicsApp):
         bcs.setOverrideMassProperties(
             EOverrideMassProperties.CalculateInertia
         ).getMassPropertiesOverride().setMass(2)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerMoving).setShape(cube_shape)
+        bcs.setObjectLayer(self.objLayerMoving).setShape(cube_shape)
         """
         Create 4 cubes (dynamic rigid bodies) and add them to the system.
         Give each cube its own set of damping parameters.
@@ -120,7 +120,7 @@ class HelloDamping(BasePhysicsApp):
 
         # Visualize the shapes of all 4 cubes:
         for cube_index in range(num_cubes):
-            BasePhysicsApp.visualizeShape(cube[cube_index])
+            self.visualizeShape(cube[cube_index])
 
 
 application = HelloDamping()

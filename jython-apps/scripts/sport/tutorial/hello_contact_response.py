@@ -1,5 +1,5 @@
 """
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -55,7 +55,7 @@ class HelloContactResponse(BasePhysicsApp):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
         self.configure_input()
 
     def populateSystem(self):
@@ -68,7 +68,7 @@ class HelloContactResponse(BasePhysicsApp):
         box_shape = BoxShape(box_half_extent)
         bcs1 = BodyCreationSettings()
         bcs1.setMotionType(EMotionType.Static)
-        bcs1.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+        bcs1.setObjectLayer(self.objLayerNonMoving)
         bcs1.setPosition(0.0, -4.0, 0.0)
         bcs1.setShape(box_shape)
         box = bi.createBody(bcs1)
@@ -88,8 +88,8 @@ class HelloContactResponse(BasePhysicsApp):
         bi.addBody(BALL, EActivation.Activate)
 
         # Visualize the shapes of both rigid bodies:
-        BasePhysicsApp.visualizeShape(BALL)
-        BasePhysicsApp.visualizeShape(box)
+        self.visualizeShape(BALL)
+        self.visualizeShape(box)
 
     def configure_input(self):
         "Configure keyboard input during initialization."

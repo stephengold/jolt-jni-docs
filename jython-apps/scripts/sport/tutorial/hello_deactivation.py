@@ -54,7 +54,7 @@ class HelloDeactivation(BasePhysicsApp, PhysicsTickListener):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
         self.configure_input()
 
     def populateSystem(self):
@@ -81,7 +81,7 @@ class HelloDeactivation(BasePhysicsApp, PhysicsTickListener):
         cube_half_extent = 1.0
         large_cube_shape = BoxShape(cube_half_extent)
         bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+        bcs.setObjectLayer(self.objLayerNonMoving)
         bcs.setPosition(0.0, 0.0, 0.0)
         bcs.setShape(large_cube_shape)
         global SUPPORT_CUBE
@@ -97,9 +97,9 @@ class HelloDeactivation(BasePhysicsApp, PhysicsTickListener):
         BI.addBody(bottom_body, EActivation.DontActivate)
 
         # Visualize the shapes of all 3 bodies:
-        BasePhysicsApp.visualizeShape(DYNAMIC_CUBE)
-        BasePhysicsApp.visualizeShape(SUPPORT_CUBE)
-        BasePhysicsApp.visualizeShape(bottom_body)
+        self.visualizeShape(DYNAMIC_CUBE)
+        self.visualizeShape(SUPPORT_CUBE)
+        self.visualizeShape(bottom_body)
 
     def physicsTick(self, system, time_step):
         "Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system has been stepped."

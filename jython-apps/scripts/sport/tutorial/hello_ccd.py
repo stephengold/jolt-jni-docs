@@ -54,7 +54,7 @@ class HelloCcd(BasePhysicsApp):
         "Initialize the application. Invoked once during initialization."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
 
     def populateSystem(self):
         "Populate the PhysicsSystem with bodies. Invoked once during initialization."
@@ -93,9 +93,9 @@ class HelloCcd(BasePhysicsApp):
         disc = self.add_disc()
 
         # Visualize the shapes of all 3 rigid bodies:
-        BasePhysicsApp.visualizeShape(ccd_ball)
-        BasePhysicsApp.visualizeShape(control_ball)
-        BasePhysicsApp.visualizeShape(disc).setProgram("Unshaded/Monochrome")
+        self.visualizeShape(ccd_ball)
+        self.visualizeShape(control_ball)
+        self.visualizeShape(disc).setProgram("Unshaded/Monochrome")
 
     def updatePhysics(self, wall_clock_seconds):
         "Advance the physics simulation by the specified amount. Invoked during each update."
@@ -116,7 +116,7 @@ class HelloCcd(BasePhysicsApp):
 
         bcs = BodyCreationSettings()
         bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+        bcs.setObjectLayer(self.objLayerNonMoving)
         bcs.setShape(disc_shape)
 
         bi = self.physicsSystem.getBodyInterface()

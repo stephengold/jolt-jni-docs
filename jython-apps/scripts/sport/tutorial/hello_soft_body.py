@@ -51,10 +51,10 @@ class HelloSoftBody(BasePhysicsApp):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
 
         # Relocate the camera:
-        BaseApplication.getCamera().setLocation(0.0, 1.0, 8.0)
+        self.getCamera().setLocation(0.0, 1.0, 8.0)
 
     def populateSystem(self):
         "Populate the PhysicsSystem with bodies. Invoked once during initialization."
@@ -95,7 +95,7 @@ class HelloSoftBody(BasePhysicsApp):
 
         start_location = RVec3(0.0, 3.0, 0.0)
         sbcs = SoftBodyCreationSettings(
-            sbss, start_location, Quat(), BasePhysicsApp.objLayerMoving
+            sbss, start_location, Quat(), self.objLayerMoving
         )
 
         # Configure the ball to resist deformation:
@@ -117,7 +117,7 @@ class HelloSoftBody(BasePhysicsApp):
         shape = BoxShape(half_extent)
         bcs = BodyCreationSettings()
         bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+        bcs.setObjectLayer(self.objLayerNonMoving)
         bcs.setPosition(0.0, -half_extent, 0.0)
         bcs.setShape(shape)
 
@@ -125,7 +125,7 @@ class HelloSoftBody(BasePhysicsApp):
         body = bi.createBody(bcs)
         bi.addBody(body, EActivation.DontActivate)
 
-        BasePhysicsApp.visualizeShape(body)
+        self.visualizeShape(body)
 
 
 application = HelloSoftBody()

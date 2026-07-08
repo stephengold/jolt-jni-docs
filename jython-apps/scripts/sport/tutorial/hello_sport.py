@@ -1,5 +1,5 @@
 """
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -44,30 +44,22 @@ class HelloSport(BasePhysicsApp):
         # For simplicity, use a single broadphase layer:
         num_bp_layers = 1
 
-        ovo_filter = ObjectLayerPairFilterTable(BasePhysicsApp.numObjLayers)
+        ovo_filter = ObjectLayerPairFilterTable(self.numObjLayers)
         # Enable collisions between 2 moving bodies:
-        ovo_filter.enableCollision(
-            BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerMoving
-        )
+        ovo_filter.enableCollision(self.objLayerMoving, self.objLayerMoving)
         # Enable collisions between a moving body and a non-moving one:
-        ovo_filter.enableCollision(
-            BasePhysicsApp.objLayerMoving, BasePhysicsApp.objLayerNonMoving
-        )
+        ovo_filter.enableCollision(self.objLayerMoving, self.objLayerNonMoving)
         # Disable collisions between 2 non-moving bodies:
-        ovo_filter.disableCollision(
-            BasePhysicsApp.objLayerNonMoving, BasePhysicsApp.objLayerNonMoving
-        )
+        ovo_filter.disableCollision(self.objLayerNonMoving, self.objLayerNonMoving)
 
         # Map both object layers to broadphase layer 0:
-        layer_map = BroadPhaseLayerInterfaceTable(
-            BasePhysicsApp.numObjLayers, num_bp_layers
-        )
-        layer_map.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerMoving, 0)
-        layer_map.mapObjectToBroadPhaseLayer(BasePhysicsApp.objLayerNonMoving, 0)
+        layer_map = BroadPhaseLayerInterfaceTable(self.numObjLayers, num_bp_layers)
+        layer_map.mapObjectToBroadPhaseLayer(self.objLayerMoving, 0)
+        layer_map.mapObjectToBroadPhaseLayer(self.objLayerNonMoving, 0)
 
         # Rules for colliding object layers with broadphase layers:
         ovb_filter = ObjectVsBroadPhaseLayerFilterTable(
-            layer_map, num_bp_layers, ovo_filter, BasePhysicsApp.numObjLayers
+            layer_map, num_bp_layers, ovo_filter, self.numObjLayers
         )
 
         result = PhysicsSystem()
@@ -101,7 +93,7 @@ class HelloSport(BasePhysicsApp):
         floor_shape = PlaneShape(plane)
         bcs = BodyCreationSettings()
         bcs.setMotionType(EMotionType.Static)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+        bcs.setObjectLayer(self.objLayerNonMoving)
         bcs.setShape(floor_shape)
         floor = bi.createBody(bcs)
         bi.addBody(floor, EActivation.DontActivate)
@@ -110,15 +102,15 @@ class HelloSport(BasePhysicsApp):
         ball_radius = 0.3
         ball_shape = SphereShape(ball_radius)
         bcs.setMotionType(EMotionType.Dynamic)
-        bcs.setObjectLayer(BasePhysicsApp.objLayerMoving)
+        bcs.setObjectLayer(self.objLayerMoving)
         bcs.setShape(ball_shape)
         global BALL
         BALL = bi.createBody(bcs)
         bi.addBody(BALL, EActivation.Activate)
 
         # Visualize the shapes of both rigid bodies:
-        BasePhysicsApp.visualizeShape(floor)
-        BasePhysicsApp.visualizeShape(BALL)
+        self.visualizeShape(floor)
+        self.visualizeShape(BALL)
 
 
 application = HelloSport()

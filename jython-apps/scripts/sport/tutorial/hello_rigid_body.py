@@ -58,7 +58,7 @@ class HelloRigidBody(BasePhysicsApp):
         "Initialize the application. Invoked once."
 
         self.super__initialize()
-        BaseApplication.setVsync(True)
+        self.setVsync(True)
 
     def populateSystem(self):
         "Populate the PhysicsSystem with bodies. Invoked once during initialization."
@@ -91,8 +91,8 @@ class HelloRigidBody(BasePhysicsApp):
         ball2.addImpulse(-25, 0, 0)
 
         # Visualize the shapes of both rigid bodies:
-        BasePhysicsApp.visualizeShape(ball1)
-        BasePhysicsApp.visualizeShape(ball2)
+        self.visualizeShape(ball1)
+        self.visualizeShape(ball2)
 
     def updatePhysics(self, wall_clock_seconds):
         "Advance the physics simulation by the specified amount. Invoked during each update."
