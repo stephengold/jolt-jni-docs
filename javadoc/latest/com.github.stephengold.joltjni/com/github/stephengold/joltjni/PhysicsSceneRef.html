@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -180,7 +181,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsScene.html" title="class in com.github.stephengold.joltjni">PhysicsScene</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Access the target scene, if any.</div>
+<div class="block">Access the targeted scene, if any.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SoftBodyCreationSettings.html" title="class in com.github.stephengold.joltjni">SoftBodyCreationSettings</a>[]</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSoftBodies()" class="member-name-link">getSoftBodies</a>()</code></div>
@@ -195,7 +196,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Write the scene to the specified binary stream.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVa()" class="member-name-link">targetVa</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVaOrZero()" class="member-name-link">targetVaOrZero</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the address of the native <code>PhysicsScene</code>.</div>
 </div>
@@ -207,6 +208,9 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.template.Ref">Methods inherited from class&nbsp;com.github.stephengold.joltjni.template.<a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></h3>
+<code><a href="template/Ref.html#targetVa()">targetVa</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#isCleanerStarted()">isCleanerStarted</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
@@ -246,7 +250,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Add the specified body to the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>body</code> - the body settings (not null, unaffected)</dd>
+<dd><code>body</code> - the body settings (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -259,7 +263,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Add the specified constraint to the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>constraint</code> - the constraint settings (not null, unaffected)</dd>
+<dd><code>constraint</code> - the constraint settings (not <code>null</code>, unaffected)</dd>
 <dd><code>body1</code> - the index of the first body in the bodies list</dd>
 <dd><code>body2</code> - the index of the 2nd body in the bodies list</dd>
 </dl>
@@ -272,7 +276,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Add the specified soft body to the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>softBody</code> - the soft-body settings (not null, unaffected)</dd>
+<dd><code>softBody</code> - the soft-body settings (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -283,7 +287,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Instantiate the bodies in the scene.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>system</code> - where to add the bodies (not null, modified)</dd>
+<dd><code>system</code> - where to add the bodies (not <code>null</code>, modified)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if successful, otherwise <code>false</code></dd>
 </dl>
@@ -307,7 +311,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Load the current state of the specified physics system.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>system</code> - the physics system to load from (not null, unaffected)</dd>
+<dd><code>system</code> - the physics system to load from (not <code>null</code>,
+ unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -344,7 +349,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Write the scene to the specified binary stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - the stream to write to (not null)</dd>
+<dd><code>stream</code> - the stream to write to (not <code>null</code>)</dd>
 <dd><code>saveShapes</code> - if true, save the shapes</dd>
 <dd><code>saveGroupFilter</code> - if true, save the group filter</dd>
 </dl>
@@ -354,7 +359,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPtr()">
 <h3>getPtr</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsScene.html" title="class in com.github.stephengold.joltjni">PhysicsScene</a></span>&nbsp;<span class="element-name">getPtr</span>()</div>
-<div class="block">Access the target scene, if any.</div>
+<div class="block">Access the targeted scene, if any.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="template/Ref.html#getPtr()">getPtr</a></code>&nbsp;in class&nbsp;<code><a href="template/Ref.html" title="class in com.github.stephengold.joltjni.template">Ref</a></code></dd>
@@ -365,16 +370,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="targetVa()">
-<h3>targetVa</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">targetVa</span>()</div>
+<section class="detail" id="targetVaOrZero()">
+<h3>targetVaOrZero</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">targetVaOrZero</span>()</div>
 <div class="block">Return the address of the native <code>PhysicsScene</code>. No objects are
  affected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html#targetVaOrZero()">targetVaOrZero</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code></dd>
 <dt>Overrides:</dt>
-<dd><code><a href="JoltPhysicsObject.html#targetVa()">targetVa</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
+<dd><code><a href="JoltPhysicsObject.html#targetVaOrZero()">targetVaOrZero</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
 <dt>Returns:</dt>
 <dd>the virtual address, or zero if the reference is empty</dd>
 </dl>

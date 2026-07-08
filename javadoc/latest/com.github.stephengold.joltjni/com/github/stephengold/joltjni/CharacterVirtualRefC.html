@@ -30,6 +30,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -351,9 +352,14 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the address of the native <code>CharacterVirtual</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterVirtualRefC.html" title="class in com.github.stephengold.joltjni">CharacterVirtualRefC</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetVaOrZero()" class="member-name-link">targetVaOrZero</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the address of the native <code>CharacterVirtual</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterVirtualRefC.html" title="class in com.github.stephengold.joltjni">CharacterVirtualRefC</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRefC()" class="member-name-link">toRefC</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create an additional read-only counted reference to the targeted
  character.</div>
 </div>
@@ -1024,13 +1030,29 @@ implements <a href="readonly/ConstCharacterVirtual.html" title="interface in com
 <section class="detail" id="targetVa()">
 <h3>targetVa</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">targetVa</span>()</div>
-<div class="block">Return the address of the native <code>CharacterVirtual</code>. No objects are
- affected.</div>
+<div class="block">Return the address of the native <code>CharacterVirtual</code>. The reference
+ is assumed to be non-empty. No objects are affected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="readonly/ConstJoltPhysicsObject.html#targetVa()">targetVa</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="JoltPhysicsObject.html#targetVa()">targetVa</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
+<dt>Returns:</dt>
+<dd>the virtual address (not zero)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="targetVaOrZero()">
+<h3>targetVaOrZero</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">targetVaOrZero</span>()</div>
+<div class="block">Return the address of the native <code>CharacterVirtual</code>. No objects are
+ affected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html#targetVaOrZero()">targetVaOrZero</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code></dd>
+<dt>Overrides:</dt>
+<dd><code><a href="JoltPhysicsObject.html#targetVaOrZero()">targetVaOrZero</a></code>&nbsp;in class&nbsp;<code><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></code></dd>
 <dt>Returns:</dt>
 <dd>the virtual address, or zero if the reference is empty</dd>
 </dl>
