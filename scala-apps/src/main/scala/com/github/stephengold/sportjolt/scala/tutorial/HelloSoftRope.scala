@@ -114,7 +114,7 @@ class HelloSoftRope extends BasePhysicsApp {
         val cornerVertex = sbss.getVertex(vertexIndex)
         cornerVertex.setInvMass(0f)
 
-        sbss.optimize();
+        sbss.optimize
 
         val startLocation = new RVec3(0.0, 0.0, 0.0)
         val sbcs = new SoftBodyCreationSettings(

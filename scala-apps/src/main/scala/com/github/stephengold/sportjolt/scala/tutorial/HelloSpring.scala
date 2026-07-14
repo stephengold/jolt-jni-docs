@@ -150,10 +150,10 @@ class HelloSpring extends BasePhysicsApp with PhysicsTickListener {
         // Configure 2 springs to soften the horizontal limits:
         settings.getLimitsSpringSettings(EAxis.TranslationX)
                 .setDamping(0.2f)
-                .setFrequency(2f); // in Hertz
+                .setFrequency(2f) // in Hertz
         settings.getLimitsSpringSettings(EAxis.TranslationZ)
                 .setDamping(0.2f)
-                .setFrequency(2f); // in Hertz
+                .setFrequency(2f) // in Hertz
         val fixedToWorld = Body.sFixedToWorld
         val constraint = settings.create(fixedToWorld, ballBody)
         physicsSystem.addConstraint(constraint)

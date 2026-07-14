@@ -111,7 +111,7 @@ class HelloPivot extends BasePhysicsApp with PhysicsTickListener {
         super.initialize
 
         configureCamera
-        BaseApplication.setBackgroundColor(Constants.SKY_BLUE);
+        BaseApplication.setBackgroundColor(Constants.SKY_BLUE)
         BaseApplication.setLightDirection(7f, 3f, 5f)
 
         // Disable VSync for more frequent mouse-position updates:
