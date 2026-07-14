@@ -260,8 +260,7 @@ class HelloNarrowPhase extends BasePhysicsApp, PhysicsTickListener {
         val velocity = HelloNarrowPhase.character.getLinearVelocity
 
         // Clear any horizontal motion from the previous simulation step:
-        velocity.setX(0f)
-        velocity.setZ(0f)
+        velocity.setX(0f).setZ(0f)
 
         // If the character is supported, make it respond to keyboard input:
         if (HelloNarrowPhase.character.isSupported) {
