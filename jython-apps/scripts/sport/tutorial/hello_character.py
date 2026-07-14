@@ -59,7 +59,7 @@ class HelloCharacter(BasePhysicsApp, PhysicsTickListener):
         self.setBackgroundColor(Constants.SKY_BLUE)
 
     def populateSystem(self):
-        "Populate the PhysicsSystem with bodies. Invoked once during initialization."
+        "Populate the PhysicsSystem. Invoked once during initialization."
 
         # Create a character with a capsule shape and add it to the system:
         capsule_radius = 0.5  # meters
