@@ -46,7 +46,6 @@ https://github.com/kmammou/v-hacd[the V-HACD project].
 in just enough detail to add verisimilitude to 3-D games.
 It's not intended for 2-D {url-enwiki}/Platformer[platformers],
 nor for scientific research.
-For 2-D physics, consider using http://www.dyn4j.org/[dyn4j] instead.
 
 {Project} and its documentation
 assume a degree of proficiency with
