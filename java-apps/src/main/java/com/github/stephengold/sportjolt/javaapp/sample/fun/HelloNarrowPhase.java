@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -243,8 +243,7 @@ final public class HelloNarrowPhase {
             Vec3 velocity = character.getLinearVelocity();
 
             // Clear any horizontal motion from the previous simulation step:
-            velocity.setX(0f);
-            velocity.setZ(0f);
+            velocity.setX(0f).setZ(0f);
 
             // If the character is supported, make it respond to keyboard input:
             if (character.isSupported()) {
