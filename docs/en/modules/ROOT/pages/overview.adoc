@@ -9,8 +9,8 @@
 _{Project}_ is a {url-enwiki}/Physics_engine[3-D physics-simulation] library
 for {url-enwiki}/List_of_JVM_languages[JVM languages]
 such as {url-enwiki}/Java_(programming_language)[Java],
-{url-enwiki}/Python_(programming_language)[Python],
-{url-enwiki}/JavaScript[JavaScript],
+{url-enwiki}/Python_(programming_language)[Jython],
+{url-enwiki}/JavaScript[Nashorn],
 {url-enwiki}/Kotlin[Kotlin],
 {url-enwiki}/Apache_Groovy[Groovy], and
 {url-enwiki}/Scala_(programming_language)[Scala].
