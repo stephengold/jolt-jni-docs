@@ -30,7 +30,7 @@
 
 class HelloCharacter(BasePhysicsApp, PhysicsTickListener):
     """
-    A simple example combining of character physics.
+    A simple example of character physics.
 
     Builds upon HelloStaticBody.
 
