@@ -104,7 +104,7 @@ class HelloPivot(BasePhysicsApp, PhysicsTickListener):
         "Callback invoked during each iteration of the render loop."
 
         screen_xy = self.getInputManager().locateCursor()
-        if screen_xy != None:
+        if screen_xy is not None:
             """
             Calculate the X-Z plane location (if any)
             indicated by the mouse cursor:
