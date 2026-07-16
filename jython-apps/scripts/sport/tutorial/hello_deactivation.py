@@ -105,10 +105,9 @@ class HelloDeactivation(BasePhysicsApp, PhysicsTickListener):
         "Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system has been stepped."
 
         # Once the dynamic cube gets deactivated, remove the support cube from the system:
-        bi = system.getBodyInterface()
         support_id = SUPPORT_CUBE.getId()
-        if bi.isAdded(support_id) and not DYNAMIC_CUBE.isActive():
-            bi.removeBody(support_id)
+        if BI.isAdded(support_id) and not DYNAMIC_CUBE.isActive():
+            BI.removeBody(support_id)
 
     def prePhysicsTick(self, system, time_step):
         "Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system is stepped."
