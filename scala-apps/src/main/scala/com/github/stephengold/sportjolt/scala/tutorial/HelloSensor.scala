@@ -202,7 +202,7 @@ class HelloSensor extends BasePhysicsApp, PhysicsTickListener {
         HelloSensor.character.postSimulation(maxSeparation)
 
         if (HelloSensor.hadContact) {
-            // Intruder deptected! Pop the sensor bubble:
+            // Intruder detected! Pop the sensor bubble:
             val bi = physicsSystem.getBodyInterface
             val bodyId = HelloSensor.sensor.getId
             bi.removeBody(bodyId)

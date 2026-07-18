@@ -240,7 +240,7 @@ final public class HelloSensor
         character.postSimulation(maxSeparation);
 
         if (hadContact) {
-            // Intruder deptected! Pop the sensor bubble:
+            // Intruder detected! Pop the sensor bubble:
             BodyInterface bi = physicsSystem.getBodyInterface();
             int bodyId = sensor.getId();
             bi.removeBody(bodyId);
