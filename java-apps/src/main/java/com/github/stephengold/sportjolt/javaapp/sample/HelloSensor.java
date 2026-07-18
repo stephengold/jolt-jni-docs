@@ -209,7 +209,7 @@ final public class HelloSensor
                 .setIsSensor(true)
                 .setMotionType(EMotionType.Static)
                 .setObjectLayer(objLayerNonMoving)
-                .setPosition(15., 0f, -13.)
+                .setPosition(15., 0., -13.)
                 .setShape(sensorShape);
         BodyInterface bi = physicsSystem.getBodyInterface();
         sensor = bi.createBody(bcs);
