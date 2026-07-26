@@ -120,7 +120,7 @@ class HelloBroadPhase(BasePhysicsApp, PhysicsTickListener):
 
         # Visualize the character:
         self.visualizeShape(CHARACTER)
-        AabbGeometry(CHARACTER) # outline the character's AABB in white
+        AabbGeometry(CHARACTER)  # outline the character's AABB in white
 
         # Add a plane to represent the ground:
         ground_y = -2.0
@@ -137,7 +137,8 @@ class HelloBroadPhase(BasePhysicsApp, PhysicsTickListener):
         query = self.physicsSystem.getBroadPhaseQuery()
         COLLECTOR.reset()
         query.collideAaBox(
-                GHOST, COLLECTOR, FILTER_BP_LAYER_NO_OP, FILTER_OBJ_LAYER_MOVING)
+            GHOST, COLLECTOR, FILTER_BP_LAYER_NO_OP, FILTER_OBJ_LAYER_MOVING
+        )
 
         # Update the color of the ghost:
         num_hits = COLLECTOR.countHits()
