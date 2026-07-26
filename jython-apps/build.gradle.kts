@@ -45,6 +45,12 @@ tasks.register<JavaExec>("HelloCharacter") {
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Jython port of the HelloCharacter tutorial app."
 }
+tasks.register<JavaExec>("HelloCharacterVirtual") {
+    args("jython", "scripts/sport/tutorial/hello_character_virtual.py",
+         "../class-lists/jolt-jni-classes.txt",
+         "../class-lists/sport-jolt-classes.txt")
+    description = "Runs the Jython port of the HelloCharacterVirtual tutorial app."
+}
 tasks.register<JavaExec>("HelloConstraint") {
     args("jython", "scripts/sport/tutorial/hello_constraint.py",
          "../class-lists/jolt-jni-classes.txt",
