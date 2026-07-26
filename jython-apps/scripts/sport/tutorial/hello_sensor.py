@@ -127,14 +127,12 @@ class HelloSensor(BasePhysicsApp, PhysicsTickListener):
 
         # Update the character:
         max_separation = 0.1  # meters above the floor
-        global CHARACTER
         CHARACTER.postSimulation(max_separation)
 
         global HAD_CONTACT
         if HAD_CONTACT:
             # Intruder detected! Pop the sensor bubble:
             bi = self.physicsSystem.getBodyInterface()
-            global SENSOR
             body_id = SENSOR.getId()
             bi.removeBody(body_id)
             HAD_CONTACT = False
