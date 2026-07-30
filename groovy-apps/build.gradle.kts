@@ -38,6 +38,9 @@ val includeWindows = os.isWindows
 val enableNativeAccess = JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)
 
 tasks.withType<JavaExec>().configureEach { // JVM runtime options:
+    if (os.isLinux) {
+        environment("__GL_THREADED_OPTIMIZATIONS", "0") // see lwjgl3 issue #1071
+    }
     if (os.isMacOsX) {
         jvmArgs("-XstartOnFirstThread") // required for GLFW on macOS
     }
