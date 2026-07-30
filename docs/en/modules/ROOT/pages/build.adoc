@@ -89,10 +89,12 @@ you can build Android libraries.
 
 . You'll need to install https://developer.android.com/studio[Android Studio]
   and point the `ANDROID_HOME` environment variable to that installation.
-. Edit the "gradle.properties" file to configure the build.
-. Run the Gradle wrapper:
-.. using Bash or Fish or PowerShell or Zsh: `./gradlew -b android.gradle assemble`
-.. using Windows Command Prompt: `.\gradlew -b android.gradle assemble`
+. Install the Android build script:
+.. using Bash or Fish or PowerShell or Zsh: `cp android.gradle build.gradle`
+.. using Windows Command Prompt: `copy android.gradle build.gradle`
+. Run the Gradle wrapper on the Android build script:
+.. using Bash or Fish or PowerShell or Zsh: `./gradlew build`
+.. using Windows Command Prompt: `.\gradlew build`
 
 After a successful build,
 Android library artifacts will be found "build/outputs/aar".
@@ -102,10 +104,8 @@ Android library artifacts will be found "build/outputs/aar".
 Once you've successfully built one or more libraries,
 you can install them to your local Maven repository.
 
-. using Bash or Fish or PowerShell or Zsh: `./gradlew install;./gradlew -b android.gradle install`
-. using Windows Command Prompt:
-.. `.\gradlew install`
-.. `.\gradlew -b android.gradle install`
+. using Bash or Fish or PowerShell or Zsh: `./gradlew install`
+. using Windows Command Prompt: `.\gradlew install`
 
 
 == Website
@@ -126,13 +126,3 @@ you can install them to your local Maven repository.
 
 After a successful build,
 your local site copy will be found in the "docs/build/site" directory.
-
-
-== Cleanup
-
-At any time, you can restore the project to a pristine state:
-
-* using Bash or Fish or PowerShell or Zsh: `./gradlew clean;./gradlew -b android.gradle clean`
-* using Windows Command Prompt:
-** `.\gradlew clean`
-** `.\gradlew -b android.gradle clean`
