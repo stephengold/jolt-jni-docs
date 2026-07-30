@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -93,7 +92,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">HeightFieldShapeConstants</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Constants used with <code>HeightFieldShape</code>.</div>
+<div class="block">Constants used with <code>HeightFieldShape</code>. (native namespace:
+ HeightFieldShapeConstants)</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -117,29 +117,34 @@ loadScripts(document, 'script');</script>
 <div class="block">maximum X or Y coordinate</div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#cMaxHeightValue16" class="member-name-link">cMaxHeightValue16</a></code></div>
+<div class="col-second even-row-color"><code><a href="#cMaxBitsPerSample" class="member-name-link">cMaxBitsPerSample</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">maximum height when converted to 16 bits</div>
-</div>
-<div class="col-first odd-row-color"><code>static final float</code></div>
-<div class="col-second odd-row-color"><code><a href="#cNoCollisionValue" class="member-name-link">cNoCollisionValue</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">value used to create gaps in a height field</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#cNoCollisionValue16" class="member-name-link">cNoCollisionValue16</a></code></div>
-<div class="col-last even-row-color">
-<div class="block"><code>cNoCollisionValue</code> converted to 16 bits</div>
+<div class="block">maximum value for <code>HeightFieldShapeSettings.getBitsPerSample()</code></div>
 </div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#cNumBitsXY" class="member-name-link">cNumBitsXY</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#cMaxHeightValue16" class="member-name-link">cMaxHeightValue16</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">maximum number of bits in an X or Y coordinate</div>
+<div class="block">maximum height when converted to 16 bits</div>
+</div>
+<div class="col-first even-row-color"><code>static final float</code></div>
+<div class="col-second even-row-color"><code><a href="#cNoCollisionValue" class="member-name-link">cNoCollisionValue</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">value used to create gaps in a height field</div>
+</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#cNoCollisionValue16" class="member-name-link">cNoCollisionValue16</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block"><code>cNoCollisionValue</code> converted to 16 bits</div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#cStackSize" class="member-name-link">cStackSize</a></code></div>
+<div class="col-second even-row-color"><code><a href="#cNumBitsXY" class="member-name-link">cNumBitsXY</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">stack size for WalkHeightField</div>
+<div class="block">maximum number of bits in an X or Y coordinate</div>
+</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#cStackSize" class="member-name-link">cStackSize</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">stack size for <code>HeightFieldShape::WalkHeightField()</code></div>
 </div>
 </div>
 </section>
@@ -181,7 +186,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="cStackSize">
 <h3>cStackSize</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">cStackSize</span></div>
-<div class="block">stack size for WalkHeightField</div>
+<div class="block">stack size for <code>HeightFieldShape::WalkHeightField()</code></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -262,6 +267,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../../constant-values.html#com.github.stephengold.joltjni.HeightFieldShapeConstants.cMaxHeightValue16">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="cMaxBitsPerSample">
+<h3>cMaxBitsPerSample</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">cMaxBitsPerSample</span></div>
+<div class="block">maximum value for <code>HeightFieldShapeSettings.getBitsPerSample()</code></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../constant-values.html#com.github.stephengold.joltjni.HeightFieldShapeConstants.cMaxBitsPerSample">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>

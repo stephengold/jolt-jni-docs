@@ -30,7 +30,6 @@ loadScripts(document, 'script');</script>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
-<li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="nav-bar-cell1-rev">Index</li>
 <li><a href="help-doc.html#index">Help</a></li>
 </ul>
@@ -1581,6 +1580,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">invalid broad-phase layer</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#cCapsuleProjectionSlop" class="member-name-link">cCapsuleProjectionSlop</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
+<dd>
+<div class="block">used by <code>CapsuleShape</code> and <code>TaperedCapsuleShape</code> to determine
+ whether the supporting face is an edge or a point.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#cDefaultCollisionTolerance" class="member-name-link">cDefaultCollisionTolerance</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
 <dd>
 <div class="block">maximum distance at which GJK considers objects to collide (in meters)</div>
@@ -1592,6 +1596,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PlaneShapeSettings.html#cDefaultHalfExtent" class="member-name-link">cDefaultHalfExtent</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PlaneShapeSettings.html" title="class in com.github.stephengold.joltjni">PlaneShapeSettings</a></dt>
 <dd>
 <div class="block">default half-extent for the <code>PlaneShape</code></div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#cDefaultInternalEdgeRemovalVertexToleranceSq" class="member-name-link">cDefaultInternalEdgeRemovalVertexToleranceSq</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
+<dd>
+<div class="block">default tolerance used by to determine whether two edges are shared</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSettings.html#cDefaultIterationsPerSecond" class="member-name-link">cDefaultIterationsPerSecond</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HairSettings.html" title="class in com.github.stephengold.joltjni">HairSettings</a></dt>
 <dd>
@@ -1857,6 +1865,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html#cMaskBitsXY" class="member-name-link">cMaskBitsXY</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeConstants</a></dt>
 <dd>
 <div class="block">maximum X or Y coordinate</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html#cMaxBitsPerSample" class="member-name-link">cMaxBitsPerSample</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeConstants</a></dt>
+<dd>
+<div class="block">maximum value for <code>HeightFieldShapeSettings.getBitsPerSample()</code></div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html#cMaxContactConstraintsLimit()" class="member-name-link">cMaxContactConstraintsLimit()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></dt>
 <dd>
@@ -3531,7 +3543,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html#cStackSize" class="member-name-link">cStackSize</a> - Static variable in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/HeightFieldShapeConstants.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeConstants</a></dt>
 <dd>
-<div class="block">stack size for WalkHeightField</div>
+<div class="block">stack size for <code>HeightFieldShape::WalkHeightField()</code></div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/ECullMode.html#CullBackFace" class="member-name-link">CullBackFace</a> - Enum constant in enum class com.github.stephengold.joltjni.enumerate.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/enumerate/ECullMode.html" title="enum class in com.github.stephengold.joltjni.enumerate">ECullMode</a></dt>
 <dd>
@@ -7008,14 +7020,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Return the density.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#getDeterministicSimulation()" class="member-name-link">getDeterministicSimulation()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
-<dd>
-<div class="block">Test whether physics simulation is deterministic.</div>
-</dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstPhysicsSettings.html#getDeterministicSimulation()" class="member-name-link">getDeterministicSimulation()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstPhysicsSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSettings</a></dt>
-<dd>
-<div class="block">Test whether physics simulation is deterministic.</div>
-</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html#getDiagonal3()" class="member-name-link">getDiagonal3()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></dt>
 <dd>
 <div class="block">Copy the diagonal elements to a <code>Vec3</code>.</div>
@@ -8341,6 +8345,22 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/DecoratedShape.html#getInnerShape()" class="member-name-link">getInnerShape()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/DecoratedShape.html" title="class in com.github.stephengold.joltjni">DecoratedShape</a></dt>
 <dd>
 <div class="block">Access the undecorated shape.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollideShapeSettings.html#getInternalEdgeRemovalVertexToleranceSq()" class="member-name-link">getInternalEdgeRemovalVertexToleranceSq()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollideShapeSettings.html" title="class in com.github.stephengold.joltjni">CollideShapeSettings</a></dt>
+<dd>
+<div class="block">Return the tolerance used by to determine whether two edges are shared.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#getInternalEdgeRemovalVertexToleranceSq()" class="member-name-link">getInternalEdgeRemovalVertexToleranceSq()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
+<dd>
+<div class="block">Return the tolerance used by to determine whether two edges are shared.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCollideShapeSettings.html#getInternalEdgeRemovalVertexToleranceSq()" class="member-name-link">getInternalEdgeRemovalVertexToleranceSq()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstCollideShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCollideShapeSettings</a></dt>
+<dd>
+<div class="block">Return the tolerance used by to determine whether two edges are shared.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstPhysicsSettings.html#getInternalEdgeRemovalVertexToleranceSq()" class="member-name-link">getInternalEdgeRemovalVertexToleranceSq()</a> - Method in interface com.github.stephengold.joltjni.readonly.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/readonly/ConstPhysicsSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsSettings</a></dt>
+<dd>
+<div class="block">Return the tolerance used by to determine whether two edges are shared.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/InvBind.html#getInvBind()" class="member-name-link">getInvBind()</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/InvBind.html" title="class in com.github.stephengold.joltjni">InvBind</a></dt>
 <dd>
@@ -14779,6 +14799,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Test whether the native library implements compute systems based on
  Khronos's Vulkan API.</div>
 </dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#implementsCrossPlatformDeterminism()" class="member-name-link">implementsCrossPlatformDeterminism()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">Test whether the native library implements cross-platform determinism.</div>
+</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#implementsDebugRendering()" class="member-name-link">implementsDebugRendering()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
 <div class="block">Test whether the native library implements debug rendering.</div>
@@ -14917,13 +14941,14 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installCrashAssertCallback()" class="member-name-link">installCrashAssertCallback()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
-<div class="block">Install an alternative assert callback that crashes the JVM with an
- EXCEPTION_ACCESS_VIOLATION or SIGILL.</div>
+<div class="block">Install an alternative assert that writes to <code>cout</code> and then
+ crashes the JVM with an <code>EXCEPTION_ACCESS_VIOLATION</code> or
+ <code>SIGILL</code>.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installDefaultAssertCallback()" class="member-name-link">installDefaultAssertCallback()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
 <div class="block">Install the default assert callback, which writes to <code>cout</code> and
- triggers a native breakpoint.</div>
+ then triggers a native breakpoint.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installDefaultTraceCallback()" class="member-name-link">installDefaultTraceCallback()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
 <dd>
@@ -14937,6 +14962,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Install an alternative trace callback that writes to the specified
  <code>PrintStream</code>.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html#installTraceAssertCallback()" class="member-name-link">installTraceAssertCallback()</a> - Static method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Jolt.html" title="class in com.github.stephengold.joltjni">Jolt</a></dt>
+<dd>
+<div class="block">Install an alternative assert callback that passes the assertion
+ parameters to <code>JPH:Trace()</code> but doesn't interrupt execution.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/std/Std.html#INT_MAX" class="member-name-link">INT_MAX</a> - Static variable in class com.github.stephengold.joltjni.std.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/std/Std.html" title="class in com.github.stephengold.joltjni.std">Std</a></dt>
 <dd>
@@ -20149,10 +20179,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the shape's density.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#setDeterministicSimulation(boolean)" class="member-name-link">setDeterministicSimulation(boolean)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
-<dd>
-<div class="block">Alter whether physics simulation is deterministic.</div>
-</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html#setDiagonal3(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setDiagonal3(Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/Mat44.html" title="class in com.github.stephengold.joltjni">Mat44</a></dt>
 <dd>
 <div class="block">Set the diagonal to the specified vector.</div>
@@ -20693,18 +20719,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Alter the maximum angle for merging during hit reduction.</div>
 </dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettings.html#setHitReductionCosMaxAngle(int)" class="member-name-link">setHitReductionCosMaxAngle(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettings.html" title="class in com.github.stephengold.joltjni">CharacterVirtualSettings</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">provide a <code>float</code> argument</div>
-</div>
-</dd>
-<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettingsRef.html#setHitReductionCosMaxAngle(int)" class="member-name-link">setHitReductionCosMaxAngle(int)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettingsRef.html" title="class in com.github.stephengold.joltjni">CharacterVirtualSettingsRef</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">provide a <code>float</code> argument</div>
-</div>
-</dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexHullShapeSettings.html#setHullTolerance(float)" class="member-name-link">setHullTolerance(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/ConvexHullShapeSettings.html" title="class in com.github.stephengold.joltjni">ConvexHullShapeSettings</a></dt>
 <dd>
 <div class="block">Alter the positional tolerance used when generating the hull.</div>
@@ -20773,6 +20787,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettingsRef.html#setInnerBodyShape(com.github.stephengold.joltjni.readonly.ConstShape)" class="member-name-link">setInnerBodyShape(ConstShape)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CharacterVirtualSettingsRef.html" title="class in com.github.stephengold.joltjni">CharacterVirtualSettingsRef</a></dt>
 <dd>
 <div class="block">Replace the shape of the inner rigid body.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollideShapeSettings.html#setInternalEdgeRemovalVertexToleranceSq(float)" class="member-name-link">setInternalEdgeRemovalVertexToleranceSq(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/CollideShapeSettings.html" title="class in com.github.stephengold.joltjni">CollideShapeSettings</a></dt>
+<dd>
+<div class="block">Alter the tolerance used by to determine whether two edges are shared.</div>
+</dd>
+<dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html#setInternalEdgeRemovalVertexToleranceSq(float)" class="member-name-link">setInternalEdgeRemovalVertexToleranceSq(float)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/PhysicsSettings.html" title="class in com.github.stephengold.joltjni">PhysicsSettings</a></dt>
+<dd>
+<div class="block">Alter the tolerance used by to determine whether two edges are shared.</div>
 </dd>
 <dt><a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RayInvDirection.html#setInvDirection(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setInvDirection(Vec3Arg)</a> - Method in class com.github.stephengold.joltjni.<a href="com.github.stephengold.joltjni/com/github/stephengold/joltjni/RayInvDirection.html" title="class in com.github.stephengold.joltjni">RayInvDirection</a></dt>
 <dd>

@@ -344,7 +344,7 @@ dependencies {
     implementation(
             group: "com.github.stephengold",
             name: "jolt-jni-Android",
-            version: "5.2.0",
+            version: "6.0.0",
             classifier: "SpDebug",
             ext: "aar"
     )
@@ -378,10 +378,10 @@ add to the relevant "build.gradle" or "build.gradle.kts" file:</p>
 }
 dependencies {
     // JVM library:
-    implementation("com.github.stephengold:jolt-jni-Windows64:5.2.0")
+    implementation("com.github.stephengold:jolt-jni-Windows64:6.0.0")
 
     // native libraries:
-    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:5.2.0:DebugSp")
+    runtimeOnly("com.github.stephengold:jolt-jni-Linux64:6.0.0:DebugSp")
         // Native libraries for other platforms also could be added.
 }</code></pre>
 </div>
@@ -428,7 +428,7 @@ Add to the relevant "build.gradle" or "build.gradle.kts" file:</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
     implementation("io.github.electrostat-lab:snaploader:1.1.1-stable")
-    runtimeOnly("com.github.oshi:oshi-core:7.3.2")
+    runtimeOnly("com.github.oshi:oshi-core:7.4.2")
 }</code></pre>
 </div>
 </div>
@@ -455,6 +455,7 @@ NativeDynamicLibrary[] libraries = {
         new NativeDynamicLibrary("linux/x86-64/com/github/stephengold", PlatformPredicate.LINUX_X86_64),
         new NativeDynamicLibrary("osx/aarch64/com/github/stephengold", PlatformPredicate.MACOS_ARM_64),
         new NativeDynamicLibrary("osx/x86-64/com/github/stephengold", PlatformPredicate.MACOS_X86_64),
+        new NativeDynamicLibrary("windows/aarch64/com/github/stephengold", PlatformPredicate.WIN_ARM_64),
         new NativeDynamicLibrary("windows/x86-64/com/github/stephengold", PlatformPredicate.WIN_X86_64)
 };
 loader.registerNativeLibraries(libraries).initPlatformLibrary();
