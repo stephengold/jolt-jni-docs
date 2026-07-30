@@ -1,6 +1,6 @@
 [The jolt-jni-docs project][project] provides
 documentation and sample applications
-for [the Jolt-JNI physics library][joltjni].
+for [the Jolt-JNI 3-D physics library][joltjni].
 
 It contains 12 subprojects:
 
