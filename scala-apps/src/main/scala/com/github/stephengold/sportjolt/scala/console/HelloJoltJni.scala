@@ -108,6 +108,8 @@ object HelloJoltJni {
                     PlatformPredicate.MACOS_ARM_64),
             new NativeDynamicLibrary("osx/x86-64/com/github/stephengold",
                     PlatformPredicate.MACOS_X86_64),
+            new NativeDynamicLibrary("windows/aarch64/com/github/stephengold",
+                    PlatformPredicate.WIN_ARM_64),
             new NativeDynamicLibrary("windows/x86-64/com/github/stephengold",
                     PlatformPredicate.WIN_X86_64)
         )

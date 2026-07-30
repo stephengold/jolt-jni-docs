@@ -136,6 +136,8 @@ libraries = [
         PlatformPredicate::MACOS_ARM_64),
     NativeDynamicLibrary.new("osx/x86-64/com/github/stephengold",
         PlatformPredicate::MACOS_X86_64),
+    NativeDynamicLibrary.new("windows/aarch64/com/github/stephengold",
+        PlatformPredicate::WIN_ARM_64),
     NativeDynamicLibrary.new("windows/x86-64/com/github/stephengold",
         PlatformPredicate::WIN_X86_64)
 ].to_java(NativeDynamicLibrary)

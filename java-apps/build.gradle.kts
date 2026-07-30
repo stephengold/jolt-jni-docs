@@ -216,5 +216,12 @@ dependencies {
         runtimeOnly(variantOf(libs.lwjgl.assimp){classifier("natives-windows")})
         runtimeOnly(variantOf(libs.lwjgl.glfw){classifier("natives-windows")})
         runtimeOnly(variantOf(libs.lwjgl.opengl){classifier("natives-windows")})
+
+        runtimeOnly(variantOf(libs.jolt.jni.windowsarm64){classifier(btf)})
+
+        runtimeOnly(variantOf(libs.lwjgl){classifier("natives-windows-arm64")})
+        runtimeOnly(variantOf(libs.lwjgl.assimp){classifier("natives-windows-arm64")})
+        runtimeOnly(variantOf(libs.lwjgl.glfw){classifier("natives-windows-arm64")})
+        runtimeOnly(variantOf(libs.lwjgl.opengl){classifier("natives-windows-arm64")})
     }
 }
