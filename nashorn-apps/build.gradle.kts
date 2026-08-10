@@ -20,8 +20,7 @@ application {
 
 // physics console apps (no graphics)
 tasks.register<JavaExec>("HelloJoltJni") {
-    args("nashorn",
-         "scripts/console/HelloJoltJni.js",
+    args("nashorn", "scripts/console/HelloJoltJni.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/snap-loader-classes.txt")
     description = "Runs the Nashorn port of the HelloJoltJni console app."
@@ -29,50 +28,43 @@ tasks.register<JavaExec>("HelloJoltJni") {
 
 // physics tutorial apps (very simple)
 tasks.register<JavaExec>("HelloCcd") {
-    args("nashorn",
-         "scripts/sport/tutorial/HelloCcd.js",
+    args("nashorn", "scripts/sport/tutorial/HelloCcd.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloCcd tutorial app."
 }
 tasks.register<JavaExec>("HelloCharacter") {
-    args("nashorn",
-         "scripts/sport/tutorial/HelloCharacter.js",
+    args("nashorn", "scripts/sport/tutorial/HelloCharacter.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloCharacter tutorial app."
 }
 tasks.register<JavaExec>("HelloDamping") {
-    args("nashorn",
-         "scripts/sport/tutorial/HelloDamping.js",
+    args("nashorn", "scripts/sport/tutorial/HelloDamping.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloDamping tutorial app."
 }
 tasks.register<JavaExec>("HelloDeactivation") {
-    args("nashorn",
-         "scripts/sport/tutorial/HelloDeactivation.js",
+    args("nashorn", "scripts/sport/tutorial/HelloDeactivation.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloDeactivation tutorial app."
 }
 tasks.register<JavaExec>("HelloRigidBody") {
-    args("nashorn",
-         "scripts/sport/tutorial/HelloRigidBody.js",
+    args("nashorn", "scripts/sport/tutorial/HelloRigidBody.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloRigidBody tutorial app."
 }
 tasks.register<JavaExec>("HelloSport") {
-    args("nashorn",
-         "scripts/sport/tutorial/HelloSport.js",
+    args("nashorn", "scripts/sport/tutorial/HelloSport.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloSport tutorial app."
 }
 tasks.register<JavaExec>("HelloStaticBody") {
-    args("nashorn",
-         "scripts/sport/tutorial/HelloStaticBody.js",
+    args("nashorn", "scripts/sport/tutorial/HelloStaticBody.js",
          "../class-lists/jolt-jni-classes.txt",
          "../class-lists/sport-jolt-classes.txt")
     description = "Runs the Nashorn port of the HelloStaticBody tutorial app."
