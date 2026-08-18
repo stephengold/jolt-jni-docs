@@ -215,7 +215,6 @@ class HelloBroadPhase(BasePhysicsApp, PhysicsTickListener):
         cam.setLocation(35.0, 35.0, 60.0)
         cam.setUpAngle(-0.5)
 
-        # Bring the near plane closer to reduce clipping:
         self.getProjection().setFovyDegrees(30.0)
 
     def configure_input(self):
