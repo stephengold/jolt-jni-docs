@@ -27,9 +27,6 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-# Import an additional Java class:
-from org.joml import Vector3f
-
 
 class HelloMotor(BasePhysicsApp, PhysicsTickListener):
     """
