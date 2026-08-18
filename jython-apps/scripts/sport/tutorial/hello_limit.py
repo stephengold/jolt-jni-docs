@@ -195,7 +195,7 @@ class HelloLimit(BasePhysicsApp, PhysicsTickListener):
         result = bi.createBody(bcs)
         bi.addBody(result, EActivation.DontActivate)
 
-        assert result != None
+        assert result is not None
         return result
 
     def configure_camera(self):
