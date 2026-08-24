@@ -89,7 +89,7 @@ class HelloNarrowPhase(BasePhysicsApp, PhysicsTickListener):
 
         # Visualize the ghost shape:
         summary = ShapeSummary(GHOST, "low/Facet")
-        mesh = BasePhysicsApp.meshForShape(GHOST, summary)
+        mesh = self.meshForShape(GHOST, summary)
         global GHOST_GEOMETRY
         GHOST_GEOMETRY = Geometry(mesh)
         GHOST_GEOMETRY.setLocation(GHOST_CENTER)
