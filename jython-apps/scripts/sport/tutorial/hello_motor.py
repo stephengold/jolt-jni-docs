@@ -28,7 +28,7 @@
 """
 
 
-class HelloMotor(BasePhysicsApp, PhysicsTickListener):
+class HelloMotor(BasePhysicsApp):
     """
     A simple example of a constraint with a motor.
 
