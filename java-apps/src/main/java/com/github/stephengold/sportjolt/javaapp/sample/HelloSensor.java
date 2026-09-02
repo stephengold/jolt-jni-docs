@@ -303,13 +303,13 @@ final public class HelloSensor
     private void addContact(long body1Va, long body2Va) {
         long ghostVa = sensor.va();
         if (body1Va == ghostVa) {
-            ConstBody other = new Body(body2Va); // TODO 2 args
+            ConstBody other = new Body(physicsSystem, body2Va);
             if (!other.isStatic()) {
                 hadContact = true;
             }
 
         } else if (body2Va == ghostVa) {
-            ConstBody other = new Body(body1Va); // TODO 2 args
+            ConstBody other = new Body(physicsSystem, body1Va);
             if (!other.isStatic()) {
                 hadContact = true;
             }

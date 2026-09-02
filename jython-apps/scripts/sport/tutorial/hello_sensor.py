@@ -50,7 +50,7 @@ class HelloSensor(BasePhysicsApp, PhysicsTickListener):
         # To enable the callbacks, register the application as a tick listener
         # and set a simple contact listener:
         self.addTickListener(self)
-        result.setContactListener(AnonymousContactListener())
+        result.setContactListener(AnonymousContactListener(result))
 
         return result
 
@@ -173,18 +173,18 @@ class HelloSensor(BasePhysicsApp, PhysicsTickListener):
         CHARACTER.setLinearVelocity(velocity)
 
     @staticmethod
-    def add_contact(body1_va, body2_va):
+    def add_contact(system, body1_va, body2_va):
         "Process a new contact point."
 
         ghost_va = SENSOR.va()
         if body1_va == ghost_va:
-            other = Body(body2_va)
+            other = Body(system, body2_va)
             if not other.isStatic():
                 global HAD_CONTACT
                 HAD_CONTACT = True
 
         elif body2_va == ghost_va:
-            other = Body(body1_va)
+            other = Body(system, body1_va)
             if not other.isStatic():
                 global HAD_CONTACT
                 HAD_CONTACT = True
@@ -241,8 +241,11 @@ class HelloSensor(BasePhysicsApp, PhysicsTickListener):
 class AnonymousContactListener(CustomContactListener):
     "When a contact is added, invoke the static method."
 
+    def __init__(self, system):
+        self.system = system
+
     def onContactAdded(self, body1_va, body2_va, manifold_va, settings_va):
-        HelloSensor.add_contact(body1_va, body2_va)
+        HelloSensor.add_contact(self.system, body1_va, body2_va)
 
 
 class AnonymousInputProcessor(InputProcessor):

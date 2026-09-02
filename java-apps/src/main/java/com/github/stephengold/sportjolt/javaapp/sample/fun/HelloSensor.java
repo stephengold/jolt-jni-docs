@@ -145,7 +145,7 @@ final public class HelloSensor {
                 @Override
                 public void onContactAdded(long body1Va, long body2Va,
                         long manifoldVa, long settingsVa) {
-                    addContact(body1Va, body2Va);
+                    addContact(result, body1Va, body2Va);
                 }
             });
 
@@ -258,19 +258,21 @@ final public class HelloSensor {
     /**
      * Process a new contact point.
      *
+     * @param system the {@code PhysicsSystem} that contains the contact
      * @param body1Va the virtual address of the first contact body
      * @param body2Va the virtual address of the 2nd contact body
      */
-    private static void addContact(long body1Va, long body2Va) {
+    private static void addContact(
+            PhysicsSystem system, long body1Va, long body2Va) {
         long ghostVa = sensor.va();
         if (body1Va == ghostVa) {
-            ConstBody other = new Body(body2Va); // TODO 2 args
+            ConstBody other = new Body(system, body2Va);
             if (!other.isStatic()) {
                 hadContact = true;
             }
 
         } else if (body2Va == ghostVa) {
-            ConstBody other = new Body(body1Va); // TODO 2 args
+            ConstBody other = new Body(system, body1Va);
             if (!other.isStatic()) {
                 hadContact = true;
             }

@@ -264,13 +264,13 @@ class HelloSensor extends BasePhysicsApp, PhysicsTickListener {
     private def addContact(body1Va: Long, body2Va: Long): Unit = {
         val ghostVa = HelloSensor.sensor.va
         if (body1Va == ghostVa) {
-            val other = new Body(body2Va) // TODO 2 args
+            val other = new Body(physicsSystem, body2Va)
             if (!other.isStatic) {
                 HelloSensor.hadContact = true
             }
 
         } else if (body2Va == ghostVa) {
-            val other = new Body(body1Va) // TODO 2 args
+            val other = new Body(physicsSystem, body1Va)
             if (!other.isStatic) {
                 HelloSensor.hadContact = true
             }
