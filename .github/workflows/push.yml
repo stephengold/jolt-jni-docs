@@ -15,7 +15,7 @@ jobs:
           java-version: 17
       - uses: actions/checkout@v7
       - uses: gradle/actions/setup-gradle@v6
-      - run: ./gradlew build install javadoc HelloJoltJni -x :java-apps:checkstyleMain --console=plain --stacktrace
+      - run: ./gradlew build install javadoc HelloJoltJni --console=plain --stacktrace
       - uses: DeLaGuardo/setup-clojure@13.6.1
         with:
           lein: 2.12.0
