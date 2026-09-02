@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -204,7 +204,7 @@ final public class RunScript {
                 throw new IllegalStateException("factoryName = " + factoryName);
         }
 
-        //System.out.println(codeSnippet);
+        // System.out.println(codeSnippet);
 
         try {
             scriptEngine.eval(codeSnippet);

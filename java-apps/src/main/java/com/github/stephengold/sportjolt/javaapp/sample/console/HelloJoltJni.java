@@ -140,7 +140,7 @@ final public class HelloJoltJni {
                     "Failed to load a Jolt-JNI native library!");
         }
 
-        //Jolt.setTraceAllocations(true); // to log Jolt-JNI heap allocations
+        // Jolt.setTraceAllocations(true); // to log Jolt-JNI heap allocations
         JoltPhysicsObject.startCleaner(); // to reclaim native memory
         Jolt.registerDefaultAllocator(); // tell Jolt Physics to use malloc/free
         Jolt.installDefaultAssertCallback();
