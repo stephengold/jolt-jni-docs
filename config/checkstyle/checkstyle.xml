@@ -29,6 +29,7 @@
     <!-- See https://checkstyle.org/checks/regexp -->
     <module name="RegexpSingleline">
         <property name="format" value="\s$"/>
+        <property name="id" value="noTrailingWhitespace"/>
         <property name="message" value="Trailing whitespace is not allowed"/>
     </module>
 
@@ -49,7 +50,7 @@
         <!-- Checks for annotations:                      -->
         <!-- See https://checkstyle.org/checks/annotation -->
         <module name="AnnotationLocation">
-            <property name="id" value="AnnotationLocationMostCases"/>
+            <property name="id" value="AnnotationLocationMethodsAndCtors"/>
             <property name="tokens" value="METHOD_DEF, CTOR_DEF, COMPACT_CTOR_DEF"/>
         </module>
         <module name="AnnotationLocation">
@@ -154,7 +155,6 @@
             <property name="customImportOrderRules" value="STATIC###THIRD_PARTY_PACKAGE"/>
             <property name="separateLineBetweenGroups" value="true"/>
             <property name="sortImportsInGroupAlphabetically" value="true"/>
-            <property name="tokens" value="IMPORT, STATIC_IMPORT, PACKAGE_DEF"/>
         </module>
         <module name="IllegalImport"/> <!-- defaults to sun.* packages -->
         <module name="RedundantImport"/>
@@ -199,9 +199,7 @@
             <property name="allowEscapesForControlCharacters" value="true"/>
             <property name="allowNonPrintableEscapes" value="true"/>
         </module>
-        <module name="CommentsIndentation">
-            <property name="tokens" value="SINGLE_LINE_COMMENT, BLOCK_COMMENT_BEGIN"/>
-        </module>
+         <module name="CommentsIndentation"/>
         <module name="HexLiteralCase"/>
         <module name="Indentation">
             <property name="arrayInitIndent" value="4"/>
@@ -319,9 +317,9 @@
 
         <!-- Checks for whitespace:                       -->
         <!-- See https://checkstyle.org/checks/whitespace -->
+        <module name="ArrayBracketNoWhitespace"/>
         <module name="EmptyForInitializerPad"/>
         <module name="EmptyForIteratorPad"/>
-        <module name="ArrayBracketNoWhitespace"/>
         <module name="EmptyLineSeparator">
             <property name="allowMultipleEmptyLines" value="false"/>
             <property name="allowNoEmptyLineBetweenFields" value="true"/>
