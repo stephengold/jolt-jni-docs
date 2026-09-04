@@ -1,6 +1,7 @@
 ; Leiningen script to build the src/clojure subproject of jolt-jni-docs
 
 (def joltjni "6.0.0")
+(def lwjgl "3.4.2")
 
 (defproject jolt-jni-clojure "0.1.0-SNAPSHOT"
   :aliases {
@@ -16,6 +17,34 @@
     [com.github.stephengold/jolt-jni-Windows_ARM64 ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/sport-jolt "2.1.1"]
     [org.clojure/clojure "1.12.6"]
+    [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux"]
+    [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux-arm32"]
+    [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux-arm64"]
+    [org.lwjgl/lwjgl ~lwjgl :classifier "natives-macos"]
+    [org.lwjgl/lwjgl ~lwjgl :classifier "natives-macos-arm64"]
+    [org.lwjgl/lwjgl ~lwjgl :classifier "natives-windows"]
+    [org.lwjgl/lwjgl ~lwjgl :classifier "natives-windows-arm64"]
+    [org.lwjgl/lwjgl-assimp ~lwjgl :classifier "natives-linux"]
+    [org.lwjgl/lwjgl-assimp ~lwjgl :classifier "natives-linux-arm32"]
+    [org.lwjgl/lwjgl-assimp ~lwjgl :classifier "natives-linux-arm64"]
+    [org.lwjgl/lwjgl-assimp ~lwjgl :classifier "natives-macos"]
+    [org.lwjgl/lwjgl-assimp ~lwjgl :classifier "natives-macos-arm64"]
+    [org.lwjgl/lwjgl-assimp ~lwjgl :classifier "natives-windows"]
+    [org.lwjgl/lwjgl-assimp ~lwjgl :classifier "natives-windows-arm64"]
+    [org.lwjgl/lwjgl-glfw ~lwjgl :classifier "natives-linux"]
+    [org.lwjgl/lwjgl-glfw ~lwjgl :classifier "natives-linux-arm32"]
+    [org.lwjgl/lwjgl-glfw ~lwjgl :classifier "natives-linux-arm64"]
+    [org.lwjgl/lwjgl-glfw ~lwjgl :classifier "natives-macos"]
+    [org.lwjgl/lwjgl-glfw ~lwjgl :classifier "natives-macos-arm64"]
+    [org.lwjgl/lwjgl-glfw ~lwjgl :classifier "natives-windows"]
+    [org.lwjgl/lwjgl-glfw ~lwjgl :classifier "natives-windows-arm64"]
+    [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-linux"]
+    [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-linux-arm32"]
+    [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-linux-arm64"]
+    [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-macos"]
+    [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-macos-arm64"]
+    [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-windows"]
+    [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-windows-arm64"]
   ]
   :description "Sample applications (in Clojure) for the Jolt-JNI physics-simulation library"
   :license {
