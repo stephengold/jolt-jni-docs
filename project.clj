@@ -18,11 +18,17 @@
     [org.clojure/clojure "1.12.6"]
   ]
   :description "Sample applications (in Clojure) for the Jolt-JNI physics-simulation library"
-  :license {:name "BSD 3-Clause License"
-            :url "https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE"}
+  :license {
+    :name "BSD 3-Clause License"
+    :url "https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE"
+  }
   :main ^:skip-aot clojure.HelloJoltJni
-  :profiles {:uberjar {:aot :all
-                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
+  :profiles {
+    :uberjar {
+      :aot :all
+      :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
+    }
+  }
   :target-path "target/%s"
   :url "https://github.com/stephengold/jolt-jni-docs"
 )
