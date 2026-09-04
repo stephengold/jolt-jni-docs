@@ -5,7 +5,7 @@
     [com.github.stephengold/jolt-jni-Linux64 "6.0.0"]
     [com.github.stephengold/jolt-jni-Linux64 "6.0.0" :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Linux_ARM32hf "6.0.0" :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Linux_ARM64 "6.0.0" :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-Linux_ARM64 "6.0.2" :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-MacOSX64 "6.0.0" :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-MacOSX_ARM64 "6.0.0" :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Windows64 "6.0.0" :classifier "DebugSp"]
