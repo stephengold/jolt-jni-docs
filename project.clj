@@ -3,6 +3,9 @@
 (def joltjni "6.0.0")
 
 (defproject jolt-jni-clojure "0.1.0-SNAPSHOT"
+  :aliases {
+    "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
+  }
   :dependencies [
     [com.github.stephengold/jolt-jni-Linux64 ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Linux_ARM32hf ~joltjni :classifier "DebugSp"]
