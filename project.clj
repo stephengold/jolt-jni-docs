@@ -12,7 +12,7 @@
     [com.github.stephengold/jolt-jni-Windows_ARM64 "6.0.0" :classifier "DebugSp"]
     [com.github.stephengold/sport-jolt "2.1.1"]
     [io.github.electrostat-lab/snaploader "1.1.1-stable"]
-    [org.clojure/clojure "1.12.5"]
+    [org.clojure/clojure "1.12.6"]
   ]
   :description "Sample applications (in Clojure) for the Jolt-JNI physics-simulation library"
   :license {:name "BSD 3-Clause License"
