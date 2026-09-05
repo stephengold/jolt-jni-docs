@@ -15,7 +15,7 @@ It contains 12 subprojects:
 9. groovy223-apps: 3 sample applications ported to scripted [Groovy]
 10. luaj-apps: a sample application ported to Luaj [Lua]
 11. luajava-apps: a sample application ported to Luajava [Lua]
-12. src/clojure: a sample application ported to [Clojure]
+12. src/clojure: 2 sample applications ported to [Clojure]
 
 For visualization, many of the sample applications utilize
 [the SPORT graphics engine for Jolt][sportjolt],

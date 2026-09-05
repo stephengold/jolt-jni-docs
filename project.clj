@@ -7,6 +7,7 @@
 (defproject jolt-jni-clojure "0.1.0-SNAPSHOT"
   :aliases {
     "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
+    "HelloSport" ["run" "-m" "clojure.HelloSport"]
   }
   :dependencies [
     [com.github.stephengold/jolt-jni-Linux64 ~joltjni :classifier ~btf]
