@@ -1,5 +1,6 @@
 ; Leiningen script to build the src/clojure subproject of jolt-jni-docs
 
+(def btf "DebugSp")
 (def joltjni "6.0.0")
 (def lwjgl "3.4.2")
 
@@ -8,15 +9,15 @@
     "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
   }
   :dependencies [
-    [com.github.stephengold/jolt-jni-Linux64 ~joltjni :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Linux64_fma ~joltjni :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Linux_ARM32hf ~joltjni :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Linux_ARM64 "6.0.2" :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-MacOSX64 ~joltjni :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-MacOSX_ARM64 ~joltjni :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Windows64 ~joltjni :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Windows64_avx2 ~joltjni :classifier "DebugSp"]
-    [com.github.stephengold/jolt-jni-Windows_ARM64 ~joltjni :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-Linux64 ~joltjni :classifier ~btf]
+    [com.github.stephengold/jolt-jni-Linux64_fma ~joltjni :classifier ~btf]
+    [com.github.stephengold/jolt-jni-Linux_ARM32hf ~joltjni :classifier ~btf]
+    [com.github.stephengold/jolt-jni-Linux_ARM64 "6.0.2" :classifier ~btf]
+    [com.github.stephengold/jolt-jni-MacOSX64 ~joltjni :classifier ~btf]
+    [com.github.stephengold/jolt-jni-MacOSX_ARM64 ~joltjni :classifier ~btf]
+    [com.github.stephengold/jolt-jni-Windows64 ~joltjni :classifier ~btf]
+    [com.github.stephengold/jolt-jni-Windows64_avx2 ~joltjni :classifier ~btf]
+    [com.github.stephengold/jolt-jni-Windows_ARM64 ~joltjni :classifier ~btf]
     [com.github.stephengold/sport-jolt "2.1.1"]
     [org.clojure/clojure "1.12.6"]
     [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux"]
