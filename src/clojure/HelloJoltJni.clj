@@ -48,19 +48,23 @@
       PlaneShape
       SphereShape
       TempAllocatorMalloc
-      Vec3]
+      Vec3
+    ]
     [com.github.stephengold.joltjni.enumerate
       EActivation
       EMotionType
-      EPhysicsUpdateError]
+      EPhysicsUpdateError
+    ]
     [electrostatic4j.snaploader
       LibraryInfo
       LoadingCriterion
-      NativeBinaryLoader]
+      NativeBinaryLoader
+    ]
     [electrostatic4j.snaploader.filesystem DirectoryPath]
     [electrostatic4j.snaploader.platform NativeDynamicLibrary]
     [electrostatic4j.snaploader.platform.util PlatformPredicate]
-    [java.lang Runtime]))
+    [java.lang Runtime]
+))
 
 ; constants
 (def numObjLayers 2) ; number of object layers
@@ -165,4 +169,6 @@
       (def errors (.update physicsSystem timePerStep collisionSteps tempAllocator jobSystem))
       (assert (= errors EPhysicsUpdateError/None))
       (def location (.getPosition ball))
-      (println (.toString location)))))
+      (println (.toString location))
+  ))
+)
