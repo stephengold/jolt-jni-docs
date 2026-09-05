@@ -9,11 +9,13 @@
   }
   :dependencies [
     [com.github.stephengold/jolt-jni-Linux64 ~joltjni :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-Linux64_fma ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Linux_ARM32hf ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Linux_ARM64 "6.0.2" :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-MacOSX64 ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-MacOSX_ARM64 ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Windows64 ~joltjni :classifier "DebugSp"]
+    [com.github.stephengold/jolt-jni-Windows64_avx2 ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/jolt-jni-Windows_ARM64 ~joltjni :classifier "DebugSp"]
     [com.github.stephengold/sport-jolt "2.1.1"]
     [org.clojure/clojure "1.12.6"]
