@@ -136,5 +136,4 @@
   (.setInitialize fpa initialize)
   (.setPopulateSystem fpa populateSystem)
   (.start fpa "HelloSport")
-  (println "done with main")
 )
