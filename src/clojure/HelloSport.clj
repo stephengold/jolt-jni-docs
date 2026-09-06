@@ -103,7 +103,6 @@
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (println "populateSystem")
   (def physicsSystem (.getPhysicsSystem app))
   (def bi (.getBodyInterface physicsSystem))
 
