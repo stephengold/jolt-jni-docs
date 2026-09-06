@@ -39,9 +39,7 @@
   (:import
     [com.github.stephengold.joltjni
       BodyCreationSettings
-      BodyInterface
       BroadPhaseLayerInterfaceTable
-      Jolt
       ObjectLayerPairFilterTable
       ObjectVsBroadPhaseLayerFilterTable
       PhysicsSystem
