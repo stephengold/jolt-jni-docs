@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -46,7 +46,7 @@ import groovy.transform.CompileStatic
  * <li>inertia (resistance to changes of motion),</li>
  * <li>dynamics (motion determined by forces, torques, and impulses),</li>
  * <li>gravity (continual downward force), and </li>
- * <li>contact response (avoid intersecting with other bodies).</li>
+ * <li>contact response (avoid intersecting other bodies).</li>
  * </ul>
  * <p>
  * Builds upon HelloSport.

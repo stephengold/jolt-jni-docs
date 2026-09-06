@@ -43,7 +43,7 @@ import com.github.stephengold.sportjolt.physics.BasePhysicsApp
  * <li>inertia (resistance to changes of motion),</li>
  * <li>dynamics (motion determined by forces, torques, and impulses),</li>
  * <li>gravity (continual downward force), and </li>
- * <li>contact response (avoid intersecting with other bodies).</li>
+ * <li>contact response (avoid intersecting other bodies).</li>
  * </ul>
  * <p>
  * Builds upon HelloSport.

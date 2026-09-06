@@ -35,7 +35,7 @@
  * + inertia (resistance to changes of motion),
  * + dynamics (motion determined by forces, torques, and impulses),
  * + gravity (continual downward force), and
- * + contact response (avoid intersecting with other bodies).
+ * + contact response (avoid intersecting bodies).
  *
  * Builds upon HelloSport.
  *
