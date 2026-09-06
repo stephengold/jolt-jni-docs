@@ -58,7 +58,9 @@
       BasePhysicsApp
       FunctionalPhysicsApp
     ]
-))
+  )
+  (:require [clojure.string :as str])
+)
 
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
@@ -100,6 +102,9 @@
 
   (assert (.isDynamic ball2))
   (def actualMass (/ 1. (.getInverseMass (.getMotionProperties ball2))))
+  (assert (< (Math/abs (- actualMass 2.)) 1.e-6)
+    (str/join "" ["actualMass = " (String/valueOf actualMass)])
+  )
 
   ; Apply an impulse to ball2 to put it on a collision course:
   (.addImpulse ball2 -25. 0. 0.)
