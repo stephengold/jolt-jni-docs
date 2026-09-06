@@ -2,7 +2,7 @@
 
 (def btf "DebugSp")
 (def joltjni "6.0.0")
-(def lwjgl "3.4.2")
+(def lwjgl "3.4.3")
 
 (defproject jolt-jni-clojure "0.1.0-SNAPSHOT"
   :aliases {
@@ -19,7 +19,7 @@
     [com.github.stephengold/jolt-jni-Windows64 ~joltjni :classifier ~btf]
     [com.github.stephengold/jolt-jni-Windows64_avx2 ~joltjni :classifier ~btf]
     [com.github.stephengold/jolt-jni-Windows_ARM64 ~joltjni :classifier ~btf]
-    [com.github.stephengold/sport-jolt "2.1.1"]
+    [com.github.stephengold/sport-jolt "2.1.2"]
     [org.clojure/clojure "1.12.6"]
     [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux"]
     [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux-arm32"]
