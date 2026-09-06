@@ -61,7 +61,9 @@ To run the Java version of the "HelloJoltJni" application:
    if you don't already have one.
 2. Install a [Leiningen build tool][leiningen].
 3. Download and extract the jolt-jni-docs source code from GitHub.
-4. `lein run`
+
+To run the Clojure version of the "HelloJoltJni" application:
+  + `lein HelloJoltJni`
 
 ### Antora documentation
 
