@@ -9,6 +9,7 @@
     "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
     "HelloRigidBody" ["run" "-m" "clojure.HelloRigidBody"]
     "HelloSport" ["run" "-m" "clojure.HelloSport"]
+    "HelloStaticBody" ["run" "-m" "clojure.HelloStaticBody"]
   }
   :dependencies [
     [com.github.stephengold/jolt-jni-Linux64 ~joltjni :classifier ~btf]
