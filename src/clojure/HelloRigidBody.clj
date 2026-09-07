@@ -122,7 +122,7 @@
   result
 )
 
-(defn -main "main entry point for the HelloSport application" [& arguments]
+(defn -main "main entry point for the HelloRigidBody application" [& arguments]
   (def fpa (FunctionalPhysicsApp.))
   (.setCreateSystem fpa createSystem)
   (.setInitialize fpa initialize)
