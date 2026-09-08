@@ -25,7 +25,7 @@
 ; OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 ; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-; HelloJoltJni class
+; HelloJoltJni application
 ;
 ; Drop a dynamic sphere onto a horizontal surface (non-graphical illustrative example).
 ;

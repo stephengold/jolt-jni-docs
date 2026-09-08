@@ -25,7 +25,7 @@
 ; OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 ; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-; HelloRigidBody class
+; HelloRigidBody application
 ;
 ; A simple example of 2 colliding balls, illustrating the 5 basic features of
 ; responsive, dynamic, rigid bodies:
