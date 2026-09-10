@@ -36,30 +36,25 @@
 (ns clojure.HelloKinematics
   (:gen-class)
   (:import
-    [com.github.stephengold.joltjni
-      Body
-      BodyCreationSettings
-      BodyInterface
-      PhysicsSystem
-      Quat
-      RVec3
-      SphereShape
-    ]
-    [com.github.stephengold.joltjni.enumerate
-      EActivation
-      EMotionType
-      EOverrideMassProperties
-    ]
-    [com.github.stephengold.sportjolt
-      BaseApplication
-      Constants
-    ]
-    [com.github.stephengold.sportjolt.physics
-      BasePhysicsApp
-      FunctionalPhysicsApp
-    ]
-    [java.lang Math]
-))
+   [com.github.stephengold.joltjni
+    Body
+    BodyCreationSettings
+    BodyInterface
+    PhysicsSystem
+    Quat
+    RVec3
+    SphereShape]
+   [com.github.stephengold.joltjni.enumerate
+    EActivation
+    EMotionType
+    EOverrideMassProperties]
+   [com.github.stephengold.sportjolt
+    BaseApplication
+    Constants]
+   [com.github.stephengold.sportjolt.physics
+    BasePhysicsApp
+    FunctionalPhysicsApp]
+   [java.lang Math]))
 
 ; fields
 (def kineBall) ; kinematic ball, orbiting the origin
@@ -71,14 +66,12 @@
   (def numBpLayers 1)
   (def result (.createSystem app maxBodies numBpLayers))
 
-  result
-)
+  result)
 
 ; Initialize the application. Invoked once.
 (defn initialize [app]
   (BaseApplication/setBackgroundColor Constants/SKY_BLUE)
-  (BaseApplication/setVsync true)
-)
+  (BaseApplication/setVsync true))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
@@ -108,8 +101,7 @@
 
   ; Visualize the shapes of both rigid bodies:
   (BasePhysicsApp/visualizeShape dynaBall)
-  (BasePhysicsApp/visualizeShape kineBall)
-)
+  (BasePhysicsApp/visualizeShape kineBall))
 
 ; Make the kinematic ball orbit the origin:
 (defn postPhysicsTick [app timeStep]
@@ -120,8 +112,7 @@
   (def x (* orbitRadius (Math/sin phaseAngle)))
   (def y (* orbitRadius (Math/cos phaseAngle)))
   (def location (RVec3. x y 0.))
-  (.moveKinematic kineBall location (Quat.) timeStep)
-)
+  (.moveKinematic kineBall location (Quat.) timeStep))
 
 (defn -main "main entry point for the HelloKinematics application" [& arguments]
   (def fpa (FunctionalPhysicsApp.))
@@ -129,5 +120,4 @@
   (.setInitialize fpa initialize)
   (.setPopulateSystem fpa populateSystem)
   (.setPostPhysicsTick fpa postPhysicsTick)
-  (.start fpa "HelloKinematics")
-)
+  (.start fpa "HelloKinematics"))

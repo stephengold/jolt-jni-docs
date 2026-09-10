@@ -36,24 +36,20 @@
 (ns clojure.HelloStaticBody
   (:gen-class)
   (:import
-    [com.github.stephengold.joltjni
-      Body
-      BodyCreationSettings
-      BodyInterface
-      PhysicsSystem
-      SphereShape
-    ]
-    [com.github.stephengold.joltjni.enumerate
-      EActivation
-      EMotionType
-      EOverrideMassProperties
-    ]
-    [com.github.stephengold.sportjolt BaseApplication]
-    [com.github.stephengold.sportjolt.physics
-      BasePhysicsApp
-      FunctionalPhysicsApp
-    ]
-))
+   [com.github.stephengold.joltjni
+    Body
+    BodyCreationSettings
+    BodyInterface
+    PhysicsSystem
+    SphereShape]
+   [com.github.stephengold.joltjni.enumerate
+    EActivation
+    EMotionType
+    EOverrideMassProperties]
+   [com.github.stephengold.sportjolt BaseApplication]
+   [com.github.stephengold.sportjolt.physics
+    BasePhysicsApp
+    FunctionalPhysicsApp]))
 
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
@@ -62,13 +58,11 @@
   (def numBpLayers 1)
   (def result (.createSystem app maxBodies numBpLayers))
 
-  result
-)
+  result)
 
 ; Initialize the application. Invoked once.
 (defn initialize [app]
-  (BaseApplication/setVsync true)
-)
+  (BaseApplication/setVsync true))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
@@ -99,13 +93,11 @@
 
   ; Visualize the shapes of both rigid bodies:
   (BasePhysicsApp/visualizeShape dynaBall)
-  (BasePhysicsApp/visualizeShape statBall)
-)
+  (BasePhysicsApp/visualizeShape statBall))
 
 (defn -main "main entry point for the HelloStaticBody application" [& arguments]
   (def fpa (FunctionalPhysicsApp.))
   (.setCreateSystem fpa createSystem)
   (.setInitialize fpa initialize)
   (.setPopulateSystem fpa populateSystem)
-  (.start fpa "HelloStaticBody")
-)
+  (.start fpa "HelloStaticBody"))

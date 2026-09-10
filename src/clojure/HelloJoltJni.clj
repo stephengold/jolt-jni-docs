@@ -1,4 +1,4 @@
-; Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+; Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 ;
 ; Redistribution and use in source and binary forms, with or without
 ; modification, are permitted provided that the following conditions are met:
@@ -34,37 +34,33 @@
 (ns clojure.HelloJoltJni
   (:gen-class)
   (:import
-    [com.github.stephengold.joltjni
-      BodyCreationSettings
-      BodyInterface
-      BroadPhaseLayerInterfaceTable
-      JobSystemThreadPool
-      Jolt
-      JoltPhysicsObject
-      ObjectLayerPairFilterTable
-      ObjectVsBroadPhaseLayerFilterTable
-      PhysicsSystem
-      Plane
-      PlaneShape
-      SphereShape
-      TempAllocatorMalloc
-      Vec3
-    ]
-    [com.github.stephengold.joltjni.enumerate
-      EActivation
-      EMotionType
-      EPhysicsUpdateError
-    ]
-    [electrostatic4j.snaploader
-      LibraryInfo
-      LoadingCriterion
-      NativeBinaryLoader
-    ]
-    [electrostatic4j.snaploader.filesystem DirectoryPath]
-    [electrostatic4j.snaploader.platform NativeDynamicLibrary]
-    [electrostatic4j.snaploader.platform.util PlatformPredicate]
-    [java.lang Runtime]
-))
+   [com.github.stephengold.joltjni
+    BodyCreationSettings
+    BodyInterface
+    BroadPhaseLayerInterfaceTable
+    JobSystemThreadPool
+    Jolt
+    JoltPhysicsObject
+    ObjectLayerPairFilterTable
+    ObjectVsBroadPhaseLayerFilterTable
+    PhysicsSystem
+    Plane
+    PlaneShape
+    SphereShape
+    TempAllocatorMalloc
+    Vec3]
+   [com.github.stephengold.joltjni.enumerate
+    EActivation
+    EMotionType
+    EPhysicsUpdateError]
+   [electrostatic4j.snaploader
+    LibraryInfo
+    LoadingCriterion
+    NativeBinaryLoader]
+   [electrostatic4j.snaploader.filesystem DirectoryPath]
+   [electrostatic4j.snaploader.platform NativeDynamicLibrary]
+   [electrostatic4j.snaploader.platform.util PlatformPredicate]
+   [java.lang Runtime]))
 
 ; constants
 (def numObjLayers 2) ; number of object layers
@@ -104,8 +100,7 @@
   (def maxBodyPairs 65536)
   (def maxContacts 20480)
   (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter)
-  result
-)
+  result)
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem []
@@ -130,20 +125,18 @@
   (.setObjectLayer bcs objLayerMoving)
   (.setShape bcs ballShape)
   (def ball (.createBody bi bcs))
-  (.addBody bi ball EActivation/Activate)
-)
+  (.addBody bi ball EActivation/Activate))
 
 (defn -main "main entry point for the HelloJoltJni application" [& arguments]
   (def info (LibraryInfo. nil "joltjni" DirectoryPath/USER_DIR))
   (def loader (NativeBinaryLoader. info))
-  (def libraries (into-array NativeDynamicLibrary [
-        (NativeDynamicLibrary. "linux/aarch64/com/github/stephengold" PlatformPredicate/LINUX_ARM_64)
-        (NativeDynamicLibrary. "linux/armhf/com/github/stephengold" PlatformPredicate/LINUX_ARM_32)
-        (NativeDynamicLibrary. "linux/x86-64/com/github/stephengold" PlatformPredicate/LINUX_X86_64)
-        (NativeDynamicLibrary. "osx/aarch64/com/github/stephengold" PlatformPredicate/MACOS_ARM_64)
-        (NativeDynamicLibrary. "osx/x86-64/com/github/stephengold" PlatformPredicate/MACOS_X86_64)
-        (NativeDynamicLibrary. "windows/aarch64/com/github/stephengold" PlatformPredicate/WIN_ARM_64)
-        (NativeDynamicLibrary. "windows/x86-64/com/github/stephengold" PlatformPredicate/WIN_X86_64)]))
+  (def libraries (into-array NativeDynamicLibrary [(NativeDynamicLibrary. "linux/aarch64/com/github/stephengold" PlatformPredicate/LINUX_ARM_64)
+                                                   (NativeDynamicLibrary. "linux/armhf/com/github/stephengold" PlatformPredicate/LINUX_ARM_32)
+                                                   (NativeDynamicLibrary. "linux/x86-64/com/github/stephengold" PlatformPredicate/LINUX_X86_64)
+                                                   (NativeDynamicLibrary. "osx/aarch64/com/github/stephengold" PlatformPredicate/MACOS_ARM_64)
+                                                   (NativeDynamicLibrary. "osx/x86-64/com/github/stephengold" PlatformPredicate/MACOS_X86_64)
+                                                   (NativeDynamicLibrary. "windows/aarch64/com/github/stephengold" PlatformPredicate/WIN_ARM_64)
+                                                   (NativeDynamicLibrary. "windows/x86-64/com/github/stephengold" PlatformPredicate/WIN_X86_64)]))
   (.initPlatformLibrary (.registerNativeLibraries loader libraries))
   (.loadLibrary loader LoadingCriterion/CLEAN_EXTRACTION)
 
@@ -165,10 +158,8 @@
   (def jobSystem (JobSystemThreadPool. Jolt/cMaxPhysicsJobs Jolt/cMaxPhysicsBarriers numWorkerThreads))
   (def timePerStep 0.02) ; seconds
   (dotimes [iteration 50] (do
-      (def collisionSteps 1)
-      (def errors (.update physicsSystem timePerStep collisionSteps tempAllocator jobSystem))
-      (assert (= errors EPhysicsUpdateError/None))
-      (def location (.getPosition ball))
-      (println (.toString location))
-  ))
-)
+                            (def collisionSteps 1)
+                            (def errors (.update physicsSystem timePerStep collisionSteps tempAllocator jobSystem))
+                            (assert (= errors EPhysicsUpdateError/None))
+                            (def location (.getPosition ball))
+                            (println (.toString location)))))

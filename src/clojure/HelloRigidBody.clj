@@ -42,25 +42,21 @@
 (ns clojure.HelloRigidBody
   (:gen-class)
   (:import
-    [com.github.stephengold.joltjni
-      Body
-      BodyCreationSettings
-      BodyInterface
-      PhysicsSystem
-      SphereShape
-    ]
-    [com.github.stephengold.joltjni.enumerate
-      EActivation
-      EOverrideMassProperties
-    ]
-    [com.github.stephengold.sportjolt BaseApplication]
-    [com.github.stephengold.sportjolt.physics
-      BasePhysicsApp
-      FunctionalPhysicsApp
-    ]
-  )
-  (:require [clojure.string :as str])
-)
+   [com.github.stephengold.joltjni
+    Body
+    BodyCreationSettings
+    BodyInterface
+    PhysicsSystem
+    SphereShape]
+   [com.github.stephengold.joltjni.enumerate
+    EActivation
+    EOverrideMassProperties]
+   [com.github.stephengold.sportjolt BaseApplication]
+   [com.github.stephengold.sportjolt.physics
+    BasePhysicsApp
+    FunctionalPhysicsApp])
+
+  (:require [clojure.string :as str]))
 
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
@@ -69,13 +65,11 @@
   (def numBpLayers 1)
   (def result (.createSystem app maxBodies numBpLayers))
 
-  result
-)
+  result)
 
 ; Initialize the application. Invoked once.
 (defn initialize [app]
-  (BaseApplication/setVsync true)
-)
+  (BaseApplication/setVsync true))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
@@ -103,24 +97,21 @@
   (assert (.isDynamic ball2))
   (def actualMass (/ 1. (.getInverseMass (.getMotionProperties ball2))))
   (assert (< (Math/abs (- actualMass 2.)) 1.e-6)
-    (str/join "" ["actualMass = " (String/valueOf actualMass)])
-  )
+          (str/join "" ["actualMass = " (String/valueOf actualMass)]))
 
-  ; Apply an impulse to ball2 to put it on a collision course:
+; Apply an impulse to ball2 to put it on a collision course:
   (.addImpulse ball2 -25. 0. 0.)
 
   ; Visualize the shapes of both rigid bodies:
   (BasePhysicsApp/visualizeShape ball1)
-  (BasePhysicsApp/visualizeShape ball2)
-)
+  (BasePhysicsApp/visualizeShape ball2))
 
 ; Advance the physics simulation by the specified amount.
 ; Invoked during each update.
 (defn advanceAmount [app wallClockSeconds]
   ; For clarity, simulate at 1/10th normal speed:
   (def result (* 0.1 wallClockSeconds))
-  result
-)
+  result)
 
 (defn -main "main entry point for the HelloRigidBody application" [& arguments]
   (def fpa (FunctionalPhysicsApp.))
@@ -128,5 +119,4 @@
   (.setInitialize fpa initialize)
   (.setPopulateSystem fpa populateSystem)
   (.setAdvanceAmount fpa advanceAmount)
-  (.start fpa "HelloRigidBody")
-)
+  (.start fpa "HelloRigidBody"))

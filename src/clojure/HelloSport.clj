@@ -37,27 +37,23 @@
 (ns clojure.HelloSport
   (:gen-class)
   (:import
-    [com.github.stephengold.joltjni
-      BodyCreationSettings
-      BroadPhaseLayerInterfaceTable
-      ObjectLayerPairFilterTable
-      ObjectVsBroadPhaseLayerFilterTable
-      PhysicsSystem
-      Plane
-      PlaneShape
-      SphereShape
-      Vec3
-    ]
-    [com.github.stephengold.joltjni.enumerate
-      EActivation
-      EMotionType
-    ]
-    [com.github.stephengold.sportjolt BaseApplication]
-    [com.github.stephengold.sportjolt.physics
-      BasePhysicsApp
-      FunctionalPhysicsApp
-    ]
-))
+   [com.github.stephengold.joltjni
+    BodyCreationSettings
+    BroadPhaseLayerInterfaceTable
+    ObjectLayerPairFilterTable
+    ObjectVsBroadPhaseLayerFilterTable
+    PhysicsSystem
+    Plane
+    PlaneShape
+    SphereShape
+    Vec3]
+   [com.github.stephengold.joltjni.enumerate
+    EActivation
+    EMotionType]
+   [com.github.stephengold.sportjolt BaseApplication]
+   [com.github.stephengold.sportjolt.physics
+    BasePhysicsApp
+    FunctionalPhysicsApp]))
 
 ; fields
 (def ball) ; falling rigid body
@@ -91,13 +87,11 @@
   (def maxBodyPairs 65536)
   (def maxContacts 20480)
   (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter)
-  result
-)
+  result)
 
 ; Initialize the application. Invoked once.
 (defn initialize [app]
-  (BaseApplication/setVsync true)
-)
+  (BaseApplication/setVsync true))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
@@ -127,13 +121,11 @@
 
   ; Visualize the shapes of both rigid bodies:
   (BasePhysicsApp/visualizeShape floor)
-  (BasePhysicsApp/visualizeShape ball)
-)
+  (BasePhysicsApp/visualizeShape ball))
 
 (defn -main "main entry point for the HelloSport application" [& arguments]
   (def fpa (FunctionalPhysicsApp.))
   (.setCreateSystem fpa createSystem)
   (.setInitialize fpa initialize)
   (.setPopulateSystem fpa populateSystem)
-  (.start fpa "HelloSport")
-)
+  (.start fpa "HelloSport"))
