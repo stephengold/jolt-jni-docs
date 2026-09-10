@@ -149,7 +149,7 @@ final public class HelloWalk {
                     .setSpecularColor(Constants.BLACK);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             // Update the character:
             float maxSeparation = 0.1f; // meters above the ground
             character.postSimulation(maxSeparation);
@@ -159,7 +159,7 @@ final public class HelloWalk {
             cam.setLocation(location);
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             Vec3 velocity = character.getLinearVelocity();
 
             // Clear any horizontal motion from the previous simulation step:

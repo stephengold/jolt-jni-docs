@@ -153,8 +153,9 @@ final public class HelloCharacterVirtual {
             BasePhysicsApp.visualizeShape(ground);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             // Update the character:
+            PhysicsSystem system = app.getPhysicsSystem();
             Vec3Arg gravity = system.getGravity();
             BroadPhaseLayerFilter bplFilter
                     = system.getDefaultBroadPhaseLayerFilter(
@@ -167,7 +168,7 @@ final public class HelloCharacterVirtual {
                     bplFilter, olFilter, allBodies, allShapes, tempAllocator);
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             Vec3 velocity = character.getLinearVelocity();
 
             // Apply gravity:

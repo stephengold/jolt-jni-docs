@@ -123,7 +123,7 @@ final public class HelloKinematics {
             BasePhysicsApp.visualizeShape(kineBall);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             // Make the kinematic ball orbit the origin:
             double orbitalPeriod = 0.8; // seconds
             double phaseAngle = 2. * BasePhysicsApp.totalSimulatedTime()

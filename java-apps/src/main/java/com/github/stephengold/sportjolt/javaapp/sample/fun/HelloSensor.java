@@ -199,13 +199,14 @@ final public class HelloSensor {
             addPlane(bi, groundY);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             // Update the character:
             float maxSeparation = 0.1f; // meters above the ground
             character.postSimulation(maxSeparation);
 
             if (hadContact) {
                 // Intruder detected! Pop the sensor bubble:
+                PhysicsSystem system = app.getPhysicsSystem();
                 BodyInterface bi = system.getBodyInterface();
                 int bodyId = sensor.getId();
                 bi.removeBody(bodyId);
@@ -213,7 +214,7 @@ final public class HelloSensor {
             }
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             Vec3 velocity = character.getLinearVelocity();
 
             // Clear any horizontal motion from the previous simulation step:

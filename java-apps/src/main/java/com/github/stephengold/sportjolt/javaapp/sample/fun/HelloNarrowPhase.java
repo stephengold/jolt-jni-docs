@@ -214,12 +214,13 @@ final public class HelloNarrowPhase {
             addPlane(bi, groundY);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             // Update the character:
             float maxSeparation = 0.1f; // meters above the ground
             character.postSimulation(maxSeparation);
 
             // Collect all movable bodies intersecting the ghost shape:
+            PhysicsSystem system = app.getPhysicsSystem();
             ConstNarrowPhaseQuery query = system.getNarrowPhaseQuery();
             Vec3Arg scale = Vec3.sOne();
             RMat44Arg transform = RMat44.sTranslation(ghostCenter.toRVec3());
@@ -239,7 +240,7 @@ final public class HelloNarrowPhase {
             }
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             Vec3 velocity = character.getLinearVelocity();
 
             // Clear any horizontal motion from the previous simulation step:

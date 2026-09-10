@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -137,11 +137,12 @@ final public class HelloDeactivation {
             BasePhysicsApp.visualizeShape(bottomBody);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             /*
              * Once the dynamic cube gets deactivated,
              * remove the support cube from the system:
              */
+            PhysicsSystem system = app.getPhysicsSystem();
             BodyInterface bi = system.getBodyInterface();
             int supportId = supportCube.getId();
             if (bi.isAdded(supportId) && !dynamicCube.isActive()) {

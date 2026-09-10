@@ -203,12 +203,13 @@ final public class HelloBroadPhase {
             addPlane(bi, groundY);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             // Update the character:
             float maxSeparation = 0.1f; // meters above the ground
             character.postSimulation(maxSeparation);
 
             // Collect all movable bodies with AABBs overlapping the ghost box:
+            PhysicsSystem system = app.getPhysicsSystem();
             ConstBroadPhaseQuery query = system.getBroadPhaseQuery();
             collector.reset();
             query.collideAaBox(
@@ -224,7 +225,7 @@ final public class HelloBroadPhase {
             }
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             Vec3 velocity = character.getLinearVelocity();
 
             // Clear any horizontal motion from the previous simulation step:

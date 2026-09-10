@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -126,13 +126,13 @@ final public class HelloCharacter {
             BasePhysicsApp.visualizeShape(ground);
         });
 
-        fpa.setPostPhysicsTick((app, system, timeStep) -> {
+        fpa.setPostPhysicsTick((app, timeStep) -> {
             // Update the character:
             float maxSeparation = 0.1f; // meters above the floor
             character.postSimulation(maxSeparation);
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             // If the character is supported, cause it to jump:
             if (character.isSupported()) {
                 character.setLinearVelocity(0f, 8f, 0f);

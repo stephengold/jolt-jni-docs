@@ -145,7 +145,7 @@ final public class HelloConstraint {
             new LocalAxisGeometry(rotor, axisIndex, axisLength);
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             // Relocate the kinematic ball based on the mouse location:
             RVec3Arg bodyLocation = Utils.toLocationVector(mouseLocation);
             kineBall.moveKinematic(bodyLocation, new Quat(), timeStep);

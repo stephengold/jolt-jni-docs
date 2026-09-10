@@ -146,7 +146,7 @@ final public class HelloPivot {
             new ConstraintGeometry(constraint, 2); // rotor is its 2nd end
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             // Relocate the kinematic ball based on the mouse location:
             RVec3Arg bodyLocation = Utils.toLocationVector(mouseLocation);
             kineBall.moveKinematic(bodyLocation, new Quat(), timeStep);

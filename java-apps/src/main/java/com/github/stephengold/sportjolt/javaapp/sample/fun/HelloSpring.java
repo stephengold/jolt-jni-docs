@@ -185,7 +185,7 @@ final public class HelloSpring {
             }
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             // Relocate the kinematic paddle based on the mouse location:
             float y = groundY + paddleHalfHeight;
             RVec3Arg bodyLocation

@@ -165,7 +165,7 @@ final public class HelloDoubleEnded {
             new ConstraintGeometry(constraint, 2); // ballBody is 2nd end
         });
 
-        fpa.setPrePhysicsTick((app, system, timeStep) -> {
+        fpa.setPrePhysicsTick((app, timeStep) -> {
             // Relocate the kinematic paddle based on the mouse location:
             Vec3Arg mouse = Utils.toJoltVector(mouseLocation);
             RVec3Arg bodyLocation

@@ -21,7 +21,7 @@
     [com.github.stephengold/jolt-jni-Windows64 ~joltjni :classifier ~btf]
     [com.github.stephengold/jolt-jni-Windows64_avx2 ~joltjni :classifier ~btf]
     [com.github.stephengold/jolt-jni-Windows_ARM64 ~joltjni :classifier ~btf]
-    [com.github.stephengold/sport-jolt "2.1.2"]
+    [com.github.stephengold/sport-jolt "3.0.0"]
     [org.clojure/clojure "1.12.6"]
     [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux"]
     [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux-arm32"]
