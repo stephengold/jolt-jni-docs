@@ -2,6 +2,8 @@
 
 set -e
 
+/usr/bin/lein cljfmt fix
+
 cd jython-apps
 
 /usr/bin/black .
