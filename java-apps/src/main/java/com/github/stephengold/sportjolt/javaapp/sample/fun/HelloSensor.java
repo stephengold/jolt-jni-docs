@@ -204,8 +204,7 @@ final public class HelloSensor {
             float maxSeparation = 0.1f; // meters above the ground
             character.postSimulation(maxSeparation);
 
-            if (hadContact) {
-                // Intruder detected! Pop the sensor bubble:
+            if (hadContact) { // Intruder detected! Pop the sensor bubble:
                 PhysicsSystem system = app.getPhysicsSystem();
                 BodyInterface bi = system.getBodyInterface();
                 int bodyId = sensor.getId();

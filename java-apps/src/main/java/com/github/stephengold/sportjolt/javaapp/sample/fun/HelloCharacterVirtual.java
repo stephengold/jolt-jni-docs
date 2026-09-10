@@ -160,9 +160,8 @@ final public class HelloCharacterVirtual {
             BroadPhaseLayerFilter bplFilter
                     = system.getDefaultBroadPhaseLayerFilter(
                             BasePhysicsApp.objLayerMoving);
-            ObjectLayerFilter olFilter
-                    = system.getDefaultLayerFilter(
-                            BasePhysicsApp.objLayerMoving);
+            ObjectLayerFilter olFilter = system.getDefaultLayerFilter(
+                    BasePhysicsApp.objLayerMoving);
             TempAllocator tempAllocator = app.getTempAllocator();
             character.extendedUpdate(timeStep, gravity, updateSettings,
                     bplFilter, olFilter, allBodies, allShapes, tempAllocator);

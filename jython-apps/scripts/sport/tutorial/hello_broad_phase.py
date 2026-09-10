@@ -142,8 +142,7 @@ class HelloBroadPhase(BasePhysicsApp, PhysicsTickListener):
 
         # Update the color of the ghost:
         num_hits = COLLECTOR.countHits()
-        if num_hits > 0:
-            # Intruder detected!
+        if num_hits > 0:  # Intruder detected!
             GHOST_GEOMETRY.setColor(Constants.RED)
         else:
             GHOST_GEOMETRY.setColor(Constants.YELLOW)

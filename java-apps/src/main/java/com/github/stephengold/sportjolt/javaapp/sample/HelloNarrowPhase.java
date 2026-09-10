@@ -263,8 +263,7 @@ final public class HelloNarrowPhase
 
         // Update the color of the ghost:
         int numHits = collector.countHits();
-        if (numHits > 0) {
-            // Intruder detected!
+        if (numHits > 0) { // Intruder detected!
             ghostGeometry.setColor(Constants.RED);
         } else {
             ghostGeometry.setColor(Constants.YELLOW);

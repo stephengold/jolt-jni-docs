@@ -241,8 +241,7 @@ class HelloNarrowPhase extends BasePhysicsApp, PhysicsTickListener {
 
         // Update the color of the ghost:
         val numHits = HelloNarrowPhase.collector.countHits
-        if (numHits > 0) {
-            // Intruder detected!
+        if (numHits > 0) { // Intruder detected!
             HelloNarrowPhase.ghostGeometry.setColor(Constants.RED)
         } else {
             HelloNarrowPhase.ghostGeometry.setColor(Constants.YELLOW)
