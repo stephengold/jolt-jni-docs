@@ -7,6 +7,7 @@
 (defproject jolt-jni-clojure "0.1.0-SNAPSHOT"
   :aliases {
     "HelloCcd" ["run" "-m" "clojure.HelloCcd"]
+    "HelloCharacter" ["run" "-m" "clojure.HelloCharacter"]
     "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
     "HelloKinematics" ["run" "-m" "clojure.HelloKinematics"]
     "HelloRigidBody" ["run" "-m" "clojure.HelloRigidBody"]
