@@ -55,7 +55,7 @@ object HelloRigidBody {
     // new methods exposed
 
     /**
-     * Main entry point for the HelloSport application.
+     * Main entry point for the HelloRigidBody application.
      *
      * @param arguments array of command-line arguments (not null)
      */
