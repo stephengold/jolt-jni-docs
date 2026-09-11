@@ -67,7 +67,7 @@
 (def objLayerMoving 0) ; object layer for moving objects
 (def objLayerNonMoving 1) ; object layer for non-moving objects
 
-; fields
+; variables
 (def physicsSystem) ; system to simulate
 
 ; Create the PhysicsSystem. Invoked once during initialization.
