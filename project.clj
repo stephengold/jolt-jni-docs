@@ -4,7 +4,7 @@
 (def joltjni "6.0.0")
 (def lwjgl "3.4.3")
 
-(defproject jolt-jni-clojure "0.1.0-SNAPSHOT"
+(defproject jolt-jni-docs "0.1.0-SNAPSHOT"
   :aliases {
     "HelloCcd" ["run" "-m" "clojure.HelloCcd"]
     "HelloCharacter" ["run" "-m" "clojure.HelloCharacter"]
