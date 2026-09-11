@@ -68,7 +68,6 @@
 (def objLayerNonMoving 1) ; object layer for non-moving objects
 
 ; fields
-(def ball) ; falling rigid body
 (def physicsSystem) ; system to simulate
 
 ; Create the PhysicsSystem. Invoked once during initialization.

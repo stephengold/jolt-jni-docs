@@ -56,9 +56,6 @@
     FunctionalPhysicsApp]
    [java.lang Math]))
 
-; fields
-(def kineBall) ; kinematic ball, orbiting the origin
-
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
   ; For simplicity, use a single broadphase layer:

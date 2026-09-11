@@ -55,9 +55,6 @@
     BasePhysicsApp
     FunctionalPhysicsApp]))
 
-; fields
-(def ball) ; falling rigid body
-
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
   ; For simplicity, use a single broadphase layer:
