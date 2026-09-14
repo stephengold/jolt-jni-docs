@@ -9,6 +9,7 @@
     "HelloCcd" ["run" "-m" "clojure.HelloCcd"]
     "HelloCharacter" ["run" "-m" "clojure.HelloCharacter"]
     "HelloCharacterVirtual" ["run" "-m" "clojure.HelloCharacterVirtual"]
+    "HelloDamping" ["run" "-m" "clojure.HelloDamping"]
     "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
     "HelloKinematics" ["run" "-m" "clojure.HelloKinematics"]
     "HelloRigidBody" ["run" "-m" "clojure.HelloRigidBody"]
