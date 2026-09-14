@@ -12,8 +12,9 @@ such as {url-enwiki}/Java_(programming_language)[Java],
 {url-enwiki}/Python_(programming_language)[Jython],
 {url-enwiki}/JavaScript[Nashorn],
 {url-enwiki}/Kotlin[Kotlin],
-{url-enwiki}/Apache_Groovy[Groovy], and
-{url-enwiki}/Scala_(programming_language)[Scala].
+{url-enwiki}/Apache_Groovy[Groovy],
+{url-enwiki}/Scala_(programming_language)[Scala], and 
+{url-enwiki}/Clojure[Clojure].
 
 Use it to:
 
