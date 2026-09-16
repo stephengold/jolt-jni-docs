@@ -14,4 +14,4 @@ echo
 
 echo
 ~/.local/bin/ruff --version
-~/.local/bin/ruff check --ignore E402,F821
+~/.local/bin/ruff check --ignore F821
