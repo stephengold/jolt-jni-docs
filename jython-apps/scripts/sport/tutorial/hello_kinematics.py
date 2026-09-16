@@ -109,7 +109,6 @@ class HelloKinematics(BasePhysicsApp, PhysicsTickListener):
         x = orbit_radius * math.sin(phase_angle)
         y = orbit_radius * math.cos(phase_angle)
         location = RVec3(x, y, 0.0)
-        global KINE_BALL
         KINE_BALL.moveKinematic(location, Quat(), time_step)
 
         ELAPSED_TIME += time_step

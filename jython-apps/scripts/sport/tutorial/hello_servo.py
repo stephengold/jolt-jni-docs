@@ -194,7 +194,6 @@ class AnonymousInputProcessor(InputProcessor):
             or glfw_key_id == GLFW.GLFW_KEY_KP_3
         ):
             if is_pressed:
-                global CONSTRAINT
                 target = Quat.sEulerAngles(0.0, 0.4, 0.0)
                 CONSTRAINT.setTargetOrientationCs(target)
             return
@@ -205,7 +204,6 @@ class AnonymousInputProcessor(InputProcessor):
             or glfw_key_id == GLFW.GLFW_KEY_KP_4
         ):
             if is_pressed:  # Target the fully closed position:
-                global CONSTRAINT
                 target = Quat()
                 CONSTRAINT.setTargetOrientationCs(target)
             return

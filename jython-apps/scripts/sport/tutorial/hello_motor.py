@@ -171,7 +171,6 @@ class AnonymousInputProcessor(InputProcessor):
     def onKeyboard(self, glfw_key_id, is_pressed):
         if glfw_key_id == GLFW.GLFW_KEY_SPACE:
             if is_pressed:  # Reverse the motor's direction:
-                global CONSTRAINT
                 target_velocity = CONSTRAINT.getTargetAngularVelocityCs()
                 if target_velocity.length() < 0.1:  # not moving
                     target_velocity = Vec3(0.0, 1.0, 0.0)
