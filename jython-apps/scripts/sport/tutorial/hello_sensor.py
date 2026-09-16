@@ -176,16 +176,15 @@ class HelloSensor(BasePhysicsApp, PhysicsTickListener):
         "Process a new contact point."
 
         ghost_va = SENSOR.va()
+        global HAD_CONTACT
         if body1_va == ghost_va:
             other = Body(system, body2_va)
             if not other.isStatic():
-                global HAD_CONTACT
                 HAD_CONTACT = True
 
         elif body2_va == ghost_va:
             other = Body(system, body1_va)
             if not other.isStatic():
-                global HAD_CONTACT
                 HAD_CONTACT = True
 
     def add_plane(self, y):
