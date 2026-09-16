@@ -30,7 +30,6 @@
 # Import an additional Java class:
 from org.joml import Vector3f
 
-
 # system Y coordinate of the ground plane
 GROUND_Y = -0.5
 
