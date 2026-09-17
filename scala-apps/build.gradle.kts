@@ -20,7 +20,22 @@ tasks.named<Jar>("jar") {
 }
 
 tasks.withType<ScalaCompile>().configureEach { // Scala compile-time options:
-    scalaCompileOptions.additionalParameters = listOf("-Wunused:all", "-Xtarget:17")
+    scalaCompileOptions.additionalParameters = listOf(
+        "-Wenum-comment-discard",
+        "-Werror",
+        "-Wimplausible-patterns",
+        "-Winfer-union",
+        "-Wnonunit-statement",
+        "-Wopt:all",
+        "-Wrecurse-with-default",
+        "-Wsafe-init",
+        "-Wshadow:all",
+        "-Wtostring-interpolated",
+        "-WunstableInlineAccessors",
+        "-Wunused:all",
+        "-Wwrong-arrow",
+        "-Xtarget:17"
+    )
 }
 
 application {
