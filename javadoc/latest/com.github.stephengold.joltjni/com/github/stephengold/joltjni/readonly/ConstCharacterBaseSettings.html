@@ -143,8 +143,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the supporting volume.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUp()" class="member-name-link">getUp</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupportingVolume(com.github.stephengold.joltjni.Plane)" class="member-name-link">getSupportingVolume</a><wbr>(<a href="../Plane.html" title="class in com.github.stephengold.joltjni">Plane</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the supporting volume.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUp()" class="member-name-link">getUp</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the character's "up" direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUp(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getUp</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the character's "up" direction.</div>
 </div>
@@ -228,6 +238,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getSupportingVolume(com.github.stephengold.joltjni.Plane)">
+<h3>getSupportingVolume</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getSupportingVolume</span><wbr><span class="parameters">(<a href="../Plane.html" title="class in com.github.stephengold.joltjni">Plane</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the supporting volume. The settings are unaffected. (native
+ attribute: mSupportingVolume)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the plane (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getUp()">
 <h3>getUp</h3>
 <div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getUp</span>()</div>
@@ -235,6 +257,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new direction vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUp(com.github.stephengold.joltjni.Vec3)">
+<h3>getUp</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getUp</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the character's "up" direction. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (in system coordinates, not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

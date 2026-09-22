@@ -143,8 +143,18 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the hinge axis for body 1.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHingeAxis2()" class="member-name-link">getHingeAxis2</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHingeAxis1(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getHingeAxis1</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the hinge axis for body 1.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHingeAxis2()" class="member-name-link">getHingeAxis2</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the hinge axis for body 2.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHingeAxis2(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getHingeAxis2</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the hinge axis for body 2.</div>
 </div>
@@ -164,9 +174,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the argument to the current settings.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHingeAxis1(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setHingeAxis1</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHingeAxis1(float,float,float)" class="member-name-link">setHingeAxis1</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the hinge axis for body 1.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHingeAxis1(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setHingeAxis1</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the hinge axis for body 1.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHingeAxis2(float,float,float)" class="member-name-link">setHingeAxis2</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the hinge axis for body 2.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHingeAxis2(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setHingeAxis2</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis)</code></div>
@@ -266,6 +290,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getHingeAxis1(com.github.stephengold.joltjni.Vec3)">
+<h3>getHingeAxis1</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getHingeAxis1</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the hinge axis for body 1. The settings are unaffected. (native
+ attribute: mHingeAxis1)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getHingeAxis2()">
 <h3>getHingeAxis2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getHingeAxis2</span>()</div>
@@ -274,6 +310,18 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getHingeAxis2(com.github.stephengold.joltjni.Vec3)">
+<h3>getHingeAxis2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getHingeAxis2</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the hinge axis for body 2. The settings are unaffected. (native
+ attribute: mHingeAxis2)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -312,6 +360,21 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setHingeAxis1(float,float,float)">
+<h3>setHingeAxis1</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHingeAxis1</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the hinge axis for body 1. (native attribute: mHingeAxis1)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X component of the direction (default=1)</dd>
+<dd><code>y</code> - the desired Y component of the direction (default=0)</dd>
+<dd><code>z</code> - the desired Z component of the direction (default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setHingeAxis1(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setHingeAxis1</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHingeAxis1</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;axis)</span></div>
@@ -319,6 +382,21 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>axis</code> - the desired direction vector (default=(1,0,0))</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setHingeAxis2(float,float,float)">
+<h3>setHingeAxis2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHingeAxis2</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the hinge axis for body 2. (native attribute: mHingeAxis2)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X component of the direction (default=1)</dd>
+<dd><code>y</code> - the desired Y component of the direction (default=0)</dd>
+<dd><code>z</code> - the desired Z component of the direction (default=0)</dd>
 </dl>
 </section>
 </li>

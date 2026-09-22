@@ -138,8 +138,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the location.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousPosition()" class="member-name-link">getPreviousPosition</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPosition(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getPosition</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousPosition()" class="member-name-link">getPreviousPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the previous location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousPosition(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getPreviousPosition</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the previous location.</div>
 </div>
@@ -148,9 +158,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the velocity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasContact()" class="member-name-link">hasContact</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVelocity(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getVelocity</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the velocity.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasContact()" class="member-name-link">hasContact</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Test whether the vertex collided during the previous update.</div>
 </div>
 </div>
@@ -229,6 +244,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getPosition(com.github.stephengold.joltjni.Vec3)">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getPosition</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location. The vertex is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (relative to the body's
+ center of mass, not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getPreviousPosition()">
 <h3>getPreviousPosition</h3>
 <div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getPreviousPosition</span>()</div>
@@ -236,6 +263,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new location vector (relative to the body's center of mass)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPreviousPosition(com.github.stephengold.joltjni.Vec3)">
+<h3>getPreviousPosition</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getPreviousPosition</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the previous location. The vertex is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (relative to the body's
+ center of mass, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -248,6 +287,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dt>Returns:</dt>
 <dd>a new velocity vector (relative to the body's center of mass, in
  meters per second)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVelocity(com.github.stephengold.joltjni.Vec3)">
+<h3>getVelocity</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getVelocity</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the velocity. The vertex is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the velocity (relative to the body's
+ center of mass, in meters per second, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

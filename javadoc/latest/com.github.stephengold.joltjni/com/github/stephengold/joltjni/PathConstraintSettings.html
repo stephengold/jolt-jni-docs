@@ -158,8 +158,18 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the starting location.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPathRotation()" class="member-name-link">getPathRotation</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPathPosition(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getPathPosition</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the starting location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPathRotation()" class="member-name-link">getPathRotation</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the initial rotation.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPathRotation(com.github.stephengold.joltjni.Quat)" class="member-name-link">getPathRotation</a><wbr>(<a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the initial rotation.</div>
 </div>
@@ -194,9 +204,24 @@ loadScripts(document, 'script');</script>
 <div class="block">Alter how far the body is along the path initially.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPathPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPathPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPathPosition(float,float,float)" class="member-name-link">setPathPosition</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the initial location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPathPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPathPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the initial location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPathRotation(float,float,float,float)" class="member-name-link">setPathRotation</a><wbr>(float&nbsp;qx,
+ float&nbsp;qy,
+ float&nbsp;qz,
+ float&nbsp;qw)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the initial orientation.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPathRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setPathRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;orientation)</code></div>
@@ -326,6 +351,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getPathPosition(com.github.stephengold.joltjni.Vec3)">
+<h3>getPathPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPathPosition</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the starting location. The settings are unaffected. (native field:
+ mPathPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getPathRotation()">
 <h3>getPathRotation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></span>&nbsp;<span class="element-name">getPathRotation</span>()</div>
@@ -334,6 +371,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new quaternion</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPathRotation(com.github.stephengold.joltjni.Quat)">
+<h3>getPathRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPathRotation</span><wbr><span class="parameters">(<a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the initial rotation. The path is unaffected. (native field:
+ mPathRotation)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the orientation (not <code>null</code>,
+ modified)</dd>
 </dl>
 </section>
 </li>
@@ -407,6 +457,21 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setPathPosition(float,float,float)">
+<h3>setPathPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPathPosition</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the initial location. (native field: mPathPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X coordinate (default=0)</dd>
+<dd><code>y</code> - the desired Y coordinate (default=0)</dd>
+<dd><code>z</code> - the desired Z coordinate (default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setPathPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setPathPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPathPosition</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</span></div>
@@ -415,6 +480,23 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>location</code> - the desired location (not <code>null</code>, unaffected,
  default=(0,0,0))</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPathRotation(float,float,float,float)">
+<h3>setPathRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPathRotation</span><wbr><span class="parameters">(float&nbsp;qx,
+ float&nbsp;qy,
+ float&nbsp;qz,
+ float&nbsp;qw)</span></div>
+<div class="block">Alter the initial orientation. (native field: mPathRotation)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>qx</code> - the X component of the desired orientation (default=0)</dd>
+<dd><code>qy</code> - the Y component of the desired orientation (default=0)</dd>
+<dd><code>qz</code> - the Z component of the desired orientation (default=0)</dd>
+<dd><code>qw</code> - the W component of the desired orientation (default=1)</dd>
 </dl>
 </section>
 </li>

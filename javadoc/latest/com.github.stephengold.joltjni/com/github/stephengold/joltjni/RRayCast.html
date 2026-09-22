@@ -110,9 +110,18 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">RRayCast</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;startLocation,
- <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double,double,float,float,float)" class="member-name-link">RRayCast</a><wbr>(double&nbsp;xx,
+ double&nbsp;yy,
+ double&nbsp;zz,
+ float&nbsp;dx,
+ float&nbsp;dy,
+ float&nbsp;dz)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Instantiate a ray cast with the specified endpoints.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">RRayCast</a><wbr>(<a href="readonly/RVec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">RVec3Arg</a>&nbsp;startLocation,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Instantiate a ray cast with the specified endpoints.</div>
 </div>
 </div>
@@ -164,6 +173,27 @@ loadScripts(document, 'script');</script>
 <section class="constructor-details" id="constructor-detail">
 <h2>Constructor Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;(double,double,double,float,float,float)">
+<h3>RRayCast</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RRayCast</span><wbr><span class="parameters">(double&nbsp;xx,
+ double&nbsp;yy,
+ double&nbsp;zz,
+ float&nbsp;dx,
+ float&nbsp;dy,
+ float&nbsp;dz)</span></div>
+<div class="block">Instantiate a ray cast with the specified endpoints.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xx</code> - the desired X coordinate of the start location</dd>
+<dd><code>yy</code> - the desired Y coordinate of the start location</dd>
+<dd><code>zz</code> - the desired Z coordinate of the start location</dd>
+<dd><code>dx</code> - the X component of the end offset from the start</dd>
+<dd><code>dy</code> - the Y component of the end offset from the start</dd>
+<dd><code>dz</code> - the Z component of the end offset from the start</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.RVec3Arg,com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>RRayCast</h3>

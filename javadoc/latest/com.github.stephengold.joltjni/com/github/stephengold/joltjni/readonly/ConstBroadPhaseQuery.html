@@ -198,6 +198,25 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect bodies whose bounding boxes intersect the specified oriented box.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collidePoint(float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">collidePoint</a><wbr>(float&nbsp;pointX,
+ float&nbsp;pointY,
+ float&nbsp;pointZ,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Collect bodies whose bounding boxes intersect the specified point.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collidePoint(float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)" class="member-name-link">collidePoint</a><wbr>(float&nbsp;pointX,
+ float&nbsp;pointY,
+ float&nbsp;pointZ,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter,
+ <a href="../ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Collect bodies whose bounding boxes intersect the specified point.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collidePoint(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.CollideShapeBodyCollector)" class="member-name-link">collidePoint</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point,
  <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -219,14 +238,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect bodies whose bounding boxes intersect the specified point.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.CollideShapeBodyCollector)" class="member-name-link">collideSphere</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;center,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(float,float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector)" class="member-name-link">collideSphere</a><wbr>(float&nbsp;centerX,
+ float&nbsp;centerY,
+ float&nbsp;centerZ,
  float&nbsp;radius,
  <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">collideSphere</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;center,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(float,float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">collideSphere</a><wbr>(float&nbsp;centerX,
+ float&nbsp;centerY,
+ float&nbsp;centerZ,
  float&nbsp;radius,
  <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
  <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter)</code></div>
@@ -234,12 +257,38 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)" class="member-name-link">collideSphere</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;center,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(float,float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)" class="member-name-link">collideSphere</a><wbr>(float&nbsp;centerX,
+ float&nbsp;centerY,
+ float&nbsp;centerZ,
  float&nbsp;radius,
  <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
  <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter,
  <a href="../ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.CollideShapeBodyCollector)" class="member-name-link">collideSphere</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;center,
+ float&nbsp;radius,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter)" class="member-name-link">collideSphere</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;center,
+ float&nbsp;radius,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collideSphere(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)" class="member-name-link">collideSphere</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;center,
+ float&nbsp;radius,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter,
+ <a href="../ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
 </div>
 </div>
@@ -455,6 +504,49 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="collidePoint(float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter)">
+<h3>collidePoint</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">collidePoint</span><wbr><span class="parameters">(float&nbsp;pointX,
+ float&nbsp;pointY,
+ float&nbsp;pointZ,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter)</span></div>
+<div class="block">Collect bodies whose bounding boxes intersect the specified point.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pointX</code> - the X coordinate of the location to test</dd>
+<dd><code>pointY</code> - the Y coordinate of the location to test</dd>
+<dd><code>pointZ</code> - the Z coordinate of the location to test</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="collidePoint(float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)">
+<h3>collidePoint</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">collidePoint</span><wbr><span class="parameters">(float&nbsp;pointX,
+ float&nbsp;pointY,
+ float&nbsp;pointZ,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter,
+ <a href="../ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter)</span></div>
+<div class="block">Collect bodies whose bounding boxes intersect the specified point.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pointX</code> - the X coordinate of the location to test</dd>
+<dd><code>pointY</code> - the Y coordinate of the location to test</dd>
+<dd><code>pointZ</code> - the Z coordinate of the location to test</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="collidePoint(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.CollideShapeBodyCollector)">
 <h3>collidePoint</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">collidePoint</span><wbr><span class="parameters">(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point,
@@ -494,6 +586,72 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>point</code> - the location to test (not <code>null</code>, unaffected)</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>olFilter</code> - the object-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="collideSphere(float,float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector)">
+<h3>collideSphere</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">collideSphere</span><wbr><span class="parameters">(float&nbsp;centerX,
+ float&nbsp;centerY,
+ float&nbsp;centerZ,
+ float&nbsp;radius,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector)</span></div>
+<div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>centerX</code> - the X coordinate of the sphere's center</dd>
+<dd><code>centerY</code> - the Y coordinate of the sphere's center</dd>
+<dd><code>centerZ</code> - the Z coordinate of the sphere's center</dd>
+<dd><code>radius</code> - the radius of the test sphere</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="collideSphere(float,float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter)">
+<h3>collideSphere</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">collideSphere</span><wbr><span class="parameters">(float&nbsp;centerX,
+ float&nbsp;centerY,
+ float&nbsp;centerZ,
+ float&nbsp;radius,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter)</span></div>
+<div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>centerX</code> - the X coordinate of the sphere's center</dd>
+<dd><code>centerY</code> - the Y coordinate of the sphere's center</dd>
+<dd><code>centerZ</code> - the Z coordinate of the sphere's center</dd>
+<dd><code>radius</code> - the radius of the test sphere</dd>
+<dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
+<dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="collideSphere(float,float,float,float,com.github.stephengold.joltjni.CollideShapeBodyCollector,com.github.stephengold.joltjni.BroadPhaseLayerFilter,com.github.stephengold.joltjni.ObjectLayerFilter)">
+<h3>collideSphere</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">collideSphere</span><wbr><span class="parameters">(float&nbsp;centerX,
+ float&nbsp;centerY,
+ float&nbsp;centerZ,
+ float&nbsp;radius,
+ <a href="../CollideShapeBodyCollector.html" title="class in com.github.stephengold.joltjni">CollideShapeBodyCollector</a>&nbsp;collector,
+ <a href="../BroadPhaseLayerFilter.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerFilter</a>&nbsp;bplFilter,
+ <a href="../ObjectLayerFilter.html" title="class in com.github.stephengold.joltjni">ObjectLayerFilter</a>&nbsp;olFilter)</span></div>
+<div class="block">Collect bodies whose bounding boxes intersect the specified test sphere.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>centerX</code> - the X coordinate of the sphere's center</dd>
+<dd><code>centerY</code> - the Y coordinate of the sphere's center</dd>
+<dd><code>centerZ</code> - the Z coordinate of the sphere's center</dd>
+<dd><code>radius</code> - the radius of the test sphere</dd>
 <dd><code>collector</code> - the hit collector to use (not <code>null</code>)</dd>
 <dd><code>bplFilter</code> - the broadphase-layer filter to apply (not <code>null</code>,
  unaffected)</dd>

@@ -115,6 +115,32 @@ implements <a href="readonly/ConstTriangle.html" title="interface in com.github.
 <div class="col-last even-row-color">
 <div class="block">Instantiate a default triangle.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float,float,float,float,float,float,float,float,float)" class="member-name-link">Triangle</a><wbr>(float&nbsp;v1x,
+ float&nbsp;v1y,
+ float&nbsp;v1z,
+ float&nbsp;v2x,
+ float&nbsp;v2y,
+ float&nbsp;v2z,
+ float&nbsp;v3x,
+ float&nbsp;v3y,
+ float&nbsp;v3z)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a triangle from component values.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(float,float,float,float,float,float,float,float,float,int,int)" class="member-name-link">Triangle</a><wbr>(float&nbsp;v1x,
+ float&nbsp;v1y,
+ float&nbsp;v1z,
+ float&nbsp;v2x,
+ float&nbsp;v2y,
+ float&nbsp;v2z,
+ float&nbsp;v3x,
+ float&nbsp;v3y,
+ float&nbsp;v3z,
+ int&nbsp;materialIndex,
+ int&nbsp;userData)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate the specified triangle.</div>
+</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3,com.github.stephengold.joltjni.readonly.ConstFloat3,com.github.stephengold.joltjni.readonly.ConstFloat3)" class="member-name-link">Triangle</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;v1,
  <a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;v2,
  <a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>&nbsp;v3)</code></div>
@@ -307,6 +333,64 @@ implements <a href="readonly/ConstTriangle.html" title="interface in com.github.
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>original</code> - the triangle to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(float,float,float,float,float,float,float,float,float)">
+<h3>Triangle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Triangle</span><wbr><span class="parameters">(float&nbsp;v1x,
+ float&nbsp;v1y,
+ float&nbsp;v1z,
+ float&nbsp;v2x,
+ float&nbsp;v2y,
+ float&nbsp;v2z,
+ float&nbsp;v3x,
+ float&nbsp;v3y,
+ float&nbsp;v3z)</span></div>
+<div class="block">Instantiate a triangle from component values.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>v1x</code> - the desired X coordinate of the first vertex</dd>
+<dd><code>v1y</code> - the desired Y coordinate of the first vertex</dd>
+<dd><code>v1z</code> - the desired Z coordinate of the first vertex</dd>
+<dd><code>v2x</code> - the desired X coordinate of the 2nd vertex</dd>
+<dd><code>v2y</code> - the desired Y coordinate of the 2nd vertex</dd>
+<dd><code>v2z</code> - the desired Z coordinate of the 2nd vertex</dd>
+<dd><code>v3x</code> - the desired X coordinate of the 3rd vertex</dd>
+<dd><code>v3y</code> - the desired Y coordinate of the 3rd vertex</dd>
+<dd><code>v3z</code> - the desired Z coordinate of the 3rd vertex</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(float,float,float,float,float,float,float,float,float,int,int)">
+<h3>Triangle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Triangle</span><wbr><span class="parameters">(float&nbsp;v1x,
+ float&nbsp;v1y,
+ float&nbsp;v1z,
+ float&nbsp;v2x,
+ float&nbsp;v2y,
+ float&nbsp;v2z,
+ float&nbsp;v3x,
+ float&nbsp;v3y,
+ float&nbsp;v3z,
+ int&nbsp;materialIndex,
+ int&nbsp;userData)</span></div>
+<div class="block">Instantiate the specified triangle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>v1x</code> - the desired X coordinate of the first vertex</dd>
+<dd><code>v1y</code> - the desired Y coordinate of the first vertex</dd>
+<dd><code>v1z</code> - the desired Z coordinate of the first vertex</dd>
+<dd><code>v2x</code> - the desired X coordinate of the 2nd vertex</dd>
+<dd><code>v2y</code> - the desired Y coordinate of the 2nd vertex</dd>
+<dd><code>v2z</code> - the desired Z coordinate of the 2nd vertex</dd>
+<dd><code>v3x</code> - the desired X coordinate of the 3rd vertex</dd>
+<dd><code>v3y</code> - the desired Y coordinate of the 3rd vertex</dd>
+<dd><code>v3z</code> - the desired Z coordinate of the 3rd vertex</dd>
+<dd><code>materialIndex</code> - the desired material index</dd>
+<dd><code>userData</code> - the desired user data</dd>
 </dl>
 </section>
 </li>

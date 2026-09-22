@@ -131,6 +131,22 @@ implements <a href="readonly/ConstBoxShapeSettings.html" title="interface in com
 <div class="col-last even-row-color">
 <div class="block">Instantiate a shape with the specified half extents.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float,float,float,float)" class="member-name-link">BoxShapeSettings</a><wbr>(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
+ float&nbsp;convexRadius)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate settings for the specified half extents and convex radius.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(float,float,float,float,com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)" class="member-name-link">BoxShapeSettings</a><wbr>(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
+ float&nbsp;convexRadius,
+ <a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a>&nbsp;material)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate settings for the specified half extents, convex radius, and
+ material.</div>
+</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstBoxShapeSettings)" class="member-name-link">BoxShapeSettings</a><wbr>(<a href="readonly/ConstBoxShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBoxShapeSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
@@ -176,14 +192,26 @@ implements <a href="readonly/ConstBoxShapeSettings.html" title="interface in com
 <div class="block">Copy the extent of the box.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstBoxShapeSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstBoxShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBoxShapeSettings</a>&nbsp;source)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHalfExtent(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getHalfExtent</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the argument to the current settings.</div>
+<div class="block">Copy the extent of the box.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setConvexRadius(float)" class="member-name-link">setConvexRadius</a><wbr>(float&nbsp;radius)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstBoxShapeSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstBoxShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBoxShapeSettings</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setConvexRadius(float)" class="member-name-link">setConvexRadius</a><wbr>(float&nbsp;radius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the convex radius.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHalfExtent(float,float,float)" class="member-name-link">setHalfExtent</a><wbr>(float&nbsp;hx,
+ float&nbsp;hy,
+ float&nbsp;hz)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the extent of the box.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHalfExtent(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setHalfExtent</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents)</code></div>
@@ -279,6 +307,44 @@ implements <a href="readonly/ConstBoxShapeSettings.html" title="interface in com
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(float,float,float,float)">
+<h3>BoxShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BoxShapeSettings</span><wbr><span class="parameters">(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
+ float&nbsp;convexRadius)</span></div>
+<div class="block">Instantiate settings for the specified half extents and convex radius.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xHalfExtent</code> - the desired half extent on the local X axis (&gt;0)</dd>
+<dd><code>yHalfExtent</code> - the desired half extent on the local Y axis (&gt;0)</dd>
+<dd><code>zHalfExtent</code> - the desired half extent on the local Z axis (&gt;0)</dd>
+<dd><code>convexRadius</code> - the desired convex radius (&ge;0, default=0.05)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(float,float,float,float,com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)">
+<h3>BoxShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BoxShapeSettings</span><wbr><span class="parameters">(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
+ float&nbsp;convexRadius,
+ <a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a>&nbsp;material)</span></div>
+<div class="block">Instantiate settings for the specified half extents, convex radius, and
+ material.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xHalfExtent</code> - the desired half extent on the local X axis (&gt;0)</dd>
+<dd><code>yHalfExtent</code> - the desired half extent on the local Y axis (&gt;0)</dd>
+<dd><code>zHalfExtent</code> - the desired half extent on the local Z axis (&gt;0)</dd>
+<dd><code>convexRadius</code> - the desired convex radius (&ge;0, default=0.05)</dd>
+<dd><code>material</code> - the desired surface properties (not <code>null</code>,
+ unaffected) or <code>null</code> for default properties (default=null)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>BoxShapeSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BoxShapeSettings</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents)</span></div>
@@ -353,6 +419,21 @@ implements <a href="readonly/ConstBoxShapeSettings.html" title="interface in com
 </section>
 </li>
 <li>
+<section class="detail" id="setHalfExtent(float,float,float)">
+<h3>setHalfExtent</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHalfExtent</span><wbr><span class="parameters">(float&nbsp;hx,
+ float&nbsp;hy,
+ float&nbsp;hz)</span></div>
+<div class="block">Alter the extent of the box. (native attribute: mHalfExtent)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>hx</code> - the desired half extent on the local X axis (&ge;0, default=0)</dd>
+<dd><code>hy</code> - the desired half extent on the local Y axis (&ge;0, default=0)</dd>
+<dd><code>hz</code> - the desired half extent on the local Z axis (&ge;0, default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setHalfExtent(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setHalfExtent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHalfExtent</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents)</span></div>
@@ -389,6 +470,21 @@ implements <a href="readonly/ConstBoxShapeSettings.html" title="interface in com
 <dd><code><a href="readonly/ConstBoxShapeSettings.html#getHalfExtent()">getHalfExtent</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBoxShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBoxShapeSettings</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new vector: one-half of the extent on each local axis</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getHalfExtent(com.github.stephengold.joltjni.Vec3)">
+<h3>getHalfExtent</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getHalfExtent</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the extent of the box. The settings are unaffected. (native
+ attribute: mHalfExtent)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstBoxShapeSettings.html#getHalfExtent(com.github.stephengold.joltjni.Vec3)">getHalfExtent</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstBoxShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstBoxShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the half extents (not <code>null</code>,
+ modified)</dd>
 </dl>
 </section>
 </li>

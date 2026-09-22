@@ -135,8 +135,18 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the wheel's lateral (sideways) direction.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactLongitudinal()" class="member-name-link">getContactLongitudinal</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactLateral(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getContactLateral</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the wheel's lateral (sideways) direction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactLongitudinal()" class="member-name-link">getContactLongitudinal</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the wheel's longitudinal direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactLongitudinal(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getContactLongitudinal</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the wheel's longitudinal direction.</div>
 </div>
@@ -145,8 +155,18 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the contact normal direction.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactPointVelocity()" class="member-name-link">getContactPointVelocity</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactNormal(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getContactNormal</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the contact normal direction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactPointVelocity()" class="member-name-link">getContactPointVelocity</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the velocity of the contact point.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactPointVelocity(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getContactPointVelocity</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the velocity of the contact point.</div>
 </div>
@@ -155,55 +175,60 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location of the contact point.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactSubShapeId()" class="member-name-link">getContactSubShapeId</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactPosition(com.github.stephengold.joltjni.RVec3)" class="member-name-link">getContactPosition</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the contact point.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactSubShapeId()" class="member-name-link">getContactSubShapeId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return ID of the sub-shape that's supporting the vehicle.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLateralLambda()" class="member-name-link">getLateralLambda</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLateralLambda()" class="member-name-link">getLateralLambda</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the lateral (sideways) component of the impulse applied to the
  wheel.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLongitudinalLambda()" class="member-name-link">getLongitudinalLambda</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLongitudinalLambda()" class="member-name-link">getLongitudinalLambda</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the forward component of the impulse applied to the wheel.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotationAngle()" class="member-name-link">getRotationAngle</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotationAngle()" class="member-name-link">getRotationAngle</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the wheel's rotation angle.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSettings()" class="member-name-link">getSettings</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstWheelSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheelSettings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSettings()" class="member-name-link">getSettings</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the settings used to create this wheel.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSteerAngle()" class="member-name-link">getSteerAngle</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSteerAngle()" class="member-name-link">getSteerAngle</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the steering angle.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionLambda()" class="member-name-link">getSuspensionLambda</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionLambda()" class="member-name-link">getSuspensionLambda</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the total impulse applied to the suspension.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionLength()" class="member-name-link">getSuspensionLength</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuspensionLength()" class="member-name-link">getSuspensionLength</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the length of the suspension.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasContact()" class="member-name-link">hasContact</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasContact()" class="member-name-link">hasContact</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the wheel is supported.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasHitHardPoint()" class="member-name-link">hasHitHardPoint</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasHitHardPoint()" class="member-name-link">hasHitHardPoint</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the suspension has hit its hard point.</div>
 </div>
 </div>
@@ -274,6 +299,20 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getContactLateral(com.github.stephengold.joltjni.Vec3)">
+<h3>getContactLateral</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getContactLateral</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the wheel's lateral (sideways) direction.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactLateral(com.github.stephengold.joltjni.Vec3)">getContactLateral</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (in system coordinates, not
+ <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getContactLongitudinal()">
 <h3>getContactLongitudinal</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getContactLongitudinal</span>()</div>
@@ -283,6 +322,20 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 <dd><code><a href="readonly/ConstWheel.html#getContactLongitudinal()">getContactLongitudinal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new direction vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactLongitudinal(com.github.stephengold.joltjni.Vec3)">
+<h3>getContactLongitudinal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getContactLongitudinal</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the wheel's longitudinal direction.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactLongitudinal(com.github.stephengold.joltjni.Vec3)">getContactLongitudinal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (in system coordinates, not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -300,6 +353,20 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getContactNormal(com.github.stephengold.joltjni.Vec3)">
+<h3>getContactNormal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getContactNormal</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the contact normal direction.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactNormal(com.github.stephengold.joltjni.Vec3)">getContactNormal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (in system coordinates, not
+ <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getContactPointVelocity()">
 <h3>getContactPointVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getContactPointVelocity</span>()</div>
@@ -313,6 +380,20 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getContactPointVelocity(com.github.stephengold.joltjni.Vec3)">
+<h3>getContactPointVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getContactPointVelocity</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the velocity of the contact point.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactPointVelocity(com.github.stephengold.joltjni.Vec3)">getContactPointVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the velocity (meters per second in system
+ coordinates, not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getContactPosition()">
 <h3>getContactPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">getContactPosition</span>()</div>
@@ -322,6 +403,20 @@ implements <a href="readonly/ConstWheel.html" title="interface in com.github.ste
 <dd><code><a href="readonly/ConstWheel.html#getContactPosition()">getContactPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new location vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContactPosition(com.github.stephengold.joltjni.RVec3)">
+<h3>getContactPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getContactPosition</span><wbr><span class="parameters">(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location of the contact point.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstWheel.html#getContactPosition(com.github.stephengold.joltjni.RVec3)">getContactPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstWheel.html" title="interface in com.github.stephengold.joltjni.readonly">ConstWheel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (in system coordinates, not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

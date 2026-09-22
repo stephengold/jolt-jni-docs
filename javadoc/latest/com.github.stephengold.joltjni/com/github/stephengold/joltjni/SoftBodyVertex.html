@@ -159,8 +159,18 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousPosition()" class="member-name-link">getPreviousPosition</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getPosition</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousPosition()" class="member-name-link">getPreviousPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the previous location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousPosition(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getPreviousPosition</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the previous location.</div>
 </div>
@@ -169,45 +179,57 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the velocity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasContact()" class="member-name-link">hasContact</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVelocity(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getVelocity</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the velocity.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasContact()" class="member-name-link">hasContact</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether the vertex collided during the previous update.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetCollision()" class="member-name-link">resetCollision</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetCollision()" class="member-name-link">resetCollision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reset the collision data.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstSoftBodyVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a>&nbsp;source)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstSoftBodyVertex)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstSoftBodyVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the argument to the current settings.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollidingShapeIndex(int)" class="member-name-link">setCollidingShapeIndex</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollidingShapeIndex(int)" class="member-name-link">setCollidingShapeIndex</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the index of the colliding shape.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollisionPlane(com.github.stephengold.joltjni.readonly.ConstPlane)" class="member-name-link">setCollisionPlane</a><wbr>(<a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a>&nbsp;plane)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollisionPlane(com.github.stephengold.joltjni.readonly.ConstPlane)" class="member-name-link">setCollisionPlane</a><wbr>(<a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a>&nbsp;plane)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the collision plane.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHasContact(boolean)" class="member-name-link">setHasContact</a><wbr>(boolean&nbsp;setting)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHasContact(boolean)" class="member-name-link">setHasContact</a><wbr>(boolean&nbsp;setting)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the "has contact" flag.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvMass(float)" class="member-name-link">setInvMass</a><wbr>(float&nbsp;invMass)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvMass(float)" class="member-name-link">setInvMass</a><wbr>(float&nbsp;invMass)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the inverse mass.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLargestPenetration(float)" class="member-name-link">setLargestPenetration</a><wbr>(float&nbsp;penetration)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLargestPenetration(float)" class="member-name-link">setLargestPenetration</a><wbr>(float&nbsp;penetration)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the amount of penetration.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(float,float,float)" class="member-name-link">setPosition</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Relocate the vertex.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
@@ -215,9 +237,23 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 <div class="block">Relocate the vertex.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPreviousPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousPosition(float,float,float)" class="member-name-link">setPreviousPosition</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the previous location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setPreviousPosition</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the previous location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(float,float,float)" class="member-name-link">setVelocity</a><wbr>(float&nbsp;vx,
+ float&nbsp;vy,
+ float&nbsp;vz)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the velocity of the vertex.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</code></div>
@@ -351,6 +387,21 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 </section>
 </li>
 <li>
+<section class="detail" id="setPosition(float,float,float)">
+<h3>setPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Relocate the vertex. (native attribute: mPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X coordinate (relative to the body's center of mass)</dd>
+<dd><code>y</code> - the desired Y coordinate (relative to the body's center of mass)</dd>
+<dd><code>z</code> - the desired Z coordinate (relative to the body's center of mass)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setPosition(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</span></div>
@@ -358,6 +409,21 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>location</code> - the desired location (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPreviousPosition(float,float,float)">
+<h3>setPreviousPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPreviousPosition</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the previous location. (native attribute: mPreviousPosition)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X coordinate (relative to the body's center of mass)</dd>
+<dd><code>y</code> - the desired Y coordinate (relative to the body's center of mass)</dd>
+<dd><code>z</code> - the desired Z coordinate (relative to the body's center of mass)</dd>
 </dl>
 </section>
 </li>
@@ -370,6 +436,21 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 <dt>Parameters:</dt>
 <dd><code>location</code> - the desired previous location (not <code>null</code>,
  unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVelocity(float,float,float)">
+<h3>setVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVelocity</span><wbr><span class="parameters">(float&nbsp;vx,
+ float&nbsp;vy,
+ float&nbsp;vz)</span></div>
+<div class="block">Alter the velocity of the vertex. (native attribute: mVelocity)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>vx</code> - the desired X component of the velocity (meters per second)</dd>
+<dd><code>vy</code> - the desired Y component of the velocity (meters per second)</dd>
+<dd><code>vz</code> - the desired Z component of the velocity (meters per second)</dd>
 </dl>
 </section>
 </li>
@@ -456,6 +537,21 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 </section>
 </li>
 <li>
+<section class="detail" id="getPosition(com.github.stephengold.joltjni.Vec3)">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPosition</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location. The vertex is unaffected. (native attribute:
+ mPosition)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyVertex.html#getPosition(com.github.stephengold.joltjni.Vec3)">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (relative to the body's
+ center of mass, not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getPreviousPosition()">
 <h3>getPreviousPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getPreviousPosition</span>()</div>
@@ -466,6 +562,21 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 <dd><code><a href="readonly/ConstSoftBodyVertex.html#getPreviousPosition()">getPreviousPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new location vector (relative to the body's center of mass)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPreviousPosition(com.github.stephengold.joltjni.Vec3)">
+<h3>getPreviousPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPreviousPosition</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the previous location. The vertex is unaffected. (native attribute:
+ mPreviousPosition)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyVertex.html#getPreviousPosition(com.github.stephengold.joltjni.Vec3)">getPreviousPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (relative to the body's
+ center of mass, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -481,6 +592,21 @@ implements <a href="readonly/ConstSoftBodyVertex.html" title="interface in com.g
 <dt>Returns:</dt>
 <dd>a new velocity vector (relative to the body's center of mass, in
  meters per second)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVelocity(com.github.stephengold.joltjni.Vec3)">
+<h3>getVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getVelocity</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the velocity. The vertex is unaffected. (native attribute:
+ mVelocity)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstSoftBodyVertex.html#getVelocity(com.github.stephengold.joltjni.Vec3)">getVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstSoftBodyVertex.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSoftBodyVertex</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the velocity (relative to the body's
+ center of mass, in meters per second, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

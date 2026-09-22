@@ -120,8 +120,18 @@ implements <a href="readonly/ConstJointState.html" title="interface in com.githu
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the rotation.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTranslation()" class="member-name-link">getTranslation</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation(com.github.stephengold.joltjni.Quat)" class="member-name-link">getRotation</a><wbr>(<a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the rotation.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTranslation()" class="member-name-link">getTranslation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the translation offset.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTranslation(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getTranslation</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the translation offset.</div>
 </div>
@@ -131,9 +141,24 @@ implements <a href="readonly/ConstJointState.html" title="interface in com.githu
 <div class="block">Copy both components from the argument.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(float,float,float,float)" class="member-name-link">setRotation</a><wbr>(float&nbsp;qx,
+ float&nbsp;qy,
+ float&nbsp;qz,
+ float&nbsp;qw)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the rotation component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setRotation</a><wbr>(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the rotation component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTranslation(float,float,float)" class="member-name-link">setTranslation</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the translation offset component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTranslation(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setTranslation</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
@@ -178,6 +203,23 @@ implements <a href="readonly/ConstJointState.html" title="interface in com.githu
 </section>
 </li>
 <li>
+<section class="detail" id="setRotation(float,float,float,float)">
+<h3>setRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRotation</span><wbr><span class="parameters">(float&nbsp;qx,
+ float&nbsp;qy,
+ float&nbsp;qz,
+ float&nbsp;qw)</span></div>
+<div class="block">Alter the rotation component. (native attribute: mRotation)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>qx</code> - the X component of the desired rotation (default=0)</dd>
+<dd><code>qy</code> - the Y component of the desired rotation (default=0)</dd>
+<dd><code>qz</code> - the Z component of the desired rotation (default=0)</dd>
+<dd><code>qw</code> - the W component of the desired rotation (default=1)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setRotation(com.github.stephengold.joltjni.readonly.QuatArg)">
 <h3>setRotation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRotation</span><wbr><span class="parameters">(<a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</span></div>
@@ -186,6 +228,21 @@ implements <a href="readonly/ConstJointState.html" title="interface in com.githu
 <dt>Parameters:</dt>
 <dd><code>rotation</code> - the desired rotation (not <code>null</code>, unaffected,
  default=(0,0,0,1))</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTranslation(float,float,float)">
+<h3>setTranslation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTranslation</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the translation offset component. (native attribute: mTranslation)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the desired X offset (default=0)</dd>
+<dd><code>y</code> - the desired Y offset (default=0)</dd>
+<dd><code>z</code> - the desired Z offset (default=0)</dd>
 </dl>
 </section>
 </li>
@@ -215,6 +272,19 @@ implements <a href="readonly/ConstJointState.html" title="interface in com.githu
 </section>
 </li>
 <li>
+<section class="detail" id="getRotation(com.github.stephengold.joltjni.Quat)">
+<h3>getRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getRotation</span><wbr><span class="parameters">(<a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the rotation. The state is unaffected. (native attribute: mRotation)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstJointState.html#getRotation(com.github.stephengold.joltjni.Quat)">getRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the rotation (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getTranslation()">
 <h3>getTranslation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getTranslation</span>()</div>
@@ -225,6 +295,20 @@ implements <a href="readonly/ConstJointState.html" title="interface in com.githu
 <dd><code><a href="readonly/ConstJointState.html#getTranslation()">getTranslation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new offset vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTranslation(com.github.stephengold.joltjni.Vec3)">
+<h3>getTranslation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getTranslation</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the translation offset. The state is unaffected. (native attribute:
+ mTranslation)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstJointState.html#getTranslation(com.github.stephengold.joltjni.Vec3)">getTranslation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstJointState.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJointState</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the offset (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

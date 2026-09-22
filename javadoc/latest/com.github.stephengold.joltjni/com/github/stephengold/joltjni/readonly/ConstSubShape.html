@@ -124,8 +124,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the center-of-mass location.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRotation()" class="member-name-link">getRotation</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPositionCom(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getPositionCom</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the center-of-mass location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRotation()" class="member-name-link">getRotation</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the rotation.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRotation(com.github.stephengold.joltjni.Quat)" class="member-name-link">getRotation</a><wbr>(<a href="../Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the rotation.</div>
 </div>
@@ -192,6 +202,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getPositionCom(com.github.stephengold.joltjni.Vec3)">
+<h3>getPositionCom</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getPositionCom</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the center-of-mass location. The sub-shape is unaffected. (native
+ function: GetPositionCOM)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getRotation()">
 <h3>getRotation</h3>
 <div class="member-signature"><span class="return-type"><a href="../Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></span>&nbsp;<span class="element-name">getRotation</span>()</div>
@@ -199,6 +221,17 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new rotation quaternion</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRotation(com.github.stephengold.joltjni.Quat)">
+<h3>getRotation</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getRotation</span><wbr><span class="parameters">(<a href="../Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the rotation. The sub-shape is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the rotation (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

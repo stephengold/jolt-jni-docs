@@ -128,23 +128,33 @@ extends <a href="ConstConstraintSettings.html" title="interface in com.github.st
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the "forward" vector.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxPitchRollAngle()" class="member-name-link">getMaxPitchRollAngle</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getForward(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getForward</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the "forward" vector.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxPitchRollAngle()" class="member-name-link">getMaxPitchRollAngle</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the vehicle's maximum pitch/roll angle.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumAntiRollBars()" class="member-name-link">getNumAntiRollBars</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumAntiRollBars()" class="member-name-link">getNumAntiRollBars</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Count the anti-roll bars.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumWheels()" class="member-name-link">getNumWheels</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumWheels()" class="member-name-link">getNumWheels</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Count the wheels.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUp()" class="member-name-link">getUp</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUp()" class="member-name-link">getUp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the "up" vector.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUp(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getUp</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the "up" vector.</div>
 </div>
@@ -222,6 +232,17 @@ extends <a href="ConstConstraintSettings.html" title="interface in com.github.st
 </section>
 </li>
 <li>
+<section class="detail" id="getForward(com.github.stephengold.joltjni.Vec3)">
+<h3>getForward</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getForward</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the "forward" vector. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getMaxPitchRollAngle()">
 <h3>getMaxPitchRollAngle</h3>
 <div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getMaxPitchRollAngle</span>()</div>
@@ -263,6 +284,17 @@ extends <a href="ConstConstraintSettings.html" title="interface in com.github.st
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUp(com.github.stephengold.joltjni.Vec3)">
+<h3>getUp</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getUp</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the "up" vector. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>

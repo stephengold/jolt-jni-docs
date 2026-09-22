@@ -116,29 +116,50 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(float)" class="member-name-link">BoxShape</a><wbr>(float&nbsp;halfExtent)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double,double)" class="member-name-link">BoxShape</a><wbr>(double&nbsp;xHalfExtent,
+ double&nbsp;yHalfExtent,
+ double&nbsp;zHalfExtent)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Instantiate a shape with the specified half extents.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float)" class="member-name-link">BoxShape</a><wbr>(float&nbsp;halfExtent)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Instantiate a cubic shape with the specified half extents.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float,float,float)" class="member-name-link">BoxShape</a><wbr>(float&nbsp;xHalfExtent,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(float,float,float)" class="member-name-link">BoxShape</a><wbr>(float&nbsp;xHalfExtent,
  float&nbsp;yHalfExtent,
  float&nbsp;zHalfExtent)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Instantiate a shape with the specified half extents.</div>
-</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">BoxShape</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate a shape with the specified half extents.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">BoxShape</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(float,float,float,float)" class="member-name-link">BoxShape</a><wbr>(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
  float&nbsp;convexRadius)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a shape with the specified half extents and convex radius.</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)" class="member-name-link">BoxShape</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(float,float,float,float,com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)" class="member-name-link">BoxShape</a><wbr>(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
  float&nbsp;convexRadius,
  <a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a>&nbsp;material)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Instantiate a shape with the specified parameters.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">BoxShape</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a shape with the specified half extents.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg,float)" class="member-name-link">BoxShape</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents,
+ float&nbsp;convexRadius)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a shape with the specified half extents and convex radius.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.Vec3Arg,float,com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)" class="member-name-link">BoxShape</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;halfExtents,
+ float&nbsp;convexRadius,
+ <a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a>&nbsp;material)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Instantiate a shape with the specified parameters.</div>
 </div>
 </div>
@@ -201,6 +222,21 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="&lt;init&gt;(double,double,double)">
+<h3>BoxShape</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BoxShape</span><wbr><span class="parameters">(double&nbsp;xHalfExtent,
+ double&nbsp;yHalfExtent,
+ double&nbsp;zHalfExtent)</span></div>
+<div class="block">Instantiate a shape with the specified half extents.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xHalfExtent</code> - the desired half extent on the local X axis (&gt;0)</dd>
+<dd><code>yHalfExtent</code> - the desired half extent on the local Y axis (&gt;0)</dd>
+<dd><code>zHalfExtent</code> - the desired half extent on the local Z axis (&gt;0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(float)">
 <h3>BoxShape</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BoxShape</span><wbr><span class="parameters">(float&nbsp;halfExtent)</span></div>
@@ -223,6 +259,42 @@ loadScripts(document, 'script');</script>
 <dd><code>xHalfExtent</code> - the desired half extent on the local X axis (&gt;0)</dd>
 <dd><code>yHalfExtent</code> - the desired half extent on the local Y axis (&gt;0)</dd>
 <dd><code>zHalfExtent</code> - the desired half extent on the local Z axis (&gt;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(float,float,float,float)">
+<h3>BoxShape</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BoxShape</span><wbr><span class="parameters">(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
+ float&nbsp;convexRadius)</span></div>
+<div class="block">Instantiate a shape with the specified half extents and convex radius.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xHalfExtent</code> - the desired half extent on the local X axis (&gt;0)</dd>
+<dd><code>yHalfExtent</code> - the desired half extent on the local Y axis (&gt;0)</dd>
+<dd><code>zHalfExtent</code> - the desired half extent on the local Z axis (&gt;0)</dd>
+<dd><code>convexRadius</code> - the desired convex radius (default=0.05)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(float,float,float,float,com.github.stephengold.joltjni.readonly.ConstPhysicsMaterial)">
+<h3>BoxShape</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BoxShape</span><wbr><span class="parameters">(float&nbsp;xHalfExtent,
+ float&nbsp;yHalfExtent,
+ float&nbsp;zHalfExtent,
+ float&nbsp;convexRadius,
+ <a href="readonly/ConstPhysicsMaterial.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPhysicsMaterial</a>&nbsp;material)</span></div>
+<div class="block">Instantiate a shape with the specified parameters.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>xHalfExtent</code> - the desired half extent on the local X axis (&gt;0)</dd>
+<dd><code>yHalfExtent</code> - the desired half extent on the local Y axis (&gt;0)</dd>
+<dd><code>zHalfExtent</code> - the desired half extent on the local Z axis (&gt;0)</dd>
+<dd><code>convexRadius</code> - the desired convex radius (default=0.05)</dd>
+<dd><code>material</code> - the desired material (default=null)</dd>
 </dl>
 </section>
 </li>

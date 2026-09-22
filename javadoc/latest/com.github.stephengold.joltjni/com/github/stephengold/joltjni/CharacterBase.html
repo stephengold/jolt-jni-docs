@@ -141,8 +141,19 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 <div class="block">Copy the normal direction at the point of contact with the supporting
  surface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundPosition()" class="member-name-link">getGroundPosition</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundNormal(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getGroundNormal</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the normal direction at the point of contact with the supporting
+ surface.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundPosition()" class="member-name-link">getGroundPosition</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the point of contact with the supporting surface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundPosition(com.github.stephengold.joltjni.RVec3)" class="member-name-link">getGroundPosition</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location of the point of contact with the supporting surface.</div>
 </div>
@@ -166,23 +177,33 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the world-space velocity of the supporting surface.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundVelocity(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getGroundVelocity</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the world-space velocity of the supporting surface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the active references to the native <code>CharacterBase</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape()" class="member-name-link">getShape</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape()" class="member-name-link">getShape</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the character's shape.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape(com.github.stephengold.joltjni.ShapeRefC)" class="member-name-link">getShape</a><wbr>(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;storeRef)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape(com.github.stephengold.joltjni.ShapeRefC)" class="member-name-link">getShape</a><wbr>(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;storeRef)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Update the specified counted reference to refer to the character's shape.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportingVolume()" class="member-name-link">getSupportingVolume</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportingVolume()" class="member-name-link">getSupportingVolume</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the supporting volume.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportingVolume(com.github.stephengold.joltjni.Plane)" class="member-name-link">getSupportingVolume</a><wbr>(<a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the supporting volume.</div>
 </div>
@@ -190,6 +211,18 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUp()" class="member-name-link">getUp</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the character's "up" direction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUp(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getUp</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the character's "up" direction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSlopeTooSteep(float,float,float)" class="member-name-link">isSlopeTooSteep</a><wbr>(float&nbsp;nx,
+ float&nbsp;ny,
+ float&nbsp;nz)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether the specified normal direction is too steep.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">isSlopeTooSteep</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;normal)</code></div>
@@ -222,9 +255,24 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 <div class="block">Alter the maximum slope that the character can walk on.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSupportingVolume(com.github.stephengold.joltjni.readonly.ConstPlane)" class="member-name-link">setSupportingVolume</a><wbr>(<a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a>&nbsp;plane)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSupportingVolume(float,float,float,float)" class="member-name-link">setSupportingVolume</a><wbr>(float&nbsp;nx,
+ float&nbsp;ny,
+ float&nbsp;nz,
+ float&nbsp;c)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the plane of support.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSupportingVolume(com.github.stephengold.joltjni.readonly.ConstPlane)" class="member-name-link">setSupportingVolume</a><wbr>(<a href="readonly/ConstPlane.html" title="interface in com.github.stephengold.joltjni.readonly">ConstPlane</a>&nbsp;plane)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the supporting volume.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUp(float,float,float)" class="member-name-link">setUp</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the character's "up" direction.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUp(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setUp</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;up)</code></div>
@@ -293,6 +341,41 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>plane</code> - the desired plane of support (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSupportingVolume(float,float,float,float)">
+<h3>setSupportingVolume</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSupportingVolume</span><wbr><span class="parameters">(float&nbsp;nx,
+ float&nbsp;ny,
+ float&nbsp;nz,
+ float&nbsp;c)</span></div>
+<div class="block">Alter the plane of support. (native attribute: mSupportingVolume)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>nx</code> - the X component of the plane's normal (in system coordinates)</dd>
+<dd><code>ny</code> - the Y component of the plane's normal (in system coordinates)</dd>
+<dd><code>nz</code> - the Z component of the plane's normal (in system coordinates)</dd>
+<dd><code>c</code> - the plane constant (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setUp(float,float,float)">
+<h3>setUp</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUp</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Alter the character's "up" direction. (native attribute: mUp)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X component of the desired direction (in system coordinates,
+ default=0)</dd>
+<dd><code>y</code> - the Y component of the desired direction (in system coordinates,
+ default=1)</dd>
+<dd><code>z</code> - the Z component of the desired direction (in system coordinates,
+ default=0)</dd>
 </dl>
 </section>
 </li>
@@ -366,6 +449,21 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 </section>
 </li>
 <li>
+<section class="detail" id="getGroundNormal(com.github.stephengold.joltjni.Vec3)">
+<h3>getGroundNormal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getGroundNormal</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the normal direction at the point of contact with the supporting
+ surface. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getGroundNormal(com.github.stephengold.joltjni.Vec3)">getGroundNormal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (in system coordinates, not
+ <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getGroundPosition()">
 <h3>getGroundPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">getGroundPosition</span>()</div>
@@ -376,6 +474,21 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 <dd><code><a href="readonly/ConstCharacterBase.html#getGroundPosition()">getGroundPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new location vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getGroundPosition(com.github.stephengold.joltjni.RVec3)">
+<h3>getGroundPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getGroundPosition</span><wbr><span class="parameters">(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location of the point of contact with the supporting surface.
+ The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getGroundPosition(com.github.stephengold.joltjni.RVec3)">getGroundPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (in system coordinates, not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -436,6 +549,21 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 </section>
 </li>
 <li>
+<section class="detail" id="getGroundVelocity(com.github.stephengold.joltjni.Vec3)">
+<h3>getGroundVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getGroundVelocity</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the world-space velocity of the supporting surface. The character is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getGroundVelocity(com.github.stephengold.joltjni.Vec3)">getGroundVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the velocity (meters per second in system
+ coordinates, not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getShape()">
 <h3>getShape</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></span>&nbsp;<span class="element-name">getShape</span>()</div>
@@ -477,6 +605,19 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 </section>
 </li>
 <li>
+<section class="detail" id="getSupportingVolume(com.github.stephengold.joltjni.Plane)">
+<h3>getSupportingVolume</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getSupportingVolume</span><wbr><span class="parameters">(<a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the supporting volume. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getSupportingVolume(com.github.stephengold.joltjni.Plane)">getSupportingVolume</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the plane (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getUp()">
 <h3>getUp</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getUp</span>()</div>
@@ -486,6 +627,42 @@ implements <a href="readonly/ConstCharacterBase.html" title="interface in com.gi
 <dd><code><a href="readonly/ConstCharacterBase.html#getUp()">getUp</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new direction vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUp(com.github.stephengold.joltjni.Vec3)">
+<h3>getUp</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getUp</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the character's "up" direction. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getUp(com.github.stephengold.joltjni.Vec3)">getUp</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isSlopeTooSteep(float,float,float)">
+<h3>isSlopeTooSteep</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSlopeTooSteep</span><wbr><span class="parameters">(float&nbsp;nx,
+ float&nbsp;ny,
+ float&nbsp;nz)</span></div>
+<div class="block">Test whether the specified normal direction is too steep. The character
+ is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#isSlopeTooSteep(float,float,float)">isSlopeTooSteep</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>nx</code> - the X component of the surface normal to test (in system
+ coordinates)</dd>
+<dd><code>ny</code> - the Y component of the surface normal to test (in system
+ coordinates)</dd>
+<dd><code>nz</code> - the Z component of the surface normal to test (in system
+ coordinates)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if too steep, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>

@@ -131,6 +131,18 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location of the rigid body's center of mass.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCenterOfMassPosition(boolean,com.github.stephengold.joltjni.RVec3)" class="member-name-link">getCenterOfMassPosition</a><wbr>(boolean&nbsp;lockBodies,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the rigid body's center of mass.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCenterOfMassPosition(com.github.stephengold.joltjni.RVec3)" class="member-name-link">getCenterOfMassPosition</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the rigid body's center of mass using the locking
+ body interface.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCharacterSettings()" class="member-name-link">getCharacterSettings</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -163,8 +175,19 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="block">Copy the normal direction at the point of contact with the supporting
  surface.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundPosition()" class="member-name-link">getGroundPosition</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundNormal(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getGroundNormal</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the normal direction at the point of contact with the supporting
+ surface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundPosition()" class="member-name-link">getGroundPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the point of contact with the supporting surface.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundPosition(com.github.stephengold.joltjni.RVec3)" class="member-name-link">getGroundPosition</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location of the point of contact with the supporting surface.</div>
 </div>
@@ -188,88 +211,132 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the world-space velocity of the supporting surface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLayer()" class="member-name-link">getLayer</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGroundVelocity(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getGroundVelocity</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the character's object layer, using the locking body interface.</div>
+<div class="block">Copy the world-space velocity of the supporting surface.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLayer(boolean)" class="member-name-link">getLayer</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLayer()" class="member-name-link">getLayer</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the character's object layer, using the locking body interface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLayer(boolean)" class="member-name-link">getLayer</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the character's object layer.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity()" class="member-name-link">getLinearVelocity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the linear velocity of the character using the locking body
+ interface.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity()" class="member-name-link">getLinearVelocity</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity(boolean)" class="member-name-link">getLinearVelocity</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the linear velocity of the character.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity(boolean,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getLinearVelocity</a><wbr>(boolean&nbsp;lockBodies,
+ <a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the linear velocity of the character.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getLinearVelocity</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the linear velocity of the character using the locking body
  interface.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearVelocity(boolean)" class="member-name-link">getLinearVelocity</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicsSystem()" class="member-name-link">getPhysicsSystem</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the linear velocity of the character.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicsSystem()" class="member-name-link">getPhysicsSystem</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the physics system to which the character's body belongs.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location of the character using the locking body interface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition(boolean)" class="member-name-link">getPosition</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition(boolean)" class="member-name-link">getPosition</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the character.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition(boolean,com.github.stephengold.joltjni.RVec3)" class="member-name-link">getPosition</a><wbr>(boolean&nbsp;lockBodies,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the location of the character.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)" class="member-name-link">getPositionAndRotation</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
- <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeOrientation)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition(com.github.stephengold.joltjni.RVec3)" class="member-name-link">getPosition</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the location of the character using the locking body interface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat)" class="member-name-link">getPositionAndRotation</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
+ <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeOrientation)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the position of the associated body using the locking body
  interface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat,boolean)" class="member-name-link">getPositionAndRotation</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPositionAndRotation(com.github.stephengold.joltjni.RVec3,com.github.stephengold.joltjni.Quat,boolean)" class="member-name-link">getPositionAndRotation</a><wbr>(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeLocation,
  <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeOrientation,
  boolean&nbsp;lockBodies)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the position of the associated body.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPtr()" class="member-name-link">getPtr</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the targeted character, if any.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefCount()" class="member-name-link">getRefCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the active references to the native <code>Character</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation()" class="member-name-link">getRotation</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation()" class="member-name-link">getRotation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the orientation of the character using the locking body interface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation(boolean)" class="member-name-link">getRotation</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation(boolean)" class="member-name-link">getRotation</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the orientation of the character.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation(boolean,com.github.stephengold.joltjni.Quat)" class="member-name-link">getRotation</a><wbr>(boolean&nbsp;lockBodies,
+ <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the orientation of the character.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape()" class="member-name-link">getShape</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation(com.github.stephengold.joltjni.Quat)" class="member-name-link">getRotation</a><wbr>(<a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the orientation of the character using the locking body interface.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape()" class="member-name-link">getShape</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Access the character's shape.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape(com.github.stephengold.joltjni.ShapeRefC)" class="member-name-link">getShape</a><wbr>(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;storeRef)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape(com.github.stephengold.joltjni.ShapeRefC)" class="member-name-link">getShape</a><wbr>(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;storeRef)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Update the specified counted reference to refer to the character's shape.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportingVolume()" class="member-name-link">getSupportingVolume</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportingVolume()" class="member-name-link">getSupportingVolume</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the supporting volume.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportingVolume(com.github.stephengold.joltjni.Plane)" class="member-name-link">getSupportingVolume</a><wbr>(<a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the supporting volume.</div>
 </div>
@@ -290,16 +357,28 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the character's "up" direction.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldTransform()" class="member-name-link">getWorldTransform</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUp(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getUp</a><wbr>(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the character's "up" direction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldTransform()" class="member-name-link">getWorldTransform</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate the character's local-to-system coordinate transform using the
  locking body interface.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldTransform(boolean)" class="member-name-link">getWorldTransform</a><wbr>(boolean&nbsp;lockBodies)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorldTransform(boolean)" class="member-name-link">getWorldTransform</a><wbr>(boolean&nbsp;lockBodies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate the character's local-to-system coordinate transform.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSlopeTooSteep(float,float,float)" class="member-name-link">isSlopeTooSteep</a><wbr>(float&nbsp;nx,
+ float&nbsp;ny,
+ float&nbsp;nz)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Test whether the specified normal direction is too steep.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSlopeTooSteep(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">isSlopeTooSteep</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;normal)</code></div>
@@ -416,6 +495,39 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 </section>
 </li>
 <li>
+<section class="detail" id="getCenterOfMassPosition(boolean,com.github.stephengold.joltjni.RVec3)">
+<h3>getCenterOfMassPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getCenterOfMassPosition</span><wbr><span class="parameters">(boolean&nbsp;lockBodies,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location of the rigid body's center of mass. The character is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getCenterOfMassPosition(boolean,com.github.stephengold.joltjni.RVec3)">getCenterOfMassPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
+ <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
+<dd><code>storeResult</code> - storage for the location (in system coordinates, not
+ <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCenterOfMassPosition(com.github.stephengold.joltjni.RVec3)">
+<h3>getCenterOfMassPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getCenterOfMassPosition</span><wbr><span class="parameters">(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location of the rigid body's center of mass using the locking
+ body interface. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getCenterOfMassPosition(com.github.stephengold.joltjni.RVec3)">getCenterOfMassPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (in system coordinates, not
+ <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCharacterSettings()">
 <h3>getCharacterSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CharacterSettings.html" title="class in com.github.stephengold.joltjni">CharacterSettings</a></span>&nbsp;<span class="element-name">getCharacterSettings</span>()</div>
@@ -503,6 +615,21 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 </section>
 </li>
 <li>
+<section class="detail" id="getGroundNormal(com.github.stephengold.joltjni.Vec3)">
+<h3>getGroundNormal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getGroundNormal</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the normal direction at the point of contact with the supporting
+ surface. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getGroundNormal(com.github.stephengold.joltjni.Vec3)">getGroundNormal</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (in system coordinates, not
+ <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getGroundPosition()">
 <h3>getGroundPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a></span>&nbsp;<span class="element-name">getGroundPosition</span>()</div>
@@ -513,6 +640,21 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dd><code><a href="readonly/ConstCharacterBase.html#getGroundPosition()">getGroundPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new location vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getGroundPosition(com.github.stephengold.joltjni.RVec3)">
+<h3>getGroundPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getGroundPosition</span><wbr><span class="parameters">(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location of the point of contact with the supporting surface.
+ The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getGroundPosition(com.github.stephengold.joltjni.RVec3)">getGroundPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (in system coordinates, not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -569,6 +711,21 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dd><code><a href="readonly/ConstCharacterBase.html#getGroundVelocity()">getGroundVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new velocity vector (meters per second in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getGroundVelocity(com.github.stephengold.joltjni.Vec3)">
+<h3>getGroundVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getGroundVelocity</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the world-space velocity of the supporting surface. The character is
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getGroundVelocity(com.github.stephengold.joltjni.Vec3)">getGroundVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the velocity (meters per second in system
+ coordinates, not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -633,6 +790,38 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 </section>
 </li>
 <li>
+<section class="detail" id="getLinearVelocity(boolean,com.github.stephengold.joltjni.Vec3)">
+<h3>getLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getLinearVelocity</span><wbr><span class="parameters">(boolean&nbsp;lockBodies,
+ <a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the linear velocity of the character. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getLinearVelocity(boolean,com.github.stephengold.joltjni.Vec3)">getLinearVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
+ <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
+<dd><code>storeResult</code> - storage for the velocity (meters per second in system
+ coordinates, not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLinearVelocity(com.github.stephengold.joltjni.Vec3)">
+<h3>getLinearVelocity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getLinearVelocity</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the linear velocity of the character using the locking body
+ interface. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getLinearVelocity(com.github.stephengold.joltjni.Vec3)">getLinearVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the velocity (meters per second in system
+ coordinates, not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getPhysicsSystem()">
 <h3>getPhysicsSystem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsSystem.html" title="class in com.github.stephengold.joltjni">PhysicsSystem</a></span>&nbsp;<span class="element-name">getPhysicsSystem</span>()</div>
@@ -672,6 +861,38 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 <dt>Returns:</dt>
 <dd>a new location vector (in system coordinates)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPosition(boolean,com.github.stephengold.joltjni.RVec3)">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPosition</span><wbr><span class="parameters">(boolean&nbsp;lockBodies,
+ <a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location of the character. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getPosition(boolean,com.github.stephengold.joltjni.RVec3)">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
+ <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
+<dd><code>storeResult</code> - storage for the location (in system coordinates, not
+ <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPosition(com.github.stephengold.joltjni.RVec3)">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPosition</span><wbr><span class="parameters">(<a href="RVec3.html" title="class in com.github.stephengold.joltjni">RVec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the location of the character using the locking body interface. The
+ character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getPosition(com.github.stephengold.joltjni.RVec3)">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the location (in system coordinates, not
+ <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -758,6 +979,38 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 </section>
 </li>
 <li>
+<section class="detail" id="getRotation(boolean,com.github.stephengold.joltjni.Quat)">
+<h3>getRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getRotation</span><wbr><span class="parameters">(boolean&nbsp;lockBodies,
+ <a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the orientation of the character. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getRotation(boolean,com.github.stephengold.joltjni.Quat)">getRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>lockBodies</code> - <code>true</code> &rarr; use the locking body interface,
+ <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
+<dd><code>storeResult</code> - storage for the orientation (in system coordinates,
+ not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRotation(com.github.stephengold.joltjni.Quat)">
+<h3>getRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getRotation</span><wbr><span class="parameters">(<a href="Quat.html" title="class in com.github.stephengold.joltjni">Quat</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the orientation of the character using the locking body interface.
+ The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacter.html#getRotation(com.github.stephengold.joltjni.Quat)">getRotation</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacter.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the orientation (in system coordinates,
+ not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getShape()">
 <h3>getShape</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a></span>&nbsp;<span class="element-name">getShape</span>()</div>
@@ -795,6 +1048,19 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 <dd><code><a href="readonly/ConstCharacterBase.html#getSupportingVolume()">getSupportingVolume</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSupportingVolume(com.github.stephengold.joltjni.Plane)">
+<h3>getSupportingVolume</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getSupportingVolume</span><wbr><span class="parameters">(<a href="Plane.html" title="class in com.github.stephengold.joltjni">Plane</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the supporting volume. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getSupportingVolume(com.github.stephengold.joltjni.Plane)">getSupportingVolume</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the plane (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -843,6 +1109,19 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
 </section>
 </li>
 <li>
+<section class="detail" id="getUp(com.github.stephengold.joltjni.Vec3)">
+<h3>getUp</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getUp</span><wbr><span class="parameters">(<a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the character's "up" direction. The character is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#getUp(com.github.stephengold.joltjni.Vec3)">getUp</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the direction (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getWorldTransform()">
 <h3>getWorldTransform</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RMat44.html" title="class in com.github.stephengold.joltjni">RMat44</a></span>&nbsp;<span class="element-name">getWorldTransform</span>()</div>
@@ -870,6 +1149,26 @@ implements <a href="readonly/ConstCharacter.html" title="interface in com.github
  <code>false</code> &rarr; use the non-locking body interface (default=true)</dd>
 <dt>Returns:</dt>
 <dd>a new transform matrix</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isSlopeTooSteep(float,float,float)">
+<h3>isSlopeTooSteep</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSlopeTooSteep</span><wbr><span class="parameters">(float&nbsp;nx,
+ float&nbsp;ny,
+ float&nbsp;nz)</span></div>
+<div class="block">Test whether the specified normal direction is too steep. The character
+ is unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstCharacterBase.html#isSlopeTooSteep(float,float,float)">isSlopeTooSteep</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstCharacterBase.html" title="interface in com.github.stephengold.joltjni.readonly">ConstCharacterBase</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>nx</code> - the X component of the surface normal to test</dd>
+<dd><code>ny</code> - the Y component of the surface normal to test</dd>
+<dd><code>nz</code> - the Z component of the surface normal to test</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if too steep, otherwise <code>false</code></dd>
 </dl>
 </section>
 </li>

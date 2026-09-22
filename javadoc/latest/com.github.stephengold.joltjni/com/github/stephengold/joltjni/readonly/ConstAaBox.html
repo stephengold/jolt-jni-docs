@@ -113,27 +113,54 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#contains(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">contains</a><wbr>(<a href="ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;other)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#contains(float,float,float)" class="member-name-link">contains</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Test whether the current box contains the argument box.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#contains(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">contains</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Test whether the box contains the specified point.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCenter()" class="member-name-link">getCenter</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#contains(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">contains</a><wbr>(<a href="ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;other)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Test whether the current box contains the argument box.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#contains(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">contains</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Locate the center of the box.</div>
+<div class="block">Test whether the box contains the specified point.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClosestPoint(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getClosestPoint</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCenter()" class="member-name-link">getCenter</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Locate the center of the box.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClosestPoint(float,float,float)" class="member-name-link">getClosestPoint</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Locate the closest point on or in the box for the specified location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClosestPoint(float,float,float,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getClosestPoint</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z,
+ <a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Locate the closest point on or in the box for the specified location.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtent()" class="member-name-link">getExtent</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClosestPoint(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getClosestPoint</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;location)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Locate the closest point on or in the box for the specified location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtent()" class="member-name-link">getExtent</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the (half) extent of the box.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtent(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getExtent</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the (half) extent of the box.</div>
 </div>
@@ -142,8 +169,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the maximum contained coordinate on each axis.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMin()" class="member-name-link">getMin</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMax(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getMax</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the maximum contained coordinate on each axis.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMin()" class="member-name-link">getMin</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the minimum contained coordinate on each axis.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMin(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getMin</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the minimum contained coordinate on each axis.</div>
 </div>
@@ -152,35 +189,76 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Copy the size (full extent) on each axis.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSize(com.github.stephengold.joltjni.Vec3)" class="member-name-link">getSize</a><wbr>(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Copy the size (full extent) on each axis.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSqDistanceTo(float,float,float)" class="member-name-link">getSqDistanceTo</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the squared distance between the box and the specified point.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSqDistanceTo(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getSqDistanceTo</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the squared distance between the box and the specified point.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupport(float,float,float)" class="member-name-link">getSupport</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Calculate the support vector for this convex shape.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupport(float,float,float,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getSupport</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z,
+ <a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Calculate the support vector for this convex shape.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupport(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">getSupport</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Calculate the support vector for this convex shape.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSurfaceArea()" class="member-name-link">getSurfaceArea</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupport(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.Vec3)" class="member-name-link">getSupport</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction,
+ <a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Get surface area of bounding box.</div>
+<div class="block">Calculate the support vector for this convex shape.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVolume()" class="member-name-link">getVolume</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSurfaceArea()" class="member-name-link">getSurfaceArea</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get surface area of bounding box.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVolume()" class="member-name-link">getVolume</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the volume of the box.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">isEqual</a><wbr>(<a href="ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;other)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isEqual(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">isEqual</a><wbr>(<a href="ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;other)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Test whether the current box is equivalent to the argument.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isValid()" class="member-name-link">isValid</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isValid()" class="member-name-link">isValid</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Test whether the box is valid.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#overlaps(float,float,float,float)" class="member-name-link">overlaps</a><wbr>(float&nbsp;constant,
+ float&nbsp;normalX,
+ float&nbsp;normalY,
+ float&nbsp;normalZ)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Check if this box overlaps with a plane.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#overlaps(com.github.stephengold.joltjni.readonly.ConstAaBox)" class="member-name-link">overlaps</a><wbr>(<a href="ConstAaBox.html" title="interface in com.github.stephengold.joltjni.readonly">ConstAaBox</a>&nbsp;other)</code></div>
@@ -193,13 +271,20 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="block">Check if this box overlaps with a plane.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#scaled(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">scaled</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;factors)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#scaled(float,float,float)" class="member-name-link">scaled</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return a scaled copy of the box.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#transformed(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">transformed</a><wbr>(<a href="Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;matrix)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#scaled(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">scaled</a><wbr>(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;factors)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return a scaled copy of the box.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#transformed(com.github.stephengold.joltjni.readonly.Mat44Arg)" class="member-name-link">transformed</a><wbr>(<a href="Mat44Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Mat44Arg</a>&nbsp;matrix)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return a transformed copy of the box.</div>
 </div>
 </div>
@@ -238,6 +323,23 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="contains(float,float,float)">
+<h3>contains</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">contains</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Test whether the box contains the specified point. The box is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X coordinate of the point to test</dd>
+<dd><code>y</code> - the Y coordinate of the point to test</dd>
+<dd><code>z</code> - the Z coordinate of the point to test</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if contained, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="contains(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>contains</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">contains</span><wbr><span class="parameters">(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;point)</span></div>
@@ -258,6 +360,43 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new location vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getClosestPoint(float,float,float)">
+<h3>getClosestPoint</h3>
+<div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getClosestPoint</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Locate the closest point on or in the box for the specified location. The
+ box is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X coordinate of the location</dd>
+<dd><code>y</code> - the Y coordinate of the location</dd>
+<dd><code>z</code> - the Z coordinate of the location</dd>
+<dt>Returns:</dt>
+<dd>a new vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getClosestPoint(float,float,float,com.github.stephengold.joltjni.Vec3)">
+<h3>getClosestPoint</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getClosestPoint</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z,
+ <a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Locate the closest point on or in the box for the specified location. The
+ box is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X coordinate of the location</dd>
+<dd><code>y</code> - the Y coordinate of the location</dd>
+<dd><code>z</code> - the Z coordinate of the location</dd>
+<dd><code>storeResult</code> - storage for the closest point (not <code>null</code>,
+ modified)</dd>
 </dl>
 </section>
 </li>
@@ -287,6 +426,17 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getExtent(com.github.stephengold.joltjni.Vec3)">
+<h3>getExtent</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getExtent</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the (half) extent of the box. The box is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the extent (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getMax()">
 <h3>getMax</h3>
 <div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getMax</span>()</div>
@@ -295,6 +445,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new location vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMax(com.github.stephengold.joltjni.Vec3)">
+<h3>getMax</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getMax</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the maximum contained coordinate on each axis. The box is
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the maximum (not <code>null</code>, modified)</dd>
 </dl>
 </section>
 </li>
@@ -311,6 +473,18 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getMin(com.github.stephengold.joltjni.Vec3)">
+<h3>getMin</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getMin</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the minimum contained coordinate on each axis. The box is
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the minimum (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getSize()">
 <h3>getSize</h3>
 <div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getSize</span>()</div>
@@ -318,6 +492,34 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSize(com.github.stephengold.joltjni.Vec3)">
+<h3>getSize</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getSize</span><wbr><span class="parameters">(<a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Copy the size (full extent) on each axis. The box is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>storeResult</code> - storage for the size (not <code>null</code>, modified)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSqDistanceTo(float,float,float)">
+<h3>getSqDistanceTo</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getSqDistanceTo</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Get the squared distance between the box and the specified point.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X coordinate of the point to measure from</dd>
+<dd><code>y</code> - the Y coordinate of the point to measure from</dd>
+<dd><code>z</code> - the Z coordinate of the point to measure from</dd>
+<dt>Returns:</dt>
+<dd>the distance, or zero if the point lies inside the box</dd>
 </dl>
 </section>
 </li>
@@ -335,6 +537,42 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 </section>
 </li>
 <li>
+<section class="detail" id="getSupport(float,float,float)">
+<h3>getSupport</h3>
+<div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getSupport</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Calculate the support vector for this convex shape.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X component of the direction vector</dd>
+<dd><code>y</code> - the Y component of the direction vector</dd>
+<dd><code>z</code> - the Z component of the direction vector</dd>
+<dt>Returns:</dt>
+<dd>the support vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSupport(float,float,float,com.github.stephengold.joltjni.Vec3)">
+<h3>getSupport</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getSupport</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z,
+ <a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Calculate the support vector for this convex shape. The shape is
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X component of the direction vector</dd>
+<dd><code>y</code> - the Y component of the direction vector</dd>
+<dd><code>z</code> - the Z component of the direction vector</dd>
+<dd><code>storeResult</code> - storage for the support vector (not <code>null</code>,
+ modified)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getSupport(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>getSupport</h3>
 <div class="member-signature"><span class="return-type"><a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getSupport</span><wbr><span class="parameters">(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction)</span></div>
@@ -344,6 +582,21 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <dd><code>direction</code> - the direction vector</dd>
 <dt>Returns:</dt>
 <dd>the support vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSupport(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.Vec3)">
+<h3>getSupport</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getSupport</span><wbr><span class="parameters">(<a href="Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;direction,
+ <a href="../Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a>&nbsp;storeResult)</span></div>
+<div class="block">Calculate the support vector for this convex shape. The shape is
+ unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the direction vector (not <code>null</code>, unaffected)</dd>
+<dd><code>storeResult</code> - storage for the support vector (not <code>null</code>,
+ modified)</dd>
 </dl>
 </section>
 </li>
@@ -418,6 +671,42 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
  unaffected)</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if they overlap, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="overlaps(float,float,float,float)">
+<h3>overlaps</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">overlaps</span><wbr><span class="parameters">(float&nbsp;constant,
+ float&nbsp;normalX,
+ float&nbsp;normalY,
+ float&nbsp;normalZ)</span></div>
+<div class="block">Check if this box overlaps with a plane. The box is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>constant</code> - the plane constant</dd>
+<dd><code>normalX</code> - the X component of the plane's normal</dd>
+<dd><code>normalY</code> - the Y component of the plane's normal</dd>
+<dd><code>normalZ</code> - the Z component of the plane's normal</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if they overlap, otherwise <code>false</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="scaled(float,float,float)">
+<h3>scaled</h3>
+<div class="member-signature"><span class="return-type"><a href="../AaBox.html" title="class in com.github.stephengold.joltjni">AaBox</a></span>&nbsp;<span class="element-name">scaled</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;z)</span></div>
+<div class="block">Return a scaled copy of the box. The current box is unaffected.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the scale factor to apply to the local X axis</dd>
+<dd><code>y</code> - the scale factor to apply to the local Y axis</dd>
+<dd><code>z</code> - the scale factor to apply to the local Z axis</dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
 </dl>
 </section>
 </li>

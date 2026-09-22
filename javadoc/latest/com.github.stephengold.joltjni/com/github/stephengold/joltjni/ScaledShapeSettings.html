@@ -116,10 +116,24 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShape,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">ScaledShapeSettings</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
- <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scaleFactors)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShape,float,float,float)" class="member-name-link">ScaledShapeSettings</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
+ float&nbsp;scaleX,
+ float&nbsp;scaleY,
+ float&nbsp;scaleZ)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate a settings based on the specified shape and scale factors.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShape,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">ScaledShapeSettings</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scaleFactors)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a settings based on the specified shape and scale factors.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShapeSettings,float,float,float)" class="member-name-link">ScaledShapeSettings</a><wbr>(<a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a>&nbsp;baseSettings,
+ float&nbsp;scaleX,
+ float&nbsp;scaleY,
+ float&nbsp;scaleZ)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a settings based on the specified settings and scale factors.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShapeSettings,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">ScaledShapeSettings</a><wbr>(<a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a>&nbsp;baseSettings,
  <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scaleFactors)</code></div>
@@ -190,6 +204,23 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstShape,float,float,float)">
+<h3>ScaledShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ScaledShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
+ float&nbsp;scaleX,
+ float&nbsp;scaleY,
+ float&nbsp;scaleZ)</span></div>
+<div class="block">Instantiate a settings based on the specified shape and scale factors.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>baseShape</code> - the unscaled base shape (not <code>null</code>)</dd>
+<dd><code>scaleX</code> - the desired scale factor on the local X axis</dd>
+<dd><code>scaleY</code> - the desired scale factor on the local Y axis</dd>
+<dd><code>scaleZ</code> - the desired scale factor on the local Z axis</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstShape,com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>ScaledShapeSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ScaledShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
@@ -199,6 +230,23 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>baseShape</code> - the unscaled base shape (not <code>null</code>)</dd>
 <dd><code>scaleFactors</code> - the desired scale factors (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstShapeSettings,float,float,float)">
+<h3>ScaledShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ScaledShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a>&nbsp;baseSettings,
+ float&nbsp;scaleX,
+ float&nbsp;scaleY,
+ float&nbsp;scaleZ)</span></div>
+<div class="block">Instantiate a settings based on the specified settings and scale factors.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>baseSettings</code> - the unscaled base shape settings (not <code>null</code>)</dd>
+<dd><code>scaleX</code> - the desired scale factor on the local X axis</dd>
+<dd><code>scaleY</code> - the desired scale factor on the local Y axis</dd>
+<dd><code>scaleZ</code> - the desired scale factor on the local Z axis</dd>
 </dl>
 </section>
 </li>

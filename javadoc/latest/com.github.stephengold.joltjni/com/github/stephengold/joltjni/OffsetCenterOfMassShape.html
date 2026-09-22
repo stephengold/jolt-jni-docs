@@ -116,9 +116,16 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShape,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">OffsetCenterOfMassShape</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
- <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShape,float,float,float)" class="member-name-link">OffsetCenterOfMassShape</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
+ float&nbsp;offsetX,
+ float&nbsp;offsetY,
+ float&nbsp;offsetZ)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Instantiate a shape on the specified offset and base shape.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstShape,com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">OffsetCenterOfMassShape</a><wbr>(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
+ <a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Instantiate a shape on the specified offset and base shape.</div>
 </div>
 </div>
@@ -172,6 +179,23 @@ loadScripts(document, 'script');</script>
 <section class="constructor-details" id="constructor-detail">
 <h2>Constructor Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstShape,float,float,float)">
+<h3>OffsetCenterOfMassShape</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">OffsetCenterOfMassShape</span><wbr><span class="parameters">(<a href="readonly/ConstShape.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShape</a>&nbsp;baseShape,
+ float&nbsp;offsetX,
+ float&nbsp;offsetY,
+ float&nbsp;offsetZ)</span></div>
+<div class="block">Instantiate a shape on the specified offset and base shape.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>baseShape</code> - the base shape (not <code>null</code>)</dd>
+<dd><code>offsetX</code> - the desired X offset</dd>
+<dd><code>offsetY</code> - the desired Y offset</dd>
+<dd><code>offsetZ</code> - the desired Z offset</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstShape,com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>OffsetCenterOfMassShape</h3>
