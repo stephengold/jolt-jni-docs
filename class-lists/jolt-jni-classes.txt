@@ -95,6 +95,7 @@ com.github.stephengold.joltjni.ComputeSystemRef
 com.github.stephengold.joltjni.ComputeSystemResult
 com.github.stephengold.joltjni.ConeConstraint
 com.github.stephengold.joltjni.ConeConstraintSettings
+com.github.stephengold.joltjni.ConnectedConstraint
 com.github.stephengold.joltjni.Constraint
 com.github.stephengold.joltjni.ConstraintRef
 com.github.stephengold.joltjni.ConstraintResult
