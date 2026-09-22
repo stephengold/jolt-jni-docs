@@ -532,6 +532,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}physics_scene.html[JPH::PhysicsScene]
 |{url-api}/PhysicsScene.html[PhysicsScene] +
+ {url-api}/readonly/ConstPhysicsScene.html[ConstPhysicsScene] +
  {url-api}/PhysicsSceneRef.html[PhysicsSceneRef]
 
 |{url-jolt-struct}physics_settings.html[JPH::PhysicsSettings]
