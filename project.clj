@@ -63,7 +63,7 @@
     :url "https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE"
   }
   :main ^:skip-aot clojure.HelloJoltJni
-  :plugins [[dev.weavejester/lein-cljfmt "0.16.5"]]
+  :plugins [[dev.weavejester/lein-cljfmt "0.16.6"]]
   :profiles {
     :uberjar {
       :aot :all
