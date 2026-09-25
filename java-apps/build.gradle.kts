@@ -18,7 +18,7 @@ tasks.withType<Checkstyle>().configureEach {
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.withType<JavaCompile>().configureEach { // Java compile-time options:
@@ -26,7 +26,7 @@ tasks.withType<JavaCompile>().configureEach { // Java compile-time options:
     options.compilerArgs.add("-Xlint:unchecked")
     options.encoding = "UTF-8"
     options.isDeprecation = true // to provide detailed deprecation warnings
-    options.release = 11
+    options.release = 17
 }
 
 application {
