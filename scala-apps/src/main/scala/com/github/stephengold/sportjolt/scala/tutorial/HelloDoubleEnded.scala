@@ -226,7 +226,7 @@ class HelloDoubleEnded extends BasePhysicsApp with PhysicsTickListener {
     /**
      * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addBall: Body = {
         val radius = 0.4f
@@ -250,7 +250,7 @@ class HelloDoubleEnded extends BasePhysicsApp with PhysicsTickListener {
     /**
      * Create a kinematic body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addBox: Body = {
         val shape = new BoxShape(0.3f, HelloDoubleEnded.paddleHalfHeight, 1f)

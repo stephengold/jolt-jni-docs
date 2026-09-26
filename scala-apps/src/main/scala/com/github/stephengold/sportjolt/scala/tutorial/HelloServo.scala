@@ -150,7 +150,7 @@ class HelloServo extends BasePhysicsApp {
     /**
      * Create a dynamic rigid body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addDoor: Body = {
         val shape = new BoxShape(0.8f, 0.8f, 0.1f)
@@ -173,7 +173,7 @@ class HelloServo extends BasePhysicsApp {
     /**
      * Create a dynamic body with a square-frame shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addFrame: Body = {
         val halfLength = 1f

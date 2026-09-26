@@ -224,7 +224,7 @@ class HelloSpring extends BasePhysicsApp with PhysicsTickListener {
     /**
      * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addBall: Body = {
         val radius = 0.4f
@@ -252,7 +252,7 @@ class HelloSpring extends BasePhysicsApp with PhysicsTickListener {
     /**
      * Create a kinematic body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addBox: Body = {
         val shape = new BoxShape(0.2f, HelloSpring.paddleHalfHeight, 0.2f)
@@ -277,7 +277,7 @@ class HelloSpring extends BasePhysicsApp with PhysicsTickListener {
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's top face (in system
      * coordinates)
-     * @return the new body (not null)
+     * @return the added body
      */
     private def addSquare(halfExtent: Float, y: Float): Body = {
         val halfThickness = 0.1f

@@ -201,7 +201,7 @@ class HelloWalk extends BasePhysicsApp, PhysicsTickListener {
     /**
      * Add a static heightfield rigid body to the system.
      *
-     * @return the new body (not null)
+     * @return the added body
      */
     private def addTerrain: ConstBody = {
        // Generate an array of heights from a PNG image on the classpath:

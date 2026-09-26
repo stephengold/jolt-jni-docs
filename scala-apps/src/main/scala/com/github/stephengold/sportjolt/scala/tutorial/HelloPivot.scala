@@ -206,7 +206,7 @@ class HelloPivot extends BasePhysicsApp with PhysicsTickListener {
     /**
      * Create a dynamic rigid body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addBox: Body = {
         val shape = new BoxShape(0.3f, 1f, 1f)
@@ -229,7 +229,7 @@ class HelloPivot extends BasePhysicsApp with PhysicsTickListener {
     /**
      * Create a kinematic body with a sphere shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private def addKineBall: Body = {
         val ballRadius = 1f
