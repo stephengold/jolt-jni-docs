@@ -100,7 +100,7 @@ final public class HelloLimit {
     /**
      * Main entry point for the HelloLimit application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();
@@ -197,7 +197,7 @@ final public class HelloLimit {
      * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addBall(BodyInterface bi) {
         float radius = 0.4f;
@@ -225,7 +225,7 @@ final public class HelloLimit {
      * Create a kinematic body with a box shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addBox(BodyInterface bi) {
         ConstShape shape = new BoxShape(0.2f, paddleHalfHeight, 0.2f);
@@ -250,7 +250,7 @@ final public class HelloLimit {
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's top face (in system
      * coordinates)
-     * @return the new body (not null)
+     * @return the added body
      */
     private static Body addSquare(BodyInterface bi, float halfExtent, float y) {
         float halfThickness = 0.1f;

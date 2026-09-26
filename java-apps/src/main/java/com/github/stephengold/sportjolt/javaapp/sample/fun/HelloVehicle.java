@@ -84,7 +84,7 @@ final public class HelloVehicle {
     /**
      * Main entry point for the HelloVehicle application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();

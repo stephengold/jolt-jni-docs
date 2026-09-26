@@ -107,7 +107,7 @@ final public class HelloDoubleEnded {
     /**
      * Main entry point for the HelloDoubleEnded application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();
@@ -205,7 +205,7 @@ final public class HelloDoubleEnded {
      * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addBall(BodyInterface bi) {
         float radius = 0.4f;
@@ -229,7 +229,7 @@ final public class HelloDoubleEnded {
      * Create a kinematic body with a box shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addBox(BodyInterface bi) {
         ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);

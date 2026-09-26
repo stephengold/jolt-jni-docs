@@ -80,7 +80,7 @@ final public class HelloContactResponse extends BasePhysicsApp {
     /**
      * Main entry point for the HelloContactResponse application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloContactResponse application = new HelloContactResponse();

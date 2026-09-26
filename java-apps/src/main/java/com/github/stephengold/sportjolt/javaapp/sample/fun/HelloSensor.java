@@ -116,7 +116,7 @@ final public class HelloSensor {
     /**
      * Main entry point for the HelloSensor application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();

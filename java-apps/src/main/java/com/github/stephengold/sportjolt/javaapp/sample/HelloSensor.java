@@ -121,7 +121,7 @@ final public class HelloSensor
     /**
      * Main entry point for the HelloSensor application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloSensor application = new HelloSensor();
@@ -230,7 +230,7 @@ final public class HelloSensor
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
-     * @param system the system that was just stepped (not null)
+     * @param system the system that was just stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
@@ -251,7 +251,7 @@ final public class HelloSensor
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to be stepped (not null)
+     * @param system the system that's about to be stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override

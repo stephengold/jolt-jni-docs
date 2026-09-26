@@ -77,7 +77,7 @@ final public class HelloDeactivation {
     /**
      * Main entry point for the HelloDeactivation application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();
@@ -158,7 +158,7 @@ final public class HelloDeactivation {
     /**
      * Configure keyboard input during initialization.
      *
-     * @param app (not null)
+     * @param app (not {@code null})
      */
     private static void configureInput(BasePhysicsApp app) {
         BaseApplication.getInputManager().add(new InputProcessor() {

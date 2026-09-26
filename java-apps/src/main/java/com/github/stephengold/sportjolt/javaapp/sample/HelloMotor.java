@@ -93,7 +93,7 @@ final public class HelloMotor extends BasePhysicsApp {
     /**
      * Main entry point for the HelloMotor application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloMotor application = new HelloMotor();
@@ -174,7 +174,7 @@ final public class HelloMotor extends BasePhysicsApp {
     /**
      * Create a dynamic rigid body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addDoor() {
         ConstShape shape = new BoxShape(0.8f, 0.8f, 0.1f);
@@ -197,7 +197,7 @@ final public class HelloMotor extends BasePhysicsApp {
     /**
      * Create a dynamic body with a square-frame shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addFrame() {
         float halfLength = 1f;

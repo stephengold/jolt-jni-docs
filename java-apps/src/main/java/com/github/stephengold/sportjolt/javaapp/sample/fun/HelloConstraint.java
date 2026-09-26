@@ -90,7 +90,7 @@ final public class HelloConstraint {
     /**
      * Main entry point for the HelloConstraint application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();
@@ -183,7 +183,7 @@ final public class HelloConstraint {
      * Create a dynamic rigid body with a box shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addBox(BodyInterface bi) {
         ConstShape shape = new BoxShape(0.3f, 1f, 3f);
@@ -206,7 +206,7 @@ final public class HelloConstraint {
      * Create a kinematic body with a sphere shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addKineBall(BodyInterface bi) {
         float ballRadius = 1f;

@@ -98,7 +98,7 @@ final public class HelloWalk {
     /**
      * Main entry point for the HelloWalk application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();
@@ -193,7 +193,7 @@ final public class HelloWalk {
      * Add a static heightfield rigid body to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body (not null)
+     * @return the added body
      */
     private static ConstBody addTerrain(BodyInterface bi) {
         // Generate an array of heights from a PNG image on the classpath:

@@ -91,7 +91,7 @@ final public class HelloMotor {
     /**
      * Main entry point for the HelloMotor application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();
@@ -159,7 +159,7 @@ final public class HelloMotor {
      * Create a dynamic rigid body with a box shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addDoor(BodyInterface bi) {
         ConstShape shape = new BoxShape(0.8f, 0.8f, 0.1f);
@@ -182,7 +182,7 @@ final public class HelloMotor {
      * Create a dynamic body with a square-frame shape and add it to the system.
      *
      * @param bi the system's body interface (not {@code null})
-     * @return the new body
+     * @return the added body
      */
     private static Body addFrame(BodyInterface bi) {
         float halfLength = 1f;

@@ -79,7 +79,7 @@ final public class HelloSoftRope extends BasePhysicsApp {
     /**
      * Main entry point for the HelloSoftRope application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloSoftRope application = new HelloSoftRope();
@@ -156,7 +156,7 @@ final public class HelloSoftRope extends BasePhysicsApp {
      * Generate a shared-settings object using the positions and lines in the
      * specified LineList mesh.
      *
-     * @param mesh the mesh to use (not null, unaffected)
+     * @param mesh the mesh to use (not {@code null}, unaffected)
      * @return a new object
      */
     private static SoftBodySharedSettings generateSharedSettings(Mesh mesh) {

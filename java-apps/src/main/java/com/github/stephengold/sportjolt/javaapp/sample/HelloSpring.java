@@ -104,7 +104,7 @@ final public class HelloSpring
     /**
      * Main entry point for the HelloSpring application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloSpring application = new HelloSpring();
@@ -219,7 +219,7 @@ final public class HelloSpring
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
-     * @param system the system that was just stepped (not null)
+     * @param system the system that was just stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
@@ -231,7 +231,7 @@ final public class HelloSpring
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to be stepped (not null)
+     * @param system the system that's about to be stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
@@ -247,7 +247,7 @@ final public class HelloSpring
     /**
      * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addBall() {
         float radius = 0.4f;
@@ -275,7 +275,7 @@ final public class HelloSpring
     /**
      * Create a kinematic body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addBox() {
         ConstShape shape = new BoxShape(0.2f, paddleHalfHeight, 0.2f);
@@ -300,7 +300,7 @@ final public class HelloSpring
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's top face (in system
      * coordinates)
-     * @return the new body (not null)
+     * @return the added body
      */
     private Body addSquare(float halfExtent, float y) {
         float halfThickness = 0.1f;

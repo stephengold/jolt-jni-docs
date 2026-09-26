@@ -78,7 +78,7 @@ final public class HelloSoftBody {
     /**
      * Main entry point for the HelloSoftBody application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();

@@ -94,7 +94,7 @@ final public class HelloConstraint
     /**
      * Main entry point for the HelloConstraint application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloConstraint application = new HelloConstraint();
@@ -203,7 +203,7 @@ final public class HelloConstraint
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
-     * @param system the system that was just stepped (not null)
+     * @param system the system that was just stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
@@ -215,7 +215,7 @@ final public class HelloConstraint
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to be stepped (not null)
+     * @param system the system that's about to be stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
@@ -230,7 +230,7 @@ final public class HelloConstraint
     /**
      * Create a dynamic rigid body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addBox() {
         ConstShape shape = new BoxShape(0.3f, 1f, 3f);
@@ -253,7 +253,7 @@ final public class HelloConstraint
     /**
      * Create a kinematic body with a sphere shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addKineBall() {
         float ballRadius = 1f;

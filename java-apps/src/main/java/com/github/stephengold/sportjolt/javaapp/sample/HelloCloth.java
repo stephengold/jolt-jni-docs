@@ -80,7 +80,7 @@ final public class HelloCloth extends BasePhysicsApp {
     /**
      * Main entry point for the HelloCloth application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloCloth application = new HelloCloth();
@@ -180,7 +180,7 @@ final public class HelloCloth extends BasePhysicsApp {
      * Generate a shared-settings object using the positions and faces in the
      * specified TriangleList mesh.
      *
-     * @param mesh the mesh to use (not null, unaffected)
+     * @param mesh the mesh to use (not {@code null}, unaffected)
      * @return a new object
      */
     private static SoftBodySharedSettings generateSharedSettings(Mesh mesh) {

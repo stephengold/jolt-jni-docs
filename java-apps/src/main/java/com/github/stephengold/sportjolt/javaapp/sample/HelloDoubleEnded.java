@@ -111,7 +111,7 @@ final public class HelloDoubleEnded
     /**
      * Main entry point for the HelloDoubleEnded application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloDoubleEnded application = new HelloDoubleEnded();
@@ -223,7 +223,7 @@ final public class HelloDoubleEnded
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system
      * has been stepped.
      *
-     * @param system the system that was just stepped (not null)
+     * @param system the system that was just stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
@@ -235,7 +235,7 @@ final public class HelloDoubleEnded
      * Callback invoked (by Sport-Jolt, not by Jolt Physics) before the system
      * is stepped.
      *
-     * @param system the system that's about to be stepped (not null)
+     * @param system the system that's about to be stepped (not {@code null})
      * @param timeStep the duration of the simulation step (in seconds, &ge;0)
      */
     @Override
@@ -252,7 +252,7 @@ final public class HelloDoubleEnded
     /**
      * Create a dynamic rigid body with a sphere shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addBall() {
         float radius = 0.4f;
@@ -276,7 +276,7 @@ final public class HelloDoubleEnded
     /**
      * Create a kinematic body with a box shape and add it to the system.
      *
-     * @return the new body
+     * @return the added body
      */
     private Body addBox() {
         ConstShape shape = new BoxShape(0.3f, paddleHalfHeight, 1f);

@@ -76,7 +76,7 @@ final public class HelloCharacter {
     /**
      * Main entry point for the HelloCharacter application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         FunctionalPhysicsApp fpa = new FunctionalPhysicsApp();
@@ -151,7 +151,7 @@ final public class HelloCharacter {
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's upper top face (in system
      * coordinates)
-     * @return the new body (not null)
+     * @return the added body
      */
     private static ConstBody addSquare(
             BodyInterface bi, float halfExtent, float y) {

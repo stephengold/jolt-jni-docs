@@ -76,7 +76,7 @@ final public class RunScript {
     /**
      * Main entry point for the RunScript application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         // Parse the command-line arguments:
@@ -120,7 +120,7 @@ final public class RunScript {
     /**
      * Read and evaluate the script in the specified file.
      *
-     * @param scriptFilePath path to the script file (not null)
+     * @param scriptFilePath path to the script file (not {@code null})
      */
     private static void evaluateScriptFromFile(String scriptFilePath) {
         // Create a reader for the script file:
@@ -145,8 +145,8 @@ final public class RunScript {
     /**
      * Convert the first character of the specified text to upper case.
      *
-     * @param input the input text to convert (not null)
-     * @return the converted text (not null)
+     * @param input the input text to convert (not {@code null})
+     * @return the converted text (not {@code null})
      */
     private static String firstToUpper(String input) {
         String result = input;
@@ -163,7 +163,7 @@ final public class RunScript {
     /**
      * Import the specified Java class into the script engine.
      *
-     * @param fullName the full name of the class to import (not null)
+     * @param fullName the full name of the class to import (not {@code null})
      */
     private static void importClass(String fullName) {
         int lastDotPos = fullName.lastIndexOf('.');

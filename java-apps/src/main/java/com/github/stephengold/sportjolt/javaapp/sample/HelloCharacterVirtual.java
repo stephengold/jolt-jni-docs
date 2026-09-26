@@ -102,7 +102,7 @@ final public class HelloCharacterVirtual
     /**
      * Main entry point for the HelloCharacterVirtual application.
      *
-     * @param arguments array of command-line arguments (not null)
+     * @param arguments array of command-line arguments (not {@code null})
      */
     public static void main(String[] arguments) {
         HelloCharacterVirtual application = new HelloCharacterVirtual();
@@ -229,7 +229,7 @@ final public class HelloCharacterVirtual
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's upper top face (in system
      * coordinates)
-     * @return the new body (not {@code null})
+     * @return the added body
      */
     private ConstBody addSquare(float halfExtent, float y) {
         // Create a static rigid body with a square shape:
