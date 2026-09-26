@@ -249,10 +249,10 @@ final public class HelloWalk
                 heightBuffer, offset, scale, sampleCount);
 
         ShapeRefC shapeRef = ss.create().get();
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(objLayerNonMoving);
-        bcs.setShape(shapeRef);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(objLayerNonMoving)
+                .setShape(shapeRef);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
         ConstBody result = bi.createBody(bcs);

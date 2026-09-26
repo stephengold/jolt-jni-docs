@@ -116,18 +116,18 @@ final public class HelloDeactivation {
              */
             float cubeHalfExtent = 1f;
             ConstShape largeCubeShape = new BoxShape(cubeHalfExtent);
-            bcs.setMotionType(EMotionType.Static);
-            bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving);
-            bcs.setPosition(0., 0., 0.);
-            bcs.setShape(largeCubeShape);
+            bcs.setMotionType(EMotionType.Static)
+                    .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+                    .setPosition(0., 0., 0.)
+                    .setShape(largeCubeShape);
             supportCube = bi.createBody(bcs);
             bi.addBody(supportCube, EActivation.DontActivate);
 
             // The bottom body serves as a visual reference point:
             float ballRadius = 0.5f;
             ConstShape ballShape = new SphereShape(ballRadius);
-            bcs.setPosition(0., -2., 0.);
-            bcs.setShape(ballShape);
+            bcs.setPosition(0., -2., 0.)
+                    .setShape(ballShape);
             ConstBody bottomBody = bi.createBody(bcs);
             bi.addBody(bottomBody, EActivation.DontActivate);
 

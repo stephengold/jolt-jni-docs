@@ -103,11 +103,11 @@ final public class HelloContactResponse {
             // Add a static box to the system, to serve as a platform:
             float boxHalfExtent = 3f;
             ConstShape boxShape = new BoxShape(boxHalfExtent);
-            BodyCreationSettings bcs1 = new BodyCreationSettings();
-            bcs1.setMotionType(EMotionType.Static);
-            bcs1.setObjectLayer(BasePhysicsApp.objLayerNonMoving);
-            bcs1.setPosition(0., -4., 0.);
-            bcs1.setShape(boxShape);
+            BodyCreationSettings bcs1 = new BodyCreationSettings()
+                    .setMotionType(EMotionType.Static)
+                    .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+                    .setPosition(0., -4., 0.)
+                    .setShape(boxShape);
             ConstBody box = bi.createBody(bcs1);
             bi.addBody(box, EActivation.DontActivate);
 
@@ -116,11 +116,11 @@ final public class HelloContactResponse {
             ConstShape ballShape = new SphereShape(ballRadius);
             BodyCreationSettings bcs2 = new BodyCreationSettings();
             bcs2.getMassPropertiesOverride().setMass(2f);
-            bcs2.setAllowSleeping(false); // Disable sleeping for clarity.
-            bcs2.setOverrideMassProperties(
-                    EOverrideMassProperties.CalculateInertia);
-            bcs2.setPosition(0., 4., 0.);
-            bcs2.setShape(ballShape);
+            bcs2.setAllowSleeping(false) // Disable sleeping for clarity.
+                    .setOverrideMassProperties(
+                            EOverrideMassProperties.CalculateInertia)
+                    .setPosition(0., 4., 0.)
+                    .setShape(ballShape);
             ball = bi.createBody(bcs2);
             bi.addBody(ball, EActivation.Activate);
 

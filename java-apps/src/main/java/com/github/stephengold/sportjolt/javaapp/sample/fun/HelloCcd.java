@@ -156,10 +156,10 @@ final public class HelloCcd {
         ConstShape discShape = new CylinderShape(
                 discThickness / 2f, discRadius, discConvexRadius);
 
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving);
-        bcs.setShape(discShape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+                .setShape(discShape);
 
         ConstBody result = bi.createBody(bcs);
         bi.addBody(result, EActivation.DontActivate);

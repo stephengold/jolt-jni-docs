@@ -149,10 +149,10 @@ final public class HelloCloth {
     private static void addBall(BodyInterface bi) {
         float radius = 1f;
         ConstShape shape = new SphereShape(radius);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+                .setShape(shape);
 
         ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);

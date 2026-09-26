@@ -276,10 +276,10 @@ final public class HelloBroadPhase {
     private static void addPlane(BodyInterface bi, float y) {
         ConstPlane plane = new Plane(0f, 1f, 0f, -y);
         ConstShape shape = new PlaneShape(plane);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+                .setShape(shape);
 
         ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);

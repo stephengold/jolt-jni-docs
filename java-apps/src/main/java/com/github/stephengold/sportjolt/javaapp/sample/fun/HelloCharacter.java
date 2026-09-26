@@ -158,11 +158,11 @@ final public class HelloCharacter {
         // Create a static rigid body with a square shape:
         float halfThickness = 0.1f;
         ConstShape shape = new BoxShape(halfExtent, halfThickness, halfExtent);
-        BodyCreationSettings bcs = new BodyCreationSettings();
-        bcs.setMotionType(EMotionType.Static);
-        bcs.setObjectLayer(BasePhysicsApp.objLayerNonMoving);
-        bcs.setPosition(0., y - halfThickness, 0.);
-        bcs.setShape(shape);
+        BodyCreationSettings bcs = new BodyCreationSettings()
+                .setMotionType(EMotionType.Static)
+                .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+                .setPosition(0., y - halfThickness, 0.)
+                .setShape(shape);
 
         ConstBody result = bi.createBody(bcs);
         bi.addBody(result, EActivation.DontActivate);
