@@ -167,7 +167,7 @@ class HelloCharacter : BasePhysicsApp(), PhysicsTickListener {
      * @param halfExtent half of the desired side length (in meters)
      * @param y the desired elevation of the body's upper top face (in system
      * coordinates)
-     * @return the new body (not {@code null})
+     * @return the added body
      */
     private fun addSquare(halfExtent: Float, y: Float): Body {
         // Create a static rigid body with a square shape:

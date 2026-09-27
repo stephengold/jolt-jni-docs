@@ -121,7 +121,7 @@ var application = new HelloCharacter() {
     /*
      * Add a static horizontal-square rigid body to the system.
      *
-     * return:  the new body (not null)
+     * return:  the added body
      */
     addSquare: function (halfExtent, y) {
         // Create a static rigid body with a square shape:
