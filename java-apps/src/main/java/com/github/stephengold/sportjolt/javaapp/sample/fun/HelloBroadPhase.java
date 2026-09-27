@@ -176,9 +176,6 @@ final public class HelloBroadPhase {
         });
 
         fpa.setPopulateSystem((app) -> {
-            PhysicsSystem physicsSystem = app.getPhysicsSystem();
-            BodyInterface bi = physicsSystem.getBodyInterface();
-
             // Create a character with a capsule shape and add it to the system:
             float capsuleRadius = 3f; // meters
             float capsuleHeight = 4f; // meters
@@ -190,6 +187,7 @@ final public class HelloBroadPhase {
 
             RVec3Arg startLocation = new RVec3(0., 3., 0.);
             long userData = 0L;
+            PhysicsSystem physicsSystem = app.getPhysicsSystem();
             character = new com.github.stephengold.joltjni.Character(settings,
                     startLocation, new Quat(), userData, physicsSystem);
             character.addToPhysicsSystem();
@@ -199,6 +197,7 @@ final public class HelloBroadPhase {
             new AabbGeometry(character); // outline the character's AABB
 
             // Add a plane to represent the ground:
+            BodyInterface bi = physicsSystem.getBodyInterface();
             float groundY = -2f;
             addPlane(bi, groundY);
         });
@@ -298,13 +297,13 @@ final public class HelloBroadPhase {
      * Configure the camera, projection, and CIP during initialization.
      */
     private static void configureCamera() {
-        BasePhysicsApp.getCameraInputProcessor()
+        BaseApplication.getCameraInputProcessor()
                 .setRotationMode(RotateMode.DragLMB);
-        BasePhysicsApp.getCamera()
+        BaseApplication.getCamera()
                 .setAzimuth(-1.9f)
                 .setLocation(35f, 35f, 60f)
                 .setUpAngle(-0.5f);
-        BasePhysicsApp.getProjection()
+        BaseApplication.getProjection()
                 .setFovyDegrees(30f);
     }
 
@@ -344,9 +343,9 @@ final public class HelloBroadPhase {
      * Configure lighting and the background color.
      */
     private static void configureLighting() {
-        BasePhysicsApp.setLightDirection(7f, 3f, 5f);
+        BaseApplication.setLightDirection(7f, 3f, 5f);
 
         // Set the background color to light blue:
-        BasePhysicsApp.setBackgroundColor(Constants.SKY_BLUE);
+        BaseApplication.setBackgroundColor(Constants.SKY_BLUE);
     }
 }

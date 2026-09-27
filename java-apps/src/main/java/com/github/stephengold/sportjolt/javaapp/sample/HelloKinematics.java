@@ -38,6 +38,7 @@ import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.Constants;
@@ -135,7 +136,7 @@ final public class HelloKinematics
 
         // Create a dynamic body and add it to the system:
         bcs.setPosition(0., 4., 0.);
-        Body dynaBall = bi.createBody(bcs);
+        ConstBody dynaBall = bi.createBody(bcs);
         bi.addBody(dynaBall, EActivation.Activate);
 
         // Create a kinematic body and add it to the system:

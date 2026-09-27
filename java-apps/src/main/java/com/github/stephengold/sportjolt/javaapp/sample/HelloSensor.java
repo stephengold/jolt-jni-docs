@@ -329,7 +329,7 @@ final public class HelloSensor
                 .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-        Body body = bi.createBody(bcs);
+        ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
         // Visualize the body:

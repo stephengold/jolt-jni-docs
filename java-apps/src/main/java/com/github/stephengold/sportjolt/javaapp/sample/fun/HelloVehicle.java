@@ -50,6 +50,7 @@ import com.github.stephengold.joltjni.WheeledVehicleControllerSettings;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
@@ -218,7 +219,7 @@ final public class HelloVehicle {
                 .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
                 .setShape(shape);
 
-        Body body = bi.createBody(bcs);
+        ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
         // Visualize the body:

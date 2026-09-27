@@ -45,6 +45,7 @@ import com.github.stephengold.joltjni.enumerate.EAxis;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.operator.Op;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
@@ -309,7 +310,7 @@ final public class HelloDoubleEnded
                 .setShape(shape);
 
         BodyInterface bi = physicsSystem.getBodyInterface();
-        Body body = bi.createBody(bcs);
+        ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
         // Visualize the body:

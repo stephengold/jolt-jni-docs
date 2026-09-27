@@ -49,6 +49,7 @@ import com.github.stephengold.joltjni.readonly.ConstPlane;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.BaseApplication;
+import com.github.stephengold.sportjolt.Camera;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.TextureKey;
 import com.github.stephengold.sportjolt.input.InputProcessor;
@@ -226,16 +227,17 @@ final public class HelloSensor {
                     velocity.setY(18f);
 
                 } else {
+                    Camera cam = BaseApplication.getCamera();
+
                     // Walk as directed by the arrow keys:
-                    Vec3 component1
-                            = BaseApplication.getCamera().getDirection();
+                    Vec3 component1 = cam.getDirection();
                     float backward = walkBackward ? 1f : 0f;
                     float forward = walkForward ? 1f : 0f;
                     component1.scaleInPlace(forward - backward);
 
                     float right = walkRight ? 1f : 0f;
                     float left = walkLeft ? 1f : 0f;
-                    Vec3 component2 = BaseApplication.getCamera().getRight();
+                    Vec3 component2 = cam.getRight();
                     component2.scaleInPlace(right - left);
                     Op.assign(velocity, Op.plus(component1, component2));
 
@@ -293,7 +295,7 @@ final public class HelloSensor {
                 .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
                 .setShape(shape);
 
-        Body body = bi.createBody(bcs);
+        ConstBody body = bi.createBody(bcs);
         bi.addBody(body, EActivation.DontActivate);
 
         // Visualize the body:

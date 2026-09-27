@@ -50,6 +50,7 @@ import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
+import com.github.stephengold.sportjolt.BaseApplication;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
@@ -111,10 +112,10 @@ final public class HelloCharacterVirtual {
         });
 
         fpa.setInitialize((app) -> {
-            BasePhysicsApp.setVsync(true);
-            BasePhysicsApp.getCameraInputProcessor()
+            BaseApplication.setVsync(true);
+            BaseApplication.getCameraInputProcessor()
                     .setRotationMode(RotateMode.DragLMB);
-            BasePhysicsApp.setBackgroundColor(Constants.SKY_BLUE);
+            BaseApplication.setBackgroundColor(Constants.SKY_BLUE);
 
             updateSettings = new ExtendedUpdateSettings()
                     .setStickToFloorStepDown(Vec3.sZero())

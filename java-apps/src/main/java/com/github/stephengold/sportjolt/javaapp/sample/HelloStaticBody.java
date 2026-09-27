@@ -36,6 +36,7 @@ import com.github.stephengold.joltjni.SphereShape;
 import com.github.stephengold.joltjni.enumerate.EActivation;
 import com.github.stephengold.joltjni.enumerate.EMotionType;
 import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
+import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 
@@ -117,14 +118,14 @@ final public class HelloStaticBody extends BasePhysicsApp {
 
         // Create a dynamic body and add it to the system:
         bcs.setPosition(0., 4., 0.);
-        Body dynaBall = bi.createBody(bcs);
+        ConstBody dynaBall = bi.createBody(bcs);
         bi.addBody(dynaBall, EActivation.Activate);
 
         // Create a static body and add it to the system:
         bcs.setMotionType(EMotionType.Static); // default=Dynamic
         bcs.setObjectLayer(objLayerNonMoving); // default=0
         bcs.setPosition(0.1, 0., 0.);
-        Body statBall = bi.createBody(bcs);
+        ConstBody statBall = bi.createBody(bcs);
         bi.addBody(statBall, EActivation.DontActivate);
         assert statBall.isStatic();
 
