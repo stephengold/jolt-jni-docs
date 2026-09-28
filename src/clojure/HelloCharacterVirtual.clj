@@ -63,7 +63,7 @@
     BasePhysicsApp
     FunctionalPhysicsApp]))
 
-; variables
+; variables:
 (def allBodies) ; body filter for character collisions
 (def character) ; character being tested
 (def updateSettings) ; settings for updating the character

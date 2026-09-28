@@ -62,12 +62,12 @@
    [electrostatic4j.snaploader.platform.util PlatformPredicate]
    [java.lang Runtime]))
 
-; constants
+; constants:
 (def numObjLayers 2) ; number of object layers
 (def objLayerMoving 0) ; object layer for moving objects
 (def objLayerNonMoving 1) ; object layer for non-moving objects
 
-; variables
+; variables:
 (def physicsSystem) ; system to simulate
 
 ; Create the PhysicsSystem. Invoked once during initialization.
