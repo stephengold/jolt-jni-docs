@@ -39,7 +39,6 @@ import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.BaseApplication;
-import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.FunctionalPhysicsApp;
 import org.lwjgl.glfw.GLFW;
@@ -93,7 +92,7 @@ final public class HelloDeactivation {
 
         fpa.setInitialize((app) -> {
             BaseApplication.setVsync(true);
-            configureInput(app);
+            configureInput(fpa);
         });
 
         fpa.setPopulateSystem((app) -> {
@@ -158,23 +157,21 @@ final public class HelloDeactivation {
     /**
      * Configure keyboard input during initialization.
      *
-     * @param app (not {@code null})
+     * @param fpa the application instance being initialized (not {@code null})
      */
-    private static void configureInput(BasePhysicsApp app) {
-        BaseApplication.getInputManager().add(new InputProcessor() {
-            @Override
-            public void onKeyboard(int glfwKeyId, boolean isPressed) {
-                if (glfwKeyId == GLFW.GLFW_KEY_E) {
-                    if (isPressed) {
-                        // Reactivate the dynamic cube:
-                        BodyInterface bi
-                                = app.getPhysicsSystem().getBodyInterface();
-                        bi.activateBody(dynamicCube.getId());
-                    }
-                    return;
+    private static void configureInput(FunctionalPhysicsApp fpa) {
+        fpa.addKeyboardListener((glfwKeyId, isPressed) -> {
+            if (glfwKeyId == GLFW.GLFW_KEY_E) {
+                if (isPressed) {
+                    // Reactivate the dynamic cube:
+                    BodyInterface bi
+                            = fpa.getPhysicsSystem().getBodyInterface();
+                    bi.activateBody(dynamicCube.getId());
                 }
-                super.onKeyboard(glfwKeyId, isPressed);
+                return true;
             }
+
+            return false;
         });
     }
 }

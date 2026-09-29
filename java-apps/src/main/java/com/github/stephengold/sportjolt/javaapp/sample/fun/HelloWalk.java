@@ -49,7 +49,6 @@ import com.github.stephengold.sportjolt.BaseApplication;
 import com.github.stephengold.sportjolt.Camera;
 import com.github.stephengold.sportjolt.Constants;
 import com.github.stephengold.sportjolt.Utils;
-import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.FunctionalPhysicsApp;
@@ -115,7 +114,7 @@ final public class HelloWalk {
         fpa.setInitialize((app) -> {
             BaseApplication.setVsync(true);
             configureCamera();
-            configureInput();
+            configureInput(fpa);
             configureLighting();
         });
 
@@ -239,25 +238,25 @@ final public class HelloWalk {
 
     /**
      * Configure keyboard input during initialization.
+     *
+     * @param fpa the application instance being initialized (not {@code null})
      */
-    private static void configureInput() {
-        BaseApplication.getInputManager().add(new InputProcessor() {
-            @Override
-            public void onKeyboard(int glfwKeyId, boolean isPressed) {
-                switch (glfwKeyId) {
-                    case GLFW.GLFW_KEY_SPACE:
-                        jumpRequested = isPressed;
-                        return;
+    private static void configureInput(FunctionalPhysicsApp fpa) {
+        fpa.addKeyboardListener((glfwKeyId, isPressed) -> {
+            switch (glfwKeyId) {
+                case GLFW.GLFW_KEY_SPACE:
+                    jumpRequested = isPressed;
+                    return true;
 
-                    case GLFW.GLFW_KEY_W:
-                        walkRequested = isPressed;
-                        // This overrides the CameraInputProcessor.
-                        return;
+                case GLFW.GLFW_KEY_W:
+                    walkRequested = isPressed;
+                    // This overrides the CameraInputProcessor.
+                    return true;
 
-                    default:
-                }
-                super.onKeyboard(glfwKeyId, isPressed);
+                default:
             }
+
+            return false;
         });
     }
 

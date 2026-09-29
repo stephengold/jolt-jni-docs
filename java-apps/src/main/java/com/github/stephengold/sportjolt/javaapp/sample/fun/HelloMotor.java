@@ -55,7 +55,6 @@ import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.joltjni.readonly.Vec3Arg;
 import com.github.stephengold.sportjolt.BaseApplication;
 import com.github.stephengold.sportjolt.Constants;
-import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.ConstraintGeometry;
@@ -109,7 +108,7 @@ final public class HelloMotor {
         fpa.setInitialize((app) -> {
             BaseApplication.setVsync(true);
             configureCamera();
-            configureInput();
+            configureInput(fpa);
             configureLighting();
         });
 
@@ -228,26 +227,25 @@ final public class HelloMotor {
 
     /**
      * Configure keyboard input during initialization.
+     *
+     * @param fpa the application instance being initialized (not {@code null})
      */
-    private static void configureInput() {
-        BaseApplication.getInputManager().add(new InputProcessor() {
-            @Override
-            public void onKeyboard(int glfwKeyId, boolean isPressed) {
-                if (glfwKeyId == GLFW.GLFW_KEY_SPACE) {
-                    if (isPressed) { // Reverse the motor's direction:
-                        Vec3Arg targetVelocity
-                                = constraint.getTargetAngularVelocityCs();
-                        if (targetVelocity.length() < 0.1f) { // not moving
-                            targetVelocity = new Vec3(0f, 1f, 0f);
-                        } else {
-                            targetVelocity = Op.minus(targetVelocity);
-                        }
-                        constraint.setTargetAngularVelocityCs(targetVelocity);
+    private static void configureInput(FunctionalPhysicsApp fpa) {
+        fpa.addKeyboardListener((glfwKeyId, isPressed) -> {
+            if (glfwKeyId == GLFW.GLFW_KEY_SPACE) {
+                if (isPressed) { // Reverse the motor's direction:
+                    Vec3Arg targetVelocity
+                            = constraint.getTargetAngularVelocityCs();
+                    if (targetVelocity.length() < 0.1f) { // not moving
+                        targetVelocity = new Vec3(0f, 1f, 0f);
+                    } else {
+                        targetVelocity = Op.minus(targetVelocity);
                     }
-                    return;
+                    constraint.setTargetAngularVelocityCs(targetVelocity);
                 }
-                super.onKeyboard(glfwKeyId, isPressed);
+                return true;
             }
+            return false;
         });
     }
 

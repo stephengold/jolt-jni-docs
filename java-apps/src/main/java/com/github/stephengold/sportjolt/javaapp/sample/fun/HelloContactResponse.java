@@ -40,7 +40,6 @@ import com.github.stephengold.joltjni.enumerate.EOverrideMassProperties;
 import com.github.stephengold.joltjni.readonly.ConstBody;
 import com.github.stephengold.joltjni.readonly.ConstShape;
 import com.github.stephengold.sportjolt.BaseApplication;
-import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.FunctionalPhysicsApp;
 import org.lwjgl.glfw.GLFW;
@@ -94,7 +93,7 @@ final public class HelloContactResponse {
 
         fpa.setInitialize((app) -> {
             BaseApplication.setVsync(true);
-            configureInput();
+            configureInput(fpa);
         });
 
         fpa.setPopulateSystem((app) -> {
@@ -136,20 +135,20 @@ final public class HelloContactResponse {
 
     /**
      * Configure keyboard input during initialization.
+     *
+     * @param fpa the application instance being initialized (not {@code null})
      */
-    private static void configureInput() {
-        BaseApplication.getInputManager().add(new InputProcessor() {
-            @Override
-            public void onKeyboard(int glfwKeyId, boolean isPressed) {
-                if (glfwKeyId == GLFW.GLFW_KEY_E) {
-                    if (isPressed) {
-                        // Disable the ball's contact response:
-                        ball.setIsSensor(true);
-                    }
-                    return;
+    private static void configureInput(FunctionalPhysicsApp fpa) {
+        fpa.addKeyboardListener((glfwKeyId, isPressed) -> {
+            if (glfwKeyId == GLFW.GLFW_KEY_E) {
+                if (isPressed) {
+                    // Disable the ball's contact response:
+                    ball.setIsSensor(true);
                 }
-                super.onKeyboard(glfwKeyId, isPressed);
+                return true;
             }
+
+            return false;
         });
     }
 }

@@ -52,7 +52,6 @@ import com.github.stephengold.joltjni.readonly.QuatArg;
 import com.github.stephengold.joltjni.readonly.RVec3Arg;
 import com.github.stephengold.sportjolt.BaseApplication;
 import com.github.stephengold.sportjolt.Constants;
-import com.github.stephengold.sportjolt.input.InputProcessor;
 import com.github.stephengold.sportjolt.input.RotateMode;
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp;
 import com.github.stephengold.sportjolt.physics.ConstraintGeometry;
@@ -106,7 +105,7 @@ final public class HelloServo {
         fpa.setInitialize((app) -> {
             BaseApplication.setVsync(true);
             configureCamera();
-            configureInput();
+            configureInput(fpa);
             configureLighting();
         });
 
@@ -222,52 +221,51 @@ final public class HelloServo {
 
     /**
      * Configure keyboard input during initialization.
+     *
+     * @param fpa the application instance being initialized (not {@code null})
      */
-    private static void configureInput() {
-        BaseApplication.getInputManager().add(new InputProcessor() {
-            @Override
-            public void onKeyboard(int glfwKeyId, boolean isPressed) {
-                switch (glfwKeyId) {
-                    case GLFW.GLFW_KEY_1:
-                    case GLFW.GLFW_KEY_F1:
-                    case GLFW.GLFW_KEY_KP_1:
-                        if (isPressed) { // Target the fully open position:
-                            QuatArg target = Quat.sEulerAngles(0f, 1.2f, 0f);
-                            constraint.setTargetOrientationCs(target);
-                        }
-                        return;
+    private static void configureInput(FunctionalPhysicsApp fpa) {
+        fpa.addKeyboardListener((glfwKeyId, isPressed) -> {
+            switch (glfwKeyId) {
+                case GLFW.GLFW_KEY_1:
+                case GLFW.GLFW_KEY_F1:
+                case GLFW.GLFW_KEY_KP_1:
+                    if (isPressed) { // Target the fully open position:
+                        QuatArg target = Quat.sEulerAngles(0f, 1.2f, 0f);
+                        constraint.setTargetOrientationCs(target);
+                    }
+                    return true;
 
-                    case GLFW.GLFW_KEY_2:
-                    case GLFW.GLFW_KEY_F2:
-                    case GLFW.GLFW_KEY_KP_2:
-                        if (isPressed) {
-                            QuatArg target = Quat.sEulerAngles(0f, 0.8f, 0f);
-                            constraint.setTargetOrientationCs(target);
-                        }
-                        return;
+                case GLFW.GLFW_KEY_2:
+                case GLFW.GLFW_KEY_F2:
+                case GLFW.GLFW_KEY_KP_2:
+                    if (isPressed) {
+                        QuatArg target = Quat.sEulerAngles(0f, 0.8f, 0f);
+                        constraint.setTargetOrientationCs(target);
+                    }
+                    return true;
 
-                    case GLFW.GLFW_KEY_3:
-                    case GLFW.GLFW_KEY_F3:
-                    case GLFW.GLFW_KEY_KP_3:
-                        if (isPressed) {
-                            QuatArg target = Quat.sEulerAngles(0f, 0.4f, 0f);
-                            constraint.setTargetOrientationCs(target);
-                        }
-                        return;
+                case GLFW.GLFW_KEY_3:
+                case GLFW.GLFW_KEY_F3:
+                case GLFW.GLFW_KEY_KP_3:
+                    if (isPressed) {
+                        QuatArg target = Quat.sEulerAngles(0f, 0.4f, 0f);
+                        constraint.setTargetOrientationCs(target);
+                    }
+                    return true;
 
-                    case GLFW.GLFW_KEY_4:
-                    case GLFW.GLFW_KEY_F4:
-                    case GLFW.GLFW_KEY_KP_4:
-                        if (isPressed) { // Target the fully closed position:
-                            QuatArg target = new Quat();
-                            constraint.setTargetOrientationCs(target);
-                        }
-                        return;
+                case GLFW.GLFW_KEY_4:
+                case GLFW.GLFW_KEY_F4:
+                case GLFW.GLFW_KEY_KP_4:
+                    if (isPressed) { // Target the fully closed position:
+                        QuatArg target = new Quat();
+                        constraint.setTargetOrientationCs(target);
+                    }
+                    return true;
 
-                    default:
-                }
-                super.onKeyboard(glfwKeyId, isPressed);
+                default:
             }
+            return false;
         });
     }
 
