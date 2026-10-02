@@ -1,4 +1,4 @@
-Licensing history for files in "java-apps/src/main/resources/Textures/Terrain/splat"
+Licensing history for files in "scala-apps/src/main/resources/Textures/Terrain/splat"
 
 Based on "jme3-testdata":
 * download files:    mountains512.png
