@@ -40,7 +40,6 @@
     Body
     BodyCreationSettings
     BodyInterface
-    PhysicsSystem
     Quat
     RVec3
     SphereShape]

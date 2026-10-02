@@ -41,7 +41,6 @@
     BodyCreationSettings
     BodyInterface
     BoxShape
-    PhysicsSystem
     RVec3
     Vec3]
    [com.github.stephengold.joltjni.enumerate

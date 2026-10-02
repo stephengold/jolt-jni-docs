@@ -42,7 +42,6 @@
     BoxShape
     CapsuleShape
     CharacterSettings
-    PhysicsSystem
     Quat
     RVec3
     Vec3]

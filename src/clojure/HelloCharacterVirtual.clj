@@ -46,7 +46,6 @@
     CharacterVirtualSettings
     ExtendedUpdateSettings
     ObjectLayerFilter
-    PhysicsSystem
     Quat
     RVec3
     ShapeFilter
