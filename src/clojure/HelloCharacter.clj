@@ -102,7 +102,8 @@
 
   (def startLocation (RVec3. 0. 2. 0.))
   (def userData 0)
-  (def character (com.github.stephengold.joltjni.Character. settings startLocation (Quat.) userData physicsSystem))
+  (def character (com.github.stephengold.joltjni.Character.
+                  settings startLocation (Quat.) userData physicsSystem))
   (.addToPhysicsSystem character)
 
   ; Add a static square to represent the ground:

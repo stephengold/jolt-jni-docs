@@ -81,7 +81,7 @@
   (.setFovyDegrees (BaseApplication/getProjection) 30.)
 
   ; Bring the near plane closer to reduce clipping:
-  (.setZClip (BaseApplication/getProjection) 0.1 1000.0))
+  (.setZClip (BaseApplication/getProjection) 0.1 1000.))
 
 ; Configure keyboard input during initialization.
 (defn configureInput [fpa]
@@ -158,7 +158,8 @@
 
   (def startLocation (RVec3. -73.6 19.09 -45.58))
   (def userData 0)
-  (def character (com.github.stephengold.joltjni.Character. settings startLocation (Quat.) userData physicsSystem))
+  (def character (com.github.stephengold.joltjni.Character.
+                  settings startLocation (Quat.) userData physicsSystem))
   (.addToPhysicsSystem character)
 
   ; Add a static heightmap to represent the ground:
