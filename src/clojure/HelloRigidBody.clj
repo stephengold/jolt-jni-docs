@@ -43,7 +43,6 @@
   (:gen-class)
   (:import
    [com.github.stephengold.joltjni
-    Body
     BodyCreationSettings
     SphereShape]
    [com.github.stephengold.joltjni.enumerate

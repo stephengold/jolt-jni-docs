@@ -37,7 +37,6 @@
   (:gen-class)
   (:import
    [com.github.stephengold.joltjni
-    Body
     BodyCreationSettings
     Quat
     RVec3

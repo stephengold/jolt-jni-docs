@@ -39,7 +39,6 @@
   (:gen-class)
   (:import
    [com.github.stephengold.joltjni
-    Body
     BodyCreationSettings
     BoxShape
     SphereShape]
