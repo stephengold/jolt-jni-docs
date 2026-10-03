@@ -39,7 +39,6 @@
    [com.github.stephengold.joltjni
     Body
     BodyCreationSettings
-    BodyInterface
     BoxShape
     RVec3
     Vec3]

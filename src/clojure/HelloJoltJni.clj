@@ -36,7 +36,6 @@
   (:import
    [com.github.stephengold.joltjni
     BodyCreationSettings
-    BodyInterface
     BroadPhaseLayerInterfaceTable
     JobSystemThreadPool
     Jolt

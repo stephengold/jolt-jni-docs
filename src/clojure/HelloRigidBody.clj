@@ -45,7 +45,6 @@
    [com.github.stephengold.joltjni
     Body
     BodyCreationSettings
-    BodyInterface
     SphereShape]
    [com.github.stephengold.joltjni.enumerate
     EActivation

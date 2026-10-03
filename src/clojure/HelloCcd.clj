@@ -38,7 +38,6 @@
   (:import
    [com.github.stephengold.joltjni
     BodyCreationSettings
-    BodyInterface
     CylinderShape
     SphereShape]
    [com.github.stephengold.joltjni.enumerate

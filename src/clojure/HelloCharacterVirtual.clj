@@ -39,7 +39,6 @@
    [com.github.stephengold.joltjni
     BodyCreationSettings
     BodyFilter
-    BodyInterface
     BoxShape
     CapsuleShape
     CharacterVirtual

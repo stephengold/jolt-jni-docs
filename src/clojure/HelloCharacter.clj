@@ -38,7 +38,6 @@
   (:import
    [com.github.stephengold.joltjni
     BodyCreationSettings
-    BodyInterface
     BoxShape
     CapsuleShape
     CharacterSettings

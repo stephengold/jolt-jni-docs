@@ -40,7 +40,6 @@
   (:import
    [com.github.stephengold.joltjni
     BodyCreationSettings
-    BodyInterface
     CapsuleShape
     CharacterSettings
     HeightFieldShapeSettings

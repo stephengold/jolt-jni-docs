@@ -39,7 +39,6 @@
    [com.github.stephengold.joltjni
     Body
     BodyCreationSettings
-    BodyInterface
     Quat
     RVec3
     SphereShape]

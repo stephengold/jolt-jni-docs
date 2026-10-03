@@ -41,7 +41,6 @@
    [com.github.stephengold.joltjni
     Body
     BodyCreationSettings
-    BodyInterface
     BoxShape
     SphereShape]
    [com.github.stephengold.joltjni.enumerate
