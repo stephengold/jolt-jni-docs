@@ -44,11 +44,9 @@
     CharacterVirtual
     CharacterVirtualSettings
     ExtendedUpdateSettings
-    ObjectLayerFilter
     Quat
     RVec3
     ShapeFilter
-    TempAllocator
     Vec3]
    [com.github.stephengold.joltjni.enumerate
     EActivation
