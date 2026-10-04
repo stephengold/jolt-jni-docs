@@ -15,6 +15,7 @@
     "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
     "HelloKinematics" ["run" "-m" "clojure.HelloKinematics"]
     "HelloRigidBody" ["run" "-m" "clojure.HelloRigidBody"]
+    "HelloSoftBody" ["run" "-m" "clojure.HelloSoftBody"]
     "HelloSport" ["run" "-m" "clojure.HelloSport"]
     "HelloStaticBody" ["run" "-m" "clojure.HelloStaticBody"]
     "HelloWalk" ["run" "-m" "clojure.HelloWalk"]
