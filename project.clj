@@ -6,6 +6,7 @@
 
 (defproject jolt-jni-docs "0.1.0-SNAPSHOT"
   :aliases {
+    "HelloBroadPhase" ["run" "-m" "clojure.HelloBroadPhase"]
     "HelloCcd" ["run" "-m" "clojure.HelloCcd"]
     "HelloCharacter" ["run" "-m" "clojure.HelloCharacter"]
     "HelloCharacterVirtual" ["run" "-m" "clojure.HelloCharacterVirtual"]
