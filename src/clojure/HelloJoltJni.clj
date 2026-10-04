@@ -155,9 +155,10 @@
   (def numWorkerThreads (.availableProcessors (Runtime/getRuntime)))
   (def jobSystem (JobSystemThreadPool. Jolt/cMaxPhysicsJobs Jolt/cMaxPhysicsBarriers numWorkerThreads))
   (def timePerStep 0.02) ; seconds
-  (dotimes [iteration 50] (do
-                            (def collisionSteps 1)
-                            (def errors (.update physicsSystem timePerStep collisionSteps tempAllocator jobSystem))
-                            (assert (= errors EPhysicsUpdateError/None))
-                            (def location (.getPosition ball))
-                            (println (.toString location)))))
+  (dotimes [iteration 50]
+    (do
+      (def collisionSteps 1)
+      (def errors (.update physicsSystem timePerStep collisionSteps tempAllocator jobSystem))
+      (assert (= errors EPhysicsUpdateError/None))
+      (def location (.getPosition ball))
+      (println (.toString location)))))
