@@ -128,7 +128,7 @@
   (def offset (Vec3. -256. 0. -256.))
   (def scale (Vec3. 1. 1. 1.))
   (def sampleCount 512)
-  (assert (= numFloats (* sampleCount sampleCount)) numFloats)
+  (assert (== numFloats (* sampleCount sampleCount)) numFloats)
   (def ss (HeightFieldShapeSettings. heightBuffer offset scale sampleCount))
 
   (def shapeRef (.get (.create ss)))
