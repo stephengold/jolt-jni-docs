@@ -116,10 +116,10 @@
 
   (def angDamping (.getAngularDamping (.getMotionProperties (aget cube 2))))
   (assert (== angDamping 0.)
-          (str/join "" ["angDamping = " (String/valueOf angDamping)]))
+          (str "angDamping = " (String/valueOf angDamping)))
   (def linDamping (.getLinearDamping (.getMotionProperties (aget cube 2))))
   (assert (== linDamping (float 0.9))
-          (str/join "" ["linDamping = " (String/valueOf linDamping)]))
+          (str "linDamping = " (String/valueOf linDamping)))
 
   ; Apply an off-center impulse to each cube,
   ; causing it to drift and spin:
