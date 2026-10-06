@@ -53,14 +53,13 @@
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
   ; For simplicity, use a single broadphase layer:
-  (def maxBodies 3)
-  (def numBpLayers 1)
-  (def result (.createSystem app maxBodies numBpLayers))
-
-  ; Increase gravity to make the balls fall faster:
-  (.setGravity result 0. -100. 0.)
-
-  result)
+  (let [maxBodies 3
+        numBpLayers 1
+        result (.createSystem app maxBodies numBpLayers)]
+    (do
+      ; Increase gravity to make the balls fall faster:
+      (.setGravity result 0. -100. 0.)
+      result)))
 
 ; Initialize the application. Invoked once.
 (defn initialize [app]

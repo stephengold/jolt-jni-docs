@@ -68,11 +68,9 @@
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
   ; For simplicity, use a single broadphase layer:
-  (def maxBodies 2)
-  (def numBpLayers 1)
-  (def result (.createSystem app maxBodies numBpLayers))
-
-  result)
+  (let [maxBodies 2
+        numBpLayers 1]
+    (.createSystem app maxBodies numBpLayers)))
 
 ; Configure the projection and CIP during initialization.
 (defn configureCamera []
