@@ -53,6 +53,9 @@ Here's the recommended procedure for building desktop libraries:
 ... extract the contents of the saved ZIP file
 ... `cd` to the extracted directory
 . Edit the "gradle.properties" file to configure the build.
+. If you set "useMTL" or "useVK", you might also need to install the Vulkan SDK:
+.. browse to https://vulkan.lunarg.com/sdk/home
+.. follow the install instructions for your build platform
 . Run the https://gradle.org[Gradle] wrapper on the desktop build script:
 .. using Bash or Fish or PowerShell or Zsh: `./gradlew build`
 .. using Windows Command Prompt: `.\gradlew build`
