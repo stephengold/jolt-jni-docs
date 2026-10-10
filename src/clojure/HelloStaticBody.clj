@@ -91,8 +91,9 @@
   (BasePhysicsApp/visualizeShape statBall))
 
 (defn -main "main entry point for the HelloStaticBody application" [& arguments]
-  (def fpa (FunctionalPhysicsApp.))
-  (.setCreateSystem fpa createSystem)
-  (.setInitialize fpa initialize)
-  (.setPopulateSystem fpa populateSystem)
-  (.start fpa "HelloStaticBody"))
+  (let [fpa (FunctionalPhysicsApp.)]
+    (do
+      (.setCreateSystem fpa createSystem)
+      (.setInitialize fpa initialize)
+      (.setPopulateSystem fpa populateSystem)
+      (.start fpa "HelloStaticBody"))))

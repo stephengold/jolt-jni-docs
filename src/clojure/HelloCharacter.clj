@@ -123,10 +123,11 @@
     (.setLinearVelocity character 0. 8. 0.)))
 
 (defn -main "main entry point for the HelloCharacter application" [& arguments]
-  (def fpa (FunctionalPhysicsApp.))
-  (.setCreateSystem fpa createSystem)
-  (.setInitialize fpa initialize)
-  (.setPopulateSystem fpa populateSystem)
-  (.setPostPhysicsTick fpa postPhysicsTick)
-  (.setPrePhysicsTick fpa prePhysicsTick)
-  (.start fpa "HelloCharacter"))
+  (let [fpa (FunctionalPhysicsApp.)]
+    (do
+      (.setCreateSystem fpa createSystem)
+      (.setInitialize fpa initialize)
+      (.setPopulateSystem fpa populateSystem)
+      (.setPostPhysicsTick fpa postPhysicsTick)
+      (.setPrePhysicsTick fpa prePhysicsTick)
+      (.start fpa "HelloCharacter"))))

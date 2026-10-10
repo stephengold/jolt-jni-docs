@@ -147,8 +147,9 @@
   (EdgesGeometry. body))
 
 (defn -main "main entry point for the HelloSoftBody application" [& arguments]
-  (def fpa (FunctionalPhysicsApp.))
-  (.setCreateSystem fpa createSystem)
-  (.setInitialize fpa initialize)
-  (.setPopulateSystem fpa populateSystem)
-  (.start fpa "HelloSoftBody"))
+  (let [fpa (FunctionalPhysicsApp.)]
+    (do
+      (.setCreateSystem fpa createSystem)
+      (.setInitialize fpa initialize)
+      (.setPopulateSystem fpa populateSystem)
+      (.start fpa "HelloSoftBody"))))

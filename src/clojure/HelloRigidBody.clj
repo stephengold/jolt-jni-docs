@@ -109,9 +109,10 @@
   result)
 
 (defn -main "main entry point for the HelloRigidBody application" [& arguments]
-  (def fpa (FunctionalPhysicsApp.))
-  (.setCreateSystem fpa createSystem)
-  (.setInitialize fpa initialize)
-  (.setPopulateSystem fpa populateSystem)
-  (.setAdvanceAmount fpa advanceAmount)
-  (.start fpa "HelloRigidBody"))
+  (let [fpa (FunctionalPhysicsApp.)]
+    (do
+      (.setCreateSystem fpa createSystem)
+      (.setInitialize fpa initialize)
+      (.setPopulateSystem fpa populateSystem)
+      (.setAdvanceAmount fpa advanceAmount)
+      (.start fpa "HelloRigidBody"))))

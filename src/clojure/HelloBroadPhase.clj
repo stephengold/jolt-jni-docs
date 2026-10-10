@@ -253,10 +253,11 @@
   (.setLinearVelocity character velocity))
 
 (defn -main "main entry point for the HelloBroadPhase application" [& arguments]
-  (def fpa (FunctionalPhysicsApp.))
-  (.setCreateSystem fpa createSystem)
-  (.setInitialize fpa initialize)
-  (.setPopulateSystem fpa populateSystem)
-  (.setPostPhysicsTick fpa postPhysicsTick)
-  (.setPrePhysicsTick fpa prePhysicsTick)
-  (.start fpa "HelloBroadPhase"))
+  (let [fpa (FunctionalPhysicsApp.)]
+    (do
+      (.setCreateSystem fpa createSystem)
+      (.setInitialize fpa initialize)
+      (.setPopulateSystem fpa populateSystem)
+      (.setPostPhysicsTick fpa postPhysicsTick)
+      (.setPrePhysicsTick fpa prePhysicsTick)
+      (.start fpa "HelloBroadPhase"))))

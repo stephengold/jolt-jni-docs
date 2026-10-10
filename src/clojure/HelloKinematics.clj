@@ -107,9 +107,10 @@
   (.moveKinematic kineBall location (Quat.) timeStep))
 
 (defn -main "main entry point for the HelloKinematics application" [& arguments]
-  (def fpa (FunctionalPhysicsApp.))
-  (.setCreateSystem fpa createSystem)
-  (.setInitialize fpa initialize)
-  (.setPopulateSystem fpa populateSystem)
-  (.setPostPhysicsTick fpa postPhysicsTick)
-  (.start fpa "HelloKinematics"))
+  (let [fpa (FunctionalPhysicsApp.)]
+    (do
+      (.setCreateSystem fpa createSystem)
+      (.setInitialize fpa initialize)
+      (.setPopulateSystem fpa populateSystem)
+      (.setPostPhysicsTick fpa postPhysicsTick)
+      (.start fpa "HelloKinematics"))))

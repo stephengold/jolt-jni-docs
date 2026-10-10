@@ -130,9 +130,10 @@
   result)
 
 (defn -main "main entry point for the HelloCcd application" [& arguments]
-  (def fpa (FunctionalPhysicsApp.))
-  (.setCreateSystem fpa createSystem)
-  (.setInitialize fpa initialize)
-  (.setPopulateSystem fpa populateSystem)
-  (.setAdvanceAmount fpa advanceAmount)
-  (.start fpa "HelloCcd"))
+  (let [fpa (FunctionalPhysicsApp.)]
+    (do
+      (.setCreateSystem fpa createSystem)
+      (.setInitialize fpa initialize)
+      (.setPopulateSystem fpa populateSystem)
+      (.setAdvanceAmount fpa advanceAmount)
+      (.start fpa "HelloCcd"))))
