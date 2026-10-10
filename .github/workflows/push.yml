@@ -52,14 +52,14 @@ jobs:
 
   # DeLaGuardo/setup-clojure isn't compatible with Windows
 
-  Java25-MacOS:
+  Java27-MacOS:
     if: contains(toJson(github.event.commits), '[ci skip] ') == false
     runs-on: macos-26-intel
     steps:
       - uses: actions/setup-java@v6
         with:
           distribution: 'liberica'
-          java-version: '25'
+          java-version: '27'
       - uses: actions/checkout@v7
       - uses: gradle/actions/setup-gradle@v6
       - run: ./gradlew build install javadoc HelloJoltJni --console=plain --stacktrace
