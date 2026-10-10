@@ -88,7 +88,7 @@
         numBpLayers 1]
     (.createSystem app maxBodies numBpLayers)))
 
-; Configure the projection and CIP during initialization.
+; Configure the camera, projection, and CIP during initialization.
 (defn configureCamera []
   (.setRotationMode (BaseApplication/getCameraInputProcessor) RotateMode/DragLMB)
   (def cam (BaseApplication/getCamera))
