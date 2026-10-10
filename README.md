@@ -45,7 +45,7 @@ Complete source code is provided under
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
 3. Download and extract the jolt-jni-docs source code from GitHub:
   + using [Git]:
-    + `git clone https://github.com/stephengold/jolt-jni-docs.git`
+    + `git clone https://github.com/stephengold/jolt-jni-docs`
     + `cd jolt-jni-docs`
 4. Run the [Gradle] wrapper:
   + using Bash or Fish or PowerShell or Zsh: `./gradlew build`

@@ -43,7 +43,7 @@ Here's the recommended procedure for building desktop libraries:
 .. using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
 . Download and extract the {ProjectAdj} source code from GitHub:
 .. using https://git-scm.com[Git]:
-... `git clone https://github.com/stephengold/jolt-jni.git`
+... `git clone https://github.com/stephengold/jolt-jni`
 ... `cd jolt-jni`
 ... `git checkout -b latest 6.1.1`
 .. using a web browser:
@@ -115,7 +115,7 @@ you can install them to your local Maven repository.
 
 . Download and extract the jolt-jni-docs source code from GitHub:
 .. using Git:
-... `git clone https://github.com/stephengold/jolt-jni-docs.git`
+... `git clone https://github.com/stephengold/jolt-jni-docs`
 ... `cd jolt-jni-docs`
 .. using a web browser:
 ... browse to https://github.com/stephengold/jolt-jni-docs/archive/refs/heads/master.zip

@@ -400,7 +400,7 @@ for this purpose!
 For instance, if you install Git and a Java Development Kit,
 you should be able to launch tutorial apps from a command shell, like so:
 
-. `git clone https://github.com/stephengold/jolt-jni-docs.git`
+. `git clone https://github.com/stephengold/jolt-jni-docs`
 . `cd jolt-jni-docs`
 . `./gradlew :java-apps:HelloJoltJni`
 ====

@@ -49,7 +49,7 @@ The following demos are found in
 .. using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
 . Download and extract the source code from GitHub:
 .. using https://git-scm.com[Git]:
-... `git clone https://github.com/stephengold/sport-jolt.git`
+... `git clone https://github.com/stephengold/sport-jolt`
 ... `cd sport-jolt`
 ... `git checkout -b latest 3.0.1`
 . Edit the "gradle.properties" file to configure the build.
