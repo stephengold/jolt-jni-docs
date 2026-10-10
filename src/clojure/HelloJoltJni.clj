@@ -72,93 +72,95 @@
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem []
   ; For simplicity, use a single broadphase layer:
-  (def numBpLayers 1)
+  (let [numBpLayers 1
+        ovoFilter (ObjectLayerPairFilterTable. numObjLayers)]
+    (do
+      ; Enable collisions between 2 moving bodies:
+      (.enableCollision ovoFilter objLayerMoving objLayerMoving)
+      ; Enable collisions between a moving body and a non-moving one:
+      (.enableCollision ovoFilter objLayerMoving objLayerNonMoving)
+      ; Disable collisions between 2 non-moving bodies:
+      (.disableCollision ovoFilter objLayerNonMoving objLayerNonMoving)
 
-  (def ovoFilter (ObjectLayerPairFilterTable. numObjLayers))
-  ; Enable collisions between 2 moving bodies:
-  (.enableCollision ovoFilter objLayerMoving objLayerMoving)
-  ; Enable collisions between a moving body and a non-moving one:
-  (.enableCollision ovoFilter objLayerMoving objLayerNonMoving)
-  ; Disable collisions between 2 non-moving bodies:
-  (.disableCollision ovoFilter objLayerNonMoving objLayerNonMoving)
+      ; Map both object layers to broadphase layer 0:
+      (let [layerMap (BroadPhaseLayerInterfaceTable. numObjLayers numBpLayers)]
+        (do
+          (.mapObjectToBroadPhaseLayer layerMap objLayerMoving 0)
+          (.mapObjectToBroadPhaseLayer layerMap objLayerNonMoving 0)
 
-  ; Map both object layers to broadphase layer 0:
-  (def layerMap (BroadPhaseLayerInterfaceTable. numObjLayers numBpLayers))
-  (.mapObjectToBroadPhaseLayer layerMap objLayerMoving 0)
-  (.mapObjectToBroadPhaseLayer layerMap objLayerNonMoving 0)
-
-  ; Rules for colliding object layers with broadphase layers:
-  (def ovbFilter (ObjectVsBroadPhaseLayerFilterTable. layerMap numBpLayers ovoFilter numObjLayers))
-
-  (def result (PhysicsSystem.))
-
-  ; Set high limits, even though this sample app uses only 2 bodies:
-  (def maxBodies 5000)
-  (def numBodyMutexes 0) ; 0 means "use the default number"
-  (def maxBodyPairs 65536)
-  (def maxContacts 20480)
-  (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter)
-  result)
+          ; Rules for colliding object layers with broadphase layers:
+          (let [ovbFilter (ObjectVsBroadPhaseLayerFilterTable. layerMap numBpLayers ovoFilter numObjLayers)
+                result (PhysicsSystem.)]
+            ; Set high limits, even though this sample app uses only 2 bodies:
+            (let [maxBodies 5000
+                  numBodyMutexes 0 ; 0 means "use the default number"
+                  maxBodyPairs 65536
+                  maxContacts 20480]
+              (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter))))))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem []
-  (def bi (.getBodyInterface physicsSystem))
+  (let [bi (.getBodyInterface physicsSystem)
 
-  ; Add a static horizontal plane at y=-1:
-  (def groundY -1.)
-  (def normal (Vec3/sAxisY))
-  (def plane (Plane. normal (- groundY)))
-  (def floorShape (PlaneShape. plane))
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs objLayerNonMoving)
-  (.setShape bcs floorShape)
-  (def floor (.createBody bi bcs))
-  (.addBody bi floor EActivation/DontActivate)
+        ; Add a static horizontal plane at y=-1:
+        groundY -1.
+        normal (Vec3/sAxisY)
+        plane (Plane. normal (- groundY))
+        floorShape (PlaneShape. plane)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs EMotionType/Static)
+      (.setObjectLayer bcs objLayerNonMoving)
+      (.setShape bcs floorShape)
+      (let [floor (.createBody bi bcs)]
+        (.addBody bi floor EActivation/DontActivate))
 
-  ; Add a sphere-shaped, dynamic, rigid body at the origin:
-  (def ballRadius 0.3)
-  (def ballShape (SphereShape. ballRadius))
-  (.setMotionType bcs EMotionType/Dynamic)
-  (.setObjectLayer bcs objLayerMoving)
-  (.setShape bcs ballShape)
-  (def ball (.createBody bi bcs))
-  (.addBody bi ball EActivation/Activate))
+      ; Add a sphere-shaped, dynamic, rigid body at the origin:
+      (let [ballRadius 0.3
+            ballShape (SphereShape. ballRadius)]
+        (do
+          (.setMotionType bcs EMotionType/Dynamic)
+          (.setObjectLayer bcs objLayerMoving)
+          (.setShape bcs ballShape)
+          (def ball (.createBody bi bcs))
+          (.addBody bi ball EActivation/Activate))))))
 
 (defn -main "main entry point for the HelloJoltJni application" [& arguments]
-  (def info (LibraryInfo. nil "joltjni" DirectoryPath/USER_DIR))
-  (def loader (NativeBinaryLoader. info))
-  (def libraries (into-array NativeDynamicLibrary [(NativeDynamicLibrary. "linux/aarch64/com/github/stephengold" PlatformPredicate/LINUX_ARM_64)
-                                                   (NativeDynamicLibrary. "linux/armhf/com/github/stephengold" PlatformPredicate/LINUX_ARM_32)
-                                                   (NativeDynamicLibrary. "linux/x86-64/com/github/stephengold" PlatformPredicate/LINUX_X86_64)
-                                                   (NativeDynamicLibrary. "osx/aarch64/com/github/stephengold" PlatformPredicate/MACOS_ARM_64)
-                                                   (NativeDynamicLibrary. "osx/x86-64/com/github/stephengold" PlatformPredicate/MACOS_X86_64)
-                                                   (NativeDynamicLibrary. "windows/aarch64/com/github/stephengold" PlatformPredicate/WIN_ARM_64)
-                                                   (NativeDynamicLibrary. "windows/x86-64/com/github/stephengold" PlatformPredicate/WIN_X86_64)]))
-  (.initPlatformLibrary (.registerNativeLibraries loader libraries))
-  (.loadLibrary loader LoadingCriterion/CLEAN_EXTRACTION)
-
-  ;(Jolt/setTraceAllocations true) ; to log Jolt-JNI heap allocations
-  (JoltPhysicsObject/startCleaner) ; to reclaim native memory
-  (Jolt/registerDefaultAllocator) ; tell Jolt Physics to use malloc/free
-  (Jolt/installDefaultAssertCallback)
-  (Jolt/installDefaultTraceCallback)
-  (def success (Jolt/newFactory))
-  (assert success)
-  (Jolt/registerTypes)
-
-  (def physicsSystem (createSystem))
-  (populateSystem)
-  (.optimizeBroadPhase physicsSystem)
-
-  (def tempAllocator (TempAllocatorMalloc.))
-  (def numWorkerThreads (.availableProcessors (Runtime/getRuntime)))
-  (def jobSystem (JobSystemThreadPool. Jolt/cMaxPhysicsJobs Jolt/cMaxPhysicsBarriers numWorkerThreads))
-  (def timePerStep 0.02) ; seconds
-  (dotimes [iteration 50]
+  (let [info (LibraryInfo. nil "joltjni" DirectoryPath/USER_DIR)
+        loader (NativeBinaryLoader. info)
+        libraries (into-array NativeDynamicLibrary
+                              [(NativeDynamicLibrary. "linux/aarch64/com/github/stephengold" PlatformPredicate/LINUX_ARM_64)
+                               (NativeDynamicLibrary. "linux/armhf/com/github/stephengold" PlatformPredicate/LINUX_ARM_32)
+                               (NativeDynamicLibrary. "linux/x86-64/com/github/stephengold" PlatformPredicate/LINUX_X86_64)
+                               (NativeDynamicLibrary. "osx/aarch64/com/github/stephengold" PlatformPredicate/MACOS_ARM_64)
+                               (NativeDynamicLibrary. "osx/x86-64/com/github/stephengold" PlatformPredicate/MACOS_X86_64)
+                               (NativeDynamicLibrary. "windows/aarch64/com/github/stephengold" PlatformPredicate/WIN_ARM_64)
+                               (NativeDynamicLibrary. "windows/x86-64/com/github/stephengold" PlatformPredicate/WIN_X86_64)])]
     (do
-      (def collisionSteps 1)
-      (def errors (.update physicsSystem timePerStep collisionSteps tempAllocator jobSystem))
-      (assert (= errors EPhysicsUpdateError/None))
-      (def location (.getPosition ball))
-      (println (.toString location)))))
+      (.initPlatformLibrary (.registerNativeLibraries loader libraries))
+      (.loadLibrary loader LoadingCriterion/CLEAN_EXTRACTION)
+
+      ;(Jolt/setTraceAllocations true) ; to log Jolt-JNI heap allocations
+      (JoltPhysicsObject/startCleaner) ; to reclaim native memory
+      (Jolt/registerDefaultAllocator) ; tell Jolt Physics to use malloc/free
+      (Jolt/installDefaultAssertCallback)
+      (Jolt/installDefaultTraceCallback)
+      (let [success (Jolt/newFactory)]
+        (assert success))
+      (Jolt/registerTypes)
+
+      (def physicsSystem (createSystem))
+      (populateSystem)
+      (.optimizeBroadPhase physicsSystem)
+
+      (let [tempAllocator (TempAllocatorMalloc.)
+            numWorkerThreads (.availableProcessors (Runtime/getRuntime))
+            jobSystem (JobSystemThreadPool. Jolt/cMaxPhysicsJobs Jolt/cMaxPhysicsBarriers numWorkerThreads)
+            timePerStep 0.02] ; seconds
+        (dotimes [iteration 50]
+          (do
+            (let [collisionSteps 1
+                  errors (.update physicsSystem timePerStep collisionSteps tempAllocator jobSystem)]
+              (do
+                (assert (= errors EPhysicsUpdateError/None))
+                (println (.toString (.getPosition ball)))))))))))
