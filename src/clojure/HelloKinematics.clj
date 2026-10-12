@@ -53,6 +53,9 @@
     FunctionalPhysicsApp]
    [java.lang Math]))
 
+; variables:
+(def kineball) ; kinematic ball, orbiting the origin
+
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
   ; For simplicity, use a single broadphase layer:
@@ -67,44 +70,46 @@
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a collision shape for balls:
-  (def ballRadius 1.)
-  (def ballShape (SphereShape. ballRadius))
+        ; Create a collision shape for balls:
+        ballRadius 1.
+        ballShape (SphereShape. ballRadius)
 
-  (def bcs (BodyCreationSettings.))
-  (.setMass (.getMassPropertiesOverride bcs) 2.)
-  (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
-  (.setShape bcs ballShape)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMass (.getMassPropertiesOverride bcs) 2.)
+      (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
+      (.setShape bcs ballShape)
 
-  ; Create a dynamic body and add it to the system:
-  (.setPosition bcs 0. 4. 0.)
-  (def dynaBall (.createBody bi bcs))
-  (.addBody bi dynaBall EActivation/Activate)
+      ; Create a dynamic body and add it to the system:
+      (.setPosition bcs 0. 4. 0.)
+      (let [dynaBall (.createBody bi bcs)]
+        (do
+          (.addBody bi dynaBall EActivation/Activate)
 
-  ; Create a kinematic body and add it to the system:
-  (.setMotionType bcs EMotionType/Kinematic)
-  (.setPosition bcs 0. 0. 0.)
-  (def kineBall (.createBody bi bcs))
-  (.addBody bi kineBall EActivation/Activate)
-  (assert (.isKinematic kineBall))
+          ; Create a kinematic body and add it to the system:
+          (.setMotionType bcs EMotionType/Kinematic)
+          (.setPosition bcs 0. 0. 0.)
+          (def kineBall (.createBody bi bcs))
+          (.addBody bi kineBall EActivation/Activate)
+          (assert (.isKinematic kineBall))
 
-  ; Visualize the shapes of both rigid bodies:
-  (BasePhysicsApp/visualizeShape dynaBall)
-  (BasePhysicsApp/visualizeShape kineBall))
+          ; Visualize the shapes of both rigid bodies:
+          (BasePhysicsApp/visualizeShape dynaBall)
+          (BasePhysicsApp/visualizeShape kineBall))))))
 
 ; Make the kinematic ball orbit the origin:
 (defn postPhysicsTick [app timeStep]
-  (def orbitalPeriod 0.8) ; seconds
-  (def phaseAngle (/ (* 2. (BasePhysicsApp/totalSimulatedTime) Math/PI) orbitalPeriod))
+  (let [orbitalPeriod 0.8 ; seconds
+        phaseAngle (/ (* 2. (BasePhysicsApp/totalSimulatedTime) Math/PI) orbitalPeriod)
 
-  (def orbitRadius 0.4) ; meters
-  (def x (* orbitRadius (Math/sin phaseAngle)))
-  (def y (* orbitRadius (Math/cos phaseAngle)))
-  (def location (RVec3. x y 0.))
-  (.moveKinematic kineBall location (Quat.) timeStep))
+        orbitRadius 0.4 ; meters
+        x (* orbitRadius (Math/sin phaseAngle))
+        y (* orbitRadius (Math/cos phaseAngle))
+        location (RVec3. x y 0.)]
+    (.moveKinematic kineBall location (Quat.) timeStep)))
 
 (defn -main "main entry point for the HelloKinematics application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
