@@ -58,33 +58,32 @@
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
   ; For simplicity, use a single broadphase layer:
-  (def numBpLayers 1)
+  (let [numBpLayers 1
+        ovoFilter (ObjectLayerPairFilterTable. BasePhysicsApp/numObjLayers)]
+    (do
+      ; Enable collisions between 2 moving bodies:
+      (.enableCollision ovoFilter BasePhysicsApp/objLayerMoving BasePhysicsApp/objLayerMoving)
+      ; Enable collisions between a moving body and a non-moving one:
+      (.enableCollision ovoFilter BasePhysicsApp/objLayerMoving BasePhysicsApp/objLayerNonMoving)
+      ; Disable collisions between 2 non-moving bodies:
+      (.disableCollision ovoFilter BasePhysicsApp/objLayerNonMoving BasePhysicsApp/objLayerNonMoving)
 
-  (def ovoFilter (ObjectLayerPairFilterTable. BasePhysicsApp/numObjLayers))
-  ; Enable collisions between 2 moving bodies:
-  (.enableCollision ovoFilter BasePhysicsApp/objLayerMoving BasePhysicsApp/objLayerMoving)
-  ; Enable collisions between a moving body and a non-moving one:
-  (.enableCollision ovoFilter BasePhysicsApp/objLayerMoving BasePhysicsApp/objLayerNonMoving)
-  ; Disable collisions between 2 non-moving bodies:
-  (.disableCollision ovoFilter BasePhysicsApp/objLayerNonMoving BasePhysicsApp/objLayerNonMoving)
+      ; Map both object layers to broadphase layer 0:
+      (let [layerMap (BroadPhaseLayerInterfaceTable. BasePhysicsApp/numObjLayers numBpLayers)]
+        (do
+          (.mapObjectToBroadPhaseLayer layerMap BasePhysicsApp/objLayerMoving 0)
+          (.mapObjectToBroadPhaseLayer layerMap BasePhysicsApp/objLayerNonMoving 0)
 
-  ; Map both object layers to broadphase layer 0:
-  (def layerMap (BroadPhaseLayerInterfaceTable. BasePhysicsApp/numObjLayers numBpLayers))
-  (.mapObjectToBroadPhaseLayer layerMap BasePhysicsApp/objLayerMoving 0)
-  (.mapObjectToBroadPhaseLayer layerMap BasePhysicsApp/objLayerNonMoving 0)
+          ; Rules for colliding object layers with broadphase layers:
+          (let [ovbFilter (ObjectVsBroadPhaseLayerFilterTable. layerMap numBpLayers ovoFilter BasePhysicsApp/numObjLayers)
+                result (PhysicsSystem.)
 
-  ; Rules for colliding object layers with broadphase layers:
-  (def ovbFilter (ObjectVsBroadPhaseLayerFilterTable. layerMap numBpLayers ovoFilter BasePhysicsApp/numObjLayers))
-
-  (def result (PhysicsSystem.))
-
-  ; Set high limits, even though this sample app uses only 2 bodies:
-  (def maxBodies 5000)
-  (def numBodyMutexes 0) ; 0 means "use the default number"
-  (def maxBodyPairs 65536)
-  (def maxContacts 20480)
-  (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter)
-  result)
+                ; Set high limits, even though this sample app uses only 2 bodies:
+                maxBodies 5000
+                numBodyMutexes 0 ; 0 means "use the default number"
+                maxBodyPairs 65536
+                maxContacts 20480]
+            (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter)))))))
 
 ; Initialize the application. Invoked once.
 (defn initialize [app]
@@ -92,33 +91,37 @@
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Add a static horizontal plane at y=-1:
-  (def groundY -1.)
-  (def normal (Vec3/sAxisY))
-  (def plane (Plane. normal (- groundY)))
-  (def floorShape (PlaneShape. plane))
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setShape bcs floorShape)
-  (def floor (.createBody bi bcs))
-  (.addBody bi floor EActivation/DontActivate)
+        ; Add a static horizontal plane at y=-1:
+        groundY -1.
+        normal (Vec3/sAxisY)
+        plane (Plane. normal (- groundY))
+        floorShape (PlaneShape. plane)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs EMotionType/Static)
+      (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+      (.setShape bcs floorShape)
+      (let [floor (.createBody bi bcs)]
+        (do
+          (.addBody bi floor EActivation/DontActivate)
 
-  ; Add a sphere-shaped, dynamic, rigid body at the origin:
-  (def ballRadius 0.3)
-  (def ballShape (SphereShape. ballRadius))
-  (.setMotionType bcs EMotionType/Dynamic)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerMoving)
-  (.setShape bcs ballShape)
-  (def ball (.createBody bi bcs))
-  (.addBody bi ball EActivation/Activate)
+          ; Add a sphere-shaped, dynamic, rigid body at the origin:
+          (let [ballRadius 0.3
+                ballShape (SphereShape. ballRadius)]
+            (do
+              (.setMotionType bcs EMotionType/Dynamic)
+              (.setObjectLayer bcs BasePhysicsApp/objLayerMoving)
+              (.setShape bcs ballShape)
+              (let [ball (.createBody bi bcs)]
+                (do
+                  (.addBody bi ball EActivation/Activate)
 
-  ; Visualize the shapes of both rigid bodies:
-  (BasePhysicsApp/visualizeShape floor)
-  (BasePhysicsApp/visualizeShape ball))
+                  ; Visualize the shapes of both rigid bodies:
+                  (BasePhysicsApp/visualizeShape floor)
+                  (BasePhysicsApp/visualizeShape ball))))))))))
 
 (defn -main "main entry point for the HelloSport application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
