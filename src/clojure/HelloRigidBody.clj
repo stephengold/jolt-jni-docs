@@ -68,38 +68,41 @@
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a collision shape for balls:
-  (def ballRadius 1.)
-  (def ballShape (SphereShape. ballRadius))
+        ; Create a collision shape for balls:
+        ballRadius 1.
+        ballShape (SphereShape. ballRadius)
 
-  (def bcs (BodyCreationSettings.))
-  (.setMass (.getMassPropertiesOverride bcs) 2.)
-  (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
-  (.setShape bcs ballShape)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMass (.getMassPropertiesOverride bcs) 2.)
+      (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
+      (.setShape bcs ballShape)
 
-  ; Create 2 balls (dynamic rigid bodies) and add them to the system:
-  (.setPosition bcs 1. 1. 0.)
-  (def ball1 (.createBody bi bcs))
-  (.addBody bi ball1 EActivation/Activate)
+      ; Create 2 balls (dynamic rigid bodies) and add them to the system:
+      (.setPosition bcs 1. 1. 0.)
+      (let [ball1 (.createBody bi bcs)]
+        (do
+          (.addBody bi ball1 EActivation/Activate)
 
-  (.setPosition bcs 5. 1. 0.)
-  (def ball2 (.createBody bi bcs))
-  (.addBody bi ball2 EActivation/Activate)
+          (.setPosition bcs 5. 1. 0.)
+          (let [ball2 (.createBody bi bcs)]
+            (do
+              (.addBody bi ball2 EActivation/Activate)
 
-  (assert (.isDynamic ball2))
-  (def actualMass (/ 1. (.getInverseMass (.getMotionProperties ball2))))
-  (assert (< (Math/abs (- actualMass 2.)) 1.e-6)
-          (str "actualMass = " (String/valueOf actualMass)))
+              (assert (.isDynamic ball2))
+              (let [actualMass (/ 1. (.getInverseMass (.getMotionProperties ball2)))]
+                (assert (< (Math/abs (- actualMass 2.)) 1.e-6)
+                        (str "actualMass = " (String/valueOf actualMass)))
 
-  ; Apply an impulse to ball2 to put it on a collision course:
-  (.addImpulse ball2 -25. 0. 0.)
+                ; Apply an impulse to ball2 to put it on a collision course:
+                (.addImpulse ball2 -25. 0. 0.)
 
-  ; Visualize the shapes of both rigid bodies:
-  (BasePhysicsApp/visualizeShape ball1)
-  (BasePhysicsApp/visualizeShape ball2))
+                ; Visualize the shapes of both rigid bodies:
+                (BasePhysicsApp/visualizeShape ball1)
+                (BasePhysicsApp/visualizeShape ball2)))))))))
 
 ; Advance the physics simulation by the specified amount.
 ; Invoked during each update.
