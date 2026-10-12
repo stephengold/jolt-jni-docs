@@ -61,34 +61,37 @@
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a collision shape for balls:
-  (def ballRadius 1.)
-  (def ballShape (SphereShape. ballRadius))
+        ; Create a collision shape for balls:
+        ballRadius 1.
+        ballShape (SphereShape. ballRadius)
 
-  (def bcs (BodyCreationSettings.))
-  (.setMass (.getMassPropertiesOverride bcs) 2.)
-  (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
-  (.setShape bcs ballShape)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMass (.getMassPropertiesOverride bcs) 2.)
+      (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
+      (.setShape bcs ballShape)
 
-  ; Create a dynamic body and add it to the system:
-  (.setPosition bcs 0. 4. 0.)
-  (def dynaBall (.createBody bi bcs))
-  (.addBody bi dynaBall EActivation/Activate)
+      ; Create a dynamic body and add it to the system:
+      (.setPosition bcs 0. 4. 0.)
+      (let [dynaBall (.createBody bi bcs)]
+        (do
+          (.addBody bi dynaBall EActivation/Activate)
 
-  ; Create a static body and add it to the system:
-  (.setMotionType bcs EMotionType/Static) ; default=Dynamic
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setPosition bcs 0.1 0. 0.)
-  (def statBall (.createBody bi bcs))
-  (.addBody bi statBall EActivation/DontActivate)
-  (assert (.isStatic statBall))
+          ; Create a static body and add it to the system:
+          (.setMotionType bcs EMotionType/Static) ; default=Dynamic
+          (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+          (.setPosition bcs 0.1 0. 0.)
+          (let [statBall (.createBody bi bcs)]
+            (do
+              (.addBody bi statBall EActivation/DontActivate)
+              (assert (.isStatic statBall))
 
-  ; Visualize the shapes of both rigid bodies:
-  (BasePhysicsApp/visualizeShape dynaBall)
-  (BasePhysicsApp/visualizeShape statBall))
+              ; Visualize the shapes of both rigid bodies:
+              (BasePhysicsApp/visualizeShape dynaBall)
+              (BasePhysicsApp/visualizeShape statBall))))))))
 
 (defn -main "main entry point for the HelloStaticBody application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
