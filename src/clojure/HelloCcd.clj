@@ -126,8 +126,7 @@
 ; Invoked during each update.
 (defn advanceAmount [app wallClockSeconds]
   ; For clarity, simulate at 1/10th normal speed:
-  (def result (* 0.1 wallClockSeconds))
-  result)
+  (* 0.1 wallClockSeconds))
 
 (defn -main "main entry point for the HelloCcd application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
