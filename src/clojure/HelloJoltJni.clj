@@ -67,6 +67,7 @@
 (def objLayerNonMoving 1) ; object layer for non-moving objects
 
 ; variables:
+(def ball) ; falling rigid body
 (def physicsSystem) ; system to simulate
 
 ; Create the PhysicsSystem. Invoked once during initialization.
@@ -90,13 +91,14 @@
 
           ; Rules for colliding object layers with broadphase layers:
           (let [ovbFilter (ObjectVsBroadPhaseLayerFilterTable. layerMap numBpLayers ovoFilter numObjLayers)
-                result (PhysicsSystem.)]
-            ; Set high limits, even though this sample app uses only 2 bodies:
-            (let [maxBodies 5000
-                  numBodyMutexes 0 ; 0 means "use the default number"
-                  maxBodyPairs 65536
-                  maxContacts 20480]
-              (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter))))))))
+                result (PhysicsSystem.)
+
+                ; Set high limits, even though this sample app uses only 2 bodies:
+                maxBodies 5000
+                numBodyMutexes 0 ; 0 means "use the default number"
+                maxBodyPairs 65536
+                maxContacts 20480]
+            (.init result maxBodies numBodyMutexes maxBodyPairs maxContacts layerMap ovbFilter ovoFilter)))))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem []
