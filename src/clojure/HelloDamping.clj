@@ -69,68 +69,69 @@
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a collision shape for unit cubes:
-  (def cubeHalfExtent 0.5)
-  (def cubeShape (BoxShape. (float cubeHalfExtent)))
+        ; Create a collision shape for unit cubes:
+        cubeHalfExtent 0.5
+        cubeShape (BoxShape. (float cubeHalfExtent))
 
-  (def bcs (BodyCreationSettings.))
-  (.setAllowSleeping bcs false)
-  (.setMass (.getMassPropertiesOverride bcs) 2.)
-  (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerMoving)
-  (.setShape bcs cubeShape)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setAllowSleeping bcs false)
+      (.setMass (.getMassPropertiesOverride bcs) 2.)
+      (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
+      (.setObjectLayer bcs BasePhysicsApp/objLayerMoving)
+      (.setShape bcs cubeShape)
 
-  ; Create 4 cubes (dynamic rigid bodies) and add them to the system.
-  ; Give each cube its own set of damping parameters.
-  ; Locate the cubes 4 meters apart, center to center.
-  (def numCubes 4)
-  (def cube (make-array Body numCubes))
+      ; Create 4 cubes (dynamic rigid bodies) and add them to the system.
+      ; Give each cube its own set of damping parameters.
+      ; Locate the cubes 4 meters apart, center to center.
+      (let [numCubes 4
+            cube (make-array Body numCubes)]
+        (do
+          (.setAngularDamping bcs 0.)
+          (.setLinearDamping bcs 0.)
+          (.setPosition bcs 0. +2. 0.)
+          (aset cube 0 (.createBody bi bcs))
+          (.addBody bi (aget cube 0) EActivation/Activate)
 
-  (.setAngularDamping bcs 0.)
-  (.setLinearDamping bcs 0.)
-  (.setPosition bcs 0. +2. 0.)
-  (aset cube 0 (.createBody bi bcs))
-  (.addBody bi (aget cube 0) EActivation/Activate)
+          (.setAngularDamping bcs 0.9)
+          (.setLinearDamping bcs 0.)
+          (.setPosition bcs 4. +2. 0.)
+          (aset cube 1 (.createBody bi bcs))
+          (.addBody bi (aget cube 1) EActivation/Activate)
 
-  (.setAngularDamping bcs 0.9)
-  (.setLinearDamping bcs 0.)
-  (.setPosition bcs 4. +2. 0.)
-  (aset cube 1 (.createBody bi bcs))
-  (.addBody bi (aget cube 1) EActivation/Activate)
+          (.setAngularDamping bcs 0.)
+          (.setLinearDamping bcs 0.9)
+          (.setPosition bcs 0. -2. 0.)
+          (aset cube 2 (.createBody bi bcs))
+          (.addBody bi (aget cube 2) EActivation/Activate)
 
-  (.setAngularDamping bcs 0.)
-  (.setLinearDamping bcs 0.9)
-  (.setPosition bcs 0. -2. 0.)
-  (aset cube 2 (.createBody bi bcs))
-  (.addBody bi (aget cube 2) EActivation/Activate)
+          (.setAngularDamping bcs 0.9)
+          (.setLinearDamping bcs 0.9)
+          (.setPosition bcs 4. -2. 0.)
+          (aset cube 3 (.createBody bi bcs))
+          (.addBody bi (aget cube 3) EActivation/Activate)
 
-  (.setAngularDamping bcs 0.9)
-  (.setLinearDamping bcs 0.9)
-  (.setPosition bcs 4. -2. 0.)
-  (aset cube 3 (.createBody bi bcs))
-  (.addBody bi (aget cube 3) EActivation/Activate)
+          (let [angDamping (.getAngularDamping (.getMotionProperties (aget cube 2)))]
+            (assert (== angDamping 0.)
+                    (str "angDamping = " (String/valueOf angDamping))))
+          (let [linDamping (.getLinearDamping (.getMotionProperties (aget cube 2)))]
+            (assert (== linDamping (float 0.9))
+                    (str "linDamping = " (String/valueOf linDamping))))
 
-  (def angDamping (.getAngularDamping (.getMotionProperties (aget cube 2))))
-  (assert (== angDamping 0.)
-          (str "angDamping = " (String/valueOf angDamping)))
-  (def linDamping (.getLinearDamping (.getMotionProperties (aget cube 2))))
-  (assert (== linDamping (float 0.9))
-          (str "linDamping = " (String/valueOf linDamping)))
+          ; Apply an off-center impulse to each cube,
+          ; causing it to drift and spin:
+          (let [impulse (Vec3. -1. 0. 0.)
+                offset (RVec3. 0. 1. 1.)]
+            (dotimes [cubeIndex numCubes]
+              (let [center (.getCenterOfMassPosition (aget cube cubeIndex))]
+                (.addImpulse (aget cube cubeIndex) impulse (Op/plus center offset)))))
 
-  ; Apply an off-center impulse to each cube,
-  ; causing it to drift and spin:
-  (def impulse (Vec3. -1. 0. 0.))
-  (def offset (RVec3. 0. 1. 1.))
-  (dotimes [cubeIndex numCubes]
-    (let [center (.getCenterOfMassPosition (aget cube cubeIndex))]
-      (.addImpulse (aget cube cubeIndex) impulse (Op/plus center offset))))
-
-  ; Visualize the shapes of all 4 cubes:
-  (dotimes [cubeIndex numCubes]
-    (BasePhysicsApp/visualizeShape (aget cube cubeIndex))))
+          ; Visualize the shapes of all 4 cubes:
+          (dotimes [cubeIndex numCubes]
+            (BasePhysicsApp/visualizeShape (aget cube cubeIndex))))))))
 
 (defn -main "main entry point for the HelloDamping application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
