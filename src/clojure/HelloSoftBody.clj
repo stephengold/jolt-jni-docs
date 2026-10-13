@@ -77,74 +77,77 @@
 
 ; Add a large static cube to serve as a platform.
 (defn addBox [bi]
-  (def halfExtent 3.)
-  (def shape (BoxShape. (float halfExtent)))
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setPosition bcs 0. (- halfExtent) 0.)
-  (.setShape bcs shape)
-
-  (def body (.createBody bi bcs))
-  (.addBody bi body EActivation/DontActivate)
-
-  (BasePhysicsApp/visualizeShape body))
+  (let [halfExtent 3.
+        shape (BoxShape. (float halfExtent))
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs EMotionType/Static)
+      (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+      (.setPosition bcs 0. (- halfExtent) 0.)
+      (.setShape bcs shape)
+      (let [body (.createBody bi bcs)]
+        (do
+          (.addBody bi body EActivation/DontActivate)
+          (BasePhysicsApp/visualizeShape body))))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
-  (addBox bi)
-
-  ; A mesh is used to generate the shape and topology of the body:
-  (def numRefinementIterations 3)
-  (def indexed true)
-  (def mesh (IcosphereMesh. numRefinementIterations indexed))
-
-  ; Create a soft ball and add it to the physics system:
-  (def sbss (SoftBodySharedSettings.))
-
-  (def locations (.getPositions mesh))
-  (def numVertices (/ (.capacity locations) 3))
-  (def tmpLocation (Vec3.))
-  (def tmpVertex (Vertex.))
-  (dotimes [i numVertices]
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)]
     (do
-      (.get locations (* 3 i) tmpLocation)
-      (.setPosition tmpVertex tmpLocation)
-      (.addVertex sbss tmpVertex)))
+      (addBox bi)
 
-  (def indices (.getIndexBuffer mesh))
-  (def numFaces (/ (.capacity indices) Mesh/vpt))
-  (def tmpFace (Face.))
-  (dotimes [i numFaces]
-    (do
-      (dotimes [j Mesh/vpt]
-        (do
-          (def index (.get indices (+ (* Mesh/vpt i) j)))
-          (.setVertex tmpFace j index)))
-      (.addFace sbss tmpFace)))
+      ; A mesh is used to generate the shape and topology of the body:
+      (let [numRefinementIterations 3
+            indexed true
+            mesh (IcosphereMesh. numRefinementIterations indexed)
 
-  (def vertexAttributes (make-array VertexAttributes numVertices))
-  (dotimes [i numVertices]
-    (do
-      (aset vertexAttributes i (VertexAttributes.))))
-  (.createConstraints sbss vertexAttributes EBendType/Distance)
-  (.optimize sbss)
+            ; Create a soft ball and add it to the physics system:
+            sbss (SoftBodySharedSettings.)
+            locations (.getPositions mesh)
+            numVertices (/ (.capacity locations) 3)
+            tmpLocation (Vec3.)
+            tmpVertex (Vertex.)]
+        (dotimes [i numVertices]
+          (do
+            (.get locations (* 3 i) tmpLocation)
+            (.setPosition tmpVertex tmpLocation)
+            (.addVertex sbss tmpVertex)))
 
-  (def startLocation (RVec3. 0. 3. 0.))
-  (def sbcs (SoftBodyCreationSettings.
-             sbss startLocation (Quat.) BasePhysicsApp/objLayerMoving))
+        (let [indices (.getIndexBuffer mesh)
+              numFaces (/ (.capacity indices) Mesh/vpt)
+              tmpFace (Face.)]
+          (dotimes [i numFaces]
+            (do
+              (dotimes [j Mesh/vpt]
+                (do
+                  (let [index (.get indices (+ (* Mesh/vpt i) j))]
+                    (.setVertex tmpFace j index))))
+              (.addFace sbss tmpFace))))
 
-  ; Configure the ball to resist deformation:
-  (.setPressure sbcs 30000.) ; default=0
+        (let [vertexAttributes (make-array VertexAttributes numVertices)]
+          (do
+            (dotimes [i numVertices]
+              (do
+                (aset vertexAttributes i (VertexAttributes.)))))
+          (.createConstraints sbss vertexAttributes EBendType/Distance)
+          (.optimize sbss)
 
-  (def body (.createSoftBody bi sbcs))
-  (.addBody bi body EActivation/Activate)
+          (let [startLocation (RVec3. 0. 3. 0.)
+                sbcs (SoftBodyCreationSettings.
+                      sbss startLocation (Quat.) BasePhysicsApp/objLayerMoving)]
+            (do
 
-  ; Visualize the soft body:
-  (FacesGeometry. body)
-  (EdgesGeometry. body))
+              ; Configure the ball to resist deformation:
+              (.setPressure sbcs 30000.) ; default=0
+
+              (let [body (.createSoftBody bi sbcs)]
+                (do
+                  (.addBody bi body EActivation/Activate)
+
+                  ; Visualize the soft body:
+                  (FacesGeometry. body)
+                  (EdgesGeometry. body))))))))))
 
 (defn -main "main entry point for the HelloSoftBody application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
