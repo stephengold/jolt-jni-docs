@@ -59,7 +59,7 @@ final public class HelloContactResponse extends BasePhysicsApp {
     // fields
 
     /**
-     * falling ball
+     * falling rigid body
      */
     private static Body ball;
     // *************************************************************************

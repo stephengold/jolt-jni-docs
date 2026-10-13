@@ -60,7 +60,7 @@ final public class HelloContactResponse {
     // fields
 
     /**
-     * falling ball
+     * falling rigid body
      */
     private static Body ball;
     // *************************************************************************

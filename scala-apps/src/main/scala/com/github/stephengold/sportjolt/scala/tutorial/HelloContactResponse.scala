@@ -57,7 +57,7 @@ object HelloContactResponse {
     // fields
 
     /**
-     * falling ball
+     * falling rigid body
      */
     private var ball: Body = null
     // *************************************************************************
