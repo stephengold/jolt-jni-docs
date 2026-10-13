@@ -88,65 +88,70 @@
 ; Add a static horizontal-square rigid body to the system.
 (defn addSquare [bi halfExtent y]
   ; Create a static rigid body with a square shape:
-  (def halfThickness 0.1)
-  (def shape (BoxShape. (Vec3. halfExtent halfThickness halfExtent)))
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setPosition bcs 0. (- y halfThickness) 0.)
-  (.setShape bcs shape)
+  (let [halfThickness 0.1
+        shape (BoxShape. (Vec3. halfExtent halfThickness halfExtent))
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs EMotionType/Static)
+      (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+      (.setPosition bcs 0. (- y halfThickness) 0.)
+      (.setShape bcs shape)
 
-  (def result (.createBody bi bcs))
-  (.addBody bi result EActivation/DontActivate)
-
-  result)
+      (let [result (.createBody bi bcs)]
+        (do
+          (.addBody bi result EActivation/DontActivate)
+          result)))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a character with a capsule shape and add it to the system:
-  (def capsuleRadius 0.5) ; meters
-  (def capsuleHeight 1.) ; meters
-  (def shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius))
+        ; Create a character with a capsule shape and add it to the system:
+        capsuleRadius 0.5 ; meters
+        capsuleHeight 1. ; meters
+        shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius)
+        settings (CharacterVirtualSettings.)]
+    (do
+      (.setShape settings shape)
+      (let [startLocation (RVec3. 0. 2. 0.)
+            userData 0]
+        (do
+          (def character (CharacterVirtual.
+                          settings startLocation (Quat.) userData physicsSystem))
 
-  (def settings (CharacterVirtualSettings.))
-  (.setShape settings shape)
+          ; Add a static square to represent the ground:
+          (let [halfExtent 4.
+                y -2.
+                ground (addSquare bi halfExtent y)]
+            (do
 
-  (def startLocation (RVec3. 0. 2. 0.))
-  (def userData 0)
-  (def character (CharacterVirtual. settings startLocation (Quat.) userData physicsSystem))
-
-  ; Add a static square to represent the ground:
-  (def halfExtent 4.)
-  (def y -2.)
-  (def ground (addSquare bi halfExtent y))
-
-  ; Visualize the shapes of both physics objects:
-  (BasePhysicsApp/visualizeShape character)
-  (BasePhysicsApp/visualizeShape ground))
+              ; Visualize the shapes of both physics objects:
+              (BasePhysicsApp/visualizeShape character)
+              (BasePhysicsApp/visualizeShape ground))))))))
 
 (defn postPhysicsTick [app timeStep]
   ; Update the character:
-  (def system (.getPhysicsSystem app))
-  (def gravity (.getGravity system))
-  (def bplFilter (.getDefaultBroadPhaseLayerFilter system BasePhysicsApp/objLayerMoving))
-  (def olFilter (.getDefaultLayerFilter system BasePhysicsApp/objLayerMoving))
-  (def tempAllocator (.getTempAllocator app))
-  (.extendedUpdate character timeStep gravity updateSettings bplFilter olFilter allBodies allShapes tempAllocator))
+  (let [system (.getPhysicsSystem app)
+        gravity (.getGravity system)
+        bplFilter (.getDefaultBroadPhaseLayerFilter system BasePhysicsApp/objLayerMoving)
+        olFilter (.getDefaultLayerFilter system BasePhysicsApp/objLayerMoving)
+        tempAllocator (.getTempAllocator app)]
+    (.extendedUpdate character timeStep gravity updateSettings
+                     bplFilter olFilter allBodies allShapes tempAllocator)))
 
 (defn prePhysicsTick [app timeStep]
-  (def velocity (.getLinearVelocity character))
+  (let [velocity (.getLinearVelocity character)]
+    (do
 
-  ; Apply gravity:
-  (.setY velocity (- (.getY velocity) (* 9.81 timeStep)))
+      ; Apply gravity:
+      (.setY velocity (- (.getY velocity) (* 9.81 timeStep)))
 
-  ; If the character is supported, cause it to jump:
-  (if (.isSupported character)
-    (.set velocity 0. 8. 0.))
+      ; If the character is supported, cause it to jump:
+      (if (.isSupported character)
+        (.set velocity 0. 8. 0.))
 
-  (.setLinearVelocity character velocity))
+      (.setLinearVelocity character velocity))))
 
 (defn -main "main entry point for the HelloCharacterVirtual application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
