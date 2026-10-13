@@ -114,90 +114,94 @@
 ; Add a static heightfield rigid body to the system.
 (defn addTerrain [bi]
   ; Generate an array of heights from a PNG image on the classpath:
-  (def resourceName "/Textures/Terrain/splat/mountains512.png")
-  (def image (Utils/loadResourceAsImage resourceName))
+  (let [resourceName "/Textures/Terrain/splat/mountains512.png"
+        image (Utils/loadResourceAsImage resourceName)
 
-  (def maxHeight 51.)
-  (def heightBuffer (Utils/toHeightBuffer image maxHeight))
+        maxHeight 51.
+        heightBuffer (Utils/toHeightBuffer image maxHeight)
 
-  ; Construct a static rigid body based on the array of heights:
-  (def numFloats (.capacity heightBuffer))
+        ; Construct a static rigid body based on the array of heights:
+        numFloats (.capacity heightBuffer)
 
-  (def offset (Vec3. -256. 0. -256.))
-  (def scale (Vec3. 1. 1. 1.))
-  (def sampleCount 512)
-  (assert (== numFloats (* sampleCount sampleCount)) numFloats)
-  (def ss (HeightFieldShapeSettings. heightBuffer offset scale sampleCount))
+        offset (Vec3. -256. 0. -256.)
+        scale (Vec3. 1. 1. 1.)
+        sampleCount 512]
+    (do
+      (assert (== numFloats (* sampleCount sampleCount)) numFloats)
+      (let [ss (HeightFieldShapeSettings. heightBuffer offset scale sampleCount)
 
-  (def shapeRef (.get (.create ss)))
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setShape bcs shapeRef)
+            shapeRef (.get (.create ss))
+            bcs (BodyCreationSettings.)]
+        (do
+          (.setMotionType bcs EMotionType/Static)
+          (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+          (.setShape bcs shapeRef)
 
-  (def result (.createBody bi bcs))
-  (.addBody bi result EActivation/DontActivate)
-
-  result)
+          (let [result (.createBody bi bcs)]
+            (do
+              (.addBody bi result EActivation/DontActivate)
+              result)))))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a character with a capsule shape and add it to the system:
-  (def capsuleRadius 3.) ; meters
-  (def capsuleHeight 4.) ; meters
-  (def shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius))
+        ; Create a character with a capsule shape and add it to the system:
+        capsuleRadius 3. ; meters
+        capsuleHeight 4. ; meters
+        shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius)
+        settings (CharacterSettings.)]
+    (do
+      (.setShape settings shape)
+      (let [startLocation (RVec3. -73.6 19.09 -45.58)
+            userData 0]
+        (do
+          (def character (com.github.stephengold.joltjni.Character.
+                          settings startLocation (Quat.) userData physicsSystem))
+          (.addToPhysicsSystem character)))
 
-  (def settings (CharacterSettings.))
-  (.setShape settings shape)
+      ; Add a static heightmap to represent the ground:
+      (let [ground (addTerrain bi)]
+        (do
 
-  (def startLocation (RVec3. -73.6 19.09 -45.58))
-  (def userData 0)
-  (def character (com.github.stephengold.joltjni.Character.
-                  settings startLocation (Quat.) userData physicsSystem))
-  (.addToPhysicsSystem character)
-
-  ; Add a static heightmap to represent the ground:
-  (def ground (addTerrain bi))
-
-  ; Visualize the shapes of both physics objects:
-  (BasePhysicsApp/visualizeShape character)
-  (def darkGreen (Vector4f. 0. 0.3 0. 1.))
-  (def geom (BasePhysicsApp/visualizeShape ground))
-  (.setColor geom darkGreen)
-  (.setSpecularColor geom Constants/BLACK))
+          ; Visualize the shapes of both physics objects:
+          (BasePhysicsApp/visualizeShape character)
+          (let [darkGreen (Vector4f. 0. 0.3 0. 1.)
+                geom (BasePhysicsApp/visualizeShape ground)]
+            (do
+              (.setColor geom darkGreen)
+              (.setSpecularColor geom Constants/BLACK))))))))
 
 (defn postPhysicsTick [app timeStep]
   ; Update the character:
-  (def maxSeparation 0.1) ; meters above the ground
-  (.postSimulation character maxSeparation)
+  (let [maxSeparation 0.1] ; meters above the ground
+    (.postSimulation character maxSeparation))
 
-  (def cam (BaseApplication/getCamera))
-  (def location (.getPosition character))
-  (.setLocation cam location))
+  (let [location (.getPosition character)]
+    (.setLocation (BaseApplication/getCamera) location)))
 
 (defn prePhysicsTick [app timeStep]
-  (def velocity (.getLinearVelocity character))
-
-  ; Clear any horizontal motion from the previous simulation step:
-  (.setX velocity 0.)
-  (.setZ velocity 0.)
-
-  ; If the character is supported, make it respond to keyboard input:
-  (if (.isSupported character)
+  (let [velocity (.getLinearVelocity character)]
     (do
-      (if jumpRequested
-        (.setY velocity 8.))
-      (if walkRequested
-        (do ; Walk in the camera's forward direction:
-          (def cam (BaseApplication/getCamera))
-          (def forward (.getDirection cam))
-          (def walkSpeed 7.)
-          (.setX velocity (* walkSpeed (.getX forward)))
-          (.setZ velocity (* walkSpeed (.getZ forward)))))))
-  (.setLinearVelocity character velocity))
+
+      ; Clear any horizontal motion from the previous simulation step:
+      (.setX velocity 0.)
+      (.setZ velocity 0.)
+
+      ; If the character is supported, make it respond to keyboard input:
+      (if (.isSupported character)
+        (do
+          (if jumpRequested
+            (.setY velocity 8.))
+          (if walkRequested ; Walk in the camera's forward direction:
+            (let [cam (BaseApplication/getCamera)
+                  forward (.getDirection cam)
+                  walkSpeed 7.]
+              (do
+                (.setX velocity (* walkSpeed (.getX forward)))
+                (.setZ velocity (* walkSpeed (.getZ forward))))))))
+      (.setLinearVelocity character velocity))))
 
 (defn -main "main entry point for the HelloWalk application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
