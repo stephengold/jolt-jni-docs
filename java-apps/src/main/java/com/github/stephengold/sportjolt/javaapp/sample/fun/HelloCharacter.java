@@ -128,7 +128,7 @@ final public class HelloCharacter {
 
         fpa.setPostPhysicsTick((app, timeStep) -> {
             // Update the character:
-            float maxSeparation = 0.1f; // meters above the floor
+            float maxSeparation = 0.1f; // meters above the ground
             character.postSimulation(maxSeparation);
         });
 

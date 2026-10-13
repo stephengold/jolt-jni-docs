@@ -103,7 +103,7 @@ var application = new HelloCharacter() {
      */
     physicsTick: function (system, timeStep) {
         // Update the character:
-        var maxSeparation = 0.1; // meters above the floor
+        var maxSeparation = 0.1; // meters above the ground
         character.postSimulation(maxSeparation);
     },
 

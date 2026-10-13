@@ -141,7 +141,7 @@ class HelloCharacter extends BasePhysicsApp, PhysicsTickListener {
      */
     override def physicsTick(system: PhysicsSystem, timeStep: Float): Unit = {
         // Update the character:
-        val maxSeparation = 0.1f // meters above the floor
+        val maxSeparation = 0.1f // meters above the ground
         HelloCharacter.character.postSimulation(maxSeparation)
     }
 

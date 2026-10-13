@@ -59,7 +59,7 @@ private const val GROUND_Y = -2f
 private const val HALF_THICKNESS = 0.1f  // meters
 
 private const val MAX_BODIES = 2
-private const val MAX_SEPARATION = 0.1f  // meters above the floor
+private const val MAX_SEPARATION = 0.1f  // meters above the ground
 
 // For simplicity, use a single broadphase layer:
 private const val NUM_BP_LAYERS = 1

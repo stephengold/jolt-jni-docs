@@ -161,7 +161,7 @@ final public class HelloCharacter
     @Override
     public void physicsTick(PhysicsSystem system, float timeStep) {
         // Update the character:
-        float maxSeparation = 0.1f; // meters above the floor
+        float maxSeparation = 0.1f; // meters above the ground
         character.postSimulation(maxSeparation);
     }
 

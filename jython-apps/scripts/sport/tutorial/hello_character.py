@@ -90,7 +90,7 @@ class HelloCharacter(BasePhysicsApp, PhysicsTickListener):
         "Callback invoked (by Sport-Jolt, not by Jolt Physics) after the system has been stepped."
 
         # Update the character:
-        max_separation = 0.1  # meters above the floor
+        max_separation = 0.1  # meters above the ground
         CHARACTER.postSimulation(max_separation)
 
     def prePhysicsTick(self, system, time_step):
