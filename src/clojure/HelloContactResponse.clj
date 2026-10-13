@@ -53,7 +53,7 @@
    [org.lwjgl.glfw GLFW]))
 
 ; variables:
-(def ball) ; falling ball
+(def ball) ; falling rigid body
 
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
@@ -77,34 +77,37 @@
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Add a static box to the system, to serve as a platform:
-  (def boxHalfExtent 3.)
-  (def boxShape (BoxShape. (float boxHalfExtent)))
-  (def bcs1 (BodyCreationSettings.))
-  (.setMotionType bcs1 EMotionType/Static)
-  (.setPosition bcs1 0. -4. 0.)
-  (.setShape bcs1 boxShape)
-  (def box (.createBody bi bcs1))
-  (.addBody bi box EActivation/DontActivate)
+        ; Add a static box to the system, to serve as a platform:
+        boxHalfExtent 3.
+        boxShape (BoxShape. (float boxHalfExtent))
+        bcs1 (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs1 EMotionType/Static)
+      (.setPosition bcs1 0. -4. 0.)
+      (.setShape bcs1 boxShape)
+      (let [box (.createBody bi bcs1)]
+        (do
+          (.addBody bi box EActivation/DontActivate)
 
-  ; Add a dynamic ball to the system:
-  (def ballRadius 1.)
-  (def ballShape (SphereShape. ballRadius))
-  (def bcs2 (BodyCreationSettings.))
-  (.setMass (.getMassPropertiesOverride bcs2) 2.)
-  (.setAllowSleeping bcs2 false) ; Disable sleeping for clarity.
-  (.setOverrideMassProperties bcs2 EOverrideMassProperties/CalculateInertia)
-  (.setPosition bcs2 0. 4. 0.)
-  (.setShape bcs2 ballShape)
-  (def ball (.createBody bi bcs2))
-  (.addBody bi ball EActivation/Activate)
+          ; Add a dynamic ball to the system:
+          (let [ballRadius 1.
+                ballShape (SphereShape. ballRadius)
+                bcs2 (BodyCreationSettings.)]
+            (do
+              (.setMass (.getMassPropertiesOverride bcs2) 2.)
+              (.setAllowSleeping bcs2 false) ; Disable sleeping for clarity.
+              (.setOverrideMassProperties bcs2 EOverrideMassProperties/CalculateInertia)
+              (.setPosition bcs2 0. 4. 0.)
+              (.setShape bcs2 ballShape)
+              (def ball (.createBody bi bcs2))
+              (.addBody bi ball EActivation/Activate)
 
-  ; Visualize the shapes of both rigid bodies:
-  (BasePhysicsApp/visualizeShape ball)
-  (BasePhysicsApp/visualizeShape box))
+              ; Visualize the shapes of both rigid bodies:
+              (BasePhysicsApp/visualizeShape ball)
+              (BasePhysicsApp/visualizeShape box))))))))
 
 (defn -main "main entry point for the HelloContactResponse application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
