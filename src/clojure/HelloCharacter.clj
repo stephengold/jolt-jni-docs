@@ -55,6 +55,9 @@
     BasePhysicsApp
     FunctionalPhysicsApp]))
 
+; variables:
+(def character) ; character being tested
+
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
   ; For simplicity, use a single broadphase layer:
@@ -71,51 +74,53 @@
 ; Add a static horizontal-square rigid body to the system.
 (defn addSquare [bi halfExtent y]
   ; Create a static rigid body with a square shape:
-  (def halfThickness 0.1)
-  (def shape (BoxShape. (Vec3. halfExtent halfThickness halfExtent)))
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setPosition bcs 0. (- y halfThickness) 0.)
-  (.setShape bcs shape)
+  (let [halfThickness 0.1
+        shape (BoxShape. (Vec3. halfExtent halfThickness halfExtent))
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs EMotionType/Static)
+      (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+      (.setPosition bcs 0. (- y halfThickness) 0.)
+      (.setShape bcs shape)
 
-  (def result (.createBody bi bcs))
-  (.addBody bi result EActivation/DontActivate)
-
-  result)
+      (let [result (.createBody bi bcs)]
+        (do
+          (.addBody bi result EActivation/DontActivate)
+          result)))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a character with a capsule shape and add it to the system:
-  (def capsuleRadius 0.5) ; meters
-  (def capsuleHeight 1.) ; meters
-  (def shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius))
+        ; Create a character with a capsule shape and add it to the system:
+        capsuleRadius 0.5 ; meters
+        capsuleHeight 1. ; meters
+        shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius)
+        settings (CharacterSettings.)]
+    (do
+      (.setShape settings shape)
+      (let [startLocation (RVec3. 0. 2. 0.)
+            userData 0]
+        (do
+          (def character (com.github.stephengold.joltjni.Character.
+                          settings startLocation (Quat.) userData physicsSystem))
+          (.addToPhysicsSystem character)
 
-  (def settings (CharacterSettings.))
-  (.setShape settings shape)
+          ; Add a static square to represent the ground:
+          (let [halfExtent 4.
+                y -2.
+                ground (addSquare bi halfExtent y)]
+            (do
 
-  (def startLocation (RVec3. 0. 2. 0.))
-  (def userData 0)
-  (def character (com.github.stephengold.joltjni.Character.
-                  settings startLocation (Quat.) userData physicsSystem))
-  (.addToPhysicsSystem character)
-
-  ; Add a static square to represent the ground:
-  (def halfExtent 4.)
-  (def y -2.)
-  (def ground (addSquare bi halfExtent y))
-
-  ; Visualize the shapes of both physics objects:
-  (BasePhysicsApp/visualizeShape character)
-  (BasePhysicsApp/visualizeShape ground))
+              ; Visualize the shapes of both physics objects:
+              (BasePhysicsApp/visualizeShape character)
+              (BasePhysicsApp/visualizeShape ground))))))))
 
 (defn postPhysicsTick [app timeStep]
   ; Update the character:
-  (def maxSeparation 0.1) ; meters above the floor
-  (.postSimulation character maxSeparation))
+  (let [maxSeparation 0.1] ; meters above the ground
+    (.postSimulation character maxSeparation)))
 
 (defn prePhysicsTick [app timeStep]
   ; If the character is supported, cause it to jump:
