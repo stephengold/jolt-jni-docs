@@ -67,60 +67,65 @@
 
 ; Add a thin static disc to serve as an obstacle.
 (defn addDisc [bi]
-  (def discRadius 2.)
-  (def discThickness 0.05)
-  (def discConvexRadius 0.02)
-  (def discShape (CylinderShape. (/ discThickness 2.) discRadius discConvexRadius))
+  (let [discRadius 2.
+        discThickness 0.05
+        discConvexRadius 0.02
+        discShape (CylinderShape. (/ discThickness 2.) discRadius discConvexRadius)
 
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setShape bcs discShape)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs EMotionType/Static)
+      (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+      (.setShape bcs discShape)
 
-  (def result (.createBody bi bcs))
-  (.addBody bi result EActivation/DontActivate)
-
-  result)
+      (let [result (.createBody bi bcs)]
+        (do
+          (.addBody bi result EActivation/DontActivate)
+          result)))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
-  (def physicsSystem (.getPhysicsSystem app))
-  (def bi (.getBodyInterface physicsSystem))
+  (let [physicsSystem (.getPhysicsSystem app)
+        bi (.getBodyInterface physicsSystem)
 
-  ; Create a collision shape for balls:
-  (def ballRadius 0.1)
-  (def ballShape (SphereShape. ballRadius))
+        ; Create a collision shape for balls:
+        ballRadius 0.1
+        ballShape (SphereShape. ballRadius)
 
-  (def bcs (BodyCreationSettings.))
-  (.setMass (.getMassPropertiesOverride bcs) 2.)
-  (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
-  (.setShape bcs ballShape)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMass (.getMassPropertiesOverride bcs) 2.)
+      (.setOverrideMassProperties bcs EOverrideMassProperties/CalculateInertia)
+      (.setShape bcs ballShape)
 
-  ; Create 2 dynamic balls, one with LinearCast CCD and one without,
-  ; and add them to the system:
-  (.setMotionQuality bcs EMotionQuality/LinearCast)
-  (.setPosition bcs -1. 4. 0.)
-  (def ccdBall (.createBody bi bcs))
-  (.addBody bi ccdBall EActivation/Activate)
+      ; Create 2 dynamic balls, one with LinearCast CCD and one without,
+      ; and add them to the system:
+      (.setMotionQuality bcs EMotionQuality/LinearCast)
+      (.setPosition bcs -1. 4. 0.)
+      (let [ccdBall (.createBody bi bcs)]
+        (do
+          (.addBody bi ccdBall EActivation/Activate)
 
-  (.setMotionQuality bcs EMotionQuality/Discrete)
-  (.setPosition bcs 1. 4. 0.)
-  (def controlBall (.createBody bi bcs))
-  (.addBody bi controlBall EActivation/Activate)
+          (.setMotionQuality bcs EMotionQuality/Discrete)
+          (.setPosition bcs 1. 4. 0.)
+          (let [controlBall (.createBody bi bcs)]
+            (do
+              (.addBody bi controlBall EActivation/Activate)
 
-  ; Verify the motion quality of each ball:
-  (def ccdProperties (.getMotionProperties ccdBall))
-  (assert (= (.getMotionQuality ccdProperties) EMotionQuality/LinearCast))
-  (def controlProperties (.getMotionProperties controlBall))
-  (assert (= (.getMotionQuality controlProperties) EMotionQuality/Discrete))
+              ; Verify the motion quality of each ball:
+              (let [ccdProperties (.getMotionProperties ccdBall)]
+                (assert (= (.getMotionQuality ccdProperties) EMotionQuality/LinearCast)))
+              (let [controlProperties (.getMotionProperties controlBall)]
+                (assert (= (.getMotionQuality controlProperties) EMotionQuality/Discrete)))
 
-  ; Add an obstacle:
-  (def disc (addDisc bi))
+              ; Add an obstacle:
+              (let [disc (addDisc bi)]
+                (do
 
-  ; Visualize the shapes of all 3 rigid bodies:
-  (BasePhysicsApp/visualizeShape ccdBall)
-  (BasePhysicsApp/visualizeShape controlBall)
-  (.setProgram (BasePhysicsApp/visualizeShape disc) "Unshaded/Monochrome"))
+                  ; Visualize the shapes of all 3 rigid bodies:
+                  (BasePhysicsApp/visualizeShape ccdBall)
+                  (BasePhysicsApp/visualizeShape controlBall)
+                  (.setProgram (BasePhysicsApp/visualizeShape disc) "Unshaded/Monochrome"))))))))))
 
 ; Advance the physics simulation by the specified amount.
 ; Invoked during each update.
