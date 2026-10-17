@@ -441,7 +441,7 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
  shape and group filter.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - where to read objects from (not null)</dd>
+<dd><code>stream</code> - where to read objects from (not <code>null</code>)</dd>
 </dl>
 </section>
 </li>
@@ -625,8 +625,8 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
  mPosition)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>location</code> - the desired location (in system coordinates, not null,
- unaffected, default=(0,0,0))</dd>
+<dd><code>location</code> - the desired location (in system coordinates, not
+ <code>null</code>, unaffected, default=(0,0,0))</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -667,7 +667,7 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>orientation</code> - the desired location (relative to system axes, not
- null, unaffected, default=(0,0,0,1))</dd>
+ <code>null</code>, unaffected, default=(0,0,0,1))</dd>
 <dt>Returns:</dt>
 <dd>the modified settings, for chaining</dd>
 </dl>
@@ -738,10 +738,12 @@ implements <a href="readonly/ConstSoftBodyCreationSettings.html" title="interfac
 <div class="block">Read a settings object from the specified binary stream.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>stream</code> - where to read objects (not null)</dd>
-<dd><code>settingsMap</code> - track multiple uses of shared settings (not null)</dd>
-<dd><code>materialMap</code> - track multiple uses of physics materials (not null)</dd>
-<dd><code>filterMap</code> - track multiple uses of group filters (not null)</dd>
+<dd><code>stream</code> - where to read objects (not <code>null</code>)</dd>
+<dd><code>settingsMap</code> - track multiple uses of shared settings (not
+ <code>null</code>)</dd>
+<dd><code>materialMap</code> - track multiple uses of physics materials (not
+ <code>null</code>)</dd>
+<dd><code>filterMap</code> - track multiple uses of group filters (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>a new object</dd>
 </dl>
