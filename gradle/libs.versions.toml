@@ -3,7 +3,7 @@
 [versions]
 
 checkstyle = "14.3.0"
-joltjni = "6.1.1"
+joltjni = "6.2.0"
 luajava = "4.1.0"
 lwjgl = "3.4.3"
 
@@ -22,7 +22,7 @@ jolt-jni-windows64avx2 = { module = "com.github.stephengold:jolt-jni-Windows64_a
 jolt-jni-windowsarm64 = { module = "com.github.stephengold:jolt-jni-Windows_ARM64", version.ref = "joltjni" }
 
 jruby = "org.jruby:jruby-complete:9.4.15.0"
-jsnaploader = "io.github.electrostat-lab:snaploader:1.2.0-beta"
+jsnaploader = "io.github.electrostat-lab:snaploader:1.2.0-stable"
 jython = "org.python:jython-slim:2.7.4"
 luaj-jse = "org.luaj:luaj-jse:3.0.1"
 
@@ -38,7 +38,7 @@ lwjgl-opengl = { module = "org.lwjgl:lwjgl-opengl", version.ref = "lwjgl" }
 
 nashorn-core = "org.openjdk.nashorn:nashorn-core:15.7"
 scala-library = "org.scala-lang:scala3-library_3:3.10.0"
-sport-jolt = "com.github.stephengold:sport-jolt:3.1.0"
+sport-jolt = "com.github.stephengold:sport-jolt:3.2.0"
 
 [bundles]
 
