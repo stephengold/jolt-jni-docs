@@ -33,7 +33,6 @@ import com.github.stephengold.joltjni.BodyCreationSettings;
 import com.github.stephengold.joltjni.BodyInterface;
 import com.github.stephengold.joltjni.CapsuleShape;
 import com.github.stephengold.joltjni.CharacterSettings;
-import com.github.stephengold.joltjni.CustomContactListener;
 import com.github.stephengold.joltjni.PhysicsSystem;
 import com.github.stephengold.joltjni.Plane;
 import com.github.stephengold.joltjni.PlaneShape;
@@ -128,25 +127,8 @@ final public class HelloSensor {
             PhysicsSystem result = app.createSystem(maxBodies, numBpLayers);
 
             // To enable callbacks, set a simple contact listener:
-            result.setContactListener(new CustomContactListener() {
-                /**
-                 * Callback invoked (by native code) each time a new contact
-                 * point is detected.
-                 *
-                 * @param body1Va the virtual address of the first body in
-                 * contact (not zero)
-                 * @param body2Va the virtual address of the 2nd body in contact
-                 * (not zero)
-                 * @param manifoldVa the virtual address of the contact manifold
-                 * (not zero)
-                 * @param settingsVa the virtual address of the contact settings
-                 * (not zero)
-                 */
-                @Override
-                public void onContactAdded(long body1Va, long body2Va,
-                        long manifoldVa, long settingsVa) {
-                    addContact(result, body1Va, body2Va);
-                }
+            fpa.addContactAddedListener(result, (ap, vaArray) -> {
+                addContact(result, vaArray[0], vaArray[1]);
             });
 
             return result;
