@@ -1,7 +1,7 @@
 ; Leiningen script to build the src/clojure subproject of jolt-jni-docs
 
 (def btf "DebugSp")
-(def joltjni "6.2.0")
+(def joltjni "7.0.0")
 (def lwjgl "3.4.3")
 
 (defproject jolt-jni-docs "0.1.0-SNAPSHOT"
@@ -29,7 +29,7 @@
     [com.github.stephengold/jolt-jni-Windows64 ~joltjni :classifier ~btf]
     [com.github.stephengold/jolt-jni-Windows64_avx2 ~joltjni :classifier ~btf]
     [com.github.stephengold/jolt-jni-Windows_ARM64 ~joltjni :classifier ~btf]
-    [com.github.stephengold/sport-jolt "3.2.0"]
+    [com.github.stephengold/sport-jolt "3.2.1"]
     [org.clojure/clojure "1.12.6"]
     [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux"]
     [org.lwjgl/lwjgl ~lwjgl :classifier "natives-linux-arm64"]

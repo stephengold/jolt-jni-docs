@@ -41,6 +41,7 @@ com.github.stephengold.joltjni.BroadPhaseBruteForce
 com.github.stephengold.joltjni.BroadPhaseCastResult
 com.github.stephengold.joltjni.BroadPhaseLayerFilter
 com.github.stephengold.joltjni.BroadPhaseLayerInterface
+com.github.stephengold.joltjni.BroadPhaseLayerInterfaceMask
 com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable
 com.github.stephengold.joltjni.BroadPhaseQuadTree
 com.github.stephengold.joltjni.BroadPhaseQuery
@@ -217,6 +218,7 @@ com.github.stephengold.joltjni.ObjectLayerPairFilterTable
 com.github.stephengold.joltjni.ObjectStreamIn
 com.github.stephengold.joltjni.ObjectStreamOut
 com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilter
+com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilterMask
 com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilterTable
 com.github.stephengold.joltjni.OffsetCenterOfMassShape
 com.github.stephengold.joltjni.OffsetCenterOfMassShapeSettings
