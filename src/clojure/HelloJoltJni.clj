@@ -132,7 +132,6 @@
         loader (NativeBinaryLoader. info)
         libraries (into-array NativeDynamicLibrary
                               [(NativeDynamicLibrary. "linux/aarch64/com/github/stephengold" PlatformPredicate/LINUX_ARM_64)
-                               (NativeDynamicLibrary. "linux/armhf/com/github/stephengold" PlatformPredicate/LINUX_ARM_32)
                                (NativeDynamicLibrary. "linux/x86-64/com/github/stephengold" PlatformPredicate/LINUX_X86_64)
                                (NativeDynamicLibrary. "osx/aarch64/com/github/stephengold" PlatformPredicate/MACOS_ARM_64)
                                (NativeDynamicLibrary. "osx/x86-64/com/github/stephengold" PlatformPredicate/MACOS_X86_64)

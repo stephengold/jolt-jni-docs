@@ -129,8 +129,6 @@ loader = luajava.new(NativeBinaryLoader, info)
 libraries = {
     luajava.new(NativeDynamicLibrary, "linux/aarch64/com/github/stephengold",
         PlatformPredicate.LINUX_ARM_64),
-    luajava.new(NativeDynamicLibrary, "linux/armhf/com/github/stephengold",
-        PlatformPredicate.LINUX_ARM_32),
     luajava.new(NativeDynamicLibrary, "linux/x86-64/com/github/stephengold",
         PlatformPredicate.LINUX_X86_64),
     luajava.new(NativeDynamicLibrary, "osx/aarch64/com/github/stephengold",

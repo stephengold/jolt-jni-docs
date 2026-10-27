@@ -75,13 +75,6 @@ dependencies {
         runtimeOnly(variantOf(libs.lwjgl.glfw){classifier("natives-linux")})
         runtimeOnly(variantOf(libs.lwjgl.opengl){classifier("natives-linux")})
 
-        runtimeOnly(variantOf(libs.jolt.jni.linuxarm32hf){classifier(btf)})
-
-        runtimeOnly(variantOf(libs.lwjgl){classifier("natives-linux-arm32")})
-        runtimeOnly(variantOf(libs.lwjgl.assimp){classifier("natives-linux-arm32")})
-        runtimeOnly(variantOf(libs.lwjgl.glfw){classifier("natives-linux-arm32")})
-        runtimeOnly(variantOf(libs.lwjgl.opengl){classifier("natives-linux-arm32")})
-
         runtimeOnly(variantOf(libs.jolt.jni.linuxarm64){classifier(btf)})
 
         runtimeOnly(variantOf(libs.lwjgl){classifier("natives-linux-arm64")})

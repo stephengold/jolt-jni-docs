@@ -148,20 +148,18 @@ end
 info = java.new(LibraryInfo, nil, "joltjni", DirectoryPath.USER_DIR)
 loader = java.new(NativeBinaryLoader, info)
 
-libraries = java.array(NativeDynamicLibrary, 7)
+libraries = java.array(NativeDynamicLibrary, 6)
 libraries[1] = java.new(NativeDynamicLibrary, "linux/aarch64/com/github/stephengold",
         PlatformPredicate.LINUX_ARM_64)
-libraries[2] = java.new(NativeDynamicLibrary, "linux/armhf/com/github/stephengold",
-        PlatformPredicate.LINUX_ARM_32)
-libraries[3] = java.new(NativeDynamicLibrary, "linux/x86-64/com/github/stephengold",
+libraries[2] = java.new(NativeDynamicLibrary, "linux/x86-64/com/github/stephengold",
         PlatformPredicate.LINUX_X86_64)
-libraries[4] = java.new(NativeDynamicLibrary, "osx/aarch64/com/github/stephengold",
+libraries[3] = java.new(NativeDynamicLibrary, "osx/aarch64/com/github/stephengold",
         PlatformPredicate.MACOS_ARM_64)
-libraries[5] = java.new(NativeDynamicLibrary, "osx/x86-64/com/github/stephengold",
+libraries[4] = java.new(NativeDynamicLibrary, "osx/x86-64/com/github/stephengold",
         PlatformPredicate.MACOS_X86_64)
-libraries[6] = java.new(NativeDynamicLibrary, "windows/aarch64/com/github/stephengold",
+libraries[5] = java.new(NativeDynamicLibrary, "windows/aarch64/com/github/stephengold",
         PlatformPredicate.WIN_ARM_64)
-libraries[7] = java.new(NativeDynamicLibrary, "windows/x86-64/com/github/stephengold",
+libraries[6] = java.new(NativeDynamicLibrary, "windows/x86-64/com/github/stephengold",
         PlatformPredicate.WIN_X86_64)
 
 loader:registerNativeLibraries(libraries):initPlatformLibrary()

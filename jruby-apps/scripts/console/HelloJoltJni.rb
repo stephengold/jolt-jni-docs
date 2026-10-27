@@ -1,5 +1,5 @@
 =begin
- Copyright (c) 2025 Stephen Gold and Yanis Boudiaf
+ Copyright (c) 2025-2026 Stephen Gold and Yanis Boudiaf
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -128,8 +128,6 @@ libraries = [
         PlatformPredicate::LINUX_ARM_64),
     NativeDynamicLibrary.new("linux/aarch64/com/github/stephengold",
         PlatformPredicate::LINUX_ARM_64),
-    NativeDynamicLibrary.new("linux/armhf/com/github/stephengold",
-        PlatformPredicate::LINUX_ARM_32),
     NativeDynamicLibrary.new("linux/x86-64/com/github/stephengold",
         PlatformPredicate::LINUX_X86_64),
     NativeDynamicLibrary.new("osx/aarch64/com/github/stephengold",

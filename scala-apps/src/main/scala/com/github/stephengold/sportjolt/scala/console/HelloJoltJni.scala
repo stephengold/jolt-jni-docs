@@ -100,8 +100,6 @@ object HelloJoltJni {
         val libraries = Array(
             new NativeDynamicLibrary("linux/aarch64/com/github/stephengold",
                     PlatformPredicate.LINUX_ARM_64),
-            new NativeDynamicLibrary("linux/armhf/com/github/stephengold",
-                    PlatformPredicate.LINUX_ARM_32),
             new NativeDynamicLibrary("linux/x86-64/com/github/stephengold",
                     PlatformPredicate.LINUX_X86_64),
             new NativeDynamicLibrary("osx/aarch64/com/github/stephengold",
