@@ -145,6 +145,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/BroadPhaseLayerInterface.html[BroadPhaseLayerInterface] +
  {url-api}/readonly/ConstBroadPhaseLayerInterface.html[ConstBroadPhaseLayerInterface]
 
+|{url-jolt}broad_phase_layer_interface_mask.html[JPH::BroadPhaseLayerInterfaceMask]
+|{url-api}/BroadPhaseLayerInterfaceMask.html[BroadPhaseLayerInterfaceMask]
+
 |{url-jolt}broad_phase_layer_interface_table.html[JPH::BroadPhaseLayerInterfaceTable]
 |{url-api}/BroadPhaseLayerInterfaceTable.html[BroadPhaseLayerInterfaceTable]
 
@@ -494,6 +497,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/ObjectVsBroadPhaseLayerFilter.html[ObjectVsBroadPhaseLayerFilter] +
  {url-api}/readonly/ConstObjectVsBroadPhaseLayerFilter.html[ConstObjectVsBroadPhaseLayerFilter]
 
+|{url-jolt}object_vs_broad_phase_layer_filter_mask.html[JPH::ObjectVsBroadPhaseLayerFilterMask]
+|{url-api}/ObjectVsBroadPhaseLayerFilterMask.html[ObjectVsBroadPhaseLayerFilterMask]
+
 |{url-jolt}object_vs_broad_phase_layer_filter_table.html[JPH::ObjectVsBroadPhaseLayerFilterTable]
 |{url-api}/ObjectVsBroadPhaseLayerFilterTable.html[ObjectVsBroadPhaseLayerFilterTable]
 
@@ -596,6 +602,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}ragdoll_settings.html[JPH::RagdollSettings]
 |{url-api}/RagdollSettings.html[RagdollSettings] +
+ {url-api}/readonly/ConstRagdollSettings.html[ConstRagdollSettings] +
  {url-api}/RagdollSettingsRef.html[RagdollSettingsRef]
 
 |{url-jolt-struct}ray_cast.html[JPH::RayCast]
