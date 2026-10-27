@@ -140,12 +140,18 @@ loadScripts(document, 'script');</script>
 <div class="block">Add a mapping from the specified object layer to the specified
  broad-phase layer.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BroadPhaseLayerInterfaceTable.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterfaceTable</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBroadPhaseLayerName(int,java.lang.String)" class="member-name-link">setBroadPhaseLayerName</a><wbr>(int&nbsp;bpLayer,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">If profiling is enabled, alter the name of the specified layer.</div>
+</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.BroadPhaseLayerInterface">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="BroadPhaseLayerInterface.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterface</a></h3>
-<code><a href="BroadPhaseLayerInterface.html#getBroadPhaseLayer(int)">getBroadPhaseLayer</a>, <a href="BroadPhaseLayerInterface.html#getNumBroadPhaseLayers()">getNumBroadPhaseLayers</a></code></div>
+<code><a href="BroadPhaseLayerInterface.html#getBroadPhaseLayer(int)">getBroadPhaseLayer</a>, <a href="BroadPhaseLayerInterface.html#getBroadPhaseLayerName(int)">getBroadPhaseLayerName</a>, <a href="BroadPhaseLayerInterface.html#getNumBroadPhaseLayers()">getNumBroadPhaseLayers</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.JoltPhysicsObject">Methods inherited from class&nbsp;com.github.stephengold.joltjni.<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a></h3>
 <code><a href="JoltPhysicsObject.html#close()">close</a>, <a href="JoltPhysicsObject.html#compareTo(com.github.stephengold.joltjni.JoltPhysicsObject)">compareTo</a>, <a href="JoltPhysicsObject.html#equals(java.lang.Object)">equals</a>, <a href="JoltPhysicsObject.html#getContainingObject()">getContainingObject</a>, <a href="JoltPhysicsObject.html#hasAssignedNativeObject()">hasAssignedNativeObject</a>, <a href="JoltPhysicsObject.html#hashCode()">hashCode</a>, <a href="JoltPhysicsObject.html#isCleanerStarted()">isCleanerStarted</a>, <a href="JoltPhysicsObject.html#ownsNativeObject()">ownsNativeObject</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#setVirtualAddress(long,java.lang.Runnable)">setVirtualAddress</a>, <a href="JoltPhysicsObject.html#startCleaner()">startCleaner</a>, <a href="JoltPhysicsObject.html#targetVa()">targetVa</a>, <a href="JoltPhysicsObject.html#targetVaOrZero()">targetVaOrZero</a>, <a href="JoltPhysicsObject.html#toString()">toString</a>, <a href="JoltPhysicsObject.html#va()">va</a></code></div>
@@ -178,9 +184,8 @@ loadScripts(document, 'script');</script>
  object layer to broad-phase layer zero.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>numObjLayers</code> - the desired capacity (number of object layers)
- (&ge;1)</dd>
-<dd><code>numBpLayers</code> - the number of broad-phase layers (&ge;1)</dd>
+<dd><code>numObjLayers</code> - the desired capacity (number of object layers, &ge;1)</dd>
+<dd><code>numBpLayers</code> - the desired number of broad-phase layers (&ge;1)</dd>
 </dl>
 </section>
 </li>
@@ -204,6 +209,23 @@ loadScripts(document, 'script');</script>
 <dd><code>objLayer</code> - the index of the object layer (&ge;0, &lt;
  numObjectLayers)</dd>
 <dd><code>bpLayer</code> - the index of the broad-phase layer (&lt; numBpLayers)</dd>
+<dt>Returns:</dt>
+<dd>the modified map, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setBroadPhaseLayerName(int,java.lang.String)">
+<h3>setBroadPhaseLayerName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BroadPhaseLayerInterfaceTable.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterfaceTable</a></span>&nbsp;<span class="element-name">setBroadPhaseLayerName</span><wbr><span class="parameters">(int&nbsp;bpLayer,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block">If profiling is enabled, alter the name of the specified layer. Otherwise
+ this has no effect.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bpLayer</code> - the index of the broad-phase layer to modify (&ge;0, &lt;
+ numBpLayers)</dd>
+<dd><code>name</code> - the desired name (not <code>null</code>)</dd>
 <dt>Returns:</dt>
 <dd>the modified map, for chaining</dd>
 </dl>

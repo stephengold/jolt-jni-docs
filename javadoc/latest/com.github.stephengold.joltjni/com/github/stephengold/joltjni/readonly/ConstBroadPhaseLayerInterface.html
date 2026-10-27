@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../BroadPhaseLayerInterface.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterface</a></code>, <code><a href="../BroadPhaseLayerInterfaceTable.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterfaceTable</a></code></dd>
+<dd><code><a href="../BroadPhaseLayerInterface.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterface</a></code>, <code><a href="../BroadPhaseLayerInterfaceMask.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterfaceMask</a></code>, <code><a href="../BroadPhaseLayerInterfaceTable.html" title="class in com.github.stephengold.joltjni">BroadPhaseLayerInterfaceTable</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ConstBroadPhaseLayerInterface</span><span class="extends-implements">
@@ -118,9 +118,14 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the broad-phase layer for the specified object layer.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumBroadPhaseLayers()" class="member-name-link">getNumBroadPhaseLayers</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBroadPhaseLayerName(int)" class="member-name-link">getBroadPhaseLayerName</a><wbr>(int&nbsp;bpLayer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the name of the specified layer.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNumBroadPhaseLayers()" class="member-name-link">getNumBroadPhaseLayers</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Count how many broad-phase layers there are.</div>
 </div>
 </div>
@@ -154,6 +159,21 @@ extends <a href="ConstJoltPhysicsObject.html" title="interface in com.github.ste
  &lt;numObjectLayers)</dd>
 <dt>Returns:</dt>
 <dd>the index of the corresponding broad-phase layer</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBroadPhaseLayerName(int)">
+<h3>getBroadPhaseLayerName</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getBroadPhaseLayerName</span><wbr><span class="parameters">(int&nbsp;bpLayer)</span></div>
+<div class="block">Return the name of the specified layer.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>bpLayer</code> - the index of the broad-phase layer to query (&ge;0, &lt;
+ numBpLayers)</dd>
+<dt>Returns:</dt>
+<dd>the name currently assigned, or <code>null</code> if profiling is
+ disabled</dd>
 </dl>
 </section>
 </li>
