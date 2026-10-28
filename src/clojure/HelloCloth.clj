@@ -124,12 +124,12 @@
     (do
       (addBall bi)
 
-  ; Generate a subdivided square mesh with alternating diagonals:
+      ; Generate a subdivided square mesh with alternating diagonals:
       (let [numLines 41
             lineSpacing 0.1
             squareGrid (ClothGrid. numLines numLines lineSpacing)
 
-       ; Create a compliant soft square and add it to the physics system:
+            ; Create a compliant soft square and add it to the physics system:
             sbss (generateSharedSettings squareGrid)
 
             locations (.getPositions squareGrid)
@@ -139,7 +139,7 @@
           (do
             (aset vertexAttributes i (VertexAttributes.)))
 
-      ; Make the cloth flexible by increasing the shear compliance of its edges:
+          ; Make the cloth flexible by increasing the shear compliance of its edges:
           (.setShearCompliance (aget vertexAttributes i) 0.0002))
         (.createConstraints sbss vertexAttributes EBendType/Distance)
         (.optimize sbss)
@@ -152,7 +152,7 @@
           (do
             (.addBody bi cloth EActivation/Activate)
 
-  ; Visualize the soft-body edges:
+            ; Visualize the soft-body edges:
             (EdgesGeometry. cloth)))))))
 
 (defn -main "main entry point for the HelloCloth application" [& arguments]
