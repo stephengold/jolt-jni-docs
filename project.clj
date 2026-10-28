@@ -57,6 +57,7 @@
     [org.lwjgl/lwjgl-opengl ~lwjgl :classifier "natives-windows-arm64"]
   ]
   :description "Sample applications (in Clojure) for the Jolt-JNI physics-simulation library"
+  :jvm-opts ["--enable-native-access=ALL-UNNAMED"] 
   :license {
     :name "BSD 3-Clause License"
     :url "https://github.com/stephengold/jolt-jni-docs/blob/master/LICENSE"
