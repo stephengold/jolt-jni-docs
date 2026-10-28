@@ -87,7 +87,7 @@ final class HelloSport extends BasePhysicsApp {
      * @return a new object
      */
     @Override
-    public PhysicsSystem createSystem() {
+    PhysicsSystem createSystem() {
         // For simplicity, use a single broadphase layer:
         var numBpLayers = 1
 
