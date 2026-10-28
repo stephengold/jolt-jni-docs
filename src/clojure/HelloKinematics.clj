@@ -54,7 +54,7 @@
    [java.lang Math]))
 
 ; variables:
-(def kineball) ; kinematic ball, orbiting the origin
+(def kineBall) ; kinematic ball, orbiting the origin
 
 ; Create the PhysicsSystem. Invoked once during initialization.
 (defn createSystem [app]
