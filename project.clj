@@ -10,6 +10,7 @@
     "HelloCcd" ["run" "-m" "clojure.HelloCcd"]
     "HelloCharacter" ["run" "-m" "clojure.HelloCharacter"]
     "HelloCharacterVirtual" ["run" "-m" "clojure.HelloCharacterVirtual"]
+    "HelloCloth" ["run" "-m" "clojure.HelloCloth"]
     "HelloContactResponse" ["run" "-m" "clojure.HelloContactResponse"]
     "HelloDamping" ["run" "-m" "clojure.HelloDamping"]
     "HelloJoltJni" ["run" "-m" "clojure.HelloJoltJni"]
