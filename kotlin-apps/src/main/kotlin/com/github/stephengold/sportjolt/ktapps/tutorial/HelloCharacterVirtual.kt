@@ -186,7 +186,7 @@ class HelloCharacterVirtual : BasePhysicsApp(), PhysicsTickListener {
         val velocity = character!!.getLinearVelocity()
 
         // Apply gravity:
-        velocity.setY(velocity.getY() - 9.81f * timeStep)
+        velocity.setY(velocity.y - 9.81f * timeStep)
 
         // If the character is supported, cause it to jump:
         if (character!!.isSupported) {

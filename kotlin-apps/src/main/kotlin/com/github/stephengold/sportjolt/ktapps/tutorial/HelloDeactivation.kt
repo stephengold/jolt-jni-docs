@@ -107,13 +107,13 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
      * initialization.
      */
     override fun populateSystem() {
-        val bi = physicsSystem.getBodyInterface()
+        val bi = physicsSystem.bodyInterface
 
         // Create a dynamic cube and add it to the system:
         val smallCubeShape = BoxShape(BOX_HALF_EXTENT)
 
         val bcs = BodyCreationSettings()
-        bcs.getMassPropertiesOverride().setMass(BALL_MASS)
+        bcs.massPropertiesOverride.setMass(BALL_MASS)
         bcs.setOverrideMassProperties(EOverrideMassProperties.CalculateInertia)
         bcs.setPosition(0.0, 4.0, 0.0)
         bcs.setShape(smallCubeShape)
@@ -158,8 +158,8 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
          * Once the dynamic cube gets deactivated,
          * remove the support cube from the system:
          */
-        val bi = system.getBodyInterface()
-        val supportId = supportCube!!.getId()
+        val bi = system.bodyInterface
+        val supportId = supportCube!!.id
         if (bi.isAdded(supportId) && !dynamicCube!!.isActive()) {
             bi.removeBody(supportId)
         }
@@ -188,8 +188,8 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
                     GLFW.GLFW_KEY_E -> {
                         if (isPressed) {
                             // Reactivate the dynamic cube:
-                            val bi = physicsSystem.getBodyInterface()
-                            bi!!.activateBody(dynamicCube!!.getId())
+                            val bi = physicsSystem.bodyInterface
+                            bi!!.activateBody(dynamicCube!!.id)
                         }
                         return
                     }
