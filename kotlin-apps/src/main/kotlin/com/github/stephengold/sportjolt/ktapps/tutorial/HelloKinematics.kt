@@ -156,8 +156,8 @@ class HelloKinematics : BasePhysicsApp(), PhysicsTickListener {
         // Make the kinematic ball orbit the origin:
         val phaseAngle = totalSimulatedTime() * TWO_PI / ORBITAL_PERIOD
 
-        val x = ORBIT_RADIUS * Math.sin(phaseAngle)
-        val y = ORBIT_RADIUS * Math.cos(phaseAngle)
+        val x = ORBIT_RADIUS * kotlin.math.sin(phaseAngle)
+        val y = ORBIT_RADIUS * kotlin.math.cos(phaseAngle)
         val location = RVec3(x, y, BALL_Z)
         kineBall!!.moveKinematic(location, Quat(), timeStep)
     }

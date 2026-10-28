@@ -111,7 +111,7 @@ class HelloRigidBody : BasePhysicsApp() {
 
         assert(ball2.isDynamic())
         val actualMass = 1 / ball2.getMotionProperties().getInverseMass()
-        assert(Math.abs(actualMass - BALL_MASS) < 1e-6f)
+        assert(kotlin.math.abs(actualMass - BALL_MASS) < 1e-6f)
 
         // Apply an impulse to ball2 to put it on a collision course with ball1:
         ball2.addImpulse(-25f, 0f, 0f)
