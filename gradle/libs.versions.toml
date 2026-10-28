@@ -21,7 +21,6 @@ jolt-jni-windows64avx2 = { module = "com.github.stephengold:jolt-jni-Windows64_a
 jolt-jni-windowsarm64 = { module = "com.github.stephengold:jolt-jni-Windows_ARM64", version.ref = "joltjni" }
 
 jruby = "org.jruby:jruby-complete:9.4.15.0"
-jsnaploader = "io.github.electrostat-lab:snaploader:1.2.0-stable"
 jython = "org.python:jython-slim:2.7.4"
 luaj-jse = "org.luaj:luaj-jse:3.0.1"
 
