@@ -29,7 +29,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
-import com.github.stephengold.joltjni.BodyInterface
 import com.github.stephengold.joltjni.PhysicsSystem
 import com.github.stephengold.joltjni.RVec3
 import com.github.stephengold.joltjni.SphereShape

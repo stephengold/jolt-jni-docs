@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -29,7 +29,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
-import com.github.stephengold.joltjni.BodyInterface
 import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable
 import com.github.stephengold.joltjni.JobSystem
 import com.github.stephengold.joltjni.JobSystemThreadPool
@@ -48,18 +47,12 @@ import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
 import com.github.stephengold.joltjni.enumerate.EPhysicsUpdateError
-import com.github.stephengold.joltjni.readonly.ConstBody
-import com.github.stephengold.joltjni.readonly.ConstPlane
-import com.github.stephengold.joltjni.readonly.ConstShape
-import com.github.stephengold.joltjni.readonly.RVec3Arg
-import com.github.stephengold.joltjni.readonly.Vec3Arg
 import electrostatic4j.snaploader.LibraryInfo
 import electrostatic4j.snaploader.LoadingCriterion
 import electrostatic4j.snaploader.NativeBinaryLoader
 import electrostatic4j.snaploader.filesystem.DirectoryPath
 import electrostatic4j.snaploader.platform.NativeDynamicLibrary
 import electrostatic4j.snaploader.platform.util.PlatformPredicate
-import groovy.transform.CompileStatic
 
 /**
  * Drop a dynamic sphere onto a horizontal surface (non-graphical illustrative

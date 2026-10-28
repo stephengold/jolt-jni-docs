@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2020-2025 Stephen Gold and Yanis Boudiaf
+Copyright (c) 2020-2026 Stephen Gold and Yanis Boudiaf
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -29,7 +29,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import com.github.stephengold.joltjni.Body
 import com.github.stephengold.joltjni.BodyCreationSettings
-import com.github.stephengold.joltjni.BodyInterface
 import com.github.stephengold.joltjni.BroadPhaseLayerInterfaceTable
 import com.github.stephengold.joltjni.ObjectLayerPairFilterTable
 import com.github.stephengold.joltjni.ObjectVsBroadPhaseLayerFilter
@@ -41,9 +40,7 @@ import com.github.stephengold.joltjni.SphereShape
 import com.github.stephengold.joltjni.Vec3
 import com.github.stephengold.joltjni.enumerate.EActivation
 import com.github.stephengold.joltjni.enumerate.EMotionType
-import com.github.stephengold.joltjni.readonly.Vec3Arg
 import com.github.stephengold.sportjolt.physics.BasePhysicsApp
-import groovy.transform.CompileStatic
 
 /**
  * Drop a dynamic sphere onto a horizontal surface and visualize them both using
