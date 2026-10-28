@@ -259,8 +259,8 @@
                       (.setY velocity 0.)
                       (if (> (.length velocity) 0.)
                         (do
-                          (def scale (/ 7. (.length velocity)))
-                          (.scaleInPlace velocity scale)))))))))))
+                          (let [scale (/ 7. (.length velocity))]
+                            (.scaleInPlace velocity scale))))))))))))
       (.setLinearVelocity character velocity))))
 
 (defn -main "main entry point for the HelloBroadPhase application" [& arguments]
