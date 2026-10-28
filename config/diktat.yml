@@ -378,7 +378,7 @@
   configuration:
     maxSpacesBeforeComment: 2
     maxSpacesInComment: 1
-# Inspection that checks if all comment's are inside if-else code blocks. Exception is general if comment
+# Inspection that checks if all comments are inside if-else code blocks. Exception is general if comment
 - name: IF_ELSE_COMMENTS
   enabled: true
 # Type aliases provide alternative names for existing types when type's reference text is longer 25 chars
@@ -423,7 +423,7 @@
 # Checks that lambda inside function parameters is in the end
 - name: LAMBDA_IS_NOT_LAST_PARAMETER
   enabled: true
-# Checks that function doesn't contains too many parameters
+# Checks that function doesn't contain too many parameters
 - name: TOO_MANY_PARAMETERS
   enabled: true
   configuration:
@@ -486,10 +486,10 @@
 # Checks if there are any trivial getters or setters
 - name: TRIVIAL_ACCESSORS_ARE_NOT_RECOMMENDED
   enabled: true
-# Checks that no custom getters and setters are used for properties. It is a more wide rule than TRIVIAL_ACCESSORS_ARE_NOT_RECOMMENDED
-# Kotlin compiler automatically generates `get` and `set` methods for properties and also lets the possibility to override it.
-# But in all cases it is very confusing when `get` and `set` are overridden for a developer who uses this particular class.
-# Developer expects to get the value of the property, but receives some unknown value and some extra side effect hidden by the custom getter/setter.
+# Checks that no custom getters and setters are used for properties. This is a broader rule than TRIVIAL_ACCESSORS_ARE_NOT_RECOMMENDED .
+# Kotlin compiler automatically generates `get` and `set` methods for properties and allows them to be overriden.
+# For developers who uses such a classes, it is very confusing when `get` and `set` are overridden.
+# The user expects to get the value of the property, but receives some unknown value and some extra side effect hidden by the custom getter/setter.
 # Use extra functions for it instead.
 - name: CUSTOM_GETTERS_SETTERS
   enabled: true
@@ -517,7 +517,7 @@
 # Example: val table get() {if (_table == null) ...} -> table should have _table
 - name: NO_CORRESPONDING_PROPERTY
   enabled: true
-# Checks if there is class/object that can be replace with extension function
+# Checks if there is class/object that can be replaced with an extension function
 - name: AVOID_USING_UTILITY_CLASS
   enabled: true
 # If there is stateless class it is preferred to use object
