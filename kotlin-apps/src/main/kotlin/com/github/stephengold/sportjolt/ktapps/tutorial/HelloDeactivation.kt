@@ -125,7 +125,7 @@ class HelloDeactivation : BasePhysicsApp(), PhysicsTickListener {
          */
         val largeCubeShape = BoxShape(CUBE_HALF_EXTENT)
         bcs.setMotionType(EMotionType.Static)
-            .setObjectLayer(BasePhysicsApp.objLayerNonMoving)
+            .setObjectLayer(objLayerNonMoving)
             .setPosition(0.0, 0.0, 0.0)
             .setShape(largeCubeShape)
         supportCube = bi.createBody(bcs)
