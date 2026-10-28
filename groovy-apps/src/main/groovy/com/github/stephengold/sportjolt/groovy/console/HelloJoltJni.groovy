@@ -63,7 +63,7 @@ import groovy.transform.CompileStatic
  * @author Stephen Gold sgold@sonic.net
  */
 @CompileStatic
-final public class HelloJoltJni {
+final class HelloJoltJni {
 
     // *************************************************************************
     // constants

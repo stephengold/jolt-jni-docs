@@ -53,7 +53,7 @@ import groovy.transform.CompileStatic
  * @author Stephen Gold sgold@sonic.net
  */
 @CompileStatic
-final public class HelloSport extends BasePhysicsApp {
+final class HelloSport extends BasePhysicsApp {
 
     // *************************************************************************
     // fields
