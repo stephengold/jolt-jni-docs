@@ -91,10 +91,11 @@
 ; Configure the camera, projection, and CIP during initialization.
 (defn configureCamera []
   (.setRotationMode (BaseApplication/getCameraInputProcessor) RotateMode/DragLMB)
-  (def cam (BaseApplication/getCamera))
-  (.setAzimuth cam -1.9)
-  (.setLocation cam 35. 35. 60.)
-  (.setUpAngle cam -0.5)
+  (let [cam (BaseApplication/getCamera)]
+    (do
+      (.setAzimuth cam -1.9)
+      (.setLocation cam 35. 35. 60.)
+      (.setUpAngle cam -0.5)))
   (.setFovyDegrees (BaseApplication/getProjection) 30.))
 
 ; Configure keyboard input during initialization.
@@ -145,112 +146,122 @@
   (def filterObjLayerMoving (SpecifiedObjectLayerFilter. BasePhysicsApp/objLayerMoving))
 
   ; Create a ghost box:
-  (def center (Vec3. 15. 0. -13.))
-  (def radius 10.)
-  (def ghost (AaBox. center (float radius)))
+  (let [center (Vec3. 15. 0. -13.)
+        radius 10.]
+    (do
+      (def ghost (AaBox. center (float radius)))
 
-  ; Visualize the ghost box:
-  (def boxMesh (BoxMesh/getMesh))
-  (def ghostGeometry (Geometry. boxMesh))
-  (.setLocation ghostGeometry center)
-  (.setScale ghostGeometry (float radius)))
+      ; Visualize the ghost box:
+      (let [boxMesh (BoxMesh/getMesh)]
+        (do
+          (def ghostGeometry (Geometry. boxMesh))
+          (.setLocation ghostGeometry center)
+          (.setScale ghostGeometry (float radius)))))))
 
 ; Add a static horizontal plane body to the system.
 (defn addPlane [bi y]
-  (def plane (Plane. 0. 1. 0. (- y)))
-  (def shape (PlaneShape. plane))
-  (def bcs (BodyCreationSettings.))
-  (.setMotionType bcs EMotionType/Static)
-  (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
-  (.setShape bcs shape)
+  (let [plane (Plane. 0. 1. 0. (- y))
+        shape (PlaneShape. plane)
+        bcs (BodyCreationSettings.)]
+    (do
+      (.setMotionType bcs EMotionType/Static)
+      (.setObjectLayer bcs BasePhysicsApp/objLayerNonMoving)
+      (.setShape bcs shape)
 
-  (def body (.createBody bi bcs))
-  (.addBody bi body EActivation/DontActivate)
+      (let [body (.createBody bi bcs)]
+        (do
+          (.addBody bi body EActivation/DontActivate)
 
-  ; Visualize the body:
-  (def resourceName "/Textures/greenTile.png")
-  (def maxAniso 16.)
-  (def textureKey (TextureKey. (str "classpath://" resourceName) maxAniso))
-  (def geom (BasePhysicsApp/visualizeShape body 0.1))
-  (.setSpecularColor geom Constants/DARK_GRAY)
-  (.setTexture geom textureKey))
+           ; Visualize the body:
+          (let [resourceName "/Textures/greenTile.png"
+                maxAniso 16.
+                textureKey (TextureKey. (str "classpath://" resourceName) maxAniso)
+                geom (BasePhysicsApp/visualizeShape body 0.1)]
+            (do
+              (.setSpecularColor geom Constants/DARK_GRAY)
+              (.setTexture geom textureKey))))))))
 
 ; Populate the PhysicsSystem with bodies. Invoked once during initialization.
 (defn populateSystem [app]
   ; Create a character with a capsule shape and add it to the system:
-  (def capsuleRadius 3.) ; meters
-  (def capsuleHeight 4.) ; meters
-  (def shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius))
+  (let [capsuleRadius 3. ; meters
+        capsuleHeight 4. ; meters
+        shape (CapsuleShape. (/ capsuleHeight 2.) capsuleRadius)
+        settings (CharacterSettings.)]
+    (do
+      (.setShape settings shape)
 
-  (def settings (CharacterSettings.))
-  (.setShape settings shape)
+      (let [startLocation (RVec3. 0. 3. 0.)
+            userData 0
+            physicsSystem (.getPhysicsSystem app)]
+        (do
+          (def character (com.github.stephengold.joltjni.Character.
+                          settings startLocation (Quat.) userData physicsSystem))
+          (.addToPhysicsSystem character)
 
-  (def startLocation (RVec3. 0. 3. 0.))
-  (def userData 0)
-  (def physicsSystem (.getPhysicsSystem app))
-  (def character (com.github.stephengold.joltjni.Character.
-                  settings startLocation (Quat.) userData physicsSystem))
-  (.addToPhysicsSystem character)
+          ; Visualize the character and sensor:
+          (BasePhysicsApp/visualizeShape character)
+          (AabbGeometry. character) ; outline the character's bounding box in white
 
-  ; Visualize the character and sensor:
-  (BasePhysicsApp/visualizeShape character)
-  (AabbGeometry. character) ; outline the character's bounding box in white
-
-  ; Add a plane to represent the ground:
-  (def bi (.getBodyInterface physicsSystem))
-  (def groundY -2.)
-  (addPlane bi groundY))
+          ; Add a plane to represent the ground:
+          (let [bi (.getBodyInterface physicsSystem)
+                groundY -2.]
+            (addPlane bi groundY)))))))
 
 (defn postPhysicsTick [app timeStep]
   ; Update the character:
-  (def maxSeparation 0.1) ; meters above the ground
-  (.postSimulation character maxSeparation)
+  (let [maxSeparation 0.1] ; meters above the ground
+    (.postSimulation character maxSeparation))
 
   ; Collect all movable bodies with AABBs overlapping the ghost box:
-  (def system (.getPhysicsSystem app))
-  (def query (.getBroadPhaseQuery system))
-  (.reset collector)
-  (.collideAaBox query ghost collector filterBpLayerNoOp filterObjLayerMoving)
+  (let [system (.getPhysicsSystem app)
+        query (.getBroadPhaseQuery system)]
+    (do
+      (.reset collector)
+      (.collideAaBox query ghost collector filterBpLayerNoOp filterObjLayerMoving)))
 
   ; Update the color of the ghost:
-  (def numHits (.countHits collector))
-  (if (> numHits 0) ; Intruder detected!
-    (.setColor ghostGeometry Constants/RED)
-    (.setColor ghostGeometry Constants/YELLOW)))
+  (let [numHits (.countHits collector)]
+    (if (> numHits 0) ; Intruder detected!
+      (.setColor ghostGeometry Constants/RED)
+      (.setColor ghostGeometry Constants/YELLOW))))
 
 (defn prePhysicsTick [app timeStep]
-  (def velocity (.getLinearVelocity character))
-
-  ; Clear any horizontal motion from the previous simulation step:
-  (.setX velocity 0.)
-  (.setZ velocity 0.)
-
-  ; If the character is supported, make it respond to keyboard input:
-  (if (.isSupported character)
+  (let [velocity (.getLinearVelocity character)]
     (do
-      (if jumpRequested ; Cause the character to jump:
-        (.setY velocity 18.)
+
+      ; Clear any horizontal motion from the previous simulation step:
+      (.setX velocity 0.)
+      (.setZ velocity 0.)
+
+      ; If the character is supported, make it respond to keyboard input:
+      (if (.isSupported character)
         (do
-          (def cam (BaseApplication/getCamera))
-
-          ; Walk as directed by the arrow keys:
-          (def component1 (.getDirection cam))
-          (def backward (if walkBackward 1. 0.))
-          (def forward (if walkForward 1. 0.))
-          (.scaleInPlace component1 (- forward backward))
-
-          (def right (if walkRight 1. 0.))
-          (def left (if walkLeft 1. 0.))
-          (def component2 (.getRight cam))
-          (.scaleInPlace component2 (- right left))
-          (Op/assign velocity (Op/plus component1 component2))
-
-          (.setY velocity 0.)
-          (if (> (.length velocity) 0.)
+          (if jumpRequested ; Cause the character to jump:
+            (.setY velocity 18.)
             (do
-              (def scale (/ 7. (.length velocity)))
-              (.scaleInPlace velocity scale)))))))
-  (.setLinearVelocity character velocity))
+              (let [cam (BaseApplication/getCamera)
+
+                    ; Walk as directed by the arrow keys:
+                    component1 (.getDirection cam)
+                    backward (if walkBackward 1. 0.)
+                    forward (if walkForward 1. 0.)]
+                (do
+                  (.scaleInPlace component1 (- forward backward))
+
+                  (let [component2 (.getRight cam)
+                        right (if walkRight 1. 0.)
+                        left (if walkLeft 1. 0.)]
+                    (do
+                      (.scaleInPlace component2 (- right left))
+                      (Op/assign velocity (Op/plus component1 component2))
+
+                      (.setY velocity 0.)
+                      (if (> (.length velocity) 0.)
+                        (do
+                          (def scale (/ 7. (.length velocity)))
+                          (.scaleInPlace velocity scale)))))))))))
+      (.setLinearVelocity character velocity))))
 
 (defn -main "main entry point for the HelloBroadPhase application" [& arguments]
   (let [fpa (FunctionalPhysicsApp.)]
