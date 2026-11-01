@@ -4,16 +4,16 @@ for [the Jolt-JNI 3-D physics library][joltjni].
 
 It contains 12 subprojects:
 
-1. docs: [Antora] external documentation for Jolt JNI, including a tutorial
+1. docs: external documentation for Jolt JNI, including a tutorial, in [Antora]
 2. java-apps: all 27 sample applications mentioned in the tutorial, in [Java]
 3. jython-apps: all 27 sample applications, ported to Jython [Python]
 4. scala-apps: all 27 sample applications, ported to [Scala]
-5. src/clojure: 15 sample applications ported to [Clojure]
+5. src/clojure: 15 sample applications ported to [Clojure] LISP
 6. kotlin-apps: 9 sample applications ported to [Kotlin]
 7. nashorn-apps: 8 sample applications ported to Nashorn [JavaScript]
 8. jruby-apps: 4 sample applications ported to JRuby [Ruby]
 9. groovy-apps: 3 sample applications ported to statically-compiled [Groovy]
-10. groovy223-apps: 3 sample applications ported to scripted [Groovy]
+10. groovy223-apps: 3 sample applications ported to interpreted [Groovy]
 11. luaj-apps: a sample application ported to Luaj [Lua]
 12. luajava-apps: a sample application ported to Luajava [Lua]
 
