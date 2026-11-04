@@ -40,6 +40,7 @@
 ** https://github.com/stephengold/jolt-jni-maven[jolt-jni-maven]
 ** https://github.com/stephengold/sport-jolt[Sport-Jolt]
 ** https://github.com/stephengold/kk-physics[KK Physics]
+** https://github.com/tehnewb/Valthorne[Valthorne]
 ** https://github.com/velthoric/Velthoric[Velthoric]
 ** https://github.com/emortaldev/BlockPhysics[BlockPhysics]
 * Other related projects
