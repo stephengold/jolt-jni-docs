@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
-<div class="inheritance"><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">com.github.stephengold.joltjni.template.Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;
+<div class="inheritance"><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">com.github.stephengold.joltjni.template.Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;
 <div class="inheritance">com.github.stephengold.joltjni.PhysicsMaterialList</div>
 </div>
 </div>
@@ -99,7 +99,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PhysicsMaterialList</span>
-<span class="extends-implements">extends <a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</span></div>
 <div class="block">A variable-length list (array) of material references. (native type:
  <code>Array&lt;RefConst&lt;PhysicsMaterial&gt;&gt;</code>)</div>
 </section>
@@ -142,7 +142,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Remove all references in the specified range of indices.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(int)" class="member-name-link">get</a><wbr>(int&nbsp;elementIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the reference at the specified index.</div>
@@ -153,8 +153,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Extend or truncate the list.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.PhysicsMaterialRef)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
- <a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&nbsp;reference)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(int,com.github.stephengold.joltjni.PhysicsMaterialRefC)" class="member-name-link">set</a><wbr>(int&nbsp;elementIndex,
+ <a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Duplicate the specified reference at the specified index.</div>
 </div>
@@ -209,7 +209,7 @@ loadScripts(document, 'script');</script>
  list is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Array.html#capacity()">capacity</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;</code></dd>
+<dd><code><a href="template/Array.html#capacity()">capacity</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>the number of references (&ge;size)</dd>
 </dl>
@@ -223,7 +223,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Remove all references in the specified range of indices.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Array.html#erase(int,int)">erase</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;</code></dd>
+<dd><code><a href="template/Array.html#erase(int,int)">erase</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>startIndex</code> - the index of the first element to remove (&ge;0)</dd>
 <dd><code>stopIndex</code> - one plus the index of the last element to remove (&ge;0)</dd>
@@ -233,11 +233,11 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="get(int)">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;elementIndex)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;elementIndex)</span></div>
 <div class="block">Copy the reference at the specified index.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Array.html#get(int)">get</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;</code></dd>
+<dd><code><a href="template/Array.html#get(int)">get</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>elementIndex</code> - the index from which to get the reference (&ge;0)</dd>
 <dt>Returns:</dt>
@@ -252,21 +252,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Extend or truncate the list.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Array.html#resize(int)">resize</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;</code></dd>
+<dd><code><a href="template/Array.html#resize(int)">resize</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>numElements</code> - the desired size (number of references, &ge;0)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="set(int,com.github.stephengold.joltjni.PhysicsMaterialRef)">
+<section class="detail" id="set(int,com.github.stephengold.joltjni.PhysicsMaterialRefC)">
 <h3>set</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(int&nbsp;elementIndex,
- <a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&nbsp;reference)</span></div>
+ <a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&nbsp;reference)</span></div>
 <div class="block">Duplicate the specified reference at the specified index.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Array.html#set(int,T)">set</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;</code></dd>
+<dd><code><a href="template/Array.html#set(int,T)">set</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>elementIndex</code> - the index at which to put the reference (&ge;0)</dd>
 <dd><code>reference</code> - the reference to put (not <code>null</code>)</dd>
@@ -280,7 +280,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Count how many references are in the list. The list is unaffected.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="template/Array.html#size()">size</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&gt;</code></dd>
+<dd><code><a href="template/Array.html#size()">size</a></code>&nbsp;in class&nbsp;<code><a href="template/Array.html" title="class in com.github.stephengold.joltjni.template">Array</a>&lt;<a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>the number of references (&ge;0, &le;capacity)</dd>
 </dl>

@@ -97,11 +97,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code>, <code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">HeightFieldShapeSettings</span>
-<span class="extends-implements">extends <a href="ShapeSettings.html" title="class in com.github.stephengold.joltjni">ShapeSettings</a></span></div>
+<span class="extends-implements">extends <a href="ShapeSettings.html" title="class in com.github.stephengold.joltjni">ShapeSettings</a>
+implements <a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></span></div>
 <div class="block">Settings used to construct a <code>HeightFieldShape</code>.</div>
 </section>
 <section class="summary">
@@ -155,7 +156,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate settings for the specified samples.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.HeightFieldShapeSettings)" class="member-name-link">HeightFieldShapeSettings</a><wbr>(<a href="HeightFieldShapeSettings.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeSettings</a>&nbsp;original)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstHeightFieldShapeSettings)" class="member-name-link">HeightFieldShapeSettings</a><wbr>(<a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a copy of the specified settings.</div>
 </div>
@@ -221,20 +222,97 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getActiveEdgeCosThresholdAngle()" class="member-name-link">getActiveEdgeCosThresholdAngle</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateBitsPerSampleForError(float)" class="member-name-link">calculateBitsPerSampleForError</a><wbr>(float&nbsp;maxError)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the cosine of the active-edge threshold angle.</div>
+<div class="block">Calculate the minimum bits per sample that will provide the specified
+ error tolerance.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBitsPerSample()" class="member-name-link">getBitsPerSample</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countHeights()" class="member-name-link">countHeights</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the number of bits per sample to use during compression.</div>
+<div class="block">Count the height samples, including <code>cNoCollisionValue</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlockSize()" class="member-name-link">getBlockSize</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countMaterials()" class="member-name-link">countMaterials</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Count the references in the material list, including null refs.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countSquares()" class="member-name-link">countSquares</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Count the squares.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#determineMinAndMaxSample(float%5B%5D,float%5B%5D,float%5B%5D)" class="member-name-link">determineMinAndMaxSample</a><wbr>(float[]&nbsp;storeMin,
+ float[]&nbsp;storeMax,
+ float[]&nbsp;storeQuantScale)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Calculate 3 quantization parameters of the current settings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getActiveEdgeCosThresholdAngle()" class="member-name-link">getActiveEdgeCosThresholdAngle</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the cosine of the active-edge threshold angle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBitsPerSample()" class="member-name-link">getBitsPerSample</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the number of bits per sample to use during compression.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlockSize()" class="member-name-link">getBlockSize</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the block size.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeightSample(int)" class="member-name-link">getHeightSample</a><wbr>(int&nbsp;sampleIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the height of the specified sample.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeightSample(int,int)" class="member-name-link">getHeightSample</a><wbr>(int&nbsp;x,
+ int&nbsp;y)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the height of the specified sample.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterialIndex(int)" class="member-name-link">getMaterialIndex</a><wbr>(int&nbsp;squareIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the material index for the specified square.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterialIndex(int,int)" class="member-name-link">getMaterialIndex</a><wbr>(int&nbsp;x,
+ int&nbsp;y)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the material index for the specified square.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterialRef(int)" class="member-name-link">getMaterialRef</a><wbr>(int&nbsp;materialIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return a reference to the material for the specified material index.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterialRef(int,int)" class="member-name-link">getMaterialRef</a><wbr>(int&nbsp;x,
+ int&nbsp;y)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return a reference to the material for the specified square.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterialRefForSquare(int)" class="member-name-link">getMaterialRefForSquare</a><wbr>(int&nbsp;squareIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return a reference to the material for the specified square.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterials()" class="member-name-link">getMaterials</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the material list.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterialsCapacity()" class="member-name-link">getMaterialsCapacity</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the artificial minimum capacity for the created shape's material
+ list.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxHeightValue()" class="member-name-link">getMaxHeightValue</a>()</code></div>
@@ -254,7 +332,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSampleCount()" class="member-name-link">getSampleCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Count the samples.</div>
+<div class="block">Count the samples along each edge.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScale()" class="member-name-link">getScale</a>()</code></div>
@@ -262,7 +340,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the scale factors.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.HeightFieldShapeSettings)" class="member-name-link">set</a><wbr>(<a href="HeightFieldShapeSettings.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeSettings</a>&nbsp;source)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstHeightFieldShapeSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Copy the argument to the current settings.</div>
 </div>
@@ -282,19 +360,67 @@ loadScripts(document, 'script');</script>
 <div class="block">Alter the block size.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxHeightValue(float)" class="member-name-link">setMaxHeightValue</a><wbr>(float&nbsp;maxHeight)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHeightSample(int,float)" class="member-name-link">setHeightSample</a><wbr>(int&nbsp;sampleIndex,
+ float&nbsp;height)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the artificial maximum height.</div>
+<div class="block">Alter the height of the specified sample.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMinHeightValue(float)" class="member-name-link">setMinHeightValue</a><wbr>(float&nbsp;minHeight)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHeightSample(int,int,float)" class="member-name-link">setHeightSample</a><wbr>(int&nbsp;x,
+ int&nbsp;y,
+ float&nbsp;height)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the artificial minimum height.</div>
+<div class="block">Alter the height of the specified sample.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOffset(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setOffset</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterial(int,com.github.stephengold.joltjni.PhysicsMaterialRef)" class="member-name-link">setMaterial</a><wbr>(int&nbsp;materialIndex,
+ <a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the material reference for the specified list index.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterialIndex(int,int)" class="member-name-link">setMaterialIndex</a><wbr>(int&nbsp;squareIndex,
+ int&nbsp;materialIndex)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the material index of the specified square.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterialIndex(int,int,int)" class="member-name-link">setMaterialIndex</a><wbr>(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;materialIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the material index for the specified square.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterials(com.github.stephengold.joltjni.PhysicsMaterialList)" class="member-name-link">setMaterials</a><wbr>(<a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a>&nbsp;list)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replace the existing material list with a copy of the specified list.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterialsCapacity(int)" class="member-name-link">setMaterialsCapacity</a><wbr>(int&nbsp;numRefs)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the artificial minimum capacity for the created shape's material
+ list.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxHeightValue(float)" class="member-name-link">setMaxHeightValue</a><wbr>(float&nbsp;maxHeight)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the artificial maximum height.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMinHeightValue(float)" class="member-name-link">setMinHeightValue</a><wbr>(float&nbsp;minHeight)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the artificial minimum height.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOffset(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setOffset</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;offset)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the offset of the first sample.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSampleCount(int)" class="member-name-link">setSampleCount</a><wbr>(int&nbsp;sampleCount)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the number of samples along each dimension.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScale(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setScale</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</code></div>
@@ -325,6 +451,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
 <code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstShapeSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></h3>
+<code><a href="readonly/ConstShapeSettings.html#create()">create</a>, <a href="readonly/ConstShapeSettings.html#getRefCount()">getRefCount</a>, <a href="readonly/ConstShapeSettings.html#toRefC()">toRefC</a></code></div>
 </section>
 </li>
 </ul>
@@ -559,9 +688,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.HeightFieldShapeSettings)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstHeightFieldShapeSettings)">
 <h3>HeightFieldShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">HeightFieldShapeSettings</span><wbr><span class="parameters">(<a href="HeightFieldShapeSettings.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeSettings</a>&nbsp;original)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">HeightFieldShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a>&nbsp;original)</span></div>
 <div class="block">Instantiate a copy of the specified settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -578,110 +707,20 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getActiveEdgeCosThresholdAngle()">
-<h3>getActiveEdgeCosThresholdAngle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getActiveEdgeCosThresholdAngle</span>()</div>
-<div class="block">Return the cosine of the active-edge threshold angle. The settings are
- unaffected. (native attribute: mActiveEdgeCosThresholdAngle)</div>
+<section class="detail" id="getMaterials()">
+<h3>getMaterials</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a></span>&nbsp;<span class="element-name">getMaterials</span>()</div>
+<div class="block">Access the material list. (native attribute: mMaterials)</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the cosine</dd>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getBitsPerSample()">
-<h3>getBitsPerSample</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getBitsPerSample</span>()</div>
-<div class="block">Return the number of bits per sample to use during compression. The
- settings are unaffected. (native attribute: mBitsPerSample)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the number of bits (&ge;1, &le;16)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getBlockSize()">
-<h3>getBlockSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getBlockSize</span>()</div>
-<div class="block">Return the block size. The settings are unaffected. (native attribute:
- mBlockSize)
- <p>
- For culling purposes, the height field is organized in blocks of
- <code>2 * mBlockSize * mBlockSize</code> triangles.
- <p>
- Sensible values range from 2 to 8.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the block size (in rows)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMaxHeightValue()">
-<h3>getMaxHeightValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getMaxHeightValue</span>()</div>
-<div class="block">Return the artificial maximum height. The settings are unaffected.
- (native attribute: mMaxHeightValue)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the height value</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMinHeightValue()">
-<h3>getMinHeightValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getMinHeightValue</span>()</div>
-<div class="block">Return the artificial minimum height. The settings are unaffected.
- (native attribute: mMinHeightValue)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the height value</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getOffset()">
-<h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getOffset</span>()</div>
-<div class="block">Copy the offset of the first sample. The settings are unaffected. (native
- attribute: mOffset)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new offset vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSampleCount()">
-<h3>getSampleCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSampleCount</span>()</div>
-<div class="block">Count the samples. The settings are unaffected. (native attribute:
- mSampleCount)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the number of samples (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getScale()">
-<h3>getScale</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getScale</span>()</div>
-<div class="block">Copy the scale factors. The settings are unaffected. (native attribute:
- mScale)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a new scaling vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="set(com.github.stephengold.joltjni.HeightFieldShapeSettings)">
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstHeightFieldShapeSettings)">
 <h3>set</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="HeightFieldShapeSettings.html" title="class in com.github.stephengold.joltjni">HeightFieldShapeSettings</a>&nbsp;source)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a>&nbsp;source)</span></div>
 <div class="block">Copy the argument to the current settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -730,6 +769,101 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setHeightSample(int,float)">
+<h3>setHeightSample</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHeightSample</span><wbr><span class="parameters">(int&nbsp;sampleIndex,
+ float&nbsp;height)</span></div>
+<div class="block">Alter the height of the specified sample.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>sampleIndex</code> - the array index (&ge;0, &lt;sampleCount^2)</dd>
+<dd><code>height</code> - the desired height, or <code>cNoCollisionValue</code> for no
+ collision</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setHeightSample(int,int,float)">
+<h3>setHeightSample</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHeightSample</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y,
+ float&nbsp;height)</span></div>
+<div class="block">Alter the height of the specified sample.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X index of the sample (&ge;0, &lt;sampleCount)</dd>
+<dd><code>y</code> - the Y index of the sample (&ge;0, &lt;sampleCount)</dd>
+<dd><code>height</code> - the desired height, or <code>cNoCollisionValue</code> for no
+ collision</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaterial(int,com.github.stephengold.joltjni.PhysicsMaterialRef)">
+<h3>setMaterial</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaterial</span><wbr><span class="parameters">(int&nbsp;materialIndex,
+ <a href="PhysicsMaterialRef.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRef</a>&nbsp;reference)</span></div>
+<div class="block">Alter the material reference for the specified list index.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>materialIndex</code> - the list index at which to put the reference (&ge;0)</dd>
+<dd><code>reference</code> - the reference to store (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaterialIndex(int,int)">
+<h3>setMaterialIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaterialIndex</span><wbr><span class="parameters">(int&nbsp;squareIndex,
+ int&nbsp;materialIndex)</span></div>
+<div class="block">Alter the material index of the specified square.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>squareIndex</code> - the index of the square (&ge;0, &lt;(sampleCount-1)^2)</dd>
+<dd><code>materialIndex</code> - the desired material index</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaterialIndex(int,int,int)">
+<h3>setMaterialIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaterialIndex</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;materialIndex)</span></div>
+<div class="block">Alter the material index for the specified square.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X index of the square (&ge;0, &lt;sampleCount-1)</dd>
+<dd><code>y</code> - the Y index of the square (&ge;0, &lt;sampleCount-1)</dd>
+<dd><code>materialIndex</code> - the desired index into the material list (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaterials(com.github.stephengold.joltjni.PhysicsMaterialList)">
+<h3>setMaterials</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaterials</span><wbr><span class="parameters">(<a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a>&nbsp;list)</span></div>
+<div class="block">Replace the existing material list with a copy of the specified list.
+ (native attribute: mMaterials)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>list</code> - the desired material for each material index</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaterialsCapacity(int)">
+<h3>setMaterialsCapacity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaterialsCapacity</span><wbr><span class="parameters">(int&nbsp;numRefs)</span></div>
+<div class="block">Alter the artificial minimum capacity for the created shape's material
+ list. (native attribute: mMaterialsCapacity)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>numRefs</code> - the desired minimum capacity (in refs, default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setMaxHeightValue(float)">
 <h3>setMaxHeightValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaxHeightValue</span><wbr><span class="parameters">(float&nbsp;maxHeight)</span></div>
@@ -764,6 +898,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setSampleCount(int)">
+<h3>setSampleCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSampleCount</span><wbr><span class="parameters">(int&nbsp;sampleCount)</span></div>
+<div class="block">Alter the number of samples along each dimension. (native attribute:
+ mSampleCount)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>sampleCount</code> - the desired number of samples (&ge;0, default=0)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setScale(com.github.stephengold.joltjni.readonly.Vec3Arg)">
 <h3>setScale</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setScale</span><wbr><span class="parameters">(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;scale)</span></div>
@@ -772,6 +918,329 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>scale</code> - the desired scale factors (not <code>null</code>, unaffected,
  default=(1,1,1))</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="calculateBitsPerSampleForError(float)">
+<h3>calculateBitsPerSampleForError</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">calculateBitsPerSampleForError</span><wbr><span class="parameters">(float&nbsp;maxError)</span></div>
+<div class="block">Calculate the minimum bits per sample that will provide the specified
+ error tolerance. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#calculateBitsPerSampleForError(float)">calculateBitsPerSampleForError</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>maxError</code> - the allowable tolerance</dd>
+<dt>Returns:</dt>
+<dd>the (hypothetical) bits per sample</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countHeights()">
+<h3>countHeights</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countHeights</span>()</div>
+<div class="block">Count the height samples, including <code>cNoCollisionValue</code>. The
+ settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#countHeights()">countHeights</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the actual number of samples in the array (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countMaterials()">
+<h3>countMaterials</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countMaterials</span>()</div>
+<div class="block">Count the references in the material list, including null refs. The
+ settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#countMaterials()">countMaterials</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the actual number of references in the list (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countSquares()">
+<h3>countSquares</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countSquares</span>()</div>
+<div class="block">Count the squares. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#countSquares()">countSquares</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the actual number of material indices in the array (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="determineMinAndMaxSample(float[],float[],float[])">
+<h3>determineMinAndMaxSample</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">determineMinAndMaxSample</span><wbr><span class="parameters">(float[]&nbsp;storeMin,
+ float[]&nbsp;storeMax,
+ float[]&nbsp;storeQuantScale)</span></div>
+<div class="block">Calculate 3 quantization parameters of the current settings. The settings
+ are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#determineMinAndMaxSample(float%5B%5D,float%5B%5D,float%5B%5D)">determineMinAndMaxSample</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>storeMin</code> - storage for the minimum height (ignoring
+ <code>cNoCollisionValue</code>) or <code>MIN_VALUE</code> if no samples have
+ collision</dd>
+<dd><code>storeMax</code> - storage for the maximum height (ignoring
+ <code>cNoCollisionValue</code>) or <code>MAX_VALUE</code> if no samples have
+ collision</dd>
+<dd><code>storeQuantScale</code> - storage for the quantization scale factor</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getActiveEdgeCosThresholdAngle()">
+<h3>getActiveEdgeCosThresholdAngle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getActiveEdgeCosThresholdAngle</span>()</div>
+<div class="block">Return the cosine of the active-edge threshold angle. The settings are
+ unaffected. (native attribute: mActiveEdgeCosThresholdAngle)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getActiveEdgeCosThresholdAngle()">getActiveEdgeCosThresholdAngle</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cosine</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBitsPerSample()">
+<h3>getBitsPerSample</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getBitsPerSample</span>()</div>
+<div class="block">Return the number of bits per sample to use during compression. The
+ settings are unaffected. (native attribute: mBitsPerSample)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getBitsPerSample()">getBitsPerSample</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the number of bits (&ge;1, &le;16)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBlockSize()">
+<h3>getBlockSize</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getBlockSize</span>()</div>
+<div class="block">Return the block size. The settings are unaffected. (native attribute:
+ mBlockSize)
+ <p>
+ For culling purposes, the height field is organized in blocks of
+ <code>2 * mBlockSize * mBlockSize</code> triangles.
+ <p>
+ Sensible values range from 2 to 8.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getBlockSize()">getBlockSize</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the block size (in rows)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getHeightSample(int)">
+<h3>getHeightSample</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getHeightSample</span><wbr><span class="parameters">(int&nbsp;sampleIndex)</span></div>
+<div class="block">Return the height of the specified sample. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getHeightSample(int)">getHeightSample</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>sampleIndex</code> - the array index (&ge;0, &lt;sampleCount^2)</dd>
+<dt>Returns:</dt>
+<dd>the sample height or <code>cNoCollisionValue</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getHeightSample(int,int)">
+<h3>getHeightSample</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getHeightSample</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y)</span></div>
+<div class="block">Return the height of the specified sample. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getHeightSample(int,int)">getHeightSample</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X index of the sample (&ge;0, &lt;sampleCount)</dd>
+<dd><code>y</code> - the Y index of the sample (&ge;0, &lt;sampleCount)</dd>
+<dt>Returns:</dt>
+<dd>the sample height or <code>cNoCollisionValue</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaterialIndex(int)">
+<h3>getMaterialIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaterialIndex</span><wbr><span class="parameters">(int&nbsp;squareIndex)</span></div>
+<div class="block">Return the material index for the specified square. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMaterialIndex(int)">getMaterialIndex</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>squareIndex</code> - the index of the square (&ge;0, &lt;(sampleCount-1)^2)</dd>
+<dt>Returns:</dt>
+<dd>an index into the material list (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaterialIndex(int,int)">
+<h3>getMaterialIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaterialIndex</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y)</span></div>
+<div class="block">Return the material index for the specified square. The settings are
+ unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMaterialIndex(int,int)">getMaterialIndex</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X index of the square (&ge;0, &lt;sampleCount-1)</dd>
+<dd><code>y</code> - the Y index of the square (&ge;0, &lt;sampleCount-1)</dd>
+<dt>Returns:</dt>
+<dd>an index into the material list (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaterialRef(int)">
+<h3>getMaterialRef</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></span>&nbsp;<span class="element-name">getMaterialRef</span><wbr><span class="parameters">(int&nbsp;materialIndex)</span></div>
+<div class="block">Return a reference to the material for the specified material index.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMaterialRef(int)">getMaterialRef</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>materialIndex</code> - the index in the local table (&ge;0)</dd>
+<dt>Returns:</dt>
+<dd>a new counted reference to the existing material</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaterialRef(int,int)">
+<h3>getMaterialRef</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></span>&nbsp;<span class="element-name">getMaterialRef</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y)</span></div>
+<div class="block">Return a reference to the material for the specified square.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMaterialRef(int,int)">getMaterialRef</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>x</code> - the X index of the square (&ge;0, &lt;sampleCount-1)</dd>
+<dd><code>y</code> - the Y index of the square (&ge;0, &lt;sampleCount-1)</dd>
+<dt>Returns:</dt>
+<dd>a new counted reference to the existing material</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaterialRefForSquare(int)">
+<h3>getMaterialRefForSquare</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialRefC.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialRefC</a></span>&nbsp;<span class="element-name">getMaterialRefForSquare</span><wbr><span class="parameters">(int&nbsp;squareIndex)</span></div>
+<div class="block">Return a reference to the material for the specified square.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMaterialRefForSquare(int)">getMaterialRefForSquare</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>squareIndex</code> - the index of the square (&ge;0, &lt;(sampleCount-1)^2)</dd>
+<dt>Returns:</dt>
+<dd>a new counted reference to the existing material</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaterialsCapacity()">
+<h3>getMaterialsCapacity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaterialsCapacity</span>()</div>
+<div class="block">Return the artificial minimum capacity for the created shape's material
+ list. The settings are unaffected. (native attribute: mMaterialsCapacity)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMaterialsCapacity()">getMaterialsCapacity</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the capacity (in refs)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxHeightValue()">
+<h3>getMaxHeightValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getMaxHeightValue</span>()</div>
+<div class="block">Return the artificial maximum height. The settings are unaffected.
+ (native attribute: mMaxHeightValue)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMaxHeightValue()">getMaxHeightValue</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the height value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMinHeightValue()">
+<h3>getMinHeightValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getMinHeightValue</span>()</div>
+<div class="block">Return the artificial minimum height. The settings are unaffected.
+ (native attribute: mMinHeightValue)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getMinHeightValue()">getMinHeightValue</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the height value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOffset()">
+<h3>getOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getOffset</span>()</div>
+<div class="block">Copy the offset of the first sample. The settings are unaffected. (native
+ attribute: mOffset)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getOffset()">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new offset vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSampleCount()">
+<h3>getSampleCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSampleCount</span>()</div>
+<div class="block">Count the samples along each edge. The settings are unaffected. (native
+ attribute: mSampleCount)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getSampleCount()">getSampleCount</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the number of samples (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getScale()">
+<h3>getScale</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vec3.html" title="class in com.github.stephengold.joltjni">Vec3</a></span>&nbsp;<span class="element-name">getScale</span>()</div>
+<div class="block">Copy the scale factors. The settings are unaffected. (native attribute:
+ mScale)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstHeightFieldShapeSettings.html#getScale()">getScale</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstHeightFieldShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstHeightFieldShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new scaling vector</dd>
 </dl>
 </section>
 </li>

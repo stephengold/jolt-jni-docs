@@ -87,7 +87,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.JoltPhysicsObject</a>
+<div class="inheritance"><a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">com.github.stephengold.joltjni.NonCopyable</a>
 <div class="inheritance">com.github.stephengold.joltjni.MotionProperties</div>
+</div>
 </div>
 </div>
 <section class="class-description" id="class-description">
@@ -101,7 +103,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MotionProperties</span>
-<span class="extends-implements">extends <a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>
+<span class="extends-implements">extends <a href="NonCopyable.html" title="class in com.github.stephengold.joltjni">NonCopyable</a>
 implements <a href="readonly/ConstMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a></span></div>
 <div class="block">Additional state for a <code>Body</code> that moves.</div>
 </section>
@@ -118,10 +120,6 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">MotionProperties</a>()</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate default properties.</div>
-</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstMotionProperties)" class="member-name-link">MotionProperties</a><wbr>(<a href="readonly/ConstMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a>&nbsp;original)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Instantiate a copy of the specified properties.</div>
 </div>
 </div>
 </section>
@@ -290,95 +288,90 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <div class="block">Zero out the accumulated torque.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstMotionProperties)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a>&nbsp;source)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularDamping(float)" class="member-name-link">setAngularDamping</a><wbr>(float&nbsp;damping)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the argument to the current properties.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularDamping(float)" class="member-name-link">setAngularDamping</a><wbr>(float&nbsp;damping)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the angular damping.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(float,float,float)" class="member-name-link">setAngularVelocity</a><wbr>(float&nbsp;wx,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(float,float,float)" class="member-name-link">setAngularVelocity</a><wbr>(float&nbsp;wx,
  float&nbsp;wy,
  float&nbsp;wz)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Directly alter the angular velocity.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setAngularVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;omega)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Directly alter the angular velocity.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGravityFactor(float)" class="member-name-link">setGravityFactor</a><wbr>(float&nbsp;factor)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAngularVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setAngularVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;omega)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the gravity factor.</div>
+<div class="block">Directly alter the angular velocity.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInverseInertia(float,float,float,float,float,float,float)" class="member-name-link">setInverseInertia</a><wbr>(float&nbsp;dx,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGravityFactor(float)" class="member-name-link">setGravityFactor</a><wbr>(float&nbsp;factor)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the gravity factor.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInverseInertia(float,float,float,float,float,float,float)" class="member-name-link">setInverseInertia</a><wbr>(float&nbsp;dx,
  float&nbsp;dy,
  float&nbsp;dz,
  float&nbsp;rx,
  float&nbsp;ry,
  float&nbsp;rz,
  float&nbsp;rw)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Alter the diagonal components of the inverse inertia matrix of the body.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInverseInertia(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setInverseInertia</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;diagonal,
- <a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the diagonal components of the inverse inertia matrix of the body.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInverseMass(float)" class="member-name-link">setInverseMass</a><wbr>(float&nbsp;inverseMass)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInverseInertia(com.github.stephengold.joltjni.readonly.Vec3Arg,com.github.stephengold.joltjni.readonly.QuatArg)" class="member-name-link">setInverseInertia</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;diagonal,
+ <a href="readonly/QuatArg.html" title="interface in com.github.stephengold.joltjni.readonly">QuatArg</a>&nbsp;rotation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the diagonal components of the inverse inertia matrix of the body.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInverseMass(float)" class="member-name-link">setInverseMass</a><wbr>(float&nbsp;inverseMass)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the inverse mass.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearDamping(float)" class="member-name-link">setLinearDamping</a><wbr>(float&nbsp;damping)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearDamping(float)" class="member-name-link">setLinearDamping</a><wbr>(float&nbsp;damping)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the linear damping.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity</a><wbr>(float&nbsp;vx,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(float,float,float)" class="member-name-link">setLinearVelocity</a><wbr>(float&nbsp;vx,
  float&nbsp;vy,
  float&nbsp;vz)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Directly alter the linear velocity.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Directly alter the linear velocity.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassProperties(int,com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">setMassProperties</a><wbr>(int&nbsp;allowedDofs,
- <a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;massProperties)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearVelocity(com.github.stephengold.joltjni.readonly.Vec3Arg)" class="member-name-link">setLinearVelocity</a><wbr>(<a href="readonly/Vec3Arg.html" title="interface in com.github.stephengold.joltjni.readonly">Vec3Arg</a>&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Directly alter the linear velocity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMassProperties(int,com.github.stephengold.joltjni.readonly.ConstMassProperties)" class="member-name-link">setMassProperties</a><wbr>(int&nbsp;allowedDofs,
+ <a href="readonly/ConstMassProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMassProperties</a>&nbsp;massProperties)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the mass properties.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAngularVelocity(float)" class="member-name-link">setMaxAngularVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAngularVelocity(float)" class="member-name-link">setMaxAngularVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the maximum angular speed that the body can achieve.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxLinearVelocity(float)" class="member-name-link">setMaxLinearVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxLinearVelocity(float)" class="member-name-link">setMaxLinearVelocity</a><wbr>(float&nbsp;maxSpeed)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the maximum linear speed that the body can achieve.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumPositionStepsOverride(int)" class="member-name-link">setNumPositionStepsOverride</a><wbr>(int&nbsp;numIterations)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumPositionStepsOverride(int)" class="member-name-link">setNumPositionStepsOverride</a><wbr>(int&nbsp;numIterations)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the number of position iterations to use in the solver</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumVelocityStepsOverride(int)" class="member-name-link">setNumVelocityStepsOverride</a><wbr>(int&nbsp;numIterations)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumVelocityStepsOverride(int)" class="member-name-link">setNumVelocityStepsOverride</a><wbr>(int&nbsp;numIterations)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the number of velocity iterations to use in the solver</div>
 </div>
 </div>
@@ -412,17 +405,6 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <h3>MotionProperties</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotionProperties</span>()</div>
 <div class="block">Instantiate default properties.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstMotionProperties)">
-<h3>MotionProperties</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotionProperties</span><wbr><span class="parameters">(<a href="readonly/ConstMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a>&nbsp;original)</span></div>
-<div class="block">Instantiate a copy of the specified properties.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
-</dl>
 </section>
 </li>
 </ul>
@@ -464,17 +446,6 @@ implements <a href="readonly/ConstMotionProperties.html" title="interface in com
 <h3>resetTorque</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetTorque</span>()</div>
 <div class="block">Zero out the accumulated torque.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstMotionProperties)">
-<h3>set</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstMotionProperties.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMotionProperties</a>&nbsp;source)</span></div>
-<div class="block">Copy the argument to the current properties.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>source</code> - the properties to copy (not <code>null</code>, unaffected)</dd>
-</dl>
 </section>
 </li>
 <li>

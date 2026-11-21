@@ -115,7 +115,7 @@ implements <a href="readonly/ConstIndexedTriangle.html" title="interface in com.
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">IndexedTriangle</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">Instantiate a triangle with all indices zero.</div>
+<div class="block">Instantiate a default triangle with all indices zero.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,int,int)" class="member-name-link">IndexedTriangle</a><wbr>(int&nbsp;vi0,
  int&nbsp;vi1,
@@ -129,6 +129,10 @@ implements <a href="readonly/ConstIndexedTriangle.html" title="interface in com.
  int&nbsp;materialIndex)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate a triangle with the specified indices.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstIndexedTriangle)" class="member-name-link">IndexedTriangle</a><wbr>(<a href="readonly/ConstIndexedTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangle</a>&nbsp;original)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate a copy of the specified triangle.</div>
 </div>
 </div>
 </section>
@@ -150,8 +154,13 @@ implements <a href="readonly/ConstIndexedTriangle.html" title="interface in com.
 <div class="block">Return the triangle's material index.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterialIndex(int)" class="member-name-link">setMaterialIndex</a><wbr>(int&nbsp;materialIndex)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstIndexedTriangle)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstIndexedTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangle</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current triangle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaterialIndex(int)" class="member-name-link">setMaterialIndex</a><wbr>(int&nbsp;materialIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the triangle's material index.</div>
 </div>
 </div>
@@ -190,7 +199,18 @@ implements <a href="readonly/ConstIndexedTriangle.html" title="interface in com.
 <section class="detail" id="&lt;init&gt;()">
 <h3>IndexedTriangle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">IndexedTriangle</span>()</div>
-<div class="block">Instantiate a triangle with all indices zero.</div>
+<div class="block">Instantiate a default triangle with all indices zero.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstIndexedTriangle)">
+<h3>IndexedTriangle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">IndexedTriangle</span><wbr><span class="parameters">(<a href="readonly/ConstIndexedTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangle</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified triangle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the triangle to copy (not <code>null</code>, unaffected)</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -233,6 +253,17 @@ implements <a href="readonly/ConstIndexedTriangle.html" title="interface in com.
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstIndexedTriangle)">
+<h3>set</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstIndexedTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstIndexedTriangle</a>&nbsp;source)</span></div>
+<div class="block">Copy the argument to the current triangle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>source</code> - the triangle to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="setMaterialIndex(int)">
 <h3>setMaterialIndex</h3>

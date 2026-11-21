@@ -113,12 +113,8 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">ShapeList</a>()</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.ShapeRefC...)" class="member-name-link">ShapeList</a><wbr>(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>...&nbsp;refs)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Instantiate an empty list.</div>
-</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.ShapeRefC)" class="member-name-link">ShapeList</a><wbr>(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;shapeRef)</code></div>
-<div class="col-last odd-row-color">
 <div class="block">Instantiate a list containing a single shape.</div>
 </div>
 </div>
@@ -191,21 +187,14 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;()">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.ShapeRefC...)">
 <h3>ShapeList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ShapeList</span>()</div>
-<div class="block">Instantiate an empty list.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.ShapeRefC)">
-<h3>ShapeList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ShapeList</span><wbr><span class="parameters">(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>&nbsp;shapeRef)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ShapeList</span><wbr><span class="parameters">(<a href="ShapeRefC.html" title="class in com.github.stephengold.joltjni">ShapeRefC</a>...&nbsp;refs)</span></div>
 <div class="block">Instantiate a list containing a single shape.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>shapeRef</code> - a counted reference to the desired shape (not
- <code>null</code>)</dd>
+<dd><code>refs</code> - counted references to the desired shapes (or <code>null</code> for
+ none)</dd>
 </dl>
 </section>
 </li>

@@ -97,11 +97,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
+<dd><code><a href="readonly/ConstJoltPhysicsObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstJoltPhysicsObject</a></code>, <code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code>, <code><a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></code>, <code><a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></code>, <code><a href="template/RefTarget.html" title="interface in com.github.stephengold.joltjni.template">RefTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="JoltPhysicsObject.html" title="class in com.github.stephengold.joltjni">JoltPhysicsObject</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MeshShapeSettings</span>
-<span class="extends-implements">extends <a href="ShapeSettings.html" title="class in com.github.stephengold.joltjni">ShapeSettings</a></span></div>
+<span class="extends-implements">extends <a href="ShapeSettings.html" title="class in com.github.stephengold.joltjni">ShapeSettings</a>
+implements <a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></span></div>
 <div class="block">Settings used to construct a <code>MeshShape</code>.</div>
 </section>
 <section class="summary">
@@ -118,19 +119,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Instantiate the default settings.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.MeshShapeSettings)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a>&nbsp;original)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Instantiate a copy of the specified settings.</div>
-</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3%5B%5D,com.github.stephengold.joltjni.IndexedTriangle...)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertexArray,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3%5B%5D,com.github.stephengold.joltjni.IndexedTriangle...)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertexArray,
  <a href="IndexedTriangle.html" title="class in com.github.stephengold.joltjni">IndexedTriangle</a>...&nbsp;itArray)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate settings for the specified vertices and triangles.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3%5B%5D,com.github.stephengold.joltjni.IndexedTriangleList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertices,
+ <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate settings for the specified vertices and triangles.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstFloat3%5B%5D,com.github.stephengold.joltjni.IndexedTriangleList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstFloat3.html" title="interface in com.github.stephengold.joltjni.readonly">ConstFloat3</a>[]&nbsp;vertices,
- <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstMeshShapeSettings)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a>&nbsp;original)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Instantiate settings for the specified vertices and triangles.</div>
+<div class="block">Instantiate a copy of the specified settings.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.readonly.ConstTriangle...)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>...&nbsp;triangleArray)</code></div>
 <div class="col-last even-row-color">
@@ -145,6 +146,15 @@ loadScripts(document, 'script');</script>
  <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate settings for the specified vertices and indices.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.TriangleList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="TriangleList.html" title="class in com.github.stephengold.joltjni">TriangleList</a>&nbsp;triangleList)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instantiate settings for the specified list of triangles.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.stephengold.joltjni.TriangleList,com.github.stephengold.joltjni.PhysicsMaterialList)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="TriangleList.html" title="class in com.github.stephengold.joltjni">TriangleList</a>&nbsp;triangleList,
+ <a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a>&nbsp;materials)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate settings for the specified parameters.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.nio.FloatBuffer)" class="member-name-link">MeshShapeSettings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;positionBuffer)</code></div>
 <div class="col-last odd-row-color">
@@ -191,19 +201,39 @@ loadScripts(document, 'script');</script>
 <div class="block">Append the specified vertex to the internal array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countTriangles()" class="member-name-link">countTriangles</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countMaterials()" class="member-name-link">countMaterials</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Count the triangles in the mesh.</div>
+<div class="block">Count the physics materials.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countTriangleVertices()" class="member-name-link">countTriangleVertices</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countTriangles()" class="member-name-link">countTriangles</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Count the triangles in the mesh.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countTriangleVertices()" class="member-name-link">countTriangleVertices</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Count the vertices in the mesh.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getActiveEdgeCosThresholdAngle()" class="member-name-link">getActiveEdgeCosThresholdAngle</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getActiveEdgeCosThresholdAngle()" class="member-name-link">getActiveEdgeCosThresholdAngle</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the cosine of the active-edge threshold angle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="enumerate/EBuildQuality.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBuildQuality</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBuildQuality()" class="member-name-link">getBuildQuality</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the build quality.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIndexedTriangles()" class="member-name-link">getIndexedTriangles</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the list of indexed triangles.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaterials()" class="member-name-link">getMaterials</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Access the list of physics materials.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxTrianglesPerLeaf()" class="member-name-link">getMaxTrianglesPerLeaf</a>()</code></div>
@@ -214,6 +244,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPerTriangleUserData()" class="member-name-link">getPerTriangleUserData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Test whether each triangle will include user data.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTriangleVertex(int)" class="member-name-link">getTriangleVertex</a><wbr>(int&nbsp;vertexIndex)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the specified vertex.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VertexList.html" title="class in com.github.stephengold.joltjni">VertexList</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTriangleVertices()" class="member-name-link">getTriangleVertices</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the vertex list.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reserveIndexedTriangles(int)" class="member-name-link">reserveIndexedTriangles</a><wbr>(int&nbsp;numTriangles)</code></div>
@@ -226,14 +266,24 @@ loadScripts(document, 'script');</script>
 <div class="block">Reserve storage for the specified number of vertices.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.MeshShapeSettings)" class="member-name-link">set</a><wbr>(<a href="MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a>&nbsp;source)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sanitize()" class="member-name-link">sanitize</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Copy the argument to the current settings.</div>
+<div class="block">Sanitize the mesh data to remove degenerate and duplicate triangles.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setActiveEdgeCosThresholdAngle(float)" class="member-name-link">setActiveEdgeCosThresholdAngle</a><wbr>(float&nbsp;cosine)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(com.github.stephengold.joltjni.readonly.ConstMeshShapeSettings)" class="member-name-link">set</a><wbr>(<a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the argument to the current settings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setActiveEdgeCosThresholdAngle(float)" class="member-name-link">setActiveEdgeCosThresholdAngle</a><wbr>(float&nbsp;cosine)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Alter the active-edge threshold angle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBuildQuality(com.github.stephengold.joltjni.enumerate.EBuildQuality)" class="member-name-link">setBuildQuality</a><wbr>(<a href="enumerate/EBuildQuality.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBuildQuality</a>&nbsp;quality)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Alter the build quality.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxTrianglesPerLeaf(int)" class="member-name-link">setMaxTrianglesPerLeaf</a><wbr>(int&nbsp;numTriangles)</code></div>
@@ -269,6 +319,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstSerializableObject">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstSerializableObject.html" title="interface in com.github.stephengold.joltjni.readonly">ConstSerializableObject</a></h3>
 <code><a href="readonly/ConstSerializableObject.html#getRtti()">getRtti</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.github.stephengold.joltjni.readonly.ConstShapeSettings">Methods inherited from interface&nbsp;com.github.stephengold.joltjni.readonly.<a href="readonly/ConstShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstShapeSettings</a></h3>
+<code><a href="readonly/ConstShapeSettings.html#create()">create</a>, <a href="readonly/ConstShapeSettings.html#getRefCount()">getRefCount</a>, <a href="readonly/ConstShapeSettings.html#toRefC()">toRefC</a></code></div>
 </section>
 </li>
 </ul>
@@ -314,6 +367,58 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstMeshShapeSettings)">
+<h3>MeshShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a>&nbsp;original)</span></div>
+<div class="block">Instantiate a copy of the specified settings.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstTriangle...)">
+<h3>MeshShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>...&nbsp;triangleArray)</span></div>
+<div class="block">Instantiate settings for the specified array of triangles.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>triangleArray</code> - the array of triangles (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstTriangle[],com.github.stephengold.joltjni.PhysicsMaterialList)">
+<h3>MeshShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>[]&nbsp;triangleArray,
+ <a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a>&nbsp;materials)</span></div>
+<div class="block">Instantiate settings for the specified parameters.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>triangleArray</code> - the array of triangles (not <code>null</code>,
+ unaffected)</dd>
+<dd><code>materials</code> - the desired surface properties (not <code>null</code>,
+ unaffected)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstVertexList,com.github.stephengold.joltjni.IndexedTriangleList)">
+<h3>MeshShapeSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a>&nbsp;vertices,
+ <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</span></div>
+<div class="block">Instantiate settings for the specified vertices and indices.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>vertices</code> - list of vertex locations (not <code>null</code>, unaffected)</dd>
+<dd><code>indices</code> - list of triangles that use those vertices (not
+ <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(java.nio.FloatBuffer)">
 <h3>MeshShapeSettings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/FloatBuffer.html" title="class or interface in java.nio" class="external-link">FloatBuffer</a>&nbsp;positionBuffer)</span></div>
@@ -322,17 +427,6 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>positionBuffer</code> - the vertex positions (not <code>null</code>, capacity a
  multiple of 9, unaffected)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.MeshShapeSettings)">
-<h3>MeshShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a>&nbsp;original)</span></div>
-<div class="block">Instantiate a copy of the specified settings.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>original</code> - the settings to copy (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
@@ -375,41 +469,25 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstVertexList,com.github.stephengold.joltjni.IndexedTriangleList)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.TriangleList)">
 <h3>MeshShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstVertexList.html" title="interface in com.github.stephengold.joltjni.readonly">ConstVertexList</a>&nbsp;vertices,
- <a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a>&nbsp;indices)</span></div>
-<div class="block">Instantiate settings for the specified vertices and indices.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="TriangleList.html" title="class in com.github.stephengold.joltjni">TriangleList</a>&nbsp;triangleList)</span></div>
+<div class="block">Instantiate settings for the specified list of triangles.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>vertices</code> - list of vertex locations (not <code>null</code>, unaffected)</dd>
-<dd><code>indices</code> - list of triangles that use those vertices (not
- <code>null</code>)</dd>
+<dd><code>triangleList</code> - the list of triangles (not <code>null</code>, unaffected)</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstTriangle...)">
+<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.TriangleList,com.github.stephengold.joltjni.PhysicsMaterialList)">
 <h3>MeshShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>...&nbsp;triangleArray)</span></div>
-<div class="block">Instantiate settings for the specified array of triangles.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>triangleArray</code> - the array of triangles (not <code>null</code>,
- unaffected)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(com.github.stephengold.joltjni.readonly.ConstTriangle[],com.github.stephengold.joltjni.PhysicsMaterialList)">
-<h3>MeshShapeSettings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="readonly/ConstTriangle.html" title="interface in com.github.stephengold.joltjni.readonly">ConstTriangle</a>[]&nbsp;triangleArray,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MeshShapeSettings</span><wbr><span class="parameters">(<a href="TriangleList.html" title="class in com.github.stephengold.joltjni">TriangleList</a>&nbsp;triangleList,
  <a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a>&nbsp;materials)</span></div>
 <div class="block">Instantiate settings for the specified parameters.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>triangleArray</code> - the array of triangles (not <code>null</code>,
- unaffected)</dd>
+<dd><code>triangleList</code> - the list of triangles (not <code>null</code>, unaffected)</dd>
 <dd><code>materials</code> - the desired surface properties (not <code>null</code>,
  unaffected)</dd>
 </dl>
@@ -451,61 +529,25 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="countTriangles()">
-<h3>countTriangles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countTriangles</span>()</div>
-<div class="block">Count the triangles in the mesh. The settings are unaffected.</div>
+<section class="detail" id="getIndexedTriangles()">
+<h3>getIndexedTriangles</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="IndexedTriangleList.html" title="class in com.github.stephengold.joltjni">IndexedTriangleList</a></span>&nbsp;<span class="element-name">getIndexedTriangles</span>()</div>
+<div class="block">Access the list of indexed triangles. (native attribute:
+ mIndexedTriangles)</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="countTriangleVertices()">
-<h3>countTriangleVertices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countTriangleVertices</span>()</div>
-<div class="block">Count the vertices in the mesh. The settings are unaffected.</div>
+<section class="detail" id="getMaterials()">
+<h3>getMaterials</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PhysicsMaterialList.html" title="class in com.github.stephengold.joltjni">PhysicsMaterialList</a></span>&nbsp;<span class="element-name">getMaterials</span>()</div>
+<div class="block">Access the list of physics materials. (native attribute: mMaterials)</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the count (&ge;0)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getActiveEdgeCosThresholdAngle()">
-<h3>getActiveEdgeCosThresholdAngle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getActiveEdgeCosThresholdAngle</span>()</div>
-<div class="block">Return the cosine of the active-edge threshold angle. The settings are
- unaffected. (native attribute: mActiveEdgeCosThresholdAngle)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the cosine</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMaxTrianglesPerLeaf()">
-<h3>getMaxTrianglesPerLeaf</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaxTrianglesPerLeaf</span>()</div>
-<div class="block">Return the maximum number of triangles per leaf. The settings are
- unaffected. (native attribute: mMaxTrianglesPerLeaf)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the maximum number</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPerTriangleUserData()">
-<h3>getPerTriangleUserData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getPerTriangleUserData</span>()</div>
-<div class="block">Test whether each triangle will include user data. The settings are
- unaffected. (native attribute: mPerTriangleUserData)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd><code>true</code> if per-triangle data is included, otherwise
- <code>false</code></dd>
+<dd>a new JVM object with the pre-existing native object assigned</dd>
 </dl>
 </section>
 </li>
@@ -532,9 +574,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="set(com.github.stephengold.joltjni.MeshShapeSettings)">
+<section class="detail" id="sanitize()">
+<h3>sanitize</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sanitize</span>()</div>
+<div class="block">Sanitize the mesh data to remove degenerate and duplicate triangles.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="set(com.github.stephengold.joltjni.readonly.ConstMeshShapeSettings)">
 <h3>set</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="MeshShapeSettings.html" title="class in com.github.stephengold.joltjni">MeshShapeSettings</a>&nbsp;source)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a>&nbsp;source)</span></div>
 <div class="block">Copy the argument to the current settings.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -551,6 +600,18 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cosine</code> - the cosine of the desired angle (default=0.996195)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setBuildQuality(com.github.stephengold.joltjni.enumerate.EBuildQuality)">
+<h3>setBuildQuality</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBuildQuality</span><wbr><span class="parameters">(<a href="enumerate/EBuildQuality.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBuildQuality</a>&nbsp;quality)</span></div>
+<div class="block">Alter the build quality. (native attribute: mBuildQuality)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>quality</code> - the desired quality (not <code>null</code>,
+ default=FavorRuntimePerformance)</dd>
 </dl>
 </section>
 </li>
@@ -576,6 +637,131 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>include</code> - <code>true</code> to include per-triangle data, <code>false</code>
  to omit it (default=false)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countMaterials()">
+<h3>countMaterials</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countMaterials</span>()</div>
+<div class="block">Count the physics materials. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#countMaterials()">countMaterials</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countTriangles()">
+<h3>countTriangles</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countTriangles</span>()</div>
+<div class="block">Count the triangles in the mesh. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#countTriangles()">countTriangles</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="countTriangleVertices()">
+<h3>countTriangleVertices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countTriangleVertices</span>()</div>
+<div class="block">Count the vertices in the mesh. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#countTriangleVertices()">countTriangleVertices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the count (&ge;0)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getActiveEdgeCosThresholdAngle()">
+<h3>getActiveEdgeCosThresholdAngle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getActiveEdgeCosThresholdAngle</span>()</div>
+<div class="block">Return the cosine of the active-edge threshold angle. The settings are
+ unaffected. (native attribute: mActiveEdgeCosThresholdAngle)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#getActiveEdgeCosThresholdAngle()">getActiveEdgeCosThresholdAngle</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cosine</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBuildQuality()">
+<h3>getBuildQuality</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enumerate/EBuildQuality.html" title="enum class in com.github.stephengold.joltjni.enumerate">EBuildQuality</a></span>&nbsp;<span class="element-name">getBuildQuality</span>()</div>
+<div class="block">Return the build quality. The settings are unaffected. (native attribute:
+ mBuildQuality)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#getBuildQuality()">getBuildQuality</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>an enum value (not <code>null</code>)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTriangleVertex(int)">
+<h3>getTriangleVertex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Float3.html" title="class in com.github.stephengold.joltjni">Float3</a></span>&nbsp;<span class="element-name">getTriangleVertex</span><wbr><span class="parameters">(int&nbsp;vertexIndex)</span></div>
+<div class="block">Copy the specified vertex. The settings are unaffected.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#getTriangleVertex(int)">getTriangleVertex</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>vertexIndex</code> - the index of the vertex to copy (&ge;0)</dd>
+<dt>Returns:</dt>
+<dd>a new vector</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTriangleVertices()">
+<h3>getTriangleVertices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VertexList.html" title="class in com.github.stephengold.joltjni">VertexList</a></span>&nbsp;<span class="element-name">getTriangleVertices</span>()</div>
+<div class="block">Copy the vertex list. The settings are unaffected. (native attribute:
+ mTriangleVertices)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#getTriangleVertices()">getTriangleVertices</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>a new object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxTrianglesPerLeaf()">
+<h3>getMaxTrianglesPerLeaf</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaxTrianglesPerLeaf</span>()</div>
+<div class="block">Return the maximum number of triangles per leaf. The settings are
+ unaffected. (native attribute: mMaxTrianglesPerLeaf)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#getMaxTrianglesPerLeaf()">getMaxTrianglesPerLeaf</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd>the maximum number</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPerTriangleUserData()">
+<h3>getPerTriangleUserData</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getPerTriangleUserData</span>()</div>
+<div class="block">Test whether each triangle will include user data. The settings are
+ unaffected. (native attribute: mPerTriangleUserData)</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="readonly/ConstMeshShapeSettings.html#getPerTriangleUserData()">getPerTriangleUserData</a></code>&nbsp;in interface&nbsp;<code><a href="readonly/ConstMeshShapeSettings.html" title="interface in com.github.stephengold.joltjni.readonly">ConstMeshShapeSettings</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if per-triangle data is included, otherwise
+ <code>false</code></dd>
 </dl>
 </section>
 </li>
