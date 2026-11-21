@@ -368,6 +368,7 @@ com.github.stephengold.joltjni.TransformedShapeCollector
 com.github.stephengold.joltjni.TransformedSphere
 com.github.stephengold.joltjni.Triangle
 com.github.stephengold.joltjni.TriangleConvexSupport
+com.github.stephengold.joltjni.TriangleList
 com.github.stephengold.joltjni.TriangleShape
 com.github.stephengold.joltjni.TriangleShapeSettings
 com.github.stephengold.joltjni.TwoBodyConstraint
@@ -422,6 +423,7 @@ com.github.stephengold.joltjni.enumerate.EAxis
 com.github.stephengold.joltjni.enumerate.EBackFaceMode
 com.github.stephengold.joltjni.enumerate.EBendType
 com.github.stephengold.joltjni.enumerate.EBodyType
+com.github.stephengold.joltjni.enumerate.EBuildQuality
 com.github.stephengold.joltjni.enumerate.ECastShadow
 com.github.stephengold.joltjni.enumerate.ECollectFacesMode
 com.github.stephengold.joltjni.enumerate.EConstraintSpace
