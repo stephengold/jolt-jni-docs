@@ -77,14 +77,16 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}body.html[JPH::Body]
 |{url-api}/Body.html[Body] +
- {url-api}/readonly/ConstBody.html[ConstBody]
+ {url-api}/readonly/ConstBody.html[ConstBody] +
+ {url-api}/BodyVector.html[BodyVector]
 
 |{url-jolt}body_activation_listener.html[JPH::BodyActivationListener]
 |{url-api}/BodyActivationListener.html[BodyActivationListener]
 
 |{url-jolt}body_creation_settings.html[JPH::BodyCreationSettings]
 |{url-api}/BodyCreationSettings.html[BodyCreationSettings] +
- {url-api}/readonly/ConstBodyCreationSettings.html[ConstBodyCreationSettings]
+ {url-api}/readonly/ConstBodyCreationSettings.html[ConstBodyCreationSettings] +
+ {url-api}/BcsResult.html[BcsResult]
 
 |{url-jolt}body_filter.html[JPH::BodyFilter]
 |{url-api}/BodyFilter.html[BodyFilter]
@@ -184,7 +186,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}character_contact_key.html[JPH::CharacterContactKey]
 |{url-api}/CharacterContactKey.html[CharacterContactKey] +
- {url-api}/readonly/ConstCharacterContactKey.html[ConstCharacterContactKey]
+ {url-api}/readonly/ConstCharacterContactKey.html[ConstCharacterContactKey] +
+ {url-api}/ContactSet.html[ContactSet]
 
 |{url-jolt}character_contact_listener.html[JPH::CharacterContactListener]
 |{url-api}/CharacterContactListener.html[CharacterContactListener]
@@ -254,11 +257,13 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}compute_queue.html[JPH::ComputeQueue]
 |{url-api}/ComputeQueue.html[ComputeQueue] +
- {url-api}/ComputeQueueRef.html[ComputeQueueRef]
+ {url-api}/ComputeQueueRef.html[ComputeQueueRef] +
+ {url-api}/ComputeQueueResult.html[ComputeQueueResult]
 
 |{url-jolt}compute_system.html[JPH::ComputeSystem]
 |{url-api}/ComputeSystem.html[ComputeSystem] +
- {url-api}/ComputeSystemRef.html[ComputeSystemRef]
+ {url-api}/ComputeSystemRef.html[ComputeSystemRef] +
+ {url-api}/ComputeSystemResult.html[ComputeSystemResult]
 
 |{url-jolt}cone_constraint.html[JPH::ConeConstraint]
 |{url-api}/ConeConstraint.html[ConeConstraint]
@@ -269,7 +274,9 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}constraint.html[JPH::Constraint]
 |{url-api}/Constraint.html[Constraint] +
  {url-api}/readonly/ConstConstraint.html[ConstConstraint] +
- {url-api}/ConstraintRef.html[ConstraintRef]
+ {url-api}/ConstraintRef.html[ConstraintRef] +
+ {url-api}/ConstraintResult.html[ConstraintResult] +
+ {url-api}/Constraints.html[Constraints]
 
 |{url-jolt}constraint_settings.html[JPH::ConstraintSettings]
 |{url-api}/ConstraintSettings.html[ConstraintSettings] +
@@ -294,7 +301,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/ConvexHullShape.html[ConvexHullShape]
 
 |{url-jolt}convex_hull_shape_settings.html[JPH::ConvexHullShapeSettings]
-|{url-api}/ConvexHullShapeSettings.html[ConvexHullShapeSettings]
+|{url-api}/ConvexHullShapeSettings.html[ConvexHullShapeSettings] +
+ {url-api}/readonly/ConstConvexHullShapeSettings.html[ConstConvexHullShapeSettings]
 
 |{url-jolt}convex_shape.html[JPH::ConvexShape]
 |{url-api}/ConvexShape.html[ConvexShape] +
@@ -357,7 +365,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}float3.html[JPH::Float3]
 |{url-api}/Float3.html[Float3] +
- {url-api}/readonly/ConstFloat3.html[ConstFloat3]
+ {url-api}/readonly/ConstFloat3.html[ConstFloat3] +
+ {url-api}/VertexList.html[VertexList]
 
 |{url-jolt}float4.html[JPH::Float4]
 |{url-api}/Float4.html[Float4] +
@@ -372,7 +381,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}group_filter.html[JPH::GroupFilter]
 |{url-api}/GroupFilter.html[GroupFilter] +
  {url-api}/readonly/ConstGroupFilter.html[ConstGroupFilter] +
- {url-api}/GroupFilterRef.html[GroupFilterRef]
+ {url-api}/GroupFilterRef.html[GroupFilterRef] +
+ {url-api}/GroupFilterResult.html[GroupFilterResult]
 
 |{url-jolt}group_filter_table.html[JPH::GroupFilterTable]
 |{url-api}/GroupFilterTable.html[GroupFilterTable] +
@@ -397,7 +407,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-api}/HeightFieldShapeConstants.html[HeightFieldShapeConstants]
 
 |{url-jolt}height_field_shape_settings.html[JPH::HeightFieldShapeSettings]
-|{url-api}/HeightFieldShapeSettings.html[HeightFieldShapeSettings]
+|{url-api}/HeightFieldShapeSettings.html[HeightFieldShapeSettings] +
+ {url-api}/readonly/ConstHeightFieldShapeSettings.html[ConstHeightFieldShapeSettings]
 
 |{url-jolt}hinge_constraint.html[JPH::HingeConstraint]
 |{url-api}/HingeConstraint.html[HingeConstraint]
@@ -410,7 +421,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}indexed_triangle.html[JPH::IndexedTriangle]
 |{url-api}/IndexedTriangle.html[IndexedTriangle] +
- {url-api}/readonly/ConstIndexedTriangle.html[ConstIndexedTriangle]
+ {url-api}/readonly/ConstIndexedTriangle.html[ConstIndexedTriangle] +
+ {url-api}/IndexedTriangleList.html[IndexedTriangleList]
 
 |{url-jolt}indexed_triangle_no_material.html[JPH::IndexedTriangleNoMaterial]
 |{url-api}/IndexedTriangleNoMaterial.html[IndexedTriangleNoMaterial] +
@@ -438,13 +450,15 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}mat44.html[JPH::Mat44]
 |{url-api}/Mat44.html[Mat44] +
- {url-api}/readonly/Mat44Arg.html[Mat44Arg]
+ {url-api}/readonly/Mat44Arg.html[Mat44Arg] +
+ {url-api}/Mat44Array.html[Mat44Array]
 
 |{url-jolt}mesh_shape.html[JPH::MeshShape]
 |{url-api}/MeshShape.html[MeshShape]
 
 |{url-jolt}mesh_shape_settings.html[JPH::MeshShapeSettings]
-|{url-api}/MeshShapeSettings.html[MeshShapeSettings]
+|{url-api}/MeshShapeSettings.html[MeshShapeSettings] +
+ {url-api}/readonly/ConstMeshShapeSettings.html[ConstMeshShapeSettings]
 
 |{url-jolt}motion_properties.html[JPH::MotionProperties]
 |{url-api}/MotionProperties.html[MotionProperties] +
@@ -519,7 +533,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}path_constraint_path.html[JPH::PathConstraintPath]
 |{url-api}/PathConstraintPath.html[PathConstraintPath] +
  {url-api}/readonly/ConstPathConstraintPath.html[ConstPathConstraintPath] +
- {url-api}/PathConstraintPathRef.html[PathConstraintPathRef]
+ {url-api}/PathConstraintPathRef.html[PathConstraintPathRef] +
+ {url-api}/PathResult.html[PathResult]
 
 |{url-jolt}path_constraint_path_hermite.html[JPH::PathConstraintPathHermite]
 |{url-api}/PathConstraintPathHermite.html[PathConstraintPathHermite]
@@ -530,8 +545,10 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}physics_material.html[JPH::PhysicsMaterial]
 |{url-api}/PhysicsMaterial.html[PhysicsMaterial] +
  {url-api}/readonly/ConstPhysicsMaterial.html[ConstPhysicsMaterial] +
+ {url-api}/PhysicsMaterialList.html[PhysicsMaterialList] +
  {url-api}/PhysicsMaterialRef.html[PhysicsMaterialRef] +
- {url-api}/PhysicsMaterialRefC.html[PhysicsMaterialRefC]
+ {url-api}/PhysicsMaterialRefC.html[PhysicsMaterialRefC] +
+ {url-api}/PhysicsMaterialResult.html[PhysicsMaterialResult]
 
 |{url-jolt}physics_material_simple.html[JPH::PhysicsMaterialSimple]
 |{url-api}/PhysicsMaterialSimple.html[PhysicsMaterialSimple]
@@ -539,7 +556,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}physics_scene.html[JPH::PhysicsScene]
 |{url-api}/PhysicsScene.html[PhysicsScene] +
  {url-api}/readonly/ConstPhysicsScene.html[ConstPhysicsScene] +
- {url-api}/PhysicsSceneRef.html[PhysicsSceneRef]
+ {url-api}/PhysicsSceneRef.html[PhysicsSceneRef] +
+ {url-api}/PhysicsSceneResult.html[PhysicsSceneResult]
 
 |{url-jolt-struct}physics_settings.html[JPH::PhysicsSettings]
 |{url-api}/PhysicsSettings.html[PhysicsSettings] +
@@ -603,6 +621,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}ragdoll_settings.html[JPH::RagdollSettings]
 |{url-api}/RagdollSettings.html[RagdollSettings] +
  {url-api}/readonly/ConstRagdollSettings.html[ConstRagdollSettings] +
+ {url-api}/RagdollResult.html[RagdollResult] +
  {url-api}/RagdollSettingsRef.html[RagdollSettingsRef]
 
 |{url-jolt-struct}ray_cast.html[JPH::RayCast]
@@ -643,8 +662,11 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}shape.html[JPH::Shape]
 |{url-api}/Shape.html[Shape] +
  {url-api}/readonly/ConstShape.html[ConstShape] +
+ {url-api}/ShapeList.html[ShapeList] +
  {url-api}/ShapeRef.html[ShapeRef] +
- {url-api}/ShapeRefC.html[ShapeRefC]
+ {url-api}/ShapeRefC.html[ShapeRefC] +
+ {url-api}/ShapeRefCArray.html[ShapeRefCArray] +
+ {url-api}/ShapeResult.html[ShapeResult]
 
 |{url-jolt}shape_cast_result.html[JPH::ShapeCastResult]
 |{url-api}/ShapeCastResult.html[ShapeCastResult]
@@ -706,7 +728,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}soft_body_creation_settings.html[JPH::SoftBodyCreationSettings]
 |{url-api}/SoftBodyCreationSettings.html[SoftBodyCreationSettings] +
- {url-api}/readonly/ConstSoftBodyCreationSettings.html[ConstSoftBodyCreationSettings]
+ {url-api}/readonly/ConstSoftBodyCreationSettings.html[ConstSoftBodyCreationSettings] +
+ {url-api}/SbcsResult.html[SbcsResult]
 
 |{url-jolt}soft_body_manifold.html[JPH::SoftBodyManifold]
 |{url-api}/SoftBodyManifold.html[SoftBodyManifold] +
@@ -722,6 +745,7 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 |{url-jolt}soft_body_shared_settings.html[JPH::SoftBodySharedSettings]
 |{url-api}/SoftBodySharedSettings.html[SoftBodySharedSettings] +
  {url-api}/readonly/ConstSoftBodySharedSettings.html[ConstSoftBodySharedSettings] +
+ {url-api}/SettingsResult.html[SettingsResult] +
  {url-api}/SoftBodySharedSettingsRef.html[SoftBodySharedSettingsRef]
 
 |{url-jolt}soft_body_vertex.html[JPH::SoftBodyVertex]
@@ -825,11 +849,13 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}transformed_shape.html[JPH::TransformedShape]
 |{url-api}/TransformedShape.html[TransformedShape] +
- {url-api}/readonly/ConstTransformedShape.html[ConstTransformedShape]
+ {url-api}/readonly/ConstTransformedShape.html[ConstTransformedShape] +
+ {url-api}/TransformedShapeArray.html[TransformedShapeArray]
 
 |{url-jolt}triangle.html[JPH::Triangle]
 |{url-api}/Triangle.html[Triangle] +
- {url-api}/readonly/ConstTriangle.html[ConstTriangle]
+ {url-api}/readonly/ConstTriangle.html[ConstTriangle] +
+ {url-api}/TriangleList.html[TriangleList]
 
 |{url-jolt-struct}triangle_convex_support.html[JPH::TriangleConvexSupport]
 |{url-api}/TriangleConvexSupport.html[TriangleConvexSupport]
@@ -855,7 +881,8 @@ Furthermore, {Project} imposes a couple naming conventions of its own:
 
 |{url-jolt}vec3.html[JPH::Vec3]
 |{url-api}/Vec3.html[Vec3] +
- {url-api}/readonly/Vec3Arg.html[Vec3Arg]
+ {url-api}/readonly/Vec3Arg.html[Vec3Arg] +
+ {url-api}/VertexArray.html[VertexArray]
 
 |{url-jolt}vec4.html[JPH::Vec4]
 |{url-api}/Vec4.html[Vec4] +
